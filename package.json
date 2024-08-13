@@ -1,0 +1,40 @@
+{
+  "name": "designali",
+  "private": true,
+  "engines": {
+    "node": ">=20.15.0"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "scripts": {
+    "build": "turbo run build",
+    "build:apps": "turbo build --filter=./apps/*",
+    "build:packages": "turbo build --filter=./packages/*",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "db:generate": "turbo db:generate",
+    "db:migrate": "turbo db:migrate",
+    "db:push": "turbo db:push",
+    "db:seed": "turbo db:seed",
+    "db:studio": "turbo db:studio",
+    "dev": "turbo watch dev",
+    "dev:packages": "turbo dev --filter=./packages/*",
+    "dev:next": "turbo watch dev -F @designali/nextjs...",
+    "format": "turbo run format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "postinstall": "pnpm lint:ws",
+    "typecheck": "turbo run typecheck",
+    "ui-add": "turbo run ui-add"
+  },
+  "devDependencies": {
+    "@designali/prettier-config": "workspace:*",
+    "@turbo/gen": "^2.0.8",
+    "prettier": "catalog:",
+    "tsup": "^8.1.0",
+    "turbo": "^2.0.12",
+    "typescript": "catalog:"
+  },
+  "prettier": "@designali/prettier-config"
+}

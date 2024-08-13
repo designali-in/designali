@@ -1,0 +1,6 @@
+{
+  "extends": "@designali/tsconfig/base.json",
+  "compilerOptions": {},
+  "include": ["src", "*.ts"],
+  "exclude": ["node_modules"]
+}

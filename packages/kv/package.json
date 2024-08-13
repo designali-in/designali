@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "@designali/kv",
+  "version": "0.0.0",
+  "license": "GPL-3.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint --fix .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.33.0"
+  },
+  "devDependencies": {
+    "@designali/env": "workspace:*",
+    "@designali/eslint-config": "workspace:*",
+    "@designali/tsconfig": "workspace:*"
+  },
+  "lint-staged": {
+    "*.{cjs,mjs,js,jsx,cts,mts,ts,tsx,json}": "eslint --fix",
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

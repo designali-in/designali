@@ -1,0 +1,29 @@
+{
+  "name": "@designali/validators",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@designali/db": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@designali/eslint-config": "workspace:*",
+    "@designali/prettier-config": "workspace:*",
+    "@designali/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@designali/prettier-config"
+}

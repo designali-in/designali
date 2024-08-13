@@ -1,0 +1,270 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.relative {
+  position: relative;
+}
+
+@keyframes gradient-foreground-1 {
+  from,
+  16.667%,
+  to {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+.animate-gradient-foreground-1 {
+  animation: gradient-foreground-1 8s infinite;
+}
+
+@keyframes gradient-foreground-2 {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+
+  16.667%,
+  66.667% {
+    opacity: 0;
+  }
+}
+
+.animate-gradient-foreground-2 {
+  animation: gradient-foreground-2 8s infinite;
+}
+
+@keyframes gradient-foreground-3 {
+  from,
+  50%,
+  to {
+    opacity: 0;
+  }
+
+  66.667%,
+  83.333% {
+    opacity: 1;
+  }
+}
+
+.animate-gradient-foreground-3 {
+  animation: gradient-foreground-3 8s infinite;
+}
+
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-gradient-1-start {
+  --tw-gradient-from: #007cf0;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 124, 240, 0));
+}
+
+.from-gradient-2-start {
+  --tw-gradient-from: #7928ca;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(121, 40, 202, 0));
+}
+
+.from-gradient-3-start {
+  --tw-gradient-from: #d97706;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 77, 77, 0));
+}
+
+.to-gradient-1-end {
+  --tw-gradient-to: #00dfd8;
+}
+
+.to-gradient-2-end {
+  --tw-gradient-to: #ff0080;
+}
+
+.to-gradient-3-end {
+  --tw-gradient-to: #fbbf24;
+}
+
+.from-gradient-1-ai {
+  --tw-gradient-from: #fffb00;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 0, 0));
+}
+
+.from-gradient-2-ai {
+  --tw-gradient-from: #8000ff;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(129, 53, 206, 0));
+}
+
+.from-gradient-3-ai {
+  --tw-gradient-from: #00ff26;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(121, 40, 202, 0));
+}
+
+.to-gradient-1-ai {
+  --tw-gradient-to: #78006a;
+}
+
+.to-gradient-2-ai {
+  --tw-gradient-to: #853500;
+}
+
+.to-gradient-3-ai {
+  --tw-gradient-to: #850000;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-\[23vw\] {
+  font-size: 12vw;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.tracking-tightest {
+  letter-spacing: -0.09em;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.before\:absolute::before {
+  content: '';
+  position: absolute;
+}
+
+.before\:top-0::before {
+  content: '';
+  top: 0px;
+}
+
+.before\:bottom-0::before {
+  content: '';
+  bottom: 0px;
+}
+
+.before\:left-0::before {
+  content: '';
+  left: 0px;
+}
+
+.before\:z-0::before {
+  content: '';
+  z-index: 0;
+}
+
+.before\:w-full::before {
+  content: '';
+  width: 100%;
+}
+
+@keyframes gradient-background-1 {
+  from,
+  16.667%,
+  to {
+    opacity: 0;
+  }
+
+  25%,
+  91.667% {
+    opacity: 1;
+  }
+}
+
+.before\:animate-gradient-background-1::before {
+  content: '';
+  animation: gradient-background-1 8s infinite;
+}
+
+@keyframes gradient-background-2 {
+  from,
+  to {
+    opacity: 1;
+  }
+
+  33.333%,
+  50% {
+    opacity: 0;
+  }
+
+  25%,
+  58.333% {
+    opacity: 1;
+  }
+}
+
+.before\:animate-gradient-background-2::before {
+  content: '';
+  animation: gradient-background-2 8s infinite;
+}
+
+@keyframes gradient-background-3 {
+  from,
+  58.333%,
+  91.667%,
+  to {
+    opacity: 1;
+  }
+
+  66.667%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+.before\:animate-gradient-background-3::before {
+  content: '';
+  animation: gradient-background-3 8s infinite;
+}
+
+.before\:px-2::before {
+  content: '';
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.before\:text-center::before {
+  content: '';
+  text-align: center;
+}
+
+.before\:text-black::before {
+  content: '';
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.before\:content-\[attr\(data-content\)\]::before {
+  content: attr(data-content);
+}

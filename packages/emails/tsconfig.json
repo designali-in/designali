@@ -1,0 +1,6 @@
+{
+  "extends": "@designali/tsconfig/react-library.json",
+  "include": [".", "env.ts"],
+  "compilerOptions": {},
+  "exclude": ["dist", "build", "node_modules"]
+}

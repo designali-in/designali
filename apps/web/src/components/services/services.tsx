@@ -1,0 +1,222 @@
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@designali/ui/carousel";
+
+import ImageZoom from "../common/image-zoom";
+import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
+import { Particles } from "../ui/particles";
+
+export interface Experience {
+  post: string;
+  comlogo: string;
+  company: string;
+  price: string;
+  link: string;
+}
+
+export const Service: Experience[] = [
+  {
+    post: "Branding",
+    link: "/services/branding",
+    comlogo:
+      "https://utfs.io/f/cb22130d-5369-4dab-a93a-44464be93e60-jrpk8e.jpg",
+    company: "Brand Identity",
+    price: "₹9999",
+  },
+  {
+    post: "Logo",
+    link: "/services/logo",
+    comlogo: "https://utfs.io/f/240e81c4-976b-48b3-aa1d-998ec6c0397b-1evuz.jpg",
+    company: "Logos that stand out",
+    price: "₹1999",
+  },
+  {
+    post: "SM Posts",
+    link: "/services/sm-posts",
+    comlogo:
+      "https://utfs.io/f/813bb6c1-f742-4c1d-b0d3-75cd4d984c05-cmsrrn.jpg",
+    company: "Social Media Marketing",
+    price: "₹9999",
+  },
+  {
+    post: "Brochures",
+    link: "/services/brochures",
+    comlogo:
+      "https://utfs.io/f/8ea73886-3e26-43e7-93e4-504245ef5f31-741fes.jpg",
+    company: "Collaterals",
+    price: "₹9999",
+  },
+  {
+    post: "Website Design",
+    link: "/services/website-design",
+    comlogo:
+      "https://utfs.io/f/65154be4-d18f-4cea-8dc5-cb9443c623de-rrz747.jpg",
+    company: "UI/UX, Landing Page",
+    price: "₹1999",
+  },
+  {
+    post: "Website Develop",
+    link: "/services/website-develop",
+    comlogo:
+      "https://utfs.io/f/11b40ec3-5580-422e-9fe2-137da9569e2c-8rjek4.jpg",
+    company: "Build in Next.js",
+    price: "₹4999",
+  },
+];
+
+export function Services() {
+  return (
+    <div className="mt-10">
+      <div className="grid gap-3 md:grid-cols-3">
+        {Service.map((Experience) => (
+          <HighlightGroup className="group">
+            <div
+              key={Experience.post}
+              className="group/item h-full md:col-span-6 lg:col-span-4"
+              data-aos="fade-down"
+            >
+              <HighlighterItem className="h-full rounded-3xl">
+                <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
+                  <Particles
+                    className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
+                    quantity={50}
+                    color={"#ffffff"}
+                    vy={-0.2}
+                  />
+
+                  <div className="flex flex-col">
+                    <div
+                      className="pointer-events-none absolute bottom-0 right-1 -z-10 aspect-square w-1/2 -translate-y-1/2 translate-x-1"
+                      aria-hidden="true"
+                    >
+                      <div className="translate-z-0 absolute inset-0 rounded-full bg-slate-100 blur-[80px] dark:bg-slate-800" />
+                    </div>
+
+                    <ImageZoom>
+                      <Image
+                        src={Experience.comlogo}
+                        alt={``}
+                        className="h-full w-full object-cover transition hover:scale-95 hover:rounded-lg"
+                        width={500}
+                        height={500}
+                      />
+                    </ImageZoom>
+                    <Link href={Experience.link}>
+                      <div className="p-6">
+                        <h3 className="inline-flex items-baseline bg-gradient-to-r from-slate-600 via-slate-400 to-slate-600 bg-clip-text pb-1 font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
+                          <span className="text-xl md:text-3xl">
+                            {Experience.post}
+                          </span>
+                        </h3>
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-sm text-slate-600 dark:text-slate-400">
+                            {Experience.company}
+                          </h3>
+                          <p className="text-md text-right leading-6 text-slate-600 dark:text-slate-400">
+                            {Experience.price}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </HighlighterItem>
+            </div>
+          </HighlightGroup>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function Related() {
+  return (
+    <div className="mt-20">
+      <div className="flex justify-center">
+        <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
+          Related Designs
+        </h1>
+      </div>
+      <div className="">
+        <Carousel
+          className="w-full max-w-sm md:max-w-full"
+          opts={{
+            align: "start",
+          }}
+        >
+          <CarouselContent>
+            {Service.map((Experience) => (
+              <CarouselItem className="md:basis-1/4">
+                <HighlightGroup className="group">
+                  <div
+                    key={Experience.post}
+                    className="group/item h-full md:col-span-6 lg:col-span-4"
+                    data-aos="fade-down"
+                  >
+                    <HighlighterItem className="h-full rounded-3xl">
+                      <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
+                        <Particles
+                          className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
+                          quantity={50}
+                          color={"#ffffff"}
+                          vy={-0.2}
+                        />
+
+                        <div className="flex flex-col">
+                          <div
+                            className="pointer-events-none absolute bottom-0 right-1 -z-10 aspect-square w-1/2 -translate-y-1/2 translate-x-1"
+                            aria-hidden="true"
+                          >
+                            <div className="translate-z-0 absolute inset-0 rounded-full bg-slate-100 blur-[80px] dark:bg-slate-800" />
+                          </div>
+
+                          <ImageZoom>
+                            <Image
+                              src={Experience.comlogo}
+                              alt={``}
+                              className="h-full w-full object-cover transition hover:scale-95 hover:rounded-lg"
+                              width={500}
+                              height={500}
+                            />
+                          </ImageZoom>
+                          <Link href={Experience.link}>
+                            <div className="p-6">
+                              <h3 className="inline-flex items-baseline bg-gradient-to-r from-slate-600 via-slate-400 to-slate-600 bg-clip-text pb-1 font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-200 dark:to-slate-600 dark:bg-clip-text">
+                                <span className="text-xl md:text-3xl">
+                                  {Experience.post}
+                                </span>
+                              </h3>
+                              <div className="flex items-center justify-between">
+                                <h3 className="text-sm text-slate-600 dark:text-slate-400">
+                                  {Experience.company}
+                                </h3>
+                                <p className="text-md text-right leading-6 text-slate-600 dark:text-slate-400">
+                                  {Experience.price}
+                                </p>
+                              </div>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+                    </HighlighterItem>
+                  </div>
+                </HighlightGroup>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <div className="mt-10 flex justify-center gap-3">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
+        </Carousel>
+      </div>
+    </div>
+  );
+}
