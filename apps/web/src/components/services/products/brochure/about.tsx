@@ -52,6 +52,11 @@ export async function About() {
               Book a call
             </Button>
           </Link>
+          <Link href={"https://wa.me/917678432186"} target="_blank">
+            <Button variant="outline" size="lgicon">
+              <Icons.whatsapp className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
         <ShareLink name={product.slug} />
       </div>

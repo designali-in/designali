@@ -1,7 +1,6 @@
 "use client";
 
 import { Link } from "@/components/ui/link";
-import { api } from "@/trpc/react";
 
 import Counter from "../common/countnumber";
 import { Icons } from "../icons";
@@ -21,10 +20,10 @@ interface Card {
 }
 
 const Items = () => {
-  const youtubeQuery = api.youtube.get.useQuery();
+  // const youtubeQuery = api.youtube.get.useQuery();
 
-  const likesQuery = api.likes.getCount.useQuery();
-  const viewsQuery = api.views.getCount.useQuery();
+  // const likesQuery = api.likes.getCount.useQuery();
+  // const viewsQuery = api.views.getCount.useQuery();
 
   const data: Card[] = [
     {

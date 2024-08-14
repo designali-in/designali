@@ -3,7 +3,6 @@
 import type { BlogPostCore } from "@/types";
 import React from "react";
 import Link from "next/link";
-import { api } from "@/trpc/react";
 import { cn } from "@designali/ui";
 import { Skeleton } from "@designali/ui/skeleton";
 import dayjs from "dayjs";
@@ -32,10 +31,6 @@ type PostCardProps = BlogPostCore;
 const PostCard = (props: PostCardProps) => {
   const { _id, slug, title, summary, date } = props;
   const [formattedDate, setFormattedDate] = React.useState("");
-
-  const viewsQuery = api.views.get.useQuery({
-    slug,
-  });
 
   React.useEffect(() => {
     setFormattedDate(dayjs(date).format("MMMM DD, YYYY"));
