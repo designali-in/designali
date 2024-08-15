@@ -13,16 +13,18 @@ export function Banner() {
   return (
     <div className="mt-10 md:mb-10">
       <Carousel className="w-full">
-        <CarouselContent className="h-[320px] md:h-[530px]">
+        <CarouselContent className="h-[420px] md:h-[730px]">
           <CarouselItem className="">
             <Card>
               <CardContent className="flex items-center justify-center p-2">
                 <Image
-                  src={"/images/dash-dark.jpg"}
+                  src={
+                    "https://utfs.io/f/8671e2d6-802d-48b3-943a-a18cb5169f48-lyh2sl.jpg"
+                  }
                   alt={""}
-                  className="h-[300px] w-full cursor-zoom-in rounded-lg object-cover object-center saturate-100 transition-all duration-100 hover:saturate-0 md:h-[500px]"
-                  width={500}
-                  height={300}
+                  className="h-[400px] w-full rounded-lg object-cover object-center md:h-[700px]"
+                  width={1000}
+                  height={600}
                 />
               </CardContent>
             </Card>
@@ -31,11 +33,13 @@ export function Banner() {
             <Card>
               <CardContent className="flex items-center justify-center p-2">
                 <Image
-                  src={"/images/dash-dark.jpg"}
+                  src={
+                    "https://utfs.io/f/4cdd093b-a611-4487-aa06-ed35fb2c2634-lyh2sm.jpg"
+                  }
                   alt={""}
-                  className="h-[300px] w-full cursor-zoom-in rounded-lg object-cover object-center saturate-100 transition-all duration-100 hover:saturate-0 md:h-[500px]"
-                  width={500}
-                  height={300}
+                  className="h-[400px] w-full rounded-lg object-cover object-center md:h-[700px]"
+                  width={1000}
+                  height={600}
                 />
               </CardContent>
             </Card>
