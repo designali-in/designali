@@ -124,7 +124,7 @@ const Items = () => {
               <div className="flex items-center gap-2 text-3xl font-bold">
                 {value === 0 || value !== undefined ? (
                   <>
-                    <span>{icon}</span>
+                    <span className="hidden md:block">{icon}</span>
                     <div
                       style={{
                         background: `linear-gradient(122.25deg, ${startColor} 12.16%, ${endColor} 70.98%)`,
