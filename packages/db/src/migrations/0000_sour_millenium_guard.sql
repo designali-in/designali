@@ -107,16 +107,12 @@ CREATE TABLE `userLink` (
 CREATE TABLE `product` (
 	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
-	`slug` text NOT NULL,
-	`category` text NOT NULL,
-	`images` text NOT NULL,
-	`brand` text NOT NULL,
+	`headline` text NOT NULL,
 	`description` text NOT NULL,
-	`stock` integer NOT NULL,
+	`slug` text NOT NULL,
 	`price` numeric DEFAULT '0' NOT NULL,
 	`rating` numeric DEFAULT '0' NOT NULL,
 	`numReviews` integer DEFAULT 0 NOT NULL,
-	`banner` text,
 	`created_at` integer DEFAULT (strftime('%s', 'now')) NOT NULL
 );
 --> statement-breakpoint
@@ -130,6 +126,14 @@ CREATE TABLE `reviews` (
 	`created_at` integer DEFAULT (strftime('%s', 'now')) NOT NULL,
 	FOREIGN KEY (`userId`) REFERENCES `user`(`id`) ON UPDATE no action ON DELETE cascade,
 	FOREIGN KEY (`productId`) REFERENCES `product`(`id`) ON UPDATE no action ON DELETE cascade
+);
+--> statement-breakpoint
+CREATE TABLE `user_subscription` (
+	`id` integer PRIMARY KEY NOT NULL,
+	`user_id` integer,
+	`stripe_customer_id` text,
+	`stripe_subscription_id` text,
+	`subscribed` integer NOT NULL
 );
 --> statement-breakpoint
 CREATE INDEX `accounts_userId_idx` ON `account` (`user_id`);--> statement-breakpoint

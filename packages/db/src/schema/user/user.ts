@@ -25,6 +25,8 @@ export const users = sqliteTable("user", {
   role: text("role", { enum: ["user", "admin"] })
     .default("user")
     .notNull(),
+  stripeCustomerId: text("stripe_customer_id"),
+  subscribed: integer("subscribed", { mode: "boolean" }),
   createdAt: integer("created_at", {
     mode: "timestamp",
   })

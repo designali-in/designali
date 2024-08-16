@@ -15,3 +15,5 @@ export const reviewFormDefaultValues = {
   comment: "",
   rating: 5,
 };
+
+export const MAX_FREE_FROMS = 3;

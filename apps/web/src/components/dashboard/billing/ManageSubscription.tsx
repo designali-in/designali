@@ -4,8 +4,6 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@designali/ui/button";
 
-import PageTitle from "../../mdx/page-title";
-
 const ManageSubscription = () => {
   const router = useRouter();
 
@@ -26,16 +24,10 @@ const ManageSubscription = () => {
   };
 
   return (
-    <div className="mx-auto mb-6 mt-40 max-w-7xl space-y-2">
-      <PageTitle
-        title="Billing"
-        description={`Manage your orders and view your order details`}
-      />
-      <div className="flex justify-center">
-        <Button onClick={redirectToCustomerPortal}>
-          Change your subscription
-        </Button>
-      </div>
+    <div className="flex justify-center py-10">
+      <Button onClick={redirectToCustomerPortal}>
+        Change your subscription
+      </Button>
     </div>
   );
 };

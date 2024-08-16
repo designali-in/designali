@@ -1,5 +1,6 @@
 import React from "react";
 import ManageSubscription from "@/components/dashboard/billing/ManageSubscription";
+import UpdgradeAccBtn from "@/src/components/dashboard/billing/updgradeAccBtn";
 import { auth, signIn } from "@designali/auth";
 import { db } from "@designali/db";
 import { users } from "@designali/db/src/schema";
@@ -8,7 +9,7 @@ import { eq } from "drizzle-orm";
 const billing = async () => {
   const session = await auth();
 
-  if (!session || !session.user || !session.user.id) {
+  if (!session.user.id) {
     signIn();
     return null;
   }
@@ -17,10 +18,13 @@ const billing = async () => {
     where: eq(users.id, session.user.id),
   });
 
+  const plan = user.subscribed ? "premium" : "free";
+
   return (
-    <main className="mt-40 h-screen">
+    <main className="mx-auto mt-40 h-screen max-w-xl">
       <ManageSubscription />
-      <p className="text-center">You currently are on a plan</p>
+      <p className="text-center">You currently are on a {plan} plan</p>
+      <UpdgradeAccBtn />
     </main>
   );
 };

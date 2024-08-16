@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "5663b899-8971-4b8f-a5d1-75d67f7aacdf",
+  "id": "e9c1744c-3c51-48be-8d07-69fadb4ac28c",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "account": {
@@ -747,29 +747,8 @@
           "notNull": true,
           "autoincrement": false
         },
-        "slug": {
-          "name": "slug",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "category": {
-          "name": "category",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "images": {
-          "name": "images",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "brand": {
-          "name": "brand",
+        "headline": {
+          "name": "headline",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
@@ -782,9 +761,9 @@
           "notNull": true,
           "autoincrement": false
         },
-        "stock": {
-          "name": "stock",
-          "type": "integer",
+        "slug": {
+          "name": "slug",
+          "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
@@ -812,13 +791,6 @@
           "notNull": true,
           "autoincrement": false,
           "default": 0
-        },
-        "banner": {
-          "name": "banner",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
         },
         "created_at": {
           "name": "created_at",
@@ -925,6 +897,50 @@
           "onUpdate": "no action"
         }
       },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "user_subscription": {
+      "name": "user_subscription",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "stripe_customer_id": {
+          "name": "stripe_customer_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "stripe_subscription_id": {
+          "name": "stripe_subscription_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "subscribed": {
+          "name": "subscribed",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }

@@ -1,1 +1,0 @@
-ALTER TABLE `product` ADD `images` text NOT NULL;
