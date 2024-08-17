@@ -16,6 +16,8 @@ import "@/styles/globals.css";
 
 import { env } from "@designali/env";
 
+import NowPlaying from "../components/layout/footer/now-playing";
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     env.VERCEL_ENV === "production"
@@ -74,6 +76,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <Header />
                 {children}
                 <Footer />
+                <NowPlaying />
               </SessionProvider>
             </TRPCReactProvider>
           </TooltipProvider>

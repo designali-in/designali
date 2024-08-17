@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedBars() {
   return (
-    <div className="flex w-auto items-end">
+    <div className="flex w-auto items-end justify-center py-3">
       <motion.span
         className="mr-[3px] h-2 w-1 rounded-full bg-ali opacity-75"
         animate={{

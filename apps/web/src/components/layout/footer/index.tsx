@@ -72,7 +72,7 @@ const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slat
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full border-t border-ali/50 px-2 sm:px-4">
+    <footer className="mx-auto w-full border-b border-t border-ali/20 px-2 sm:px-4">
       <div className="-mt-10 flex flex-wrap justify-center gap-8">
         <Link href="/">
           <p className="flex h-20 w-20 items-center justify-center rounded-full bg-background">
@@ -80,9 +80,7 @@ export function Footer() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-wrap justify-center gap-8 px-12">
-        <NowPlaying />
-      </div>
+
       <p className="mx-auto max-w-5xl px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
         Welcome to Designali, where creativity meets strategy to bring your
         vision to life. We are a dynamic design agency passionate about

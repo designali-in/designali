@@ -33,7 +33,7 @@
     "@turbo/gen": "^2.0.8",
     "prettier": "catalog:",
     "tsup": "^8.1.0",
-    "turbo": "^2.0.12",
+    "turbo": "^2.0.14",
     "typescript": "catalog:"
   },
   "prettier": "@designali/prettier-config"
