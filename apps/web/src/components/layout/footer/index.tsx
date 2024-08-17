@@ -80,8 +80,7 @@ export function Footer() {
           </p>
         </Link>
       </div>
-      <div className="mt-8 flex flex-wrap justify-center gap-8 px-12">
-        {flags.spotify ? <NowPlaying /> : null}
+      <div className="flex flex-wrap justify-center gap-8 px-12">
         <NowPlaying />
       </div>
       <p className="mx-auto max-w-5xl px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
