@@ -1,5 +1,6 @@
 "use client";
 
+import type { Event } from "@/lib/events";
 import type { Style } from "@/src/lib/registry/styles";
 import type { NpmCommands } from "@/src/types";
 import type { MDXComponents } from "@designali/mdx";
@@ -13,7 +14,9 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { CopyButton, CopyNpmCommandButton } from "../../ui/copy-button";
 import Callout from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
+import { ComponentExample } from "./component-example";
 import { ComponentPreview } from "./component-preview";
+import { ComponentSource } from "./component-source";
 import {
   FlexGrid,
   FlexGridLOGO,
@@ -27,7 +30,6 @@ import ItemGrid from "./item-grid";
 import Link from "./link";
 import LinkCard from "./link-card";
 import MdxCard from "./mdx-card";
-import Pre from "./pre";
 import Table from "./table";
 import Tree from "./tree";
 import Video from "./video";
@@ -167,15 +169,6 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <code
-      className={cn(
-        "relative rounded-md px-[0.4rem] py-[0.2rem] text-sm",
-        className,
-      )}
-      {...props}
-    />
-  ),
   Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
     <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
   ),
@@ -270,6 +263,7 @@ const components: MDXComponents = {
     __bunCommand__,
     __withMeta__,
     __src__,
+    __event__,
     __style__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & {
@@ -277,20 +271,19 @@ const components: MDXComponents = {
     __rawString__?: string;
     __withMeta__?: boolean;
     __src__?: string;
+    __event__?: Event["name"];
   } & NpmCommands) => {
     return (
       <StyleWrapper styleName={__style__}>
         <pre
-          className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900",
-            className,
-          )}
+          className={cn("my-4 max-h-[650px] rounded-xl border p-4", className)}
           {...props}
         />
         {__rawString__ && !__npmCommand__ && (
           <CopyButton
             value={__rawString__}
             src={__src__}
+            event={__event__}
             className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
           />
         )}
@@ -311,9 +304,20 @@ const components: MDXComponents = {
       </StyleWrapper>
     );
   },
+  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <code
+      className={cn(
+        "relative px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        className,
+      )}
+      {...props}
+    />
+  ),
   ItemGrid,
   FlexGrid,
   ComponentPreview,
+  ComponentSource,
+  ComponentExample,
   FlexGridTWO,
   FlexGridLOGO,
   Callout,

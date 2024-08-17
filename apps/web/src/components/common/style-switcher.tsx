@@ -1,8 +1,10 @@
 "use client";
 
+import type { Style } from "@/lib/registry/styles";
+import type { SelectTriggerProps } from "@radix-ui/react-select";
 import * as React from "react";
 import { useConfig } from "@/hooks/use-config";
-import { Style, styles } from "@/lib/registry/styles";
+import { styles } from "@/lib/registry/styles";
 import { cn } from "@designali/ui";
 import {
   Select,
@@ -11,7 +13,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@designali/ui/select";
-import { type SelectTriggerProps } from "@radix-ui/react-select";
 
 export function StyleSwitcher({ className, ...props }: SelectTriggerProps) {
   const [config, setConfig] = useConfig();
@@ -28,7 +29,7 @@ export function StyleSwitcher({ className, ...props }: SelectTriggerProps) {
     >
       <SelectTrigger
         className={cn(
-          "h-7 w-[145px] text-xs [&_svg]:h-4 [&_svg]:w-4",
+          "h-10 w-auto gap-2 text-xs [&_svg]:h-4 [&_svg]:w-4",
           className,
         )}
         {...props}

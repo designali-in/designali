@@ -64,18 +64,12 @@ export function ComponentPreview({
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         <div className="flex items-center justify-between pb-3">
           {!hideCode && (
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0 dark:bg-transparent">
               <TabsTrigger
                 value="preview"
                 className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
               >
                 Preview
-              </TabsTrigger>
-              <TabsTrigger
-                value="code"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                Code
               </TabsTrigger>
             </TabsList>
           )}
@@ -85,13 +79,13 @@ export function ComponentPreview({
             <StyleSwitcher />
             <div className="flex items-center gap-2">
               <CopyButton
-                value={""}
+                value={name}
                 variant="outline"
-                className="h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+                className="h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
               />
             </div>
           </div>
-          <ThemeWrapper defaultTheme="zinc">
+          <ThemeWrapper defaultTheme="slate">
             <div
               className={cn(
                 "preview flex min-h-[350px] w-full justify-center p-10",
@@ -114,13 +108,6 @@ export function ComponentPreview({
               </React.Suspense>
             </div>
           </ThemeWrapper>
-        </TabsContent>
-        <TabsContent value="code">
-          <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-              {Code}
-            </div>
-          </div>
         </TabsContent>
       </Tabs>
     </div>
