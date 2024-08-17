@@ -14,7 +14,7 @@ export function Color({ color }: { color: Color }) {
   return (
     <button
       key={color.hex}
-      className="group relative flex aspect-[4/5] w-full flex-1 flex-col gap-2 text-[--text] sm:h-auto sm:w-auto [&>svg]:absolute [&>svg]:right-4 [&>svg]:top-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:opacity-0 [&>svg]:transition-opacity"
+      className="group relative flex aspect-[3/1] w-full flex-1 flex-col flex-wrap gap-2 text-[--text] md:aspect-[4/5] md:h-auto md:w-auto [&>svg]:absolute [&>svg]:right-4 [&>svg]:top-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:opacity-0 [&>svg]:transition-opacity"
       style={
         {
           "--bg": `hsl(${color.hsl})`,
@@ -40,12 +40,9 @@ export function Color({ color }: { color: Color }) {
         <Clipboard className="group-hover:opacity-100" />
       )}
       <div className="w-full flex-1 bg-[--bg]" />
-      <div className="flex w-full flex-col items-center justify-center gap-1">
-        <span className="hidden font-mono text-xs tabular-nums text-muted-foreground transition-colors group-hover:text-foreground lg:flex">
+      <div className="flex w-full items-center justify-center gap-1">
+        <span className="font-mono text-xs tabular-nums text-muted-foreground transition-colors group-hover:text-foreground lg:flex">
           {color.className}
-        </span>
-        <span className="font-mono text-xs tabular-nums text-muted-foreground transition-colors group-hover:text-foreground lg:hidden">
-          {color.scale}
         </span>
       </div>
     </button>

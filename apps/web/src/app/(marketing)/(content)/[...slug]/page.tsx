@@ -7,6 +7,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/mdx/page-header";
+import { ScrollProgress } from "@/src/components/ui/scroll-progress";
 import { Separator } from "@designali/ui/separator";
 import { allPages } from "contentlayer/generated";
 
@@ -68,6 +69,7 @@ export default async function PagePage({ params }: PageProps) {
 
   return (
     <div className="mx-auto my-20 max-w-5xl px-6">
+      <ScrollProgress className="top-14" />
       <PageHeader>
         <div className="mt-10">
           <PageHeaderHeading>{page.title}</PageHeaderHeading>

@@ -1,12 +1,14 @@
 import { getColors } from "@/lib/colors";
 import { ColorPalette } from "@/src/components/common/colors/color-palette";
 import PageTitle from "@/src/components/mdx/page-title";
+import { ScrollProgress } from "@/src/components/ui/scroll-progress";
 
 const colors = getColors();
 
 export default function HomePage() {
   return (
     <main className="mx-auto my-20 max-w-7xl px-6 md:mt-40">
+      <ScrollProgress className="top-14" />
       <PageTitle
         title="Colors"
         description={`You can use any without any cost.`}

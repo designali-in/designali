@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MdxPager } from "@/components/mdx/mdx-pager";
 import site from "@/config/site";
-import { UpdatesToolbar } from "@/src/components/common/shate-toolbar";
 import { Button } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
 import { allBlogPosts } from "contentlayer/generated";
