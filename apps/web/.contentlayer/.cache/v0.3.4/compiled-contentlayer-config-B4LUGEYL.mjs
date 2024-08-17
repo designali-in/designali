@@ -117,6 +117,11 @@ var Doc = defineDocumentType(() => ({
     description: {
       type: "string"
     },
+    component: {
+      type: "boolean",
+      default: false,
+      required: false
+    },
     published: {
       type: "boolean",
       default: true
@@ -222,4 +227,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-IABZ7TKS.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-B4LUGEYL.mjs.map

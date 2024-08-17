@@ -1,13 +1,19 @@
 "use client";
 
+import type { Style } from "@/src/lib/registry/styles";
+import type { NpmCommands } from "@/src/types";
 import type { MDXComponents } from "@designali/mdx";
 import ImageZoom from "@/components/common/image-zoom";
+import { StyleWrapper } from "@/components/common/style-wrapper";
 import { cn } from "@designali/ui";
 import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
+import { CopyButton, CopyNpmCommandButton } from "../../ui/copy-button";
 import Callout from "./callout";
+import { CodeBlockWrapper } from "./code-block-wrapper";
+import { ComponentPreview } from "./component-preview";
 import {
   FlexGrid,
   FlexGridLOGO,
@@ -252,9 +258,62 @@ const components: MDXComponents = {
   AlertDescription: (
     props: React.ComponentPropsWithoutRef<typeof AlertDescription>,
   ) => <AlertDescription {...props} />,
-  pre: Pre,
+  CodeBlockWrapper: ({ ...props }) => (
+    <CodeBlockWrapper className="rounded-md border" {...props} />
+  ),
+  pre: ({
+    className,
+    __rawString__,
+    __npmCommand__,
+    __yarnCommand__,
+    __pnpmCommand__,
+    __bunCommand__,
+    __withMeta__,
+    __src__,
+    __style__,
+    ...props
+  }: React.HTMLAttributes<HTMLPreElement> & {
+    __style__?: Style["name"];
+    __rawString__?: string;
+    __withMeta__?: boolean;
+    __src__?: string;
+  } & NpmCommands) => {
+    return (
+      <StyleWrapper styleName={__style__}>
+        <pre
+          className={cn(
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900",
+            className,
+          )}
+          {...props}
+        />
+        {__rawString__ && !__npmCommand__ && (
+          <CopyButton
+            value={__rawString__}
+            src={__src__}
+            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+          />
+        )}
+        {__npmCommand__ &&
+          __yarnCommand__ &&
+          __pnpmCommand__ &&
+          __bunCommand__ && (
+            <CopyNpmCommandButton
+              commands={{
+                __npmCommand__,
+                __yarnCommand__,
+                __pnpmCommand__,
+                __bunCommand__,
+              }}
+              className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+            />
+          )}
+      </StyleWrapper>
+    );
+  },
   ItemGrid,
   FlexGrid,
+  ComponentPreview,
   FlexGridTWO,
   FlexGridLOGO,
   Callout,

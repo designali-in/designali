@@ -22,6 +22,15 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
+      title: "Coding",
+      items: [
+        {
+          title: "Typography",
+          href: "/designs/typography",
+        },
+      ],
+    },
+    {
       title: "Designs",
       items: [
         {
@@ -78,6 +87,7 @@ export const guidesConfig: GuidesConfig = {
         },
       ],
     },
+
     {
       title: "Social Media",
       items: [

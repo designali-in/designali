@@ -33,6 +33,7 @@ export type Doc = {
   type: 'Doc'
   title: string
   description?: string | undefined
+  component: boolean
   published: boolean
   /** MDX file body */
   body: MDX

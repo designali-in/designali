@@ -122,6 +122,11 @@ export const Doc = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    component: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
     published: {
       type: "boolean",
       default: true,

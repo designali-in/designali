@@ -96,6 +96,7 @@
     "next-contentlayer": "^0.3.4",
     "prettier": "catalog:",
     "tailwindcss": "^3.4.4",
+    "unist-builder": "3.0.0",
     "typescript": "catalog:"
   },
   "prettier": "@designali/prettier-config"
