@@ -21,6 +21,7 @@ const navigation = {
           items: [
             { name: "About AI", href: "/about" },
             { name: "Pricing", href: "/pricing" },
+            { name: "Dashboard", href: "/app/dashboard/overview" },
           ],
         },
         {
@@ -50,6 +51,7 @@ const navigation = {
             { name: "Design", href: "/designs" },
             { name: "Guides", href: "/guides" },
             { name: "Blogs", href: "/blogs" },
+            { name: "Colors", href: "/colors" },
           ],
         },
         {
