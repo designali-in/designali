@@ -1,10 +1,14 @@
 import { env } from "@designali/env";
 
-export const SENDER_EMAIL = env.AUTHOR_EMAIL || "onboarding@resend.dev";
+export const SENDER_EMAIL = process.env.AUTHOR_EMAIL || "onboarding@resend.dev";
 
 export const isProduction = env.NODE_ENV === "production";
 
 export const SITE_URL = isProduction
+  ? "https://designali.in"
+  : "http://localhost:3000";
+
+export const BASE_URL = isProduction
   ? "https://designali.in"
   : "http://localhost:3000";
 
