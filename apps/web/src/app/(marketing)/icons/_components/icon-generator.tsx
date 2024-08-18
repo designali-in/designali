@@ -534,7 +534,7 @@ export const IconGenerator = () => {
             title={`cmd+z`}
             onClick={undo}
           >
-            <Icons.box className="mr-1 h-4 w-4" />
+            <Icons.undo className="mr-1 h-4 w-4" />
             <span className={""}>Undo</span>
           </Button>
 
@@ -545,7 +545,7 @@ export const IconGenerator = () => {
             title={`shift+cmd+z`}
             onClick={redo}
           >
-            <Icons.menu className="mr-1 h-4 w-4" />
+            <Icons.redo className="mr-1 h-4 w-4" />
             <span className={""}>Redo</span>
           </Button>
 
