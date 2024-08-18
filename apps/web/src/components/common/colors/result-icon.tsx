@@ -1,8 +1,6 @@
 import React, { useId } from "react";
-
-import noisePicture from "../assets/noise.inline.png";
-
-import { SettingsType } from "../lib/types";
+import noisePicture from "@/public/assets/noise.inline.png";
+import { SettingsType } from "@/src/types";
 
 type PropTypes = {
   settings: SettingsType;
@@ -15,7 +13,9 @@ type PropTypes = {
 const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
   ({ settings, size = 512, isPreview, IconComponent }, svgRef) => {
     const strokeSize = isPreview ? 0 : settings.backgroundStrokeSize;
-    const strokeWidth = isNaN(parseInt(strokeSize.toString())) ? 0 : parseInt(strokeSize.toString());
+    const strokeWidth = isNaN(parseInt(strokeSize.toString()))
+      ? 0
+      : parseInt(strokeSize.toString());
 
     const rectId = useId().replace(/:/g, "");
     const gradientId = useId().replace(/:/g, "");
@@ -40,7 +40,11 @@ const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
           x={strokeSize / 2}
           y={strokeSize / 2}
           rx={settings.backgroundRadius}
-          fill={settings.backgroundFillType === "Solid" ? settings.backgroundStartColor : `url(#${gradientId})`}
+          fill={
+            settings.backgroundFillType === "Solid"
+              ? settings.backgroundStartColor
+              : `url(#${gradientId})`
+          }
           stroke={settings.backgroundStrokeColor}
           strokeWidth={strokeWidth}
           strokeOpacity={`${settings.backgroundStrokeOpacity}%`}
@@ -86,7 +90,10 @@ const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
               gradientUnits="objectBoundingBox"
             >
               <stop stopColor={settings.backgroundStartColor} />
-              <stop offset={settings.backgroundSpread / 100} stopColor={settings.backgroundEndColor} />
+              <stop
+                offset={settings.backgroundSpread / 100}
+                stopColor={settings.backgroundEndColor}
+              />
             </radialGradient>
           ) : (
             <linearGradient
@@ -124,7 +131,7 @@ const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
         ) : null}
       </svg>
     );
-  }
+  },
 );
 
 ResultIcon.displayName = "ResultIcon";

@@ -5,6 +5,7 @@ import { Icons } from "@/components/icons";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@designali/ui/dialog";
+import { Input } from "@designali/ui/input";
 import {
   Select,
   SelectContent,
@@ -13,9 +14,6 @@ import {
   SelectValue,
 } from "@designali/ui/select";
 import { saveSvgAsPng } from "save-svg-as-png";
-
-import styles from "./ExportModal.module.css";
-import { Input, InputSlot } from "./input";
 
 type ExportFormat = "PNG" | "SVG";
 
@@ -163,13 +161,7 @@ function ExportModal({
             </div>
             <div className="flex gap-2">
               <div className="">
-                <div
-                  className={cn(
-                    styles.inputWrapper,
-                    styles.inputWithUnit,
-                    option.format === "SVG" && styles.disabled,
-                  )}
-                >
+                <div className="">
                   <Input
                     type={option.format === "SVG" ? "text" : "number"}
                     min={0}
@@ -182,11 +174,9 @@ function ExportModal({
                       )
                     }
                     disabled={option.format === "SVG"}
-                    size="large"
                     className="h-10 w-[116px]"
-                  >
-                    <InputSlot>px</InputSlot>
-                  </Input>
+                  />
+                  px
                 </div>
               </div>
               <div className="">

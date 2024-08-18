@@ -1,5 +1,3 @@
-import { Icons } from "@/components/icons";
-
 export type SettingsType = {
   backgroundFillType: string;
   backgroundStartColor: string;

@@ -1,4 +1,9 @@
-import parseHtmlAsReact, { DOMNode, Element, attributesToProps, domToReact } from "html-react-parser";
+import parseHtmlAsReact, {
+  attributesToProps,
+  DOMNode,
+  domToReact,
+  Element,
+} from "html-react-parser";
 
 type PropTypes = {
   svgSource: string;
@@ -9,7 +14,11 @@ const CustomSvgIcon: React.FC<PropTypes> = ({ svgSource, ...props }) => {
     replace: (node) => {
       if (node.type === "tag" && "name" in node && node.name === "svg") {
         const svgProps = attributesToProps(node.attribs);
-        return <svg {...{ ...svgProps, ...props }}>{domToReact((node as Element).children as DOMNode[])}</svg>;
+        return (
+          <svg {...{ ...svgProps, ...props }}>
+            {domToReact((node as Element).children as DOMNode[])}
+          </svg>
+        );
       }
     },
   });

@@ -1,11 +1,13 @@
-import PageTitle from "@/src/components/mdx/page-title";
+import { Suspense } from "react";
 
-import { IconGenerator } from "./icon-generator";
+import { IconGenerator } from "./_components/icon-generator";
 
 export default function HomePage() {
   return (
-    <main className="my-20 mt-40">
-      <IconGenerator />
+    <main className="">
+      <Suspense>
+        <IconGenerator />
+      </Suspense>
     </main>
   );
 }
