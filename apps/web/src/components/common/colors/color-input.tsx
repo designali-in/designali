@@ -1,14 +1,15 @@
+import type { ColorChangeHandler } from "react-color";
 import { Input } from "@designali/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
-import { ColorChangeHandler, SketchPicker } from "react-color";
+import { SketchPicker } from "react-color";
 
-type ColorInputPropTypes = {
+interface ColorInputPropTypes {
   value: string;
   name: string;
   recentColors: string[];
   onChange: ColorChangeHandler;
   disabled?: boolean;
-};
+}
 
 export const ColorInput = ({
   value,

@@ -1,6 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/await-thenable */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import React, { use, useCallback, useEffect, useRef, useState } from "react";
+import type { SettingsType } from "@/src/types";
+import type { ColorChangeHandler } from "react-color";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Icons } from "@/components/icons";
@@ -17,7 +29,6 @@ import ExportModal from "@/src/components/common/colors/export-modal";
 import { presets } from "@/src/components/common/colors/grad-types";
 import ResultIcon from "@/src/components/common/colors/result-icon";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
-import { SettingsType } from "@/src/types";
 import { cn } from "@designali/ui";
 import { Badge } from "@designali/ui/badge";
 import { Button } from "@designali/ui/button";
@@ -29,13 +40,12 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@designali/ui/select";
+import { Slider } from "@designali/ui/slider";
 import { Switch } from "@designali/ui/switch";
 import { toast } from "@designali/ui/toaster";
-import { ColorChangeHandler } from "react-color";
 import { CSSTransition } from "react-transition-group";
 import { svgAsPngUri } from "save-svg-as-png";
 
@@ -444,12 +454,6 @@ export const IconGenerator = () => {
     }
   };
 
-  const onChangeScale = (newValue: string) => {
-    if (newValue) {
-      setScale(Number(newValue));
-    }
-  };
-
   const onWheel = (event: WheelEvent) => {
     if (event.ctrlKey || event.metaKey) {
       setScale((currentScale) => currentScale + 0.0001 * event.deltaY);
@@ -488,6 +492,7 @@ export const IconGenerator = () => {
   }
 
   const fillTypeOptions = [
+    { value: "Empty", label: "Empty" },
     { value: "Linear", label: "Linear" },
     { value: "Radial", label: "Radial" },
     { value: "Solid", label: "Solid" },
@@ -680,27 +685,8 @@ export const IconGenerator = () => {
             </div>
           </div>
         </div>
-        <div
-          className=""
-          style={{
-            width: `${512 * scale + 32}px`,
-            height: `${512 * scale + 32}px`,
-          }}
-          onClick={() => {
-            setIconsPanelOpened(false);
-            setOptionsPanelOpened(false);
-          }}
-        >
-          <div
-            className="mt-40"
-            style={
-              scale > 1
-                ? {
-                    transform: `scale(${scale})`,
-                  }
-                : {}
-            }
-          >
+        <div className="relative">
+          <div className="mt-40 h-auto bg-slate-800 p-4">
             <CSSTransition
               in={history.length > 0}
               nodeRef={svgRef}
@@ -716,32 +702,10 @@ export const IconGenerator = () => {
             </CSSTransition>
           </div>
 
-          <div className={"relative mt-10"}>
-            <Badge className="absolute right-0 h-8" variant="outline">
-              512 x 512
+          <div className={"mt-10 flex justify-center"}>
+            <Badge className="h-8" variant="outline">
+              512 x 512 px
             </Badge>
-            <div className="absolute">
-              <Select
-                defaultValue={`${scale}`}
-                value={`${scale}`}
-                onValueChange={onChangeScale}
-              >
-                <SelectTrigger className="w-sm h-10">
-                  <SelectValue placeholder="Scale" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    {scaleOptions.map((option) => (
-                      <div>
-                        <SelectItem value={`${option.value}`}>
-                          {option.label}
-                        </SelectItem>
-                      </div>
-                    ))}
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-            </div>
           </div>
         </div>
 
@@ -797,7 +761,10 @@ export const IconGenerator = () => {
                   </ScrollArea>
                 </details>
                 <form onChange={onFormChange} ref={formRef}>
-                  <details className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900">
+                  <details
+                    className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900"
+                    open
+                  >
                     <summary className="flex items-center justify-between gap-2">
                       <h1 className="text-md px-4 text-center">Fill Styles</h1>
                       <div className="flex gap-2 px-4">
@@ -890,30 +857,39 @@ export const IconGenerator = () => {
                           </label>
                           <label className="flex items-center justify-between">
                             <span className="text-xs">Spread</span>
-                            <Input
-                              name="backgroundSpread"
-                              type="number"
-                              defaultValue={settings.backgroundSpread}
-                              min={0}
-                              max={100}
-                              className="w-[120px]"
-                            />
-                            %
+                            <div className="flex flex-1 justify-end gap-2">
+                              <Slider
+                                name="backgroundSpread"
+                                defaultValue={[settings.backgroundSpread]}
+                                min={0}
+                                max={100}
+                                className="w-[150px] px-2"
+                              />
+                              <p className="flex w-[30px] justify-end">
+                                {settings.backgroundSpread}
+                              </p>
+                              <p className="">{"%"}</p>
+                            </div>
                           </label>
                         </>
                       ) : settings.backgroundFillType === "Linear" ? (
                         <label className="flex items-center justify-between">
                           <span className="text-xs">Angle</span>
-                          <Input
-                            name="backgroundAngle"
-                            type="number"
-                            onChange={onChangeAngle}
-                            defaultValue={settings.backgroundAngle}
-                            min={0}
-                            max={360}
-                            className="w-[120px]"
-                          />
-                          º
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="backgroundRadius"
+                              defaultValue={[settings.backgroundAngle]}
+                              min={0}
+                              max={360}
+                              step={5}
+                              onChange={onChangeAngle}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.backgroundAngle}
+                            </p>
+                            <p className="">{"º"}</p>
+                          </div>
                         </label>
                       ) : null}
                     </div>
@@ -959,40 +935,50 @@ export const IconGenerator = () => {
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Noise opacity</span>
-                          <Input
-                            name="backgroundNoiseTextureOpacity"
-                            type="number"
-                            min={0}
-                            max={100}
-                            defaultValue={
-                              settings.backgroundNoiseTextureOpacity
-                            }
-                            className="w-[120px]"
-                          />
-                          %
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="backgroundNoiseTextureOpacity"
+                              defaultValue={[
+                                settings.backgroundNoiseTextureOpacity,
+                              ]}
+                              min={0}
+                              max={100}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.backgroundNoiseTextureOpacity}
+                            </p>
+                          </div>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Radius</span>
-                          <Input
-                            name="backgroundRadius"
-                            type="number"
-                            min={0}
-                            max={256}
-                            defaultValue={settings.backgroundRadius}
-                            className="w-[120px]"
-                          />
-                          px
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="backgroundRadius"
+                              defaultValue={[settings.backgroundRadius]}
+                              min={0}
+                              max={256}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.backgroundRadius}
+                            </p>
+                          </div>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Stroke size</span>
-                          <Input
-                            name="backgroundStrokeSize"
-                            type="number"
-                            min={0}
-                            defaultValue={settings.backgroundStrokeSize}
-                            className="w-[120px]"
-                          />
-                          px
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="backgroundStrokeSize"
+                              defaultValue={[settings.backgroundStrokeSize]}
+                              min={0}
+                              max={256}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.backgroundStrokeSize}
+                            </p>
+                          </div>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Stroke color</span>
@@ -1007,18 +993,26 @@ export const IconGenerator = () => {
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Stroke opacity</span>
-                          <Input
-                            name="backgroundStrokeOpacity"
-                            type="number"
-                            defaultValue={settings.backgroundStrokeOpacity}
-                            className="w-[120px]"
-                          />
-                          %
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="backgroundStrokeOpacity"
+                              defaultValue={[settings.backgroundStrokeOpacity]}
+                              min={0}
+                              max={100}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.backgroundStrokeOpacity}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </details>
 
-                    <details className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900">
+                    <details
+                      className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900"
+                      open
+                    >
                       <summary className="flex items-center justify-between gap-2">
                         <h1 className="text-md px-4 text-center">Icon</h1>
                         <div className="flex gap-2 px-4">
@@ -1041,38 +1035,57 @@ export const IconGenerator = () => {
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Size</span>
                           <div className="">
-                            <Input
-                              name="iconSize"
-                              type="number"
-                              defaultValue={settings.iconSize}
-                              min={0}
-                              className="w-[120px]"
-                            />
-                            px
+                            <div className="flex flex-1 justify-end gap-2">
+                              <Slider
+                                name="iconSize"
+                                defaultValue={[settings.iconSize]}
+                                min={0}
+                                max={512}
+                                className="w-[150px] px-2"
+                              />
+                              <p className="flex w-[30px] justify-end">
+                                {settings.iconSize}
+                              </p>
+                              <p className="">{"px"}</p>
+                            </div>
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">X Offset</span>
                           <div className={""}>
-                            <Input
-                              name="iconOffsetX"
-                              type="number"
-                              defaultValue={settings.iconOffsetX}
-                              className="w-[120px]"
-                            />
-                            px
+                            <div className="flex flex-1 justify-end gap-2">
+                              <Slider
+                                name="iconOffsetX"
+                                defaultValue={[settings.iconOffsetX]}
+                                min={-500}
+                                max={500}
+                                step={10}
+                                className="w-[150px] px-2"
+                              />
+                              <p className="flex w-[30px] justify-end">
+                                {settings.iconOffsetX}
+                              </p>
+                              <p className="">{"px"}</p>
+                            </div>
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Y Offset</span>
                           <div className="flex flex-col">
-                            <Input
-                              name="iconOffsetY"
-                              type="number"
-                              defaultValue={settings.iconOffsetY}
-                              className="w-[120px]"
-                            />
-                            px
+                            <div className="flex flex-1 justify-end gap-2">
+                              <Slider
+                                name="iconOffsetY"
+                                defaultValue={[settings.iconOffsetY]}
+                                min={-500}
+                                max={500}
+                                step={10}
+                                className="w-[150px] px-2"
+                              />
+                              <p className="flex w-[30px] justify-end">
+                                {settings.iconOffsetY}
+                              </p>
+                              <p className="">{"px"}</p>
+                            </div>
                           </div>
                         </div>
                       </div>

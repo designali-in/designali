@@ -1,4 +1,4 @@
-import { SettingsType } from "@/src/types";
+import type { SettingsType } from "@/src/types";
 
 type PresetType = Pick<
   SettingsType,

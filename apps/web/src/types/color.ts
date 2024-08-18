@@ -1,4 +1,4 @@
-export type SettingsType = {
+export interface SettingsType {
   backgroundFillType: string;
   backgroundStartColor: string;
   backgroundEndColor: string;
@@ -20,4 +20,4 @@ export type SettingsType = {
   customSvg?: string;
   fileName: string;
   selectedPresetIndex: number | null;
-};
+}
