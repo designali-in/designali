@@ -1,4 +1,5 @@
 import { getColors } from "@/lib/colors";
+import { ColorBW } from "@/src/components/common/colors/color-bw";
 import { ColorPalette } from "@/src/components/common/colors/color-palette";
 import PageTitle from "@/src/components/mdx/page-title";
 import { ScrollProgress } from "@/src/components/ui/scroll-progress";
@@ -17,6 +18,7 @@ export default function HomePage() {
           Tailwind CSS colors in HSL, RGB, and HEX formats.
         </p>
       </div>
+      <ColorBW />
       <div id="colors" className="grid scroll-mt-20 gap-4">
         {colors.map((colorPalette) => (
           <ColorPalette key={colorPalette.name} colorPalette={colorPalette} />

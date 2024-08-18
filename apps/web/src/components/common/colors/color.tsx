@@ -1,8 +1,8 @@
 "use client";
 
+import type { Color } from "@/lib/colors";
 import { useColors } from "@/hooks/use-colors";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
-import { type Color } from "@/lib/colors";
 import { trackEvent } from "@/lib/events";
 import { Check, Clipboard } from "lucide-react";
 import { toast } from "sonner";
