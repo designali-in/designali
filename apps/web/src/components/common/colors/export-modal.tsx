@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { Icons } from "@/components/icons";
-import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@designali/ui/dialog";
 import { Input } from "@designali/ui/input";
@@ -17,11 +16,11 @@ import { saveSvgAsPng } from "save-svg-as-png";
 
 type ExportFormat = "PNG" | "SVG";
 
-type ExportOption = {
+interface ExportOption {
   fileName: string;
   format: ExportFormat;
   size: number;
-};
+}
 
 type SvgRefType = React.RefObject<HTMLElement & SVGSVGElement>;
 
@@ -61,13 +60,13 @@ const Exporters = {
   SVG: exportToSvg,
 };
 
-type ExportModalProps = {
+interface ExportModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onStartExport: () => void;
   fileName: string;
   svgRef: SvgRefType;
-};
+}
 
 function ExportModal({
   open,
@@ -161,7 +160,7 @@ function ExportModal({
             </div>
             <div className="flex gap-2">
               <div className="">
-                <div className="">
+                <div className="flex items-center gap-2">
                   <Input
                     type={option.format === "SVG" ? "text" : "number"}
                     min={0}
@@ -176,7 +175,7 @@ function ExportModal({
                     disabled={option.format === "SVG"}
                     className="h-10 w-[116px]"
                   />
-                  px
+                  <p>px</p>
                 </div>
               </div>
               <div className="">
@@ -202,7 +201,7 @@ function ExportModal({
                 disabled={exportOptions.length <= 1}
                 onClick={() => removeExportOption(index)}
               >
-                <Icons.trash className="h-5 w-5" />
+                <Icons.trash strokeWidth={1} className="h-5 w-5" />
               </Button>
             </div>
           </div>

@@ -11,7 +11,7 @@ interface PropTypes {
 }
 
 const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
-  ({ settings, size = 512, isPreview, IconComponent }, svgRef) => {
+  ({ settings, size, isPreview, IconComponent }, svgRef) => {
     const strokeSize = isPreview ? 0 : settings.backgroundStrokeSize;
     const strokeWidth = isNaN(parseInt(strokeSize.toString()))
       ? 0

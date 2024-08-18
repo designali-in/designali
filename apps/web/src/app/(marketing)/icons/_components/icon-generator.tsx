@@ -75,7 +75,7 @@ export const IconGenerator = () => {
 
   const [draggingFile, setDraggingFile] = useState<boolean>(false);
   const [settings, setSettings] = useState<SettingsType>({
-    fileName: "extension_icon",
+    fileName: "designali",
     icon: "",
     backgroundRadius: 128,
     backgroundStrokeSize: 0,
@@ -400,7 +400,7 @@ export const IconGenerator = () => {
   const onFileNameBlured = (event: React.ChangeEvent<HTMLDivElement>) => {
     pushNewSettings({
       fileName:
-        (event.currentTarget as HTMLDivElement).textContent || "extension_name",
+        (event.currentTarget as HTMLDivElement).textContent || "designali",
     });
   };
   const onFileNameKeydown = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -534,7 +534,7 @@ export const IconGenerator = () => {
         <div className={cn("flex items-center justify-between gap-2")}>
           <Button
             variant="outline"
-            className={""}
+            className={"hidden md:flex"}
             disabled={history.length <= 1}
             title={`cmd+z`}
             onClick={undo}
@@ -545,7 +545,7 @@ export const IconGenerator = () => {
 
           <Button
             variant="outline"
-            className={""}
+            className={"hidden md:flex"}
             disabled={redoHistory.length === 0}
             title={`shift+cmd+z`}
             onClick={redo}
@@ -564,9 +564,6 @@ export const IconGenerator = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <Button variant="ghost" onClick={onShare}>
-            <Icons.share className="mr-1 h-4 w-4" />
-          </Button>
           <div className="flex items-center gap-2">
             <Button
               variant="default"
@@ -595,7 +592,7 @@ export const IconGenerator = () => {
         className={"mt-28 grid justify-center gap-8 md:flex md:h-screen"}
         ref={mainRef}
       >
-        <div className="left-0 mx-auto flex h-screen max-w-sm border-r md:absolute">
+        <div className="left-0 mx-auto flex h-screen max-w-sm border-r bg-slate-50 dark:bg-slate-950 md:absolute">
           <div className="">
             <div ref={iconsWrapperRef} className={""}>
               <div className="p-3">
@@ -615,7 +612,10 @@ export const IconGenerator = () => {
                       id="search"
                     />
                     <Label htmlFor="search">
-                      <Icons.search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2" />
+                      <Icons.search
+                        strokeWidth={1}
+                        className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+                      />
                     </Label>
                   </div>
 
@@ -626,14 +626,18 @@ export const IconGenerator = () => {
                     onClick={onRandomIconClick}
                     title="Random icon"
                   >
-                    <Icons.shuffle className="h-5 w-5" />
+                    <Icons.shuffle strokeWidth={1} className="h-4 w-4" />
                   </Button>
                   <Button variant="outline" size="lgicon" className="h-10 w-10">
                     <Input
                       type="file"
-                      className=""
+                      className="opacity-0"
                       onChange={onSelectCustomIcon}
                       accept=".svg, .png"
+                    />
+                    <Icons.upload
+                      strokeWidth={1}
+                      className="absolute h-4 w-4"
                     />
                   </Button>
                 </div>
@@ -685,16 +689,34 @@ export const IconGenerator = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
-          <div className="mt-40 h-auto bg-slate-800 p-4">
+        <div className="relative mt-20">
+          <p className="my-4 text-center">Icon</p>
+          <div className="relative flex h-auto w-auto justify-center bg-slate-200 p-4 dark:bg-slate-800">
+            <Icons.plus
+              strokeWidth={0.5}
+              className="text-aired absolute -left-4 -top-4 h-8 w-8"
+            />
+            <Icons.plus
+              strokeWidth={0.5}
+              className="text-aired absolute -bottom-4 -left-4 h-8 w-8"
+            />
+            <Icons.plus
+              strokeWidth={0.5}
+              className="text-aired absolute -right-4 -top-4 h-8 w-8"
+            />
+            <Icons.plus
+              strokeWidth={0.5}
+              className="text-aired absolute -bottom-4 -right-4 h-8 w-8"
+            />
             <CSSTransition
               in={history.length > 0}
               nodeRef={svgRef}
               timeout={300}
-              classNames={""}
+              className=""
               unmountOnExit
             >
               <ResultIcon
+                size={512}
                 settings={settings}
                 IconComponent={IconComponent}
                 ref={svgRef}
@@ -709,14 +731,11 @@ export const IconGenerator = () => {
           </div>
         </div>
 
-        <div className="right-0 mx-auto flex max-w-sm border-l md:absolute md:h-screen">
+        <div className="right-0 mx-auto flex max-w-sm border-l bg-slate-50 dark:bg-slate-950 md:absolute md:h-screen">
           <ScrollArea>
             <div className={"p-4"}>
               <div className="grid gap-2">
-                <details
-                  className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900"
-                  open
-                >
+                <details className="flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800">
                   <summary className="flex items-center justify-between gap-2">
                     <h1 className="text-md px-4 text-center">Presets</h1>
                     <div className="flex gap-2 px-4">
@@ -762,7 +781,7 @@ export const IconGenerator = () => {
                 </details>
                 <form onChange={onFormChange} ref={formRef}>
                   <details
-                    className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900"
+                    className="flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800"
                     open
                   >
                     <summary className="flex items-center justify-between gap-2">
@@ -896,7 +915,7 @@ export const IconGenerator = () => {
                   </details>
                   <div className="mt-2 grid gap-2">
                     <details
-                      className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900"
+                      className="flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800"
                       open
                     >
                       <summary className="flex items-center justify-between gap-2">
@@ -1010,7 +1029,7 @@ export const IconGenerator = () => {
                     </details>
 
                     <details
-                      className="flex rounded-lg bg-slate-100 p-4 dark:bg-slate-900"
+                      className="flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800"
                       open
                     >
                       <summary className="flex items-center justify-between gap-2">
