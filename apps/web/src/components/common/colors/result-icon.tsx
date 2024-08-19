@@ -1,6 +1,5 @@
 import type { SettingsType } from "@/src/types";
 import React, { useId } from "react";
-import noisePicture from "@/public/assets/noise.inline.png";
 
 interface PropTypes {
   settings: SettingsType;
@@ -67,7 +66,7 @@ const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
 
           {settings.backgroundNoiseTexture && !isPreview ? (
             <image
-              href={noisePicture as unknown as string}
+              href={"/assets/noise.inline.png"}
               width={size - strokeSize}
               height={size - strokeSize}
               x={strokeSize / 2}

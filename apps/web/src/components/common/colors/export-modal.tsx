@@ -217,7 +217,7 @@ export function ExportModal({
   );
 }
 
-export function Download({
+export function DownloadPNG({
   onOpenChange,
   onStartExport,
   fileName,
@@ -246,11 +246,45 @@ export function Download({
 
   return (
     <Button variant="outline" size="sm" onClick={onExport}>
-      Download
+      Download PNG
+    </Button>
+  );
+}
+
+export function DownloadSVG({
+  onOpenChange,
+  onStartExport,
+  fileName,
+  svgRef,
+}: ExportModalProps) {
+  const [exportOptions] = useState<ExportOption[]>([
+    {
+      fileName,
+      format: "SVG",
+      size: 512,
+    },
+  ]);
+
+  const onExport = async () => {
+    onOpenChange(false);
+    onStartExport();
+    // Fixes @2x png export instead of the same size as png
+    const realPixelRatio = window.devicePixelRatio;
+    window.devicePixelRatio = 1;
+    const exportPromises = exportOptions.map((option) => {
+      return Exporters[option.format](svgRef, option.fileName, option.size);
+    });
+    await Promise.all(exportPromises);
+    window.devicePixelRatio = realPixelRatio;
+  };
+
+  return (
+    <Button variant="outline" size="sm" onClick={onExport}>
+      Download SVG
     </Button>
   );
 }
 
 ExportModal.displayName = "ExportModal";
 
-Download.displayName = "Download";
+DownloadPNG.displayName = "DownloadPNG";

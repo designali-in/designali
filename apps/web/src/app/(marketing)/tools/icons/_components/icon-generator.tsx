@@ -26,7 +26,8 @@ import {
 import { ColorInput } from "@/src/components/common/colors/color-input";
 import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
 import {
-  Download,
+  DownloadPNG,
+  DownloadSVG,
   ExportModal,
 } from "@/src/components/common/colors/export-modal";
 import { presets } from "@/src/components/common/colors/grad-types";
@@ -73,8 +74,8 @@ export const IconGenerator = () => {
   const [infoMessageVisible, setInfoMessageVisible] = useState<boolean>(false);
   const [showInfoMessageUndoButton, setShowInfoMessageUndoButton] =
     useState<boolean>(true);
-  const [iconsPanelOpened, setIconsPanelOpened] = useState<boolean>(false);
-  const [optionsPanelOpened, setOptionsPanelOpened] = useState<boolean>(false);
+  const [iconpelOpened, setIconpelOpened] = useState<boolean>(false);
+  const [optionpelOpened, setOptionpelOpened] = useState<boolean>(false);
 
   const [draggingFile, setDraggingFile] = useState<boolean>(false);
   const [settings, setSettings] = useState<SettingsType>({
@@ -544,7 +545,7 @@ export const IconGenerator = () => {
             onClick={undo}
           >
             <Icons.undo className="mr-1 h-4 w-4" />
-            <span className={""}>Undo</span>
+            <p className={""}>Undo</p>
           </Button>
 
           <Button
@@ -555,7 +556,7 @@ export const IconGenerator = () => {
             onClick={redo}
           >
             <Icons.redo className="mr-1 h-4 w-4" />
-            <span className={""}>Redo</span>
+            <p className={""}>Redo</p>
           </Button>
 
           <div
@@ -694,7 +695,7 @@ export const IconGenerator = () => {
           </div>
         </div>
         <div className="relative mt-20">
-          <p className="my-4 text-center">Icon</p>
+          <p className="my-4 text-center">{settings.icon}</p>
           <div className="relative flex h-auto w-auto justify-center border p-4">
             <GridPattern
               width={11.5}
@@ -737,7 +738,14 @@ export const IconGenerator = () => {
             </CSSTransition>
           </div>
           <div className="mt-4 flex justify-center gap-2">
-            <Download
+            <DownloadPNG
+              open={showExportModal}
+              onOpenChange={setShowExportModal}
+              onStartExport={() => showInfoMessage("Download started", false)}
+              fileName={settings.fileName}
+              svgRef={svgRef}
+            />
+            <DownloadSVG
               open={showExportModal}
               onOpenChange={setShowExportModal}
               onStartExport={() => showInfoMessage("Download started", false)}
@@ -841,10 +849,10 @@ export const IconGenerator = () => {
                               max={100}
                               className="w-[150px] px-2"
                             />
-                            <p className="flex w-[30px] justify-end">
+                            <span className="flex w-[30px] justify-end">
                               {settings.backgroundOpacity}
-                            </p>
-                            <p className="">{"%"}</p>
+                            </span>
+                            %
                           </div>
                         </div>
                       </div>
@@ -859,10 +867,10 @@ export const IconGenerator = () => {
                               max={512}
                               className="w-[150px] px-2"
                             />
-                            <p className="flex w-[30px] justify-end">
+                            <span className="flex w-[30px] justify-end">
                               {settings.iconSize}
-                            </p>
-                            <p className="">{"px"}</p>
+                            </span>
+                            px
                           </div>
                         </div>
                       </div>
@@ -878,10 +886,10 @@ export const IconGenerator = () => {
                               step={10}
                               className="w-[150px] px-2"
                             />
-                            <p className="flex w-[30px] justify-end">
+                            <span className="flex w-[30px] justify-end">
                               {settings.iconOffsetX}
-                            </p>
-                            <p className="">{"px"}</p>
+                            </span>
+                            px
                           </div>
                         </div>
                       </div>
@@ -897,10 +905,10 @@ export const IconGenerator = () => {
                               step={10}
                               className="w-[150px] px-2"
                             />
-                            <p className="flex w-[30px] justify-end">
+                            <span className="flex w-[30px] justify-end">
                               {settings.iconOffsetY}
-                            </p>
-                            <p className="">{"px"}</p>
+                            </span>
+                            px
                           </div>
                         </div>
                       </div>
@@ -973,8 +981,8 @@ export const IconGenerator = () => {
                         </label>
                       )}
                       {settings.backgroundFillType === "Radial" ? (
-                        <>
-                          <label className="flex items-center justify-between">
+                        <div>
+                          <div className="flex items-center justify-between">
                             <span className="text-xs">Position</span>
                             <Select
                               name="backgroundPosition"
@@ -999,8 +1007,8 @@ export const IconGenerator = () => {
                                 </SelectGroup>
                               </SelectContent>
                             </Select>
-                          </label>
-                          <label className="flex items-center justify-between">
+                          </div>
+                          <div className="flex items-center justify-between">
                             <span className="text-xs">Spread</span>
                             <div className="flex flex-1 justify-end gap-2">
                               <Slider
@@ -1010,15 +1018,15 @@ export const IconGenerator = () => {
                                 max={100}
                                 className="w-[150px] px-2"
                               />
-                              <p className="flex w-[30px] justify-end">
+                              <span className="flex w-[30px] justify-end">
                                 {settings.backgroundSpread}
-                              </p>
-                              <p className="">{"%"}</p>
+                              </span>
+                              %
                             </div>
-                          </label>
-                        </>
+                          </div>
+                        </div>
                       ) : settings.backgroundFillType === "Linear" ? (
-                        <label className="flex items-center justify-between">
+                        <div className="flex items-center justify-between">
                           <span className="text-xs">Angle</span>
                           <div className="flex flex-1 justify-end gap-2">
                             <Slider
@@ -1030,12 +1038,12 @@ export const IconGenerator = () => {
                               onChange={onChangeAngle}
                               className="w-[150px] px-2"
                             />
-                            <p className="flex w-[30px] justify-end">
+                            <span className="flex w-[30px] justify-end">
                               {settings.backgroundAngle}
-                            </p>
-                            <p className="">{"º"}</p>
+                            </span>
+                            º
                           </div>
-                        </label>
+                        </div>
                       ) : null}
                     </div>
                   </details>
@@ -1052,7 +1060,7 @@ export const IconGenerator = () => {
                       </summary>
                       <div className="grid gap-2 p-4">
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Radial glare</span>
+                          <p className="text-xs">Radial glare</p>
                           <Switch
                             name="backgroundRadialGlare"
                             checked={settings.backgroundRadialGlare}
@@ -1066,7 +1074,7 @@ export const IconGenerator = () => {
                         </div>
 
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Noise texture</span>
+                          <p className="text-xs">Noise texture</p>
                           <Switch
                             name="backgroundNoiseTexture"
                             checked={settings.backgroundNoiseTexture}
@@ -1079,7 +1087,7 @@ export const IconGenerator = () => {
                           />
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Noise opacity</span>
+                          <p className="text-xs">Noise opacity</p>
                           <div className="flex flex-1 justify-end gap-2">
                             <Slider
                               name="backgroundNoiseTextureOpacity"
@@ -1096,7 +1104,7 @@ export const IconGenerator = () => {
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Radius</span>
+                          <p className="text-xs">Radius</p>
                           <div className="flex flex-1 justify-end gap-2">
                             <Slider
                               name="backgroundRadius"
@@ -1111,7 +1119,7 @@ export const IconGenerator = () => {
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Stroke size</span>
+                          <p className="text-xs">Stroke size</p>
                           <div className="flex flex-1 justify-end gap-2">
                             <Slider
                               name="backgroundStrokeSize"
@@ -1126,7 +1134,7 @@ export const IconGenerator = () => {
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Stroke color</span>
+                          <p className="text-xs">Stroke color</p>
                           <ColorInput
                             value={settings.backgroundStrokeColor}
                             name="backgroundStrokeColor"
@@ -1137,7 +1145,7 @@ export const IconGenerator = () => {
                           />
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Stroke opacity</span>
+                          <p className="text-xs">Stroke opacity</p>
                           <div className="flex flex-1 justify-end gap-2">
                             <Slider
                               name="backgroundStrokeOpacity"
