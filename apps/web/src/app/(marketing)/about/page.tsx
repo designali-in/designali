@@ -6,6 +6,7 @@ import { Connect } from "@/components/common/connect";
 import ImageZoom from "@/components/common/image-zoom";
 import Logos from "@/components/common/logos";
 import { SubscribeInput } from "@/src/components/common/subscribe/subscribe-input";
+import { DIcons } from "@/src/components/dicons";
 import { Icons } from "@/src/components/icons";
 import PageTitle from "@/src/components/mdx/page-title";
 import { flags } from "@designali/env";
@@ -17,6 +18,7 @@ export default function HomePage() {
   return (
     <main className="px-6">
       <div className="mx-auto mt-28 max-w-3xl md:mt-40 md:max-w-5xl">
+        <DIcons.alignleft strokeWidth={1} className="h-5 w-5" />
         <div className="relative mx-auto mt-10 flex h-[336px] max-w-[250px] flex-col items-start border border-slate-100 p-4 dark:border-slate-900 md:h-[28rem] md:max-w-sm">
           <Icons.plus
             strokeWidth={0.5}

@@ -115,6 +115,9 @@ importers:
       '@designali/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@designali/dicons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@designali/emails':
         specifier: workspace:*
         version: link:../../packages/emails
@@ -586,6 +589,27 @@ importers:
       '@designali/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
+
+  packages/icons:
+    devDependencies:
+      '@designali/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@designali/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@designali/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.7.0
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.3
 
   packages/kv:
     dependencies:

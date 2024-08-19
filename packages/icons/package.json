@@ -1,0 +1,47 @@
+{
+  "name": "designali-icons",
+  "private": false,
+  "description": "A react icons library for Designali",
+  "keywords": [
+    "designali",
+    "shapes",
+    "abstract",
+    "svg",
+    "vector",
+    "avatar",
+    "illustration",
+    "graphics",
+    "placeholder"
+  ],
+  "author": {
+    "name": "Designali",
+    "email": "contact@designali.in",
+    "twitter": "https://x.com/designali_in",
+    "url": "https://designali.in"
+  },
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./*": [
+      "./src/*.tsx",
+      "./src/*.ts"
+    ]
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo dist node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "prettier": "@designali/prettier-config",
+  "devDependencies": {
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
