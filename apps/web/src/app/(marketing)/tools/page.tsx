@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import AIConverter from "@/components/tools/aiconverter";
+import { IconsGen } from "@/components/tools/icons-gen";
 import WordCounter from "@/components/tools/wordcount";
 import PageTitle from "@/src/components/mdx/page-title";
 import { CustomLink } from "@/src/components/tools/links/custom-link";
@@ -15,6 +16,7 @@ export default function HomePage() {
         title="Tools"
         description={`You can use any without any cost.`}
       />
+      <IconsGen />
       <div className="mx-auto flex max-w-xl flex-col items-center gap-4">
         <p className="lg:text-md my-6 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
           AI Short Links & QR Code Generator

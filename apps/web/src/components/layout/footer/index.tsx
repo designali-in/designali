@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import { Icons } from "@/components/icons";
-import { flags } from "@designali/env";
 import { Separator } from "@designali/ui/separator";
 
-import NowPlaying from "./now-playing";
 import ThemeToogle from "./theme";
 
 const navigation = {
@@ -21,6 +19,7 @@ const navigation = {
           items: [
             { name: "About AI", href: "/about" },
             { name: "Pricing", href: "/pricing" },
+            { name: "Works", href: "/works" },
             { name: "Dashboard", href: "/app/dashboard/overview" },
           ],
         },
@@ -30,8 +29,8 @@ const navigation = {
           items: [
             { name: "Services", href: "/services" },
             { name: "Products", href: "/products" },
-            { name: "Works", href: "/works" },
             { name: "Tools", href: "/tools" },
+            { name: "Icons", href: "/tools/icons" },
           ],
         },
         {
