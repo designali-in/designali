@@ -1,5 +1,5 @@
-import type { DesignaliIcon, DesignaliProps } from "@designali/dicons";
-import { AlignLeft } from "@designali/dicons";
+import type { DesignaliIcon, DesignaliProps } from "dicons";
+import { AlignLeft } from "dicons";
 
 export type Icon = DesignaliIcon;
 
