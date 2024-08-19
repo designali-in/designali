@@ -115,9 +115,6 @@ importers:
       '@designali/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@designali/dicons':
-        specifier: workspace:*
-        version: link:../../packages/icons
       '@designali/emails':
         specifier: workspace:*
         version: link:../../packages/emails
@@ -193,6 +190,9 @@ importers:
       dayjs:
         specifier: ^1.11.11
         version: 1.11.11
+      dicons:
+        specifier: workspace:*
+        version: link:../../packages/icons
       embla-carousel-autoplay:
         specifier: ^8.1.6
         version: 8.1.8(embla-carousel@8.1.8)
@@ -578,7 +578,7 @@ importers:
     dependencies:
       '@t3-oss/env-nextjs':
         specifier: ^0.10.1
-        version: 0.10.1(typescript@5.5.3)(zod@3.23.8)
+        version: 0.10.1(typescript@5.5.4)(zod@3.23.8)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -592,24 +592,12 @@ importers:
 
   packages/icons:
     devDependencies:
-      '@designali/eslint-config':
-        specifier: workspace:*
-        version: link:../../tooling/eslint
-      '@designali/prettier-config':
-        specifier: workspace:*
-        version: link:../../tooling/prettier
-      '@designali/tsconfig':
-        specifier: workspace:*
-        version: link:../../tooling/typescript
-      eslint:
-        specifier: 'catalog:'
-        version: 9.7.0
-      prettier:
-        specifier: 'catalog:'
-        version: 3.3.3
+      tsup:
+        specifier: ^8.1.0
+        version: 8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.4)(yaml@2.4.5)
       typescript:
-        specifier: 'catalog:'
-        version: 5.5.3
+        specifier: ^5.4.5
+        version: 5.5.4
 
   packages/kv:
     dependencies:
@@ -652,7 +640,7 @@ importers:
         version: 12.1.0
       cosmiconfig:
         specifier: ^9.0.0
-        version: 9.0.0(typescript@5.5.3)
+        version: 9.0.0(typescript@5.5.4)
       fast-glob:
         specifier: ^3.3.2
         version: 3.3.2
@@ -10942,6 +10930,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   ua-parser-js@1.0.37:
     resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
 
@@ -15593,12 +15586,25 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.3
 
+  '@t3-oss/env-core@0.10.1(typescript@5.5.4)(zod@3.23.8)':
+    dependencies:
+      zod: 3.23.8
+    optionalDependencies:
+      typescript: 5.5.4
+
   '@t3-oss/env-nextjs@0.10.1(typescript@5.5.3)(zod@3.23.8)':
     dependencies:
       '@t3-oss/env-core': 0.10.1(typescript@5.5.3)(zod@3.23.8)
       zod: 3.23.8
     optionalDependencies:
       typescript: 5.5.3
+
+  '@t3-oss/env-nextjs@0.10.1(typescript@5.5.4)(zod@3.23.8)':
+    dependencies:
+      '@t3-oss/env-core': 0.10.1(typescript@5.5.4)(zod@3.23.8)
+      zod: 3.23.8
+    optionalDependencies:
+      typescript: 5.5.4
 
   '@tanstack/query-core@5.51.9': {}
 
@@ -17057,14 +17063,14 @@ snapshots:
       parse-json: 4.0.0
     optional: true
 
-  cosmiconfig@9.0.0(typescript@5.5.3):
+  cosmiconfig@9.0.0(typescript@5.5.4):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.5.3
+      typescript: 5.5.4
 
   crc-32@1.2.2: {}
 
@@ -23582,6 +23588,33 @@ snapshots:
       - tsx
       - yaml
 
+  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.4)(yaml@2.4.5):
+    dependencies:
+      bundle-require: 5.0.0(esbuild@0.23.0)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      consola: 3.2.3
+      debug: 4.3.5
+      esbuild: 0.23.0
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      picocolors: 1.0.1
+      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.40)(yaml@2.4.5)
+      resolve-from: 5.0.0
+      rollup: 4.20.0
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tree-kill: 1.2.2
+    optionalDependencies:
+      postcss: 8.4.40
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+      - tsx
+      - yaml
+
   turbo-darwin-64@2.0.14:
     optional: true
 
@@ -23701,6 +23734,8 @@ snapshots:
       - supports-color
 
   typescript@5.5.3: {}
+
+  typescript@5.5.4: {}
 
   ua-parser-js@1.0.37:
     optional: true

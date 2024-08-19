@@ -1,5 +1,5 @@
 {
-  "name": "designali-icons",
+  "name": "dicons",
   "private": false,
   "description": "A react icons library for Designali",
   "keywords": [
@@ -41,7 +41,7 @@
   },
   "prettier": "@designali/prettier-config",
   "devDependencies": {
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4"
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
   }
 }

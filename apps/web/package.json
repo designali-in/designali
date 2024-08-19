@@ -17,7 +17,7 @@
     "@designali/api": "workspace:*",
     "@designali/auth": "workspace:*",
     "@designali/db": "workspace:*",
-    "@designali/dicons": "workspace:*",
+    "dicons": "workspace:*",
     "@designali/emails": "workspace:*",
     "@designali/env": "workspace:*",
     "@designali/kv": "workspace:*",
