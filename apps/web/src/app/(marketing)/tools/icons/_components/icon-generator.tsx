@@ -44,6 +44,7 @@ import {
 } from "@designali/ui/daccordion";
 import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
+import { RadioGroup, RadioGroupItem } from "@designali/ui/radio-group";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import {
   Select,
@@ -639,15 +640,15 @@ export const IconGenerator = () => {
                   >
                     <Icons.shuffle strokeWidth={1} className="h-4 w-4" />
                   </Button>
-                  <IconButton className="h-10 w-10">
-                    <input
+                  <Button variant="outline" size="lgicon" className="h-10 w-10">
+                    <Input
                       type="file"
-                      className="absolute opacity-0"
+                      className="absolute w-0 opacity-0"
                       onChange={onSelectCustomIcon}
                       accept=".svg, .png"
                     />
                     <Icons.upload strokeWidth={1} className="h-4 w-4" />
-                  </IconButton>
+                  </Button>
                 </div>
               </div>
               <div className="px-4">
@@ -673,6 +674,17 @@ export const IconGenerator = () => {
                           const Component = Icons[icon];
                           return (
                             <div>
+                              <RadioGroup
+                                className="relative"
+                                defaultValue="option-one"
+                              >
+                                <RadioGroupItem
+                                  className="absolute right-6"
+                                  value={icon}
+                                  checked={icon === settings.icon}
+                                  onChange={() => onChangeIcon(icon)}
+                                />
+                              </RadioGroup>
                               <Label className="" key={icon}>
                                 <div className="flex h-14 w-14 items-center justify-center rounded-md border">
                                   <Input
