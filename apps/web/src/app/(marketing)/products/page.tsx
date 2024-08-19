@@ -4,8 +4,9 @@ import { Graaadients } from "@/src/components/services/products/cards";
 import { cn } from "@designali/ui";
 
 import { Avegra } from "../../fonts";
+import { IconGenerator } from "./_components/icon-generator";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div>
       <div className="mx-auto mt-40 max-w-3xl px-6 md:max-w-7xl">
