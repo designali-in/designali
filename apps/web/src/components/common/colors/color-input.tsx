@@ -1,7 +1,7 @@
 import type { ColorChangeHandler } from "react-color";
-import { Input } from "@designali/ui/input";
+import { DInput } from "@designali/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
-import { ChromePicker, SketchPicker } from "react-color";
+import { SketchPicker } from "react-color";
 
 interface ColorInputPropTypes {
   value: string;
@@ -22,20 +22,20 @@ export const ColorInput = ({
     <div>
       <Popover>
         <PopoverTrigger>
-          <Input
+          <DInput
             name={name}
             type="text"
             value={value}
             disabled={disabled}
             className="w-[120px]"
-          ></Input>
+          />
         </PopoverTrigger>
         <PopoverContent>
           <div className="">
-            <ChromePicker
+            <SketchPicker
               onChange={onChange}
               color={value}
-              disableAlpha={false}
+              disableAlpha={true}
               presetColors={recentColors}
             />
           </div>

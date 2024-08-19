@@ -4,8 +4,8 @@ import { cn } from "@designali/ui";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
+import type { IconVariants } from "./icons";
 import type { LoaderVariant } from "./loader";
-import { type IconVariants } from "./icons";
 import { Loader } from "./loader";
 
 const buttonVariants = cva(
@@ -90,6 +90,28 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
+export interface IconButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+}
+
+const IconButton = ({
+  className = "w-10 h-10",
+  children,
+  ...props
+}: IconButtonProps) => (
+  <button
+    {...props}
+    className={
+      className +
+      " inline-flex items-center justify-center rounded-full border outline-none transition-all duration-300 hover:bg-[#ececec36]"
+    }
+  >
+    {children}
+  </button>
+);
+
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button, IconButton, buttonVariants };
