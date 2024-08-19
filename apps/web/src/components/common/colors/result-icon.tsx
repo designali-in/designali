@@ -46,6 +46,7 @@ const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
                 ? settings.backgroundStartColor
                 : `url(#${gradientId})`
             }
+            opacity={`${settings.backgroundOpacity}%`}
             stroke={settings.backgroundStrokeColor}
             strokeWidth={strokeWidth}
             strokeOpacity={`${settings.backgroundStrokeOpacity}%`}

@@ -25,12 +25,15 @@ import {
 } from "@/lib/dutils";
 import { ColorInput } from "@/src/components/common/colors/color-input";
 import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
-import ExportModal from "@/src/components/common/colors/export-modal";
+import {
+  Download,
+  ExportModal,
+} from "@/src/components/common/colors/export-modal";
 import { presets } from "@/src/components/common/colors/grad-types";
 import ResultIcon from "@/src/components/common/colors/result-icon";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
+import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
-import { Badge } from "@designali/ui/badge";
 import { Button } from "@designali/ui/button";
 import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
@@ -77,7 +80,8 @@ export const IconGenerator = () => {
   const [settings, setSettings] = useState<SettingsType>({
     fileName: "designali",
     icon: "",
-    backgroundRadius: 128,
+    backgroundRadius: 72,
+    backgroundOpacity: 0,
     backgroundStrokeSize: 0,
     backgroundStrokeColor: "#FFFFFF",
     backgroundRadialGlare: false,
@@ -87,7 +91,7 @@ export const IconGenerator = () => {
     backgroundPosition: "50%,0%",
     backgroundSpread: 100,
     backgroundAngle: 0,
-    iconSize: 352,
+    iconSize: 180,
     iconOffsetX: 0,
     iconOffsetY: 0,
     selectedPresetIndex: randomPresetIndex,
@@ -169,6 +173,7 @@ export const IconGenerator = () => {
 
   const onCopyImageToClipboard = useCallback(async () => {
     if (svgRef.current) {
+      // Fixes @2x png export instead of the same size as png
       const realPixelRatio = window.devicePixelRatio;
       window.devicePixelRatio = 1;
       const dataUri = await svgAsPngUri(svgRef.current, { encoderOptions: 1 });
@@ -492,7 +497,6 @@ export const IconGenerator = () => {
   }
 
   const fillTypeOptions = [
-    { value: "Empty", label: "Empty" },
     { value: "Linear", label: "Linear" },
     { value: "Radial", label: "Radial" },
     { value: "Solid", label: "Solid" },
@@ -660,13 +664,13 @@ export const IconGenerator = () => {
                     </h4>
 
                     <ScrollArea>
-                      <div className="flex h-[890px] w-full flex-wrap justify-center gap-2">
+                      <div className="flex h-auto w-full flex-wrap justify-center gap-2">
                         {filteredIcons.map((icon) => {
                           const Component = Icons[icon];
                           return (
                             <div>
                               <Label className="" key={icon}>
-                                <div className="flex h-20 w-20 items-center justify-center rounded-md border">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-md border">
                                   <Input
                                     type="radio"
                                     className="hidden"
@@ -675,7 +679,7 @@ export const IconGenerator = () => {
                                     checked={icon === settings.icon}
                                     onChange={() => onChangeIcon(icon)}
                                   />
-                                  <Component width={36} height={36} />
+                                  <Component width={24} height={24} />
                                 </div>
                               </Label>
                             </div>
@@ -691,7 +695,15 @@ export const IconGenerator = () => {
         </div>
         <div className="relative mt-20">
           <p className="my-4 text-center">Icon</p>
-          <div className="relative flex h-auto w-auto justify-center bg-slate-200 p-4 dark:bg-slate-800">
+          <div className="relative flex h-auto w-auto justify-center border p-4">
+            <GridPattern
+              width={11.5}
+              height={11.5}
+              x={-1}
+              y={-1}
+              strokeDasharray={"1 1"}
+              className={cn("-z-10 bg-slate-100 dark:bg-slate-900")}
+            />
             <Icons.plus
               strokeWidth={0.5}
               className="text-aired absolute -left-4 -top-4 h-8 w-8"
@@ -708,6 +720,7 @@ export const IconGenerator = () => {
               strokeWidth={0.5}
               className="text-aired absolute -bottom-4 -right-4 h-8 w-8"
             />
+
             <CSSTransition
               in={history.length > 0}
               nodeRef={svgRef}
@@ -716,18 +729,32 @@ export const IconGenerator = () => {
               unmountOnExit
             >
               <ResultIcon
-                size={512}
+                size={300}
                 settings={settings}
                 IconComponent={IconComponent}
                 ref={svgRef}
               />
             </CSSTransition>
           </div>
+          <div className="mt-4 flex justify-center gap-2">
+            <Download
+              open={showExportModal}
+              onOpenChange={setShowExportModal}
+              onStartExport={() => showInfoMessage("Download started", false)}
+              fileName={settings.fileName}
+              svgRef={svgRef}
+            />
 
-          <div className={"mt-10 flex justify-center"}>
-            <Badge className="h-8" variant="outline">
-              512 x 512 px
-            </Badge>
+            {pngClipboardSupported && (
+              <Button
+                variant="outline"
+                size="icon"
+                className=""
+                onSelect={onCopyImageToClipboard}
+              >
+                <Icons.copy className="h-3 w-3" />
+              </Button>
+            )}
           </div>
         </div>
 
@@ -782,6 +809,105 @@ export const IconGenerator = () => {
                 <form onChange={onFormChange} ref={formRef}>
                   <details
                     className="flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800"
+                    open
+                  >
+                    <summary className="flex items-center justify-between gap-2">
+                      <h1 className="text-md px-4 text-center">Icon</h1>
+                      <div className="flex gap-2 px-4">
+                        <Icons.plus className="" />
+                      </div>
+                    </summary>
+
+                    <div className="grid gap-2 p-4">
+                      {!customSvgIsPng && (
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs">Color</span>
+                          <ColorInput
+                            value={settings.iconColor}
+                            name="iconColor"
+                            onChange={onChangeColorSetting("iconColor")}
+                            recentColors={recentColors}
+                          />
+                        </div>
+                      )}
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs">Background</span>
+                        <div className="">
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="backgroundOpacity"
+                              defaultValue={[settings.backgroundOpacity]}
+                              min={0}
+                              max={100}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.backgroundOpacity}
+                            </p>
+                            <p className="">{"%"}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs">Size</span>
+                        <div className="">
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="iconSize"
+                              defaultValue={[settings.iconSize]}
+                              min={0}
+                              max={512}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.iconSize}
+                            </p>
+                            <p className="">{"px"}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs">X Offset</span>
+                        <div className={""}>
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="iconOffsetX"
+                              defaultValue={[settings.iconOffsetX]}
+                              min={-500}
+                              max={500}
+                              step={10}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.iconOffsetX}
+                            </p>
+                            <p className="">{"px"}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs">Y Offset</span>
+                        <div className="flex flex-col">
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="iconOffsetY"
+                              defaultValue={[settings.iconOffsetY]}
+                              min={-500}
+                              max={500}
+                              step={10}
+                              className="w-[150px] px-2"
+                            />
+                            <p className="flex w-[30px] justify-end">
+                              {settings.iconOffsetY}
+                            </p>
+                            <p className="">{"px"}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+                  <details
+                    className="mt-2 flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800"
                     open
                   >
                     <summary className="flex items-center justify-between gap-2">
@@ -1023,88 +1149,6 @@ export const IconGenerator = () => {
                             <p className="flex w-[30px] justify-end">
                               {settings.backgroundStrokeOpacity}
                             </p>
-                          </div>
-                        </div>
-                      </div>
-                    </details>
-
-                    <details
-                      className="flex rounded-lg bg-slate-200 p-4 dark:bg-slate-800"
-                      open
-                    >
-                      <summary className="flex items-center justify-between gap-2">
-                        <h1 className="text-md px-4 text-center">Icon</h1>
-                        <div className="flex gap-2 px-4">
-                          <Icons.plus className="" />
-                        </div>
-                      </summary>
-
-                      <div className="grid gap-2 p-4">
-                        {!customSvgIsPng && (
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs">Color</span>
-                            <ColorInput
-                              value={settings.iconColor}
-                              name="iconColor"
-                              onChange={onChangeColorSetting("iconColor")}
-                              recentColors={recentColors}
-                            />
-                          </div>
-                        )}
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs">Size</span>
-                          <div className="">
-                            <div className="flex flex-1 justify-end gap-2">
-                              <Slider
-                                name="iconSize"
-                                defaultValue={[settings.iconSize]}
-                                min={0}
-                                max={512}
-                                className="w-[150px] px-2"
-                              />
-                              <p className="flex w-[30px] justify-end">
-                                {settings.iconSize}
-                              </p>
-                              <p className="">{"px"}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs">X Offset</span>
-                          <div className={""}>
-                            <div className="flex flex-1 justify-end gap-2">
-                              <Slider
-                                name="iconOffsetX"
-                                defaultValue={[settings.iconOffsetX]}
-                                min={-500}
-                                max={500}
-                                step={10}
-                                className="w-[150px] px-2"
-                              />
-                              <p className="flex w-[30px] justify-end">
-                                {settings.iconOffsetX}
-                              </p>
-                              <p className="">{"px"}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs">Y Offset</span>
-                          <div className="flex flex-col">
-                            <div className="flex flex-1 justify-end gap-2">
-                              <Slider
-                                name="iconOffsetY"
-                                defaultValue={[settings.iconOffsetY]}
-                                min={-500}
-                                max={500}
-                                step={10}
-                                className="w-[150px] px-2"
-                              />
-                              <p className="flex w-[30px] justify-end">
-                                {settings.iconOffsetY}
-                              </p>
-                              <p className="">{"px"}</p>
-                            </div>
                           </div>
                         </div>
                       </div>

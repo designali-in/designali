@@ -1,5 +1,6 @@
 export interface SettingsType {
   backgroundFillType: string;
+  backgroundOpacity: number;
   backgroundStartColor: string;
   backgroundEndColor: string;
   backgroundAngle?: number;
