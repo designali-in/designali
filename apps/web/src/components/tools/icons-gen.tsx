@@ -6,7 +6,6 @@ import { cn } from "@designali/ui";
 import { buttonVariants } from "@designali/ui/button";
 
 import { Icons } from "../icons";
-import { Logo } from "../logo";
 import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
 import { Particles } from "../ui/particles";
 
@@ -39,7 +38,7 @@ export const IconsGen: React.FC = () => {
                     </p>
                     <div className="flex justify-center gap-2">
                       <Link
-                        href="/tools/icons"
+                        href="/dicons"
                         target=""
                         className={cn(
                           buttonVariants({
