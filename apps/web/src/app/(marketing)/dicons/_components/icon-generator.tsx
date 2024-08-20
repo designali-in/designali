@@ -33,6 +33,7 @@ import { CodeBlock } from "@/src/components/mdx/layers/code-block";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/dtabs";
 import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
 import { RadioGroup, RadioGroupItem } from "@designali/ui/radio-group";
@@ -53,6 +54,8 @@ export const IconGenerator = () => {
   const [urlParsed, setUrlParsed] = useState<boolean>(false);
   const [scale, setScale] = useState<number>(1);
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [history, setHistory] = useState<SettingsType[]>([]);
+  const [redoHistory, setRedoHistory] = useState<SettingsType[]>([]);
   const [recentColors, setRecentColors] = useState<string[]>([]);
   const [showExportModal, setShowExportModal] = useState<boolean>(false);
   const [panelsVisible, setPanelsVisible] = useState<boolean>(false);
@@ -95,7 +98,8 @@ export const IconGenerator = () => {
           ...currentSettings,
           ...newSettings,
         };
-
+        setHistory((history) => [...history, settingsToSet]);
+        setRedoHistory([]);
         return settingsToSet;
       });
     },
@@ -142,7 +146,7 @@ export const IconGenerator = () => {
         ...currentSettings,
         icon: randomIcon,
       };
-
+      setHistory([settingsToSet]);
       setPanelsVisible(true);
       return settingsToSet;
     });
@@ -524,10 +528,11 @@ export const IconGenerator = () => {
               </div>
             </div>
           </div>
-          <div className="h-auto w-full border-t px-6 py-3">
-            <CodeBlock
-              title={"React"}
-              children={`import { ${settings.icon} } from 'dicons';
+          <div className="gap-6 border-t px-6 py-3 md:flex">
+            <div className="md:w-full">
+              <CodeBlock
+                title={"React"}
+                children={`import { ${settings.icon} } from 'dicons';
 
 const App = () => {
   return (
@@ -536,9 +541,78 @@ const App = () => {
 };
 
 export default App;`}
-              lang={"dd"}
-              data-lang="sd"
-            />
+                lang={"dd"}
+                data-lang="sd"
+              />
+            </div>
+            <div className="md:w-full">
+              <h1 className="py-3">Installation</h1>
+              <Tabs defaultValue="npm">
+                <TabsList>
+                  <TabsTrigger value="npm">NPM</TabsTrigger>
+                  <TabsTrigger value="pnpm">PNPM</TabsTrigger>
+                  <TabsTrigger value="yarn">YARN</TabsTrigger>
+                </TabsList>
+                <TabsContent value="npm">
+                  <CodeBlock
+                    title={"React"}
+                    children={`npm install dicons`}
+                    lang={"dd"}
+                    data-lang="sd"
+                  />
+                </TabsContent>
+                <TabsContent value="pnpm">
+                  <CodeBlock
+                    title={"React"}
+                    children={`pnpm install dicons`}
+                    lang={"dd"}
+                    data-lang="sd"
+                  />
+                </TabsContent>
+                <TabsContent value="yarn">
+                  <CodeBlock
+                    title={"React"}
+                    children={`yarn add dicons`}
+                    lang={"dd"}
+                    data-lang="sd"
+                  />
+                </TabsContent>
+              </Tabs>
+            </div>
+            <div className="md:w-full">
+              <h1 className="py-3">Settings</h1>
+              <Tabs defaultValue="npm">
+                <TabsList>
+                  <TabsTrigger value="npm">Color</TabsTrigger>
+                  <TabsTrigger value="pnpm">Sizing</TabsTrigger>
+                  <TabsTrigger value="yarn">Stroke Width</TabsTrigger>
+                </TabsList>
+                <TabsContent value="npm">
+                  <CodeBlock
+                    title={"React"}
+                    children={`<${settings.icon} color="#3e9392" />`}
+                    lang={"dd"}
+                    data-lang="sd"
+                  />
+                </TabsContent>
+                <TabsContent value="pnpm">
+                  <CodeBlock
+                    title={"React"}
+                    children={`<${settings.icon} size={64} />`}
+                    lang={"dd"}
+                    data-lang="sd"
+                  />
+                </TabsContent>
+                <TabsContent value="yarn">
+                  <CodeBlock
+                    title={"React"}
+                    children={`<${settings.icon} strokeWidth={1} />`}
+                    lang={"dd"}
+                    data-lang="sd"
+                  />
+                </TabsContent>
+              </Tabs>
+            </div>
           </div>
         </div>
       </main>
