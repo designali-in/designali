@@ -29,6 +29,8 @@ import {
 import { presets } from "@/src/components/common/colors/grad-types";
 import ResultDIcon from "@/src/components/common/colors/result-dicon";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
+import { CodeBlock } from "@/src/components/mdx/layers/code-block";
+import { CopyButton } from "@/src/components/ui/copy-button";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
@@ -379,7 +381,7 @@ export const IconGenerator = () => {
   return (
     <div className="border-b border-t md:h-[900px]">
       <main className={"flex-1 md:flex"}>
-        <div className="-z-0 mx-auto grid max-w-md border-r md:h-[898px]">
+        <div className="-z-0 mx-auto grid max-w-md md:h-[898px] md:border-r">
           <div className="p-6">
             <div className="relative">
               <p className="my-4 text-center">{settings.icon}</p>
@@ -471,7 +473,7 @@ export const IconGenerator = () => {
               </div>
             </div>
             <div className={""}>
-              <div className="grid gap-2">
+              <div className="grid gap-2 px-6 md:px-0">
                 <form
                   className="grid gap-2"
                   onChange={onFormChange}
@@ -548,8 +550,8 @@ export const IconGenerator = () => {
             </div>
           </div>
         </div>
-        <div className="relative w-full">
-          <div className="p-6">
+        <div className="relative grid w-full justify-between">
+          <div className="h-auto p-6">
             <div ref={iconsWrapperRef} className={""}>
               <div className="">
                 <div className="flex justify-center gap-3 md:justify-start">
@@ -559,7 +561,7 @@ export const IconGenerator = () => {
                       value={searchTerm}
                       ref={searchRef}
                       onChange={onChangeSearchTerm}
-                      placeholder="Search Icon"
+                      placeholder={`Search ${filteredIcons.length} icons...`}
                       aria-label="Search Icon"
                       className="h-10 w-full rounded-full pl-12"
                       id="search"
@@ -602,7 +604,7 @@ export const IconGenerator = () => {
                       </h4>
 
                       <ScrollArea>
-                        <div className="flex h-[500px] w-full flex-wrap gap-2 md:h-auto">
+                        <div className="flex h-auto w-full flex-wrap gap-2 md:h-auto">
                           {filteredIcons.map((icon) => {
                             const Component = DIcons[icon];
                             return (
@@ -645,6 +647,22 @@ export const IconGenerator = () => {
                 )}
               </div>
             </div>
+          </div>
+          <div className="h-auto w-full border-t p-6">
+            <CodeBlock
+              title={"React"}
+              children={`import { ${settings.icon} } from 'dicons';
+
+const App = () => {
+  return (
+    <${settings.icon} />
+  );
+};
+
+export default App;`}
+              lang={"dd"}
+              data-lang="sd"
+            />
           </div>
         </div>
       </main>

@@ -88,6 +88,7 @@ export const IconGenerator = () => {
   const [settings, setSettings] = useState<SettingsType>({
     fileName: "designali",
     icon: "",
+    strokeWidth: 2,
     backgroundRadius: 72,
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
@@ -604,7 +605,7 @@ export const IconGenerator = () => {
         className={"mt-28 grid justify-center gap-8 md:flex md:h-screen"}
         ref={mainRef}
       >
-        <div className="left-0 mx-auto flex h-screen max-w-sm border-r bg-slate-50 dark:bg-slate-950 md:absolute">
+        <div className="left-0 mx-auto flex h-screen max-w-sm border-r md:absolute">
           <div className="">
             <div ref={iconsWrapperRef} className={""}>
               <div className="p-3">
@@ -679,7 +680,7 @@ export const IconGenerator = () => {
                                 defaultValue="option-one"
                               >
                                 <RadioGroupItem
-                                  className="absolute right-6"
+                                  className="absolute -z-10"
                                   value={icon}
                                   checked={icon === settings.icon}
                                   onChange={() => onChangeIcon(icon)}

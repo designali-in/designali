@@ -1,18 +1,14 @@
 "use client";
 
-import type { Event } from "@/lib/events";
-import type { Style } from "@/src/lib/registry/styles";
-import type { NpmCommands } from "@/src/types";
 import type { MDXComponents } from "@designali/mdx";
 import ImageZoom from "@/components/common/image-zoom";
-import { StyleWrapper } from "@/components/common/style-wrapper";
 import { cn } from "@designali/ui";
 import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import { CopyButton, CopyNpmCommandButton } from "../../ui/copy-button";
 import Callout from "./callout";
+import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { ComponentExample } from "./component-example";
 import { ComponentPreview } from "./component-preview";
@@ -254,56 +250,7 @@ const components: MDXComponents = {
   CodeBlockWrapper: ({ ...props }) => (
     <CodeBlockWrapper className="rounded-md border" {...props} />
   ),
-  pre: ({
-    className,
-    __rawString__,
-    __npmCommand__,
-    __yarnCommand__,
-    __pnpmCommand__,
-    __bunCommand__,
-    __withMeta__,
-    __src__,
-    __event__,
-    __style__,
-    ...props
-  }: React.HTMLAttributes<HTMLPreElement> & {
-    __style__?: Style["name"];
-    __rawString__?: string;
-    __withMeta__?: boolean;
-    __src__?: string;
-    __event__?: Event["name"];
-  } & NpmCommands) => {
-    return (
-      <StyleWrapper styleName={__style__}>
-        <pre
-          className={cn("my-4 max-h-[650px] rounded-xl border p-4", className)}
-          {...props}
-        />
-        {__rawString__ && !__npmCommand__ && (
-          <CopyButton
-            value={__rawString__}
-            src={__src__}
-            event={__event__}
-            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
-          />
-        )}
-        {__npmCommand__ &&
-          __yarnCommand__ &&
-          __pnpmCommand__ &&
-          __bunCommand__ && (
-            <CopyNpmCommandButton
-              commands={{
-                __npmCommand__,
-                __yarnCommand__,
-                __pnpmCommand__,
-                __bunCommand__,
-              }}
-              className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
-            />
-          )}
-      </StyleWrapper>
-    );
-  },
+  pre: CodeBlock,
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
