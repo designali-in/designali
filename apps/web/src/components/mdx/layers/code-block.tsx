@@ -90,8 +90,8 @@ const CopyButton = (props: CopyButtonProps) => {
 
   return (
     <Button
-      className={cn("size-10 p-0", className)}
-      variant="outline"
+      className={cn("size-6 p-0", className)}
+      variant="ghost"
       onClick={() => {
         onCopy();
         setIsCopied(true);

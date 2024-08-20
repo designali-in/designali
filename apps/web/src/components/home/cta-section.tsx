@@ -6,6 +6,7 @@ import Link from "next/link";
 import ShineBorder from "@/components/ui/shine-border";
 import { cn } from "@designali/ui";
 import { buttonVariants } from "@designali/ui/button";
+import { DIcons } from "dicons";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
@@ -21,7 +22,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -33,7 +34,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -45,7 +46,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -57,7 +58,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -69,7 +70,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -81,7 +82,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -93,7 +94,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -105,7 +106,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -117,7 +118,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -129,7 +130,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -141,7 +142,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -153,9 +154,60 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-2xl"
+        className="rounded-sm md:rounded-sm"
       />
     ),
+    bg: <div className=""></div>,
+  },
+];
+
+const dtiles = [
+  {
+    icon: <DIcons.Plus strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.Circle strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.Copy strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.Search strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.Shuffle strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.Download strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.AlignLeft strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.album strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.arrowright strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.eye strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.pen strokeWidth={1} />,
+    bg: <div className=""></div>,
+  },
+  {
+    icon: <DIcons.redo strokeWidth={1} />,
     bg: <div className=""></div>,
   },
 ];
@@ -199,9 +251,9 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       initial={{ opacity: 0 }}
       animate={controls}
       className={cn(
-        "relative h-[80px] w-[130px] cursor-pointer overflow-hidden rounded-lg border p-1 md:h-auto md:w-[350px] md:rounded-3xl md:p-3",
+        "relative h-full w-full cursor-pointer overflow-hidden rounded-sm border p-1 md:rounded-2xl md:p-2",
         // light styles
-        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        "bg-white",
         // dark styles
         "transform-gpu dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
@@ -214,17 +266,13 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
 
 export default function CallToActionSection() {
   const [randomTiles1, setRandomTiles1] = useState<typeof tiles>([]);
-  const [randomTiles2, setRandomTiles2] = useState<typeof tiles>([]);
-  const [randomTiles3, setRandomTiles3] = useState<typeof tiles>([]);
-  const [randomTiles4, setRandomTiles4] = useState<typeof tiles>([]);
+  const [randomTiles3, setRandomTiles3] = useState<typeof dtiles>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Ensures this runs client-side
       setRandomTiles1(shuffleArray([...tiles]));
-      setRandomTiles2(shuffleArray([...tiles]));
-      setRandomTiles3(shuffleArray([...tiles]));
-      setRandomTiles4(shuffleArray([...tiles]));
+      setRandomTiles3(shuffleArray([...dtiles]));
     }
   }, []);
 
@@ -286,7 +334,12 @@ export default function CallToActionSection() {
       </div>
       <div className="-mt-20 mb-[600px] md:mb-0">
         <div className="flex w-full flex-col items-center justify-center">
-          <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+          <div className="relative flex w-full flex-col items-center justify-center overflow-hidden md:-mt-20">
+            <Marquee className="[-delay-[200ms] [--duration:20s]" repeat={5}>
+              {randomTiles3.map((review, idx) => (
+                <Card key={idx} {...review} />
+              ))}
+            </Marquee>
             <Marquee
               reverse
               className="-delay-[200ms] [--duration:70s]"
@@ -297,7 +350,7 @@ export default function CallToActionSection() {
               ))}
             </Marquee>
             <Marquee className="[--duration:70s]" repeat={5}>
-              {randomTiles2.map((review, idx) => (
+              {randomTiles3.map((review, idx) => (
                 <Card key={idx} {...review} />
               ))}
             </Marquee>

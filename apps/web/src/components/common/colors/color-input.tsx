@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { ColorChangeHandler } from "react-color";
 import { DInput } from "@designali/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import { SketchPicker } from "react-color";
+import reactCSS from "reactcss";
 
 interface ColorInputPropTypes {
   value: string;
@@ -18,20 +20,35 @@ export const ColorInput = ({
   onChange,
   disabled = false,
 }: ColorInputPropTypes) => {
+  const styles = reactCSS({
+    default: {
+      color: {
+        background: value,
+      },
+    },
+  });
+
   return (
     <div>
       <Popover>
-        <PopoverTrigger>
+        <div className="flex gap-2">
           <DInput
             name={name}
             type="text"
             value={value}
             disabled={disabled}
-            className="w-[120px]"
+            className=""
           />
-        </PopoverTrigger>
-        <PopoverContent>
-          <div className="">
+          <PopoverTrigger>
+            <div
+              color={value}
+              className="h-10 w-10 rounded-full border-2 border-ali"
+              style={styles.color}
+            />
+          </PopoverTrigger>
+        </div>
+        <PopoverContent className="w-[252px]">
+          <div>
             <SketchPicker
               onChange={onChange}
               color={value}

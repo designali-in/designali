@@ -260,7 +260,7 @@ export const IconGenerator = () => {
   return (
     <div className="border-b border-t md:h-screen">
       <main className={"flex-1 md:flex"}>
-        <div className="-z-0 mx-auto grid max-w-md md:h-screen md:border-r">
+        <div className="-z-0 mx-auto grid max-w-sm md:h-screen md:border-r">
           <div className="p-6">
             <div className="relative">
               <p className="my-2 text-center text-xl font-semibold text-ali">
@@ -410,7 +410,7 @@ export const IconGenerator = () => {
                               defaultValue={[settings.iconSize]}
                               min={20}
                               max={200}
-                              step={5}
+                              step={1}
                             />
                           </div>
                         </div>
@@ -487,7 +487,7 @@ export const IconGenerator = () => {
                       </h4>
 
                       <ScrollArea>
-                        <div className="flex h-[400px] w-full flex-wrap gap-2 md:h-[580px]">
+                        <div className="flex h-[400px] w-full flex-wrap gap-2 md:h-[650px]">
                           {filteredIcons.map((icon) => {
                             const Component = DIcons[icon];
                             return (
@@ -532,11 +532,48 @@ export const IconGenerator = () => {
               </div>
             </div>
           </div>
-          <div className="gap-6 border-t px-6 py-3 md:flex">
-            <div className="md:w-full">
-              <CodeBlock
-                title={"React"}
-                children={`import { ${settings.icon} } from 'dicons';
+        </div>
+        <div className="mx-auto h-screen max-w-sm gap-6 md:border-l">
+          <ScrollArea>
+            <div className="h-screen px-6 py-6">
+              <div className="">
+                <h1 className="text-2xl font-semibold">What is DIcons?</h1>
+                <p className="py-3 text-sm text-slate-600 dark:text-slate-400">
+                  Dicons is an open-source icon library that provides 1000+
+                  vector (svg) files for displaying icons and symbols in digital
+                  and non-digital projects. The library aims to make it easier
+                  for designers and developers to incorporate icons into their
+                  projects by providing several official packages to make it
+                  easier to use these icons in your project.
+                </p>
+              </div>
+              <div className="">
+                <h1 className="py-3 text-slate-600 dark:text-slate-400">
+                  Import
+                </h1>
+                <Tabs defaultValue="1">
+                  <TabsList>
+                    <TabsTrigger value="1">All Icons</TabsTrigger>
+                    <TabsTrigger value="2">One Icon</TabsTrigger>
+                  </TabsList>
+                  <TabsContent className="-mt-2" value="1">
+                    <CodeBlock
+                      title={".tsx"}
+                      children={`import { DIcons } from 'dicons';
+
+const App = () => {
+  return (
+    <DIcons.${settings.icon} />
+  );
+};
+
+export default App;`}
+                    />
+                  </TabsContent>
+                  <TabsContent className="-mt-2" value="2">
+                    <CodeBlock
+                      title={".tsx"}
+                      children={`import { ${settings.icon} from 'dicons';
 
 const App = () => {
   return (
@@ -545,83 +582,84 @@ const App = () => {
 };
 
 export default App;`}
-                lang={"dd"}
-                data-lang="sd"
-              />
+                    />
+                  </TabsContent>
+                </Tabs>
+              </div>
+              <div className="grid gap-6">
+                <div className="grid gap-6">
+                  <div className="">
+                    <h1 className="py-3 text-slate-600 dark:text-slate-400">
+                      Installation
+                    </h1>
+                    <Tabs defaultValue="npm">
+                      <TabsList>
+                        <TabsTrigger value="npm">npm</TabsTrigger>
+                        <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+                        <TabsTrigger value="yarn">yarn</TabsTrigger>
+                      </TabsList>
+                      <TabsContent className="-mt-2" value="npm">
+                        <CodeBlock
+                          title={"React/Nextjs"}
+                          children={`npm install dicons`}
+                        />
+                      </TabsContent>
+                      <TabsContent className="-mt-2" value="pnpm">
+                        <CodeBlock
+                          title={"React/Nextjs"}
+                          children={`pnpm install dicons`}
+                        />
+                      </TabsContent>
+                      <TabsContent className="-mt-2" value="yarn">
+                        <CodeBlock
+                          title={"React/Nextjs"}
+                          children={`yarn add dicons`}
+                        />
+                      </TabsContent>
+                    </Tabs>
+                  </div>
+                  <div>
+                    <h1 className="py-3 text-slate-600 dark:text-slate-400">
+                      Settings
+                    </h1>
+                    <Tabs defaultValue="1">
+                      <TabsList>
+                        <TabsTrigger value="1">Color</TabsTrigger>
+                        <TabsTrigger value="2">Sizing</TabsTrigger>
+                        <TabsTrigger value="3">Stroke Width</TabsTrigger>
+                      </TabsList>
+                      <TabsContent className="-mt-2" value="1">
+                        <CodeBlock
+                          title={".tsx"}
+                          children={`<${settings.icon} color="${settings.iconColor}" />`}
+                        />
+                      </TabsContent>
+                      <TabsContent className="-mt-2" value="2">
+                        <CodeBlock
+                          title={".tsx"}
+                          children={`<${settings.icon} size={64} />`}
+                        />
+                      </TabsContent>
+                      <TabsContent className="-mt-2" value="3">
+                        <CodeBlock
+                          title={".tsx"}
+                          children={`<${settings.icon} strokeWidth={${settings.strokeWidth}} />`}
+                        />
+                      </TabsContent>
+                    </Tabs>
+                  </div>
+                  <div className="w-full pb-10">
+                    <Link href={"/guides/dicons"}>
+                      <Button size="lg" className="h-10 w-full">
+                        Go to Docs
+                        <DIcons.Plus className="mx-1 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="md:w-full">
-              <h1 className="py-3 text-slate-600 dark:text-slate-400">
-                Installation
-              </h1>
-              <Tabs defaultValue="npm">
-                <TabsList>
-                  <TabsTrigger value="npm">npm</TabsTrigger>
-                  <TabsTrigger value="pnpm">pnpm</TabsTrigger>
-                  <TabsTrigger value="yarn">yarn</TabsTrigger>
-                </TabsList>
-                <TabsContent value="npm">
-                  <CodeBlock
-                    title={"React"}
-                    children={`npm install dicons`}
-                    lang={"dd"}
-                    data-lang="sd"
-                  />
-                </TabsContent>
-                <TabsContent value="pnpm">
-                  <CodeBlock
-                    title={"React"}
-                    children={`pnpm install dicons`}
-                    lang={"dd"}
-                    data-lang="sd"
-                  />
-                </TabsContent>
-                <TabsContent value="yarn">
-                  <CodeBlock
-                    title={"React"}
-                    children={`yarn add dicons`}
-                    lang={"dd"}
-                    data-lang="sd"
-                  />
-                </TabsContent>
-              </Tabs>
-            </div>
-            <div className="md:w-full">
-              <h1 className="py-3 text-slate-600 dark:text-slate-400">
-                Settings
-              </h1>
-              <Tabs defaultValue="3">
-                <TabsList>
-                  <TabsTrigger value="1">Color</TabsTrigger>
-                  <TabsTrigger value="2">Sizing</TabsTrigger>
-                  <TabsTrigger value="3">Stroke Width</TabsTrigger>
-                </TabsList>
-                <TabsContent value="1">
-                  <CodeBlock
-                    title={"React"}
-                    children={`<${settings.icon} color="#3e9392" />`}
-                    lang={"dd"}
-                    data-lang="sd"
-                  />
-                </TabsContent>
-                <TabsContent value="2">
-                  <CodeBlock
-                    title={"React"}
-                    children={`<${settings.icon} size={64} />`}
-                    lang={"dd"}
-                    data-lang="sd"
-                  />
-                </TabsContent>
-                <TabsContent value="3">
-                  <CodeBlock
-                    title={"React"}
-                    children={`<${settings.icon} strokeWidth={1} />`}
-                    lang={"dd"}
-                    data-lang="sd"
-                  />
-                </TabsContent>
-              </Tabs>
-            </div>
-          </div>
+          </ScrollArea>
         </div>
       </main>
     </div>
