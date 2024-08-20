@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-/* eslint-disable @typescript-eslint/no-misused-promises */
+
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -30,7 +30,6 @@ import { presets } from "@/src/components/common/colors/grad-types";
 import ResultDIcon from "@/src/components/common/colors/result-dicon";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
 import { CodeBlock } from "@/src/components/mdx/layers/code-block";
-import { CopyButton } from "@/src/components/ui/copy-button";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
@@ -48,27 +47,15 @@ const scales = [0.25, 0.5, 1, 2];
 
 const FEEDBACK_EMAIL = "contact@designali.in";
 
-let infoMessageTimeout: NodeJS.Timeout | undefined;
-
 export const IconGenerator = () => {
   const randomPresetIndex = randomNumberBetween(0, presets.length - 1);
 
   const [urlParsed, setUrlParsed] = useState<boolean>(false);
   const [scale, setScale] = useState<number>(1);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [history, setHistory] = useState<SettingsType[]>([]);
-  const [redoHistory, setRedoHistory] = useState<SettingsType[]>([]);
   const [recentColors, setRecentColors] = useState<string[]>([]);
   const [showExportModal, setShowExportModal] = useState<boolean>(false);
   const [panelsVisible, setPanelsVisible] = useState<boolean>(false);
-  const [infoMessage, setInfoMessage] = useState<string>();
-  const [infoMessageVisible, setInfoMessageVisible] = useState<boolean>(false);
-  const [showInfoMessageUndoButton, setShowInfoMessageUndoButton] =
-    useState<boolean>(true);
-  const [iconpelOpened, setIconpelOpened] = useState<boolean>(false);
-  const [optionpelOpened, setOptionpelOpened] = useState<boolean>(false);
-
-  const [draggingFile, setDraggingFile] = useState<boolean>(false);
   const [settings, setSettings] = useState<SettingsType>({
     fileName: "designali",
     icon: "",
@@ -97,7 +84,6 @@ export const IconGenerator = () => {
   const pngClipboardSupported = usePngClipboardSupported();
 
   const searchRef = useRef<HTMLInputElement>(null);
-  const mainRef = useRef<HTMLElement>(null);
   const iconsWrapperRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<HTMLElement & SVGSVGElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -109,25 +95,12 @@ export const IconGenerator = () => {
           ...currentSettings,
           ...newSettings,
         };
-        setHistory((history) => [...history, settingsToSet]);
-        setRedoHistory([]);
+
         return settingsToSet;
       });
     },
     [setSettings],
   );
-
-  const showInfoMessage = (message: string, showUndo = false) => {
-    if (infoMessageTimeout) {
-      clearTimeout(infoMessageTimeout);
-    }
-    setInfoMessageVisible(true);
-    setInfoMessage(message);
-    setShowInfoMessageUndoButton(showUndo);
-    infoMessageTimeout = setTimeout(() => {
-      setInfoMessageVisible(false);
-    }, 3000);
-  };
 
   const onChangeIcon = (value: string) => {
     pushNewSettings({
@@ -169,85 +142,11 @@ export const IconGenerator = () => {
         ...currentSettings,
         icon: randomIcon,
       };
-      setHistory([settingsToSet]);
+
       setPanelsVisible(true);
       return settingsToSet;
     });
   }, []);
-
-  // Custom SVG icons support: copy/paste, drag-n-drop
-  useEffect(() => {
-    async function onPaste(event: ClipboardEvent) {
-      try {
-        const customSvg = await getPastedSvgFile(
-          event.clipboardData?.items || [],
-        );
-        if (customSvg) {
-          showInfoMessage("Image pasted to canvas", true);
-          pushNewSettings({
-            customSvg,
-            icon: undefined,
-          });
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    }
-
-    async function onDrop(event: DragEvent) {
-      event.preventDefault();
-      setDraggingFile(false);
-      try {
-        const customSvg = await getPastedSvgFile(
-          event.dataTransfer?.items || [],
-        );
-        if (customSvg) {
-          showInfoMessage("Image pasted to canvas", true);
-          pushNewSettings({
-            customSvg,
-            icon: undefined,
-          });
-        }
-      } catch (err) {
-        showInfoMessage(err as string, false);
-      }
-    }
-
-    function onDragOver(event: DragEvent) {
-      setDraggingFile(true);
-      event.preventDefault();
-    }
-
-    function onDragLeave() {
-      setDraggingFile(false);
-    }
-
-    document.addEventListener("paste", onPaste);
-    document.addEventListener("drop", onDrop);
-    document.addEventListener("dragover", onDragOver);
-    document.addEventListener("dragleave", onDragLeave);
-
-    return () => {
-      document.removeEventListener("paste", onPaste);
-      document.removeEventListener("drop", onDrop);
-      document.removeEventListener("dragover", onDragOver);
-      document.removeEventListener("dragleave", onDragLeave);
-    };
-  }, [pushNewSettings]);
-
-  useEffect(() => {
-    const mainRefCurent = mainRef?.current;
-
-    if (mainRefCurent) {
-      mainRefCurent.addEventListener("wheel", onWheel, { passive: false });
-    }
-
-    return () => {
-      if (mainRefCurent) {
-        mainRefCurent.removeEventListener("wheel", onWheel);
-      }
-    };
-  }, [mainRef]);
 
   useEffect(() => {
     const q = searchParams.get("q") || "";
@@ -273,12 +172,6 @@ export const IconGenerator = () => {
           if (value === "undefined") {
             value = undefined;
           }
-          if (
-            key === "backgroundRadialGlare" ||
-            key === "backgroundNoiseTexture"
-          ) {
-            value = value === "true" || value === "1";
-          }
 
           return {
             ...acc,
@@ -302,19 +195,8 @@ export const IconGenerator = () => {
       data[key] = value;
     });
 
-    // If these properties change, we need to detach from preset
-    const shouldDetatchPreset =
-      data.backgroundStartColor !== settings.backgroundStartColor ||
-      data.backgroundEndColor !== settings.backgroundEndColor ||
-      data.backgroundAngle !== settings.backgroundAngle;
-
     pushNewSettings({
       ...data,
-      backgroundRadialGlare: data.backgroundRadialGlare ? true : false,
-      backgroundNoiseTexture: data.backgroundNoiseTexture ? true : false,
-      selectedPresetIndex: shouldDetatchPreset
-        ? null
-        : settings.selectedPresetIndex,
     });
   };
 
@@ -340,14 +222,6 @@ export const IconGenerator = () => {
   const onSaveRecentColor = debounce((color: string) => {
     setRecentColors((colors) => uniq([color, ...colors]).slice(0, 16));
   });
-
-  const onWheel = (event: WheelEvent) => {
-    if (event.ctrlKey || event.metaKey) {
-      setScale((currentScale) => currentScale + 0.0001 * event.deltaY);
-      event.preventDefault();
-      event.stopPropagation();
-    }
-  };
 
   let IconComponent: React.FC<React.SVGProps<SVGSVGElement>> = () => null;
   const customSvgIsPng = settings.customSvg?.startsWith("data:image/png");
@@ -432,18 +306,14 @@ export const IconGenerator = () => {
                   <DownloadPNG
                     open={showExportModal}
                     onOpenChange={setShowExportModal}
-                    onStartExport={() =>
-                      showInfoMessage("Download started", false)
-                    }
+                    onStartExport={() => toast("PNG Image Downloaded")}
                     fileName={settings.fileName}
                     svgRef={svgRef}
                   />
                   <DownloadSVG
                     open={showExportModal}
                     onOpenChange={setShowExportModal}
-                    onStartExport={() =>
-                      showInfoMessage("Download started", false)
-                    }
+                    onStartExport={() => toast("SVG Image Downloaded")}
                     fileName={settings.fileName}
                     svgRef={svgRef}
                   />
@@ -554,35 +424,40 @@ export const IconGenerator = () => {
           <div className="h-auto p-6">
             <div ref={iconsWrapperRef} className={""}>
               <div className="">
-                <div className="flex justify-center gap-3 md:justify-start">
-                  <div className="relative">
-                    <Input
-                      type="text"
-                      value={searchTerm}
-                      ref={searchRef}
-                      onChange={onChangeSearchTerm}
-                      placeholder={`Search ${filteredIcons.length} icons...`}
-                      aria-label="Search Icon"
-                      className="h-10 w-full rounded-full pl-12"
-                      id="search"
-                    />
-                    <Label htmlFor="search">
-                      <DIcons.Search
-                        strokeWidth={1}
-                        className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+                <div className="grid justify-center gap-3 text-center md:flex md:justify-start">
+                  <h1 className="py-2 text-xl font-semibold">
+                    Designali Icons
+                  </h1>
+                  <div className="flex gap-3">
+                    <div className="relative">
+                      <Input
+                        type="text"
+                        value={searchTerm}
+                        ref={searchRef}
+                        onChange={onChangeSearchTerm}
+                        placeholder={`Search ${filteredIcons.length} icons...`}
+                        aria-label="Search Icon"
+                        className="h-10 w-full rounded-full pl-12"
+                        id="search"
                       />
-                    </Label>
-                  </div>
+                      <Label htmlFor="search">
+                        <DIcons.Search
+                          strokeWidth={1}
+                          className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+                        />
+                      </Label>
+                    </div>
 
-                  <Button
-                    variant="outline"
-                    size="lgicon"
-                    className="h-10 w-10"
-                    onClick={onRandomIconClick}
-                    title="Random icon"
-                  >
-                    <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
-                  </Button>
+                    <Button
+                      variant="outline"
+                      size="lgicon"
+                      className="h-10 w-10"
+                      onClick={onRandomIconClick}
+                      title="Random icon"
+                    >
+                      <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
               </div>
               <div className="">
@@ -599,7 +474,7 @@ export const IconGenerator = () => {
                 ) : (
                   <div className="my-6">
                     <div className="">
-                      <h4 className="pb-3 text-center md:text-left">
+                      <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400 md:text-left">
                         {searchTerm ? "Results" : "All Icons"}
                       </h4>
 
@@ -625,6 +500,7 @@ export const IconGenerator = () => {
                                     <Component
                                       width={24}
                                       height={24}
+                                      stroke={settings.iconColor}
                                       strokeWidth={settings.strokeWidth}
                                     />
                                     <Input
