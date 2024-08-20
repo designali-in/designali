@@ -648,7 +648,7 @@ export const IconGenerator = () => {
               </div>
             </div>
           </div>
-          <div className="h-auto w-full border-t p-6">
+          <div className="h-auto w-full border-t px-6 py-3">
             <CodeBlock
               title={"React"}
               children={`import { ${settings.icon} } from 'dicons';

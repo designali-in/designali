@@ -33,37 +33,42 @@ export const CodeBlock = forwardRef<HTMLPreElement, CodeBlockProps>(
     };
 
     return (
-      <figure
-        className={cn(
-          "not-prose group relative overflow-hidden rounded-lg border bg-secondary/50 text-sm",
-          figureClassName,
-        )}
-      >
-        {title ? (
-          <div className="flex flex-row items-center gap-2 border-b bg-muted/50 px-4 py-1.5">
-            <div className="text-muted-foreground">
-              <Icon className="size-3.5" />
+      <div className="py-3">
+        <figure
+          className={cn(
+            "not-prose group relative overflow-hidden rounded-lg border bg-secondary/50 text-sm",
+            figureClassName,
+          )}
+        >
+          {title ? (
+            <div className="flex flex-row items-center gap-2 border-b bg-muted/50 px-4 py-1.5">
+              <div className="text-muted-foreground">
+                <Icon className="size-3.5" />
+              </div>
+              <figcaption className="flex-1 truncate text-muted-foreground">
+                {title}
+              </figcaption>
+              <CopyButton onCopy={onCopy} />
             </div>
-            <figcaption className="flex-1 truncate text-muted-foreground">
-              {title}
-            </figcaption>
-            <CopyButton onCopy={onCopy} />
-          </div>
-        ) : (
-          <CopyButton className="absolute right-4 top-3 z-10" onCopy={onCopy} />
-        )}
+          ) : (
+            <CopyButton
+              className="absolute right-4 top-3 z-10"
+              onCopy={onCopy}
+            />
+          )}
 
-        <ScrollArea>
-          <pre
-            ref={mergeRefs(textInput, ref)}
-            className={cn("p-4", className)}
-            {...rest}
-          >
-            {children}
-          </pre>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-      </figure>
+          <ScrollArea>
+            <pre
+              ref={mergeRefs(textInput, ref)}
+              className={cn("p-4", className)}
+              {...rest}
+            >
+              {children}
+            </pre>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
+        </figure>
+      </div>
     );
   },
 );
