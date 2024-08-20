@@ -15,7 +15,6 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   debounce,
-  getPastedSvgFile,
   randomElement,
   randomNumberBetween,
   uniq,
@@ -211,6 +210,8 @@ export const IconGenerator = () => {
     router.replace(`?q=${newSeachTerm}`);
   };
 
+  const sp = useSearchParams();
+
   const onChangeColorSetting =
     (settingName: string): ColorChangeHandler =>
     (newValue) => {
@@ -257,12 +258,14 @@ export const IconGenerator = () => {
   }
 
   return (
-    <div className="border-b border-t md:h-[900px]">
+    <div className="border-b border-t md:h-screen">
       <main className={"flex-1 md:flex"}>
-        <div className="-z-0 mx-auto grid max-w-md md:h-[898px] md:border-r">
+        <div className="-z-0 mx-auto grid max-w-md md:h-screen md:border-r">
           <div className="p-6">
             <div className="relative">
-              <p className="my-4 text-center">{settings.icon}</p>
+              <p className="my-2 text-center text-xl font-semibold text-ali">
+                {settings.icon}
+              </p>
               <div className="relative mx-auto flex h-auto w-auto max-w-[202px] justify-center border">
                 <GridPattern
                   width={11.2}
@@ -389,6 +392,7 @@ export const IconGenerator = () => {
                           </div>
                         </div>
                       </div>
+
                       <div className="grid items-center gap-2">
                         <div className="flex items-center justify-between">
                           <span className="pr-5 text-xs">Size</span>
@@ -483,7 +487,7 @@ export const IconGenerator = () => {
                       </h4>
 
                       <ScrollArea>
-                        <div className="flex h-auto w-full flex-wrap gap-2 md:h-auto">
+                        <div className="flex h-[400px] w-full flex-wrap gap-2 md:h-[580px]">
                           {filteredIcons.map((icon) => {
                             const Component = DIcons[icon];
                             return (
@@ -546,12 +550,14 @@ export default App;`}
               />
             </div>
             <div className="md:w-full">
-              <h1 className="py-3">Installation</h1>
+              <h1 className="py-3 text-slate-600 dark:text-slate-400">
+                Installation
+              </h1>
               <Tabs defaultValue="npm">
                 <TabsList>
-                  <TabsTrigger value="npm">NPM</TabsTrigger>
-                  <TabsTrigger value="pnpm">PNPM</TabsTrigger>
-                  <TabsTrigger value="yarn">YARN</TabsTrigger>
+                  <TabsTrigger value="npm">npm</TabsTrigger>
+                  <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+                  <TabsTrigger value="yarn">yarn</TabsTrigger>
                 </TabsList>
                 <TabsContent value="npm">
                   <CodeBlock
@@ -580,14 +586,16 @@ export default App;`}
               </Tabs>
             </div>
             <div className="md:w-full">
-              <h1 className="py-3">Settings</h1>
-              <Tabs defaultValue="npm">
+              <h1 className="py-3 text-slate-600 dark:text-slate-400">
+                Settings
+              </h1>
+              <Tabs defaultValue="3">
                 <TabsList>
-                  <TabsTrigger value="npm">Color</TabsTrigger>
-                  <TabsTrigger value="pnpm">Sizing</TabsTrigger>
-                  <TabsTrigger value="yarn">Stroke Width</TabsTrigger>
+                  <TabsTrigger value="1">Color</TabsTrigger>
+                  <TabsTrigger value="2">Sizing</TabsTrigger>
+                  <TabsTrigger value="3">Stroke Width</TabsTrigger>
                 </TabsList>
-                <TabsContent value="npm">
+                <TabsContent value="1">
                   <CodeBlock
                     title={"React"}
                     children={`<${settings.icon} color="#3e9392" />`}
@@ -595,7 +603,7 @@ export default App;`}
                     data-lang="sd"
                   />
                 </TabsContent>
-                <TabsContent value="pnpm">
+                <TabsContent value="2">
                   <CodeBlock
                     title={"React"}
                     children={`<${settings.icon} size={64} />`}
@@ -603,7 +611,7 @@ export default App;`}
                     data-lang="sd"
                   />
                 </TabsContent>
-                <TabsContent value="yarn">
+                <TabsContent value="3">
                   <CodeBlock
                     title={"React"}
                     children={`<${settings.icon} strokeWidth={1} />`}

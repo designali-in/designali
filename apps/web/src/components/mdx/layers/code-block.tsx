@@ -5,8 +5,8 @@ import { forwardRef, useEffect, useRef, useState } from "react";
 import { getIconByFilename } from "@/utils/get-icon-by-filename";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/dtabs";
 import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
+import { toast } from "@designali/ui/toaster";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import mergeRefs from "merge-refs";
 
@@ -95,6 +95,7 @@ const CopyButton = (props: CopyButtonProps) => {
       onClick={() => {
         onCopy();
         setIsCopied(true);
+        toast(`✅ Copy code to clipboard`);
       }}
       type="button"
       aria-label="Copy code to clipboard"
