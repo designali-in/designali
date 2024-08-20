@@ -13,7 +13,6 @@ import type { ColorChangeHandler } from "react-color";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { DIcons } from "@/components/dicons";
 import {
   debounce,
   getPastedSvgFile,
@@ -28,7 +27,7 @@ import {
   DownloadSVG,
 } from "@/src/components/common/colors/export-modal";
 import { presets } from "@/src/components/common/colors/grad-types";
-import ResultIcon from "@/src/components/common/colors/result-icon";
+import ResultDIcon from "@/src/components/common/colors/result-dicon";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
@@ -39,6 +38,7 @@ import { RadioGroup, RadioGroupItem } from "@designali/ui/radio-group";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { Slider } from "@designali/ui/slider";
 import { toast } from "@designali/ui/toaster";
+import { DIcons } from "dicons";
 import { CSSTransition } from "react-transition-group";
 import { svgAsPngUri } from "save-svg-as-png";
 
@@ -82,6 +82,7 @@ export const IconGenerator = () => {
     backgroundSpread: 100,
     backgroundAngle: 0,
     iconSize: 120,
+    strokeWidth: 2,
     iconOffsetX: 0,
     iconOffsetY: 0,
     selectedPresetIndex: randomPresetIndex,
@@ -391,21 +392,21 @@ export const IconGenerator = () => {
                   strokeDasharray={"1 1"}
                   className={cn("-z-10")}
                 />
-                <DIcons.Circle
+                <DIcons.Plus
                   strokeWidth={0.5}
-                  className="text-aired absolute -left-4 -top-4 h-8 w-8"
+                  className="text-aired absolute -left-3 -top-3 h-5 w-5"
                 />
-                <DIcons.Circle
+                <DIcons.Plus
                   strokeWidth={0.5}
-                  className="text-aired absolute -bottom-4 -left-4 h-8 w-8"
+                  className="text-aired absolute -bottom-3 -left-3 h-5 w-5"
                 />
-                <DIcons.Circle
+                <DIcons.Plus
                   strokeWidth={0.5}
-                  className="text-aired absolute -right-4 -top-4 h-8 w-8"
+                  className="text-aired absolute -right-3 -top-3 h-5 w-5"
                 />
-                <DIcons.Circle
+                <DIcons.Plus
                   strokeWidth={0.5}
-                  className="text-aired absolute -bottom-4 -right-4 h-8 w-8"
+                  className="text-aired absolute -bottom-3 -right-3 h-5 w-5"
                 />
 
                 <CSSTransition
@@ -415,11 +416,12 @@ export const IconGenerator = () => {
                   className=""
                   unmountOnExit
                 >
-                  <ResultIcon
+                  <ResultDIcon
                     size={200}
                     settings={settings}
                     IconComponent={IconComponent}
                     ref={svgRef}
+                    strokeWidth={0}
                   />
                 </CSSTransition>
               </div>
@@ -452,7 +454,7 @@ export const IconGenerator = () => {
                       className=""
                       onSelect={onCopyImageToClipboard}
                     >
-                      <DIcons.Circle strokeWidth={1} className="h-3 w-3" />
+                      <DIcons.Copy strokeWidth={1} className="h-3 w-3" />
                     </Button>
                   )}
                   {pngClipboardSupported && (
@@ -462,7 +464,7 @@ export const IconGenerator = () => {
                       className=""
                       onSelect={onCopyImageToClipboard}
                     >
-                      <DIcons.Circle strokeWidth={1} className="h-3 w-3" />
+                      <DIcons.Copy strokeWidth={1} className="h-3 w-3" />
                     </Button>
                   )}
                 </div>
@@ -476,7 +478,7 @@ export const IconGenerator = () => {
                   ref={formRef}
                 >
                   <div className="mt-10 w-full">
-                    <div className="grid gap-2">
+                    <div className="grid gap-6">
                       {!customSvgIsPng && (
                         <div className="flex items-center justify-between">
                           <span className="pr-5 text-xs">Color</span>
@@ -489,8 +491,38 @@ export const IconGenerator = () => {
                         </div>
                       )}
 
-                      <div className="flex items-center justify-between">
-                        <span className="pr-5 text-xs">Size</span>
+                      <div className="grid items-center gap-2">
+                        <div className="flex items-center justify-between">
+                          <span className="pr-5 text-xs">Stroke Width</span>
+                          <div className="flex items-center gap-1">
+                            <span className="flex w-[30px] justify-end font-semibold">
+                              {settings.strokeWidth}
+                            </span>
+                            <span className="text-xs"> px</span>
+                          </div>
+                        </div>
+                        <div className="">
+                          <div className="flex flex-1 justify-end gap-2">
+                            <Slider
+                              name="strokeWidth"
+                              defaultValue={[settings.strokeWidth]}
+                              min={0.5}
+                              max={3}
+                              step={0.1}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="grid items-center gap-2">
+                        <div className="flex items-center justify-between">
+                          <span className="pr-5 text-xs">Size</span>
+                          <div className="flex items-center gap-1">
+                            <span className="flex w-[30px] justify-end font-semibold">
+                              {settings.iconSize}
+                            </span>
+                            <span className="text-xs"> px</span>
+                          </div>
+                        </div>
                         <div className="">
                           <div className="flex flex-1 justify-end gap-2">
                             <Slider
@@ -499,12 +531,7 @@ export const IconGenerator = () => {
                               min={20}
                               max={200}
                               step={5}
-                              className="w-[150px] px-2"
                             />
-                            <span className="flex w-[30px] justify-end">
-                              {settings.iconSize}
-                            </span>
-                            px
                           </div>
                         </div>
                       </div>
@@ -514,14 +541,14 @@ export const IconGenerator = () => {
                 <Link href={"/dicons/icons"}>
                   <Button size="lg" className="mt-6 h-10 w-full">
                     Edit {settings.icon}
-                    <DIcons.Circle className="mx-1 h-4 w-4" />
+                    <DIcons.Plus className="mx-1 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative w-full">
           <div className="p-6">
             <div ref={iconsWrapperRef} className={""}>
               <div className="">
@@ -552,7 +579,7 @@ export const IconGenerator = () => {
                     onClick={onRandomIconClick}
                     title="Random icon"
                   >
-                    <DIcons.Circle strokeWidth={1} className="h-4 w-4" />
+                    <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -585,14 +612,19 @@ export const IconGenerator = () => {
                                   defaultValue="option-one"
                                 >
                                   <RadioGroupItem
-                                    className="absolute left-6"
+                                    className="absolute -z-10"
                                     value={icon}
                                     checked={icon === settings.icon}
                                     onChange={() => onChangeIcon(icon)}
                                   />
                                 </RadioGroup>
                                 <Label className="" key={icon}>
-                                  <div className="flex h-14 w-14 items-center justify-center rounded-md border">
+                                  <div className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-md border transition hover:border-ali hover:bg-slate-100 hover:dark:bg-slate-900">
+                                    <Component
+                                      width={24}
+                                      height={24}
+                                      strokeWidth={settings.strokeWidth}
+                                    />
                                     <Input
                                       type="radio"
                                       className="hidden"
@@ -601,7 +633,6 @@ export const IconGenerator = () => {
                                       checked={icon === settings.icon}
                                       onChange={() => onChangeIcon(icon)}
                                     />
-                                    <Component width={24} height={24} />
                                   </div>
                                 </Label>
                               </div>

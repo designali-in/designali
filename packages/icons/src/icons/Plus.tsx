@@ -18,8 +18,8 @@ export const Plus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M5,12h14" />
-        <path d="M12,5v14" />{" "}
+        <path d="M5 12h14" />
+        <path d="M12 5v14" />
       </svg>
     );
   },
