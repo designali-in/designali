@@ -127,3 +127,55 @@ export function DocsSidebarNavItems({
     </div>
   ) : null;
 }
+
+export interface DocsSidebarNavProps {
+  items: SidebarNavItem[];
+}
+
+export function DiconsSidebarNav({ items }: DocsSidebarNavProps) {
+  const pathname = usePathname();
+
+  return items.length ? (
+    <div className="mb-10 w-full">
+      {items.map((item, index) => (
+        <div key={index} className={cn("pb-0")}>
+          {item.items ? (
+            <DiconsSidebarNavItems items={item.items} pathname={pathname} />
+          ) : null}
+        </div>
+      ))}
+    </div>
+  ) : null;
+}
+
+interface DiconsSidebarNavItemsProps {
+  items: SidebarNavItem[];
+  pathname: string | null;
+}
+
+export function DiconsSidebarNavItems({
+  items,
+  pathname,
+}: DiconsSidebarNavItemsProps) {
+  return items.length ? (
+    <div className="grid grid-flow-row auto-rows-max space-y-1 text-sm">
+      {items.map((item, index) => (
+        <Link
+          key={index}
+          href={item.href}
+          className={cn(
+            "flex w-full items-center rounded-xl p-1 px-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 hover:dark:bg-slate-900",
+            {
+              "text-md bg-slate-100 font-bold text-ali dark:bg-slate-900 dark:text-ali":
+                pathname === item.href,
+            },
+          )}
+          target={item.external ? "_blank" : ""}
+          rel={item.external ? "noreferrer" : ""}
+        >
+          {item.title}
+        </Link>
+      ))}
+    </div>
+  ) : null;
+}

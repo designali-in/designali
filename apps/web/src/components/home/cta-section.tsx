@@ -87,78 +87,6 @@ const tiles = [
     ),
     bg: <div className=""></div>,
   },
-  {
-    icon: (
-      <Image
-        src={"/images/blogs/port/portfolio-07.jpg"}
-        alt={""}
-        width={350}
-        height={350}
-        className="rounded-sm md:rounded-sm"
-      />
-    ),
-    bg: <div className=""></div>,
-  },
-  {
-    icon: (
-      <Image
-        src={"/images/blogs/port/portfolio-08.jpg"}
-        alt={""}
-        width={350}
-        height={350}
-        className="rounded-sm md:rounded-sm"
-      />
-    ),
-    bg: <div className=""></div>,
-  },
-  {
-    icon: (
-      <Image
-        src={"/images/blogs/port/portfolio-09.jpg"}
-        alt={""}
-        width={350}
-        height={350}
-        className="rounded-sm md:rounded-sm"
-      />
-    ),
-    bg: <div className=""></div>,
-  },
-  {
-    icon: (
-      <Image
-        src={"/images/blogs/port/portfolio-10.jpg"}
-        alt={""}
-        width={350}
-        height={350}
-        className="rounded-sm md:rounded-sm"
-      />
-    ),
-    bg: <div className=""></div>,
-  },
-  {
-    icon: (
-      <Image
-        src={"/images/blogs/port/portfolio-11.jpg"}
-        alt={""}
-        width={350}
-        height={350}
-        className="rounded-sm md:rounded-sm"
-      />
-    ),
-    bg: <div className=""></div>,
-  },
-  {
-    icon: (
-      <Image
-        src={"/images/blogs/port/portfolio-12.jpg"}
-        alt={""}
-        width={350}
-        height={350}
-        className="rounded-sm md:rounded-sm"
-      />
-    ),
-    bg: <div className=""></div>,
-  },
 ];
 
 const dtiles = [
@@ -340,6 +268,7 @@ export default function CallToActionSection() {
                 <Card key={idx} {...review} />
               ))}
             </Marquee>
+
             <Marquee
               reverse
               className="-delay-[200ms] [--duration:70s]"
