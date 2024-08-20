@@ -334,7 +334,7 @@ export default function CallToActionSection() {
       </div>
       <div className="-mt-20 mb-[600px] md:mb-0">
         <div className="flex w-full flex-col items-center justify-center">
-          <div className="relative flex w-full flex-col items-center justify-center overflow-hidden md:-mt-20">
+          <div className="relative -mb-40 -mt-20 flex w-full flex-col items-center justify-center overflow-hidden md:mb-40">
             <Marquee className="[-delay-[200ms] [--duration:20s]" repeat={5}>
               {randomTiles3.map((review, idx) => (
                 <Card key={idx} {...review} />
