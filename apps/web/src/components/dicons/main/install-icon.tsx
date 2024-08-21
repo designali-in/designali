@@ -31,7 +31,7 @@ export const InstallIcon = ({ settings }: InstallIconProps) => {
             </p>
           </div>
           <ScrollArea>
-            <div className="h-screen px-6">
+            <div className="px-6 md:h-[700px]">
               <div className="">
                 <h1 className="py-3 text-slate-600 dark:text-slate-400">
                   Import
@@ -135,16 +135,16 @@ export default App;`}
                   </div>
                 </div>
               </div>
-              <div className="w-full">
-                <Link href={"/guides/dicons"}>
-                  <Button size="lg" className="h-10 w-full">
-                    Go to Docs
-                    <DIcons.Plus className="mx-1 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
             </div>
           </ScrollArea>
+          <div className="w-full p-6">
+            <Link href={"/guides/dicons"}>
+              <Button size="lg" className="h-10 w-full">
+                Go to Docs
+                <DIcons.Plus className="mx-1 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </main>

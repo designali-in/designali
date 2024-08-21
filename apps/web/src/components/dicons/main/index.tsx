@@ -11,6 +11,7 @@
 import type { SettingsType } from "@/src/types";
 import type { ColorChangeHandler } from "react-color";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   debounce,
@@ -21,15 +22,22 @@ import {
 import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
 import { presets } from "@/src/components/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
+import { Button } from "@designali/ui/button";
+import { Input } from "@designali/ui/input";
+import { Label } from "@designali/ui/label";
+import { ScrollArea } from "@designali/ui/scroll-area";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
+import { CopyButton } from "../../ui/copy-button";
 import { MainIcons } from "./dicons";
 import { InstallIcon } from "./install-icon";
 import { SideIcon } from "./side-icon";
 
 const scales = [0.25, 0.5, 1, 2];
+
+const FEEDBACK_EMAIL = "contact@designali.in";
 
 export const DIconGenerator = () => {
   const randomPresetIndex = randomNumberBetween(0, presets.length - 1);
@@ -253,16 +261,87 @@ export const DIconGenerator = () => {
         onFormChange={onFormChange}
       />
       <div className="">
-        <MainIcons
-          settings={settings}
-          iconsWrapperRef={iconsWrapperRef}
-          searchTerm={searchTerm}
-          onChangeSearchTerm={onChangeSearchTerm}
-          filteredDIcons={filteredDIcons}
-          searchRef={searchRef}
-          onRandomIconClick={onRandomIconClick}
-          onChangeIcon={onChangeIcon}
-        />
+        <div className="">
+          <div className="h-auto">
+            <div ref={iconsWrapperRef}>
+              <nav className="z-20 w-full border-b px-6 md:sticky md:top-14 md:bg-slate-100/60 md:backdrop-blur-md md:backdrop-filter md:hover:bg-slate-50 md:dark:bg-slate-900/60 md:hover:dark:bg-slate-950">
+                <div className="flex w-full justify-between gap-3">
+                  <div className="grid items-center justify-center gap-3 pb-10 text-center md:flex md:h-16 md:justify-start md:pb-0">
+                    <Link href={"/dicons"}>
+                      <h1 className="text-3xl font-semibold hover:text-ali">
+                        DIcons
+                      </h1>
+                    </Link>
+                    <div className="flex gap-3">
+                      <div className="relative">
+                        <Input
+                          type="text"
+                          value={searchTerm}
+                          ref={searchRef}
+                          onChange={onChangeSearchTerm}
+                          placeholder={`Search ${filteredDIcons.length} icons...`}
+                          aria-label="Search Icon"
+                          className="h-10 w-full rounded-full pl-12"
+                          id="search"
+                        />
+                        <Label htmlFor="search">
+                          <DIcons.Search
+                            strokeWidth={1}
+                            className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+                          />
+                        </Label>
+                      </div>
+
+                      <Button
+                        variant="outline"
+                        size="lgicon"
+                        className="h-10 w-10"
+                        onClick={onRandomIconClick}
+                        title="Random icon"
+                      >
+                        <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    <Link href={"/tools/dicons"}>
+                      <Button size="lg" className="h-10 w-full">
+                        Edit {settings.icon}
+                        <DIcons.Plus className="mx-1 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <h1 className="rounded-md border px-4 py-1 font-mono text-ali">{`<${settings.icon} />`}</h1>
+                    <CopyButton value={`<${settings.icon} />`} />
+                  </div>
+                </div>
+              </nav>
+              <div className="px-6">
+                {filteredDIcons.length === 0 ? (
+                  <div className="mt-20 grid gap-2 text-center">
+                    <p>We couldn’t find an icon for that</p>
+                    <Link
+                      className=""
+                      href={`mailto:${FEEDBACK_EMAIL}?subject=Request%20Icon`}
+                    >
+                      <Button>Request an Icon</Button>
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="my-6">
+                    <ScrollArea className="md:h-[900px]">
+                      <MainIcons
+                        settings={settings}
+                        searchTerm={searchTerm}
+                        filteredDIcons={filteredDIcons}
+                        onChangeIcon={onChangeIcon}
+                      />
+                    </ScrollArea>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="">
         <InstallIcon settings={settings} />
