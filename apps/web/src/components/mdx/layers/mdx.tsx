@@ -1,6 +1,5 @@
 "use client";
 
-import type { MDXComponents } from "@designali/mdx";
 import ImageZoom from "@/components/common/image-zoom";
 import { cn } from "@designali/ui";
 import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
@@ -34,7 +33,7 @@ interface MdxProps {
   code: string;
 }
 
-const components: MDXComponents = {
+const components = {
   a: Link,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
