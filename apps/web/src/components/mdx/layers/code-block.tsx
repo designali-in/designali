@@ -52,16 +52,18 @@ export const CodeBlock = forwardRef<HTMLPreElement, CodeBlockProps>(
               <CopyButton onCopy={onCopy} />
             </div>
           ) : (
-            <CopyButton
-              className="absolute right-4 top-3 z-10"
-              onCopy={onCopy}
-            />
+            <div className="flex w-full">
+              <CopyButton
+                className="absolute right-4 top-4 z-10"
+                onCopy={onCopy}
+              />
+            </div>
           )}
 
           <ScrollArea>
             <pre
               ref={mergeRefs(textInput, ref)}
-              className={cn("p-4", className)}
+              className={cn("p-4 pr-10 md:pr-20", className)}
               {...rest}
             >
               {children}

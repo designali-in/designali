@@ -60,9 +60,7 @@ export default function GuidesPage() {
           ))}
         </div>
       </div>
-      <div className="sticky top-24 hidden h-[calc(100vh-3.5rem)] overflow-y-auto border-l border-slate-400 pt-6 dark:border-slate-600 xl:block">
-        A
-      </div>
+      <div className="sticky top-24 hidden h-[calc(100vh-3.5rem)] overflow-y-auto border-l border-slate-400 pt-6 dark:border-slate-600 xl:block"></div>
     </div>
   );
 }

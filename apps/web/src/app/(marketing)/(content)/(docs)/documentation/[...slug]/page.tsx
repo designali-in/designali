@@ -50,9 +50,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <Mdx code={guide.body.code} />
         <Separator className="my-8" />
         <div className="flex py-6 lg:py-10">
-          <Link href="/guides" className="">
+          <Link href="/documentation" className="">
             <Button variant="outline" size="lg">
-              See all guides
+              See all documentation
             </Button>
           </Link>
         </div>

@@ -148,6 +148,22 @@ export const documentationConfig: DocumentationConfig = {
           title: "Installation",
           href: "/documentation/installation",
         },
+        {
+          title: "How to use",
+          href: "/documentation/how-to-use",
+        },
+        {
+          title: "Color",
+          href: "/documentation/color",
+        },
+        {
+          title: "Sizing",
+          href: "/documentation/sizing",
+        },
+        {
+          title: "Stroke Width",
+          href: "/documentation/stroke-width",
+        },
       ],
     },
   ],

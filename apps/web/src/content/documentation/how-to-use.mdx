@@ -1,0 +1,34 @@
+---
+title: How to use
+description: "How to install dicons and download icons for your app."
+date: 2024-08-06
+---
+
+<Callout>
+
+This site is a work in progress. If you see dummy text on a page, it means I'm still working on it. You can follow updates on Twitter [@designali_in](https://twitter.com/designali_in).
+
+</Callout>
+
+DIcons is built with ES Modules, so it's completely tree-shakable.
+
+Each icon can be imported as a React component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+
+##
+
+```bash title="pnpm"
+pnpm install dicons
+```
+
+## Example
+
+```bash
+import { Camera } from 'dicons';
+
+// Usage
+const App = () => {
+  return <Camera color="red" size={48} />;
+};
+
+export default App;
+```
