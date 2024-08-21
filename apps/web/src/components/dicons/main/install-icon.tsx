@@ -16,8 +16,7 @@ interface InstallIconProps {
 
 export const InstallIcon = ({ settings }: InstallIconProps) => {
   return (
-    <main className={"md:flex"} id="categories">
-      <div className=""></div>
+    <main className={""} id="categories">
       <div className="">
         <div className="mx-auto max-w-sm gap-6 md:h-screen md:border-l">
           <div className="px-6 py-6">

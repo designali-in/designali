@@ -63,7 +63,7 @@ export const CodeBlock = forwardRef<HTMLPreElement, CodeBlockProps>(
           <ScrollArea>
             <pre
               ref={mergeRefs(textInput, ref)}
-              className={cn("p-4 pr-10 md:pr-20", className)}
+              className={cn("p-4 pr-10", className)}
               {...rest}
             >
               {children}
