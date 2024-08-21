@@ -11,7 +11,7 @@ export const diconsConfig: DIconsConfig = {
         },
         {
           title: "Accounts & access",
-          href: "/dicons/categories#graaadients",
+          href: "/dicons/categories#accounts",
         },
         {
           title: "Animals",

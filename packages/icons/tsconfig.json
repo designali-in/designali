@@ -13,6 +13,6 @@
     "noEmit": true,
     "outDir": "dist"
   },
-  "include": ["src"],
+  "include": ["src", "../../apps/web/src/components/dicons/categories"],
   "exclude": ["node_modules"]
 }
