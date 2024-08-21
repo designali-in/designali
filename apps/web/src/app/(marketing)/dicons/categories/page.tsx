@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-
-import { IconGenerator } from "./_components/icon-generator";
+import { DIconGenerator } from "@/components/dicons/catego";
 
 export const metadata = {
   title: "DIcons Categories - Designali",
@@ -12,7 +11,7 @@ export default function Home() {
   return (
     <div className="mt-14 border-b border-t">
       <Suspense>
-        <IconGenerator />
+        <DIconGenerator />
       </Suspense>
     </div>
   );

@@ -6,144 +6,188 @@ export const diconsConfig: DIconsConfig = {
       title: "",
       items: [
         {
-          title: "Accessibility",
           href: "/dicons/categories#accessibility",
-        },
-        {
-          title: "Accounts & access",
-          href: "/dicons/categories#accounts",
-        },
-        {
-          title: "Animals",
-          href: "/dicons/categories#grad-reel",
-        },
-        {
-          title: "Grad Carousel",
-          href: "/dicons/categories#grad-carousel",
-        },
-        {
-          title: "SM Cheat Sheet",
-          href: "/dicons/categories#sm-cheat-sheet",
-        },
-        {
-          title: "3D Icons",
-          href: "/dicons/categories#3dicons",
-        },
-        {
-          title: "Pure White",
-          href: "/dicons/categories#pure-white",
-        },
-        {
           title: "Accessibility",
-          href: "/dicons/categories#accessibility",
         },
         {
+          href: "/dicons/categories#account",
           title: "Accounts & access",
-          href: "/dicons/categories#graaadients",
         },
         {
+          href: "/dicons/categories#animals",
           title: "Animals",
-          href: "/dicons/categories#grad-reel",
         },
         {
-          title: "Grad Carousel",
-          href: "/dicons/categories#grad-carousel",
+          href: "/dicons/categories#arrows",
+          title: "Arrows",
         },
         {
-          title: "SM Cheat Sheet",
-          href: "/dicons/categories#sm-cheat-sheet",
+          href: "/dicons/categories#brands",
+          title: "Brands",
         },
         {
-          title: "3D Icons",
-          href: "/dicons/categories#3dicons",
+          href: "/dicons/categories#buildings",
+          title: "Buildings",
         },
         {
-          title: "Pure White",
-          href: "/dicons/categories#pure-white",
+          href: "/dicons/categories#charts",
+          title: "Charts",
         },
         {
-          title: "Accessibility",
-          href: "/dicons/categories#accessibility",
+          href: "/dicons/categories#communication",
+          title: "Communication",
         },
         {
-          title: "Accounts & access",
-          href: "/dicons/categories#graaadients",
+          href: "/dicons/categories#connectivity",
+          title: "Connectivity",
         },
         {
-          title: "Animals",
-          href: "/dicons/categories#grad-reel",
+          href: "/dicons/categories#currency",
+          title: "Currency",
         },
         {
-          title: "Grad Carousel",
-          href: "/dicons/categories#grad-carousel",
+          href: "/dicons/categories#cursors",
+          title: "Cursors",
         },
         {
-          title: "SM Cheat Sheet",
-          href: "/dicons/categories#sm-cheat-sheet",
+          href: "/dicons/categories#design",
+          title: "Design",
         },
         {
-          title: "3D Icons",
-          href: "/dicons/categories#3dicons",
+          href: "/dicons/categories#development",
+          title: "Coding & development",
         },
         {
-          title: "Pure White",
-          href: "/dicons/categories#pure-white",
+          href: "/dicons/categories#devices",
+          title: "Devices",
         },
         {
-          title: "Accessibility",
-          href: "/dicons/categories#accessibility",
+          href: "/dicons/categories#emoji",
+          title: "Emoji",
         },
         {
-          title: "Accounts & access",
-          href: "/dicons/categories#graaadients",
+          href: "/dicons/categories#files",
+          title: "File icons",
         },
         {
-          title: "Animals",
-          href: "/dicons/categories#grad-reel",
+          href: "/dicons/categories#food-beverage",
+          title: "Food & beverage",
         },
         {
-          title: "Grad Carousel",
-          href: "/dicons/categories#grad-carousel",
+          href: "/dicons/categories#furniture",
+          title: "Furniture",
         },
         {
-          title: "SM Cheat Sheet",
-          href: "/dicons/categories#sm-cheat-sheet",
+          href: "/dicons/categories#gaming",
+          title: "Gaming",
         },
         {
-          title: "3D Icons",
-          href: "/dicons/categories#3dicons",
+          href: "/dicons/categories#home",
+          title: "Home",
         },
         {
-          title: "Pure White",
-          href: "/dicons/categories#pure-white",
+          href: "/dicons/categories#layout",
+          title: "Layout",
         },
         {
-          title: "Accessibility",
-          href: "/dicons/categories#accessibility",
+          href: "/dicons/categories#mail",
+          title: "Mail",
         },
         {
-          title: "Accounts & access",
-          href: "/dicons/categories#graaadients",
+          href: "/dicons/categories#maps",
+          title: "Maps",
         },
         {
-          title: "Animals",
-          href: "/dicons/categories#grad-reel",
+          href: "/dicons/categories#maths",
+          title: "Maths",
         },
         {
-          title: "Grad Carousel",
-          href: "/dicons/categories#grad-carousel",
+          href: "/dicons/categories#medical",
+          title: "Medical",
         },
         {
-          title: "SM Cheat Sheet",
-          href: "/dicons/categories#sm-cheat-sheet",
+          href: "/dicons/categories#money",
+          title: "Money",
         },
         {
-          title: "3D Icons",
-          href: "/dicons/categories#3dicons",
+          href: "/dicons/categories#multimedia",
+          title: "Multimedia",
         },
         {
-          title: "Pure White",
-          href: "/dicons/categories#pure-white",
+          href: "/dicons/categories#nature",
+          title: "Nature",
+        },
+        {
+          href: "/dicons/categories#navigation",
+          title: "Navigation",
+        },
+        {
+          href: "/dicons/categories#notifications",
+          title: "Notifications",
+        },
+        {
+          href: "/dicons/categories#people",
+          title: "People",
+        },
+        {
+          href: "/dicons/categories#photography",
+          title: "Photography",
+        },
+        {
+          href: "/dicons/categories#science",
+          title: "Science",
+        },
+        {
+          href: "/dicons/categories#seasons",
+          title: "Seasons",
+        },
+        {
+          href: "/dicons/categories#security",
+          title: "Security",
+        },
+        {
+          href: "/dicons/categories#shapes",
+          title: "Shapes",
+        },
+        {
+          href: "/dicons/categories#shopping",
+          title: "Shopping",
+        },
+        {
+          href: "/dicons/categories#social",
+          title: "Social",
+        },
+        {
+          href: "/dicons/categories#sports",
+          title: "Sports",
+        },
+        {
+          href: "/dicons/categories#sustainability",
+          title: "Sustainability",
+        },
+        {
+          href: "/dicons/categories#text",
+          title: "Text formatting",
+        },
+        {
+          href: "/dicons/categories#time",
+          title: "Time & calendar",
+        },
+        {
+          href: "/dicons/categories#tools",
+          title: "Tools",
+        },
+        {
+          href: "/dicons/categories#transportation",
+          title: "Transportation",
+        },
+        {
+          href: "/dicons/categories#travel",
+          title: "Travel",
+        },
+        {
+          href: "/dicons/categories#weather",
+          title: "Weather",
         },
       ],
     },

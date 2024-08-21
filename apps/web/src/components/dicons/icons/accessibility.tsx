@@ -11,9 +11,9 @@ import {
 
 export type DIcon = DesignaliIcon;
 
-export type ValidIcon = keyof typeof Accessibility;
+export type ValidIcon = keyof typeof Access;
 
-export const Accessibility = {
+export const Access = {
   Copy: Copy,
   Plus: Plus,
   Download: Download,
