@@ -45,7 +45,7 @@ export function GuidesSidebarNavItems({
         !item.disabled && item.href ? (
           <Link
             key={index}
-            href={`#${item.href}`}
+            href={item.href}
             className={cn(
               "flex w-full items-center rounded-xl p-2 px-4 text-slate-600 hover:bg-slate-100 dark:text-slate-400 hover:dark:bg-slate-900",
               {
