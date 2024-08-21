@@ -14,6 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@designali/ui/dropdown-menu";
+import { toast } from "@designali/ui/toaster";
 import { CheckIcon, ClipboardIcon } from "lucide-react";
 
 import { Icons } from "../icons";
@@ -52,7 +53,7 @@ export function CopyButton({
       size="lgicon"
       variant={variant}
       className={cn(
-        "relative z-10 h-10 w-10 text-slate-50 hover:bg-slate-700 hover:text-slate-50 [&_svg]:h-4 [&_svg]:w-4",
+        "relative z-10 h-8 w-8 text-slate-50 hover:bg-slate-700 hover:text-slate-50 [&_svg]:h-3 [&_svg]:w-3",
         className,
       )}
       onClick={() => {
@@ -68,14 +69,15 @@ export function CopyButton({
             : undefined,
         );
         setHasCopied(true);
+        toast("✅ Copy code to clipboard");
       }}
       {...props}
     >
       <span className="sr-only">Copy</span>
       {hasCopied ? (
-        <Icons.check className="h-5 w-5" />
+        <Icons.check className="h-3 w-3" />
       ) : (
-        <Icons.copy className="h-5 w-5" />
+        <Icons.copy className="h-3 w-3" />
       )}
     </Button>
   );
@@ -118,9 +120,9 @@ export function CopyWithClassNames({
           )}
         >
           {hasCopied ? (
-            <CheckIcon className="h-3 w-3" />
+            <Icons.check className="h-3 w-3" />
           ) : (
-            <ClipboardIcon className="h-3 w-3" />
+            <Icons.copy className="h-3 w-3" />
           )}
           <span className="sr-only">Copy</span>
         </Button>

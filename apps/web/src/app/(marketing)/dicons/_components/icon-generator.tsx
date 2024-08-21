@@ -31,6 +31,7 @@ import ResultDIcon from "@/src/components/common/colors/result-dicon";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
 import { DiconsSidebarNav } from "@/src/components/mdx/doc/sidebar-nav";
 import { CodeBlock } from "@/src/components/mdx/layers/code-block";
+import { CopyButton } from "@/src/components/ui/copy-button";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
@@ -438,48 +439,54 @@ export const IconGenerator = () => {
         <div className="h-auto">
           <div ref={iconsWrapperRef}>
             <nav className="z-50 w-full border-b px-6 md:sticky md:top-14 md:bg-slate-100/60 md:backdrop-blur-md md:backdrop-filter md:hover:bg-slate-50 md:dark:bg-slate-900/60 md:hover:dark:bg-slate-950">
-              <div className="grid items-center justify-center gap-3 text-center md:flex md:h-16 md:justify-start">
-                <Link href={"/dicons"}>
-                  <h1 className="text-3xl font-semibold hover:text-ali">
-                    DIcons
-                  </h1>
-                </Link>
-                <div className="flex gap-3">
-                  <div className="relative">
-                    <Input
-                      type="text"
-                      value={searchTerm}
-                      ref={searchRef}
-                      onChange={onChangeSearchTerm}
-                      placeholder={`Search ${filteredDIcons.length} icons...`}
-                      aria-label="Search Icon"
-                      className="h-10 w-full rounded-full pl-12"
-                      id="search"
-                    />
-                    <Label htmlFor="search">
-                      <DIcons.Search
-                        strokeWidth={1}
-                        className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+              <div className="w-full items-center justify-between gap-3 md:flex">
+                <div className="grid items-center justify-center gap-3 text-center md:flex md:h-16 md:justify-start">
+                  <Link href={"/dicons"}>
+                    <h1 className="text-3xl font-semibold hover:text-ali">
+                      DIcons
+                    </h1>
+                  </Link>
+                  <div className="flex gap-3">
+                    <div className="relative">
+                      <Input
+                        type="text"
+                        value={searchTerm}
+                        ref={searchRef}
+                        onChange={onChangeSearchTerm}
+                        placeholder={`Search ${filteredDIcons.length} icons...`}
+                        aria-label="Search Icon"
+                        className="h-10 w-full rounded-full pl-12"
+                        id="search"
                       />
-                    </Label>
-                  </div>
+                      <Label htmlFor="search">
+                        <DIcons.Search
+                          strokeWidth={1}
+                          className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+                        />
+                      </Label>
+                    </div>
 
-                  <Button
-                    variant="outline"
-                    size="lgicon"
-                    className="h-10 w-10"
-                    onClick={onRandomIconClick}
-                    title="Random icon"
-                  >
-                    <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
-                  </Button>
+                    <Button
+                      variant="outline"
+                      size="lgicon"
+                      className="h-10 w-10"
+                      onClick={onRandomIconClick}
+                      title="Random icon"
+                    >
+                      <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
+                    </Button>
+                  </div>
+                  <Link href={"/tools/dicons"}>
+                    <Button size="lg" className="h-10">
+                      Edit {settings.icon}
+                      <DIcons.Plus className="mx-1 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
-                <Link href={"/tools/dicons"}>
-                  <Button size="lg" className="h-10 w-full">
-                    Edit {settings.icon}
-                    <DIcons.Plus className="mx-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="flex items-center justify-center gap-1 py-4 md:justify-end md:py-0">
+                  <h1 className="rounded-md border px-4 py-1 font-mono">{`<${settings.icon}/>`}</h1>
+                  <CopyButton variant="outline" value={`<${settings.icon}/>`} />
+                </div>
               </div>
             </nav>
             <div className="px-6">
