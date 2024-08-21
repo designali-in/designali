@@ -22,7 +22,7 @@ var Index = {
         () => import("@/registry/default/example/typography-blockquote")
       ),
       source: "",
-      files: ["registry/default/example/typography-blockquote.tsx"],
+      files: ["src/src/registry/default/example/typography-blockquote.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -34,7 +34,7 @@ var Index = {
         () => import("@/registry/default/example/typography-demo")
       ),
       source: "",
-      files: ["registry/default/example/typography-demo.tsx"],
+      files: ["src/registry/default/example/typography-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -46,7 +46,7 @@ var Index = {
         () => import("@/registry/default/example/typography-h1")
       ),
       source: "",
-      files: ["registry/default/example/typography-h1.tsx"],
+      files: ["src/registry/default/example/typography-h1.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -58,7 +58,7 @@ var Index = {
         () => import("@/registry/default/example/typography-h2")
       ),
       source: "",
-      files: ["registry/default/example/typography-h2.tsx"],
+      files: ["src/registry/default/example/typography-h2.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -70,7 +70,7 @@ var Index = {
         () => import("@/registry/default/example/typography-h3")
       ),
       source: "",
-      files: ["registry/default/example/typography-h3.tsx"],
+      files: ["src/registry/default/example/typography-h3.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -82,7 +82,7 @@ var Index = {
         () => import("@/registry/default/example/typography-h4")
       ),
       source: "",
-      files: ["registry/default/example/typography-h4.tsx"],
+      files: ["src/registry/default/example/typography-h4.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -94,7 +94,7 @@ var Index = {
         () => import("@/registry/default/example/typography-inline-code")
       ),
       source: "",
-      files: ["registry/default/example/typography-inline-code.tsx"],
+      files: ["src/registry/default/example/typography-inline-code.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -106,7 +106,7 @@ var Index = {
         () => import("@/registry/default/example/typography-large")
       ),
       source: "",
-      files: ["registry/default/example/typography-large.tsx"],
+      files: ["src/registry/default/example/typography-large.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -118,7 +118,7 @@ var Index = {
         () => import("@/registry/default/example/typography-lead")
       ),
       source: "",
-      files: ["registry/default/example/typography-lead.tsx"],
+      files: ["src/registry/default/example/typography-lead.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -130,7 +130,7 @@ var Index = {
         () => import("@/registry/default/example/typography-list")
       ),
       source: "",
-      files: ["registry/default/example/typography-list.tsx"],
+      files: ["src/registry/default/example/typography-list.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -142,7 +142,7 @@ var Index = {
         () => import("@/registry/default/example/typography-muted")
       ),
       source: "",
-      files: ["registry/default/example/typography-muted.tsx"],
+      files: ["src/registry/default/example/typography-muted.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -154,7 +154,7 @@ var Index = {
         () => import("@/registry/default/example/typography-p")
       ),
       source: "",
-      files: ["registry/default/example/typography-p.tsx"],
+      files: ["src/registry/default/example/typography-p.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -166,7 +166,7 @@ var Index = {
         () => import("@/registry/default/example/typography-small")
       ),
       source: "",
-      files: ["registry/default/example/typography-small.tsx"],
+      files: ["src/registry/default/example/typography-small.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -178,7 +178,7 @@ var Index = {
         () => import("@/registry/default/example/typography-table")
       ),
       source: "",
-      files: ["registry/default/example/typography-table.tsx"],
+      files: ["src/registry/default/example/typography-table.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -602,4 +602,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-NSHZYT5L.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-3YO4VEBV.mjs.map
