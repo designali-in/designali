@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useScrollspy } from "@/src/hooks/use-scrollspy";
 import { cn } from "@designali/ui";
 
 import type { SidebarNavItem } from "./types";
@@ -44,7 +45,7 @@ export function GuidesSidebarNavItems({
         !item.disabled && item.href ? (
           <Link
             key={index}
-            href={item.href}
+            href={`#${item.href}`}
             className={cn(
               "flex w-full items-center rounded-xl p-2 px-4 text-slate-600 hover:bg-slate-100 dark:text-slate-400 hover:dark:bg-slate-900",
               {
@@ -134,6 +135,10 @@ export interface DocsSidebarNavProps {
 
 export function DiconsSidebarNav({ items }: DocsSidebarNavProps) {
   const pathname = usePathname();
+  const activeId = useScrollspy(
+    items.map((item) => item.href),
+    { rootMargin: "0% 0% -80% 0%" },
+  );
 
   return items.length ? (
     <div className="mb-10 w-full">
@@ -149,8 +154,8 @@ export function DiconsSidebarNav({ items }: DocsSidebarNavProps) {
 }
 
 interface DiconsSidebarNavItemsProps {
-  items: SidebarNavItem[];
   pathname: string | null;
+  items: SidebarNavItem[];
 }
 
 export function DiconsSidebarNavItems({

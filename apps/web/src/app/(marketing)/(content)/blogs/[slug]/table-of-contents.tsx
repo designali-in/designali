@@ -1,19 +1,19 @@
 "use client";
 
+import type { Heading } from "@/utils/get-headings";
 import React from "react";
-import useScrollspy from "@/hooks/use-scrollspy";
-import { type Heading } from "@/utils/get-headings";
+import { useScrollspy } from "@/hooks/use-scrollspy";
 import { cn } from "@designali/ui";
 
-type TableOfContentsProps = {
+interface TableOfContentsProps {
   headings: Heading[];
-};
+}
 
 const TableOfContents = (props: TableOfContentsProps) => {
   const { headings } = props;
   const activeId = useScrollspy(
     headings.map((heading) => heading.id),
-    { rootMargin: "0% 0% -80% 0%" },
+    { rootMargin: "0% 0% 80% 0%" },
   );
 
   return (
