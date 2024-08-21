@@ -9,7 +9,7 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/typography-blockquote"),
       ),
       source: "",
-      files: ["src/src/registry/default/example/typography-blockquote.tsx"],
+      files: ["src/registry/default/example/typography-blockquote.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: [],
