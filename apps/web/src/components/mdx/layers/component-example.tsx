@@ -27,12 +27,12 @@ export function ComponentExample({
 
   const codeString = React.useMemo(() => {
     if (
-      typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
+      typeof Code.props["data-rehype-pretty-code-fragment"] !== "undefined"
     ) {
       const [, Button] = React.Children.toArray(
         Code.props.children,
       ) as React.ReactElement[];
-      return Button?.props?.value || Button?.props?.__rawString__ || null;
+      return Button.props?.value || Button.props?.__rawString__ || null;
     }
   }, [Code]);
 
@@ -88,7 +88,7 @@ export function ComponentExample({
             <div className="w-full rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
               {Code}
             </div>
-            {Children?.length ? (
+            {Children.length ? (
               <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
                 {Children}
               </div>

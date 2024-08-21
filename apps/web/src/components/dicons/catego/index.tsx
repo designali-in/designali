@@ -41,7 +41,7 @@ const scales = [0.25, 0.5, 1, 2];
 
 const FEEDBACK_EMAIL = "contact@designali.in";
 
-export const DIconGenerator = () => {
+export const DIconCategories = () => {
   const randomPresetIndex = randomNumberBetween(0, presets.length - 1);
 
   const [urlParsed, setUrlParsed] = useState<boolean>(false);

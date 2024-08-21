@@ -47,16 +47,17 @@ const navigation = {
           id: "designs",
           name: "Designs",
           items: [
+            { name: "Documentation", href: "/documentation" },
             { name: "Design", href: "/designs" },
             { name: "Guides", href: "/guides" },
             { name: "Blogs", href: "/blogs" },
-            { name: "Colors", href: "/colors" },
           ],
         },
         {
           id: "company",
           name: "Company",
           items: [
+            { name: "Colors", href: "/colors" },
             { name: "Contact", href: "/contact" },
             { name: "Terms", href: "/terms" },
             { name: "Privacy", href: "/privacy" },

@@ -1,11 +1,11 @@
-import type { Doc } from "contentlayer/generated";
+import type { Designs } from "contentlayer/generated";
 import Link from "next/link";
-import { docsConfig } from "@/config/docs";
+import { designConfig } from "@/config/docs";
 import { cn } from "@designali/ui";
 import { buttonVariants } from "@designali/ui/button";
 
 interface DocsPagerProps {
-  doc: Doc;
+  doc: Designs;
 }
 
 export function DocsPager({ doc }: DocsPagerProps) {
@@ -37,8 +37,8 @@ export function DocsPager({ doc }: DocsPagerProps) {
   );
 }
 
-export function getPagerForDoc(doc: Doc) {
-  const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null];
+export function getPagerForDoc(doc: Designs) {
+  const flattenedLinks = [null, ...flatten(designConfig.sidebarNav), null];
   const activeIndex = flattenedLinks.findIndex(
     (link) => doc.slug === link?.href,
   );

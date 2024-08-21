@@ -4,14 +4,14 @@ import { DocsPager } from "@/components/mdx/doc/pager";
 import { DashboardTableOfContents } from "@/components/mdx/doc/toc";
 import Mdx from "@/components/mdx/layers";
 import { getTableOfContents } from "@/lib/toc";
-import { allDocs } from "contentlayer/generated";
+import { allDesigns } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
 import { ScrollProgress } from "@/src/components/ui/scroll-progress";
 import { Separator } from "@designali/ui/separator";
 
-interface DocPageProps {
+interface DesignPageProps {
   params: {
     slug: string[];
   };
@@ -19,7 +19,7 @@ interface DocPageProps {
 
 async function getDocFromParams(params: { slug: any }) {
   const slug = params.slug?.join("/") || "";
-  const doc = allDocs.find(
+  const doc = allDesigns.find(
     (doc: { slugAsParams: any }) => doc.slugAsParams === slug,
   );
 
@@ -31,14 +31,14 @@ async function getDocFromParams(params: { slug: any }) {
 }
 
 export async function generateStaticParams(): Promise<
-  DocPageProps["params"][]
+  DesignPageProps["params"][]
 > {
-  return allDocs.map((doc: { slugAsParams: string }) => ({
+  return allDesigns.map((doc: { slugAsParams: string }) => ({
     slug: doc.slugAsParams.split("/"),
   }));
 }
 
-export default async function DocPage({ params }: DocPageProps) {
+export default async function DocPage({ params }: DesignPageProps) {
   const doc = await getDocFromParams(params);
 
   if (!doc) {

@@ -26,15 +26,32 @@ export type BlogPost = {
   slug: string
 }
 
-export type Doc = {
+export type Designs = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'Doc'
+  type: 'Designs'
   title: string
   description?: string | undefined
   component: boolean
   published: boolean
+  /** MDX file body */
+  body: MDX
+  slug: string
+  slugAsParams: string
+  readingTime: number
+}
+
+export type Documentation = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Documentation'
+  title: string
+  description?: string | undefined
+  date: IsoDateTimeString
+  published: boolean
+  featured: boolean
   /** MDX file body */
   body: MDX
   slug: string
@@ -105,8 +122,8 @@ export type Page = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = BlogPost | Doc | GalleryPost | Guide | Page
-export type DocumentTypeNames = 'BlogPost' | 'Doc' | 'GalleryPost' | 'Guide' | 'Page'
+export type DocumentTypes = BlogPost | Designs | Documentation | GalleryPost | Guide | Page
+export type DocumentTypeNames = 'BlogPost' | 'Designs' | 'Documentation' | 'GalleryPost' | 'Guide' | 'Page'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -114,7 +131,8 @@ export type NestedTypeNames = never
 export type DataExports = {
   allDocuments: DocumentTypes[]
   allPages: Page[]
-  allDocs: Doc[]
+  allDesigns: Designs[]
+  allDocumentations: Documentation[]
   allGuides: Guide[]
   allBlogPosts: BlogPost[]
   allGalleryPosts: GalleryPost[]
@@ -138,7 +156,8 @@ declare global {
 
 export type DocumentTypeMap = {
   BlogPost: BlogPost
-  Doc: Doc
+  Designs: Designs
+  Documentation: Documentation
   GalleryPost: GalleryPost
   Guide: Guide
   Page: Page

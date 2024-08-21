@@ -105,9 +105,9 @@ var BlogPost = defineDocumentType(() => ({
     }
   }
 }));
-var Doc = defineDocumentType(() => ({
-  name: "Doc",
-  filePathPattern: `docs/**/*.mdx`,
+var Designs = defineDocumentType(() => ({
+  name: "Designs",
+  filePathPattern: `designs/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -156,6 +156,33 @@ var Guide = defineDocumentType(() => ({
   },
   computedFields
 }));
+var Documentation = defineDocumentType(() => ({
+  name: "Documentation",
+  filePathPattern: `documentation/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true
+    },
+    description: {
+      type: "string"
+    },
+    date: {
+      type: "date",
+      required: true
+    },
+    published: {
+      type: "boolean",
+      default: true
+    },
+    featured: {
+      type: "boolean",
+      default: false
+    }
+  },
+  computedFields
+}));
 var Page = defineDocumentType(() => ({
   name: "Page",
   filePathPattern: `pages/**/*.mdx`,
@@ -173,7 +200,7 @@ var Page = defineDocumentType(() => ({
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Page, Doc, Guide, BlogPost, GalleryPost],
+  documentTypes: [Page, Designs, Documentation, Guide, BlogPost, GalleryPost],
   mdx: {
     // remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -222,9 +249,10 @@ var contentlayer_config_default = makeSource({
   }
 });
 export {
-  Doc,
+  Designs,
+  Documentation,
   Guide,
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-B4LUGEYL.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-CDZANCW6.mjs.map

@@ -19,7 +19,9 @@ export function DocsPageHeader({
           {heading}
         </h1>
         {text && (
-          <p className="text-xl text-slate-600 dark:text-slate-400">{text}</p>
+          <p className="md:text-md text-sm text-slate-600 dark:text-slate-400">
+            {text}
+          </p>
         )}
       </div>
       <Separator className="my-8" />

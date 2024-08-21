@@ -1,7 +1,7 @@
 import { MainNav } from "@/components/mdx/doc/main-nav";
 import { DocsSearch } from "@/components/mdx/doc/search";
-import { DocsSidebarNav } from "@/components/mdx/doc/sidebar-nav";
-import { docsConfig } from "@/config/docs";
+import { DesignSidebarNav } from "@/components/mdx/doc/sidebar-nav";
+import { designConfig } from "@/config/docs";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -12,8 +12,8 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
     <div className="mt-14 flex flex-col">
       <header className="sticky top-14 z-40 border-b border-t border-slate-400 bg-slate-100/60 backdrop-blur-md backdrop-filter hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900/60 hover:dark:bg-slate-950">
         <div className="flex h-14 items-center space-x-4 px-6 sm:justify-between sm:space-x-0 md:px-8">
-          <MainNav items={docsConfig.mainNav}>
-            <DocsSidebarNav items={docsConfig.sidebarNav} />
+          <MainNav items={designConfig.mainNav}>
+            <DesignSidebarNav items={designConfig.sidebarNav} />
           </MainNav>
           <div className="flex flex-1 items-center space-x-4 sm:justify-end">
             <div className="flex-1 sm:grow-0">

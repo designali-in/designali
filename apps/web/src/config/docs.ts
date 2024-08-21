@@ -1,6 +1,10 @@
-import type { DocsConfig, GuidesConfig } from "@/components/mdx/doc/types";
+import type {
+  DesignConfig,
+  DocumentationConfig,
+  GuidesConfig,
+} from "@/components/mdx/doc/types";
 
-export const docsConfig: DocsConfig = {
+export const designConfig: DesignConfig = {
   mainNav: [
     {
       title: "Designs",
@@ -9,6 +13,10 @@ export const docsConfig: DocsConfig = {
     {
       title: "Guides",
       href: "/guides",
+    },
+    {
+      title: "Documentation",
+      href: "/documentation",
     },
   ],
   sidebarNav: [
@@ -76,6 +84,10 @@ export const guidesConfig: GuidesConfig = {
       title: "Guides",
       href: "/guides",
     },
+    {
+      title: "Documentation",
+      href: "/documentation",
+    },
   ],
   sidebarNav: [
     {
@@ -98,6 +110,43 @@ export const guidesConfig: GuidesConfig = {
         {
           title: "Youtube",
           href: "/guides/youtube",
+        },
+      ],
+    },
+  ],
+};
+
+export const documentationConfig: DocumentationConfig = {
+  mainNav: [
+    {
+      title: "Designs",
+      href: "/designs",
+    },
+    {
+      title: "Guides",
+      href: "/guides",
+    },
+    {
+      title: "Documentation",
+      href: "/documentation",
+    },
+  ],
+  sidebarNav: [
+    {
+      title: "Getting Started",
+      items: [
+        {
+          title: "Introduction",
+          href: "/documentation",
+        },
+      ],
+    },
+    {
+      title: "Basics",
+      items: [
+        {
+          title: "Installation",
+          href: "/documentation/installation",
         },
       ],
     },

@@ -2,7 +2,6 @@
 "use client";
 
 import * as React from "react";
-import { StyleSwitcher } from "@/components/common/style-switcher";
 import { ThemeWrapper } from "@/components/common/theme-wrapper";
 import { Icons } from "@/components/icons";
 import { CopyButton } from "@/components/ui/copy-button";
@@ -82,12 +81,11 @@ export function ComponentPreview({
         </div>
         <TabsContent value="preview" className="relative rounded-md border">
           <div className="flex items-center justify-between p-4">
-            <StyleSwitcher />
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-end gap-2">
               <CopyButton
                 value={name}
                 variant="outline"
-                className="h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+                className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
               />
             </div>
           </div>

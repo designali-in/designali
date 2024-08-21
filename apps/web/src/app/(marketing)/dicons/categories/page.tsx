@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { DIconGenerator } from "@/components/dicons/catego";
+import { DIconCategories } from "@/components/dicons/catego";
 
 export const metadata = {
   title: "DIcons Categories - Designali",
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="mt-14 border-b border-t">
       <Suspense>
-        <DIconGenerator />
+        <DIconCategories />
       </Suspense>
     </div>
   );
