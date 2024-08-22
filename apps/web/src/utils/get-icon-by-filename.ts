@@ -1,40 +1,40 @@
-import { Circle } from "dicons";
+import { Sun } from "dicons";
 import { FileIcon } from "lucide-react";
 
-type Icon = {
+interface Icon {
   extensions?: string[];
   filenames?: string[];
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
-};
+}
 
 const icons: Icon[] = [
   {
     extensions: ["js", "mjs", "cjs"],
-    icon: Circle,
+    icon: Sun,
   },
   {
     extensions: ["ts", "mts", "cts"],
-    icon: Circle,
+    icon: Sun,
   },
   {
     extensions: ["jsx", "tsx"],
-    icon: Circle,
+    icon: Sun,
   },
   {
     extensions: ["sh", "bash", "zsh"],
-    icon: Circle,
+    icon: Sun,
   },
   {
     extensions: ["md"],
-    icon: Circle,
+    icon: Sun,
   },
   {
     extensions: ["mdx"],
-    icon: Circle,
+    icon: Sun,
   },
   {
     filenames: ["package.json"],
-    icon: Circle,
+    icon: Sun,
   },
 ];
 
@@ -64,13 +64,13 @@ export const getIconByFilename = (
   filename: string,
 ): React.FC<React.SVGProps<SVGSVGElement>> => {
   if (filenameToIcon.has(filename)) {
-    return filenameToIcon.get(filename)!;
+    return filenameToIcon.get(filename);
   }
 
   const extension = filename.split(".").pop();
 
   if (extension && extensionToIcon.has(extension)) {
-    return extensionToIcon.get(extension)!;
+    return extensionToIcon.get(extension);
   }
 
   return FileIcon;
