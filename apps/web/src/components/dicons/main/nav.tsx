@@ -6,6 +6,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
@@ -81,6 +82,154 @@ export const Navigation = ({
           </div>
         </div>
       </nav>
+    </main>
+  );
+};
+
+interface IconNavProps {
+  searchTerm;
+  onRandomIconClick;
+  onSelectCustomIcon;
+  onChangeSearchTerm;
+  searchRef;
+}
+
+export const IconNavigation = ({
+  searchTerm,
+  onRandomIconClick,
+  onSelectCustomIcon,
+  onChangeSearchTerm,
+  searchRef,
+}: IconNavProps) => {
+  return (
+    <main>
+      <div className="p-3">
+        <div className="flex justify-center gap-3">
+          <div className="relative mb-4">
+            <Input
+              type="text"
+              value={searchTerm}
+              ref={searchRef}
+              onChange={onChangeSearchTerm}
+              placeholder="Search Icon"
+              aria-label="Search Icon"
+              className="h-10 w-full rounded-full pl-12"
+              id="search"
+            />
+            <Label htmlFor="search">
+              <DIcons.Search
+                strokeWidth={1}
+                className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+              />
+            </Label>
+          </div>
+
+          <Button
+            variant="outline"
+            size="lgicon"
+            className="h-10 w-10"
+            onClick={onRandomIconClick}
+            title="Random icon"
+          >
+            <DIcons.Search strokeWidth={1} className="h-4 w-4" />
+          </Button>
+          <Button variant="outline" size="lgicon" className="h-10 w-10">
+            <Input
+              type="file"
+              className="absolute w-0 opacity-0"
+              onChange={onSelectCustomIcon}
+              accept=".svg, .png"
+            />
+            <DIcons.Search strokeWidth={1} className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+interface ToolNavProps {
+  undo;
+  redoHistory;
+  redo;
+  onFileNameBlured;
+  onFileNameKeydown;
+  settings;
+  setShowExportModal;
+  pngClipboardSupported;
+  onCopyImageToClipboard;
+}
+
+export const ToolNavigation = ({
+  undo,
+  redoHistory,
+  redo,
+  onFileNameBlured,
+  onFileNameKeydown,
+  settings,
+  setShowExportModal,
+  pngClipboardSupported,
+  onCopyImageToClipboard,
+}: ToolNavProps) => {
+  return (
+    <main>
+      <div className="fixed top-14 z-10 flex h-14 w-full items-center justify-center gap-2 border-b border-t bg-slate-100/60 backdrop-blur-md backdrop-filter dark:bg-slate-900/60">
+        <div className={cn("flex items-center justify-between gap-2")}>
+          <Button
+            variant="outline"
+            className={"hidden md:flex"}
+            disabled={history.length <= 1}
+            title={`cmd+z`}
+            onClick={undo}
+          >
+            <DIcons.Moon className="mr-1 h-4 w-4" />
+            <p className={""}>Undo</p>
+          </Button>
+
+          <Button
+            variant="outline"
+            className={"hidden md:flex"}
+            disabled={redoHistory.length === 0}
+            title={`shift+cmd+z`}
+            onClick={redo}
+          >
+            <DIcons.Moon className="mr-1 h-4 w-4" />
+            <p className={""}>Redo</p>
+          </Button>
+
+          <div
+            className={"px-10"}
+            contentEditable
+            onBlur={onFileNameBlured}
+            onKeyDown={onFileNameKeydown}
+          >
+            {settings.fileName}
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="flex items-center gap-2">
+            <Button
+              variant="default"
+              size="md"
+              className={""}
+              onClick={() => setShowExportModal(true)}
+            >
+              <DIcons.Moon className="mr-1 h-4 w-4" />
+              Export
+            </Button>
+            {pngClipboardSupported && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-10 w-10"
+                onSelect={onCopyImageToClipboard}
+              >
+                <DIcons.Moon className="h-4 w-4" />
+              </Button>
+            )}
+          </div>
+        </div>
+      </div>
     </main>
   );
 };

@@ -38,7 +38,7 @@ export const IconsGen: React.FC = () => {
                     </p>
                     <div className="flex justify-center gap-2">
                       <Link
-                        href="/dicons"
+                        href="/tools/dicons"
                         target=""
                         className={cn(
                           buttonVariants({

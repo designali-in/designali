@@ -14,8 +14,6 @@ import {
 } from "@designali/ui/dropdown-menu";
 import { signOut, useSession } from "next-auth/react";
 
-import { UserProfile } from "../../dashboard/overview/link-count";
-
 export function UserNav() {
   const session = useSession();
 
