@@ -107,11 +107,11 @@ const dtiles = [
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Brickwall strokeWidth={0.5} className="h-4 w-4" />,
+    icon: <DIcons.Contact strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Bulding2 strokeWidth={0.5} className="h-4 w-4" />,
+    icon: <DIcons.Flag strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
