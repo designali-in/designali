@@ -5,6 +5,7 @@ import { Icons } from "@/components/icons";
 import { Button } from "@designali/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@designali/ui/dialog";
 import { Input } from "@designali/ui/input";
+import { ScrollArea } from "@designali/ui/scroll-area";
 import {
   Select,
   SelectContent,
@@ -151,70 +152,77 @@ export function ExportModal({
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
-        <DialogTitle>Export Icons</DialogTitle>
-        {exportOptions.map((option, index) => (
-          <div className="flex items-center justify-between gap-2" key={index}>
-            <div className="text-sm">
-              {option.fileName}.{option.format.toLowerCase()}
-            </div>
-            <div className="flex gap-2">
-              <div className="">
-                <div className="flex items-center gap-2">
-                  <Input
-                    type={option.format === "SVG" ? "text" : "number"}
-                    min={0}
-                    value={option.format === "SVG" ? "-" : option.size}
-                    onChange={(e) =>
-                      updateExportOptions(
-                        index,
-                        "size",
-                        parseInt(e.target.value),
-                      )
-                    }
-                    disabled={option.format === "SVG"}
-                    className="h-10 w-[116px]"
-                  />
-                  <p>px</p>
+    <div>
+      <Dialog open={open} onOpenChange={onOpenChange}>
+        <DialogContent className="px-6">
+          <DialogTitle>Export Icons</DialogTitle>
+          <ScrollArea className="h-40 md:h-60">
+            {exportOptions.map((option, index) => (
+              <div
+                className="grid items-center justify-between gap-2 space-y-3 md:flex"
+                key={index}
+              >
+                <div className="text-sm">
+                  {option.fileName}.{option.format.toLowerCase()}
+                </div>
+                <div className="flex gap-2">
+                  <div className="">
+                    <div className="flex items-center gap-2">
+                      <Input
+                        type={option.format === "SVG" ? "text" : "number"}
+                        min={0}
+                        value={option.format === "SVG" ? "-" : option.size}
+                        onChange={(e) =>
+                          updateExportOptions(
+                            index,
+                            "size",
+                            parseInt(e.target.value),
+                          )
+                        }
+                        disabled={option.format === "SVG"}
+                        className="h-10 w-[116px]"
+                      />
+                      <p>px</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <Select
+                      value={option.format}
+                      onValueChange={(value) =>
+                        updateExportOptions(index, "format", value)
+                      }
+                    >
+                      <SelectTrigger className="h-10 rounded-md">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="PNG">PNG</SelectItem>
+                        <SelectItem value="SVG">SVG</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="h-10 w-10"
+                    disabled={exportOptions.length <= 1}
+                    onClick={() => removeExportOption(index)}
+                  >
+                    <Icons.trash strokeWidth={1} className="h-5 w-5" />
+                  </Button>
                 </div>
               </div>
-              <div className="">
-                <Select
-                  value={option.format}
-                  onValueChange={(value) =>
-                    updateExportOptions(index, "format", value)
-                  }
-                >
-                  <SelectTrigger className="h-10 rounded-md">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="PNG">PNG</SelectItem>
-                    <SelectItem value="SVG">SVG</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="h-10 w-10"
-                disabled={exportOptions.length <= 1}
-                onClick={() => removeExportOption(index)}
-              >
-                <Icons.trash strokeWidth={1} className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-        ))}
-        <Button variant="outline" size="lg" onClick={onAddExportOption}>
-          <Icons.trash className="mr-1 h-5 w-5" /> Add new export
-        </Button>
-        <Button variant="default" size="lg" onClick={onExport}>
-          Export Icon
-        </Button>
-      </DialogContent>
-    </Dialog>
+            ))}
+          </ScrollArea>
+          <Button variant="outline" size="lg" onClick={onAddExportOption}>
+            <DIcons.Plus className="mr-1 h-4 w-4" /> Add new export
+          </Button>
+          <Button variant="default" size="lg" onClick={onExport}>
+            Export Icon
+          </Button>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }
 
@@ -248,7 +256,7 @@ export function DownloadPNG({
   return (
     <div className="flex items-center gap-2" onClick={onExport}>
       <span>Download PNG</span>
-      <DIcons.Sun className="h-4 w-4" />
+      <DIcons.Download className="h-4 w-4" />
     </div>
   );
 }
@@ -283,7 +291,7 @@ export function DownloadSVG({
   return (
     <div className="flex items-center gap-2" onClick={onExport}>
       <span>Download SVG</span>
-      <DIcons.Sun className="h-4 w-4" />
+      <DIcons.Download className="h-4 w-4" />
     </div>
   );
 }

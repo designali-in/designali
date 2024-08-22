@@ -63,7 +63,7 @@ export const DIconsSettings = ({
 }: DIconsSettings) => {
   return (
     <main className={""}>
-      <div className={"p-4"}>
+      <div className={""}>
         <div className="grid gap-2">
           <Accordion className="w-full" type="single" collapsible>
             <AccordionItem value="item-1">
@@ -97,6 +97,7 @@ export const DIconsSettings = ({
                                   ...preset,
                                   backgroundRadius: 10,
                                 }}
+                                iconstrokeWidth={settings.iconstrokeWidth}
                               />
                             </div>
                           </Label>
@@ -139,7 +140,7 @@ export const DIconsSettings = ({
                             defaultValue={[settings.backgroundOpacity]}
                             min={0}
                             max={100}
-                            className="w-[150px] px-2"
+                            className="w-[120px] px-2 md:w-[150px]"
                           />
                           <span className="flex w-[30px] justify-end">
                             {settings.backgroundOpacity}
@@ -156,11 +157,30 @@ export const DIconsSettings = ({
                             name="iconSize"
                             defaultValue={[settings.iconSize]}
                             min={0}
-                            max={512}
-                            className="w-[150px] px-2"
+                            max={300}
+                            className="w-[120px] px-2 md:w-[150px]"
                           />
                           <span className="flex w-[30px] justify-end">
                             {settings.iconSize}
+                          </span>
+                          px
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="pr-5 text-xs">Stroke Size</span>
+                      <div className="">
+                        <div className="flex flex-1 justify-end gap-2">
+                          <Slider
+                            name="strokeWidth"
+                            defaultValue={[settings.strokeWidth]}
+                            min={0.1}
+                            max={3}
+                            step={0.1}
+                            className="w-[120px] px-2 md:w-[150px]"
+                          />
+                          <span className="flex w-[30px] justify-end">
+                            {settings.strokeWidth}
                           </span>
                           px
                         </div>
@@ -173,10 +193,10 @@ export const DIconsSettings = ({
                           <Slider
                             name="iconOffsetX"
                             defaultValue={[settings.iconOffsetX]}
-                            min={-500}
-                            max={500}
+                            min={-300}
+                            max={300}
                             step={10}
-                            className="w-[150px] px-2"
+                            className="w-[120px] px-2 md:w-[150px]"
                           />
                           <span className="flex w-[30px] justify-end">
                             {settings.iconOffsetX}
@@ -192,10 +212,10 @@ export const DIconsSettings = ({
                           <Slider
                             name="iconOffsetY"
                             defaultValue={[settings.iconOffsetY]}
-                            min={-500}
-                            max={500}
+                            min={-300}
+                            max={300}
                             step={10}
-                            className="w-[150px] px-2"
+                            className="w-[120px] px-2 md:w-[150px]"
                           />
                           <span className="flex w-[30px] justify-end">
                             {settings.iconOffsetY}
@@ -310,7 +330,7 @@ export const DIconsSettings = ({
                               defaultValue={[settings.backgroundSpread]}
                               min={0}
                               max={100}
-                              className="w-[150px] px-2"
+                              className="w-[120px] px-2 md:w-[150px]"
                             />
                             <span className="flex w-[30px] justify-end">
                               {settings.backgroundSpread}
@@ -330,7 +350,7 @@ export const DIconsSettings = ({
                             max={360}
                             step={5}
                             onChange={onChangeAngle}
-                            className="w-[150px] px-2"
+                            className="w-[120px] px-2 md:w-[150px]"
                           />
                           <span className="flex w-[30px] justify-end">
                             {settings.backgroundAngle}
@@ -391,7 +411,7 @@ export const DIconsSettings = ({
                           ]}
                           min={0}
                           max={100}
-                          className="w-[150px] px-2"
+                          className="w-[120px] px-2 md:w-[150px]"
                         />
                         <p className="flex w-[30px] justify-end">
                           {settings.backgroundNoiseTextureOpacity}
@@ -406,7 +426,7 @@ export const DIconsSettings = ({
                           defaultValue={[settings.backgroundRadius]}
                           min={0}
                           max={256}
-                          className="w-[150px] px-2"
+                          className="w-[120px] px-2 md:w-[150px]"
                         />
                         <p className="flex w-[30px] justify-end">
                           {settings.backgroundRadius}
@@ -421,7 +441,7 @@ export const DIconsSettings = ({
                           defaultValue={[settings.backgroundStrokeSize]}
                           min={0}
                           max={256}
-                          className="w-[150px] px-2"
+                          className="w-[120px] px-2 md:w-[150px]"
                         />
                         <p className="flex w-[30px] justify-end">
                           {settings.backgroundStrokeSize}
@@ -445,7 +465,7 @@ export const DIconsSettings = ({
                           defaultValue={[settings.backgroundStrokeOpacity]}
                           min={0}
                           max={100}
-                          className="w-[150px] px-2"
+                          className="w-[120px] px-2 md:w-[150px]"
                         />
                         <p className="flex w-[30px] justify-end">
                           {settings.backgroundStrokeOpacity}

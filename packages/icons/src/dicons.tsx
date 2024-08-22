@@ -54,6 +54,7 @@ import {
   ContactRound,
   Contrast,
   Cookie,
+  Copy,
   CreditCard,
   Cuboid,
   Dam,
@@ -139,11 +140,13 @@ import {
   Plus,
   Printer,
   PrinterCheck,
+  Redo,
   ScanEye,
   ScanFace,
   ScanQrCode,
   ScanSearch,
   School,
+  Scissors,
   Search,
   SearchCheck,
   SearchCode,
@@ -164,6 +167,7 @@ import {
   ShieldPlus,
   ShieldQuestion,
   ShieldX,
+  Shuffle,
   SlidersHorizontal,
   SlidersVertical,
   Smile,
@@ -191,6 +195,7 @@ import {
   Tickets,
   TicketSlash,
   TicketX,
+  Undo,
   University,
   User,
   UserCheck,
@@ -230,6 +235,7 @@ import ThumbsDown from "./icons/account/ThumbsDown";
 import ThumbsUp from "./icons/account/ThumbsUp";
 import ToggleLeft from "./icons/account/ToggleLeft";
 import ToggleRight from "./icons/account/ToggleRight";
+import Download from "./icons/shapes/Download";
 
 export type DIcon = DesignaliIcon;
 
@@ -465,7 +471,13 @@ export const DIcons = {
   WebhookOff,
   Wrench,
 
-  Plus: Plus,
+  Plus,
+  Shuffle,
+  Scissors,
+  Download,
+  Undo,
+  Redo,
+  Copy,
 
   heart: ({ ...props }: DesignaliProps) => (
     <svg

@@ -21,7 +21,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@designali/ui/dropdown-menu";
+} from "@designali/ui/ddropdown-menu";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { Slider } from "@designali/ui/slider";
 import { Switch } from "@designali/ui/switch";
@@ -77,19 +77,19 @@ export const SideIcon = ({
               />
               <DIcons.Plus
                 strokeWidth={0.5}
-                className="text-aired absolute -left-3 -top-3 h-5 w-5"
+                className="absolute -left-3 -top-3 h-5 w-5 text-ali"
               />
               <DIcons.Plus
                 strokeWidth={0.5}
-                className="text-aired absolute -bottom-3 -left-3 h-5 w-5"
+                className="absolute -bottom-3 -left-3 h-5 w-5 text-ali"
               />
               <DIcons.Plus
                 strokeWidth={0.5}
-                className="text-aired absolute -right-3 -top-3 h-5 w-5"
+                className="absolute -right-3 -top-3 h-5 w-5 text-ali"
               />
               <DIcons.Plus
                 strokeWidth={0.5}
-                className="text-aired absolute -bottom-3 -right-3 h-5 w-5"
+                className="absolute -bottom-3 -right-3 h-5 w-5 text-ali"
               />
 
               <CSSTransition
@@ -111,7 +111,12 @@ export const SideIcon = ({
             </div>
             <div className="mt-4 flex justify-center gap-2">
               <DropdownMenu>
-                <DropdownMenuTrigger>Download</DropdownMenuTrigger>
+                <DropdownMenuTrigger>
+                  <div className="flex items-center gap-1 hover:text-slate-600 dark:hover:text-slate-400">
+                    Download
+                    <DIcons.Download className="h-4 w-4" />
+                  </div>
+                </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
                     <DownloadPNG

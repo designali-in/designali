@@ -521,7 +521,7 @@ export const IconGenerator = () => {
         className={"mt-28 grid justify-center gap-8 md:flex md:h-screen"}
         ref={mainRef}
       >
-        <div className="left-0 mx-auto flex h-screen max-w-sm border-r bg-white dark:bg-black md:absolute">
+        <div className="left-0 mx-auto flex h-full max-w-md bg-white dark:bg-black md:absolute md:border-r">
           <div className="">
             <div>
               <IconNavigation
@@ -544,10 +544,12 @@ export const IconGenerator = () => {
                   </div>
                 ) : (
                   <div className="">
-                    <ScrollArea>
+                    <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
+                      {searchTerm ? "Results" : "All Icons"}
+                    </h4>
+                    <ScrollArea className="h-[400px] md:h-[900px]">
                       <MainIcons
                         settings={settings}
-                        searchTerm={searchTerm}
                         filteredDIcons={filteredDIcons}
                         onChangeIcon={onChangeIcon}
                       />
@@ -565,10 +567,9 @@ export const IconGenerator = () => {
           IconComponent={IconComponent}
           showExportModal={showExportModal}
           setShowExportModal={setShowExportModal}
-          pngClipboardSupported={pngClipboardSupported}
-          onCopyImageToClipboard={onCopyImageToClipboard}
+          iconstrokeWidth={settings.strokeWidth}
         />
-        <div className="right-0 mx-auto flex max-w-sm border-l bg-slate-50 dark:bg-slate-950 md:absolute md:h-screen">
+        <div className="right-0 mx-auto mb-10 flex max-w-md bg-slate-50 p-6 dark:bg-slate-950 md:absolute md:h-screen md:border-l">
           <ScrollArea>
             <DIconsSettings
               settings={settings}

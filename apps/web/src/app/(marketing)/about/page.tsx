@@ -68,6 +68,9 @@ export default function HomePage() {
             deployed as serverless functions. I use this dashboard to track
             various metrics across platforms like YouTube and more.`}
           />
+          <p className="text-center text-ali">
+            This is dummy stats | Under Construction
+          </p>
           {flags.stats ? <Items /> : null}
           <Items />
           <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">

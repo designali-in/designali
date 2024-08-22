@@ -66,12 +66,12 @@ export const Navigation = ({
                 onClick={onRandomIconClick}
                 title="Random icon"
               >
-                <DIcons.Sun strokeWidth={1} className="h-4 w-4" />
+                <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
               </Button>
               <Link href={"/tools/dicons"}>
-                <Button size="lg" className="h-10 w-full">
+                <Button size="lg" className="h-10">
+                  <DIcons.Scissors className="mx-1 h-4 w-4" />
                   <span className="hidden lg:block">Edit {settings.icon}</span>
-                  <DIcons.Plus className="mx-1 h-4 w-4" />
                 </Button>
               </Link>
             </div>
@@ -103,7 +103,7 @@ export const IconNavigation = ({
 }: IconNavProps) => {
   return (
     <main>
-      <div className="p-3">
+      <div className="p-6">
         <div className="flex justify-center gap-3">
           <div className="relative mb-4">
             <Input
@@ -131,7 +131,7 @@ export const IconNavigation = ({
             onClick={onRandomIconClick}
             title="Random icon"
           >
-            <DIcons.Search strokeWidth={1} className="h-4 w-4" />
+            <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
           </Button>
           <Button variant="outline" size="lgicon" className="h-10 w-10">
             <Input
@@ -177,28 +177,28 @@ export const ToolNavigation = ({
         <div className={cn("flex items-center justify-between gap-2")}>
           <Button
             variant="outline"
-            className={"hidden md:flex"}
+            className={""}
             disabled={history.length <= 1}
             title={`cmd+z`}
             onClick={undo}
           >
-            <DIcons.Moon className="mr-1 h-4 w-4" />
-            <p className={""}>Undo</p>
+            <DIcons.Undo className="mr-1 h-4 w-4" />
+            <p className={"hidden md:flex"}>Undo</p>
           </Button>
 
           <Button
             variant="outline"
-            className={"hidden md:flex"}
+            className={""}
             disabled={redoHistory.length === 0}
             title={`shift+cmd+z`}
             onClick={redo}
           >
-            <DIcons.Moon className="mr-1 h-4 w-4" />
-            <p className={""}>Redo</p>
+            <DIcons.Redo className="mr-1 h-4 w-4" />
+            <p className={"hidden md:flex"}>Redo</p>
           </Button>
 
           <div
-            className={"px-10"}
+            className={"px-3 md:px-10"}
             contentEditable
             onBlur={onFileNameBlured}
             onKeyDown={onFileNameKeydown}
@@ -214,8 +214,8 @@ export const ToolNavigation = ({
               className={""}
               onClick={() => setShowExportModal(true)}
             >
-              <DIcons.Moon className="mr-1 h-4 w-4" />
-              Export
+              <DIcons.Download className="mr-1 h-4 w-4" />
+              <span className="hidden lg:block">Export</span>
             </Button>
             {pngClipboardSupported && (
               <Button
@@ -224,7 +224,7 @@ export const ToolNavigation = ({
                 className="h-10 w-10"
                 onSelect={onCopyImageToClipboard}
               >
-                <DIcons.Moon className="h-4 w-4" />
+                <DIcons.Copy className="h-4 w-4" />
               </Button>
             )}
           </div>

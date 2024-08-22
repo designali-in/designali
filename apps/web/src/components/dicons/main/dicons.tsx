@@ -20,22 +20,16 @@ interface AccessProps {
   onChangeIcon;
   settings;
   filteredDIcons;
-  searchTerm;
 }
 
 export const MainIcons = ({
   onChangeIcon,
   settings,
   filteredDIcons,
-  searchTerm,
 }: AccessProps) => {
   return (
     <main className={""}>
-      <div id="accessibility" className="">
-        <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
-          {searchTerm ? "Results" : "All Icons"}
-        </h4>
-
+      <div>
         <div className="flex w-full flex-wrap justify-center gap-2">
           {filteredDIcons.map((icon) => {
             const Component = DIcons[icon];

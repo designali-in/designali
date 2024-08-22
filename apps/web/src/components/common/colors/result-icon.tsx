@@ -5,12 +5,14 @@ interface PropTypes {
   settings: SettingsType;
   size?: number;
   isPreview?: boolean;
+  iconstrokeWidth: number;
   // TODO: fix icon type?
   IconComponent?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
 const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
   ({ settings, size, isPreview, IconComponent }, svgRef) => {
+    const iconstrokeWidth = isPreview ? 1 : settings.strokeWidth;
     const strokeSize = isPreview ? 0 : settings.backgroundStrokeSize;
     const strokeWidth = isNaN(parseInt(strokeSize.toString()))
       ? 0
@@ -128,6 +130,7 @@ const ResultIcon = React.forwardRef<SVGSVGElement, PropTypes>(
               y={(size - settings.iconSize) / 2 + +settings.iconOffsetY}
               style={{ color: settings.iconColor }}
               alignmentBaseline="middle"
+              strokeWidth={iconstrokeWidth}
             />
           ) : null}
         </svg>

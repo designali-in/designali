@@ -47,17 +47,17 @@ const About = () => {
             <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
 
-          <div className="items-center justify-center text-center align-top md:flex-row">
+          <div className="items-center justify-center text-center align-top leading-8 md:flex-row">
             <div className="mx-auto mb-8 max-w-5xl px-8">
               <p className="text-md">
                 Hi, my name is
                 <span className="font-bold text-ali">{" Ali Imam "}</span>
-                and I am a{" "}
-                <span className="font-bold">{"highly ambitious"}</span>,
-                <span className="font-bold">{" self-motivated"}</span>, and
-                <span className="font-bold">{" driven"}</span>
-                <span className="font-bold text-ali">{" Art Director "}</span>
-                based in New Delhi, India.
+                and I am a highly ambitious, self-motivated and driven
+                <br />
+                <span className="font-bold">
+                  {" Graphic Designer | Visualiser | Art Director | Developer "}
+                </span>
+                based in Bokaro Steel City, India.
               </p>
               <br />
               <p className="grid gap-4 text-sm text-slate-600 dark:text-slate-400">

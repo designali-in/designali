@@ -288,7 +288,6 @@ export const DIconGenerator = () => {
                     <ScrollArea className="md:h-[950px]">
                       <MainIcons
                         settings={settings}
-                        searchTerm={searchTerm}
                         filteredDIcons={filteredDIcons}
                         onChangeIcon={onChangeIcon}
                       />

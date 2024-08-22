@@ -1,12 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
+
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 "use client";
 
 import React from "react";
 import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@designali/ui/ddropdown-menu";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { CSSTransition } from "react-transition-group";
@@ -20,9 +25,8 @@ interface ToolProps {
   settings;
   IconComponent;
   showExportModal;
+  iconstrokeWidth;
   setShowExportModal;
-  pngClipboardSupported;
-  onCopyImageToClipboard;
 }
 
 export const MainToolIcons = ({
@@ -30,14 +34,15 @@ export const MainToolIcons = ({
   settings,
   IconComponent,
   showExportModal,
+  iconstrokeWidth,
   setShowExportModal,
-  pngClipboardSupported,
-  onCopyImageToClipboard,
 }: ToolProps) => {
   return (
     <main className={""}>
-      <div className="relative mt-20">
-        <p className="my-4 text-center">{settings.icon}</p>
+      <div className="relative mt-20 px-6">
+        <p className="mb-2 text-center text-xl font-semibold text-ali">
+          {settings.icon}
+        </p>
         <div className="relative flex h-auto w-auto justify-center border p-4">
           <GridPattern
             width={11.5}
@@ -65,7 +70,7 @@ export const MainToolIcons = ({
           />
 
           <CSSTransition
-            in={history.length > 0}
+            in={IconComponent}
             nodeRef={svgRef}
             timeout={300}
             className=""
@@ -76,35 +81,39 @@ export const MainToolIcons = ({
               settings={settings}
               IconComponent={IconComponent}
               ref={svgRef}
+              iconstrokeWidth={iconstrokeWidth}
             />
           </CSSTransition>
         </div>
         <div className="mt-4 flex justify-center gap-2">
-          <DownloadPNG
-            open={showExportModal}
-            onOpenChange={setShowExportModal}
-            onStartExport={() => toast("Download started")}
-            fileName={settings.fileName}
-            svgRef={svgRef}
-          />
-          <DownloadSVG
-            open={showExportModal}
-            onOpenChange={setShowExportModal}
-            onStartExport={() => toast("Download started")}
-            fileName={settings.fileName}
-            svgRef={svgRef}
-          />
-
-          {pngClipboardSupported && (
-            <Button
-              variant="outline"
-              size="icon"
-              className=""
-              onSelect={onCopyImageToClipboard}
-            >
-              <DIcons.Plus className="h-3 w-3" />
-            </Button>
-          )}
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <div className="flex items-center gap-1 hover:text-slate-600 dark:hover:text-slate-400">
+                Download
+                <DIcons.Download className="h-4 w-4" />
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <DownloadPNG
+                  open={showExportModal}
+                  onOpenChange={setShowExportModal}
+                  onStartExport={() => toast("PNG Image Downloaded")}
+                  fileName={settings.fileName}
+                  svgRef={svgRef}
+                />
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <DownloadSVG
+                  open={showExportModal}
+                  onOpenChange={setShowExportModal}
+                  onStartExport={() => toast("SVG Image Downloaded")}
+                  fileName={settings.fileName}
+                  svgRef={svgRef}
+                />
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </main>
