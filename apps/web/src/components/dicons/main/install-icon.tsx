@@ -148,7 +148,7 @@ export default App;`}
             <Link href={"/guides/dicons"}>
               <Button size="lg" className="h-10 w-full">
                 Go to Docs
-                <DIcons.Plus className="mx-1 h-4 w-4" />
+                <DIcons.Sun className="mx-1 h-4 w-4" />
               </Button>
             </Link>
           </div>

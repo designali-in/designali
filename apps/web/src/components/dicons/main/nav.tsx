@@ -51,7 +51,7 @@ export const Navigation = ({
                   id="search"
                 />
                 <Label htmlFor="search">
-                  <DIcons.Search
+                  <DIcons.Sun
                     strokeWidth={1}
                     className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
                   />
@@ -65,12 +65,12 @@ export const Navigation = ({
                 onClick={onRandomIconClick}
                 title="Random icon"
               >
-                <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
+                <DIcons.Sun strokeWidth={1} className="h-4 w-4" />
               </Button>
               <Link href={"/tools/dicons"}>
                 <Button size="lg" className="h-10 w-full">
                   <span className="hidden lg:block">Edit {settings.icon}</span>
-                  <DIcons.Plus className="mx-1 h-4 w-4" />
+                  <DIcons.Sun className="mx-1 h-4 w-4" />
                 </Button>
               </Link>
             </div>

@@ -75,19 +75,19 @@ export const SideIcon = ({
                 strokeDasharray={"1 1"}
                 className={cn("-z-10")}
               />
-              <DIcons.Plus
+              <DIcons.Sun
                 strokeWidth={0.5}
                 className="text-aired absolute -left-3 -top-3 h-5 w-5"
               />
-              <DIcons.Plus
+              <DIcons.Sun
                 strokeWidth={0.5}
                 className="text-aired absolute -bottom-3 -left-3 h-5 w-5"
               />
-              <DIcons.Plus
+              <DIcons.Sun
                 strokeWidth={0.5}
                 className="text-aired absolute -right-3 -top-3 h-5 w-5"
               />
-              <DIcons.Plus
+              <DIcons.Sun
                 strokeWidth={0.5}
                 className="text-aired absolute -bottom-3 -right-3 h-5 w-5"
               />
@@ -236,7 +236,7 @@ export const SideIcon = ({
             <Link href={"/dicons/categories"}>
               <h1 className="text-md mb-2">Categories</h1>
             </Link>
-            <ScrollArea className="h-[330px]">
+            <ScrollArea className="h-[360px]">
               <DiconsSidebarNav items={diconsConfig.sidebarNav} />
             </ScrollArea>
           </div>

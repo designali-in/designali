@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const SlidersVertical = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,10 +18,18 @@ export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M22,12c0,2.76-1.12,5.26-2.93,7.07-1.81,1.81-4.31,2.93-7.07,2.93s-5.26-1.12-7.07-2.93-2.93-4.31-2.93-7.07,1.12-5.26,2.93-7.07,4.31-2.93,7.07-2.93,5.26,1.12,7.07,2.93,2.93,4.31,2.93,7.07Z" />
+        <line x1="4" x2="4" y1="21" y2="14" />
+        <line x1="4" x2="4" y1="10" y2="3" />
+        <line x1="12" x2="12" y1="21" y2="12" />
+        <line x1="12" x2="12" y1="8" y2="3" />
+        <line x1="20" x2="20" y1="21" y2="16" />
+        <line x1="20" x2="20" y1="12" y2="3" />
+        <line x1="2" x2="6" y1="14" y2="14" />
+        <line x1="10" x2="14" y1="8" y2="8" />
+        <line x1="18" x2="22" y1="16" y2="16" />
       </svg>
     );
   },
 );
 
-export default Circle;
+export default SlidersVertical;

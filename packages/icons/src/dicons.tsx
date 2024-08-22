@@ -3,7 +3,6 @@ import React from "react";
 import type { DesignaliIcon, DesignaliProps } from "./types";
 import {
   Accessibility,
-  AlignLeft,
   Anvil,
   Baby,
   BadgeHelp,
@@ -15,10 +14,8 @@ import {
   Church,
   CircleHelp,
   Contrast,
-  Copy,
   Cuboid,
   Dam,
-  Download,
   Ear,
   EarOff,
   Eclipse,
@@ -40,12 +37,9 @@ import {
   Moon,
   MoonStar,
   PersonStanding,
-  Plus,
   ScanEye,
   ScanSearch,
   School,
-  Search,
-  Shuffle,
   Speech,
   Store,
   Sun,
@@ -116,13 +110,6 @@ export const DIcons = {
   University: University,
   UtilityPole: UtilityPole,
   Warehouse: Warehouse,
-
-  Copy: Copy,
-  Plus: Plus,
-  Download: Download,
-  Shuffle: Shuffle,
-  Search: Search,
-  AlignLeft: AlignLeft,
 
   heart: ({ ...props }: DesignaliProps) => (
     <svg

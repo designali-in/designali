@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const ScanQRCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,10 +18,17 @@ export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M22,12c0,2.76-1.12,5.26-2.93,7.07-1.81,1.81-4.31,2.93-7.07,2.93s-5.26-1.12-7.07-2.93-2.93-4.31-2.93-7.07,1.12-5.26,2.93-7.07,4.31-2.93,7.07-2.93,5.26,1.12,7.07,2.93,2.93,4.31,2.93,7.07Z" />
+        <rect x="7" y="7" width="5" height="5" rx="1" />
+        <path d="M17 12v4a1 1 0 0 1-1 1h-4" />
+        <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+        <path d="M17 8V7" />
+        <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+        <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+        <path d="M7 17h.01" />
+        <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
       </svg>
     );
   },
 );
 
-export default Circle;
+export default ScanQRCode;

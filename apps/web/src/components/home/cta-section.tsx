@@ -91,51 +91,51 @@ const tiles = [
 
 const dtiles = [
   {
-    icon: <DIcons.Plus strokeWidth={1} />,
+    icon: <DIcons.Moon strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Circle strokeWidth={1} />,
+    icon: <DIcons.ScanEye strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Copy strokeWidth={1} />,
+    icon: <DIcons.ScanSearch strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Search strokeWidth={1} />,
+    icon: <DIcons.Anvil strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Shuffle strokeWidth={1} />,
+    icon: <DIcons.Brickwall strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.Download strokeWidth={1} />,
+    icon: <DIcons.Bulding2 strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.AlignLeft strokeWidth={1} />,
+    icon: <DIcons.Contrast strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.album strokeWidth={1} />,
+    icon: <DIcons.Baby strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.arrowright strokeWidth={1} />,
+    icon: <DIcons.Theater strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.eye strokeWidth={1} />,
+    icon: <DIcons.University strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.pen strokeWidth={1} />,
+    icon: <DIcons.Warehouse strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
   {
-    icon: <DIcons.redo strokeWidth={1} />,
+    icon: <DIcons.Sun strokeWidth={0.5} className="h-4 w-4" />,
     bg: <div className=""></div>,
   },
 ];
