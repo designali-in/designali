@@ -89,57 +89,6 @@ const tiles = [
   },
 ];
 
-const dtiles = [
-  {
-    icon: <DIcons.Moon strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.ScanEye strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.ScanSearch strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Anvil strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Contact strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Flag strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Contrast strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Baby strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Theater strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.University strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Warehouse strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-  {
-    icon: <DIcons.Sun strokeWidth={0.5} className="h-4 w-4" />,
-    bg: <div className=""></div>,
-  },
-];
-
 const shuffleArray = (array: any[]) => {
   let currentIndex = array.length,
     randomIndex;
@@ -179,7 +128,7 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       initial={{ opacity: 0 }}
       animate={controls}
       className={cn(
-        "relative h-full w-full cursor-pointer overflow-hidden rounded-sm border p-1 md:rounded-2xl md:p-2",
+        "relative h-full w-[150px] cursor-pointer overflow-hidden rounded-sm border p-1 md:w-[350px] md:rounded-2xl md:p-2",
         // light styles
         "bg-white",
         // dark styles
@@ -194,18 +143,16 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
 
 export default function CallToActionSection() {
   const [randomTiles1, setRandomTiles1] = useState<typeof tiles>([]);
-  const [randomTiles3, setRandomTiles3] = useState<typeof dtiles>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Ensures this runs client-side
       setRandomTiles1(shuffleArray([...tiles]));
-      setRandomTiles3(shuffleArray([...dtiles]));
     }
   }, []);
 
   return (
-    <section id="cta" className="mb-[750px] md:-mt-20 md:mb-56">
+    <section id="cta" className="mb-[950px] md:-mt-20 md:mb-[340px]">
       <div className="relative flex justify-center px-6 md:mt-20">
         <div className="absolute z-10 px-6">
           <ShineBorder
@@ -260,15 +207,9 @@ export default function CallToActionSection() {
           </ShineBorder>
         </div>
       </div>
-      <div className="-mt-20 mb-[600px] md:mb-0">
+      <div className="-mt-0 md:-mt-12">
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative -mb-40 -mt-20 flex w-full flex-col items-center justify-center overflow-hidden md:mb-40">
-            <Marquee className="[-delay-[200ms] [--duration:20s]" repeat={5}>
-              {randomTiles3.map((review, idx) => (
-                <Card key={idx} {...review} />
-              ))}
-            </Marquee>
-
             <Marquee
               reverse
               className="-delay-[200ms] [--duration:70s]"
@@ -278,22 +219,14 @@ export default function CallToActionSection() {
                 <Card key={idx} {...review} />
               ))}
             </Marquee>
-            <Marquee className="[--duration:70s]" repeat={5}>
-              {randomTiles3.map((review, idx) => (
-                <Card key={idx} {...review} />
-              ))}
-            </Marquee>
-            <Marquee
-              reverse
-              className="-delay-[200ms] [--duration:70s]"
-              repeat={8}
-            >
+
+            <Marquee className="-delay-[200ms] [--duration:70s]" repeat={4}>
               {randomTiles1.map((review, idx) => (
                 <Card key={idx} {...review} />
               ))}
             </Marquee>
 
-            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-background to-70%" />
+            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-background to-90%" />
           </div>
         </div>
       </div>

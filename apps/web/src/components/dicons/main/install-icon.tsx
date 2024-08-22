@@ -145,7 +145,7 @@ export default App;`}
             </div>
           </ScrollArea>
           <div className="w-full p-6">
-            <Link href={"/guides/dicons"}>
+            <Link href={"/documentation"}>
               <Button size="lg" className="h-10 w-full">
                 Go to Docs
                 <DIcons.Sun className="mx-1 h-4 w-4" />
