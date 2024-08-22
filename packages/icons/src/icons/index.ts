@@ -1,5 +1,6 @@
 export * from "./accessibility";
 export * from "./shapes";
+export * from "./building";
 export * from "./AlignLeft";
 export * from "./Search";
 export * from "./Plus";

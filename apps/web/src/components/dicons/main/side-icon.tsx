@@ -16,7 +16,12 @@ import ResultDIcon from "@/src/components/common/colors/result-dicon";
 import { DiconsSidebarNav } from "@/src/components/mdx/doc/sidebar-nav";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@designali/ui/dropdown-menu";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { Slider } from "@designali/ui/slider";
 import { Switch } from "@designali/ui/switch";
@@ -48,8 +53,6 @@ export const SideIcon = ({
   formRef,
   onChangeColorSetting,
   onFormChange,
-  onCopyImageToClipboard,
-  pngClipboardSupported,
   setShowExportModal,
   showExportModal,
   IconComponent,
@@ -60,13 +63,13 @@ export const SideIcon = ({
       <div className="-z-0 mx-auto grid max-w-sm md:h-screen md:border-r">
         <div className="p-6">
           <div className="relative">
-            <p className="my-2 text-center text-xl font-semibold text-ali">
+            <p className="mb-2 text-center text-xl font-semibold text-ali">
               {settings.icon}
             </p>
-            <div className="relative mx-auto flex h-auto w-auto max-w-[202px] justify-center border">
+            <div className="relative mx-auto flex h-auto w-auto max-w-[255px] justify-center border">
               <GridPattern
-                width={11.2}
-                height={11.2}
+                width={9}
+                height={9}
                 x={-1}
                 y={-1}
                 strokeDasharray={"1 1"}
@@ -90,14 +93,14 @@ export const SideIcon = ({
               />
 
               <CSSTransition
-                in={history.length > 0}
+                in={IconComponent}
                 nodeRef={svgRef}
-                timeout={200}
+                timeout={250}
                 className=""
                 unmountOnExit
               >
                 <ResultDIcon
-                  size={200}
+                  size={250}
                   settings={settings}
                   IconComponent={IconComponent}
                   ref={svgRef}
@@ -107,44 +110,29 @@ export const SideIcon = ({
               </CSSTransition>
             </div>
             <div className="mt-4 flex justify-center gap-2">
-              <div className="grid gap-2">
-                <DownloadPNG
-                  open={showExportModal}
-                  onOpenChange={setShowExportModal}
-                  onStartExport={() => toast("PNG Image Downloaded")}
-                  fileName={settings.fileName}
-                  svgRef={svgRef}
-                />
-                <DownloadSVG
-                  open={showExportModal}
-                  onOpenChange={setShowExportModal}
-                  onStartExport={() => toast("SVG Image Downloaded")}
-                  fileName={settings.fileName}
-                  svgRef={svgRef}
-                />
-              </div>
-              <div className="grid gap-2">
-                {pngClipboardSupported && (
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className=""
-                    onSelect={onCopyImageToClipboard}
-                  >
-                    <DIcons.Copy strokeWidth={1} className="h-3 w-3" />
-                  </Button>
-                )}
-                {pngClipboardSupported && (
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className=""
-                    onSelect={onCopyImageToClipboard}
-                  >
-                    <DIcons.Copy strokeWidth={1} className="h-3 w-3" />
-                  </Button>
-                )}
-              </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger>Download</DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem>
+                    <DownloadPNG
+                      open={showExportModal}
+                      onOpenChange={setShowExportModal}
+                      onStartExport={() => toast("PNG Image Downloaded")}
+                      fileName={settings.fileName}
+                      svgRef={svgRef}
+                    />
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <DownloadSVG
+                      open={showExportModal}
+                      onOpenChange={setShowExportModal}
+                      onStartExport={() => toast("SVG Image Downloaded")}
+                      fileName={settings.fileName}
+                      svgRef={svgRef}
+                    />
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
           <div className={""}>
@@ -230,7 +218,7 @@ export const SideIcon = ({
                             name="iconSize"
                             defaultValue={[settings.iconSize]}
                             min={16}
-                            max={196}
+                            max={240}
                             step={1}
                           />
                         </div>
@@ -248,7 +236,7 @@ export const SideIcon = ({
             <Link href={"/dicons/categories"}>
               <h1 className="text-md mb-2">Categories</h1>
             </Link>
-            <ScrollArea className="h-[430px]">
+            <ScrollArea className="h-[330px]">
               <DiconsSidebarNav items={diconsConfig.sidebarNav} />
             </ScrollArea>
           </div>

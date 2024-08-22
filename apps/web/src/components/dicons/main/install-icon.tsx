@@ -16,7 +16,7 @@ interface InstallIconProps {
 
 export const InstallIcon = ({ settings }: InstallIconProps) => {
   return (
-    <main className={""} id="categories">
+    <main className={"hidden xl:block"}>
       <div className="">
         <div className="mx-auto max-w-sm gap-6 md:h-screen md:border-l">
           <div className="px-6 py-6">

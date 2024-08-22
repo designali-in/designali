@@ -8,6 +8,4 @@ export type ValidIcon = keyof typeof Animal;
 export const Animal = {
   Copy: Copy,
   Plus: Plus,
-  Cophy: Copy,
-  Pglus: Plus,
 };

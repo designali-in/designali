@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@designali/ui/select";
+import { DIcons } from "dicons";
 import { saveSvgAsPng } from "save-svg-as-png";
 
 type ExportFormat = "PNG" | "SVG";
@@ -245,9 +246,10 @@ export function DownloadPNG({
   };
 
   return (
-    <Button variant="outline" size="sm" onClick={onExport}>
-      Download PNG
-    </Button>
+    <div className="flex items-center gap-2" onClick={onExport}>
+      <span>Download PNG</span>
+      <DIcons.Download className="h-4 w-4" />
+    </div>
   );
 }
 
@@ -279,9 +281,10 @@ export function DownloadSVG({
   };
 
   return (
-    <Button variant="outline" size="sm" onClick={onExport}>
-      Download SVG
-    </Button>
+    <div className="flex items-center gap-2" onClick={onExport}>
+      <span>Download SVG</span>
+      <DIcons.Download className="h-4 w-4" />
+    </div>
   );
 }
 

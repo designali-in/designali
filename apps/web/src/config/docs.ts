@@ -146,23 +146,27 @@ export const documentationConfig: DocumentationConfig = {
       items: [
         {
           title: "Installation",
-          href: "/documentation/installation",
+          href: "/documentation/dicons/installation",
         },
         {
           title: "How to use",
-          href: "/documentation/how-to-use",
+          href: "/documentation/dicons/how-to-use",
         },
         {
           title: "Color",
-          href: "/documentation/color",
+          href: "/documentation/dicons/color",
         },
         {
           title: "Sizing",
-          href: "/documentation/sizing",
+          href: "/documentation/dicons/sizing",
         },
         {
           title: "Stroke Width",
-          href: "/documentation/stroke-width",
+          href: "/documentation/dicons/stroke-width",
+        },
+        {
+          title: "Fill",
+          href: "/documentation/dicons/fill",
         },
       ],
     },

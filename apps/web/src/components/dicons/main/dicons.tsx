@@ -43,19 +43,15 @@ export const MainIcons = ({
               <div>
                 <TooltipProvider>
                   <Tooltip>
+                    <RadioGroup className="relative" defaultValue="option-one">
+                      <RadioGroupItem
+                        className="absolute -z-10"
+                        value={icon}
+                        checked={icon === settings.icon}
+                        onChange={() => onChangeIcon(icon)}
+                      />
+                    </RadioGroup>
                     <TooltipTrigger>
-                      <RadioGroup
-                        className="relative"
-                        defaultValue="option-one"
-                      >
-                        <RadioGroupItem
-                          className="absolute -z-10"
-                          value={icon}
-                          checked={icon === settings.icon}
-                          onChange={() => onChangeIcon(icon)}
-                        />
-                      </RadioGroup>
-
                       <Label className="" key={icon}>
                         <div className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-md border transition hover:border-ali hover:bg-slate-100 hover:dark:bg-slate-900">
                           <Component
@@ -64,6 +60,7 @@ export const MainIcons = ({
                             stroke={settings.iconColor}
                             strokeWidth={settings.strokeWidth}
                           />
+
                           <Input
                             type="radio"
                             className="hidden"
