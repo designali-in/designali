@@ -112,6 +112,7 @@ export default App;`}
                         <TabsTrigger value="1">Color</TabsTrigger>
                         <TabsTrigger value="2">Sizing</TabsTrigger>
                         <TabsTrigger value="3">Stroke Width</TabsTrigger>
+                        <TabsTrigger value="4">Fill</TabsTrigger>
                       </TabsList>
                       <TabsContent className="-mt-2" value="1">
                         <CodeBlock
@@ -129,6 +130,12 @@ export default App;`}
                         <CodeBlock
                           title={".tsx"}
                           children={`<${settings.icon} strokeWidth={${settings.strokeWidth}} />`}
+                        />
+                      </TabsContent>
+                      <TabsContent className="-mt-2" value="4">
+                        <CodeBlock
+                          title={".tsx"}
+                          children={`<${settings.icon} fill={"${settings.iconFill}"} />`}
                         />
                       </TabsContent>
                     </Tabs>

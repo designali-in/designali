@@ -19,6 +19,7 @@ import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { Slider } from "@designali/ui/slider";
+import { Switch } from "@designali/ui/switch";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { CSSTransition } from "react-transition-group";
@@ -36,11 +37,13 @@ interface SideIconProps {
   recentColors;
   formRef;
   onFormChange;
+  iconFill;
 }
 
 export const SideIcon = ({
   settings,
   customSvgIsPng,
+  iconFill,
   recentColors,
   formRef,
   onChangeColorSetting,
@@ -99,6 +102,7 @@ export const SideIcon = ({
                   IconComponent={IconComponent}
                   ref={svgRef}
                   strokeWidth={0}
+                  iconFill={iconFill}
                 />
               </CSSTransition>
             </div>
@@ -163,7 +167,30 @@ export const SideIcon = ({
                         />
                       </div>
                     )}
-
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="pr-5 text-xs">Fill Color</span>
+                        <Switch name={"iconFill"} id={"iconFill"} />
+                      </div>
+                      {iconFill && (
+                        <div>
+                          {!customSvgIsPng && (
+                            <div
+                              id="iconFill"
+                              className="mt-3 flex items-center justify-between"
+                            >
+                              <span className="pr-5 text-xs">BG Color</span>
+                              <ColorInput
+                                value={settings.iconFill}
+                                name="iconFill"
+                                onChange={onChangeColorSetting("iconFill")}
+                                recentColors={recentColors}
+                              />
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
                     <div className="grid items-center gap-2">
                       <div className="flex items-center justify-between">
                         <span className="pr-5 text-xs">Stroke Width</span>
@@ -179,7 +206,7 @@ export const SideIcon = ({
                           <Slider
                             name="strokeWidth"
                             defaultValue={[settings.strokeWidth]}
-                            min={0.5}
+                            min={0.1}
                             max={3}
                             step={0.1}
                           />

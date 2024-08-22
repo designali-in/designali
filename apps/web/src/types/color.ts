@@ -14,6 +14,7 @@ export interface SettingsType {
   backgroundNoiseTexture: boolean;
   backgroundNoiseTextureOpacity: number;
   iconColor: string;
+  iconFill: string;
   iconSize: number;
   strokeWidth: number;
   iconOffsetX: number;

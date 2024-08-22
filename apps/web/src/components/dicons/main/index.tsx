@@ -53,6 +53,7 @@ export const DIconGenerator = () => {
     fileName: "designali",
     icon: "",
     backgroundRadius: 72,
+    iconFill: "",
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
     backgroundStrokeColor: "#FFFFFF",
@@ -64,7 +65,7 @@ export const DIconGenerator = () => {
     backgroundSpread: 100,
     backgroundAngle: 0,
     iconSize: 120,
-    strokeWidth: 2,
+    strokeWidth: 1.5,
     iconOffsetX: 0,
     iconOffsetY: 0,
     selectedPresetIndex: randomPresetIndex,
@@ -259,6 +260,7 @@ export const DIconGenerator = () => {
         recentColors={recentColors}
         formRef={formRef}
         onFormChange={onFormChange}
+        iconFill={settings.iconFill}
       />
       <div className="">
         <div className="">

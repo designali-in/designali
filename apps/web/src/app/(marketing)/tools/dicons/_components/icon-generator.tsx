@@ -90,6 +90,7 @@ export const IconGenerator = () => {
     icon: "",
     strokeWidth: 2,
     backgroundRadius: 72,
+    iconFill: "",
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
     backgroundStrokeColor: "#FFFFFF",

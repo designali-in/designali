@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../types";
+import { DesignaliProps } from "../../types";
 
-export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const ZoomOut = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -24,4 +24,4 @@ export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default Circle;
+export default ZoomOut;

@@ -56,6 +56,7 @@ export const DIconCategories = () => {
     fileName: "designali",
     icon: "",
     backgroundRadius: 72,
+    iconFill: "",
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
     backgroundStrokeColor: "#FFFFFF",
@@ -276,6 +277,7 @@ export const DIconCategories = () => {
         recentColors={recentColors}
         formRef={formRef}
         onFormChange={onFormChange}
+        iconFill={settings.iconFill}
       />
       <div className="">
         <div className="">

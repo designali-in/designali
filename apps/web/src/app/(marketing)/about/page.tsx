@@ -6,10 +6,10 @@ import { Connect } from "@/components/common/connect";
 import ImageZoom from "@/components/common/image-zoom";
 import Logos from "@/components/common/logos";
 import { SubscribeInput } from "@/src/components/common/subscribe/subscribe-input";
-import { Icons } from "@/src/components/icons";
 import PageTitle from "@/src/components/mdx/page-title";
 import { flags } from "@designali/env";
 import { cn } from "@designali/ui";
+import { DIcons } from "dicons";
 
 import { Avegra } from "../../fonts";
 
@@ -18,19 +18,23 @@ export default function HomePage() {
     <main className="px-6">
       <div className="mx-auto mt-28 max-w-3xl md:mt-40 md:max-w-5xl">
         <div className="relative mx-auto mt-10 flex h-[336px] max-w-[250px] flex-col items-start border border-slate-100 p-4 dark:border-slate-900 md:h-[28rem] md:max-w-sm">
-          <Icons.plus
+          <DIcons.Plus
             strokeWidth={0.5}
             className="text-aired absolute -left-4 -top-4 h-8 w-8"
           />
-          <Icons.plus
+          <DIcons.Plus
             strokeWidth={0.5}
             className="text-aired absolute -bottom-4 -left-4 h-8 w-8"
           />
-          <Icons.plus
+          <DIcons.Plus
             strokeWidth={0.5}
             className="text-aired absolute -right-4 -top-4 h-8 w-8"
           />
-          <Icons.plus
+          <DIcons.Plus
+            strokeWidth={0.5}
+            className="text-aired absolute -bottom-4 -right-4 h-8 w-8"
+          />
+          <DIcons.Plus
             strokeWidth={0.5}
             className="text-aired absolute -bottom-4 -right-4 h-8 w-8"
           />

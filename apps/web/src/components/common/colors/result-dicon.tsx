@@ -4,6 +4,7 @@ import React from "react";
 interface PropTypes {
   settings: SettingsType;
   size?: number;
+  iconFill: string;
   strokeWidth: number;
   isPreview?: boolean;
   // TODO: fix icon type?
@@ -29,6 +30,7 @@ const ResultDIcon = React.forwardRef<SVGSVGElement, PropTypes>(
           {IconComponent ? (
             <IconComponent
               width={settings.iconSize}
+              fill={settings.iconFill}
               height={settings.iconSize}
               x={(size - settings.iconSize) / 2 + +settings.iconOffsetX}
               y={(size - settings.iconSize) / 2 + +settings.iconOffsetY}

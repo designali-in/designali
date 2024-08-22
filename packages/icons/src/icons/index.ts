@@ -1,5 +1,5 @@
+export * from "./shapes";
 export * from "./AlignLeft";
-export * from "./Circle";
 export * from "./Search";
 export * from "./Plus";
 export * from "./Shuffle";
