@@ -37,9 +37,11 @@ import {
   Moon,
   MoonStar,
   PersonStanding,
+  Plus,
   ScanEye,
   ScanSearch,
   School,
+  Search,
   Speech,
   Store,
   Sun,
@@ -110,6 +112,9 @@ export const DIcons = {
   University: University,
   UtilityPole: UtilityPole,
   Warehouse: Warehouse,
+
+  Search: Search,
+  Plus: Plus,
 
   heart: ({ ...props }: DesignaliProps) => (
     <svg

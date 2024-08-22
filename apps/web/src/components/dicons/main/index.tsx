@@ -23,14 +23,11 @@ import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
 import { presets } from "@/src/components/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
 import { Button } from "@designali/ui/button";
-import { Input } from "@designali/ui/input";
-import { Label } from "@designali/ui/label";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
-import { CopyButton } from "../../ui/copy-button";
 import { MainIcons } from "./dicons";
 import { InstallIcon } from "./install-icon";
 import { Navigation } from "./nav";

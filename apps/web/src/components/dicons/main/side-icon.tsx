@@ -75,19 +75,19 @@ export const SideIcon = ({
                 strokeDasharray={"1 1"}
                 className={cn("-z-10")}
               />
-              <DIcons.Sun
+              <DIcons.Plus
                 strokeWidth={0.5}
                 className="text-aired absolute -left-3 -top-3 h-5 w-5"
               />
-              <DIcons.Sun
+              <DIcons.Plus
                 strokeWidth={0.5}
                 className="text-aired absolute -bottom-3 -left-3 h-5 w-5"
               />
-              <DIcons.Sun
+              <DIcons.Plus
                 strokeWidth={0.5}
                 className="text-aired absolute -right-3 -top-3 h-5 w-5"
               />
-              <DIcons.Sun
+              <DIcons.Plus
                 strokeWidth={0.5}
                 className="text-aired absolute -bottom-3 -right-3 h-5 w-5"
               />
@@ -194,7 +194,7 @@ export const SideIcon = ({
                           <Slider
                             name="strokeWidth"
                             defaultValue={[settings.strokeWidth]}
-                            min={0.1}
+                            min={0.5}
                             max={3}
                             step={0.1}
                           />

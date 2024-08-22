@@ -51,7 +51,7 @@ export const Navigation = ({
                   id="search"
                 />
                 <Label htmlFor="search">
-                  <DIcons.Sun
+                  <DIcons.Search
                     strokeWidth={1}
                     className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
                   />
@@ -70,7 +70,7 @@ export const Navigation = ({
               <Link href={"/tools/dicons"}>
                 <Button size="lg" className="h-10 w-full">
                   <span className="hidden lg:block">Edit {settings.icon}</span>
-                  <DIcons.Sun className="mx-1 h-4 w-4" />
+                  <DIcons.Plus className="mx-1 h-4 w-4" />
                 </Button>
               </Link>
             </div>

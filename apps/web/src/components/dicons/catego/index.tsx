@@ -245,7 +245,7 @@ export const DIconCategories = () => {
     });
   }
 
-  const filteredDIcons = Object.keys(Account).filter((key) =>
+  const filteredDIcons = Object.keys(DIcons).filter((key) =>
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
@@ -294,7 +294,7 @@ export const DIconCategories = () => {
                 filteredDIcons={filteredDIcons}
                 onRandomIconClick={onRandomIconClick}
               />
-              <div className="px-6">
+              <div>
                 {filteredDIcons.length === 0 ? (
                   <div className="mt-20 grid gap-2 text-center">
                     <p>We couldn’t find an icon for that</p>
