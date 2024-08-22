@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const CircleGuage = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const CircleGauge = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -26,4 +26,4 @@ export const CircleGuage = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default CircleGuage;
+export default CircleGauge;

@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const SheildPlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const ShieldPlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -26,4 +26,4 @@ export const SheildPlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default SheildPlus;
+export default ShieldPlus;

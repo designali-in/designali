@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const Guage = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const Gauge = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -25,4 +25,4 @@ export const Guage = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default Guage;
+export default Gauge;

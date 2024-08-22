@@ -285,7 +285,7 @@ export const DIconGenerator = () => {
                   </div>
                 ) : (
                   <div className="my-6">
-                    <ScrollArea className="md:h-[900px]">
+                    <ScrollArea className="md:h-[950px]">
                       <MainIcons
                         settings={settings}
                         searchTerm={searchTerm}

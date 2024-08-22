@@ -18,7 +18,7 @@ export const InstallIcon = ({ settings }: InstallIconProps) => {
   return (
     <main className={"hidden xl:block"}>
       <div className="">
-        <div className="mx-auto max-w-sm gap-6 md:h-screen md:border-l">
+        <div className="mx-auto max-w-md gap-6 md:h-screen md:border-l">
           <div className="px-6 py-6">
             <h1 className="text-2xl font-semibold">What is DIcons?</h1>
             <p className="py-3 text-sm text-slate-600 dark:text-slate-400">

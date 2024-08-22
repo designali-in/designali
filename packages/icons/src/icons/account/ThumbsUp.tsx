@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const ThumbUp = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const ThumbsUp = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -25,4 +25,4 @@ export const ThumbUp = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default ThumbUp;
+export default ThumbsUp;

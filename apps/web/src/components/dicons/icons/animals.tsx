@@ -6,5 +6,5 @@ export type DIcon = DesignaliIcon;
 export type ValidIcon = keyof typeof Animal;
 
 export const Animal = {
-  Copy: Moon,
+  Moon,
 };

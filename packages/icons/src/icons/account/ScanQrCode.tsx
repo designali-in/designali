@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { DesignaliProps } from "../../types";
 
-export const ScanQRCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const ScanQrCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -31,4 +31,4 @@ export const ScanQRCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default ScanQRCode;
+export default ScanQrCode;
