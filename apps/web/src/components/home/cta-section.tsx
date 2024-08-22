@@ -127,7 +127,7 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       initial={{ opacity: 0 }}
       animate={controls}
       className={cn(
-        "relative h-full w-[150px] cursor-pointer overflow-hidden rounded-sm border p-1 md:w-[350px] md:rounded-2xl md:p-2",
+        "relative h-[89px] w-[150px] cursor-pointer overflow-hidden rounded-md border p-1 md:h-full md:w-[350px] md:rounded-2xl md:p-2",
         // light styles
         "bg-white",
         // dark styles
@@ -151,7 +151,7 @@ export default function CallToActionSection() {
   }, []);
 
   return (
-    <section id="cta" className="mb-[950px] md:-mt-20 md:mb-[340px]">
+    <section id="cta" className="relative mb-[950px] md:-mt-20 md:mb-[340px]">
       <div className="relative flex justify-center px-6 md:mt-20">
         <div className="absolute z-10 px-6">
           <ShineBorder
@@ -218,14 +218,12 @@ export default function CallToActionSection() {
                 <Card key={idx} {...review} />
               ))}
             </Marquee>
-
             <Marquee className="-delay-[200ms] [--duration:70s]" repeat={4}>
               {randomTiles1.map((review, idx) => (
                 <Card key={idx} {...review} />
               ))}
             </Marquee>
-
-            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-background to-90%" />
+            <div className="absolute inset-x-0 bottom-0 mx-auto h-full bg-gradient-to-b from-transparent to-background to-90%" />
           </div>
         </div>
       </div>

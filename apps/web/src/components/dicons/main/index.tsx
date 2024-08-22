@@ -285,6 +285,9 @@ export const DIconGenerator = () => {
                   </div>
                 ) : (
                   <div className="my-6">
+                    <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
+                      {searchTerm ? "Results" : "All Icons"}
+                    </h4>
                     <ScrollArea className="md:h-[950px]">
                       <MainIcons
                         settings={settings}

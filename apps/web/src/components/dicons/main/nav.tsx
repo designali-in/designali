@@ -10,6 +10,7 @@ import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
+import { ScrollArea } from "@designali/ui/scroll-area";
 import { DIcons } from "dicons";
 
 import { CopyButton } from "../../ui/copy-button";
@@ -173,60 +174,68 @@ export const ToolNavigation = ({
 }: ToolNavProps) => {
   return (
     <main>
-      <div className="fixed top-14 z-10 flex h-14 w-full items-center justify-center gap-2 border-b border-t bg-slate-100/60 backdrop-blur-md backdrop-filter dark:bg-slate-900/60">
-        <div className={cn("flex items-center justify-between gap-2")}>
-          <Button
-            variant="outline"
-            className={""}
-            disabled={history.length <= 1}
-            title={`cmd+z`}
-            onClick={undo}
-          >
-            <DIcons.Undo className="mr-1 h-4 w-4" />
-            <p className={"hidden md:flex"}>Undo</p>
-          </Button>
-
-          <Button
-            variant="outline"
-            className={""}
-            disabled={redoHistory.length === 0}
-            title={`shift+cmd+z`}
-            onClick={redo}
-          >
-            <DIcons.Redo className="mr-1 h-4 w-4" />
-            <p className={"hidden md:flex"}>Redo</p>
-          </Button>
-
-          <div
-            className={"px-3 md:px-10"}
-            contentEditable
-            onBlur={onFileNameBlured}
-            onKeyDown={onFileNameKeydown}
-          >
-            {settings.fileName}
+      <div className="fixed top-14 z-10 flex h-32 w-full items-center justify-center gap-2 border-b border-t bg-slate-100/60 backdrop-blur-md backdrop-filter dark:bg-slate-900/60 md:h-14">
+        <div className={cn("grid items-center justify-center gap-2 md:flex")}>
+          <div>
+            <Link href={"/dicons"}>
+              <h1 className="text-center text-2xl font-semibold hover:text-ali">
+                DIcons
+              </h1>
+            </Link>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-2">
             <Button
-              variant="default"
-              size="md"
+              variant="outline"
               className={""}
-              onClick={() => setShowExportModal(true)}
+              disabled={history.length <= 1}
+              title={`cmd+z`}
+              onClick={undo}
             >
-              <DIcons.Download className="mr-1 h-4 w-4" />
-              <span className="hidden lg:block">Export</span>
+              <DIcons.Undo className="mr-1 h-4 w-4" />
+              <p className={""}>Undo</p>
             </Button>
-            {pngClipboardSupported && (
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-10 w-10"
-                onSelect={onCopyImageToClipboard}
-              >
-                <DIcons.Copy className="h-4 w-4" />
-              </Button>
-            )}
+
+            <Button
+              variant="outline"
+              className={""}
+              disabled={redoHistory.length === 0}
+              title={`shift+cmd+z`}
+              onClick={redo}
+            >
+              <DIcons.Redo className="mr-1 h-4 w-4" />
+              <p className={""}>Redo</p>
+            </Button>
+            <div
+              className={"hidden px-3 md:block md:px-10"}
+              contentEditable
+              onBlur={onFileNameBlured}
+              onKeyDown={onFileNameKeydown}
+            >
+              {settings.fileName}
+            </div>
+            <div className="flex justify-center">
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="default"
+                  size="md"
+                  className={""}
+                  onClick={() => setShowExportModal(true)}
+                >
+                  <DIcons.Download className="mr-1 h-4 w-4" />
+                  <span className="hidden lg:block">Export</span>
+                </Button>
+                {pngClipboardSupported && (
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-10 w-10"
+                    onSelect={onCopyImageToClipboard}
+                  >
+                    <DIcons.Copy className="h-4 w-4" />
+                  </Button>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>

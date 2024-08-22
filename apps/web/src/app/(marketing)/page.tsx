@@ -14,6 +14,7 @@ export default function HomePage() {
       <Bento />
       <Dash />
       <CallToActionSection />
+
       <Projects />
       <Chatbot />
     </main>

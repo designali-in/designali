@@ -518,7 +518,9 @@ export const IconGenerator = () => {
         onCopyImageToClipboard={onCopyImageToClipboard}
       />
       <main
-        className={"mt-28 grid justify-center gap-8 md:flex md:h-screen"}
+        className={
+          "mt-48 grid justify-center gap-8 md:mt-28 md:flex md:h-screen"
+        }
         ref={mainRef}
       >
         <div className="left-0 mx-auto flex h-full max-w-md bg-white dark:bg-black md:absolute md:border-r">
