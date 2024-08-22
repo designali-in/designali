@@ -248,7 +248,7 @@ export function DownloadPNG({
   return (
     <div className="flex items-center gap-2" onClick={onExport}>
       <span>Download PNG</span>
-      <DIcons.Download className="h-4 w-4" />
+      <DIcons.Sun className="h-4 w-4" />
     </div>
   );
 }
@@ -283,7 +283,7 @@ export function DownloadSVG({
   return (
     <div className="flex items-center gap-2" onClick={onExport}>
       <span>Download SVG</span>
-      <DIcons.Download className="h-4 w-4" />
+      <DIcons.Sun className="h-4 w-4" />
     </div>
   );
 }

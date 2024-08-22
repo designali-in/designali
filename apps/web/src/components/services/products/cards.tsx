@@ -28,15 +28,30 @@ const ICONS3D = [
   },
 ];
 
+const DICONS = [
+  {
+    id: 1,
+    name: "DIcons",
+    src: "/images/products/dicons.jpg",
+    designation: "Download. Edit. Upload.",
+    content: <p>+10,000 Beautifully designed icons.</p>,
+  },
+];
+
 export function Graaadients() {
   return (
-    <div className="grid justify-center gap-4 md:flex">
-      <Link href="/products/graaadients">
-        <CardStack items={GRADS} />
+    <div className="grid justify-center gap-4">
+      <Link href="/dicons">
+        <CardStack items={DICONS} />
       </Link>
-      <Link href="/products/3dicons">
-        <CardStack items={ICONS3D} />
-      </Link>
+      <div className="grid justify-center gap-4 md:flex">
+        <Link href="/products/graaadients">
+          <CardStack items={GRADS} />
+        </Link>
+        <Link href="/products/3dicons">
+          <CardStack items={ICONS3D} />
+        </Link>
+      </div>
     </div>
   );
 }
