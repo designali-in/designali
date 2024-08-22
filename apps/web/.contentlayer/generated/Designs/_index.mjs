@@ -3,12 +3,6 @@
 import designs__inProgressMdx from './designs__in-progress.mdx.json' assert { type: 'json' }
 import designs__indexMdx from './designs__index.mdx.json' assert { type: 'json' }
 import designs__typographyMdx from './designs__typography.mdx.json' assert { type: 'json' }
-import designs__openfile__3diconsMdx from './designs__openfile__3dicons.mdx.json' assert { type: 'json' }
-import designs__openfile__graaadientsMdx from './designs__openfile__graaadients.mdx.json' assert { type: 'json' }
-import designs__openfile__gradCarouselMdx from './designs__openfile__grad-carousel.mdx.json' assert { type: 'json' }
-import designs__openfile__gradReelMdx from './designs__openfile__grad-reel.mdx.json' assert { type: 'json' }
 import designs__openfile__portfolioMdx from './designs__openfile__portfolio.mdx.json' assert { type: 'json' }
-import designs__openfile__pureWhiteMdx from './designs__openfile__pure-white.mdx.json' assert { type: 'json' }
-import designs__openfile__smCheatSheetMdx from './designs__openfile__sm-cheat-sheet.mdx.json' assert { type: 'json' }
 
-export const allDesigns = [designs__inProgressMdx, designs__indexMdx, designs__typographyMdx, designs__openfile__3diconsMdx, designs__openfile__graaadientsMdx, designs__openfile__gradCarouselMdx, designs__openfile__gradReelMdx, designs__openfile__portfolioMdx, designs__openfile__pureWhiteMdx, designs__openfile__smCheatSheetMdx]
+export const allDesigns = [designs__inProgressMdx, designs__indexMdx, designs__typographyMdx, designs__openfile__portfolioMdx]

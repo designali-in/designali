@@ -6,7 +6,6 @@ import Link from "next/link";
 import ShineBorder from "@/components/ui/shine-border";
 import { cn } from "@designali/ui";
 import { buttonVariants } from "@designali/ui/button";
-import { DIcons } from "dicons";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 

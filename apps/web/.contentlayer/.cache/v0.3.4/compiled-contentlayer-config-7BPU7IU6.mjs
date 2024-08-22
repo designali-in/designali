@@ -329,54 +329,6 @@ var computedFields = {
     }
   }
 };
-var GalleryPost = defineDocumentType(() => ({
-  name: "GalleryPost",
-  filePathPattern: "gallery/**/*.mdx",
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      description: "The title of the blog post",
-      required: true
-    },
-    date: {
-      type: "string",
-      description: "The date of the assetst",
-      required: true
-    },
-    modifiedTime: {
-      type: "string",
-      description: "The modified time of the assets",
-      required: true
-    },
-    download: {
-      type: "string",
-      description: "The summary of the assets",
-      required: true
-    },
-    dimention: {
-      type: "string",
-      description: "The summary of the assets",
-      required: true
-    },
-    size: {
-      type: "string",
-      description: "The summary of the assets",
-      required: true
-    },
-    summary: {
-      type: "string",
-      description: "The summary of the assets",
-      required: true
-    }
-  },
-  computedFields: {
-    slug: {
-      type: "string",
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, "")
-    }
-  }
-}));
 var BlogPost = defineDocumentType(() => ({
   name: "BlogPost",
   filePathPattern: "blog/**/*.mdx",
@@ -505,7 +457,7 @@ var Page = defineDocumentType(() => ({
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Page, Designs, Documentation, Guide, BlogPost, GalleryPost],
+  documentTypes: [Page, Designs, Documentation, Guide, BlogPost],
   mdx: {
     // remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -602,4 +554,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-D77C7E3T.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-7BPU7IU6.mjs.map

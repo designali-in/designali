@@ -59,30 +59,6 @@ export type Documentation = {
   readingTime: number
 }
 
-export type GalleryPost = {
-  /** File path relative to `contentDirPath` */
-  _id: string
-  _raw: Local.RawDocumentData
-  type: 'GalleryPost'
-  /** The title of the blog post */
-  title: string
-  /** The date of the assetst */
-  date: string
-  /** The modified time of the assets */
-  modifiedTime: string
-  /** The summary of the assets */
-  download: string
-  /** The summary of the assets */
-  dimention: string
-  /** The summary of the assets */
-  size: string
-  /** The summary of the assets */
-  summary: string
-  /** MDX file body */
-  body: MDX
-  slug: string
-}
-
 export type Guide = {
   /** File path relative to `contentDirPath` */
   _id: string
@@ -122,8 +98,8 @@ export type Page = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = BlogPost | Designs | Documentation | GalleryPost | Guide | Page
-export type DocumentTypeNames = 'BlogPost' | 'Designs' | 'Documentation' | 'GalleryPost' | 'Guide' | 'Page'
+export type DocumentTypes = BlogPost | Designs | Documentation | Guide | Page
+export type DocumentTypeNames = 'BlogPost' | 'Designs' | 'Documentation' | 'Guide' | 'Page'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -135,7 +111,6 @@ export type DataExports = {
   allDocumentations: Documentation[]
   allGuides: Guide[]
   allBlogPosts: BlogPost[]
-  allGalleryPosts: GalleryPost[]
 }
 
 
@@ -158,7 +133,6 @@ export type DocumentTypeMap = {
   BlogPost: BlogPost
   Designs: Designs
   Documentation: Documentation
-  GalleryPost: GalleryPost
   Guide: Guide
   Page: Page
 }
