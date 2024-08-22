@@ -48,6 +48,7 @@ import {
 
 import type { DesignaliIcon, DesignaliProps } from "./types";
 import {
+  Accessibility,
   AlignLeft,
   Circle,
   Copy,
@@ -62,6 +63,7 @@ export type DIcon = DesignaliIcon;
 export type ValidIcon = keyof typeof DIcons;
 
 export const DIcons = {
+  Accessibility: Accessibility,
   image: Image,
   repeat: Repeat,
   trash: Trash,

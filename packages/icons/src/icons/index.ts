@@ -1,3 +1,4 @@
+export * from "./accessibility";
 export * from "./shapes";
 export * from "./AlignLeft";
 export * from "./Search";
