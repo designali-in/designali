@@ -58,7 +58,7 @@ export default App;`}
                   <TabsContent className="-mt-2" value="2">
                     <CodeBlock
                       title={".tsx"}
-                      children={`import { ${settings.icon} from 'dicons';
+                      children={`import { ${settings.icon} } from 'dicons';
 
 const App = () => {
   return (

@@ -28,7 +28,7 @@ export const MainIcons = ({
 }: AccessProps) => {
   return (
     <main id="categories">
-      <div className="grid gap-10">
+      <div className="mb-10 grid gap-10">
         <Accessibility
           onChangeIcon={onChangeIcon}
           settings={settings}
