@@ -22,24 +22,21 @@ export const InstallIcon = ({ settings }: InstallIconProps) => {
           <div className="px-6 py-6">
             <h1 className="text-2xl font-semibold">What is DIcons?</h1>
             <p className="py-3 text-sm text-slate-600 dark:text-slate-400">
-              Dicons is an open-source icon library that provides 1000+ vector
+              Dicons is an open-source icon library that provides 10,000+ vector
               (svg) files for displaying icons and symbols in digital and
-              non-digital projects. The library aims to make it easier for
-              designers and developers to incorporate icons into their projects
-              by providing several official packages to make it easier to use
-              these icons in your project.
+              non-digital projects.
             </p>
           </div>
           <ScrollArea>
-            <div className="w-[400px] px-6 md:h-[700px]">
+            <div className="w-[400px] px-6 md:h-[800px]">
               <div className="">
                 <h1 className="py-3 text-slate-600 dark:text-slate-400">
                   Import
                 </h1>
                 <Tabs defaultValue="1">
                   <TabsList>
-                    <TabsTrigger value="1">All Icons</TabsTrigger>
-                    <TabsTrigger value="2">One Icon</TabsTrigger>
+                    <TabsTrigger value="1">Multi Icons</TabsTrigger>
+                    <TabsTrigger value="2">Single Icon</TabsTrigger>
                   </TabsList>
                   <TabsContent className="-mt-2" value="1">
                     <CodeBlock
@@ -148,7 +145,6 @@ export default App;`}
             <Link href={"/documentation"}>
               <Button size="lg" className="h-10 w-full">
                 Go to Docs
-                <DIcons.Sun className="mx-1 h-4 w-4" />
               </Button>
             </Link>
           </div>

@@ -28,7 +28,7 @@ export const MainIcons = ({
   filteredDIcons,
 }: AccessProps) => {
   return (
-    <main className={""}>
+    <main className={"mb-20"}>
       <div>
         <div className="flex w-full flex-wrap justify-center gap-2">
           {filteredDIcons.map((icon) => {

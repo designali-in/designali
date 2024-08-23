@@ -129,7 +129,7 @@ export const IconNavigation = ({
               onChange={onSelectCustomIcon}
               accept=".svg, .png"
             />
-            <DIcons.Search strokeWidth={1} className="h-4 w-4" />
+            <DIcons.FolderKanban strokeWidth={1} className="h-4 w-4" />
           </Button>
         </div>
       </div>
@@ -164,7 +164,7 @@ export const ToolNavigation = ({
 }: ToolNavProps) => {
   return (
     <main>
-      <div className="fixed top-14 z-10 flex h-32 w-full items-center justify-center gap-2 border-b border-t bg-slate-100/60 backdrop-blur-md backdrop-filter dark:bg-slate-900/60 md:h-14">
+      <div className="fixed top-14 z-10 flex h-28 w-full items-center justify-center gap-2 border-b border-t bg-slate-100/60 backdrop-blur-md backdrop-filter dark:bg-slate-900/60 md:h-14">
         <div className={cn("grid items-center justify-center gap-2 md:flex")}>
           <div>
             <Link href={"/dicons"}>

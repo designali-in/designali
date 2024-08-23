@@ -54,7 +54,7 @@ export const DIconGenerator = () => {
     iconFill: "",
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
-    backgroundStrokeColor: "#FFFFFF",
+    backgroundStrokeColor: "#555555",
     backgroundRadialGlare: false,
     backgroundNoiseTexture: false,
     backgroundNoiseTextureOpacity: 25,
@@ -98,12 +98,6 @@ export const DIconGenerator = () => {
     pushNewSettings({
       icon: value as "",
       customSvg: undefined,
-    });
-  };
-
-  const onRandomIconClick = () => {
-    pushNewSettings({
-      icon: randomElement(Object.keys(DIcons) as ""[]),
     });
   };
 
@@ -244,7 +238,7 @@ export const DIconGenerator = () => {
   }
 
   return (
-    <main className={"md:flex"}>
+    <main className={"md:flex md:h-screen"}>
       <SideIcon
         settings={settings}
         svgRef={svgRef}
@@ -287,7 +281,7 @@ export const DIconGenerator = () => {
                     <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
                       {searchTerm ? "Results" : "All Icons"}
                     </h4>
-                    <ScrollArea className="md:h-[950px]">
+                    <ScrollArea className="md:h-[900px]">
                       <MainIcons
                         settings={settings}
                         filteredDIcons={filteredDIcons}

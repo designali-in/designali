@@ -6,8 +6,10 @@ import { cn } from "@designali/ui";
 import { buttonVariants } from "@designali/ui/button";
 
 import { Icons } from "../icons";
+import PageTitle from "../mdx/page-title";
 import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
 import { Particles } from "../ui/particles";
+import ShineBorder from "../ui/shine-border";
 
 export const IconsGen: React.FC = () => {
   return (
@@ -19,24 +21,22 @@ export const IconsGen: React.FC = () => {
         >
           <HighlighterItem className="rounded-3xl">
             <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
-              <Particles
-                className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
-                quantity={50}
-              />
-              <div className="flex justify-center">
-                <div className="flex h-full flex-col justify-center gap-10 p-4 md:h-[300px] md:flex-row">
-                  <div className="-mt-20 flex h-full flex-col justify-center p-2 text-center md:-mt-4 md:ml-10 md:w-[400px]">
-                    <div className="flex flex-col items-center">
-                      <h3 className="mt-6 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 font-bold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
-                        <span className="text-2xl md:text-4xl">
-                          Icons Generator
-                        </span>
-                      </h3>
-                    </div>
-                    <p className="mb-4 text-slate-400">
-                      Feel free to request for any icon!
-                    </p>
-                    <div className="flex justify-center gap-2">
+              <ShineBorder
+                className="w-full border bg-white/5 shadow-2xl backdrop-blur-md dark:bg-black/5"
+                color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+              >
+                <Particles
+                  className="absolute inset-0 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
+                  quantity={50}
+                />
+                <div className="flex justify-center py-10">
+                  <div className="flex h-full flex-col justify-center p-2 text-center">
+                    <PageTitle
+                      title={"Icons Generator"}
+                      description={" Feel free to request for any icon!"}
+                    />
+
+                    <div className="z-20 flex justify-center gap-2">
                       <Link
                         href="/tools/dicons"
                         target=""
@@ -55,7 +55,7 @@ export const IconsGen: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </ShineBorder>
             </div>
           </HighlighterItem>
         </div>

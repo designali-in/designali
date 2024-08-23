@@ -72,7 +72,7 @@ const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slat
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full border-b border-t border-ali/20 px-2 sm:px-4">
+    <footer className="mx-auto w-full border-b border-t border-ali/20 bg-slate-50 px-2 dark:bg-slate-950 sm:px-4">
       <div className="relative -mt-10 flex flex-wrap justify-center gap-8">
         <Link href="/">
           <p className="flex h-20 w-20 items-center justify-center rounded-full bg-background">
