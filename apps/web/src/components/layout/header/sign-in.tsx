@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@designali/ui/button";
+import { DropdownMenu } from "@designali/ui/dropdown-menu";
 import { useSession } from "next-auth/react";
 
 import { UserNav } from "./user-nav";
@@ -11,13 +12,19 @@ export function LoginButton() {
 
   return (
     <div className="hidden md:block">
-      <Button asChild variant={"outline"} size={"md"}>
-        {session.status === "authenticated" ? (
-          <UserNav />
-        ) : (
-          <Link href="/login">Sign In</Link>
-        )}
-      </Button>
+      <DropdownMenu>
+        <div>
+          {session.status === "authenticated" ? (
+            <UserNav />
+          ) : (
+            <Link href="/login">
+              <Button variant={"outline"} size={"md"}>
+                Sign In
+              </Button>
+            </Link>
+          )}
+        </div>
+      </DropdownMenu>
     </div>
   );
 }
@@ -43,13 +50,22 @@ export function PhoneLoginButton() {
 
   return (
     <div>
-      <Button asChild variant={"outline"} size={"md"}>
+      <div>
         {session.status === "authenticated" ? (
-          <Link href="/app/dashboard/overview">Dashboard</Link>
+          <Link href="/app/dashboard/overview">
+            <Button variant={"outline"} size={"md"}>
+              Dashboard
+            </Button>
+          </Link>
         ) : (
-          <Link href="/login">Sign In</Link>
+          <Link href="/login">
+            {" "}
+            <Button variant={"outline"} size={"md"}>
+              Sign In
+            </Button>
+          </Link>
         )}
-      </Button>
+      </div>
       <AdminLoginButton />
     </div>
   );

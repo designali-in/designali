@@ -508,6 +508,7 @@ export const IconGenerator = () => {
       />
       <ToolNavigation
         undo={undo}
+        undoHistory={history}
         redoHistory={redoHistory}
         redo={redo}
         onFileNameBlured={onFileNameBlured}

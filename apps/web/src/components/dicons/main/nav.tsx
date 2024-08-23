@@ -10,7 +10,6 @@ import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
-import { ScrollArea } from "@designali/ui/scroll-area";
 import { DIcons } from "dicons";
 
 import { CopyButton } from "../../ui/copy-button";
@@ -152,6 +151,7 @@ export const IconNavigation = ({
 interface ToolNavProps {
   undo;
   redoHistory;
+  undoHistory;
   redo;
   onFileNameBlured;
   onFileNameKeydown;
@@ -168,6 +168,7 @@ export const ToolNavigation = ({
   onFileNameBlured,
   onFileNameKeydown,
   settings,
+  undoHistory,
   setShowExportModal,
   pngClipboardSupported,
   onCopyImageToClipboard,
@@ -187,7 +188,7 @@ export const ToolNavigation = ({
             <Button
               variant="outline"
               className={""}
-              disabled={history.length <= 1}
+              disabled={undoHistory.length <= 1}
               title={`cmd+z`}
               onClick={undo}
             >

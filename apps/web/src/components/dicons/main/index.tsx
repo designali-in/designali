@@ -227,9 +227,9 @@ export const DIconGenerator = () => {
     IconComponent = DIcons[settings.icon];
   }
 
-  const filteredDIcons = Object.keys(DIcons).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
+  const filteredDIcons = Object.keys(DIcons)
+    .filter((key) => key.toLowerCase().includes(searchTerm.toLowerCase()))
+    .sort(() => Math.random() - 0.5);
 
   const scaleOptions = scales.map((value) => ({
     value,
@@ -244,7 +244,7 @@ export const DIconGenerator = () => {
   }
 
   return (
-    <main className={"md:flex"} id="categories">
+    <main className={"md:flex"}>
       <SideIcon
         settings={settings}
         svgRef={svgRef}

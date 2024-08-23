@@ -1,15 +1,11 @@
 "use client";
 
-import type { Style } from "@/src/lib/registry/styles";
-import type { NpmCommands } from "@/src/types";
 import ImageZoom from "@/components/common/image-zoom";
 import { cn } from "@designali/ui";
 import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import { StyleWrapper } from "../../common/style-wrapper";
-import { CopyButton, CopyNpmCommandButton } from "../../ui/copy-button";
 import Callout from "./callout";
 import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";

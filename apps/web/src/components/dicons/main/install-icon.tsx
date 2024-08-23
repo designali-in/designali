@@ -31,7 +31,7 @@ export const InstallIcon = ({ settings }: InstallIconProps) => {
             </p>
           </div>
           <ScrollArea>
-            <div className="px-6 md:h-[700px]">
+            <div className="w-[400px] px-6 md:h-[700px]">
               <div className="">
                 <h1 className="py-3 text-slate-600 dark:text-slate-400">
                   Import
@@ -83,19 +83,19 @@ export default App;`}
                         <TabsTrigger value="pnpm">pnpm</TabsTrigger>
                         <TabsTrigger value="yarn">yarn</TabsTrigger>
                       </TabsList>
-                      <TabsContent className="-mt-2" value="npm">
+                      <TabsContent className="-mt-2 w-[350px]" value="npm">
                         <CodeBlock
                           title={"React/Nextjs"}
                           children={`npm install dicons`}
                         />
                       </TabsContent>
-                      <TabsContent className="-mt-2" value="pnpm">
+                      <TabsContent className="-mt-2 w-[350px]" value="pnpm">
                         <CodeBlock
                           title={"React/Nextjs"}
                           children={`pnpm install dicons`}
                         />
                       </TabsContent>
-                      <TabsContent className="-mt-2" value="yarn">
+                      <TabsContent className="-mt-2 w-[350px]" value="yarn">
                         <CodeBlock
                           title={"React/Nextjs"}
                           children={`yarn add dicons`}
@@ -114,25 +114,25 @@ export default App;`}
                         <TabsTrigger value="3">Stroke Width</TabsTrigger>
                         <TabsTrigger value="4">Fill</TabsTrigger>
                       </TabsList>
-                      <TabsContent className="-mt-2" value="1">
+                      <TabsContent className="-mt-2 w-[350px]" value="1">
                         <CodeBlock
                           title={".tsx"}
                           children={`<${settings.icon} color="${settings.iconColor}" />`}
                         />
                       </TabsContent>
-                      <TabsContent className="-mt-2" value="2">
+                      <TabsContent className="-mt-2 w-[350px]" value="2">
                         <CodeBlock
                           title={".tsx"}
                           children={`<${settings.icon} size={${settings.iconSize}} />`}
                         />
                       </TabsContent>
-                      <TabsContent className="-mt-2" value="3">
+                      <TabsContent className="-mt-2 w-[350px]" value="3">
                         <CodeBlock
                           title={".tsx"}
                           children={`<${settings.icon} strokeWidth={${settings.strokeWidth}} />`}
                         />
                       </TabsContent>
-                      <TabsContent className="-mt-2" value="4">
+                      <TabsContent className="-mt-2 w-[350px]" value="4">
                         <CodeBlock
                           title={".tsx"}
                           children={`<${settings.icon} fill={"${settings.iconFill}"} />`}
