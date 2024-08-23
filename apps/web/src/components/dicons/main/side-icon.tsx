@@ -234,7 +234,7 @@ export const SideIcon = ({
               </form>
             </div>
           </div>
-          <div>
+          <div className="hidden md:block">
             <Link href={"/dicons"}>
               <h1 className="text-md mb-2 mt-6">All Icons</h1>
             </Link>
