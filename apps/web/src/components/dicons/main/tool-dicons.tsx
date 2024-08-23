@@ -17,7 +17,7 @@ import { DIcons } from "dicons";
 import { CSSTransition } from "react-transition-group";
 
 import { DownloadPNG, DownloadSVG } from "../../common/colors/export-modal";
-import ResultIcon from "../../common/colors/result-icon";
+import { ResultIcon } from "../../common/colors/result-dicon";
 import GridPattern from "../../ui/grid-pattern";
 
 interface ToolProps {

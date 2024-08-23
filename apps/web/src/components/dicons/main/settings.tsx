@@ -26,7 +26,7 @@ import { Slider } from "@designali/ui/slider";
 import { Switch } from "@designali/ui/switch";
 
 import { ColorInput } from "../../common/colors/color-input";
-import ResultIcon from "../../common/colors/result-icon";
+import { ResultIcon } from "../../common/colors/result-dicon";
 
 interface DIconsSettings {
   settings;

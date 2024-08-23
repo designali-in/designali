@@ -297,7 +297,6 @@ export const DIconCategories = () => {
                 searchRef={searchRef}
                 onChangeSearchTerm={onChangeSearchTerm}
                 filteredDIcons={filteredDIcons}
-                onRandomIconClick={onRandomIconClick}
               />
               <div>
                 {filteredDIcons.length === 0 ? (

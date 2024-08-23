@@ -270,7 +270,6 @@ export const DIconGenerator = () => {
                 searchRef={searchRef}
                 onChangeSearchTerm={onChangeSearchTerm}
                 filteredDIcons={filteredDIcons}
-                onRandomIconClick={onRandomIconClick}
               />
               <div className="px-6">
                 {filteredDIcons.length === 0 ? (

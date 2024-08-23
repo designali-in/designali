@@ -20,13 +20,11 @@ interface NavProps {
   searchRef;
   onChangeSearchTerm;
   filteredDIcons;
-  onRandomIconClick;
 }
 
 export const Navigation = ({
   settings,
   searchTerm,
-  onRandomIconClick,
   filteredDIcons,
   onChangeSearchTerm,
   searchRef,
@@ -59,15 +57,6 @@ export const Navigation = ({
                 </Label>
               </div>
 
-              <Button
-                variant="outline"
-                size="lgicon"
-                className="h-10 w-10"
-                onClick={onRandomIconClick}
-                title="Random icon"
-              >
-                <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
-              </Button>
               <Link href={"/tools/dicons"}>
                 <Button size="lg" className="h-10">
                   <DIcons.Scissors className="mx-1 h-4 w-4" />

@@ -12,7 +12,7 @@ import {
   DownloadPNG,
   DownloadSVG,
 } from "@/src/components/common/colors/export-modal";
-import ResultDIcon from "@/src/components/common/colors/result-dicon";
+import { ResultDIcon } from "@/src/components/common/colors/result-dicon";
 import { DiconsSidebarNav } from "@/src/components/mdx/doc/sidebar-nav";
 import GridPattern from "@/src/components/ui/grid-pattern";
 import { cn } from "@designali/ui";

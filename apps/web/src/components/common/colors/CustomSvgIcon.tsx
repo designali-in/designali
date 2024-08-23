@@ -1,8 +1,7 @@
+import type { DOMNode } from "html-react-parser";
 import parseHtmlAsReact, {
   attributesToProps,
-  DOMNode,
   domToReact,
-  Element,
 } from "html-react-parser";
 
 type PropTypes = {
@@ -16,7 +15,7 @@ const CustomSvgIcon: React.FC<PropTypes> = ({ svgSource, ...props }) => {
         const svgProps = attributesToProps(node.attribs);
         return (
           <svg {...{ ...svgProps, ...props }}>
-            {domToReact((node as Element).children as DOMNode[])}
+            {domToReact(node.children as DOMNode[])}
           </svg>
         );
       }
