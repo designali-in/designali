@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
@@ -14,25 +13,30 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@designali/ui/tooltip";
-import { DIcons } from "dicons";
 
-interface AccessProps {
+import { DCharts } from "../../icons/charts";
+
+interface ChartsProps {
   onChangeIcon;
   settings;
-  filteredDIcons;
+  filteredCharts;
 }
 
-export const MainIcons = ({
+export const Charts = ({
   onChangeIcon,
   settings,
-  filteredDIcons,
-}: AccessProps) => {
+  filteredCharts,
+}: ChartsProps) => {
   return (
-    <main className={""}>
-      <div>
+    <div className="px-6">
+      <div id="charts" className="">
+        <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
+          {"Charts"}
+        </h4>
+
         <div className="flex w-full flex-wrap justify-center gap-2">
-          {filteredDIcons.map((icon) => {
-            const Component = DIcons[icon];
+          {filteredCharts.map((icon) => {
+            const Component = DCharts[icon];
             return (
               <div>
                 <TooltipProvider>
@@ -54,7 +58,6 @@ export const MainIcons = ({
                             stroke={settings.iconColor}
                             strokeWidth={settings.strokeWidth}
                           />
-
                           <Input
                             type="radio"
                             className="hidden"
@@ -76,6 +79,6 @@ export const MainIcons = ({
           })}
         </div>
       </div>
-    </main>
+    </div>
   );
 };

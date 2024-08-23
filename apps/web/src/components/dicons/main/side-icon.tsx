@@ -199,7 +199,7 @@ export const SideIcon = ({
                           <Slider
                             name="strokeWidth"
                             defaultValue={[settings.strokeWidth]}
-                            min={0.5}
+                            min={0.1}
                             max={3}
                             step={0.1}
                           />

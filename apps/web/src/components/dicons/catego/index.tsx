@@ -32,6 +32,7 @@ import { Access } from "../icons/accessibility";
 import { Account } from "../icons/account";
 import { Animal } from "../icons/animals";
 import { Buildings } from "../icons/building";
+import { DCharts } from "../icons/charts";
 import { InstallIcon } from "../main/install-icon";
 import { Navigation } from "../main/nav";
 import { SideIcon } from "../main/side-icon";
@@ -265,6 +266,10 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
+  const filteredCharts = Object.keys(DCharts).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
   return (
     <main className={"md:flex"} id="categories">
       <SideIcon
@@ -313,6 +318,7 @@ export const DIconCategories = () => {
                         filteredBuildings={filteredBuildings}
                         filteredAccess={filteredAccess}
                         filteredAccount={filteredAccount}
+                        filteredCharts={filteredCharts}
                         filteredAnimal={filteredAnimal}
                         onChangeIcon={onChangeIcon}
                       />

@@ -8,6 +8,7 @@ import { Accessibility } from "./items/accessibility";
 import { Accounts } from "./items/accounts";
 import { Animals } from "./items/animals";
 import { Building } from "./items/building";
+import { Charts } from "./items/charts";
 
 interface AccessProps {
   onChangeIcon;
@@ -16,6 +17,7 @@ interface AccessProps {
   filteredAnimal;
   filteredAccess;
   filteredBuildings;
+  filteredCharts;
 }
 
 export const MainIcons = ({
@@ -25,6 +27,7 @@ export const MainIcons = ({
   filteredBuildings,
   filteredAccess,
   filteredAnimal,
+  filteredCharts,
 }: AccessProps) => {
   return (
     <main id="categories">
@@ -48,6 +51,11 @@ export const MainIcons = ({
           onChangeIcon={onChangeIcon}
           settings={settings}
           filteredBuildings={filteredBuildings}
+        />
+        <Charts
+          onChangeIcon={onChangeIcon}
+          settings={settings}
+          filteredCharts={filteredCharts}
         />
       </div>
     </main>

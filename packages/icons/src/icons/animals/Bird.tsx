@@ -1,0 +1,32 @@
+import * as React from "react";
+
+import { DesignaliProps } from "../../types";
+
+export const Bird = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({ color = "currentColor", ...props }, forwardedRef) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        {...props}
+        ref={forwardedRef}
+      >
+        <path d="M16 7h.01" />
+        <path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20" />
+        <path d="m20 7 2 .5-2 .5" />
+        <path d="M10 18v3" />
+        <path d="M14 17.75V21" />
+        <path d="M7 18a6 6 0 0 0 3.84-10.61" />
+      </svg>
+    );
+  },
+);
+
+export default Bird;
