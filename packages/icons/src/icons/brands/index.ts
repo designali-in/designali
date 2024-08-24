@@ -1,6 +1,6 @@
 export * from "./Apple";
 export * from "./LinkedIn";
-export * from "./Youtube";
+export * from "./YouTube";
 export * from "./Facebook";
 export * from "./Instagram";
 export * from "./Nike";
