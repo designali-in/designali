@@ -7,6 +7,7 @@ import React from "react";
 import { Accessibility } from "./items/accessibility";
 import { Accounts } from "./items/accounts";
 import { Animals } from "./items/animals";
+import { Arrows } from "./items/arrows";
 import { Building } from "./items/building";
 import { Charts } from "./items/charts";
 
@@ -18,6 +19,7 @@ interface AccessProps {
   filteredAccess;
   filteredBuildings;
   filteredCharts;
+  filteredArrows;
 }
 
 export const MainIcons = ({
@@ -28,6 +30,7 @@ export const MainIcons = ({
   filteredAccess,
   filteredAnimal,
   filteredCharts,
+  filteredArrows,
 }: AccessProps) => {
   return (
     <main id="categories">
@@ -46,6 +49,11 @@ export const MainIcons = ({
           onChangeIcon={onChangeIcon}
           settings={settings}
           filteredAnimal={filteredAnimal}
+        />
+        <Arrows
+          onChangeIcon={onChangeIcon}
+          settings={settings}
+          filteredArrows={filteredArrows}
         />
         <Building
           onChangeIcon={onChangeIcon}

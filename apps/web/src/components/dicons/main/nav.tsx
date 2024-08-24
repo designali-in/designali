@@ -58,9 +58,8 @@ export const Navigation = ({
               </div>
 
               <Link href={"/tools/dicons"}>
-                <Button size="lg" className="h-10">
+                <Button size="lgicon" className="h-10 w-10">
                   <DIcons.Scissors className="mx-1 h-4 w-4" />
-                  <span className="hidden lg:block">Edit {settings.icon}</span>
                 </Button>
               </Link>
             </div>

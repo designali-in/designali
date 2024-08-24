@@ -31,6 +31,7 @@ import { svgAsPngUri } from "save-svg-as-png";
 import { Access } from "../icons/accessibility";
 import { Account } from "../icons/account";
 import { Animal } from "../icons/animals";
+import { DArrows } from "../icons/arrows";
 import { Buildings } from "../icons/building";
 import { DCharts } from "../icons/charts";
 import { InstallIcon } from "../main/install-icon";
@@ -270,6 +271,10 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
+  const filteredArrows = Object.keys(DArrows).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
   return (
     <main className={"md:flex"} id="categories">
       <SideIcon
@@ -317,6 +322,7 @@ export const DIconCategories = () => {
                         filteredBuildings={filteredBuildings}
                         filteredAccess={filteredAccess}
                         filteredAccount={filteredAccount}
+                        filteredArrows={filteredArrows}
                         filteredCharts={filteredCharts}
                         filteredAnimal={filteredAnimal}
                         onChangeIcon={onChangeIcon}
