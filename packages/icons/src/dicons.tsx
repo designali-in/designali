@@ -5,6 +5,7 @@ import {
   Accessibility,
   Activity,
   Anvil,
+  Apple,
   AtSign,
   Award,
   Baby,
@@ -95,6 +96,7 @@ import {
   Egg,
   Eye,
   EyeOff,
+  Facebook,
   Factory,
   Fence,
   Fingerprint,
@@ -121,6 +123,7 @@ import {
   IdCard,
   Inbox,
   Info,
+  Instagram,
   Kanban,
   Key,
   KeyRound,
@@ -129,6 +132,7 @@ import {
   LifeBuoy,
   Link,
   Link2,
+  LinkedIn,
   LogIn,
   LogOut,
   Mail,
@@ -170,6 +174,7 @@ import {
   MessageSquareX,
   Moon,
   MoonStar,
+  Nike,
   NotebookTabs,
   Origami,
   PanelsTopLeft,
@@ -281,8 +286,11 @@ import {
   Waypoints,
   Webhook,
   WebhookOff,
+  WhatsApp,
   Worm,
   Wrench,
+  X,
+  YouTube,
   ZoomIn,
   ZoomOut,
 } from "./icons";
@@ -573,6 +581,14 @@ export const DIcons = {
   TrendingDown,
   TrendingUp,
 
+  X,
+  Apple,
+  LinkedIn,
+  YouTube,
+  Facebook,
+  Instagram,
+  Nike,
+  WhatsApp,
   Plus,
   Shuffle,
   Scissors,
@@ -581,7 +597,7 @@ export const DIcons = {
   Redo,
   Copy,
 
-  heart: ({ ...props }: DesignaliProps) => (
+  Heart: ({ ...props }: DesignaliProps) => (
     <svg
       aria-hidden="true"
       focusable="false"

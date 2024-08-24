@@ -1,0 +1,29 @@
+import * as React from "react";
+
+import { DesignaliProps } from "../../types";
+
+export const Nike = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({ color = "currentColor", ...props }, forwardedRef) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="0"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        {...props}
+        ref={forwardedRef}
+      >
+        <path
+          fill="currentColor"
+          d="M4.83,8.52c-.14.23-.26.47-.37.72-.15.35-.27.71-.33,1.09-.05.35-.06.7.05,1.04.2.59.6.97,1.21,1.13.27.07.55.08.83.08.5-.02.99-.12,1.47-.24,2.04-.54,4.08-1.08,6.13-1.62,2.15-.57,4.3-1.14,6.44-1.7.57-.15,1.13-.3,1.7-.45,0,0,.02,0,.03,0-.03.01-.05.02-.08.03-2.38,1-4.75,2.01-7.13,3.01-2.5,1.06-5,2.11-7.51,3.17-.56.24-1.14.44-1.73.58-.44.1-.89.17-1.35.16-.4-.01-.78-.08-1.13-.26-.56-.3-.92-.75-1.04-1.38-.05-.26-.05-.52-.01-.78.08-.6.29-1.16.57-1.69.26-.49.58-.94.92-1.38.4-.51.84-.99,1.27-1.47,0,0,.01-.02.02-.03,0,0,0,.01.01.02Z"
+        />
+      </svg>
+    );
+  },
+);
+
+export default Nike;
