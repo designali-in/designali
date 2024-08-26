@@ -58,7 +58,7 @@ export function Chatbot() {
             )}
           </AnimatePresence>
           <div className="z-20 w-full">
-            <ScrollArea className="h-[305px] w-full overflow-auto p-1">
+            <ScrollArea className="h-[312px] w-full overflow-auto p-1">
               <div className="px-6">
                 <div className="flex justify-center py-2">
                   <Logo className="w-7" />

@@ -52,6 +52,7 @@ export const DIconGenerator = () => {
     icon: "",
     backgroundRadius: 72,
     iconFill: "",
+    iconColor: "#555555",
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
     backgroundStrokeColor: "#555555",
