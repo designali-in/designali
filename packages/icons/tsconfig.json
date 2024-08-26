@@ -11,6 +11,9 @@
     "declaration": true,
     "isolatedModules": true,
     "noEmit": true,
+    "paths": {
+      "@/*": ["./*", "./src/*"]
+    },
     "outDir": "dist"
   },
   "include": ["src", "../../apps/web/src/components/dicons/categories"],

@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../../types";
+import { DesignaliProps } from "../types";
 
-export const Plus = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const Send = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,11 +18,11 @@ export const Plus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M5 12h14" />
-        <path d="M12 5v14" />
+        <path d="m22 2-7 20-4-9-9-4Z" />
+        <path d="M22 2 11 13" />
       </svg>
     );
   },
 );
 
-export default Plus;
+export default Send;

@@ -34,10 +34,12 @@ import { Animal } from "../icons/animals";
 import { DArrows } from "../icons/arrows";
 import { Buildings } from "../icons/building";
 import { DCharts } from "../icons/charts";
+import { DCommunication } from "../icons/communication";
 import { InstallIcon } from "../main/install-icon";
 import { Navigation } from "../main/nav";
 import { SideIcon } from "../main/side-icon";
 import { MainIcons } from "./catego";
+import { Cursor } from "./items/cursor";
 
 const scales = [0.25, 0.5, 1, 2];
 
@@ -275,6 +277,14 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
+  const filteredCommunication = Object.keys(DCommunication).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
+  const filteredCursor = Object.keys(Cursor).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
   return (
     <main className={"md:flex"} id="categories">
       <SideIcon
@@ -325,6 +335,8 @@ export const DIconCategories = () => {
                         filteredArrows={filteredArrows}
                         filteredCharts={filteredCharts}
                         filteredAnimal={filteredAnimal}
+                        filteredCommunication={filteredCommunication}
+                        filteredCursor={filteredCursor}
                         onChangeIcon={onChangeIcon}
                       />
                     </ScrollArea>
