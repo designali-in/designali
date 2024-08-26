@@ -46,7 +46,7 @@ const features = [
           <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
               <div className="flex items-center justify-center gap-2 py-[13px]">
-                <DIcons.Instagram className="dark:slate-600 h-4 w-4 text-slate-400" />
+                <DIcons.ScanQrCode className="dark:slate-600 h-4 w-4 text-slate-400" />
                 <p className="text-lg font-semibold text-ali lg:text-xl">
                   designali.in
                 </p>

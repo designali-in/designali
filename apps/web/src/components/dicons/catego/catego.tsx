@@ -10,8 +10,6 @@ import { Animals } from "./items/animals";
 import { Arrows } from "./items/arrows";
 import { Building } from "./items/building";
 import { Charts } from "./items/charts";
-import { Communication } from "./items/communication";
-import { Cursor } from "./items/cursor";
 
 interface AccessProps {
   onChangeIcon;
@@ -22,8 +20,6 @@ interface AccessProps {
   filteredBuildings;
   filteredCharts;
   filteredArrows;
-  filteredCommunication;
-  filteredCursor;
 }
 
 export const MainIcons = ({
@@ -35,8 +31,6 @@ export const MainIcons = ({
   filteredAnimal,
   filteredCharts,
   filteredArrows,
-  filteredCommunication,
-  filteredCursor,
 }: AccessProps) => {
   return (
     <main id="categories">
@@ -70,16 +64,6 @@ export const MainIcons = ({
           onChangeIcon={onChangeIcon}
           settings={settings}
           filteredCharts={filteredCharts}
-        />
-        <Communication
-          onChangeIcon={onChangeIcon}
-          settings={settings}
-          filteredCommunication={filteredCommunication}
-        />
-        <Cursor
-          onChangeIcon={onChangeIcon}
-          settings={settings}
-          filteredCursor={filteredCursor}
         />
       </div>
     </main>
