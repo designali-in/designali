@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { DesignaliIcon } from "dicons";
 import {
   Activity,
   AtSign,
@@ -178,10 +176,6 @@ import {
   WebhookOff,
   Wrench,
 } from "dicons";
-
-export type DIcon = DesignaliIcon;
-
-export type ValidIcon = keyof typeof Account;
 
 export const Account = {
   Activity,

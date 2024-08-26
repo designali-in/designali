@@ -1,4 +1,3 @@
-import type { DesignaliIcon } from "dicons";
 import {
   Anvil,
   BrickWall,
@@ -24,10 +23,6 @@ import {
   UtilityPole,
   Warehouse,
 } from "dicons";
-
-export type DIcon = DesignaliIcon;
-
-export type ValidIcon = keyof typeof Buildings;
 
 export const Buildings = {
   Anvil,

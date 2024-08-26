@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { DesignaliIcon } from "dicons";
 import {
   ChartArea,
   ChartBar,
@@ -32,10 +30,6 @@ import {
   TrendingDown,
   TrendingUp,
 } from "dicons";
-
-export type DIcon = DesignaliIcon;
-
-export type ValidIcon = keyof typeof DCharts;
 
 export const DCharts = {
   ChartArea,

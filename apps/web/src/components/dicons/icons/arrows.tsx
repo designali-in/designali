@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { DesignaliIcon } from "dicons";
 import {
   ArrowBigDown,
   ArrowBigDownDash,
@@ -199,10 +197,6 @@ import {
   Upload,
   WrapText,
 } from "dicons";
-
-export type DIcon = DesignaliIcon;
-
-export type ValidIcon = keyof typeof DArrows;
 
 export const DArrows = {
   ArrowBigDown,

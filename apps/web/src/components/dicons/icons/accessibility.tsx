@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { DesignaliIcon } from "dicons";
 import {
   Accessibility,
   Baby,
@@ -29,10 +27,6 @@ import {
   ZoomIn,
   ZoomOut,
 } from "dicons";
-
-export type DIcon = DesignaliIcon;
-
-export type ValidIcon = keyof typeof Access;
 
 export const Access = {
   Accessibility,
