@@ -222,9 +222,9 @@ export const DIconGenerator = () => {
     IconComponent = DIcons[settings.icon];
   }
 
-  const filteredDIcons = Object.keys(DIcons)
-    .filter((key) => key.toLowerCase().includes(searchTerm.toLowerCase()))
-    .sort(() => Math.random() - 0.5);
+  const filteredDIcons = Object.keys(DIcons).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
 
   const scaleOptions = scales.map((value) => ({
     value,

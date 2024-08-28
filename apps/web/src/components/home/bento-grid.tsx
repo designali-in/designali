@@ -37,11 +37,7 @@ const features = [
     name: "",
     className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
-      <Link
-        href="https://www.instagram.com/designali.in/"
-        download={true}
-        target="_blank"
-      >
+      <Link href="https://www.instagram.com/designali.in/" target="_blank">
         <div className="flex w-full gap-2">
           <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
@@ -64,19 +60,19 @@ const features = [
     name: "",
     className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
-      <Link href="/services">
+      <Link href="/blogs">
         <div className="flex w-full gap-2">
           <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
               <div className="flex items-center justify-center gap-2 py-[13px]">
                 <DIcons.Settings className="dark:slate-600 h-4 w-4 text-slate-400" />
                 <p className="text-lg font-semibold text-ali lg:text-xl">
-                  Services
+                  Blogs
                 </p>
               </div>
             </div>
             <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-sm font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
-              Services
+              Blogs
             </span>
           </div>
         </div>
@@ -275,6 +271,98 @@ const features = [
           </div>
         </Link>
       </div>
+    ),
+  },
+  {
+    name: "",
+    className: "col-span-4 md:col-span-4 lg:col-span-2 xl:col-span-2",
+    background: (
+      <Link href="/services/branding">
+        <div className="flex w-full gap-2">
+          <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
+            <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
+              <div className="flex items-center justify-center gap-2 py-[13px]">
+                <DIcons.Notebook className="dark:slate-600 h-4 w-4 text-slate-400" />
+                <p className="text-lg font-semibold text-ali lg:text-xl">
+                  Branding
+                </p>
+              </div>
+            </div>
+            <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-sm font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
+              Services
+            </span>
+          </div>
+        </div>
+      </Link>
+    ),
+  },
+  {
+    name: "",
+    className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
+    background: (
+      <Link href="/services/logo">
+        <div className="flex w-full gap-2">
+          <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
+            <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
+              <div className="flex items-center justify-center gap-2 py-[13px]">
+                <DIcons.UserPen className="dark:slate-600 h-4 w-4 text-slate-400" />
+                <p className="text-lg font-semibold text-ali lg:text-xl">
+                  Logo Design
+                </p>
+              </div>
+            </div>
+            <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-sm font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
+              Logo
+            </span>
+          </div>
+        </div>
+      </Link>
+    ),
+  },
+  {
+    name: "",
+    className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
+    background: (
+      <Link href="/services/sm-posts">
+        <div className="flex w-full gap-2">
+          <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
+            <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
+              <div className="flex items-center justify-center gap-2 py-[13px]">
+                <DIcons.Phone className="dark:slate-600 h-4 w-4 text-slate-400" />
+                <p className="text-lg font-semibold text-ali lg:text-xl">
+                  Social Media
+                </p>
+              </div>
+            </div>
+            <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-sm font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
+              Services
+            </span>
+          </div>
+        </div>
+      </Link>
+    ),
+  },
+  {
+    name: "",
+    className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
+    background: (
+      <Link href="/services/website-design">
+        <div className="flex w-full gap-2">
+          <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 py-4 transition-colors duration-150 hover:bg-accent dark:border-slate-900 dark:bg-black">
+            <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
+              <div className="flex items-center justify-center gap-2 py-[13px]">
+                <DIcons.Cog className="dark:slate-600 h-4 w-4 text-slate-400" />
+                <p className="text-lg font-semibold text-ali lg:text-xl">
+                  Website Designs
+                </p>
+              </div>
+            </div>
+            <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-sm font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
+              Services
+            </span>
+          </div>
+        </div>
+      </Link>
     ),
   },
 ];
