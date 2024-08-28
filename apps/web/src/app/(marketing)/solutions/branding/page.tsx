@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
-import { FAQ } from "@/components/home/faq";
-import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/services/products/branding/about";
 import { Banner } from "@/src/components/services/products/branding/banner";
 import ReviewList from "@/src/components/services/review-list";
+import { Related } from "@/src/components/services/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,
