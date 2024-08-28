@@ -30,7 +30,7 @@ const navigation = {
             { name: "Services", href: "/services" },
             { name: "Products", href: "/products" },
             { name: "Tools", href: "/tools" },
-            { name: "Dicons", href: "/dicons" },
+            { name: "DIcons", href: "/dicons" },
           ],
         },
         {

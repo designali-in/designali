@@ -165,7 +165,8 @@ export const SideIcon = ({
                         <span className="pr-5 text-xs">Fill Color</span>
                         <Switch name={"iconFill"} id={"iconFill"} />
                       </div>
-                      {iconFill && (
+
+                      {iconFill ? (
                         <div>
                           {!customSvgIsPng && (
                             <div
@@ -182,7 +183,7 @@ export const SideIcon = ({
                             </div>
                           )}
                         </div>
-                      )}
+                      ) : null}
                     </div>
                     <div className="grid items-center gap-2">
                       <div className="flex items-center justify-between">
