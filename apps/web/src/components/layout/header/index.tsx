@@ -14,9 +14,9 @@ export function Header() {
         <div className="mx-auto flex h-14 max-w-5xl flex-1 items-center">
           <Link
             href="/"
-            className="flex items-center justify-center px-6 lg:flex"
+            className="flex items-center justify-center px-6 md:px-0 lg:flex"
           >
-            <Logo className="w-7" />
+            <Logo className="w-5" />
           </Link>
           <Menu />
           <div className="mx-auto flex h-12 flex-1 items-center justify-end gap-2">

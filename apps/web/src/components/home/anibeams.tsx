@@ -55,7 +55,7 @@ export function Beam() {
             <Icons.send className="text-green-500" />
           </Circle>
           <Circle ref={div4Ref} className="h-20 w-20 p-3">
-            <Logo className="m-1 h-20 w-20 pb-2" />
+            <Logo className="m-1 h-12 pl-1" />
           </Circle>
           <Circle ref={div6Ref}>
             <Icons.checkcheck className="text-yellow-500" />

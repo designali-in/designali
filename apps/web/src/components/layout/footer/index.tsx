@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { Separator } from "@designali/ui/separator";
 
+import { Logo } from "../../logo";
 import ThemeToogle from "./theme";
 
 const navigation = {
@@ -76,7 +77,7 @@ export function Footer() {
       <div className="relative -mt-10 flex flex-wrap justify-center gap-8">
         <Link href="/">
           <p className="flex h-20 w-20 items-center justify-center rounded-full bg-background">
-            <Icons.Logo className="mb-2 w-10" />
+            <Logo className="w-8" />
           </p>
         </Link>
       </div>
