@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { Separator } from "@designali/ui/separator";
+import { DIcons } from "dicons";
 
 import { Logo } from "../../logo";
 import ThemeToogle from "./theme";
@@ -152,7 +153,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.whatsapp className="h-5 w-5" />
+            <DIcons.WhatsApp className="h-5 w-5" />
           </Link>
           <Link
             href="https://www.instagram.com/designali.in/"
@@ -160,7 +161,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.instagram strokeWidth={1.5} className="h-5 w-5" />
+            <DIcons.Instagram strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
             href="https://x.com/designali_in"
@@ -168,7 +169,15 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.twitterx className="h-5 w-5" />
+            <DIcons.X className="h-5 w-5" />
+          </Link>
+          <Link
+            href="https://www.behance.net/designali-in"
+            rel="noreferrer"
+            target="_blank"
+            className={Underline}
+          >
+            <DIcons.Behance className="h-5 w-5" />
           </Link>
           <Link
             href="https://www.facebook.com/designali.agency"
@@ -176,7 +185,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.facebook className="h-5 w-5" />
+            <DIcons.Facebook className="h-5 w-5" />
           </Link>
           <Link
             href="https://www.linkedin.com/company/designali"
@@ -184,7 +193,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.linked className="h-5 w-5" />
+            <DIcons.LinkedIn className="h-5 w-5" />
           </Link>
           <Link
             href="https://www.youtube.com/@designali-in"
@@ -192,7 +201,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.youtube className="h-5 w-5" />
+            <DIcons.YouTube className="h-5 w-5" />
           </Link>
         </div>
         <ThemeToogle />

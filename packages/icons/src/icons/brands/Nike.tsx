@@ -10,10 +10,6 @@ export const Nike = React.forwardRef<SVGSVGElement, DesignaliProps>(
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        fill="none"
-        stroke-width="0"
-        stroke-linecap="round"
-        stroke-linejoin="round"
         {...props}
         ref={forwardedRef}
       >

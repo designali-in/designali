@@ -88,7 +88,7 @@ const Hero = () => {
           <div className="flex justify-center gap-2">
             <Link href={"/app/dashboard/overview"}>
               <Button variant="default" size="lg">
-                Design Now
+                Start Project
               </Button>
             </Link>
             <Link href={"https://cal.com/aliimam/designali"} target="_blank">
