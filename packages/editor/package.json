@@ -1,0 +1,39 @@
+{
+  "name": "@designali/editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo dist node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@designali/ui": "workspace:*",
+    "dicons": "workspace:*",
+    "fabric": "5.3.0-browser",
+    "material-colors": "^1.2.6",
+    "lodash.debounce": "^4.0.8",
+    "react-color": "^2.19.3",
+    "react-use": "^17.5.0",
+    "uuidv4": "^6.2.13",
+    "use-file-picker": "^2.1.2",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@designali/eslint-config": "workspace:*",
+    "@designali/prettier-config": "workspace:*",
+    "@designali/tsconfig": "workspace:*",
+    "@types/fabric": "5.3.0",
+    "@types/material-colors": "^1.2.3",
+    "@types/react-color": "^3.0.12",
+    "@types/lodash.debounce": "^4.0.9",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@designali/prettier-config"
+}

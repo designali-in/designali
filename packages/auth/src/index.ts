@@ -10,6 +10,7 @@ export { handlers, auth, signIn, signOut };
 
 export {
   invalidateSessionToken,
+  authConfig,
   validateToken,
   isSecureContext,
 } from "./config";

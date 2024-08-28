@@ -21,6 +21,7 @@
     "@designali/env": "workspace:*",
     "@designali/kv": "workspace:*",
     "@designali/ui": "workspace:*",
+    "@designali/editor": "workspace:*",
     "@designali/validators": "workspace:*",
     "@emotion/is-prop-valid": "^1.2.2",
     "@google/generative-ai": "^0.12.0",
