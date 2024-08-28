@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <main className="mx-auto mt-28 max-w-3xl px-6 md:max-w-5xl">
       <PageTitle
-        title="Design Services"
+        title="Design Solutions"
         description={`The right price for you,  whoever you are`}
       />
       <Services />

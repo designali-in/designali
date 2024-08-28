@@ -63,7 +63,7 @@ export const SideIcon = ({
       <div className="-z-0 mx-auto grid max-w-sm md:h-screen md:border-r">
         <div className="p-6">
           <div className="relative">
-            <p className="mb-2 text-center text-xl font-semibold text-ali">
+            <p className="mb-2 text-center text-lg font-semibold text-ali">
               {settings.icon}
             </p>
             <div className="relative mx-auto flex h-auto w-auto max-w-[255px] justify-center border">
@@ -76,20 +76,20 @@ export const SideIcon = ({
                 className={cn("-z-10")}
               />
               <DIcons.Plus
-                strokeWidth={0.5}
-                className="absolute -left-3 -top-3 h-5 w-5 text-ali"
+                strokeWidth={1}
+                className="absolute -left-3 -top-3 h-6 text-ali"
               />
               <DIcons.Plus
-                strokeWidth={0.5}
-                className="absolute -bottom-3 -left-3 h-5 w-5 text-ali"
+                strokeWidth={1}
+                className="absolute -bottom-3 -left-3 h-6 text-ali"
               />
               <DIcons.Plus
-                strokeWidth={0.5}
-                className="absolute -right-3 -top-3 h-5 w-5 text-ali"
+                strokeWidth={1}
+                className="absolute -right-3 -top-3 h-6 text-ali"
               />
               <DIcons.Plus
-                strokeWidth={0.5}
-                className="absolute -bottom-3 -right-3 h-5 w-5 text-ali"
+                strokeWidth={1}
+                className="absolute -bottom-3 -right-3 h-6 text-ali"
               />
 
               <CSSTransition

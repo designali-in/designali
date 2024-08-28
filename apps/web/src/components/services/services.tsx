@@ -23,7 +23,7 @@ export interface Experience {
 export const Service: Experience[] = [
   {
     post: "Branding",
-    link: "/services/branding",
+    link: "/solutions/branding",
     comlogo:
       "https://utfs.io/f/cb22130d-5369-4dab-a93a-44464be93e60-jrpk8e.jpg",
     company: "Brand Identity",
@@ -31,14 +31,14 @@ export const Service: Experience[] = [
   },
   {
     post: "Logo",
-    link: "/services/logo",
+    link: "/solutions/logo",
     comlogo: "https://utfs.io/f/240e81c4-976b-48b3-aa1d-998ec6c0397b-1evuz.jpg",
     company: "Logos that stand out",
     price: "₹1999",
   },
   {
     post: "SM Posts",
-    link: "/services/sm-posts",
+    link: "/solutions/sm-posts",
     comlogo:
       "https://utfs.io/f/813bb6c1-f742-4c1d-b0d3-75cd4d984c05-cmsrrn.jpg",
     company: "Social Media Marketing",
@@ -46,7 +46,7 @@ export const Service: Experience[] = [
   },
   {
     post: "Brochures",
-    link: "/services/brochures",
+    link: "/solutions/brochures",
     comlogo:
       "https://utfs.io/f/8ea73886-3e26-43e7-93e4-504245ef5f31-741fes.jpg",
     company: "Collaterals",
@@ -54,7 +54,7 @@ export const Service: Experience[] = [
   },
   {
     post: "Website Design",
-    link: "/services/website-design",
+    link: "/solutions/website-design",
     comlogo:
       "https://utfs.io/f/65154be4-d18f-4cea-8dc5-cb9443c623de-rrz747.jpg",
     company: "UI/UX, Landing Page",
@@ -62,7 +62,7 @@ export const Service: Experience[] = [
   },
   {
     post: "Website Develop",
-    link: "/services/website-develop",
+    link: "/solutions/website-develop",
     comlogo:
       "https://utfs.io/f/11b40ec3-5580-422e-9fe2-137da9569e2c-8rjek4.jpg",
     company: "Build in Next.js",

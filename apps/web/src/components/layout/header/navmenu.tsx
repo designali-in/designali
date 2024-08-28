@@ -22,7 +22,7 @@ export function Menu() {
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About AI
+                About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -85,40 +85,46 @@ export function Menu() {
                     </a>
                   </NavigationMenuLink>
                 </li>
+                <ListItem
+                  href="/documentation/dicons/installation"
+                  title="Documentation"
+                >
+                  Installation
+                </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href={"/services"}>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+            <Link href={"/solutions"}>
+              <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
             </Link>
 
             <NavigationMenuContent className="space-y-3">
               <ul className="mx-auto grid max-w-5xl gap-3 md:px-6 lg:grid-cols-4">
-                <ListItem href="/services/branding" title="Branding">
+                <ListItem href="/solutions/branding" title="Branding">
                   All gradients are 100% free.
                 </ListItem>
-                <ListItem href="/services/logo" title="Logos">
+                <ListItem href="/solutions/logo" title="Logos">
                   Download full pack
                 </ListItem>
-                <ListItem href="/services/sm-posts" title="Social Media Posts">
+                <ListItem href="/solutions/sm-posts" title="Social Media Posts">
                   Download. Edit. Upload.
                 </ListItem>
 
-                <ListItem href="/services/brochures" title="Brochures">
+                <ListItem href="/solutions/brochures" title="Brochures">
                   Download full pack
                 </ListItem>
               </ul>
               <ul className="mx-auto grid max-w-5xl gap-3 md:px-6 lg:grid-cols-4">
                 <ListItem
-                  href="/services/website-design"
+                  href="/solutions/website-design"
                   title="Website Design"
                 >
                   All gradients are 100% free.
                 </ListItem>
                 <ListItem
-                  href="/services/website-develop"
+                  href="/solutions/website-develop"
                   title="Website Develop"
                 >
                   Download. Edit. Upload.

@@ -19,7 +19,7 @@ const navigation = {
           id: "about",
           name: "About",
           items: [
-            { name: "About AI", href: "/about" },
+            { name: "About", href: "/about" },
             { name: "Pricing", href: "/pricing" },
             { name: "Works", href: "/works" },
             { name: "Dashboard", href: "/app/dashboard/overview" },
@@ -29,7 +29,7 @@ const navigation = {
           id: "features",
           name: "Features",
           items: [
-            { name: "Services", href: "/services" },
+            { name: "Solutions", href: "/solutions" },
             { name: "Products", href: "/products" },
             { name: "Tools", href: "/tools" },
             { name: "DIcons", href: "/dicons" },

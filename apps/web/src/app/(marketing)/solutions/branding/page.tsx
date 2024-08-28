@@ -2,12 +2,12 @@
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/services/products/branding/about";
 import { Banner } from "@/src/components/services/products/branding/banner";
 import ReviewList from "@/src/components/services/review-list";
-import { Related } from "@/src/components/services/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,
@@ -26,7 +26,11 @@ export default async function Home() {
   const session = await auth();
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
-      <PageTitle title={product.name} description={`✌️ Under Construction`} />
+      <PageTitle
+        title={product.name}
+        description={`I am dedicated to creating premium branding solutions 
+                      exclusively for small enterprises with grand aspirations.`}
+      />
       <div className="mt-10 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>
@@ -35,7 +39,7 @@ export default async function Home() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/services">Services</BreadcrumbLink>
+              <BreadcrumbLink href="/services">Solutions</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -47,7 +51,6 @@ export default async function Home() {
       <Banner />
       <About />
       <Branding />
-      <Related />
       <div id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
@@ -69,7 +72,6 @@ export default async function Home() {
           </Link>
         )}
       </div>
-      <FAQ />
       <Connect />
     </div>
   );
