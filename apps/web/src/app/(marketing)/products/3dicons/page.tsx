@@ -59,9 +59,9 @@ export default async function AboutAI() {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-        <div className="grid justify-center gap-4">
+        <div className="mt-10 grid justify-center gap-4">
           {(await session) ? (
-            <div className="mt-10 flex justify-center gap-3">
+            <div className="flex justify-center gap-3">
               <Button variant="default" size="lg">
                 <Link
                   href="https://drive.google.com/file/d/1yYm0Xwfz_a9Q6lLqsRNTK6X10egd5O0N/view?usp=drive_link"
