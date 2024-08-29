@@ -148,12 +148,12 @@ export function Footer() {
             <Icons.mail strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
-            href="https://wa.me/917678432186"
+            href="https://x.com/designali_in"
             rel="noreferrer"
             target="_blank"
             className={Underline}
           >
-            <DIcons.WhatsApp className="h-5 w-5" />
+            <DIcons.X className="h-5 w-5" />
           </Link>
           <Link
             href="https://www.instagram.com/designali.in/"
@@ -164,12 +164,12 @@ export function Footer() {
             <DIcons.Instagram strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
-            href="https://x.com/designali_in"
+            href="https://wa.me/917678432186"
             rel="noreferrer"
             target="_blank"
             className={Underline}
           >
-            <DIcons.X className="h-5 w-5" />
+            <DIcons.WhatsApp className="h-5 w-5" />
           </Link>
           <Link
             href="https://www.behance.net/designali-in"

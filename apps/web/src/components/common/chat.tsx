@@ -60,9 +60,6 @@ export function Chatbot() {
           <div className="z-20 w-full">
             <ScrollArea className="h-[312px] w-full overflow-auto p-1">
               <div className="px-6">
-                <div className="flex justify-center py-2">
-                  <Logo className="w-7" />
-                </div>
                 <div className="relative flex h-full w-full justify-center text-center">
                   <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">
                     <span
