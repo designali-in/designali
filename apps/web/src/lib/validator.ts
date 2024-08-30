@@ -2,6 +2,8 @@ import { products, reviews } from "@designali/db/src/schema";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import * as z from "zod";
 
+import { formatNumberWithDecimal } from "./dutils";
+
 // USER
 export const signInFormSchema = z.object({
   email: z.string().email().min(3, "Email must be at least 3 characters"),
