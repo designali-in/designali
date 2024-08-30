@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@designali/auth";
 
 export const metadata = {
-  title: "Log In - Designali",
+  title: "Sign Up - Designali",
   description:
     "This section includes end-to-end guides for developing Next.js 13 apps.",
 };
