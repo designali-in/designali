@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Connect } from "@/components/common/connect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/services/products/branding/about";
-import { Banner } from "@/src/components/services/products/branding/banner";
-import { BrandingCars } from "@/src/components/services/products/branding/card";
-import { Process } from "@/src/components/services/products/branding/process";
-import ReviewList from "@/src/components/services/review-list";
+import { About } from "@/src/components/solutions/products/branding/about";
+import { Banner } from "@/src/components/solutions/products/branding/banner";
+import { BrandingCars } from "@/src/components/solutions/products/branding/card";
+import { Process } from "@/src/components/solutions/products/branding/process";
+import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

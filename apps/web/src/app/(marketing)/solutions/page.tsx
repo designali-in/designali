@@ -1,7 +1,7 @@
 import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
-import { Related, Services } from "@/components/services/services";
 import PageTitle from "@/src/components/mdx/page-title";
+import { Related, Services } from "@/src/components/solutions/services";
 
 export const metadata = {
   title: "Solutions - Designali",

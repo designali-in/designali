@@ -4,10 +4,10 @@ import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/services/products/w-design/about";
-import { Banner } from "@/src/components/services/products/w-design/banner";
-import ReviewList from "@/src/components/services/review-list";
-import { Related } from "@/src/components/services/services";
+import { About } from "@/src/components/solutions/products/w-design/about";
+import { Banner } from "@/src/components/solutions/products/w-design/banner";
+import ReviewList from "@/src/components/solutions/review-list";
+import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

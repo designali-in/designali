@@ -5,10 +5,10 @@ import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import Projects from "@/src/components/common/projects";
 import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/services/products/w-develop/about";
-import { Banner } from "@/src/components/services/products/w-develop/banner";
-import ReviewList from "@/src/components/services/review-list";
-import { Related } from "@/src/components/services/services";
+import { About } from "@/src/components/solutions/products/w-develop/about";
+import { Banner } from "@/src/components/solutions/products/w-develop/banner";
+import ReviewList from "@/src/components/solutions/review-list";
+import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

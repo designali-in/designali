@@ -277,7 +277,7 @@ const features = [
     name: "",
     className: "col-span-4 md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
-      <Link href="/services/branding">
+      <Link href="/solutions/branding">
         <div className="flex w-full gap-2">
           <div className="group relative w-full overflow-hidden p-2 py-4 transition-colors duration-150 hover:bg-accent">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
@@ -300,7 +300,7 @@ const features = [
     name: "",
     className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
-      <Link href="/services/logo">
+      <Link href="/solutions/logo">
         <div className="flex w-full gap-2">
           <div className="group relative w-full overflow-hidden p-2 py-4 transition-colors duration-150 hover:bg-accent">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
@@ -323,7 +323,7 @@ const features = [
     name: "",
     className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
-      <Link href="/services/sm-posts">
+      <Link href="/solutions/sm-posts">
         <div className="flex w-full gap-2">
           <div className="group relative w-full overflow-hidden p-2 py-4 transition-colors duration-150 hover:bg-accent">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
@@ -346,7 +346,7 @@ const features = [
     name: "",
     className: "col-span-4  md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
-      <Link href="/services/website-design">
+      <Link href="/solutions/website-design">
         <div className="flex w-full gap-2">
           <div className="group relative w-full overflow-hidden p-2 py-4 transition-colors duration-150 hover:bg-accent">
             <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">

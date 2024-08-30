@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { cn } from "@designali/ui";
-import { Button, buttonVariants } from "@designali/ui/button";
+import { buttonVariants } from "@designali/ui/button";
 import {
   Tooltip,
   TooltipContent,
@@ -17,7 +17,7 @@ import { UpdatesToolbar } from "./shate-toolbar";
 const ShareLink = ({ name }: { name: string }) => {
   return (
     <div className="flex gap-2">
-      <Link href={`/services/${name}/#reviews`}>
+      <Link href={`/solutions/${name}/#reviews`}>
         <TooltipProvider delayDuration={20}>
           <Tooltip>
             <TooltipTrigger

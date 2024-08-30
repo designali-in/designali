@@ -18,7 +18,7 @@ import { PhoneLoginButton } from "./sign-in";
 
 const navigation = [
   { name: "About AI", href: "/about", current: true },
-  { name: "Services", href: "/services", current: true },
+  { name: "Solutions", href: "/solutions", current: true },
   { name: "Products", href: "/products", current: true },
   { name: "Works", href: "/works", current: true },
   { name: "Tools", href: "/tools", current: true },

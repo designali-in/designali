@@ -6,9 +6,7 @@ import {
 } from "@designali/ui/accordion";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@designali/ui/card";
@@ -30,7 +28,12 @@ export function Process() {
         <AccordionItem value="item-1">
           <AccordionTrigger>01. Strategy.</AccordionTrigger>
           <AccordionContent>
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-4">
+              <Card className="">
+                <p className="flex h-full items-center justify-center text-center text-9xl font-semibold text-ali">
+                  01.
+                </p>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>1.1 Brand Evaluation</CardTitle>
@@ -68,7 +71,12 @@ export function Process() {
         <AccordionItem value="item-2">
           <AccordionTrigger>02. Concept.</AccordionTrigger>
           <AccordionContent>
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-4">
+              <Card className="">
+                <p className="flex h-full items-center justify-center text-center text-9xl font-semibold text-ali">
+                  02.
+                </p>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>2.1 Positioning</CardTitle>
@@ -105,7 +113,12 @@ export function Process() {
         <AccordionItem value="item-3">
           <AccordionTrigger>03. Design.</AccordionTrigger>
           <AccordionContent>
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-4">
+              <Card className="">
+                <p className="flex h-full items-center justify-center text-center text-9xl font-semibold text-ali">
+                  03.
+                </p>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>3.1 Big Idea Amplification</CardTitle>
@@ -140,7 +153,12 @@ export function Process() {
         <AccordionItem value="item-4">
           <AccordionTrigger>04. Execution.</AccordionTrigger>
           <AccordionContent>
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-4">
+              <Card className="">
+                <p className="flex h-full items-center justify-center text-center text-9xl font-semibold text-ali">
+                  04.
+                </p>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>4.1 Asset Creation</CardTitle>
