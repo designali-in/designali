@@ -6,7 +6,6 @@ import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/services/products/branding/about";
 import { Banner } from "@/src/components/services/products/branding/banner";
 import ReviewList from "@/src/components/services/review-list";
-import { Related } from "@/src/components/services/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,
