@@ -6,8 +6,7 @@ import Link from "next/link";
 
 import "@/styles/text.css";
 
-import { cn } from "@designali/ui";
-import { Button, buttonVariants } from "@designali/ui/button";
+import { Button } from "@designali/ui/button";
 
 import { renderCanvas } from "../common/render";
 import { TypeWriter } from "../common/type";
@@ -53,6 +52,9 @@ const Hero = () => {
         <div className="mb-10 mt-4 md:mt-6">
           <div className="px-2">
             <div className="relative mx-auto h-full max-w-6xl border border-slate-200 p-6 [mask-image:radial-gradient(200rem_24rem_at_center,white,transparent)] dark:border-slate-800 md:p-12">
+              <span className="absolute bottom-20 right-40 hidden p-2 px-4 text-xs text-ali md:block">
+                Design in India
+              </span>
               <h1 className="flex select-none flex-col px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
                 <Icons.plus
                   strokeWidth={0.5}

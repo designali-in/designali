@@ -5,6 +5,8 @@ import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/services/products/branding/about";
 import { Banner } from "@/src/components/services/products/branding/banner";
+import { BrandingCars } from "@/src/components/services/products/branding/card";
+import { Process } from "@/src/components/services/products/branding/process";
 import ReviewList from "@/src/components/services/review-list";
 import { auth } from "@designali/auth";
 import {
@@ -17,7 +19,11 @@ import {
 } from "@designali/ui/breadcrumb";
 import { Button } from "@designali/ui/button";
 
-import Branding from "./branding";
+export const metadata = {
+  title: "Branding - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
 
 export default async function Home() {
   const product = await getProductBySlug("branding");
@@ -29,7 +35,7 @@ export default async function Home() {
         description={`I am dedicated to creating premium branding solutions 
                       exclusively for small enterprises with grand aspirations.`}
       />
-      <div className="mt-10 flex justify-center">
+      <div className="mt-4 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -47,8 +53,9 @@ export default async function Home() {
         </Breadcrumb>
       </div>
       <Banner />
+      <BrandingCars />
+      <Process />
       <About />
-      <Branding />
       <div id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">

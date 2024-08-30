@@ -9,6 +9,12 @@ import { LinkForm } from "@/src/components/tools/links/link-form";
 import { LinkList } from "@/src/components/tools/links/link-list";
 import { Loader } from "@designali/ui/loader";
 
+export const metadata = {
+  title: "Tools - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default function HomePage() {
   return (
     <main className="mx-auto mt-20 max-w-7xl px-6 md:mt-40">

@@ -13,6 +13,12 @@ import { Plus } from "dicons";
 
 import { Avegra } from "../../fonts";
 
+export const metadata = {
+  title: "About - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default function HomePage() {
   return (
     <main className="px-6">

@@ -180,7 +180,7 @@ export function ImageZoomTwo({ images }: { images: any }) {
 export function ImageZoomThree({ images }: { images: any }) {
   return (
     <>
-      <div className="grid gap-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
         {images.map((image: any) => (
           <ImageZoom>
             <Image

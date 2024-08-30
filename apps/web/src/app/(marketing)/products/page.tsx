@@ -1,9 +1,14 @@
 import { FAQ } from "@/components/home/faq";
-import PageTitle from "@/src/components/mdx/page-title";
 import { Graaadients } from "@/src/components/services/products/cards";
 import { cn } from "@designali/ui";
 
 import { Avegra } from "../../fonts";
+
+export const metadata = {
+  title: "Products - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
 
 export default function Home() {
   return (

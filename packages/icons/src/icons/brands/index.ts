@@ -1,5 +1,6 @@
 export * from "./Apple";
 export * from "./Behance";
+export * from "./BehanceFull";
 export * from "./LinkedIn";
 export * from "./YouTube";
 export * from "./Facebook";

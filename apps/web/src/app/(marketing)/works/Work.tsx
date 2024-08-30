@@ -1,17 +1,17 @@
 import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 
-import Modals from "./creatives/3d";
-import Campaigns from "./creatives/campaigns";
-import SMCreative from "./creatives/creative";
-import SMFestive from "./creatives/festive";
-import Logos from "./creatives/logos";
-import Music from "./creatives/music";
-import Others from "./creatives/others";
-import Packaging from "./creatives/packaging";
-import Reels from "./creatives/reels";
-import UIUX from "./creatives/uiux";
-import Videos from "./creatives/videos";
+import Modals from "./_creatives/3d";
+import Campaigns from "./_creatives/campaigns";
+import SMCreative from "./_creatives/creative";
+import SMFestive from "./_creatives/festive";
+import Logos from "./_creatives/logos";
+import Music from "./_creatives/music";
+import Others from "./_creatives/others";
+import Packaging from "./_creatives/packaging";
+import Reels from "./_creatives/reels";
+import UIUX from "./_creatives/uiux";
+import Videos from "./_creatives/videos";
 
 export function Work() {
   return (

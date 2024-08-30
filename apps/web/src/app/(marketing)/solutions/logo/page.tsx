@@ -21,6 +21,12 @@ import { Button } from "@designali/ui/button";
 
 import Branding from "./logo";
 
+export const metadata = {
+  title: "Logo - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default async function Home() {
   const product = await getProductBySlug("logo");
   const session = await auth();

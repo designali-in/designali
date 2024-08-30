@@ -6,6 +6,12 @@ import { ScrollProgress } from "@/src/components/ui/scroll-progress";
 
 const colors = getColors();
 
+export const metadata = {
+  title: "Colors - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default function HomePage() {
   return (
     <main className="mx-auto my-20 mt-40 max-w-7xl px-6">

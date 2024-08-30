@@ -3,6 +3,12 @@ import { FAQ } from "@/components/home/faq";
 import { Related, Services } from "@/components/services/services";
 import PageTitle from "@/src/components/mdx/page-title";
 
+export const metadata = {
+  title: "Solutions - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default function HomePage() {
   return (
     <div>

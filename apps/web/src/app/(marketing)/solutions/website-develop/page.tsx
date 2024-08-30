@@ -20,6 +20,12 @@ import {
 } from "@designali/ui/breadcrumb";
 import { Button } from "@designali/ui/button";
 
+export const metadata = {
+  title: "Website Develop - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default async function Home() {
   const product = await getProductBySlug("website-develop");
   const session = await auth();
