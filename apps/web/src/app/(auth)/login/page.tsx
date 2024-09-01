@@ -7,19 +7,25 @@ import { Card, CardContent } from "@designali/ui/card";
 import { Input } from "@designali/ui/input";
 import { toast } from "@designali/ui/toaster";
 
+export const metadata = {
+  title: "Log In - Designali",
+  description:
+    "This section includes end-to-end guides for developing Next.js 13 apps.",
+};
+
 export default function Page() {
   return (
     <div>
       <section className="relative h-full overflow-hidden bg-[linear-gradient(to_bottom,#bfdbfe_40%,#fff_80%)] dark:bg-[linear-gradient(to_bottom,#1e40af_40%,#000_80%)]">
         <div className="absolute left-0 top-0 z-0 grid h-full w-full grid-cols-[clamp(28px,10vw,120px)_auto_clamp(28px,10vw,120px)]">
           <div className="col-span-1 flex h-full items-center justify-center" />
-          <div className="col-span-1 flex h-full items-center justify-center border-x border-black/20 dark:border-white/20" />
+          <div className="col-span-1 flex h-full items-center justify-center border-x border-blue-300 dark:border-blue-700" />
           <div className="col-span-1 flex h-full items-center justify-center" />
         </div>
         <figure className="bg-accent-500/40 pointer-events-none absolute -bottom-[70%] left-1/2 z-0 block aspect-square w-[520px] -translate-x-1/2 rounded-full blur-[200px]" />
         <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute left-[4vw] top-[64px] z-20 hidden aspect-square w-[32vw] rounded-full opacity-50 blur-[100px] md:block" />
         <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full opacity-50 blur-[100px] md:block" />
-        <div className="relative z-10 flex flex-col divide-y divide-black/20 pt-[35px] dark:divide-white/20">
+        <div className="relative z-10 flex flex-col divide-y divide-blue-300 dark:divide-blue-700">
           <div className="mx-auto flex h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-10 lg:px-24">
             <h1 className="text-text-primary dark:text-dark-text-primary text-pretty text-center text-4xl font-medium leading-none tracking-[-1.44px] sm:text-5xl md:max-w-screen-lg md:text-6xl md:tracking-[-2.16px] lg:text-[clamp(50px,7vw,75px)]">
               Log in to your account
