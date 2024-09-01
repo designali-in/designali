@@ -160,6 +160,7 @@ import {
   CircleGauge,
   CircleHelp,
   CirclePercent,
+  CirclePlus,
   CircleUser,
   CircleUserRound,
   ClipboardCopy,
@@ -232,6 +233,7 @@ import {
   GitPullRequestCreate,
   GitPullRequestCreateArrow,
   Glasses,
+  Grab,
   GraduationCap,
   Hand,
   HandCoins,
@@ -265,6 +267,9 @@ import {
   Link,
   Link2,
   LinkedIn,
+  Loader,
+  LoaderCricle,
+  LoaderPinwheel,
   LogIn,
   LogOut,
   Mail,
@@ -345,6 +350,9 @@ import {
   PanelTopClose,
   PanelTopOpen,
   PawPrint,
+  Pencil,
+  PencilOff,
+  PenTool,
   PersonStanding,
   PhilippinePeso,
   Phone,
@@ -357,6 +365,8 @@ import {
   Pin,
   Play,
   Plus,
+  Pointer,
+  PointerOff,
   PoundSterling,
   Presentation,
   Printer,
@@ -433,6 +443,7 @@ import {
   Smile,
   SmilePlus,
   Snail,
+  Sparkles,
   Speech,
   Split,
   SquareActivity,
@@ -464,6 +475,7 @@ import {
   SquareUser,
   SquareUserRound,
   Squirrel,
+  Stamp,
   Star,
   StepBack,
   StepForward,
@@ -480,6 +492,9 @@ import {
   SwitchCamera,
   Tag,
   Tags,
+  Text,
+  TextCursor,
+  TextSelect,
   Theater,
   ThumbsDown,
   ThumbsUp,
@@ -538,6 +553,8 @@ import {
   WalletCards,
   WalletMinimal,
   Wallpaper,
+  Wand,
+  WandSparkles,
   Warehouse,
   Waypoints,
   Webcam,
@@ -558,6 +575,8 @@ export type DIcon = DesignaliIcon;
 export type ValidIcon = keyof typeof DIcons;
 
 export const DIcons = {
+  // Accessibility
+
   Accessibility,
   Baby,
   BadgeHelp,
@@ -586,6 +605,8 @@ export const DIcons = {
   ZoomIn,
   ZoomOut,
 
+  // Buildings
+
   Anvil,
   BrickWall,
   Building,
@@ -609,6 +630,8 @@ export const DIcons = {
   University,
   UtilityPole,
   Warehouse,
+
+  // Accounts & Access
 
   Activity,
   AtSign,
@@ -787,6 +810,8 @@ export const DIcons = {
   WebhookOff,
   Wrench,
 
+  // Animals
+
   Bird,
   Bone,
   Bug,
@@ -807,6 +832,8 @@ export const DIcons = {
   Squirrel,
   Turtle,
   Worm,
+
+  // Arrow
 
   ArrowBigDown,
   ArrowBigDownDash,
@@ -1006,6 +1033,8 @@ export const DIcons = {
   Upload,
   WrapText,
 
+  // Brands
+
   X,
   Apple,
   Behance,
@@ -1016,6 +1045,8 @@ export const DIcons = {
   Instagram,
   Nike,
   WhatsApp,
+
+  // Charts
 
   ChartArea,
   ChartBar,
@@ -1047,6 +1078,8 @@ export const DIcons = {
   SquareKanban,
   TrendingDown,
   TrendingUp,
+
+  // Communication
 
   Antenna,
   AudioLine,
@@ -1092,6 +1125,8 @@ export const DIcons = {
   VolumeX,
   Webcam,
 
+  // Currency
+
   Banknote,
   Bitcoin,
   CircleDollarSign,
@@ -1112,6 +1147,26 @@ export const DIcons = {
   ReceiptSwissFranc,
   RussianRubie,
   SwissFranc,
+
+  // Cursor
+
+  CirclePlus,
+  Grab,
+  Loader,
+  LoaderCricle,
+  LoaderPinwheel,
+  Pencil,
+  PencilOff,
+  PenTool,
+  Pointer,
+  PointerOff,
+  Sparkles,
+  Stamp,
+  Text,
+  TextCursor,
+  TextSelect,
+  Wand,
+  WandSparkles,
 
   Plus,
   Scissors,

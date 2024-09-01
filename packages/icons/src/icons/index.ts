@@ -7,4 +7,5 @@ export * from "./building";
 export * from "./communication";
 export * from "./currency";
 export * from "./charts";
+export * from "./cursors";
 export * from "./shapes";
