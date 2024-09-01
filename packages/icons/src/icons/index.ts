@@ -8,4 +8,5 @@ export * from "./communication";
 export * from "./currency";
 export * from "./charts";
 export * from "./cursors";
+export * from "./design";
 export * from "./shapes";
