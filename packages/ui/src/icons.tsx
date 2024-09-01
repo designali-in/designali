@@ -1,4 +1,6 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+import type { LucideIcon, LucideProps } from "lucide-react";
+import { cva } from "class-variance-authority";
 import {
   Calendar,
   Clipboard,
@@ -24,7 +26,6 @@ import {
   Trash2,
   User,
 } from "lucide-react";
-import type { LucideIcon, LucideProps } from "lucide-react";
 
 export type Icon = LucideIcon;
 

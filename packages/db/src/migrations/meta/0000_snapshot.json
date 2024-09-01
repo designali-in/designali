@@ -96,9 +96,7 @@
       "indexes": {
         "accounts_userId_idx": {
           "name": "accounts_userId_idx",
-          "columns": [
-            "user_id"
-          ],
+          "columns": ["user_id"],
           "isUnique": false
         }
       },
@@ -107,22 +105,15 @@
           "name": "account_user_id_user_id_fk",
           "tableFrom": "account",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {
         "account_provider_provider_account_id_pk": {
-          "columns": [
-            "provider",
-            "provider_account_id"
-          ],
+          "columns": ["provider", "provider_account_id"],
           "name": "account_provider_provider_account_id_pk"
         }
       },
@@ -164,9 +155,7 @@
       "indexes": {
         "sessions_userId_idx": {
           "name": "sessions_userId_idx",
-          "columns": [
-            "user_id"
-          ],
+          "columns": ["user_id"],
           "isUnique": false
         }
       },
@@ -175,12 +164,8 @@
           "name": "session_user_id_user_id_fk",
           "tableFrom": "session",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -293,10 +278,7 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {
         "verification_token_identifier_token_pk": {
-          "columns": [
-            "identifier",
-            "token"
-          ],
+          "columns": ["identifier", "token"],
           "name": "verification_token_identifier_token_pk"
         }
       },
@@ -443,12 +425,8 @@
           "name": "comment_user_id_user_id_fk",
           "tableFrom": "comment",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -456,12 +434,8 @@
           "name": "comment_post_id_post_slug_fk",
           "tableFrom": "comment",
           "tableTo": "post",
-          "columnsFrom": [
-            "post_id"
-          ],
-          "columnsTo": [
-            "slug"
-          ],
+          "columnsFrom": ["post_id"],
+          "columnsTo": ["slug"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -500,12 +474,8 @@
           "name": "rate_user_id_user_id_fk",
           "tableFrom": "rate",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -513,22 +483,15 @@
           "name": "rate_comment_id_comment_id_fk",
           "tableFrom": "rate",
           "tableTo": "comment",
-          "columnsFrom": [
-            "comment_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["comment_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {
         "rate_user_id_comment_id_pk": {
-          "columns": [
-            "comment_id",
-            "user_id"
-          ],
+          "columns": ["comment_id", "user_id"],
           "name": "rate_user_id_comment_id_pk"
         }
       },
@@ -581,12 +544,8 @@
           "name": "guestbook_user_id_user_id_fk",
           "tableFrom": "guestbook",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -645,9 +604,7 @@
       "indexes": {
         "userLinkId_idx": {
           "name": "userLinkId_idx",
-          "columns": [
-            "userLinkId"
-          ],
+          "columns": ["userLinkId"],
           "isUnique": false
         }
       },
@@ -656,12 +613,8 @@
           "name": "link_userLinkId_userLink_id_fk",
           "tableFrom": "link",
           "tableTo": "userLink",
-          "columnsFrom": [
-            "userLinkId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userLinkId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -706,9 +659,7 @@
       "indexes": {
         "userLinks_userId_idx": {
           "name": "userLinks_userId_idx",
-          "columns": [
-            "userId"
-          ],
+          "columns": ["userId"],
           "isUnique": true
         }
       },
@@ -717,12 +668,8 @@
           "name": "userLink_userId_user_id_fk",
           "tableFrom": "userLink",
           "tableTo": "user",
-          "columnsFrom": [
-            "userId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -804,9 +751,7 @@
       "indexes": {
         "product_slug_idx": {
           "name": "product_slug_idx",
-          "columns": [
-            "slug"
-          ],
+          "columns": ["slug"],
           "isUnique": true
         }
       },
@@ -874,12 +819,8 @@
           "name": "reviews_userId_user_id_fk",
           "tableFrom": "reviews",
           "tableTo": "user",
-          "columnsFrom": [
-            "userId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -887,12 +828,8 @@
           "name": "reviews_productId_product_id_fk",
           "tableFrom": "reviews",
           "tableTo": "product",
-          "columnsFrom": [
-            "productId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["productId"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }

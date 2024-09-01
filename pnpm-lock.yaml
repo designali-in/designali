@@ -592,6 +592,9 @@ importers:
 
   packages/icons:
     devDependencies:
+      '@designali/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
       tsup:
         specifier: ^8.2.4
         version: 8.2.4(jiti@1.21.6)(postcss@8.4.42)(typescript@5.5.4)(yaml@2.5.0)

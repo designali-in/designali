@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../../types";
+import type { DesignaliProps } from "../../types";
 
 export const SquareMousePointer = React.forwardRef<
   SVGSVGElement,

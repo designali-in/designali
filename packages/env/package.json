@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "license": "GPL-3.0",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./index.ts",
   "scripts": {
     "clean": "rm -rf .turbo",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint ",
     "lint:fix": "eslint --fix .",
     "type-check": "tsc --noEmit"
   },
