@@ -41,8 +41,8 @@ const navigation = {
           items: [
             { name: "Graaadients", href: "/products/graaadients" },
             { name: "3D Icons", href: "/products/3dicons" },
-            { name: "Branding", href: "/services/branding" },
-            { name: "Logo", href: "/services/logo" },
+            { name: "Branding", href: "/solutions/branding" },
+            { name: "Logo", href: "/solutions/logo" },
           ],
         },
         {
