@@ -10,7 +10,7 @@
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "-- tsx ./src/migrate.ts",
+    "db:migrate": "drizzle-kit migrate -- tsx ./src/migrate.ts",
     "db:push": " drizzle-kit push",
     "db:seed": "-- tsx ./src/seed.ts",
     "db:studio": "drizzle-kit studio",
