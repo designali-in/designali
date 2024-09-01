@@ -25,7 +25,7 @@ export default function Page() {
         <figure className="bg-accent-500/40 pointer-events-none absolute -bottom-[70%] left-1/2 z-0 block aspect-square w-[520px] -translate-x-1/2 rounded-full blur-[200px]" />
         <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute left-[4vw] top-[64px] z-20 hidden aspect-square w-[32vw] rounded-full opacity-50 blur-[100px] md:block" />
         <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full opacity-50 blur-[100px] md:block" />
-        <div className="relative z-10 flex flex-col divide-y divide-blue-300 dark:divide-blue-700">
+        <div className="relative z-10 flex flex-col divide-y divide-blue-300 pt-[35px] dark:divide-blue-700">
           <div className="mx-auto flex h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-10 lg:px-24">
             <h1 className="text-text-primary dark:text-dark-text-primary text-pretty text-center text-4xl font-medium leading-none tracking-[-1.44px] sm:text-5xl md:max-w-screen-lg md:text-6xl md:tracking-[-2.16px] lg:text-[clamp(50px,7vw,75px)]">
               Log in to your account
