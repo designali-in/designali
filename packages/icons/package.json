@@ -41,7 +41,7 @@
   "license": "MIT",
   "prettier": "@designali/prettier-config",
   "devDependencies": {
-    "tsup": "^8.1.0",
+    "tsup": "^8.2.4",
     "typescript": "^5.4.5"
   }
 }

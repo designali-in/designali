@@ -59,7 +59,7 @@ importers:
         version: 3.3.3
       tsup:
         specifier: ^8.2.4
-        version: 8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.2.4(jiti@1.21.6)(postcss@8.4.42)(typescript@5.5.3)(yaml@2.5.0)
       turbo:
         specifier: ^2.1.1
         version: 2.1.1
@@ -593,8 +593,8 @@ importers:
   packages/icons:
     devDependencies:
       tsup:
-        specifier: ^8.1.0
-        version: 8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.4)(yaml@2.4.5)
+        specifier: ^8.2.4
+        version: 8.2.4(jiti@1.21.6)(postcss@8.4.42)(typescript@5.5.4)(yaml@2.5.0)
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
@@ -21232,13 +21232,13 @@ snapshots:
       postcss: 8.4.40
       ts-node: 10.9.2(@types/node@22.5.1)(typescript@5.5.3)
 
-  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.40)(yaml@2.4.5):
+  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.42)(yaml@2.5.0):
     dependencies:
       lilconfig: 3.1.2
     optionalDependencies:
       jiti: 1.21.6
-      postcss: 8.4.40
-      yaml: 2.4.5
+      postcss: 8.4.42
+      yaml: 2.5.0
 
   postcss-nested@6.0.0(postcss@8.4.21):
     dependencies:
@@ -23020,7 +23020,7 @@ snapshots:
 
   tslib@2.7.0: {}
 
-  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.3)(yaml@2.4.5):
+  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.42)(typescript@5.5.3)(yaml@2.5.0):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
@@ -23032,14 +23032,14 @@ snapshots:
       globby: 11.1.0
       joycon: 3.1.1
       picocolors: 1.0.1
-      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.40)(yaml@2.4.5)
+      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.42)(yaml@2.5.0)
       resolve-from: 5.0.0
       rollup: 4.20.0
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
       tree-kill: 1.2.2
     optionalDependencies:
-      postcss: 8.4.40
+      postcss: 8.4.42
       typescript: 5.5.3
     transitivePeerDependencies:
       - jiti
@@ -23047,7 +23047,7 @@ snapshots:
       - tsx
       - yaml
 
-  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.40)(typescript@5.5.4)(yaml@2.4.5):
+  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.42)(typescript@5.5.4)(yaml@2.5.0):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
@@ -23059,14 +23059,14 @@ snapshots:
       globby: 11.1.0
       joycon: 3.1.1
       picocolors: 1.0.1
-      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.40)(yaml@2.4.5)
+      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.42)(yaml@2.5.0)
       resolve-from: 5.0.0
       rollup: 4.20.0
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
       tree-kill: 1.2.2
     optionalDependencies:
-      postcss: 8.4.40
+      postcss: 8.4.42
       typescript: 5.5.4
     transitivePeerDependencies:
       - jiti
