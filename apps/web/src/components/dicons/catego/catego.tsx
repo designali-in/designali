@@ -12,6 +12,7 @@ import { Building } from "./items/building";
 import { Charts } from "./items/charts";
 import { Communication } from "./items/communication";
 import { Cursor } from "./items/cursor";
+import { Design } from "./items/design";
 
 interface AccessProps {
   onChangeIcon;
@@ -24,6 +25,7 @@ interface AccessProps {
   filteredArrows;
   filteredCommunication;
   filteredCursor;
+  filteredDesign;
 }
 
 export const MainIcons = ({
@@ -37,6 +39,7 @@ export const MainIcons = ({
   filteredArrows,
   filteredCommunication,
   filteredCursor,
+  filteredDesign,
 }: AccessProps) => {
   return (
     <main id="categories">
@@ -80,6 +83,11 @@ export const MainIcons = ({
           onChangeIcon={onChangeIcon}
           settings={settings}
           filteredCursor={filteredCursor}
+        />
+        <Design
+          onChangeIcon={onChangeIcon}
+          settings={settings}
+          filteredDesign={filteredDesign}
         />
       </div>
     </main>

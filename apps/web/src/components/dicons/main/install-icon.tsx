@@ -3,6 +3,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { CodeBlock } from "@/src/components/mdx/layers/code-block";
 import { Button } from "@designali/ui/button";
@@ -26,7 +27,17 @@ export const InstallIcon = ({ settings }: InstallIconProps) => {
               (svg) files for displaying icons and symbols in digital and
               non-digital projects.
             </p>
+            <Link target="_blank" href={"https://www.npmjs.com/package/dicons"}>
+              <Image
+                src="/icons/npm.svg"
+                alt="Your Image"
+                height={100}
+                width={100}
+                className="h-4 w-auto"
+              />
+            </Link>
           </div>
+
           <ScrollArea>
             <div className="w-[400px] px-6 md:h-[800px]">
               <div className="">

@@ -38,6 +38,7 @@ import {
   DCommunication,
   DCursor,
 } from "../icons";
+import { DDesign } from "../icons/design";
 import { InstallIcon } from "../main/install-icon";
 import { Navigation } from "../main/nav";
 import { SideIcon } from "../main/side-icon";
@@ -287,6 +288,10 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
+  const filteredDesign = Object.keys(DDesign).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
   return (
     <main className={"md:flex"} id="categories">
       <SideIcon
@@ -340,6 +345,7 @@ export const DIconCategories = () => {
                         filteredCommunication={filteredCommunication}
                         filteredCursor={filteredCursor}
                         onChangeIcon={onChangeIcon}
+                        filteredDesign={filteredDesign}
                       />
                     </ScrollArea>
                   </div>
