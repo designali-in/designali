@@ -30,10 +30,10 @@
   },
   "devDependencies": {
     "@designali/prettier-config": "workspace:*",
-    "@turbo/gen": "^2.0.8",
+    "@turbo/gen": "^2.1.1",
     "prettier": "catalog:",
-    "tsup": "^8.1.0",
-    "turbo": "^2.0.14",
+    "tsup": "^8.2.4",
+    "turbo": "^2.1.1",
     "typescript": "catalog:"
   },
   "prettier": "@designali/prettier-config"
