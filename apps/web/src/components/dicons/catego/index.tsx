@@ -293,7 +293,7 @@ export const DIconCategories = () => {
   ) as ""[];
 
   return (
-    <main className={"md:flex"} id="categories">
+    <main className={"justify-between md:flex"} id="categories">
       <SideIcon
         settings={settings}
         svgRef={svgRef}
@@ -309,7 +309,7 @@ export const DIconCategories = () => {
         onFormChange={onFormChange}
         iconFill={settings.iconFill}
       />
-      <div className="">
+      <div className="w-full">
         <div className="">
           <div className="h-auto">
             <div ref={iconsWrapperRef}>
@@ -320,7 +320,7 @@ export const DIconCategories = () => {
                 onChangeSearchTerm={onChangeSearchTerm}
                 filteredDIcons={filteredDIcons}
               />
-              <div>
+              <div className="">
                 {filteredDIcons.length === 0 ? (
                   <div className="mt-20 grid gap-2 text-center">
                     <p>We couldn’t find an icon for that</p>
@@ -355,7 +355,7 @@ export const DIconCategories = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div>
         <InstallIcon settings={settings} />
       </div>
     </main>
