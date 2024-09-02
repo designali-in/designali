@@ -36,9 +36,10 @@ import {
   DArrows,
   DCharts,
   DCommunication,
+  DConnectivity,
   DCursor,
+  DDesign,
 } from "../icons";
-import { DDesign } from "../icons/design";
 import { InstallIcon } from "../main/install-icon";
 import { Navigation } from "../main/nav";
 import { SideIcon } from "../main/side-icon";
@@ -292,6 +293,10 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
+  const filteredConnectivity = Object.keys(DConnectivity).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
   return (
     <main className={"justify-between md:flex"} id="categories">
       <SideIcon
@@ -346,6 +351,7 @@ export const DIconCategories = () => {
                         filteredCursor={filteredCursor}
                         onChangeIcon={onChangeIcon}
                         filteredDesign={filteredDesign}
+                        filteredConnectivity={filteredConnectivity}
                       />
                     </ScrollArea>
                   </div>

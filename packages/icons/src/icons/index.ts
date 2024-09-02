@@ -5,6 +5,7 @@ export * from "./animals";
 export * from "./brands";
 export * from "./building";
 export * from "./communication";
+export * from "./connectivity";
 export * from "./currency";
 export * from "./charts";
 export * from "./cursors";

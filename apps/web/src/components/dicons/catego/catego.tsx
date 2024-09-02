@@ -11,6 +11,7 @@ import { Arrows } from "./items/arrows";
 import { Building } from "./items/building";
 import { Charts } from "./items/charts";
 import { Communication } from "./items/communication";
+import { Connectivity } from "./items/connectivity";
 import { Cursor } from "./items/cursor";
 import { Design } from "./items/design";
 
@@ -26,6 +27,7 @@ interface AccessProps {
   filteredCommunication;
   filteredCursor;
   filteredDesign;
+  filteredConnectivity;
 }
 
 export const MainIcons = ({
@@ -38,6 +40,7 @@ export const MainIcons = ({
   filteredCharts,
   filteredArrows,
   filteredCommunication,
+  filteredConnectivity,
   filteredCursor,
   filteredDesign,
 }: AccessProps) => {
@@ -78,6 +81,11 @@ export const MainIcons = ({
           onChangeIcon={onChangeIcon}
           settings={settings}
           filteredCommunication={filteredCommunication}
+        />
+        <Connectivity
+          onChangeIcon={onChangeIcon}
+          settings={settings}
+          filteredConnectivity={filteredConnectivity}
         />
         <Cursor
           onChangeIcon={onChangeIcon}

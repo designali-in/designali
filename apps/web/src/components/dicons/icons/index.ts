@@ -5,4 +5,6 @@ export * from "./arrows";
 export * from "./building";
 export * from "./charts";
 export * from "./communication";
+export * from "./connectivity";
+export * from "./design";
 export * from "./cursor";
