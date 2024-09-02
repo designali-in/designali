@@ -369,7 +369,7 @@ const features = [
 
 export function DBentoGrid() {
   return (
-    <BentoGrid>
+    <BentoGrid className="px-6">
       {features.map((feature, idx) => (
         <BentoCard key={idx} {...feature} />
       ))}
