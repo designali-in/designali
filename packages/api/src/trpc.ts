@@ -9,6 +9,7 @@
 import type { Session } from "@designali/auth";
 import { auth, validateToken } from "@designali/auth";
 import { db } from "@designali/db";
+import { User } from "@designali/db/src/schema";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
@@ -17,6 +18,21 @@ const isomorphicGetSession = async (headers: Headers) => {
   const authToken = headers.get("Authorization") ?? null;
   if (authToken) return validateToken(authToken);
   return auth();
+};
+
+
+type CreateContextOptions = {
+  session: Session | null;
+  
+  user?: User | null;
+ 
+};
+
+export const createInnerTRPCContext = (opts: CreateContextOptions) => {
+  return {
+    ...opts,
+    db,
+  };
 };
 
 export const createTRPCContext = async (opts: {
@@ -46,7 +62,7 @@ export const DcreateTRPCContext = async (opts: { headers: Headers }) => {
   };
 };
 
-const t = initTRPC.context<typeof createTRPCContext>().create({
+export const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,
   errorFormatter: ({ shape, error }) => {
     return {
@@ -63,6 +79,7 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
 export const createCallerFactory = t.createCallerFactory;
 
 export const createTRPCRouter = t.router;
+export const mergeRouters = t.mergeRouters;
 
 const timingMiddleware = t.middleware(async ({ next, path }) => {
   const start = Date.now();
