@@ -206,6 +206,7 @@ export default function CallToActionSection() {
           </ShineBorder>
         </div>
       </div>
+
       <div className="-mt-0 md:-mt-12">
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative -mb-40 -mt-20 flex w-full flex-col items-center justify-center overflow-hidden md:mb-40">
