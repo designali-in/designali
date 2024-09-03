@@ -39,7 +39,7 @@ export default async function Home() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/services">Solutions</BreadcrumbLink>
+              <BreadcrumbLink href="/solutions">Solutions</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
