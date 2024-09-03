@@ -1,17 +1,26 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import { motion } from "framer-motion";
 
 import CountingNumbers from "./counting-numbers";
 
-export default function WebVitals({ value, duration }: { value; duration }) {
+export default function WebVitals({
+  value,
+  duration,
+  RoundValue,
+}: {
+  value;
+  duration;
+  RoundValue;
+}) {
   return (
     <div className="relative h-full w-full">
       <motion.svg className="" viewBox="0 0 100 100" width={100} height={100}>
         <motion.circle
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          whileInView={{ pathLength: 1 }}
+          whileInView={{ pathLength: RoundValue }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 2, ease: "easeOut" }}
           strokeWidth={7}

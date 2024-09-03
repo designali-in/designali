@@ -179,7 +179,7 @@ const features = [
       <div>
         <ScrollArea className="h-[600px]">
           <ImageZoomThree images={data.resources} />
-          <Link className="flex justify-center" href={"/works"}>
+          <Link className="my-6 flex justify-center" href={"/works"}>
             <Button>See More</Button>
           </Link>
         </ScrollArea>

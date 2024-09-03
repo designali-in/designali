@@ -114,19 +114,19 @@ const features = [
     background: (
       <div className="flex justify-center gap-2 lg:gap-8">
         <div className="grid justify-center gap-2">
-          <WebVitals value={98} duration={2500} />
+          <WebVitals value={98} duration={2500} RoundValue={0.98} />
           <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400">
             Performance
           </p>
         </div>
         <div className="grid justify-center gap-2">
-          <WebVitals value={96} duration={2500} />
+          <WebVitals value={96} duration={2500} RoundValue={0.96} />
           <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400">
             Best Practice
           </p>
         </div>
         <div className="grid justify-center gap-2">
-          <WebVitals value={100} duration={2500} />
+          <WebVitals value={100} duration={2500} RoundValue={1} />
           <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400">
             SEO
           </p>
@@ -237,7 +237,7 @@ const features = [
       <div>
         <ScrollArea className="h-[630px]">
           <ImageZoomThree images={data.resources} />
-          <Link className="flex justify-center" href={"/works"}>
+          <Link className="my-6 flex justify-center" href={"/works"}>
             <Button>See More</Button>
           </Link>
         </ScrollArea>
