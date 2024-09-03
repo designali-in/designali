@@ -7,6 +7,7 @@ import Projects from "@/src/components/common/projects";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/w-develop/about";
 import { Banner } from "@/src/components/solutions/products/w-develop/banner";
+import { WebsiteDevelopCards } from "@/src/components/solutions/products/w-develop/card";
 import ReviewList from "@/src/components/solutions/review-list";
 import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
@@ -32,7 +33,7 @@ export default async function Home() {
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
       <PageTitle title={product.name} description={`✌️ Under Construction`} />
-      <div className="mt-10 flex justify-center">
+      <div className="mt-4 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -40,7 +41,7 @@ export default async function Home() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/services">Services</BreadcrumbLink>
+              <BreadcrumbLink href="/services">Solutions</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -50,9 +51,9 @@ export default async function Home() {
         </Breadcrumb>
       </div>
       <Banner />
+      <WebsiteDevelopCards />
       <About />
       <Projects />
-      <Related />
       <div id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">

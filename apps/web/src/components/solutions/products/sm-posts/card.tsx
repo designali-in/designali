@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@designali/ui/saccordion";
+import { ScrollArea } from "@designali/ui/scroll-area";
 import { FileTextIcon } from "@radix-ui/react-icons";
 import { DIcons } from "dicons";
 import { BellIcon, Share2Icon } from "lucide-react";
@@ -18,7 +19,7 @@ import { BellIcon, Share2Icon } from "lucide-react";
 const data = await cloudinary.v2.search
   .expression(`folder:creatives/creative/*`)
   .sort_by("created_at", "desc")
-  .max_results(9)
+  .max_results(18)
   .execute();
 
 const features = [
@@ -176,7 +177,12 @@ const features = [
     className: "col-span-8 p-3 md:col-span-4 lg:col-span-5",
     background: (
       <div>
-        <ImageZoomThree images={data.resources} />
+        <ScrollArea className="h-[600px]">
+          <ImageZoomThree images={data.resources} />
+          <Link className="flex justify-center" href={"/works"}>
+            <Button>See More</Button>
+          </Link>
+        </ScrollArea>
       </div>
     ),
   },

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from "react";
 
 import type { DesignaliIcon, DesignaliProps } from "./types";
@@ -243,6 +242,7 @@ import {
   Factory,
   FastForward,
   Fence,
+  Figma,
   FileAxis3d,
   FileDown,
   FileInput,
@@ -418,12 +418,14 @@ import {
   MoveUpRight,
   MoveVertical,
   Newspaper,
+  Nextjs,
   Nfc,
   Nike,
   Nootbook,
   NootbookTabs,
   Notebook,
   NotebookTabs,
+  NPM,
   Origami,
   PaintRoller,
   Palette,
@@ -639,6 +641,7 @@ import {
   TrendingUp,
   Turtle,
   Tv,
+  Typescript,
   Undo,
   Undo2,
   UndoDot,
@@ -666,6 +669,8 @@ import {
   UserX,
   UtilityPole,
   ValentineMask,
+  Vercel,
+  VercelFull,
   Vibrate,
   VibrateOff,
   Video,
@@ -695,6 +700,7 @@ import {
   WifiLow,
   WifiOff,
   WifiZero,
+  Wordpress,
   Worm,
   WrapText,
   Wrench,
@@ -1175,12 +1181,19 @@ export const DIcons = {
   Apple,
   Behance,
   BehanceFull,
+  Figma,
   LinkedIn,
+  NPM,
+  Nextjs,
   YouTube,
   Facebook,
   Instagram,
   Nike,
+  Vercel,
+  VercelFull,
+  Wordpress,
   WhatsApp,
+  Typescript,
 
   // Charts
 

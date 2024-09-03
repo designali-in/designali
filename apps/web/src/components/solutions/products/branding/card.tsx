@@ -76,19 +76,11 @@ const features = [
               className="h-[50px] w-full md:h-[80px]"
             />
           </div>
-          <div className="grid items-center gap-2">
-            <p className="font-mono text-xs text-slate-600 dark:text-slate-400">
+          <div className="grid items-center justify-center gap-2">
+            <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400">
               Featured in
             </p>
-            <div>
-              <Image
-                src="/icons/behance.svg"
-                alt="Your Image"
-                height={20}
-                width={100}
-                className="h-full w-[50px] md:w-[120px]"
-              />
-            </div>
+            <DIcons.BehanceFull className="h-auto w-40 text-blue-500" />
           </div>
           <div className="hidden items-center gap-2 lg:grid">
             <p className="font-mono text-xs text-slate-600 dark:text-slate-400">
