@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
+import { Button, buttonVariants } from "@designali/ui/button";
 import { useAnimate } from "framer-motion";
 
 import { Icons } from "../icons";
@@ -132,18 +132,25 @@ export const Connect: React.FC = () => {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <Link
+                        href={"https://cal.com/aliimam/designali"}
+                        target="_blank"
+                      >
+                        <Button variant="ali" size="lg">
+                          Book a call
+                        </Button>
+                      </Link>
+                      <Link
                         href="mailto:contact@designali.in"
                         target="_blank"
                         className={cn(
                           buttonVariants({
-                            variant: "default",
-                            size: "lg",
+                            variant: "outline",
+                            size: "lgicon",
                           }),
                         )}
                       >
                         <span className="flex items-center gap-1">
-                          <Icons.mail className="h-3 w-3" />
-                          Contact AI
+                          <Icons.mail strokeWidth={1} className="h-5 w-5" />
                         </span>
                       </Link>
                       <Link
@@ -151,14 +158,13 @@ export const Connect: React.FC = () => {
                         target="_blank"
                         className={cn(
                           buttonVariants({
-                            variant: "default",
-                            size: "lg",
+                            variant: "outline",
+                            size: "lgicon",
                           }),
                         )}
                       >
                         <span className="flex items-center gap-1">
-                          <Icons.whatsapp className="w-3" />
-                          Join Whatsapp
+                          <Icons.whatsapp strokeWidth={1} className="h-4 w-4" />
                         </span>
                       </Link>
                     </div>

@@ -13,6 +13,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        ali: "bg-ali text-white",
         default:
           "bg-primary text-primary-foreground hover:bg-ali hover:text-white",
         destructive:
