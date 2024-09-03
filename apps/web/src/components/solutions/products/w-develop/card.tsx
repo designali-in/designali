@@ -6,7 +6,6 @@ import { ImageZoomThree } from "@/components/common/gallery";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import cloudinary from "@/lib/cloudinary";
 import { TypeWriter } from "@/src/components/common/type";
-import Safari from "@/src/components/ui/safari";
 import WebVitals from "@/src/components/ui/web-vitals";
 import { Button } from "@designali/ui/button";
 import {
