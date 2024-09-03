@@ -6,6 +6,7 @@ import { ImageZoomThree } from "@/components/common/gallery";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import cloudinary from "@/lib/cloudinary";
 import { TypeWriter } from "@/src/components/common/type";
+import Safari from "@/src/components/ui/safari";
 import WebVitals from "@/src/components/ui/web-vitals";
 import { Button } from "@designali/ui/button";
 import {
@@ -205,6 +206,23 @@ const features = [
             </AccordionItem>
           </Accordion>
         </div>
+
+        <div>
+          <video
+            className="object-fit h-full w-full rounded-md object-cover py-3"
+            loop
+            muted
+            autoPlay
+            src={
+              "https://utfs.io/f/e3b1520f-8611-4b55-83fd-34ae09678b65-xd0uuu.mp4"
+            }
+            width={300}
+            height={200}
+          />
+          <Link className="flex justify-center" href={"/dicons"}>
+            <Button variant="outline">DIcons</Button>
+          </Link>
+        </div>
       </div>
     ),
   },
@@ -218,7 +236,7 @@ const features = [
     className: "col-span-8 p-3 md:col-span-4 lg:col-span-5",
     background: (
       <div>
-        <ScrollArea className="h-[600px]">
+        <ScrollArea className="h-[630px]">
           <ImageZoomThree images={data.resources} />
           <Link className="flex justify-center" href={"/works"}>
             <Button>See More</Button>

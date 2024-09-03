@@ -75,7 +75,6 @@ export default async function Home() {
           </Link>
         )}
       </div>
-      <FAQ />
       <Connect />
     </div>
   );
