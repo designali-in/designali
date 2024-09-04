@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mx-auto -mt-20 max-w-[80rem] px-6 text-center md:px-8"
+      className="relative mx-auto -mt-20 max-w-7xl px-6 text-center xl:px-0"
     >
       <div
         ref={ref}

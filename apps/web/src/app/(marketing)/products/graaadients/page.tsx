@@ -105,7 +105,7 @@ export default async function AboutAI() {
           All gradients are 100% free.
         </p>
       </div>
-      <div className="mx-auto mt-10 max-w-5xl px-4 sm:px-6">
+      <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
         <Grads />
       </div>
       <div className="mx-auto mt-10 flex max-w-5xl justify-center px-4 sm:px-6">

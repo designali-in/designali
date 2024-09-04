@@ -46,7 +46,7 @@ const FAQList: FAQProps[] = [
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="mx-auto max-w-4xl py-24">
+    <section id="faq" className="mx-auto max-w-7xl py-24">
       <div className="mb-8 text-center">
         <h1 className="text-center text-3xl font-semibold md:text-5xl">
           Commonly Asked Questions

@@ -83,8 +83,8 @@ export function Grid5({ images }: { images: any }) {
               <Image
                 src={image.secure_url}
                 alt={image.secure_url}
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
               />
             </PhotoView>
@@ -105,8 +105,8 @@ export function Grid5BG({ images }: { images: any }) {
               <Image
                 src={image.secure_url}
                 alt={image.secure_url}
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className="rounded-xl border border-slate-200 bg-slate-100 hover:cursor-zoom-in hover:saturate-0 dark:border-slate-800 dark:bg-slate-900"
               />
             </PhotoView>

@@ -67,7 +67,7 @@ export default function Logos() {
             src="/logos/c5-1.png"
           />
 
-          <div className="hidden md:flex md:gap-10">
+          <div className="hidden xl:flex xl:gap-10">
             <Image
               alt="Ali Imam"
               className="block dark:hidden"

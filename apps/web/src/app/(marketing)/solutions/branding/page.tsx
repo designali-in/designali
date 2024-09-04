@@ -29,7 +29,7 @@ export default async function Home() {
   const product = await getProductBySlug("branding");
   const session = await auth();
   return (
-    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
+    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       <PageTitle
         title={product.name}
         description={`I am dedicated to creating premium branding solutions 

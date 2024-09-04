@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="mx-auto mt-20 max-w-7xl px-6 md:mt-40">
+    <main className="mx-auto mt-20 max-w-7xl px-6 md:mt-40 xl:px-0">
       <PageTitle
         title="Tools"
         description={`You can use any without any cost.`}

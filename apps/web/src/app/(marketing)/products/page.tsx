@@ -30,10 +30,10 @@ export default function Home() {
             <hr className="mx-auto my-4 mb-16 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
         </div>
-        <div className="mx-auto max-w-3xl px-6 md:max-w-7xl">
+        <div className="mx-auto max-w-3xl px-6 md:max-w-7xl xl:px-0">
           <Graaadients />
+          <FAQ />
         </div>
-        <FAQ />
       </div>
     </div>
   );

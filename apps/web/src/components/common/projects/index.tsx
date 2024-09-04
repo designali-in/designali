@@ -16,7 +16,7 @@ export default function Projects() {
   const [modal, setModal] = useState<ProjectModal>({ active: false, index: 0 });
 
   return (
-    <div className="mx-auto mb-20 max-w-3xl px-4 sm:px-6 md:max-w-5xl">
+    <div className="mx-auto mb-20 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       {projects.map((project, index) => (
         <motion.div
           key={project.title}

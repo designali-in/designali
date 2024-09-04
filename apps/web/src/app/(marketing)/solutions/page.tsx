@@ -18,7 +18,7 @@ export default function HomePage() {
         description={`The right price for you,  whoever you are`}
       />
       <DesignProcess />
-      <main className="mx-auto md:max-w-6xl">
+      <main className="mx-auto md:max-w-7xl">
         <Services />
         <Related />
         <FAQ />

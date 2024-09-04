@@ -96,7 +96,7 @@ export default async function AboutAI() {
           All 3D icons are 100% free.
         </p>
       </div>
-      <div className="mx-auto mt-10 max-w-5xl px-4 sm:px-6">
+      <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
         <Icooons />
       </div>
 

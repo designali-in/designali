@@ -83,7 +83,7 @@ export function Footer() {
         </Link>
       </div>
 
-      <p className="mx-auto max-w-5xl px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
+      <p className="mx-auto max-w-7xl px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
         Welcome to Designali, where creativity meets strategy to bring your
         vision to life. We are a dynamic design agency passionate about
         transforming ideas into compelling visual experiences. With a team of
@@ -95,7 +95,7 @@ export function Footer() {
         emotions, and drive meaningful connections. We believe in quality, not
         quantity.
       </p>
-      <div className="mx-auto max-w-5xl px-6 py-10">
+      <div className="mx-auto max-w-7xl px-6 py-10">
         <Separator />
         <div className="py-10">
           {navigation.categories.map((category) => (
@@ -207,7 +207,7 @@ export function Footer() {
         <ThemeToogle />
       </div>
 
-      <div className="mx-auto mb-10 mt-10 flex flex-col justify-between text-center text-xs md:max-w-5xl">
+      <div className="mx-auto mb-10 mt-10 flex flex-col justify-between text-center text-xs md:max-w-7xl">
         <div className="flex flex-row items-center justify-center gap-1 text-slate-600 dark:text-slate-400">
           <span> © </span>
           <span>{new Date().getFullYear()}</span>

@@ -53,7 +53,7 @@ export const Connect: React.FC = () => {
     );
   }, [animate]);
   return (
-    <section className="relative mx-auto my-20 max-w-5xl">
+    <section className="relative mx-auto my-20 max-w-7xl">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"

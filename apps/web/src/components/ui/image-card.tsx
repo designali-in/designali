@@ -31,13 +31,13 @@ export const CardStack = ({
                 alt={""}
                 loading="lazy"
                 className="w-xl -z-10 h-full rounded-2xl object-cover object-center"
-                width={1200}
+                width={1400}
                 height={800}
               />
               <div className="grid">
                 <div className="absolute top-0 p-6">
-                  <p className="text-4xl font-bold text-white ">{card.name}</p>
-                  <p className="font-normal text-white ">{card.designation}</p>
+                  <p className="text-4xl font-bold text-white">{card.name}</p>
+                  <p className="font-normal text-white">{card.designation}</p>
                 </div>
                 <div className="absolute bottom-6 flex px-6 text-xs text-white md:text-sm">
                   {card.content}
@@ -65,7 +65,7 @@ export const MiniCardStack = ({
       <div className="relative flex h-[200px] w-full">
         {cards.map((card) => {
           return (
-            <div key={card.id} className="flex h-full w-full  flex-col">
+            <div key={card.id} className="flex h-full w-full flex-col">
               <Image
                 src={card.src}
                 alt={""}
@@ -76,8 +76,8 @@ export const MiniCardStack = ({
               />
               <div className="grid">
                 <div className="p-6">
-                  <p className="text-2xl font-bold text-white ">{card.name}</p>
-                  <p className="font-normal text-white ">{card.designation}</p>
+                  <p className="text-2xl font-bold text-white">{card.name}</p>
+                  <p className="font-normal text-white">{card.designation}</p>
                 </div>
                 <div className="absolute bottom-6 flex px-6 text-xs text-white md:text-sm">
                   {card.content}

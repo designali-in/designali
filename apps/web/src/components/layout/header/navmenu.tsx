@@ -33,7 +33,7 @@ export function Menu() {
             </Link>
 
             <NavigationMenuContent>
-              <ul className="mx-auto grid max-w-5xl gap-3 md:px-6 lg:grid-cols-4">
+              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
@@ -101,7 +101,7 @@ export function Menu() {
             </Link>
 
             <NavigationMenuContent className="space-y-3">
-              <ul className="mx-auto grid max-w-5xl gap-3 md:px-6 lg:grid-cols-4">
+              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <ListItem href="/solutions/branding" title="Branding">
                   All gradients are 100% free.
                 </ListItem>
@@ -116,7 +116,7 @@ export function Menu() {
                   Download full pack
                 </ListItem>
               </ul>
-              <ul className="mx-auto grid max-w-5xl gap-3 md:px-6 lg:grid-cols-4">
+              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <ListItem
                   href="/solutions/website-design"
                   title="Website Design"
