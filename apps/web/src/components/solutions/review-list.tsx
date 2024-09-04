@@ -255,8 +255,8 @@ export default function ReviewList({
           to write a review
         </div>
       )}
-      <div className="grid gap-x-6 md:grid-cols-2">
-        {reviews.map((review) => (
+      <div className="grid gap-6 md:grid-cols-2">
+        {reviews.slice(0, 2).map((review) => (
           <Card className="h-full w-full" key={review.id}>
             <CardHeader>
               <div className="flex justify-between">
@@ -275,13 +275,13 @@ export default function ReviewList({
             <Separator />
             <div className="grid gap-y-3 p-6 text-sm text-muted-foreground md:flex md:w-full md:justify-between">
               <Rating value={review.rating} />
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <User className="mr-1 h-3 w-3" />
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-1">
+                  <User className="h-3 w-3" />
                   {review.user ? review.user.name : "Deleted User"}
                 </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="mr-1 h-3 w-3" />
+                <div className="flex items-center gap-1">
+                  <Calendar className="h-3 w-3" />
                   {formatDateTime(review.createdAt).dateOnly}
                 </div>
               </div>

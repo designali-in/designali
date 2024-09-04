@@ -71,7 +71,7 @@ const tiers = [
 
 export function BrandingPricing() {
   return (
-    <div className="mx-auto mt-6 max-w-7xl">
+    <div className="mx-auto max-w-7xl">
       <div className="grid gap-6 md:grid-cols-3">
         {tiers.map((tier) => (
           <HighlightGroup className="group">

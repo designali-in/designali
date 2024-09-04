@@ -13,10 +13,12 @@ export async function About() {
     <div className="mb-40 md:mb-20">
       <div className="">
         <div>
-          <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-3xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-5xl">
-            {product.headline}
-          </h1>
-          <p className="mt-2 text-slate-600 dark:text-slate-400">
+          <div className="flex justify-center">
+            <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-center text-3xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-5xl">
+              {product.headline}
+            </h1>
+          </div>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-slate-600 dark:text-slate-400">
             {product.description}
           </p>
           <div className="grid justify-between md:flex">
