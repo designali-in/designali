@@ -6,6 +6,7 @@ import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/brochure/about";
 import { Banner } from "@/src/components/solutions/products/brochure/banner";
+import { Include } from "@/src/components/solutions/products/w-develop/include";
 import ReviewList from "@/src/components/solutions/review-list";
 import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";

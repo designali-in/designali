@@ -211,7 +211,10 @@ export function Related() {
                       target="_blank"
                     >
                       <Button variant="outline" size="lgicon">
-                        <DIcons.ArrowUpRight strokeWidth={1} className="h-8" />
+                        <DIcons.ArrowUpRight
+                          strokeWidth={1}
+                          className="h-8 hover:rotate-45"
+                        />
                       </Button>
                     </Link>
                   </div>

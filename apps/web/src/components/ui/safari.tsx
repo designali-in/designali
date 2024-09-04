@@ -10,8 +10,8 @@ export interface SafariProps extends SVGProps<SVGSVGElement> {
 export default function Safari({
   src,
   url,
-  width,
-  height,
+  width = 1203,
+  height = 753,
   ...props
 }: SafariProps) {
   return (

@@ -8,6 +8,7 @@ import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/w-develop/about";
 import { Banner } from "@/src/components/solutions/products/w-develop/banner";
 import { WebsiteDevelopCards } from "@/src/components/solutions/products/w-develop/card";
+import { Include } from "@/src/components/solutions/products/w-develop/include";
 import ReviewList from "@/src/components/solutions/review-list";
 import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
@@ -53,6 +54,7 @@ export default async function Home() {
       <Banner />
       <WebsiteDevelopCards />
       <About />
+      <Include />
       <Projects />
       <div id="reviews">
         <div className="flex justify-center">

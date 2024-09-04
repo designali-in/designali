@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 import { BorderBeam } from "../ui/border-beam";
+import Safari from "../ui/safari";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -29,6 +30,7 @@ const Hero = () => {
             colorFrom="#ffffff"
             colorTo="#f50537"
           />
+
           <video
             className="object-fit relative h-full w-full object-cover"
             loop
