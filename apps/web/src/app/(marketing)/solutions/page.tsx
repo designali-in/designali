@@ -1,6 +1,7 @@
 import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
 import PageTitle from "@/src/components/mdx/page-title";
+import { DesignProcess } from "@/src/components/solutions/process";
 import { Related, Services } from "@/src/components/solutions/services";
 
 export const metadata = {
@@ -11,12 +12,13 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div>
-      <main className="mx-auto mt-28 max-w-3xl px-6 md:max-w-6xl">
-        <PageTitle
-          title="Design Solutions"
-          description={`The right price for you,  whoever you are`}
-        />
+    <div className="mt-28 px-6">
+      <PageTitle
+        title="Design Solutions"
+        description={`The right price for you,  whoever you are`}
+      />
+      <DesignProcess />
+      <main className="mx-auto md:max-w-6xl">
         <Services />
         <Related />
         <FAQ />
