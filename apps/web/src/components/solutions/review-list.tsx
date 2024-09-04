@@ -46,6 +46,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@designali/ui/select";
+import { Separator } from "@designali/ui/separator";
 import { Textarea } from "@designali/ui/textarea";
 import { useToast } from "@designali/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -132,7 +133,7 @@ export default function ReviewList({
   };
 
   return (
-    <div className="grid justify-center space-y-4">
+    <div className="grid justify-center space-y-6">
       {reviews.length === 0 && (
         <div className="text-center">No reviews yet</div>
       )}
@@ -254,9 +255,9 @@ export default function ReviewList({
           to write a review
         </div>
       )}
-      <div className="flex flex-wrap gap-3">
+      <div className="grid gap-x-6 md:grid-cols-2">
         {reviews.map((review) => (
-          <Card className="w-full" key={review.id}>
+          <Card className="h-full w-full" key={review.id}>
             <CardHeader>
               <div className="flex justify-between">
                 <CardTitle>{review.title}</CardTitle>
@@ -265,25 +266,26 @@ export default function ReviewList({
                   {""} Verified Purchase
                 </div>
               </div>
-              <CardDescription>
-                <p className="text-xl">{review.description}</p>
-              </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-y-3 text-sm text-muted-foreground md:flex md:justify-between">
-                <Rating value={review.rating} />
-                <div className="flex justify-between gap-2">
-                  <div className="flex items-center">
-                    <User className="mr-1 h-3 w-3" />
-                    {review.user ? review.user.name : "Deleted User"}
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="mr-1 h-3 w-3" />
-                    {formatDateTime(review.createdAt).dateOnly}
-                  </div>
+              <p className="h-[200px] py-4 text-xs md:h-[100px]">
+                {review.description}
+              </p>
+            </CardContent>
+            <Separator />
+            <div className="grid gap-y-3 p-6 text-sm text-muted-foreground md:flex md:w-full md:justify-between">
+              <Rating value={review.rating} />
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <User className="mr-1 h-3 w-3" />
+                  {review.user ? review.user.name : "Deleted User"}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="mr-1 h-3 w-3" />
+                  {formatDateTime(review.createdAt).dateOnly}
                 </div>
               </div>
-            </CardContent>
+            </div>
           </Card>
         ))}
         <div ref={ref}>{page < totalPages && "Loading..."}</div>
