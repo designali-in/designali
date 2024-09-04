@@ -6,6 +6,7 @@ import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/branding/about";
 import { Banner } from "@/src/components/solutions/products/branding/banner";
 import { BrandingCars } from "@/src/components/solutions/products/branding/card";
+import { BrandingPricing } from "@/src/components/solutions/products/branding/pricing";
 import { Process } from "@/src/components/solutions/products/branding/process";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
@@ -77,6 +78,7 @@ export default async function Home() {
           </Link>
         )}
       </div>
+      <BrandingPricing />
       <Connect />
     </div>
   );
