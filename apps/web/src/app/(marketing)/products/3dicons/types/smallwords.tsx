@@ -3,7 +3,7 @@ import cloudinary from "@/lib/cloudinary";
 
 export default async function SmallWords() {
   const data = await cloudinary.v2.search
-    .expression(`folder:products/3dicons/smallwords/*`)
+    .expression(`folder:products/3dicons/gradient/smallwords/*`)
     .sort_by("created_at", "desc")
     .max_results(400)
     .execute();

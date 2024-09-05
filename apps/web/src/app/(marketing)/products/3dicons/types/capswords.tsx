@@ -3,7 +3,7 @@ import cloudinary from "@/lib/cloudinary";
 
 export default async function CapsWords() {
   const data = await cloudinary.v2.search
-    .expression(`folder:products/3dicons/capswords/*`)
+    .expression(`folder:products/3dicons/gradient/capswords/*`)
     .sort_by("created_at", "desc")
     .max_results(400)
     .execute();
