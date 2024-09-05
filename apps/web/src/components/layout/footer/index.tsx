@@ -20,8 +20,8 @@ const navigation = {
           name: "About",
           items: [
             { name: "About", href: "/about" },
-            { name: "Pricing", href: "/pricing" },
             { name: "Works", href: "/works" },
+            { name: "Pricing", href: "/pricing" },
             { name: "Dashboard", href: "/app/dashboard/overview" },
           ],
         },
@@ -30,19 +30,19 @@ const navigation = {
           name: "Features",
           items: [
             { name: "Solutions", href: "/solutions" },
-            { name: "Products", href: "/products" },
-            { name: "Tools", href: "/tools" },
-            { name: "DIcons", href: "/dicons" },
+            { name: "Branding", href: "/solutions/branding" },
+            { name: "Social Media", href: "/solutions/sm-posts" },
+            { name: "Web Develop", href: "/solutions/website-develop" },
           ],
         },
         {
           id: "products",
           name: "Products",
           items: [
+            { name: "Products", href: "/products" },
+            { name: "DIcons", href: "/dicons" },
             { name: "Graaadients", href: "/products/graaadients" },
             { name: "3D Icons", href: "/products/3dicons" },
-            { name: "Branding", href: "/solutions/branding" },
-            { name: "Logo", href: "/solutions/logo" },
           ],
         },
         {
@@ -56,10 +56,17 @@ const navigation = {
           ],
         },
         {
+          id: "other",
+          name: "Others",
+          items: [
+            { name: "Colors", href: "/colors" },
+            { name: "Tools", href: "/tools" },
+          ],
+        },
+        {
           id: "company",
           name: "Company",
           items: [
-            { name: "Colors", href: "/colors" },
             { name: "Contact", href: "/contact" },
             { name: "Terms", href: "/terms" },
             { name: "Privacy", href: "/privacy" },
