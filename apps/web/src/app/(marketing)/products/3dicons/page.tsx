@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Avegra } from "@/app/fonts";
+import DotPattern from "@/components/ui/dot-pattern";
 import { auth } from "@designali/auth";
 import { cn } from "@designali/ui";
 import {
@@ -25,10 +26,18 @@ export default async function AboutAI() {
   const session = auth();
   return (
     <div className="my-40">
+      <DotPattern
+        width={5}
+        height={5}
+        className={cn(
+          "-z-50 [mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+        )}
+      />
       <div className="px-8">
         <p className="text-md text-center font-light uppercase tracking-widest lg:text-xl">
           Introducing
         </p>
+
         <div className="flex justify-center">
           <Image
             src="/images/products/3dicons.png"
