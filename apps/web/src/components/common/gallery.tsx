@@ -11,15 +11,15 @@ export function Grid2({ images }: { images: any }) {
   return (
     <>
       <PhotoProvider>
-        <div className="grid gap-2 md:grid-cols-2">
+        <div className="grid items-stretch gap-2 md:grid-cols-2">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
               <Image
                 src={image.secure_url}
                 alt={image.secure_url}
-                width={600}
+                width={700}
                 height={600}
-                className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+                className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
               />
             </PhotoView>
           ))}
@@ -33,7 +33,7 @@ export function Grid3({ images }: { images: any }) {
   return (
     <>
       <PhotoProvider>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
+        <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-3">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
               <Image
@@ -41,7 +41,7 @@ export function Grid3({ images }: { images: any }) {
                 alt={image.secure_url}
                 width={500}
                 height={500}
-                className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+                className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
               />
             </PhotoView>
           ))}
@@ -55,7 +55,7 @@ export function Grid4({ images }: { images: any }) {
   return (
     <>
       <PhotoProvider>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-4">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
               <Image
@@ -63,7 +63,7 @@ export function Grid4({ images }: { images: any }) {
                 alt={image.secure_url}
                 width={400}
                 height={400}
-                className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+                className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
               />
             </PhotoView>
           ))}
@@ -77,7 +77,7 @@ export function Grid5({ images }: { images: any }) {
   return (
     <>
       <PhotoProvider>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+        <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
               <Image
@@ -85,7 +85,7 @@ export function Grid5({ images }: { images: any }) {
                 alt={image.secure_url}
                 width={300}
                 height={300}
-                className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+                className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
               />
             </PhotoView>
           ))}
@@ -99,7 +99,7 @@ export function Grid5BG({ images }: { images: any }) {
   return (
     <>
       <PhotoProvider>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+        <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
               <Image
@@ -107,7 +107,7 @@ export function Grid5BG({ images }: { images: any }) {
                 alt={image.secure_url}
                 width={300}
                 height={300}
-                className="rounded-xl border border-slate-200 bg-slate-100 hover:cursor-zoom-in hover:saturate-0 dark:border-slate-800 dark:bg-slate-900"
+                className="rounded-xl border border-slate-200 bg-slate-100 object-cover hover:cursor-zoom-in hover:saturate-0 dark:border-slate-800 dark:bg-slate-900"
               />
             </PhotoView>
           ))}
@@ -121,7 +121,7 @@ export function Grid6({ images }: { images: any }) {
   return (
     <>
       <PhotoProvider>
-        <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
+        <div className="grid grid-cols-3 items-stretch gap-2 md:grid-cols-6">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
               <Image
@@ -129,7 +129,7 @@ export function Grid6({ images }: { images: any }) {
                 alt={image.secure_url}
                 width={200}
                 height={200}
-                className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+                className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
               />
             </PhotoView>
           ))}
@@ -160,7 +160,7 @@ export function IconsHome({ images }: { images: any }) {
 export function ImageZoomTwo({ images }: { images: any }) {
   return (
     <>
-      <div className="grid gap-2 md:grid-cols-2">
+      <div className="grid items-stretch gap-2 md:grid-cols-2">
         {images.map((image: any) => (
           <ImageZoom>
             <Image
@@ -168,7 +168,7 @@ export function ImageZoomTwo({ images }: { images: any }) {
               alt={image.secure_url}
               width={700}
               height={200}
-              className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+              className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
             />
           </ImageZoom>
         ))}
@@ -180,7 +180,7 @@ export function ImageZoomTwo({ images }: { images: any }) {
 export function ImageZoomThree({ images }: { images: any }) {
   return (
     <>
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-3">
         {images.map((image: any) => (
           <ImageZoom>
             <Image
@@ -188,7 +188,7 @@ export function ImageZoomThree({ images }: { images: any }) {
               alt={image.secure_url}
               width={700}
               height={200}
-              className="rounded-xl hover:cursor-zoom-in hover:saturate-0"
+              className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
             />
           </ImageZoom>
         ))}
