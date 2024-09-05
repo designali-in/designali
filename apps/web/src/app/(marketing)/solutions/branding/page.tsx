@@ -63,6 +63,7 @@ export default async function Home() {
             Reviews
           </h1>
         </div>
+
         {session ? (
           <ReviewList
             productId={product.id}
@@ -70,7 +71,7 @@ export default async function Home() {
             userId={session.user.id}
           />
         ) : (
-          <Link className="flex justify-center" href="/login">
+          <Link className="mb-6 flex justify-center" href="/login">
             <Button variant="outline" size="lg">
               Login to see the reviews
               <span className="sr-only">Buy now</span>
