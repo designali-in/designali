@@ -183,6 +183,7 @@ export default function ReviewList({
                           <FormLabel>Description</FormLabel>
                           <FormControl>
                             <Textarea
+                              className="h-40"
                               placeholder="Enter description"
                               {...field}
                             />

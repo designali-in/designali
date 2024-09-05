@@ -7,9 +7,9 @@
  * The pieces you will need to use are documented accordingly near the end
  */
 import type { Session } from "@designali/auth";
+import type { User } from "@designali/db/src/schema";
 import { auth, validateToken } from "@designali/auth";
 import { db } from "@designali/db";
-import { User } from "@designali/db/src/schema";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
@@ -20,13 +20,11 @@ const isomorphicGetSession = async (headers: Headers) => {
   return auth();
 };
 
-
-type CreateContextOptions = {
+interface CreateContextOptions {
   session: Session | null;
-  
+
   user?: User | null;
- 
-};
+}
 
 export const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
