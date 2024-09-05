@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import type { DesignaliProps } from "../../types";
+import { DesignaliProps } from "../../types";
 
-export const GitCompare = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const SquareLibrary = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,13 +18,13 @@ export const GitCompare = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <circle cx="18" cy="18" r="3" />
-        <circle cx="6" cy="6" r="3" />
-        <path d="M13 6h3a2 2 0 0 1 2 2v7" />
-        <path d="M11 18H8a2 2 0 0 1-2-2V9" />
+        <rect width="18" height="18" x="3" y="3" rx="2" />
+        <path d="M7 7v10" />
+        <path d="M11 7v10" />
+        <path d="m15 7 2 10" />
       </svg>
     );
   },
 );
 
-export default GitCompare;
+export default SquareLibrary;

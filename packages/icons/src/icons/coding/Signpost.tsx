@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../../types";
+import type { DesignaliProps } from "../../types";
 
-export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const Signpost = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,10 +18,12 @@ export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M22,12c0,2.76-1.12,5.26-2.93,7.07-1.81,1.81-4.31,2.93-7.07,2.93s-5.26-1.12-7.07-2.93-2.93-4.31-2.93-7.07,1.12-5.26,2.93-7.07,4.31-2.93,7.07-2.93,5.26,1.12,7.07,2.93,2.93,4.31,2.93,7.07Z" />
+        <path d="M12 13v8" />
+        <path d="M12 3v3" />
+        <path d="M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z" />
       </svg>
     );
   },
 );
 
-export default Circle;
+export default Signpost;

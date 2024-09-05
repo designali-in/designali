@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../../types";
+import type { DesignaliProps } from "../../types";
 
-export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const QrCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,10 +18,21 @@ export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M22,12c0,2.76-1.12,5.26-2.93,7.07-1.81,1.81-4.31,2.93-7.07,2.93s-5.26-1.12-7.07-2.93-2.93-4.31-2.93-7.07,1.12-5.26,2.93-7.07,4.31-2.93,7.07-2.93,5.26,1.12,7.07,2.93,2.93,4.31,2.93,7.07Z" />
+        <rect width="5" height="5" x="3" y="3" rx="1" />
+        <rect width="5" height="5" x="16" y="3" rx="1" />
+        <rect width="5" height="5" x="3" y="16" rx="1" />
+        <path d="M21 16h-3a2 2 0 0 0-2 2v3" />
+        <path d="M21 21v.01" />
+        <path d="M12 7v3a2 2 0 0 1-2 2H7" />
+        <path d="M3 12h.01" />
+        <path d="M12 3h.01" />
+        <path d="M12 16v.01" />
+        <path d="M16 12h1" />
+        <path d="M21 12v.01" />
+        <path d="M12 21v-1" />
       </svg>
     );
   },
 );
 
-export default Circle;
+export default QrCode;

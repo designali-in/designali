@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../../types";
+import type { DesignaliProps } from "../../types";
 
-export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const ToyBrick = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,10 +18,12 @@ export const Circle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M22,12c0,2.76-1.12,5.26-2.93,7.07-1.81,1.81-4.31,2.93-7.07,2.93s-5.26-1.12-7.07-2.93-2.93-4.31-2.93-7.07,1.12-5.26,2.93-7.07,4.31-2.93,7.07-2.93,5.26,1.12,7.07,2.93,2.93,4.31,2.93,7.07Z" />
+        <rect width="18" height="12" x="3" y="8" rx="1" />
+        <path d="M10 8V5c0-.6-.4-1-1-1H6a1 1 0 0 0-1 1v3" />
+        <path d="M19 8V5c0-.6-.4-1-1-1h-3a1 1 0 0 0-1 1v3" />
       </svg>
     );
   },
 );
 
-export default Circle;
+export default ToyBrick;

@@ -9,5 +9,6 @@ export * from "./connectivity";
 export * from "./currency";
 export * from "./charts";
 export * from "./cursors";
+export * from "./coding";
 export * from "./design";
 export * from "./shapes";

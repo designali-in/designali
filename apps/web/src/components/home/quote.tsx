@@ -1,7 +1,6 @@
 "use client";
 
 import DotPattern from "@/components/ui/dot-pattern";
-import { Separator } from "@designali/ui/separator";
 
 export function Quote() {
   return (

@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import "@/styles/text.css";
 
+import DotPattern from "@/components/ui/dot-pattern";
 import { Button } from "@designali/ui/button";
 
 import { renderCanvas } from "../common/render";
@@ -51,29 +52,30 @@ const Hero = () => {
 
         <div className="mb-10 mt-4 md:mt-6">
           <div className="px-2">
-            <div className="relative mx-auto h-full max-w-6xl border border-slate-200 p-6 [mask-image:radial-gradient(200rem_24rem_at_center,white,transparent)] dark:border-slate-800 md:p-12">
+            <div className="relative mx-auto h-full max-w-6xl border border-ali/50 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)] md:p-12">
               <span className="absolute bottom-20 right-40 hidden p-2 px-4 text-xs text-ali md:block">
                 Design in India
               </span>
               <h1 className="flex select-none flex-col px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
                 <Icons.plus
-                  strokeWidth={0.5}
-                  className="text-aired absolute -left-4 -top-4 h-8 w-8"
+                  strokeWidth={4}
+                  className="absolute -left-4 -top-4 h-8 w-8 text-ali"
                 />
                 <Icons.plus
-                  strokeWidth={0.5}
-                  className="text-aired absolute -bottom-4 -left-4 h-8 w-8"
+                  strokeWidth={4}
+                  className="absolute -bottom-4 -left-4 h-8 w-8 text-ali"
                 />
                 <Icons.plus
-                  strokeWidth={0.5}
-                  className="text-aired absolute -right-4 -top-4 h-8 w-8"
+                  strokeWidth={4}
+                  className="absolute -right-4 -top-4 h-8 w-8 text-ali"
                 />
                 <Icons.plus
-                  strokeWidth={0.5}
-                  className="text-aired absolute -bottom-4 -right-4 h-8 w-8"
+                  strokeWidth={4}
+                  className="absolute -bottom-4 -right-4 h-8 w-8 text-ali"
                 />
                 A design agency with a touch of magic.
               </h1>
+              <DotPattern className="-z-10 opacity-50" width={5} height={5} />
             </div>
           </div>
 

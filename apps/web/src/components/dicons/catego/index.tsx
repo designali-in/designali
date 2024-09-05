@@ -34,7 +34,9 @@ import {
   Animal,
   Buildings,
   DArrows,
+  DBrands,
   DCharts,
+  DCoding,
   DCommunication,
   DConnectivity,
   DCursor,
@@ -273,6 +275,10 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
+  const filteredBrands = Object.keys(DBrands).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
   const filteredCharts = Object.keys(DCharts).filter((key) =>
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
@@ -294,6 +300,10 @@ export const DIconCategories = () => {
   ) as ""[];
 
   const filteredConnectivity = Object.keys(DConnectivity).filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
+  ) as ""[];
+
+  const filteredCoding = Object.keys(DCoding).filter((key) =>
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
@@ -343,6 +353,7 @@ export const DIconCategories = () => {
                         settings={settings}
                         filteredBuildings={filteredBuildings}
                         filteredAccess={filteredAccess}
+                        filteredBrands={filteredBrands}
                         filteredAccount={filteredAccount}
                         filteredArrows={filteredArrows}
                         filteredCharts={filteredCharts}
@@ -352,6 +363,7 @@ export const DIconCategories = () => {
                         onChangeIcon={onChangeIcon}
                         filteredDesign={filteredDesign}
                         filteredConnectivity={filteredConnectivity}
+                        filteredCoding={filteredCoding}
                       />
                     </ScrollArea>
                   </div>

@@ -54,7 +54,7 @@ export const diconsConfig: DIconsConfig = {
           title: "Design",
         },
         {
-          href: "/dicons/categories#development",
+          href: "/dicons/categories#coding",
           title: "Coding & development",
         },
         {

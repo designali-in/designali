@@ -1,5 +1,5 @@
 export * from "./accessibility";
-export * from "./account";
+export * from "./accounts";
 export * from "./animals";
 export * from "./arrows";
 export * from "./building";
