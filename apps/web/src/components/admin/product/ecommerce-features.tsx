@@ -1,11 +1,11 @@
-import { Card, CardContent } from '@/components/ui/card'
-import { DollarSign, Headset, ShoppingBag, WalletCards } from 'lucide-react'
+import { Card, CardContent } from "@designali/ui/card";
+import { DollarSign, Headset, ShoppingBag, WalletCards } from "lucide-react";
 
 const EcommerceFeatures = () => {
   return (
     <div className="">
       <Card>
-        <CardContent className="grid gap-4 md:grid-cols-4 p-4 ">
+        <CardContent className="grid gap-4 p-4 md:grid-cols-4">
           <div className="space-y-2">
             <ShoppingBag />
             <div className="text-sm font-bold">Free Shipping</div>
@@ -39,7 +39,7 @@ const EcommerceFeatures = () => {
         </CardContent>
       </Card>
     </div>
-  )
-}
+  );
+};
 
-export default EcommerceFeatures
+export default EcommerceFeatures;

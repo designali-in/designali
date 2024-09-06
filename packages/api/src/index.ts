@@ -1,11 +1,19 @@
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 
 import type { AppRouter } from "./root";
+import { appRouter } from "./root";
+import { createCallerFactory } from "./trpc";
 
-export { createTRPCContext, createInnerTRPCContext } from "./trpc";
+export {
+  createTRPCContext,
+  createCallerFactory,
+  createInnerTRPCContext,
+} from "./trpc";
 
 // TODO: Maybe just export `createAction` instead of the whole `trpc` object?
 export { t } from "./trpc";
+
+const createCaller = createCallerFactory(appRouter);
 
 export type { AppRouter } from "./root";
 
@@ -20,3 +28,5 @@ export type RouterInputs = inferRouterInputs<AppRouter>;
  * @example type HelloOutput = RouterOutputs['example']['hello']
  **/
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
+
+export { createCaller };

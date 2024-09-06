@@ -62,6 +62,20 @@ export default async function Branding() {
             Reviews
           </h1>
         </div>
+        {session ? (
+          <ReviewList
+            productId={product.id}
+            productSlug={product.slug}
+            userId={session.user.id}
+          />
+        ) : (
+          <Link className="mb-6 flex justify-center" href="/login">
+            <Button variant="outline" size="lg">
+              Login to see the reviews
+              <span className="sr-only">Buy now</span>
+            </Button>
+          </Link>
+        )}
       </div>
       <BrandingPricing />
       <Connect />

@@ -1,8 +1,8 @@
 "use client";
 
+import type { Product } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/types";
 import {
   Carousel,
   CarouselContent,
@@ -31,17 +31,17 @@ export default function ProductCarousel({ data }: { data: Product[] }) {
         {data.map((product: Product) => (
           <CarouselItem key={product.id}>
             <Link href={`/product/${product.slug}`}>
-              <div className="relative   mx-auto  ">
+              <div className="relative mx-auto">
                 <Image
                   alt={product.name}
-                  src={product.banner!}
+                  src={""}
                   width="0"
                   height="0"
                   sizes="100vw"
                   className="h-auto w-full"
                 />
                 <div className="absolute inset-0 flex items-end justify-center">
-                  <h2 className="bg-gray-900 bg-opacity-50 px-2 text-2xl font-bold text-white  ">
+                  <h2 className="bg-gray-900 bg-opacity-50 px-2 text-2xl font-bold text-white">
                     {product.name}
                   </h2>
                 </div>

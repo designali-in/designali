@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
 import type { AppRouter } from "@designali/api";
@@ -36,6 +37,7 @@ export function TRPCReactProvider(props: { children: React.ReactNode }) {
             (op.direction === "down" && op.result instanceof Error),
         }),
         unstable_httpBatchStreamLink({
+          // @ts-expect-error some issues with types
           transformer: SuperJSON,
           url: getBaseUrl() + "/api/trpc",
           headers() {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
@@ -5,6 +6,8 @@ import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/sm-posts/about";
 import { Banner } from "@/src/components/solutions/products/sm-posts/banner";
 import { SocialMedisCards } from "@/src/components/solutions/products/sm-posts/card";
+import ReviewList from "@/src/components/solutions/review-list";
+import { auth } from "@designali/auth";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,6 +16,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@designali/ui/breadcrumb";
+import { Button } from "@designali/ui/button";
 
 export const metadata = {
   title: "SM Posts - Designali",
@@ -22,7 +26,7 @@ export const metadata = {
 
 export default async function SMPosts() {
   const product = await getProductBySlug("sm-posts");
-
+  const session = await auth();
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       <PageTitle title={product.name} description={`✌️ Under Construction`} />
@@ -52,6 +56,20 @@ export default async function SMPosts() {
             Reviews
           </h1>
         </div>
+        {session ? (
+          <ReviewList
+            productId={product.id}
+            productSlug={product.slug}
+            userId={session.user.id}
+          />
+        ) : (
+          <Link className="mb-6 flex justify-center" href="/login">
+            <Button variant="outline" size="lg">
+              Login to see the reviews
+              <span className="sr-only">Buy now</span>
+            </Button>
+          </Link>
+        )}
       </div>
       <FAQ />
       <Connect />
