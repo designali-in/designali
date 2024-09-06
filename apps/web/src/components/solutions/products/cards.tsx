@@ -73,13 +73,13 @@ export function CarouselGraaadients() {
   );
   return (
     <div className=" ">
-      <Carousel>
+      <Carousel
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+        className="w-full"
+      >
         <CarouselContent className=" ">
-          <CarouselItem className="">
-            <Link href="/dicons">
-              <CardStack items={DICONS} />
-            </Link>
-          </CarouselItem>
           <CarouselItem className=" ">
             <Link href="/products/graaadients">
               <CardStack items={GRADS} />

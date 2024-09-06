@@ -145,7 +145,12 @@ export function CarouselServices() {
   );
   return (
     <div className="">
-      <Carousel className="h-full w-full">
+      <Carousel
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+        className="w-full"
+      >
         <CarouselContent className="">
           {Service.map((Experience) => (
             <CarouselItem className="">
