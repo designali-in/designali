@@ -1,8 +1,7 @@
 {
   "name": "dicons",
-  "private": false,
   "description": "A react icons library for Designali",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf .turbo dist node_modules",
@@ -32,6 +31,10 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designali-in/designali"
+  },
   "exports": {
     ".": "./index.ts",
     "./*": [

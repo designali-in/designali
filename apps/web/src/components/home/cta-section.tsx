@@ -21,7 +21,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-sm"
+        className="h-[120px] w-[200px] rounded-sm md:h-full md:w-full md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -33,7 +33,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-sm"
+        className="h-[120px] w-[200px] rounded-sm md:h-full md:w-full md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -45,7 +45,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-sm"
+        className="h-[120px] w-[200px] rounded-sm md:h-full md:w-full md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -57,7 +57,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-sm"
+        className="h-[120px] w-[200px] rounded-sm md:h-full md:w-full md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -69,7 +69,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-sm"
+        className="h-[120px] w-[200px] rounded-sm md:h-full md:w-full md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -81,7 +81,7 @@ const tiles = [
         alt={""}
         width={350}
         height={350}
-        className="rounded-sm md:rounded-sm"
+        className="h-[120px] w-[200px] rounded-sm md:h-full md:w-full md:rounded-sm"
       />
     ),
     bg: <div className=""></div>,
@@ -127,15 +127,10 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       initial={{ opacity: 0 }}
       animate={controls}
       className={cn(
-        "relative h-[89px] w-[150px] cursor-pointer overflow-hidden rounded-md border p-1 md:h-full md:w-[350px] md:rounded-2xl md:p-2",
-        // light styles
-        "bg-white",
-        // dark styles
-        "transform-gpu dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+        "relative h-full w-full cursor-pointer rounded-md border object-cover p-1 md:rounded-2xl md:p-2",
       )}
     >
       {card.icon}
-      {card.bg}
     </motion.div>
   );
 };
@@ -151,7 +146,7 @@ export default function CallToActionSection() {
   }, []);
 
   return (
-    <section id="cta" className="relative mb-[950px] md:-mt-20 md:mb-[340px]">
+    <section id="cta" className="relative mb-[900px] md:-mt-20 md:mb-[340px]">
       <div className="relative flex justify-center px-6 md:mt-20">
         <div className="absolute z-10 px-6">
           <ShineBorder
@@ -208,8 +203,8 @@ export default function CallToActionSection() {
       </div>
 
       <div className="-mt-0 md:-mt-12">
-        <div className="flex w-full flex-col items-center justify-center">
-          <div className="relative -mb-40 -mt-20 flex w-full flex-col items-center justify-center overflow-hidden md:mb-40">
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <div className="relative -mb-40 -mt-20 flex h-full w-full flex-col items-center justify-center overflow-hidden md:mb-40">
             <Marquee
               reverse
               className="-delay-[200ms] [--duration:70s]"
