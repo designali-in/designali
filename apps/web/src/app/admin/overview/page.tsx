@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const users = await getAdminSummary();
 const products = await getAdminSummary();
 
-export default async function DashboardPage() {
+export default function DashboardPage() {
   return (
     <div className="space-y-4 px-6">
       <PageTitle
