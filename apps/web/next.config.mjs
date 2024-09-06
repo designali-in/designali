@@ -30,7 +30,11 @@ const config = {
         port: "",
       },
     ],
-    domains: ["avatars.githubusercontent.com", "lh3.googleusercontent.com"],
+    domains: [
+      "avatars.githubusercontent.com",
+      "res.cloudinary.com",
+      "lh3.googleusercontent.com",
+    ],
   },
 
   /** We already do linting and typechecking as separate tasks in CI */
