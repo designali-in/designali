@@ -1,9 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { HighlighterItem, HighlightGroup } from "@/components/ui/highlighter";
 import { Particles } from "@/components/ui/particles";
-import { Button } from "@designali/ui/button";
-import { DIcons } from "dicons";
 
 export interface DExperience {
   post: string;
