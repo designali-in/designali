@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
@@ -27,7 +26,7 @@ export const metadata = {
     "This section includes end-to-end guides for developing Next.js 13 apps.",
 };
 
-export default async function Home() {
+export default async function Logo() {
   const product = await getProductBySlug("logo");
   const session = await auth();
   return (
@@ -60,20 +59,6 @@ export default async function Home() {
             Reviews
           </h1>
         </div>
-        {session ? (
-          <ReviewList
-            productId={product.id}
-            productSlug={product.slug}
-            userId={session.user.id}
-          />
-        ) : (
-          <Link className="flex justify-center" href="/login">
-            <Button variant="outline" size="lg">
-              Login to see the reviews
-              <span className="sr-only">Buy now</span>
-            </Button>
-          </Link>
-        )}
       </div>
       <FAQ />
       <Connect />

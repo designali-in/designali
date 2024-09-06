@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
 import { FAQ } from "@/components/home/faq";
@@ -6,7 +5,6 @@ import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/brochure/about";
 import { Banner } from "@/src/components/solutions/products/brochure/banner";
-import { Include } from "@/src/components/solutions/products/w-develop/include";
 import ReviewList from "@/src/components/solutions/review-list";
 import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
@@ -28,7 +26,7 @@ export const metadata = {
     "This section includes end-to-end guides for developing Next.js 13 apps.",
 };
 
-export default async function Home() {
+export default async function Brochure() {
   const product = await getProductBySlug("brochure");
   const session = await auth();
   return (
@@ -61,20 +59,6 @@ export default async function Home() {
             Reviews
           </h1>
         </div>
-        {session ? (
-          <ReviewList
-            productId={product.id}
-            productSlug={product.slug}
-            userId={session.user.id}
-          />
-        ) : (
-          <Link className="flex justify-center" href="/login">
-            <Button variant="outline" size="lg">
-              Login to see the reviews
-              <span className="sr-only">Buy now</span>
-            </Button>
-          </Link>
-        )}
       </div>
       <FAQ />
       <Connect />

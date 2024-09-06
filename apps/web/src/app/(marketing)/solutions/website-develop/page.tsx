@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
-import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import Projects from "@/src/components/common/projects";
 import PageTitle from "@/src/components/mdx/page-title";
@@ -10,7 +8,6 @@ import { Banner } from "@/src/components/solutions/products/w-develop/banner";
 import { WebsiteDevelopCards } from "@/src/components/solutions/products/w-develop/card";
 import { Include } from "@/src/components/solutions/products/w-develop/include";
 import ReviewList from "@/src/components/solutions/review-list";
-import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,
@@ -62,20 +59,6 @@ export default async function Home() {
             Reviews
           </h1>
         </div>
-        {session ? (
-          <ReviewList
-            productId={product.id}
-            productSlug={product.slug}
-            userId={session.user.id}
-          />
-        ) : (
-          <Link className="flex justify-center" href="/login">
-            <Button variant="outline" size="lg">
-              Login to see the reviews
-              <span className="sr-only">Buy now</span>
-            </Button>
-          </Link>
-        )}
       </div>
       <Connect />
     </div>
