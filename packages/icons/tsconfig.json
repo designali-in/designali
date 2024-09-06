@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
     "target": "ES2022",
     "moduleResolution": "Node10",
     "module": "CommonJS",

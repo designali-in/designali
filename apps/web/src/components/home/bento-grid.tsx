@@ -105,7 +105,7 @@ const features = [
   {
     name: "Save your files 1",
     className:
-      "col-span-8  h-[394px] md:col-span-4 lg:col-span-8 xl:col-span-2",
+      "col-span-8  h-[445px] md:col-span-4 lg:col-span-8 xl:col-span-2",
     background: (
       <div>
         <Image
@@ -159,7 +159,7 @@ const features = [
   {
     name: "Notifications 3",
     className:
-      "col-span-8 md:col-span-8  h-[394px] cursor-pointer lg:col-span-8 xl:col-span-2",
+      "col-span-8 md:col-span-8  h-[445px] cursor-pointer lg:col-span-8 xl:col-span-2",
     background: (
       <div className="">
         <Image

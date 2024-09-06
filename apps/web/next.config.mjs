@@ -14,6 +14,7 @@ const config = {
   transpilePackages: ["@designali/*", "dicons"],
 
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
