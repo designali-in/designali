@@ -1,7 +1,16 @@
+"use client";
+
+import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@designali/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@designali/ui/carousel";
 import { DIcons } from "dicons";
+import Autoplay from "embla-carousel-autoplay";
 
 import ImageZoom from "../common/image-zoom";
 import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
@@ -126,6 +135,59 @@ export function Services() {
           </HighlightGroup>
         ))}
       </div>
+    </div>
+  );
+}
+
+export function CarouselServices() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true }),
+  );
+  return (
+    <div className="">
+      <Carousel className="h-full w-full">
+        <CarouselContent className="">
+          {Service.map((Experience) => (
+            <CarouselItem className="">
+              <div
+                key={Experience.post}
+                className="group/item h-full w-full md:col-span-6 lg:col-span-4"
+                data-aos="fade-down"
+              >
+                <div className="relative z-20 h-full overflow-hidden bg-slate-100/50 dark:bg-black">
+                  <div className="flex flex-col">
+                    <div
+                      className="pointer-events-none absolute bottom-0 right-1 -z-10 aspect-square w-1/2 -translate-y-1/2 translate-x-1"
+                      aria-hidden="true"
+                    >
+                      <div className="translate-z-0 absolute inset-0 rounded-full bg-slate-100 blur-[80px] dark:bg-slate-800" />
+                    </div>
+
+                    <ImageZoom>
+                      <Image
+                        src={Experience.comlogo}
+                        alt={``}
+                        className="h-full w-full object-cover transition hover:scale-95 hover:rounded-lg"
+                        width={600}
+                        height={600}
+                      />
+                    </ImageZoom>
+                    <Link href={Experience.link}>
+                      <div className="p-5">
+                        <h3 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
+                          <span className="text-md md:text-xl">
+                            {Experience.post}
+                          </span>
+                        </h3>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 }

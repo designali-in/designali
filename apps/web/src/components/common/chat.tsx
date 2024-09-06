@@ -20,7 +20,6 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Icons } from "../icons";
-import { Logo } from "../logo";
 
 export function Chatbot() {
   const router = useRouter();
@@ -58,7 +57,7 @@ export function Chatbot() {
             )}
           </AnimatePresence>
           <div className="z-20 w-full">
-            <ScrollArea className="h-[312px] w-full overflow-auto p-1">
+            <ScrollArea className="h-[364px] w-full overflow-auto p-1">
               <div className="px-6">
                 <div className="relative flex h-full w-full justify-center text-center">
                   <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">

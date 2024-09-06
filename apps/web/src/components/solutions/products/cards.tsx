@@ -1,7 +1,18 @@
 "use client";
 
+import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { CardStack } from "@/components/ui/image-card";
+import { Avegra } from "@/src/app/fonts";
+import { cn } from "@/src/lib/dutils";
+import { Button } from "@designali/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@designali/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const GRADS = [
   {
@@ -41,17 +52,46 @@ const DICONS = [
 export function Graaadients() {
   return (
     <div className="grid justify-center gap-4">
-      <Link href="/dicons">
+      <Link href="/dicons" className="rounded-3xl border">
         <CardStack items={DICONS} />
       </Link>
       <div className="grid justify-center gap-4 md:flex">
-        <Link href="/products/graaadients">
+        <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
         </Link>
-        <Link href="/products/3dicons">
+        <Link href="/products/3dicons" className="rounded-3xl border">
           <CardStack items={ICONS3D} />
         </Link>
       </div>
+    </div>
+  );
+}
+
+export function CarouselGraaadients() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true }),
+  );
+  return (
+    <div className=" ">
+      <Carousel>
+        <CarouselContent className=" ">
+          <CarouselItem className="">
+            <Link href="/dicons">
+              <CardStack items={DICONS} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
+            <Link href="/products/graaadients">
+              <CardStack items={GRADS} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
+            <Link href="/products/3dicons">
+              <CardStack items={ICONS3D} />
+            </Link>
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 }

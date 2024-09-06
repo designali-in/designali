@@ -21,8 +21,8 @@ export const CardStack = ({
   const [cards] = useState<Card[]>(items);
 
   return (
-    <div className="rounded-3xl border border-slate-200 p-2 dark:border-slate-800">
-      <div className="relative flex h-[450px]">
+    <div className="p-2">
+      <div className="relative flex h-[426px]">
         {cards.map((card) => {
           return (
             <div key={card.id} className="flex h-full w-auto flex-col">
