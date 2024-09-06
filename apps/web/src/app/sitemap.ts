@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
 import { allBlogPosts } from "contentlayer/generated";
 
@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: post.date,
   }));
 
-  const routes = ["", "blog", "designs", "guides", "about", "services"].map(
+  const routes = ["", "blog", "designs", "guides", "about", "solutions"].map(
     (route) => ({
       url: `${siteUrl}/${route}`,
       lastModified: new Date().toISOString().split("T")[0],
