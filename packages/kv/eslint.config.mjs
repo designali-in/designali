@@ -1,6 +1,9 @@
-import designali from "@designali/eslint-config";
+import baseConfig from "@designali/eslint-config/base";
 
-export default designali({
-  project: "./tsconfig.json",
-  tsconfigRootDir: import.meta.dirname,
-});
+/** @type {import('typescript-eslint').Config} */
+export default [
+  {
+    ignores: ["dist/**"],
+  },
+  ...baseConfig,
+];

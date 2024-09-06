@@ -558,6 +558,9 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
+      '@designali/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
       '@designali/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
@@ -840,7 +843,7 @@ importers:
         version: 7.35.0(eslint@9.7.0)
       eslint-plugin-react-hooks:
         specifier: rc
-        version: 5.1.0-rc-d1afcb43-20240903(eslint@9.7.0)
+        version: 5.1.0-rc-4c58fce7-20240904(eslint@9.7.0)
       eslint-plugin-turbo:
         specifier: ^2.0.8
         version: 2.0.8(eslint@9.7.0)
@@ -6450,8 +6453,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
-  eslint-plugin-react-hooks@5.1.0-rc-d1afcb43-20240903:
-    resolution: {integrity: sha512-/nFI+l7fwC5yg0VIPL9YmtlAPSbzOeeMW7cIcx5JEcsdE8SBN7uXKnsfik1yDQeGbQIgaQzN4nj5fNxfoVh7dQ==}
+  eslint-plugin-react-hooks@5.1.0-rc-4c58fce7-20240904:
+    resolution: {integrity: sha512-PDoulHvydL8q8QhhyQx9y7c0Ot79D/o53+/6GG/9stROV2iBteNl/n8WNxwdcVtaSrFJ2BXd/M1U2fyjhelUzA==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
@@ -17606,7 +17609,7 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.0
 
-  eslint-plugin-react-hooks@5.1.0-rc-d1afcb43-20240903(eslint@9.7.0):
+  eslint-plugin-react-hooks@5.1.0-rc-4c58fce7-20240904(eslint@9.7.0):
     dependencies:
       eslint: 9.7.0
 

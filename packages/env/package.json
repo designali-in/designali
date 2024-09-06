@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rm -rf .turbo",
     "lint": "eslint ",
-    "lint:fix": "eslint --fix .",
+    "format": "prettier --write --check . --ignore-path ./.gitignore",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {

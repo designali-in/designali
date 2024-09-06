@@ -51,4 +51,5 @@ dist/
 .turbo
 
 # packages
+.react-email
 

@@ -29,7 +29,8 @@ const SubscribeEmail = ({
               Confirm subscription
             </a>
           </p>
-          <br />🚀 Powered by{" "}
+          <br />
+          🚀 Powered by{" "}
           <Link href="https://www.openstatus.dev">OpenStatus.dev</Link>
         </Body>
       </Head>

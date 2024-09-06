@@ -7,6 +7,10 @@
     "email": "email dev with-env --dir ./emails --port 3002",
     "dev": "email dev with-env --port 3001 --dir emails",
     "dev:email": "email dev with-env",
+    "lint": "eslint ",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write --check . --ignore-path ./.gitignore",
+    "type-check": "tsc --noEmit",
     "with-env": "dotenv -e ../../.env --"
   },
   "keywords": [
@@ -27,6 +31,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@designali/eslint-config": "workspace:*",
     "@designali/tsconfig": "workspace:*",
     "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",

@@ -11,12 +11,12 @@ export interface Emails {
   from: string;
 }
 
-export type EmailHtml = {
+export interface EmailHtml {
   html: string;
   subject: string;
   to: string[];
   from: string;
-};
+}
 export const sendEmail = async (email: Emails) => {
   await resend.emails.send(email);
 };
