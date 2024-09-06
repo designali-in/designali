@@ -11,7 +11,7 @@ const config = {
   reactStrictMode: true,
 
   /** Enables hot reloading for local packages without a build step */
-  transpilePackages: ["@designali/*"],
+  transpilePackages: ["@designali/*", "dicons"],
 
   images: {
     remotePatterns: [
