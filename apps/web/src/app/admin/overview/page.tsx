@@ -12,7 +12,6 @@ import {
 import {
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
@@ -23,10 +22,9 @@ export const metadata: Metadata = {
   title: `Admin - Designali`,
 };
 
-const users = await getAdminSummary();
-const products = await getAdminSummary();
-
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const users = await getAdminSummary();
+  const products = await getAdminSummary();
   return (
     <div className="space-y-4 px-6">
       <PageTitle
