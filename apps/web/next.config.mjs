@@ -34,6 +34,7 @@ const config = {
       "avatars.githubusercontent.com",
       "res.cloudinary.com",
       "lh3.googleusercontent.com",
+      "utfs.io",
     ],
   },
 
