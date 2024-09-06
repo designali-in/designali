@@ -171,7 +171,7 @@ export function CarouselServices() {
                     <ImageZoom>
                       <Image
                         src={Experience.comlogo}
-                        alt={``}
+                        alt={`ali`}
                         className="h-full w-full object-cover transition hover:scale-95 hover:rounded-lg"
                         width={600}
                         height={600}
