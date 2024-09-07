@@ -1,14 +1,14 @@
 export default function Home() {
   return (
     <main className="mt-4">
-      <div className="mx-auto max-w-3xl lg:max-w-6xl">
+      <div className="mx-auto max-w-3xl xl:max-w-7xl">
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
           <video
             controls
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279187/creatives/reels/00_d8bech.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607067/013_hlbvas_uwdm7y.mp4"
             }
           />
           <video
@@ -16,7 +16,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279208/creatives/reels/08_mvg5h4.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607065/08_mvg5h4_edox5f.mp4"
             }
           />
           <video
@@ -24,7 +24,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279207/creatives/reels/013_hlbvas.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606426/00_d8bech_edg38h.mp4"
             }
           />
           <video
@@ -32,7 +32,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279205/creatives/reels/02_uk15hb.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607063/02_uk15hb_fooxnb.mp4"
             }
           />
           <video
@@ -40,7 +40,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279199/creatives/reels/06_eviwcm.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607057/06_eviwcm_rmmhku.mp4"
             }
           />
           <video
@@ -48,7 +48,16 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279191/creatives/reels/05_pn5czc.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607045/03_htugsa_k7fx12.mp4"
+            }
+          />
+
+          <video
+            controls
+            width="auto"
+            height={320}
+            src={
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606426/012_wtq2dx_eqabzu.mp4"
             }
           />
           <video
@@ -56,7 +65,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279189/creatives/reels/01_uperzv.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606907/01_uperzv_hhld1u.mp4"
             }
           />
           <video
@@ -64,7 +73,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279188/creatives/reels/012_wtq2dx.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606992/05_pn5czc_hmb1iy.mp4"
             }
           />
           <video
@@ -72,7 +81,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279187/creatives/reels/04_qyyiwb.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607001/010_rjbf0d_n53l03.mp4"
             }
           />
           <video
@@ -80,7 +89,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279186/creatives/reels/07_wfyd5k.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606426/04_qyyiwb_emneiu.mp4"
             }
           />
           <video
@@ -88,7 +97,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279186/creatives/reels/09_lpbgv4.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606424/09_lpbgv4_gh3qhs.mp4"
             }
           />
           <video
@@ -96,7 +105,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279183/creatives/reels/016_ehachw.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606422/07_wfyd5k_lpp3wb.mp4"
             }
           />
           <video
@@ -104,7 +113,7 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279180/creatives/reels/015_ngtqoj.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606420/016_ehachw_lvfpef.mp4"
             }
           />
           <video
@@ -112,7 +121,15 @@ export default function Home() {
             width="auto"
             height={320}
             src={
-              "https://res.cloudinary.com/dfyfxr10u/video/upload/v1723279176/creatives/reels/014_mfjhge.mp4"
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606416/015_ngtqoj_rvvm01.mp4"
+            }
+          />
+          <video
+            controls
+            width="auto"
+            height={320}
+            src={
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1725606408/014_mfjhge_ls54er.mp4"
             }
           />
         </div>
