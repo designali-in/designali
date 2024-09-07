@@ -6,8 +6,7 @@ import { compareDesc } from "date-fns";
 
 export const metadata = {
   title: "Documentation - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default function GuidesPage() {

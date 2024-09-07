@@ -11,8 +11,7 @@ import { Loader } from "@designali/ui/loader";
 
 export const metadata = {
   title: "Tools - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default function HomePage() {

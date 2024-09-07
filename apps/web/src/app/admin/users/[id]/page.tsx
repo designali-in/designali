@@ -17,6 +17,7 @@ import UpdateUserForm from "./update-user-form";
 
 export const metadata: Metadata = {
   title: `Update user - Designali`,
+  description: "A design agency with a touch of magic.",
 };
 
 export default async function UpdateUserPage({

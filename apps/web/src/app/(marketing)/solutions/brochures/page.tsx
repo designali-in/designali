@@ -22,8 +22,7 @@ import Branding from "./brochure";
 
 export const metadata = {
   title: "Brochure - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default async function Brochure() {

@@ -8,8 +8,7 @@ const colors = getColors();
 
 export const metadata = {
   title: "Colors - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default function HomePage() {

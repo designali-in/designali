@@ -22,8 +22,7 @@ import Branding from "./logo";
 
 export const metadata = {
   title: "Logo - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default async function Logo() {

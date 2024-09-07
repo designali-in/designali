@@ -20,6 +20,7 @@ import { BadgeDollarSign, Barcode, CreditCard, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: `Admin - Designali`,
+  description: "A design agency with a touch of magic.",
 };
 
 export default async function DashboardPage() {

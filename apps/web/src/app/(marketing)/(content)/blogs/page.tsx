@@ -10,7 +10,7 @@ import { allBlogPosts } from "contentlayer/generated";
 export const runtime = "edge";
 const title = "Blogs - Designali";
 const description =
-  "My personal website and blog where I share my thoughts on various topics including tutorials, notes, and personal experiences. As a full-stack developer from Hong Kong, I started learning web development as a hobby in December 2023. I use Next.js for building websites, GitHub for code hosting, and Vercel for deployment. Explore my site to learn more about my Journey and discover some of the web development resources that have inspired me.";
+  "My personal website and blog where I share my thoughts on various topics including tutorials, notes, and personal experiences. As a full-stack developer from India, I started learning web development as a hobby in December 2023. I use Next.js for building websites, GitHub for code hosting, and Vercel for deployment. Explore my site to learn more about my Journey and discover some of the web development resources that have inspired me.";
 
 const jsonLd: WithContext<Blog> = {
   "@context": "https://schema.org",

@@ -7,7 +7,7 @@ import { SidebarNav } from "./components/sidebar-nav";
 
 export const metadata: Metadata = {
   title: "Forms",
-  description: "Advanced form example using react-hook-form and Zod.",
+  description: "A design agency with a touch of magic.",
 };
 
 const sidebarNavItems = [

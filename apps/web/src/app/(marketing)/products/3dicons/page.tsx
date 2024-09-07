@@ -18,8 +18,7 @@ import { Icooons } from "./3dicons";
 
 export const metadata = {
   title: "3D Icons - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default async function AboutAI() {

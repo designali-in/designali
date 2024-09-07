@@ -6,8 +6,7 @@ import { Avegra } from "../../fonts";
 
 export const metadata = {
   title: "Products - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default function Home() {

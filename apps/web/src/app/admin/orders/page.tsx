@@ -17,6 +17,7 @@ import {
 
 export const metadata: Metadata = {
   title: `Admin Orders - Designali`,
+  description: "A design agency with a touch of magic.",
 };
 
 export default async function OrdersPage({

@@ -25,10 +25,10 @@ export const metadata: Metadata = {
       : "http://localhost:3000",
   ),
   title: "Designali",
-  description: "Simple monorepo with shared backend for web & mobile apps",
+  description: "A design agency with a touch of magic.",
   openGraph: {
     title: "Designali",
-    description: "Simple monorepo with shared backend for web & mobile apps",
+    description: "A design agency with a touch of magic.",
     url: "https://designali.in",
     siteName: "Designali",
   },

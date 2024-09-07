@@ -9,8 +9,7 @@ import { toast } from "@designali/ui/toaster";
 
 export const metadata = {
   title: "Log In - Designali",
-  description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+  description: "A design agency with a touch of magic.",
 };
 
 export default function Page() {
