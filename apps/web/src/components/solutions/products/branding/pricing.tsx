@@ -12,7 +12,7 @@ const tiers = [
     heading: "The Launchpad for Your Vision",
     href: "https://cal.com/aliimam/designali",
     priceMonthly: "₹9999",
-    description: "4 week delivery",
+    description: "2 week delivery",
     features: [
       "Brand Discovery Workshop (Buyer Persona, Messaging, Brand Story, Brand Tone & Voice)",
       "Moodboarding (Mood Boards, Color Palettes, Shapes)",
@@ -28,7 +28,7 @@ const tiers = [
     heading: "Transformative Branding for Growing Companies",
     href: "https://cal.com/aliimam/designali",
     priceMonthly: "₹20,000",
-    description: "6 week delivery",
+    description: "3 week delivery",
     features: [
       "Brand Discovery Workshop (Buyer Persona, Messaging, Brand Story, Brand Tone & Voice)",
       "Moodboarding (Mood Boards, Color Palettes, Shapes)",
@@ -47,7 +47,7 @@ const tiers = [
     heading: "Defining the Future of Your Brand",
     href: "https://cal.com/aliimam/designali",
     priceMonthly: "₹50,000",
-    description: "8 week delivery",
+    description: "4 week delivery",
     features: [
       "Brand Discovery Workshop (Buyer Persona, Messaging, Brand Story, Brand Tone & Voice)",
       "Moodboarding (Mood Boards, Color Palettes, Shapes)",

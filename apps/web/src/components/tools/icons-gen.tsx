@@ -32,7 +32,7 @@ export const IconsGen: React.FC = () => {
                 <div className="flex justify-center py-10">
                   <div className="flex h-full flex-col justify-center p-2 text-center">
                     <PageTitle
-                      title={"Icons Generator"}
+                      title={"Logo Maker"}
                       description={" Feel free to request for any icon!"}
                     />
 

@@ -86,8 +86,8 @@ const Hero = () => {
 
           <p className="md:text-md mx-auto mb-16 mt-2 max-w-2xl px-6 text-sm text-slate-600 dark:text-slate-400 sm:px-6 md:max-w-4xl md:px-20 lg:text-lg">
             I craft enchanting visuals for brands, and conjure design resources
-            to empower others. I have a knowledge of tools like{" "}
-            <TypeWriter strings={talkAbout} />.
+            to empower others. Your complete platform for the design. I am an
+            expert in tools like <TypeWriter strings={talkAbout} />.
           </p>
           <div className="flex justify-center gap-2">
             <Link href={"/app/dashboard/overview"}>

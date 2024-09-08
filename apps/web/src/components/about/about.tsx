@@ -24,6 +24,15 @@ const skills = [
   { skill: "Animations" },
   { skill: "eBooks" },
   { skill: "Brochures" },
+  { skill: "Website Design" },
+  { skill: "Landing pages" },
+  { skill: "Socila Media Posts" },
+  { skill: "Branding" },
+  { skill: "Invitation" },
+  { skill: "Emailers" },
+  { skill: "Ads" },
+  { skill: "Campaigns" },
+  { skill: "Brand Guidelines" },
 ];
 
 const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slate-900 rounded-xl p-2.5 transition-transform text-slate-600 hover:border-slate-200 dark:hover:border-slate-800 hover:text-black hover:dark:text-white dark:text-slate-400 `;
@@ -75,6 +84,10 @@ const About = () => {
                   dedication to merging form with function is evident in every
                   project I undertake.
                 </span>
+              </p>
+              <p className="mt-6 text-sm text-slate-600 dark:text-slate-400">
+                Designali is actually an agency of one. This means you'll work
+                directly with me, founder of Designali.
               </p>
             </div>
             <div className="relative my-8">

@@ -36,6 +36,20 @@
       "when": 1725048243331,
       "tag": "0004_majestic_gideon",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1725771226332,
+      "tag": "0005_huge_scarecrow",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1725771391811,
+      "tag": "0006_dizzy_toro",
+      "breakpoints": true
     }
   ]
 }

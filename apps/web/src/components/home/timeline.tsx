@@ -74,9 +74,9 @@ interface Event {
 
 const timeline = [
   {
-    label: "Design",
+    label: "Choose Your Design",
     message:
-      "Select your design that fits your needs, get access to Dashboard.",
+      "Browse and select a design that fits your needs, then access your personalized dashboard.",
     icon: {
       name: "shapes",
       textColor: "text-orange-500",
@@ -84,8 +84,8 @@ const timeline = [
     },
   },
   {
-    label: "Breif",
-    message: "You give us some details about your design preferences.",
+    label: "Provide Your Brief",
+    message: "Share your design preferences and requirements with us.",
     icon: {
       name: "send",
       textColor: "text-amber-500",
@@ -93,8 +93,8 @@ const timeline = [
     },
   },
   {
-    label: "Receive",
-    message: "Start receiving your designs within 48 hours.",
+    label: "Receive Your Designs",
+    message: "Get your initial designs within 48 hours.",
     icon: {
       name: "checkcheck",
       textColor: "text-blue-500",
@@ -102,8 +102,9 @@ const timeline = [
     },
   },
   {
-    label: "Continue",
-    message: "Request revisions; we're not done until you're thrilled.",
+    label: "Request Revisions",
+    message:
+      "We’re committed to perfection—request as many revisions as needed until you’re satisfied.",
     icon: {
       name: "repeat",
       textColor: "text-green-500",
@@ -111,8 +112,8 @@ const timeline = [
     },
   },
   {
-    label: "Approved",
-    message: "We'll provide you the final files",
+    label: "Get Final Files",
+    message: "Once approved, we’ll deliver the final files to you.",
     icon: {
       name: "check",
       textColor: "text-green-500",
