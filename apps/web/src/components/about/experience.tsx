@@ -110,7 +110,7 @@ export function Experience() {
         >
           <CarouselContent>
             {Experiences.map((Experience) => (
-              <CarouselItem className="md:basis-1/2">
+              <CarouselItem className="md:basis-1/2 xl:basis-1/3">
                 <HighlightGroup className="group">
                   <div
                     key={Experience.post}
@@ -122,7 +122,7 @@ export function Experience() {
                         <Particles
                           className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                           quantity={50}
-                          color={"#ffffff"}
+                          color={"#555555"}
                           vy={-0.2}
                         />
 
@@ -144,7 +144,7 @@ export function Experience() {
                             />
 
                             <h3 className="mt-6 inline-flex items-baseline bg-gradient-to-r from-slate-600 via-slate-400 to-slate-600 bg-clip-text pb-1 text-center font-bold text-transparent dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-200 dark:to-slate-600 dark:bg-clip-text">
-                              <span className="text-2xl md:text-4xl">
+                              <span className="text-xl md:text-3xl">
                                 {Experience.post}
                               </span>
                             </h3>

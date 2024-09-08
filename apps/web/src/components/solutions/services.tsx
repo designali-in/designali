@@ -14,7 +14,6 @@ import Autoplay from "embla-carousel-autoplay";
 
 import ImageZoom from "../common/image-zoom";
 import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
-import { Particles } from "../ui/particles";
 
 export interface Experience {
   post: string;
@@ -87,13 +86,6 @@ export function Services() {
             >
               <HighlighterItem className="h-full rounded-3xl">
                 <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
-                  <Particles
-                    className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
-                    quantity={50}
-                    color={"#ffffff"}
-                    vy={-0.2}
-                  />
-
                   <div className="flex flex-col">
                     <div
                       className="pointer-events-none absolute bottom-0 right-1 -z-10 aspect-square w-1/2 -translate-y-1/2 translate-x-1"
@@ -252,13 +244,6 @@ export function Related() {
           >
             <HighlighterItem className="h-full rounded-3xl">
               <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
-                <Particles
-                  className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
-                  quantity={50}
-                  color={"#ffffff"}
-                  vy={-0.2}
-                />
-
                 <div className="flex flex-col">
                   <div
                     className="pointer-events-none absolute bottom-0 right-1 -z-10 aspect-square w-1/2 -translate-y-1/2 translate-x-1"

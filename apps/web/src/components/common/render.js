@@ -55,7 +55,7 @@ Line.prototype = {
   },
   update: function () {
     // @ts-ignore
-    var e = this.spring,
+    let e = this.spring,
       // @ts-ignore
       t = this.nodes[0];
     // @ts-ignore
@@ -82,7 +82,7 @@ Line.prototype = {
         (e *= E.tension);
   },
   draw: function () {
-    var e,
+    let e,
       t,
       // @ts-ignore
       n = this.nodes[0].x,
@@ -120,7 +120,7 @@ Line.prototype = {
 function onMousemove(e) {
   function o() {
     lines = [];
-    for (var e = 0; e < E.trails; e++)
+    for (let e = 0; e < E.trails; e++)
       lines.push(new Line({ spring: 0.45 + (e / E.trails) * 0.025 }));
   }
   // @ts-ignore
@@ -158,7 +158,7 @@ function render() {
     // @ts-ignore
     ctx.globalCompositeOperation = "lighter";
     // @ts-ignore
-    ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",90%,50%,0.025)";
+    ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",100%,50%,0.025)";
     // @ts-ignore
     ctx.lineWidth = 10;
     for (var e, t = 0; t < E.trails; t++) {
@@ -190,10 +190,10 @@ var ctx,
   E = {
     debug: true,
     friction: 0.5,
-    trails: 20,
-    size: 30,
+    trails: 80,
+    size: 50,
     dampening: 0.025,
-    tension: 0.98,
+    tension: 0.99,
   };
 function Node() {
   this.x = 0;
