@@ -8,6 +8,7 @@ export function Quote() {
       <div className="mx-auto mb-10 max-w-7xl px-6 md:mb-20 xl:px-0">
         <div className="relative flex flex-col items-center border border-ali">
           <DotPattern width={5} height={5} />
+
           <div className="absolute -left-1.5 -top-1.5 h-3 w-3 bg-ali text-white" />
           <div className="absolute -bottom-1.5 -left-1.5 h-3 w-3 bg-ali text-white" />
           <div className="absolute -right-1.5 -top-1.5 h-3 w-3 bg-ali text-white" />

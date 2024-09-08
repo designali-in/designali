@@ -69,6 +69,7 @@ const About = () => {
                 based in Bokaro Steel City, India.
               </p>
               <br />
+
               <p className="grid gap-4 text-sm text-slate-600 dark:text-slate-400">
                 <span>
                   I am a visionary graphic designer on a mission to transform
@@ -90,6 +91,7 @@ const About = () => {
                 directly with me, founder of Designali.
               </p>
             </div>
+
             <div className="relative my-8">
               <Icons.plus
                 strokeWidth={1}
