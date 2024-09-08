@@ -4,5 +4,6 @@ import designs__inProgressMdx from './designs__in-progress.mdx.json' assert { ty
 import designs__indexMdx from './designs__index.mdx.json' assert { type: 'json' }
 import designs__typographyMdx from './designs__typography.mdx.json' assert { type: 'json' }
 import designs__openfile__portfolioMdx from './designs__openfile__portfolio.mdx.json' assert { type: 'json' }
+import designs__graphicDesignMdx from './designs__graphic-design.mdx.json' assert { type: 'json' }
 
-export const allDesigns = [designs__inProgressMdx, designs__indexMdx, designs__typographyMdx, designs__openfile__portfolioMdx]
+export const allDesigns = [designs__inProgressMdx, designs__indexMdx, designs__typographyMdx, designs__openfile__portfolioMdx, designs__graphicDesignMdx]

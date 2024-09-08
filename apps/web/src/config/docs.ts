@@ -30,6 +30,15 @@ export const designConfig: DesignConfig = {
       ],
     },
     {
+      title: "Design",
+      items: [
+        {
+          title: "Graphic Design",
+          href: "/designs/graphic-design",
+        },
+      ],
+    },
+    {
       title: "Coding",
       items: [
         {
@@ -39,35 +48,11 @@ export const designConfig: DesignConfig = {
       ],
     },
     {
-      title: "Designs",
+      title: "Open File",
       items: [
         {
           title: "Portfolio",
           href: "/designs/openfile/portfolio",
-        },
-        {
-          title: "Graaadients",
-          href: "/designs/openfile/graaadients",
-        },
-        {
-          title: "Grad Reel",
-          href: "/designs/openfile/grad-reel",
-        },
-        {
-          title: "Grad Carousel",
-          href: "/designs/openfile/grad-carousel",
-        },
-        {
-          title: "SM Cheat Sheet",
-          href: "/designs/openfile/sm-cheat-sheet",
-        },
-        {
-          title: "3D Icons",
-          href: "/designs/openfile/3dicons",
-        },
-        {
-          title: "Pure White",
-          href: "/designs/openfile/pure-white",
         },
       ],
     },

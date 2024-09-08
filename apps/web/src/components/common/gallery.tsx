@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 import "react-photo-view/dist/react-photo-view.css";
+
+import { CldImage } from "next-cloudinary";
 
 import ImageZoom from "./image-zoom";
 
@@ -14,7 +15,7 @@ export function Grid2({ images }: { images: any }) {
         <div className="grid items-stretch gap-2 md:grid-cols-2">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
-              <Image
+              <CldImage
                 src={image.secure_url}
                 alt={image.secure_url}
                 loading="lazy"
@@ -37,7 +38,7 @@ export function Grid3({ images }: { images: any }) {
         <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-3">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
-              <Image
+              <CldImage
                 src={image.secure_url}
                 alt={image.secure_url}
                 loading="lazy"
@@ -60,7 +61,7 @@ export function Grid4({ images }: { images: any }) {
         <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-4">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
-              <Image
+              <CldImage
                 src={image.secure_url}
                 alt={image.secure_url}
                 loading="lazy"
@@ -83,7 +84,7 @@ export function Grid5({ images }: { images: any }) {
         <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
-              <Image
+              <CldImage
                 src={image.secure_url}
                 alt={image.secure_url}
                 loading="lazy"
@@ -106,7 +107,7 @@ export function Grid5BG({ images }: { images: any }) {
         <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
-              <Image
+              <CldImage
                 src={image.secure_url}
                 alt={image.secure_url}
                 loading="lazy"
@@ -129,7 +130,7 @@ export function Grid6({ images }: { images: any }) {
         <div className="grid grid-cols-3 items-stretch gap-2 md:grid-cols-6">
           {images.map((image: any) => (
             <PhotoView src={image.secure_url}>
-              <Image
+              <CldImage
                 src={image.secure_url}
                 alt={image.secure_url}
                 loading="lazy"
@@ -150,7 +151,7 @@ export function IconsHome({ images }: { images: any }) {
     <>
       <div className="">
         {images.map((image: any) => (
-          <Image
+          <CldImage
             src={image.secure_url}
             alt={image.secure_url}
             loading="lazy"
@@ -170,7 +171,7 @@ export function ImageZoomTwo({ images }: { images: any }) {
       <div className="grid items-stretch gap-2 md:grid-cols-2">
         {images.map((image: any) => (
           <ImageZoom>
-            <Image
+            <CldImage
               src={image.secure_url}
               alt={image.secure_url}
               loading="lazy"
@@ -191,7 +192,7 @@ export function ImageZoomThree({ images }: { images: any }) {
       <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-3">
         {images.map((image: any) => (
           <ImageZoom>
-            <Image
+            <CldImage
               src={image.secure_url}
               alt={image.secure_url}
               loading="lazy"
