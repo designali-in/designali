@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { formatCurrency, formatDateTime } from "@/lib/dutils";
-import { Icons } from "@/src/components/icons";
 import PageTitle from "@/src/components/mdx/page-title";
-import { Button } from "@designali/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import {
   Table,
   TableBody,
@@ -18,7 +13,7 @@ export const metadata: Metadata = {
   title: `My Orders - Designali`,
 };
 
-export default async function OrdersPage({
+export default function OrdersPage({
   searchParams,
 }: {
   searchParams: { page: string };

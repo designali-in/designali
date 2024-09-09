@@ -1,5 +1,3 @@
-"use client";
-
 import type { z } from "zod";
 import { updateProfile } from "@/lib/actions/user.actions";
 import { updateProfileSchema } from "@/lib/validator";

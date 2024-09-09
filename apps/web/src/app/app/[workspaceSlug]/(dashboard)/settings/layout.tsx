@@ -3,7 +3,7 @@ import Image from "next/image";
 import PageTitle from "@/src/components/mdx/page-title";
 import { Separator } from "@designali/ui/separator";
 
-import { SidebarNav } from "./components/sidebar-nav";
+import { SidebarNav } from "./_components/sidebar-nav";
 
 export const metadata: Metadata = {
   title: "Designali",
@@ -14,22 +14,6 @@ const sidebarNavItems = [
   {
     title: "Profile",
     href: "/app/dashboard/settings",
-  },
-  {
-    title: "Account",
-    href: "/app/dashboard/settings/account",
-  },
-  {
-    title: "Appearance",
-    href: "/app/dashboard/settings/appearance",
-  },
-  {
-    title: "Notifications",
-    href: "/app/dashboard/settings/notifications",
-  },
-  {
-    title: "Display",
-    href: "/app/dashboard/settings/display",
   },
 ];
 

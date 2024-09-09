@@ -66,20 +66,6 @@ export const pagesConfig = [
     segment: "overview",
   },
   {
-    title: "Playground",
-    description: "All your incidents.",
-    href: "/playground",
-    icon: "siren",
-    segment: "playground",
-  },
-  {
-    title: "Products",
-    description: "All your incidents.",
-    href: "/products",
-    icon: "siren",
-    segment: "products",
-  },
-  {
     title: "Orders",
     description: "Where you can see all the pages.",
     href: "/orders",
