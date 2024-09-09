@@ -38,12 +38,12 @@ const features = [
     background: (
       <div>
         <p className="pb-3 text-xs text-slate-600 dark:text-slate-400">
-          We pecialized in web design and development, brand strategy, content
+          I specialized in web design and development, brand strategy, content
           marketing and more, to find and engage customers and drive revenue
           across all your channels.
         </p>
         <h1 className="text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">
-          We make Website that <br />
+          I make Website that <br />
           <TypeWriter strings={talkAbout} />.
         </h1>
 
@@ -144,7 +144,7 @@ const features = [
     background: (
       <div className="grid items-center">
         <div className="flex">
-          <h1 className="text-md text-ali md:text-2xl">We are experts in</h1>
+          <h1 className="text-md text-ali md:text-2xl">I am experts in</h1>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-x-6">
           <DIcons.VercelFull className="h-24 w-24" />
@@ -171,7 +171,7 @@ const features = [
     background: (
       <div className="grid items-center gap-4">
         <div className="flex">
-          <h1 className="text-md text-ali md:text-2xl">We can help you to</h1>
+          <h1 className="text-md text-ali md:text-2xl">I can help you to</h1>
         </div>
         <div className="flex items-center gap-2">
           <Accordion

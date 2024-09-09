@@ -23,9 +23,9 @@ export async function About() {
           </p>
           <div className="grid justify-between md:flex">
             <p className="mt-2 text-slate-600 dark:text-slate-400">
-              Price:{" "}
+              Price: From{" "}
               <span className="text-xl font-semibold text-ali">
-                ₹ {product.price}
+                ₹{product.price}*
               </span>
             </p>
             <div className="mt-2 flex flex-wrap items-center gap-1 gap-y-2">

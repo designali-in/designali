@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import Image from "next/image";
+
 import Link from "next/link";
+import CountUpNumber from "@/components/common/countnumber";
 import { ImageZoomThree } from "@/components/common/gallery";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import cloudinary from "@/lib/cloudinary";
+import { TypeWriter } from "@/src/components/common/type";
+import WebVitals from "@/src/components/ui/web-vitals";
 import { Button } from "@designali/ui/button";
 import {
   Accordion,
@@ -17,10 +20,12 @@ import { DIcons } from "dicons";
 import { BellIcon, Share2Icon } from "lucide-react";
 
 const data = await cloudinary.v2.search
-  .expression(`folder:creatives/creative/*`)
+  .expression(`folder:creatives/logos/*`)
   .sort_by("created_at", "desc")
-  .max_results(18)
+  .max_results(3)
   .execute();
+
+const talkAbout = ["Converts", "Build trust", "Guide visitors"];
 
 const features = [
   {
@@ -32,12 +37,18 @@ const features = [
     className: "col-span-8 md:col-span-4 p-6 md:p-10",
     background: (
       <div>
+        <p className="pb-3 text-xs text-slate-600 dark:text-slate-400">
+          I specialized in web design and development, brand strategy, content
+          marketing and more, to find and engage customers and drive revenue
+          across all your channels.
+        </p>
         <h1 className="text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">
-          Let’s create posts <br /> that convert likes into leads!
+          I make Website that <br />
+          <TypeWriter strings={talkAbout} />.
         </h1>
 
         <Link
-          href={"/solutions/branding#process"}
+          href={"/solutions/website-develop#include"}
           className="absolute bottom-4 right-4"
         >
           <Button
@@ -60,52 +71,40 @@ const features = [
     description: "Supports 100+ integrations and counting.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-8 md:col-span-4 p-6 md:p-10",
+    className: "col-span-8 md:col-span-4 lg:col-span-2 p-6 md:p-10",
     background: (
-      <div className="grid items-center gap-4">
-        <div className="flex justify-between">
-          <DIcons.Heart className="h-5 w-5 animate-pulse text-ali" />
-          <h1 className="text-md md:text-2xl">Awards</h1>
-        </div>
-        <div className="flex items-center justify-between">
-          <div>
-            <Image
-              src="/icons/awwwards.svg"
-              alt="Your Image"
-              height={100}
-              width={100}
-              className="h-[50px] w-full md:h-[80px]"
-            />
-          </div>
-          <div className="grid items-center gap-2">
-            <p className="font-mono text-xs text-slate-600 dark:text-slate-400">
-              Featured in
-            </p>
-            <div>
-              <Image
-                src="/icons/behance.svg"
-                alt="Your Image"
-                height={20}
-                width={100}
-                className="h-full w-[50px] md:w-[120px]"
-              />
-            </div>
-          </div>
-          <div className="hidden items-center gap-2 lg:grid">
-            <p className="font-mono text-xs text-slate-600 dark:text-slate-400">
-              Featured in
-            </p>
-            <span className="text-lg">ArtStation</span>
-          </div>
-        </div>
+      <div className="grid items-center gap-4 text-center">
+        <h1 className="flex h-full items-center justify-center text-7xl font-semibold text-ali">
+          <CountUpNumber value={77} />%
+        </h1>
 
-        <p className="mt-2 font-mono text-xs text-slate-600 dark:text-slate-400">
-          My designs have been honored with numerous awards in leading
-          competitions.
+        <p className="font-mono text-sm text-slate-600 dark:text-slate-400">
+          of the purchase is done with its brand name only.
         </p>
       </div>
     ),
   },
+
+  {
+    Icon: Share2Icon,
+    name: "Integrations",
+    description: "Supports 100+ integrations and counting.",
+    href: "#",
+    cta: "Learn more",
+    className: "col-span-8 md:col-span-4 lg:col-span-2 p-6 md:p-10",
+    background: (
+      <div className="grid items-center gap-4 text-center">
+        <h1 className="flex h-full items-center justify-center text-7xl font-semibold text-ali">
+          <CountUpNumber value={80} />%
+        </h1>
+
+        <p className="font-mono text-sm text-slate-600 dark:text-slate-400">
+          color is a huge factor in brand recognition.
+        </p>
+      </div>
+    ),
+  },
+
   {
     Icon: FileTextIcon,
     name: "Save your files",
@@ -116,7 +115,7 @@ const features = [
     background: (
       <div className="grid items-center gap-4">
         <div className="flex">
-          <h1 className="text-md text-ali md:text-2xl">Why Choose Me?</h1>
+          <h1 className="text-md text-ali md:text-2xl">The Logo Design Flow</h1>
         </div>
         <div className="flex items-center gap-2">
           <Accordion
@@ -126,40 +125,44 @@ const features = [
             className="w-full"
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger>Commitment to Excellence</AccordionTrigger>
+              <AccordionTrigger>Scope</AccordionTrigger>
               <AccordionContent>
-                Our ethos is centered on delivering superior, value-driven
-                solutions without compromising on affordability. Let us
-                demonstrate our dedication through strategic, impactful, and
-                imaginative branding solutions tailored just for you.
+                The initial step with any logo design project is to fully
+                understand what you are looking for. This allows us to work out
+                how achievable your goals are and how best to create something
+                brilliant for your business.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Scalability by Design</AccordionTrigger>
+              <AccordionTrigger>Research</AccordionTrigger>
               <AccordionContent>
-                We craft brand identities that truly mirror your business ethos
-                while engaging your target demographic. Our approach ensures
-                your brand remains vibrant, adaptable, and in tune with evolving
-                tastes, technological advancements, and your company’s growth.
+                Before the creative glitz and glam, comes the research. Suppose
+                we don’t fully understand your brand and/or its place in your
+                sector. We won’t be able to design a logo that captures
+                everything about you and your business.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>Purpose-Driven Approach</AccordionTrigger>
+              <AccordionTrigger>Design & Develop</AccordionTrigger>
               <AccordionContent>
-                Every element — from logos and typography to color schemes and
-                brand voice — is meticulously harmonized to forge a brand with
-                lasting impact. We aim for a seamless and enduring connection
-                between you and your clientele.
+                The fun begins. We will work on multiple different designs for
+                your business, to fully understand the creative scope of the
+                project.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>Fueled by Partnership</AccordionTrigger>
+              <AccordionTrigger>Refine</AccordionTrigger>
               <AccordionContent>
-                Our methodology fosters natural creativity, efficiency, and
-                ample opportunities for client involvement. As the visionary
-                behind your brand, and us as your creative champions, we
-                collaboratively craft a brand that propels both you and your
-                audience.
+                Once you have looked over your designs, it’s time to refine
+                chosen style.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>Deliver & Grow</AccordionTrigger>
+              <AccordionContent>
+                The final logo is complete and you’ve signed it, it’s time to
+                deliver the project to you. This is when we send over all the
+                file types you need.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -177,7 +180,7 @@ const features = [
     className: "col-span-8 p-3 md:col-span-4 lg:col-span-5",
     background: (
       <div>
-        <ScrollArea className="h-[600px]">
+        <ScrollArea className="h-[630px]">
           <ImageZoomThree images={data.resources} />
           <Link className="my-6 flex justify-center" href={"/works"}>
             <Button>See More</Button>
@@ -188,7 +191,7 @@ const features = [
   },
 ];
 
-export function SocialMedisCards() {
+export function LogoCards() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (

@@ -13,17 +13,19 @@ export async function About() {
     <div className="mb-40 md:mb-20">
       <div className="">
         <div>
-          <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-3xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-5xl">
-            {product.headline}
-          </h1>
-          <p className="mt-2 text-slate-600 dark:text-slate-400">
+          <div className="flex justify-center">
+            <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-3xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-5xl">
+              {product.headline}
+            </h1>
+          </div>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-slate-600 dark:text-slate-400">
             {product.description}
           </p>
           <div className="grid justify-between md:flex">
             <p className="mt-2 text-slate-600 dark:text-slate-400">
-              Price:{" "}
+              Price: From{" "}
               <span className="text-xl font-semibold text-ali">
-                ₹ {product.price}
+                ₹{product.price}*
               </span>
             </p>
             <div className="mt-2 flex flex-wrap items-center gap-1 gap-y-2">
@@ -39,10 +41,7 @@ export async function About() {
       </div>
       <div className="mt-10 grid justify-between gap-3 md:flex">
         <div className="flex gap-2">
-          <Link
-            href={"https://buy.stripe.com/test_14k7uC4ZE3ZB5e8dQQ"}
-            target="_blank"
-          >
+          <Link href={"/solutions/sm-posts#pricing"}>
             <Button variant="default" size="lg">
               Design Now
             </Button>

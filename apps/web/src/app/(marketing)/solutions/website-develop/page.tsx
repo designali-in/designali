@@ -7,6 +7,7 @@ import { About } from "@/src/components/solutions/products/w-develop/about";
 import { Banner } from "@/src/components/solutions/products/w-develop/banner";
 import { WebsiteDevelopCards } from "@/src/components/solutions/products/w-develop/card";
 import { Include } from "@/src/components/solutions/products/w-develop/include";
+import { DevelopPricing } from "@/src/components/solutions/products/w-develop/pricing";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
@@ -29,7 +30,10 @@ export default async function Home() {
   const session = await auth();
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
-      <PageTitle title={product.name} description={`✌️ Under Construction`} />
+      <PageTitle
+        title={product.name}
+        description={`Select us for unparalleled web design that amplifies your brand and engages your audience`}
+      />
       <div className="mt-4 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>
@@ -52,7 +56,7 @@ export default async function Home() {
       <About />
       <Include />
       <Projects />
-      <div id="reviews">
+      <div className="mb-6" id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
             Reviews
@@ -65,7 +69,7 @@ export default async function Home() {
             userId={session.user.id}
           />
         ) : (
-          <Link className="mb-6 flex justify-center" href="/login">
+          <Link className="flex justify-center" href="/login">
             <Button variant="outline" size="lg">
               Login to see the reviews
               <span className="sr-only">Buy now</span>
@@ -73,6 +77,7 @@ export default async function Home() {
           </Link>
         )}
       </div>
+      <DevelopPricing />
       <Connect />
     </div>
   );
