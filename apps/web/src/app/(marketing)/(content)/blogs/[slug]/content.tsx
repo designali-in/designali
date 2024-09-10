@@ -1,6 +1,6 @@
 import type { BlogPost } from "contentlayer/generated";
 import Mdx from "@/components/mdx/layers";
-import LikeButton from "@/components/ui/like-button";
+import { LikeButton } from "@/components/ui/like-button";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { getHeadings } from "@/utils/get-headings";
 
