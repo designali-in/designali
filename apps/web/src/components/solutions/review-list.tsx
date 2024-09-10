@@ -262,7 +262,7 @@ export default function ReviewList({
             <CardHeader>
               <div className="flex justify-between">
                 <CardTitle>{review.title}</CardTitle>
-                <div className="flex items-center gap-1 text-sm italic text-ali">
+                <div className="flex items-center gap-1 text-sm italic text-green-500">
                   <Check className="h-4 w-4" />
                   {""} Verified Purchase
                 </div>
