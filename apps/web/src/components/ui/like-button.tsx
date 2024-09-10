@@ -213,9 +213,9 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
   }, 1000);
 
   const handleLike = () => {
-    if (isLoading || !data || data.currentUserLikes + cacheCount >= 1) return;
+    if (isLoading || !data || data.currentUserLikes + cacheCount >= 3) return;
 
-    const value = cacheCount === 1 ? cacheCount : cacheCount + 1;
+    const value = cacheCount === 3 ? cacheCount : cacheCount + 1;
     setCacheCount(value);
 
     if (data.currentUserLikes + cacheCount === 2) {
@@ -234,7 +234,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
           buttonClasses,
           ["group relative h-12 w-12 rounded-full"],
           data &&
-            data.currentUserLikes + cacheCount === 1 &&
+            data.currentUserLikes + cacheCount === 3 &&
             "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
         )}
         type="button"
@@ -248,14 +248,14 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
               "hover:text-white group-hover:bg-ali",
             ],
             data &&
-              data.currentUserLikes + cacheCount === 1 &&
+              data.currentUserLikes + cacheCount === 3 &&
               "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
           )}
         >
           <Icons.heart
             className={cn(
               "h-5 w-5 animate-pulse",
-              data && data.currentUserLikes + cacheCount === 1 && "text-white",
+              data && data.currentUserLikes + cacheCount === 3 && "text-white",
             )}
           />
         </span>
