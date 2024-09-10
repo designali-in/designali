@@ -23,23 +23,6 @@ const Header = (props: HeaderProps) => {
     setFormattedDate(dayjs(date).format("MMMM DD, YYYY"));
   }, [date]);
 
-  React.useEffect(() => {
-    const increment = async () => {
-      await fetch("/api/views", {
-        method: "POST",
-        body: JSON.stringify({
-          slug,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-    };
-
-    increment();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <div className="space-y-10">
       <h1 className="text-center text-3xl font-bold md:text-5xl">{title}</h1>
