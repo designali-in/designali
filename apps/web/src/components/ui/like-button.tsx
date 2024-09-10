@@ -255,7 +255,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
           <Icons.heart
             className={cn(
               "h-5 w-5 animate-pulse",
-              data && data.currentUserLikes + cacheCount === 3 && "text-white",
+              data && data.currentUserLikes + cacheCount === 1 && "text-white",
             )}
           />
         </span>
