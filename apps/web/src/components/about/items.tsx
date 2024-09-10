@@ -28,17 +28,25 @@ const Items = () => {
     revalidateOnFocus: false,
   };
   const { data: youtubeData } = useSWR<YouTube>(
-    "/api/youtube",
+    "/app/api/youtube",
     fetcher,
     swrConfig,
   );
-  const { data: likesData } = useSWR<Likes>("/api/likes", fetcher, swrConfig);
-  const { data: viewsData } = useSWR<Views>("/api/views", fetcher, swrConfig);
+  const { data: likesData } = useSWR<Likes>(
+    "/app/api/likes",
+    fetcher,
+    swrConfig,
+  );
+  const { data: viewsData } = useSWR<Views>(
+    "/app/api/views",
+    fetcher,
+    swrConfig,
+  );
 
   const data: Card[] = [
     {
       title: "Blog Total Views",
-      link: "https://designali.in/blogs",
+      link: "/blogs",
       target: "",
       value: viewsData.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
@@ -50,7 +58,7 @@ const Items = () => {
     },
     {
       title: "Blog Total Likes",
-      link: "https://designali.in/blogs",
+      link: "/blogs",
       target: "",
       value: likesData.likes,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
@@ -86,7 +94,7 @@ const Items = () => {
     },
     {
       title: "Designs Total Views",
-      link: "https://designali.in/blogs",
+      link: "/blogs",
       target: "",
       value: youtubeData.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
@@ -98,7 +106,7 @@ const Items = () => {
     },
     {
       title: "Guides Total Likes",
-      link: "https://designali.in/guides",
+      link: "/guides",
       target: "",
       value: youtubeData.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
