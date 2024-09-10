@@ -1,11 +1,13 @@
 "use client";
 
-import type { BlogPostCore } from "@/types";
+import type { BlogPostCore, Likes, Views } from "@/types";
 import React from "react";
 import Link from "next/link";
+import fetcher from "@/lib/fetcher";
 import { cn } from "@designali/ui";
 import { Skeleton } from "@designali/ui/skeleton";
 import dayjs from "dayjs";
+import useSWR from "swr";
 
 import Image from "./layers/image";
 
@@ -17,7 +19,6 @@ const PostCards = (props: PostCardsProps) => {
   const { posts } = props;
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="group grid gap-4 sm:grid-cols-2" data-testid="post-cards">
       {posts.map((post) => (
         <PostCard key={post._id} {...post} />
@@ -31,6 +32,15 @@ type PostCardProps = BlogPostCore;
 const PostCard = (props: PostCardProps) => {
   const { _id, slug, title, summary, date } = props;
   const [formattedDate, setFormattedDate] = React.useState("");
+
+  const { data: viewsData, isLoading: viewsIsLoading } = useSWR<Views>(
+    `/api/views?slug=${slug}`,
+    fetcher,
+  );
+  const { data: likesData, isLoading: likesIsLoading } = useSWR<Likes>(
+    `/api/likes?slug=${slug}`,
+    fetcher,
+  );
 
   React.useEffect(() => {
     setFormattedDate(dayjs(date).format("MMMM DD, YYYY"));
@@ -68,6 +78,17 @@ const PostCard = (props: PostCardProps) => {
         <div className="my-4 flex items-center gap-2 px-4 text-sm">
           {formattedDate || <Skeleton className="h-5 w-10" />}
           <div>&middot;</div>
+          {likesIsLoading ? (
+            <Skeleton className="h-5 w-10 rounded-md" />
+          ) : (
+            <div>{likesData.likes} likes</div>
+          )}
+          <div>&middot;</div>
+          {viewsIsLoading ? (
+            <Skeleton className="h-5 w-10 rounded-md" />
+          ) : (
+            <div>{viewsData.views} views</div>
+          )}
         </div>
       </Link>
     </>

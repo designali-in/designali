@@ -16,6 +16,7 @@
   "dependencies": {
     "@designali/api": "workspace:*",
     "@designali/auth": "workspace:*",
+    "@designali/database": "workspace:*",
     "@designali/db": "workspace:*",
     "@designali/emails": "workspace:*",
     "@designali/env": "workspace:*",

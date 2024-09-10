@@ -26,10 +26,6 @@ const Header = (props: HeaderProps) => {
     fetcher,
   );
 
-  const viewsQuery = api.views.get.useQuery({
-    slug,
-  });
-
   React.useEffect(() => {
     setFormattedDate(dayjs(date).format("MMMM DD, YYYY"));
   }, [date]);
@@ -88,6 +84,11 @@ const Header = (props: HeaderProps) => {
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
             Views
           </div>
+          {viewsIsLoading ? (
+            <Skeleton className="h-6 w-32 rounded-md" />
+          ) : (
+            <div className="text-lg font-bold">{viewsData.views}</div>
+          )}
         </div>
         <div className="flex gap-2">
           <LikeButton slug={slug} />
