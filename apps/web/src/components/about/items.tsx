@@ -1,6 +1,10 @@
 "use client";
 
+import type { Likes, Views, YouTube } from "@/types";
+import type { SWRConfiguration } from "swr";
 import { Link } from "@/components/ui/link";
+import fetcher from "@/lib/fetcher";
+import useSWR from "swr";
 
 import Counter from "../common/countnumber";
 import { Icons } from "../icons";
@@ -20,17 +24,23 @@ interface Card {
 }
 
 const Items = () => {
-  // const youtubeQuery = api.youtube.get.useQuery();
-
-  // const likesQuery = api.likes.getCount.useQuery();
-  // const viewsQuery = api.views.getCount.useQuery();
+  const swrConfig: SWRConfiguration = {
+    revalidateOnFocus: false,
+  };
+  const { data: youtubeData } = useSWR<YouTube>(
+    "/api/youtube",
+    fetcher,
+    swrConfig,
+  );
+  const { data: likesData } = useSWR<Likes>("/api/likes", fetcher, swrConfig);
+  const { data: viewsData } = useSWR<Views>("/api/views", fetcher, swrConfig);
 
   const data: Card[] = [
     {
       title: "Blog Total Views",
       link: "https://designali.in/blogs",
       target: "",
-      value: 3462,
+      value: viewsData.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
@@ -42,7 +52,7 @@ const Items = () => {
       title: "Blog Total Likes",
       link: "https://designali.in/blogs",
       target: "",
-      value: 5670,
+      value: likesData.likes,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
@@ -54,7 +64,7 @@ const Items = () => {
       title: "YouTube Subscribers",
       link: "https://youtube.com/@designali-in",
       target: "_blank",
-      value: 99,
+      value: youtubeData.subscribers,
       icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
       linkText: "YouTube",
       gradient: {
@@ -66,7 +76,7 @@ const Items = () => {
       title: "YouTube Views",
       link: "https://youtube.com/@designali-in",
       target: "_blank",
-      value: 560,
+      value: youtubeData.views,
       icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
       linkText: "YouTube",
       gradient: {
@@ -78,7 +88,7 @@ const Items = () => {
       title: "Designs Total Views",
       link: "https://designali.in/blogs",
       target: "",
-      value: 890,
+      value: youtubeData.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Designs",
       gradient: {
@@ -90,7 +100,7 @@ const Items = () => {
       title: "Guides Total Likes",
       link: "https://designali.in/guides",
       target: "",
-      value: 785,
+      value: youtubeData.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Guides",
       gradient: {

@@ -1,5 +1,5 @@
 {
-  "extends": "ai-tsconfigs/base.json",
+  "extends": "@designali/tsconfig/internal-package.json",
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tsup.config.ts"],
   "exclude": ["node_modules"]
 }

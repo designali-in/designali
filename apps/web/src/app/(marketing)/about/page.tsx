@@ -78,7 +78,7 @@ export default function HomePage() {
           <p className="text-center text-ali">
             This is dummy stats | Under Construction
           </p>
-          {flags.stats ? <Items /> : null}
+
           <Items />
           <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">
             Worked with Brands Like
