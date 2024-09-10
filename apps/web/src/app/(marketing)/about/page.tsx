@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import About from "@/components/about/about";
 import { Experience } from "@/components/about/experience";
@@ -14,6 +12,11 @@ import { cn } from "@designali/ui";
 import { Plus } from "dicons";
 
 import { Avegra } from "../../fonts";
+
+export const metadata = {
+  title: "About - Designali",
+  description: "A design agency with a touch of magic.",
+};
 
 export default function HomePage() {
   return (
@@ -75,7 +78,6 @@ export default function HomePage() {
             This is dummy stats | Under Construction
           </p>
 
-          <Items />
           <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">
             Worked with Brands Like
           </h1>
