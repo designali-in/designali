@@ -1,34 +1,23 @@
 "use client";
 
-import type { Views } from "@/types";
 import React from "react";
 import ImageZoom from "@/components/common/image-zoom";
 import Image from "@/components/mdx/layers/image";
 import LikeButton from "@/components/ui/like-button";
-import fetcher from "@/lib/fetcher";
 import { UpdatesToolbar } from "@/src/components/common/shate-toolbar";
-import { api } from "@/trpc/react";
 import { Skeleton } from "@designali/ui/skeleton";
 import dayjs from "dayjs";
-import useSWR from "swr";
 
 interface HeaderProps {
   date: string;
   title: string;
   slug: string;
+  views: number;
 }
 
 const Header = (props: HeaderProps) => {
-  const { date, title, slug } = props;
+  const { date, title, slug, views } = props;
   const [formattedDate, setFormattedDate] = React.useState("");
-  const { data: viewsData, isLoading: viewsIsLoading } = useSWR<Views>(
-    `/api/views?slug=${slug}`,
-    fetcher,
-  );
-
-  const viewsQuery = api.views.get.useQuery({
-    slug,
-  });
 
   React.useEffect(() => {
     setFormattedDate(dayjs(date).format("MMMM DD, YYYY"));
@@ -88,6 +77,7 @@ const Header = (props: HeaderProps) => {
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
             Views
           </div>
+          <p>{views}</p>
         </div>
         <div className="flex gap-2">
           <LikeButton slug={slug} />
