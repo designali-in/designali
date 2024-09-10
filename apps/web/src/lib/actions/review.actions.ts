@@ -91,6 +91,7 @@ export async function getReviews({
   limit?: number;
   page: number;
 }) {
+  const reviewsCount = await db.select({ count: count() }).from(reviews);
   const data = await db.query.reviews.findMany({
     where: eq(reviews.productId, productId),
     with: { user: { columns: { name: true } } },
@@ -103,6 +104,7 @@ export async function getReviews({
     .from(reviews)
     .where(eq(reviews.productId, productId));
   return {
+    reviewsCount,
     data,
     totalPages: Math.ceil(dataCount[0].count / limit),
   };

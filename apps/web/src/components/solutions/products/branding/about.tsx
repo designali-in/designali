@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ARating } from "@/src/components/admin/product/rating";
 import ShareLink from "@/src/components/common/sharelink";
 import { getProductBySlug } from "@/src/lib/actions/product.actions";
+import { getAdminSummary } from "@/src/lib/actions/user.actions";
 import { Button } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
 
@@ -9,6 +10,7 @@ import { Icons } from "../../../icons";
 
 export async function About() {
   const product = await getProductBySlug("branding");
+  const reviews = await getAdminSummary();
   return (
     <div className="mb-40 md:mb-20">
       <div className="">
@@ -21,9 +23,9 @@ export async function About() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-slate-600 dark:text-slate-400">
             {product.description}
           </p>
-          <div className="grid items-center justify-between md:flex">
-            <p className="mt-2 text-slate-600 dark:text-slate-400">
-              Price: From{" "}
+          <div className="my-3 grid items-center justify-center md:flex md:justify-between">
+            <p className="mt-2 text-center text-slate-600 dark:text-slate-400">
+              From{" "}
               <span className="text-xl font-semibold text-ali">
                 ₹{product.price}*
               </span>
@@ -36,6 +38,9 @@ export async function About() {
                 5.0{" "}
               </p>
               <span>({`${product.numReviews}`})</span>
+              <span className="px-2 text-xs text-slate-600 dark:text-slate-400">
+                Total: {reviews.reviewsCount[0].count} Reviews
+              </span>
             </div>
           </div>
         </div>
