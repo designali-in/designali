@@ -82,6 +82,12 @@ export const Items = () => {
 
   return (
     <div className=" ">
+      <h1 className="mt-6 text-center text-lg font-bold">Dashboard</h1>
+      <p className="mx-auto mt-3 max-w-2xl text-center text-xs text-slate-600 dark:text-slate-400">
+        This is my personal dashboard, built with Next.js API routes deployed as
+        serverless functions. I use this dashboard to track various metrics
+        across platforms like Website, YouTube and more.
+      </p>
       <div className="mb-20 mt-8 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
         {ddata.map((item) => {
           const {

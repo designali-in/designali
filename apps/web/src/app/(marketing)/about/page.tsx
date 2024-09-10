@@ -9,7 +9,6 @@ import { Connect } from "@/components/common/connect";
 import ImageZoom from "@/components/common/image-zoom";
 import Logos from "@/components/common/logos";
 import { SubscribeInput } from "@/src/components/common/subscribe/subscribe-input";
-import PageTitle from "@/src/components/mdx/page-title";
 import { BackgroundBeams } from "@/src/components/ui/background-beams";
 import { cn } from "@designali/ui";
 import { Plus } from "dicons";
@@ -67,12 +66,7 @@ export default function HomePage() {
             <About />
             <SubscribeInput group={"news"} />
             <Experience />
-            <PageTitle
-              title="AI Dashboards"
-              description={`This is my personal dashboard, built with Next.js API routes
-            deployed as serverless functions. I use this dashboard to track
-            various metrics across platforms like YouTube and more.`}
-            />
+
             <Items />
             <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">
               Worked with Brands Like

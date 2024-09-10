@@ -1,6 +1,6 @@
 "use client";
 
-import type { Likes } from "@/src/types";
+import type { Likes, Views } from "@/src/types";
 import * as React from "react";
 import Link from "next/link";
 import fetcher from "@/src/lib/fetcher";
@@ -51,6 +51,7 @@ const ShareLink = ({ name, slug }: { name: string; slug }) => {
       </Link>
 
       <UpdatesToolbar posts={""} />
+
       <div className="flex items-center gap-3">
         <LikeButtonIcon slug={slug} />
 

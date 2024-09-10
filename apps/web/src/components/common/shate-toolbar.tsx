@@ -106,8 +106,11 @@ export function UpdatesToolbar({ posts }) {
             <DialogTitle>Share</DialogTitle>
           </DialogHeader>
 
-          <div className="grid gap-6 py-4">
-            <CopyInput value={`https://designali.in${pathname}`} />
+          <div className="grid gap-2 py-4 md:gap-6">
+            <CopyInput
+              className="truncate"
+              value={`https://www.designali.in${pathname}`}
+            />
             <Button
               className="flex h-10 w-full items-center space-x-2"
               onClick={handleOnShare}

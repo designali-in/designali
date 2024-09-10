@@ -38,19 +38,22 @@ export function CopyInput({ value, className }: Props) {
       <button type="button" onClick={handleClipboard}>
         <span className="sr-only">Copy</span>
         <motion.div
-          className="absolute right-4 top-3.5"
+          className="absolute right-2 top-1.5"
           initial={{ opacity: 1, scale: 1 }}
           animate={{ opacity: isCopied ? 0 : 1, scale: isCopied ? 0 : 1 }}
         >
-          <DIcons.Copy className="h-5 w-5" />
+          <DIcons.Copy
+            strokeWidth={1}
+            className="z-10 h-10 w-10 rounded-full bg-ali p-2.5"
+          />
         </motion.div>
 
         <motion.div
-          className="absolute right-4 top-3.5"
+          className="absolute right-2 top-1.5"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: isCopied ? 1 : 0, scale: isCopied ? 1 : 0 }}
         >
-          <Icons.check className="h-5 w-5" />
+          <Icons.check className="z-10 h-10 w-10 rounded-full bg-ali p-2.5" />
         </motion.div>
       </button>
     </div>
