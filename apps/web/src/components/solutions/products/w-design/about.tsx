@@ -32,7 +32,7 @@ export async function About() {
                 {" "}
                 5.0{" "}
               </p>
-              <span>(271)</span>
+              <span>({`${product.numReviews}`})</span>
             </div>
           </div>
         </div>

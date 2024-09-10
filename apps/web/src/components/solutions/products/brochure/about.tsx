@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ARating } from "@/src/components/admin/product/rating";
 import ShareLink from "@/src/components/common/sharelink";
 import { getProductBySlug } from "@/src/lib/actions/product.actions";
+import { getReviews } from "@/src/lib/actions/review.actions";
 import { Button } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
 
@@ -9,6 +10,7 @@ import { Icons } from "../../../icons";
 
 export async function About() {
   const product = await getProductBySlug("brochure");
+  const reviews = getReviews;
   return (
     <div className="mb-40 md:mb-20">
       <div className="">
@@ -32,7 +34,7 @@ export async function About() {
                 {" "}
                 5.0{" "}
               </p>
-              <span>(271)</span>
+              <span>({`${product.numReviews}`})</span>
             </div>
           </div>
         </div>

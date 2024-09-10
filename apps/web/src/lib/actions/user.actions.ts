@@ -4,7 +4,7 @@ import type { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { auth, signIn, signOut } from "@designali/auth";
 import { db } from "@designali/db";
-import { products, users } from "@designali/db/src/schema";
+import { products, reviews, users } from "@designali/db/src/schema";
 import { count, desc, eq } from "drizzle-orm";
 
 import type { updateUserSchema } from "../validator";
@@ -47,9 +47,11 @@ export async function getAllUsers({
 export async function getAdminSummary() {
   const productsCount = await db.select({ count: count() }).from(products);
   const usersCount = await db.select({ count: count() }).from(users);
+  const reviewsCount = await db.select({ count: count() }).from(reviews);
 
   return {
     usersCount,
+    reviewsCount,
     productsCount,
   };
 }

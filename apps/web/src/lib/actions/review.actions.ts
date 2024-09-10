@@ -1,12 +1,12 @@
 "use server";
 
+import type { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { PAGE_SIZE } from "@/lib/constant/constants";
 import { auth } from "@designali/auth";
 import { db } from "@designali/db";
 import { products, reviews } from "@designali/db/src/schema";
 import { and, count, desc, eq, sql } from "drizzle-orm";
-import { z } from "zod";
 
 import { formatError } from "../dutils";
 import { insertReviewSchema } from "../validator";
@@ -20,7 +20,7 @@ export async function createUpdateReview(
 
     const review = insertReviewSchema.parse({
       ...data,
-      userId: session?.user.id,
+      userId: session.user.id,
     });
     const product = await db.query.products.findFirst({
       where: eq(products.id, review.productId),
@@ -119,7 +119,7 @@ export const getUserReviewByProductId = async ({
   return await db.query.reviews.findFirst({
     where: and(
       eq(reviews.productId, productId),
-      eq(reviews.userId, session?.user.id!),
+      eq(reviews.userId, session.user.id),
     ),
   });
 };
