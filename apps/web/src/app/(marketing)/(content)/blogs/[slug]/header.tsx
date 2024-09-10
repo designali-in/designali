@@ -1,10 +1,10 @@
 "use client";
 
-import type { Views } from "@/types";
+import type { Likes, Views } from "@/types";
 import React from "react";
 import ImageZoom from "@/components/common/image-zoom";
 import Image from "@/components/mdx/layers/image";
-import { LikeButton } from "@/components/ui/like-button";
+import { LikeButtonIcon } from "@/components/ui/like-button";
 import fetcher from "@/lib/fetcher";
 import { UpdatesToolbar } from "@/src/components/common/shate-toolbar";
 import { Skeleton } from "@designali/ui/skeleton";
@@ -20,10 +20,13 @@ interface HeaderProps {
 const Header = (props: HeaderProps) => {
   const { date, title, slug } = props;
   const [formattedDate, setFormattedDate] = React.useState("");
+
   const { data: viewsData, isLoading: viewsIsLoading } = useSWR<Views>(
     `/api/views?slug=${slug}`,
     fetcher,
   );
+
+  const { data, isLoading } = useSWR<Likes>(`/api/likes?slug=${slug}`, fetcher);
 
   React.useEffect(() => {
     setFormattedDate(dayjs(date).format("MMMM DD, YYYY"));
@@ -43,14 +46,13 @@ const Header = (props: HeaderProps) => {
     };
 
     increment();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="space-y-10">
       <h1 className="text-center text-3xl font-bold md:text-5xl">{title}</h1>
-      <div className="grid grid-cols-2 items-center text-sm max-md:gap-8 md:grid-cols-4">
-        <div className="space-y-3 md:mx-auto">
+      <div className="flex flex-wrap justify-between gap-6">
+        <div className="space-y-3">
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
             Written by
           </div>
@@ -70,27 +72,38 @@ const Header = (props: HeaderProps) => {
             <p className="text-lg font-bold">Ali Imam</p>
           </a>
         </div>
-        <div className="space-y-3 md:mx-auto">
+        <div className="space-y-3">
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
             Published on
           </div>
           <div className="text-lg font-bold">
-            {formattedDate || <Skeleton className="h-6 w-32 rounded-md" />}
+            {formattedDate || <Skeleton className="h-6 rounded-md" />}
           </div>
         </div>
 
-        <div className="space-y-3 md:mx-auto">
+        <div className="space-y-3">
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
             Views
           </div>
           {viewsIsLoading ? (
-            <Skeleton className="h-6 w-32 rounded-md" />
+            <Skeleton className="h-6 rounded-md" />
           ) : (
             <div className="text-lg font-bold">{viewsData.views}</div>
           )}
         </div>
-        <div className="flex gap-2">
-          <LikeButton slug={slug} />
+
+        <div className="space-y-3">
+          <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
+            Likes
+          </div>
+          {isLoading || !data ? (
+            <Skeleton className="h-6 rounded-md" />
+          ) : (
+            <div>{data.likes}</div>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          <LikeButtonIcon slug={slug} />
           <UpdatesToolbar posts={""} />
         </div>
       </div>

@@ -15,33 +15,24 @@ interface Card {
   title: string;
   link: string;
   target: string;
-  value: number | undefined;
+  value: number | string | undefined;
   linkText: string;
   gradient: {
     startColor: string;
     endColor: string;
   };
-  suffix?: string;
 }
 
-const Items = () => {
-  const swrConfig: SWRConfiguration = {
-    revalidateOnFocus: false,
-  };
-  const { data: youtubeData } = useSWR<YouTube>(
-    "/api/youtube",
-    fetcher,
-    swrConfig,
-  );
-  const { data: likesData } = useSWR<Likes>("/api/likes", fetcher, swrConfig);
-  const { data: viewsData } = useSWR<Views>("/api/views", fetcher, swrConfig);
+export const Items = () => {
+  const { data } = useSWR<Views>(`/api/views`, fetcher);
+  const { data: likesData } = useSWR<Likes>(`/api/likes`, fetcher);
 
-  const data: Card[] = [
+  const ddata: Card[] = [
     {
       title: "Blog Total Views",
       link: "/blogs",
       target: "",
-      value: viewsData.views,
+      value: data.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
@@ -53,7 +44,7 @@ const Items = () => {
       title: "Blog Total Likes",
       link: "/blogs",
       target: "",
-      value: likesData.likes,
+      value: "likesData.likes",
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
@@ -65,7 +56,7 @@ const Items = () => {
       title: "YouTube Subscribers",
       link: "https://youtube.com/@designali-in",
       target: "_blank",
-      value: youtubeData.subscribers,
+      value: "youtubeData.subscribers",
       icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
       linkText: "YouTube",
       gradient: {
@@ -77,7 +68,7 @@ const Items = () => {
       title: "YouTube Views",
       link: "https://youtube.com/@designali-in",
       target: "_blank",
-      value: youtubeData.views,
+      value: "youtubeData.views",
       icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
       linkText: "YouTube",
       gradient: {
@@ -89,7 +80,7 @@ const Items = () => {
       title: "Designs Total Views",
       link: "/blogs",
       target: "",
-      value: youtubeData.views,
+      value: "youtubeData.views",
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Designs",
       gradient: {
@@ -101,7 +92,7 @@ const Items = () => {
       title: "Guides Total Likes",
       link: "/guides",
       target: "",
-      value: youtubeData.views,
+      value: "youtubeData.views",
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Guides",
       gradient: {
@@ -112,57 +103,57 @@ const Items = () => {
   ];
 
   return (
-    <div className="mb-4 mt-16 grid grid-cols-2 gap-4 md:grid-cols-3">
-      {data.map((item) => {
-        const {
-          icon,
-          link,
-          title,
-          value,
-          linkText,
-          gradient: { startColor, endColor },
-          suffix,
-        } = item;
+    <div className=" ">
+      <div className="mb-20 mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        {ddata.map((item) => {
+          const {
+            icon,
+            link,
+            target,
+            title,
+            value,
+            linkText,
+            gradient: { startColor, endColor },
+          } = item;
 
-        return (
-          <Link
-            key={item.title}
-            target={item.target}
-            href={link}
-            className="group relative overflow-hidden rounded-lg border p-4 shadow-sm transition-colors hover:bg-slate-100 dark:bg-slate-900/50 dark:hover:bg-slate-900"
-          >
-            <div className="flex flex-col items-center justify-center gap-2 transition-transform group-hover:-translate-y-24 group-focus:-translate-y-24">
-              <div className="flex items-center gap-2 text-3xl font-bold">
-                {value === 0 || value !== undefined ? (
-                  <>
-                    <span className="hidden md:block">{icon}</span>
-                    <div
-                      style={{
-                        background: `linear-gradient(122.25deg, ${startColor} 12.16%, ${endColor} 70.98%)`,
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
-                    >
-                      <Counter value={Number(value)} />
-                      {suffix ? <span>{` ${suffix}`}</span> : null}
-                    </div>
-                  </>
-                ) : (
-                  "--"
-                )}
+          return (
+            <Link
+              key={title}
+              target={target}
+              rel="noopener noreferrer"
+              href={link}
+              className="group relative overflow-hidden rounded-xl border border-slate-200 p-4 transition-colors duration-150 hover:bg-accent dark:border-slate-800"
+            >
+              <div className="flex flex-col items-center justify-center gap-2 transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
+                <div className="flex items-center gap-2 text-3xl font-bold text-foreground">
+                  {value ? (
+                    <>
+                      <span>{icon}</span>
+                      <span
+                        style={{
+                          background: `linear-gradient(122.25deg, ${startColor} 12.16%, ${endColor} 70.98%)`,
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        <Counter value={Number(value)} />
+                      </span>
+                    </>
+                  ) : (
+                    "--"
+                  )}
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-400">
+                  {title}
+                </div>
               </div>
-              <div className="text-center text-sm font-medium text-slate-800 dark:text-slate-200 md:text-lg">
-                {title}
-              </div>
-            </div>
-            <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-2xl font-bold opacity-0 transition group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
-              {linkText}
-            </span>
-          </Link>
-        );
-      })}
+              <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-lg font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
+                {linkText}
+              </span>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
-
-export default Items;

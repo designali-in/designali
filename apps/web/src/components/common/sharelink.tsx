@@ -25,7 +25,7 @@ const ShareLink = ({ name, slug }: { name: string; slug }) => {
     fetcher,
   );
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center justify-center gap-2">
       <Link href={`/solutions/${name}/#reviews`}>
         <TooltipProvider delayDuration={20}>
           <Tooltip>
@@ -51,26 +51,18 @@ const ShareLink = ({ name, slug }: { name: string; slug }) => {
       </Link>
 
       <UpdatesToolbar posts={""} />
-      <TooltipProvider delayDuration={20}>
-        <Tooltip>
-          <TooltipTrigger>
-            <LikeButtonIcon slug={slug} />
-          </TooltipTrigger>
-          <TooltipContent
-            className="rounded-sm px-2 py-1"
-            sideOffset={5}
-            side="top"
-          >
-            <span className="text-xs">Like</span>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <div className="flex items-center gap-3">
+        <LikeButtonIcon slug={slug} />
 
-      {likesIsLoading ? (
-        <Skeleton className="h-5 w-10 rounded-md" />
-      ) : (
-        <div>{likesData.likes} likes</div>
-      )}
+        {likesIsLoading ? (
+          <Skeleton className="h-5 w-10 rounded-md" />
+        ) : (
+          <div className="flex gap-1">
+            {likesData.likes}
+            <span>likes</span>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

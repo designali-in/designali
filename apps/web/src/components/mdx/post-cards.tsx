@@ -72,9 +72,7 @@ const PostCard = (props: PostCardProps) => {
             {summary}
           </div>
         </div>
-        <div className="flex items-center justify-between gap-2 px-2 pt-4 text-sm text-zinc-500">
-          <div className="flex gap-2"></div>
-        </div>
+
         <div className="my-4 flex items-center gap-2 px-4 text-sm">
           {formattedDate || <Skeleton className="h-5 w-10" />}
           <div>&middot;</div>

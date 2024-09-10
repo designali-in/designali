@@ -1,7 +1,7 @@
 import Image from "next/image";
 import About from "@/components/about/about";
 import { Experience } from "@/components/about/experience";
-import Items from "@/components/about/items";
+import { Items } from "@/components/about/items";
 import { Connect } from "@/components/common/connect";
 import ImageZoom from "@/components/common/image-zoom";
 import Logos from "@/components/common/logos";
@@ -77,7 +77,7 @@ export default function HomePage() {
           <p className="text-center text-ali">
             This is dummy stats | Under Construction
           </p>
-
+          <Items />
           <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">
             Worked with Brands Like
           </h1>
