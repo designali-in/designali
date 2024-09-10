@@ -5,6 +5,7 @@ import type { Likes, Views, YouTube } from "@/types";
 import React from "react";
 import { Link } from "@/components/ui/link";
 import fetcher from "@/lib/fetcher";
+import { DIcons } from "dicons";
 import useSWR from "swr";
 
 import Counter from "../common/countnumber";
@@ -26,28 +27,28 @@ interface Card {
 export const Items = () => {
   const { data: vData } = useSWR<Views>(`/api/views`, fetcher);
   const { data: lData } = useSWR<Likes>(`/api/likes`, fetcher);
-  const { data: yData } = useSWR<YouTube>(`/api/youtube`, fetcher);
+  const { data: yData } = useSWR<YouTube>("/api/youtube", fetcher);
 
   const ddata: Card[] = [
     {
-      title: "Blog Total Views",
-      link: "/blogs",
+      title: " Total Views",
+      link: "/solutions",
       target: "",
       value: vData?.views,
-      icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
-      linkText: "Blog",
+      icon: <Icons.eye strokeWidth={1} className="h-5 w-5" />,
+      linkText: "Solutions",
       gradient: {
         startColor: "#fee000",
         endColor: "#ffce63",
       },
     },
     {
-      title: "Blog Total Likes",
-      link: "/blogs",
+      title: " Total Likes",
+      link: "/products",
       target: "",
       value: lData?.likes,
-      icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
-      linkText: "Blog",
+      icon: <DIcons.Heart strokeWidth={1} className="h-5 w-5 text-ali" />,
+      linkText: "Products",
       gradient: {
         startColor: "#ff0f7b",
         endColor: "#f945ff",
@@ -77,35 +78,11 @@ export const Items = () => {
         endColor: "#ca1a1a",
       },
     },
-    {
-      title: "Designs Total Views",
-      link: "/blogs",
-      target: "",
-      value: vData?.views,
-      icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
-      linkText: "Designs",
-      gradient: {
-        startColor: "#ff0f7b",
-        endColor: "#f945ff",
-      },
-    },
-    {
-      title: "Guides Total Likes",
-      link: "/guides",
-      target: "",
-      value: lData?.likes,
-      icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
-      linkText: "Guides",
-      gradient: {
-        startColor: "#fee000",
-        endColor: "#ffce63",
-      },
-    },
   ];
 
   return (
     <div className=" ">
-      <div className="mb-20 mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mb-20 mt-8 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
         {ddata.map((item) => {
           const {
             icon,
@@ -129,7 +106,7 @@ export const Items = () => {
                 <div className="flex items-center gap-2 text-3xl font-bold text-foreground">
                   {value ? (
                     <>
-                      <span>{icon}</span>
+                      <span className="hidden md:block">{icon}</span>
                       <span
                         style={{
                           background: `linear-gradient(122.25deg, ${startColor} 12.16%, ${endColor} 70.98%)`,
@@ -144,7 +121,7 @@ export const Items = () => {
                     "--"
                   )}
                 </div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">
+                <div className="text-center text-xs text-slate-600 dark:text-slate-400 md:text-sm">
                   {title}
                 </div>
               </div>
