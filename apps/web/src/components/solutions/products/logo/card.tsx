@@ -5,8 +5,6 @@ import CountUpNumber from "@/components/common/countnumber";
 import { ImageZoomThree } from "@/components/common/gallery";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import cloudinary from "@/lib/cloudinary";
-import { TypeWriter } from "@/src/components/common/type";
-import WebVitals from "@/src/components/ui/web-vitals";
 import { Button } from "@designali/ui/button";
 import {
   Accordion,
@@ -22,10 +20,8 @@ import { BellIcon, Share2Icon } from "lucide-react";
 const data = await cloudinary.v2.search
   .expression(`folder:creatives/logos/*`)
   .sort_by("created_at", "desc")
-  .max_results(3)
+  .max_results(9)
   .execute();
-
-const talkAbout = ["Converts", "Build trust", "Guide visitors"];
 
 const features = [
   {
@@ -37,16 +33,16 @@ const features = [
     className: "col-span-8 md:col-span-4 p-6 md:p-10",
     background: (
       <div>
-        <p className="pb-3 text-xs text-slate-600 dark:text-slate-400">
-          I specialized in web design and development, brand strategy, content
-          marketing and more, to find and engage customers and drive revenue
-          across all your channels.
-        </p>
-        <h1 className="text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">
-          I make Website that <br />
-          <TypeWriter strings={talkAbout} />.
+        <p className="text-sm text-ali">Why choose me?</p>
+        <h1 className="py-3 text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">
+          Because I don't just design logos; <br />
         </h1>
-
+        <p className="pb-3 text-xs text-slate-600 dark:text-slate-400 md:pr-10">
+          I craft brand stories. With a keen eye for detail and a passion for
+          creativity, I transform your vision into an iconic emblem. Your
+          success is my priority, and I guarantee a logo that doesn't just stand
+          out but leaves a lasting impression.
+        </p>
         <Link
           href={"/solutions/website-develop#include"}
           className="absolute bottom-4 right-4"
@@ -71,9 +67,13 @@ const features = [
     description: "Supports 100+ integrations and counting.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-8 md:col-span-4 lg:col-span-2 p-6 md:p-10",
+    className: "col-span-8  md:col-span-4 lg:col-span-2 p-6 md:p-10",
     background: (
-      <div className="grid items-center gap-4 text-center">
+      <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <DIcons.IndianRupee
+          strokeWidth={0.5}
+          className="h-8 w-8 text-slate-600 dark:text-slate-400 md:h-12 md:w-12"
+        />
         <h1 className="flex h-full items-center justify-center text-7xl font-semibold text-ali">
           <CountUpNumber value={77} />%
         </h1>
@@ -93,7 +93,11 @@ const features = [
     cta: "Learn more",
     className: "col-span-8 md:col-span-4 lg:col-span-2 p-6 md:p-10",
     background: (
-      <div className="grid items-center gap-4 text-center">
+      <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <DIcons.Palette
+          strokeWidth={0.5}
+          className="h-8 w-8 text-slate-600 dark:text-slate-400 md:h-12 md:w-12"
+        />
         <h1 className="flex h-full items-center justify-center text-7xl font-semibold text-ali">
           <CountUpNumber value={80} />%
         </h1>

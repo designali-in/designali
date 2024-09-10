@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
-import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
+import Projects from "@/src/components/common/projects";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/w-design/about";
 import { Banner } from "@/src/components/solutions/products/w-design/banner";
+import { WebsiteDesignCards } from "@/src/components/solutions/products/w-design/card";
+import { DesignInclude } from "@/src/components/solutions/products/w-design/include";
+import { DesignPricing } from "@/src/components/solutions/products/w-design/pricing";
 import ReviewList from "@/src/components/solutions/review-list";
-import { Related } from "@/src/components/solutions/services";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,
@@ -17,8 +19,6 @@ import {
   BreadcrumbSeparator,
 } from "@designali/ui/breadcrumb";
 import { Button } from "@designali/ui/button";
-
-import Branding from "./w-design";
 
 export const metadata = {
   title: "Website Design - Designali",
@@ -31,7 +31,7 @@ export default async function Design() {
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
       <PageTitle title={product.name} description={`✌️ Under Construction`} />
-      <div className="mt-10 flex justify-center">
+      <div className="mt-4 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -39,7 +39,7 @@ export default async function Design() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/solutions">Services</BreadcrumbLink>
+              <BreadcrumbLink href="/solutions">Solutions</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -49,9 +49,10 @@ export default async function Design() {
         </Breadcrumb>
       </div>
       <Banner />
+      <WebsiteDesignCards />
       <About />
-      <Branding />
-      <Related />
+      <DesignInclude />
+      <Projects />
       <div id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
@@ -73,7 +74,7 @@ export default async function Design() {
           </Link>
         )}
       </div>
-      <FAQ />
+      <DesignPricing />
       <Connect />
     </div>
   );

@@ -103,17 +103,17 @@ export function Menu() {
             <NavigationMenuContent className="space-y-3">
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <ListItem href="/solutions/branding" title="Branding">
-                  All gradients are 100% free.
+                  Brand Identity
                 </ListItem>
                 <ListItem href="/solutions/logo" title="Logos">
-                  Download full pack
+                  Logos that stand out
                 </ListItem>
                 <ListItem href="/solutions/sm-posts" title="Social Media Posts">
-                  Download. Edit. Upload.
+                  Social Media Marketing
                 </ListItem>
 
                 <ListItem href="/solutions/brochures" title="Brochures">
-                  Download full pack
+                  Collaterals
                 </ListItem>
               </ul>
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
@@ -121,13 +121,13 @@ export function Menu() {
                   href="/solutions/website-design"
                   title="Website Design"
                 >
-                  All gradients are 100% free.
+                  UI/UX, Landing Page
                 </ListItem>
                 <ListItem
                   href="/solutions/website-develop"
                   title="Website Develop"
                 >
-                  Download. Edit. Upload.
+                  Build in Next.js & Vercel
                 </ListItem>
               </ul>
             </NavigationMenuContent>

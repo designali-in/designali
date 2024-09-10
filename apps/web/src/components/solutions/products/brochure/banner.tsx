@@ -13,7 +13,7 @@ import {
 
 export function Banner() {
   return (
-    <div className="mt-10 md:mb-10">
+    <div className="mt-10">
       <Carousel className="w-full">
         <CarouselContent className="h-[420px] md:h-[730px]">
           <CarouselItem className="">
@@ -31,6 +31,7 @@ export function Banner() {
               </CardContent>
             </Card>
           </CarouselItem>
+
           <CarouselItem className="">
             <Card>
               <CardContent className="flex items-center justify-center p-2">
@@ -47,7 +48,7 @@ export function Banner() {
             </Card>
           </CarouselItem>
         </CarouselContent>
-        <div className="right-0 mt-10 flex justify-center gap-3 md:absolute md:mt-14">
+        <div className="right-8 mt-10 flex justify-center gap-3 md:absolute md:-mt-16">
           <CarouselPrevious />
           <CarouselNext />
         </div>

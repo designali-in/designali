@@ -29,7 +29,10 @@ export default async function Logo() {
   const session = await auth();
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
-      <PageTitle title={product.name} description={`✌️ Under Construction`} />
+      <PageTitle
+        title={product.name}
+        description={`Logo design is the art of turning your business identity into a visual masterpiece. `}
+      />
       <div className="mt-10 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>

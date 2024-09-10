@@ -246,7 +246,7 @@ const features = [
   },
 ];
 
-export function WebsiteDevelopCards() {
+export function WebsiteDesignCards() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (

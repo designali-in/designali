@@ -1,6 +1,6 @@
 "use client";
 
-import type { Likes, Views } from "@/src/types";
+import type { Likes } from "@/src/types";
 import * as React from "react";
 import Link from "next/link";
 import fetcher from "@/src/lib/fetcher";

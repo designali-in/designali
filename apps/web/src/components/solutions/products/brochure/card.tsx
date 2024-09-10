@@ -18,7 +18,7 @@ import { DIcons } from "dicons";
 import { BellIcon, Share2Icon } from "lucide-react";
 
 const data = await cloudinary.v2.search
-  .expression(`folder:creatives/creative/*`)
+  .expression(`folder:creatives/packaging/*`)
   .sort_by("created_at", "desc")
   .max_results(18)
   .execute();
@@ -34,7 +34,7 @@ const features = [
     background: (
       <div>
         <h1 className="text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">
-          Let’s create posts <br /> that convert likes into leads!
+          Let’s create a <br /> brochure that stands out and gets results!
         </h1>
 
         <Link
@@ -175,7 +175,7 @@ const features = [
   },
 ];
 
-export function SocialMedisCards() {
+export function BrochuresCards() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (

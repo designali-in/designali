@@ -68,7 +68,7 @@ export const Service: Experience[] = [
     link: "/solutions/website-develop",
     comlogo:
       "https://utfs.io/f/11b40ec3-5580-422e-9fe2-137da9569e2c-8rjek4.jpg",
-    company: "Build in Next.js",
+    company: "Build in Next.js & Vercel",
     price: "₹4999",
   },
 ];
