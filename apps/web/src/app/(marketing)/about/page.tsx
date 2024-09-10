@@ -69,7 +69,7 @@ export default function HomePage() {
           <SubscribeInput group={"news"} />
           <Experience />
           <PageTitle
-            title="AI Dashboard"
+            title="AI Dashboards"
             description={`This is my personal dashboard, built with Next.js API routes
             deployed as serverless functions. I use this dashboard to track
             various metrics across platforms like YouTube and more.`}
