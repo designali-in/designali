@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import type { Metadata, ResolvingMetadata } from "next";
 import type { Article, WithContext } from "schema-dts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MdxPager } from "@/components/mdx/mdx-pager";
 import site from "@/config/site";
-import { redis } from "@designali/kv";
 import { Button } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
 import { allBlogPosts } from "contentlayer/generated";
@@ -82,11 +80,8 @@ export const generateMetadata = async (
   };
 };
 
-const BlogPostPage = async (props: BlogPostPageProps) => {
+const BlogPostPage = (props: BlogPostPageProps) => {
   const { slug } = props.params;
-
-  const views =
-    (await redis.get<number>(["pageviews", "blogs", slug].join(":"))) ?? 2;
 
   const post = allBlogPosts.find((p) => p.slug === slug);
 
@@ -123,7 +118,7 @@ const BlogPostPage = async (props: BlogPostPageProps) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header date={date} title={title} slug={slug} views={views} />
+      <Header date={date} title={title} slug={slug} />
       <Content slug={slug} post={post} />
       <Separator className="my-8" />
       <div className="flex justify-between">

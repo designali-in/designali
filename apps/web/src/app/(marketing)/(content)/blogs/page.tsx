@@ -5,7 +5,6 @@ import PageTitle from "@/components/mdx/page-title";
 import site from "@/config/site";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getAllBlogPosts } from "@/lib/mdx";
-import { redis } from "@designali/kv";
 import { allBlogPosts } from "contentlayer/generated";
 
 export const runtime = "edge";
@@ -60,19 +59,8 @@ export const generateMetadata = async (
   };
 };
 
-const BlogPage = async () => {
+const BlogPage = () => {
   const posts = getAllBlogPosts();
-  const keys = posts.map((post) => ["pageviews", "blogs", post.slug].join(":"));
-
-  const viewCounts = await redis.mget<number[]>(...keys);
-
-  const views = viewCounts.reduce(
-    (acc, viewCount, index) => {
-      acc[posts[index].slug] = viewCount ?? 0;
-      return acc;
-    },
-    {} as Record<string, number>,
-  );
 
   return (
     <div className="mx-auto my-40 max-w-5xl px-6">
@@ -86,7 +74,6 @@ const BlogPage = async () => {
         sharing knowledge. I have written a total of ${posts.length} articles on
         my blogs. You can search for articles by title in the search box below.`}
       />
-
       <BlogFilteredPosts posts={posts} />
     </div>
   );

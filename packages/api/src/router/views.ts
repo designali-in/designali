@@ -1,48 +1,83 @@
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
-import { redis } from "@designali/kv";
+import { eq, sql, sum } from "@designali/db";
+import { posts } from "@designali/db/src/schema";
+import { redis, redisKeys } from "@designali/kv";
+import { TRPCError } from "@trpc/server";
+import { z } from "zod";
 
-export async function viewsRouter(req: NextRequest): Promise<NextResponse> {
-  if (!redis) {
-    return NextResponse.json(
-      { error: "Redis connection failed" },
-      { status: 500 },
-    );
-  }
+import { createTRPCRouter, publicProcedure } from "../trpc";
 
-  if (req.headers.get("Content-Type") !== "application/json") {
-    return new NextResponse("must be json", { status: 400 });
-  }
+export const viewsRouter = createTRPCRouter({
+  getCount: publicProcedure.query(async ({ ctx }) => {
+    const cachedViewCount = await redis.get<number>(redisKeys.postViewCount);
 
-  const body = await req.json();
-  let slug: string | undefined = undefined;
-  if ("slug" in body) {
-    slug = body.slug;
-  }
-  if (!slug) {
-    return new NextResponse("Slug not found", { status: 400 });
-  }
-
-  const ip = req.ip;
-  if (ip) {
-    // Hash the IP in order to not store it directly in db.
-    const buf = await crypto.subtle.digest(
-      "SHA-256",
-      new TextEncoder().encode(ip),
-    );
-    const hash = Array.from(new Uint8Array(buf))
-      .map((b) => b.toString(16).padStart(2, "0"))
-      .join("");
-
-    // deduplicate the ip for each slug
-    const isNew = await redis.set(["deduplicate", hash, slug].join(":"), true, {
-      nx: true,
-      ex: 24 * 60 * 60,
-    });
-    if (!isNew) {
-      new NextResponse(null, { status: 202 });
+    if (cachedViewCount) {
+      return {
+        views: cachedViewCount,
+      };
     }
-  }
-  await redis.incr(["pageviews", "blogs", slug].join(":"));
-  return new NextResponse(null, { status: 202 });
-}
+
+    const result = await ctx.db
+      .select({
+        value: sum(posts.views),
+      })
+      .from(posts);
+
+    const views = result[0]?.value ? Number(result[0].value) : 0;
+
+    await redis.set(redisKeys.postViewCount, views);
+
+    return {
+      views,
+    };
+  }),
+  get: publicProcedure
+    .input(z.object({ slug: z.string().min(1) }))
+    .query(async ({ ctx, input }) => {
+      const cachedViews = await redis.get<number>(
+        redisKeys.postViews(input.slug),
+      );
+
+      if (cachedViews) {
+        return {
+          views: cachedViews,
+        };
+      }
+
+      const post = await ctx.db
+        .select({ views: posts.views })
+        .from(posts)
+        .where(eq(posts.slug, input.slug));
+
+      if (!post[0]) {
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: "Post not found",
+        });
+      }
+
+      await redis.set(redisKeys.postViews(input.slug), post[0].views);
+
+      return {
+        views: post[0].views,
+      };
+    }),
+  increment: publicProcedure
+    .input(z.object({ slug: z.string().min(1) }))
+    .mutation(async ({ ctx, input }) => {
+      const views = await ctx.db
+        .insert(posts)
+        .values({
+          slug: input.slug,
+          views: 1,
+        })
+        .onConflictDoUpdate({
+          target: posts.slug,
+          set: {
+            views: sql<number>`${posts.views} + 1`,
+          },
+        })
+        .returning();
+
+      await redis.set(redisKeys.postViews(input.slug), views[0]?.views);
+    }),
+});
