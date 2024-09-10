@@ -32,7 +32,7 @@ const Header = (props: HeaderProps) => {
             Written by
           </div>
           <a
-            href="https://www.aliimam.in/"
+            href="/"
             rel="noopener noreferrer"
             target=""
             className="flex items-center gap-2"
