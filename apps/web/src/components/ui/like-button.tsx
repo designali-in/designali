@@ -234,7 +234,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
           buttonClasses,
           ["group relative h-12 w-12 rounded-full"],
           data &&
-            data.currentUserLikes + cacheCount === 3 &&
+            data.currentUserLikes + cacheCount === 1 &&
             "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
         )}
         type="button"
@@ -248,7 +248,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
               "hover:text-white group-hover:bg-ali",
             ],
             data &&
-              data.currentUserLikes + cacheCount === 3 &&
+              data.currentUserLikes + cacheCount === 1 &&
               "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
           )}
         >
