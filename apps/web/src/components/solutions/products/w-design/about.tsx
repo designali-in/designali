@@ -58,7 +58,7 @@ export async function About() {
             </Button>
           </Link>
         </div>
-        <ShareLink name={product.slug} />
+        <ShareLink name={product.slug} slug={product.slug} />
       </div>
       <div className="mt-10">
         <div>
