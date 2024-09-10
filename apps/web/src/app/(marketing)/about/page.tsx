@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import About from "@/components/about/about";
 import { Experience } from "@/components/about/experience";
@@ -8,16 +10,10 @@ import Logos from "@/components/common/logos";
 import { SubscribeInput } from "@/src/components/common/subscribe/subscribe-input";
 import PageTitle from "@/src/components/mdx/page-title";
 import { BackgroundBeams } from "@/src/components/ui/background-beams";
-import { flags } from "@designali/env";
 import { cn } from "@designali/ui";
 import { Plus } from "dicons";
 
 import { Avegra } from "../../fonts";
-
-export const metadata = {
-  title: "About - Designali",
-  description: "A design agency with a touch of magic.",
-};
 
 export default function HomePage() {
   return (

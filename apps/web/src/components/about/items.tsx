@@ -28,20 +28,12 @@ const Items = () => {
     revalidateOnFocus: false,
   };
   const { data: youtubeData } = useSWR<YouTube>(
-    "/app/api/youtube",
+    "/api/youtube",
     fetcher,
     swrConfig,
   );
-  const { data: likesData } = useSWR<Likes>(
-    "/app/api/likes",
-    fetcher,
-    swrConfig,
-  );
-  const { data: viewsData } = useSWR<Views>(
-    "/app/api/views",
-    fetcher,
-    swrConfig,
-  );
+  const { data: likesData } = useSWR<Likes>("/api/likes", fetcher, swrConfig);
+  const { data: viewsData } = useSWR<Views>("/api/views", fetcher, swrConfig);
 
   const data: Card[] = [
     {
