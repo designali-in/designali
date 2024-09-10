@@ -2,6 +2,7 @@
 
 import type { Likes, Views, YouTube } from "@/types";
 import type { SWRConfiguration } from "swr";
+import React from "react";
 import { Link } from "@/components/ui/link";
 import fetcher from "@/lib/fetcher";
 import useSWR from "swr";
