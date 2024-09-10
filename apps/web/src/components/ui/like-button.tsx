@@ -213,9 +213,9 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
   }, 1000);
 
   const handleLike = () => {
-    if (isLoading || !data || data.currentUserLikes + cacheCount >= 3) return;
+    if (isLoading || !data || data.currentUserLikes + cacheCount >= 1) return;
 
-    const value = cacheCount === 3 ? cacheCount : cacheCount + 1;
+    const value = cacheCount === 1 ? cacheCount : cacheCount + 1;
     setCacheCount(value);
 
     if (data.currentUserLikes + cacheCount === 2) {
