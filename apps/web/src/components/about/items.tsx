@@ -1,7 +1,6 @@
 "use client";
 
 import type { Likes, Views, YouTube } from "@/types";
-import type { SWRConfiguration } from "swr";
 import React from "react";
 import { Link } from "@/components/ui/link";
 import fetcher from "@/lib/fetcher";
@@ -32,7 +31,7 @@ export const Items = () => {
       title: "Blog Total Views",
       link: "/blogs",
       target: "",
-      value: data.views,
+      value: "data.views",
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
