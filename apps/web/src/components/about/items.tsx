@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
 import type { Likes, Views, YouTube } from "@/types";
@@ -23,15 +24,16 @@ interface Card {
 }
 
 export const Items = () => {
-  const { data } = useSWR<Views>(`/api/views`, fetcher);
-  const { data: likesData } = useSWR<Likes>(`/api/likes`, fetcher);
+  const { data: vData } = useSWR<Views>(`/api/views`, fetcher);
+  const { data: lData } = useSWR<Likes>(`/api/likes`, fetcher);
+  const { data: yData } = useSWR<YouTube>(`/api/youtube`, fetcher);
 
   const ddata: Card[] = [
     {
       title: "Blog Total Views",
       link: "/blogs",
       target: "",
-      value: "data.views",
+      value: vData?.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
@@ -43,7 +45,7 @@ export const Items = () => {
       title: "Blog Total Likes",
       link: "/blogs",
       target: "",
-      value: "likesData.likes",
+      value: lData?.likes,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Blog",
       gradient: {
@@ -55,7 +57,7 @@ export const Items = () => {
       title: "YouTube Subscribers",
       link: "https://youtube.com/@designali-in",
       target: "_blank",
-      value: "youtubeData.subscribers",
+      value: yData?.subscribers,
       icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
       linkText: "YouTube",
       gradient: {
@@ -67,7 +69,7 @@ export const Items = () => {
       title: "YouTube Views",
       link: "https://youtube.com/@designali-in",
       target: "_blank",
-      value: "youtubeData.views",
+      value: yData?.views,
       icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
       linkText: "YouTube",
       gradient: {
@@ -79,7 +81,7 @@ export const Items = () => {
       title: "Designs Total Views",
       link: "/blogs",
       target: "",
-      value: "youtubeData.views",
+      value: vData?.views,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Designs",
       gradient: {
@@ -91,7 +93,7 @@ export const Items = () => {
       title: "Guides Total Likes",
       link: "/guides",
       target: "",
-      value: "youtubeData.views",
+      value: lData?.likes,
       icon: <Icons.album strokeWidth={1} className="h-5 w-5" />,
       linkText: "Guides",
       gradient: {
