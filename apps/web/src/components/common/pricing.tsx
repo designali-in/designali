@@ -3,6 +3,14 @@ import { Icons } from "@/components/icons";
 import { Avegra } from "@/src/app/fonts";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@designali/ui/card";
 import { DIcons } from "dicons";
 
 import CountUpNumber from "./countnumber";
@@ -65,13 +73,25 @@ export default function FUIPricingWithSpecialTwo() {
           designs whenever you want, all for a monthly price. It’s really that
           easy!
         </p>
+        <div className="flex justify-center gap-2 py-10">
+          <Link href={"/pricing#pricing"}>
+            <Button variant="default" size="lg">
+              See monthly plans
+            </Button>
+          </Link>
+          <Link href={"https://cal.com/aliimam/designali"} target="_blank">
+            <Button variant="outline" size="lg">
+              Book a call
+            </Button>
+          </Link>
+        </div>
         <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">
           Worked with Brands Like
         </h1>
         <Logos />
         <div className="mt-10">
-          <div className="mx-auto max-w-5xl rounded-[100px] border py-10 lg:rounded-full">
-            <dl className="grid grid-cols-1 gap-y-10 text-center lg:grid-cols-3">
+          <div className="mx-auto max-w-5xl rounded-[100px] border p-2 lg:rounded-full">
+            <dl className="grid grid-cols-1 gap-y-10 border py-10 text-center lg:grid-cols-3 lg:rounded-full">
               <div className="mx-auto flex max-w-xs flex-col gap-y-2">
                 <dt className="ml-6 text-sm font-semibold uppercase tracking-[.3em] text-slate-400">
                   <p className="">Projects</p>
@@ -116,6 +136,75 @@ export default function FUIPricingWithSpecialTwo() {
             and effort it needs.
           </span>
         </div>
+        <div className="mx-auto grid max-w-4xl gap-3 md:grid-cols-3">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex justify-center">
+                <DIcons.ArrowUp
+                  strokeWidth={0.5}
+                  className="h-12 w-12 text-green-500"
+                />
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-3xl">
+              1. Subscribe a package
+            </CardContent>
+            <CardContent className="-mt-3 text-sm text-slate-600 dark:text-slate-400">
+              Begin with a conversation, either through a call or an in-person
+              meeting, to dive deep into your project’s details and objectives.
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex justify-center">
+                <DIcons.ArrowUp
+                  strokeWidth={0.5}
+                  className="h-12 w-12 rotate-45 text-green-500"
+                />
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-3xl">
+              2. Get the Design Ready
+            </CardContent>
+            <CardContent className="-mt-3 text-sm text-slate-600 dark:text-slate-400">
+              Based on your specific needs and project timeline, we select the
+              ideal designers for your task, setting the stage with a kick-off
+              call to align visions and goals.
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex justify-center">
+                <DIcons.ArrowUp
+                  strokeWidth={0.5}
+                  className="h-12 w-12 rotate-90 text-green-500"
+                />
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-3xl">
+              3. Realize Your Vision
+            </CardContent>
+            <CardContent className="-mt-3 text-sm text-slate-600 dark:text-slate-400">
+              Witness the transformation of your ideas into tangible designs, as
+              we complete each task and bring your project’s vision into full
+              fruition.
+            </CardContent>
+          </Card>
+        </div>
+        <div className="mx-auto mt-20 grid max-w-3xl items-center justify-center px-8 pb-1 text-center">
+          <h3
+            className={cn(
+              Avegra.className,
+              "z-20 inline-flex items-baseline pb-1 text-center text-3xl text-green-500 md:text-6xl",
+            )}
+          >
+            No hidden fees
+          </h3>{" "}
+        </div>
+        <p className="lg:text-md mx-auto my-2 max-w-xl text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
+          Our plans are clear and open, no shocks or caps. Help is always here
+          when you want it.
+        </p>
         <div className="relative">
           <svg
             viewBox="0 0 1208 1024"

@@ -53,7 +53,7 @@ const Hero = () => {
         <div className="mb-10 mt-4 md:mt-6">
           <div className="px-2">
             <div className="relative mx-auto h-full max-w-6xl border border-ali/50 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)] md:p-12">
-              <span className="absolute bottom-20 right-32 hidden p-2 px-4 text-xs text-ali md:block">
+              <span className="absolute bottom-20 right-40 hidden p-2 px-4 text-xs text-ali md:block">
                 Design in India
               </span>
               <h1 className="flex select-none flex-col px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
@@ -73,7 +73,7 @@ const Hero = () => {
                   strokeWidth={4}
                   className="absolute -bottom-4 -right-4 h-8 w-8 text-ali"
                 />
-                A digital designer with a touch of magic.
+                A design agency with a touch of magic.
               </h1>
               <DotPattern className="-z-10 opacity-50" width={5} height={5} />
             </div>
