@@ -21,6 +21,21 @@ export function Banner() {
               <CardContent className="flex items-center justify-center p-2">
                 <Image
                   src={
+                    "https://utfs.io/f/cdbc516a-1f49-4f37-835e-ed5b41b3507f-17k.png"
+                  }
+                  alt={""}
+                  className="h-[400px] w-full rounded-lg object-cover object-center md:h-[700px]"
+                  width={1000}
+                  height={600}
+                />
+              </CardContent>
+            </Card>
+          </CarouselItem>
+          <CarouselItem className="">
+            <Card>
+              <CardContent className="flex items-center justify-center p-2">
+                <Image
+                  src={
                     "https://utfs.io/f/9a3e4227-756e-45ac-a04a-829fe6671d40-lyh2sn.jpg"
                   }
                   alt={""}
