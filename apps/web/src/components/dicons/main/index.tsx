@@ -257,7 +257,7 @@ export const DIconGenerator = () => {
       />
       <div className="">
         <div className="">
-          <div className="h-auto">
+          <div className="h-auto w-full">
             <div ref={iconsWrapperRef}>
               <Navigation
                 settings={settings}
@@ -266,7 +266,7 @@ export const DIconGenerator = () => {
                 onChangeSearchTerm={onChangeSearchTerm}
                 filteredDIcons={filteredDIcons}
               />
-              <div className="px-6">
+              <div className="w-full px-6">
                 {filteredDIcons.length === 0 ? (
                   <div className="mt-20 grid gap-2 text-center">
                     <p>We couldn’t find an icon for that</p>
@@ -278,11 +278,11 @@ export const DIconGenerator = () => {
                     </Link>
                   </div>
                 ) : (
-                  <div className="my-6">
+                  <div className="my-6 w-full">
                     <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
                       {searchTerm ? "Results" : "All Icons"}
                     </h4>
-                    <ScrollArea className="md:h-[900px]">
+                    <ScrollArea className="w-full md:h-[900px]">
                       <MainIcons
                         settings={settings}
                         filteredDIcons={filteredDIcons}

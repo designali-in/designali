@@ -12,7 +12,7 @@ export async function About() {
   const product = await getProductBySlug("branding");
   const reviews = await getAdminSummary();
   return (
-    <div className="mb-40 md:mb-20">
+    <div className="mb-40 mt-10 md:mb-20">
       <div className="">
         <div>
           <div className="flex justify-center">

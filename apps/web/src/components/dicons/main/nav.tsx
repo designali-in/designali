@@ -31,9 +31,9 @@ export const Navigation = ({
 }: NavProps) => {
   return (
     <main>
-      <nav className="z-20 w-full border-b px-6 md:sticky md:top-14 md:bg-slate-100/60 md:backdrop-blur-md md:backdrop-filter md:hover:bg-slate-50 md:dark:bg-slate-900/60 md:hover:dark:bg-slate-950">
+      <nav className="z-20 mx-auto w-auto border-b px-6 md:sticky md:top-14 md:bg-slate-100/60 md:backdrop-blur-md md:backdrop-filter md:hover:bg-slate-50 md:dark:bg-slate-900/60 md:hover:dark:bg-slate-950">
         <div className="grid w-full justify-center gap-3 md:flex md:justify-between">
-          <div className="grid items-center justify-center gap-3 text-center md:flex md:h-16 md:justify-start md:pb-0">
+          <div className="grid w-full items-center justify-center gap-3 text-center md:flex md:h-16 md:justify-start md:pb-0">
             <Link href={"/dicons"}>
               <h1 className="text-3xl font-semibold hover:text-ali">DIcons</h1>
             </Link>
