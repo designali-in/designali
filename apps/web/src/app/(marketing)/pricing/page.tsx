@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <main className="mt-14">
       <Billing />
-      <div className="px-6">
+      <div className="mx-auto max-w-4xl px-6">
         <FAQ />
       </div>
     </main>
