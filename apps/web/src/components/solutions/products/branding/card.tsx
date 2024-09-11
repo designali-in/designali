@@ -32,7 +32,7 @@ const features = [
     background: (
       <div>
         <h1 className="text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">
-          Lets craft a <br /> memorable brand with a loyal following
+          Lets craft a <br /> memorable brand with a loyal following.
         </h1>
 
         <Link

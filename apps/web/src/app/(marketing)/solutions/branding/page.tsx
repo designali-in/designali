@@ -6,7 +6,6 @@ import { About } from "@/src/components/solutions/products/branding/about";
 import { Banner } from "@/src/components/solutions/products/branding/banner";
 import { BrandingCars } from "@/src/components/solutions/products/branding/card";
 import { BrandingGet } from "@/src/components/solutions/products/branding/get";
-import { BrandingPricing } from "@/src/components/solutions/products/branding/pricing";
 import { Process } from "@/src/components/solutions/products/branding/process";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";

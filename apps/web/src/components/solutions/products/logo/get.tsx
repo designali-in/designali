@@ -10,16 +10,14 @@ const tiers = [
   {
     id: "1",
     features: [
-      "Brand Identity Design (Logo, Typography and Color Theory)",
-      "Corporate Stationery (Letterheads, Identity Cards, Visiting Cards)",
-      "Social Media Template Design & Cover banners",
-      "4 page website design & develop",
-      "Packaging design for up to 3 products",
-      "Presentation Template / Brochure Design",
-      "Collaterals (Flyers, Internal posters (Portrait + Landscape)",
-      "Hoardings, Event backdrops (Stage)",
-      "Uniform design (Caps, Badge Design, Mugs)",
-      "Email Marketing Template",
+      "3 Logo Design with Concepts",
+      "Font include",
+      "Color pallate",
+      "Logo Mockups",
+      "Resize for required all dimentions",
+      "Graphic Elements (patterns and style graphics)",
+      "App Icongraphy & Favicon",
+      "Logo guideline",
     ],
   },
 ];
@@ -69,7 +67,7 @@ const features = [
       <div className="grid items-center justify-center">
         <div className="">
           <h1 className="text-md text-center text-indigo-500 md:text-xl">
-            Brand
+            Logo
             <br />
             Guideline
           </h1>
@@ -95,16 +93,21 @@ const features = [
     name: "Save your files",
     className: "col-span-8 p-6 md:p-10 md:col-span-4 lg:col-span-4",
     background: (
-      <div className="grid items-center gap-4">
+      <div className="grid w-full items-center gap-4">
         <div className="grid gap-8">
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className="z-10 flex h-[450px] flex-col items-center justify-between rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
+              className="z-10 flex h-[450px] w-full flex-col items-center justify-between rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
             >
               {" "}
-              <ScrollArea className="h-[450px]">
+              <ScrollArea className="h-[450px] w-full">
                 <div>
+                  <p className="pb-4 text-slate-400 dark:text-slate-600">
+                    Logo design is the art of turning your business identity
+                    into a visual masterpiece. It's not just a symbol; it's your
+                    brand's personality etched in a single mark.
+                  </p>
                   <ul role="list" className="space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-x-3">
@@ -154,7 +157,7 @@ const features = [
   },
 ];
 
-export function BrandingGet() {
+export function LogoGet() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (

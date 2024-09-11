@@ -10,16 +10,16 @@ const tiers = [
   {
     id: "1",
     features: [
-      "Brand Identity Design (Logo, Typography and Color Theory)",
-      "Corporate Stationery (Letterheads, Identity Cards, Visiting Cards)",
-      "Social Media Template Design & Cover banners",
-      "4 page website design & develop",
-      "Packaging design for up to 3 products",
-      "Presentation Template / Brochure Design",
-      "Collaterals (Flyers, Internal posters (Portrait + Landscape)",
-      "Hoardings, Event backdrops (Stage)",
-      "Uniform design (Caps, Badge Design, Mugs)",
-      "Email Marketing Template",
+      "Up to 10 pages ( Home. Producs, About, Contact, Blog, etc... )",
+      "Free Logo Design*, Font & Color Pallate",
+      "SEO-friendly Site Structure",
+      "SSL Certification",
+      "On-website SEO",
+      "Google Analytics Setup",
+      "Chatbot Setup*",
+      "E-Commerce Integration",
+      "Responsive Web Design",
+      "Free domain and hosting for the 1st year",
     ],
   },
 ];
@@ -54,26 +54,25 @@ const features = [
     background: (
       <div className="flex items-center justify-center">
         <h1 className="text-center text-xl font-semibold text-rose-500 md:text-3xl lg:text-5xl">
-          4K
+          Dark
         </h1>
-        <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400">
-          resolution
+        <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400 md:mt-2">
+          Mode
         </p>
       </div>
     ),
   },
   {
-    name: "Save your files",
-    className: "col-span-4 md:col-span-2 p-6 md:p-10  ",
+    name: "Integrations",
+    className: "col-span-4 md:col-span-2  p-6 md:p-10",
     background: (
-      <div className="grid items-center justify-center">
-        <div className="">
-          <h1 className="text-md text-center text-indigo-500 md:text-xl">
-            Brand
-            <br />
-            Guideline
-          </h1>
-        </div>
+      <div className="flex items-center justify-center">
+        <h1 className="text-center text-xl font-semibold text-indigo-500 md:text-3xl lg:text-5xl">
+          100%
+        </h1>
+        <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400 md:mb-4">
+          SEO
+        </p>
       </div>
     ),
   },
@@ -83,10 +82,9 @@ const features = [
     background: (
       <div className="grid items-center justify-center gap-4 text-center">
         <div className="">
-          <h1 className="text-md text-yellow-500 md:text-xl">Format</h1>
-          <div className="flex h-5 flex-wrap items-center justify-center gap-4 font-mono text-[10px]">
-            <div>AI, PSD, PDF, JPG, PNG, SVG</div>
-          </div>
+          <h1 className="text-md text-yellow-500 md:text-xl">
+            100% Mobile <br /> responsive
+          </h1>
         </div>
       </div>
     ),
@@ -95,15 +93,15 @@ const features = [
     name: "Save your files",
     className: "col-span-8 p-6 md:p-10 md:col-span-4 lg:col-span-4",
     background: (
-      <div className="grid items-center gap-4">
+      <div className="grid w-full items-center gap-4">
         <div className="grid gap-8">
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className="z-10 flex h-[450px] flex-col items-center justify-between rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
+              className="z-10 flex h-[450px] w-full flex-col items-center rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
             >
               {" "}
-              <ScrollArea className="h-[450px]">
+              <ScrollArea className="h-[450px] w-full">
                 <div>
                   <ul role="list" className="space-y-3 text-sm">
                     {tier.features.map((feature) => (
@@ -154,7 +152,7 @@ const features = [
   },
 ];
 
-export function BrandingGet() {
+export function WebDevelopGet() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (

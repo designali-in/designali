@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
-import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/sm-posts/about";
 import { Banner } from "@/src/components/solutions/products/sm-posts/banner";
 import { SocialMedisCards } from "@/src/components/solutions/products/sm-posts/card";
-import { SMPostsPricing } from "@/src/components/solutions/products/sm-posts/pricing";
+import { SMPostsGet } from "@/src/components/solutions/products/sm-posts/get";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
@@ -52,8 +51,7 @@ export default async function SMPosts() {
       </div>
       <Banner />
       <SocialMedisCards />
-      <About />
-      <div className="mb-6" id="reviews">
+      <div className="mb-3" id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
             Reviews
@@ -74,7 +72,8 @@ export default async function SMPosts() {
           </Link>
         )}
       </div>
-      <SMPostsPricing />
+      <SMPostsGet />
+      <About />
       <Connect />
     </div>
   );

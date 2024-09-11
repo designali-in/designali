@@ -47,7 +47,10 @@ export async function About() {
       </div>
       <div className="mt-10 grid justify-between gap-3 md:flex">
         <div className="flex gap-2">
-          <Link href={"/solutions/website-develop#pricing"}>
+          <Link
+            href={"https://buy.stripe.com/test_14k7uC4ZE3ZB5e8dQQ"}
+            target="_blank"
+          >
             <Button variant="default" size="lg">
               Design Now
             </Button>

@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Connect } from "@/components/common/connect";
-import { FAQ } from "@/components/home/faq";
 import { getProductBySlug } from "@/lib/actions/product.actions";
 import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/logo/about";
 import { Banner } from "@/src/components/solutions/products/logo/banner";
 import { LogoCards } from "@/src/components/solutions/products/logo/card";
-import { LogoPricing } from "@/src/components/solutions/products/logo/pricing";
+import { LogoGet } from "@/src/components/solutions/products/logo/get";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
@@ -28,7 +27,7 @@ export default async function Logo() {
   const product = await getProductBySlug("logo");
   const session = await auth();
   return (
-    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
+    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       <PageTitle
         title={product.name}
         description={`Logo design is the art of turning your business identity into a visual masterpiece. `}
@@ -52,9 +51,8 @@ export default async function Logo() {
       </div>
       <Banner />
       <LogoCards />
-      <About />
 
-      <div className="mb-6" id="reviews">
+      <div className="mb-3" id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
             Reviews
@@ -75,7 +73,8 @@ export default async function Logo() {
           </Link>
         )}
       </div>
-      <LogoPricing />
+      <LogoGet />
+      <About />
       <Connect />
     </div>
   );
