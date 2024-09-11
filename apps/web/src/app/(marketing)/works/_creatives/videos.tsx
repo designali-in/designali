@@ -2,6 +2,16 @@ export default function Home() {
   return (
     <main className="mt-4">
       <div className="mx-auto max-w-3xl xl:max-w-7xl">
+        <div className="pb-2">
+          <video
+            controls
+            width="auto"
+            height={320}
+            src={
+              "https://res.cloudinary.com/deelfmnhg/video/upload/v1726043923/IDCUBE_Video_2_oii2ve.mp4"
+            }
+          />
+        </div>
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
           <video
             controls

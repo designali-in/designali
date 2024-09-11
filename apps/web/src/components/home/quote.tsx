@@ -14,11 +14,11 @@ export function Quote() {
           <div className="absolute -right-1.5 -top-1.5 h-3 w-3 bg-ali text-white" />
           <div className="absolute -bottom-1.5 -right-1.5 h-3 w-3 bg-ali text-white" />
 
-          <div className="relative z-20 mx-auto max-w-7xl rounded-[40px] p-10 xl:py-20">
+          <div className="relative z-20 mx-auto max-w-7xl rounded-[40px] py-6 md:p-10 xl:py-20">
             <p className="md:text-md text-xs text-ali lg:text-lg xl:text-2xl">
               I believe
             </p>
-            <div className="text-xl tracking-tighter md:text-5xl lg:text-7xl xl:text-8xl">
+            <div className="text-2xl tracking-tighter md:text-5xl lg:text-7xl xl:text-8xl">
               <div className="flex gap-1 md:gap-2 lg:gap-3 xl:gap-4">
                 <h1 className="font-semibold">"Design should be</h1>
                 <p className="font-thin">easy to</p>
