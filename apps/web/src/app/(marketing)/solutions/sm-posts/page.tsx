@@ -19,7 +19,7 @@ import {
 import { Button } from "@designali/ui/button";
 
 export const metadata = {
-  title: "SM Posts - Designali",
+  title: "Social Media Design - Designali",
   description: "A design agency with a touch of magic.",
 };
 

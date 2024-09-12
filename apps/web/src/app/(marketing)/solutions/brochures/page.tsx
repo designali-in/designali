@@ -5,7 +5,7 @@ import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/brochure/about";
 import { Banner } from "@/src/components/solutions/products/brochure/banner";
 import { BrochuresCards } from "@/src/components/solutions/products/brochure/card";
-import { BrochuresPricing } from "@/src/components/solutions/products/brochure/pricing";
+import { BrochureGet } from "@/src/components/solutions/products/brochure/get";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
@@ -27,7 +27,7 @@ export default async function Brochure() {
   const product = await getProductBySlug("brochure");
   const session = await auth();
   return (
-    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
+    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       <PageTitle
         title={product.name}
         description={`Let’s create a brochure that stands out and gets results!`}
@@ -51,7 +51,6 @@ export default async function Brochure() {
       </div>
       <Banner />
       <BrochuresCards />
-      <About />
       <div id="reviews">
         <div className="flex justify-center">
           <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
@@ -73,7 +72,8 @@ export default async function Brochure() {
           </Link>
         )}
       </div>
-      <BrochuresPricing />
+      <BrochureGet />
+      <About />
       <Connect />
     </div>
   );

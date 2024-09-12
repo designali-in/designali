@@ -6,8 +6,8 @@ import PageTitle from "@/src/components/mdx/page-title";
 import { About } from "@/src/components/solutions/products/w-design/about";
 import { Banner } from "@/src/components/solutions/products/w-design/banner";
 import { WebsiteDesignCards } from "@/src/components/solutions/products/w-design/card";
+import { WebDesignGet } from "@/src/components/solutions/products/w-design/get";
 import { DesignInclude } from "@/src/components/solutions/products/w-design/include";
-import { DesignPricing } from "@/src/components/solutions/products/w-design/pricing";
 import ReviewList from "@/src/components/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
@@ -29,7 +29,7 @@ export default async function Design() {
   const product = await getProductBySlug("website-design");
   const session = await auth();
   return (
-    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl">
+    <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       <PageTitle title={product.name} description={`✌️ Under Construction`} />
       <div className="mt-4 flex justify-center">
         <Breadcrumb>
@@ -50,7 +50,6 @@ export default async function Design() {
       </div>
       <Banner />
       <WebsiteDesignCards />
-      <About />
       <DesignInclude />
       <Projects />
       <div id="reviews">
@@ -74,7 +73,8 @@ export default async function Design() {
           </Link>
         )}
       </div>
-      <DesignPricing />
+      <WebDesignGet />
+      <About />
       <Connect />
     </div>
   );

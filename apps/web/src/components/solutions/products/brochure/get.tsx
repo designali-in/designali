@@ -10,15 +10,8 @@ const tiers = [
   {
     id: "1",
     features: [
-      "9 Post Design",
-      "3 Carousel Post",
-      "3 Story Post",
-      "5 Highlights design",
-      "Cover Banners",
-      "Avatar Profile Picture",
-      "Creative Ads Designs",
-      "All social media resize options",
-      "Instagram Grid Design",
+      "12 Page Design ( Cover, Back and Inside )",
+      "Print and Digital files",
       "Unlimited stock photos & vector",
     ],
   },
@@ -54,7 +47,7 @@ const features = [
     background: (
       <div className="flex items-center justify-center">
         <h1 className="text-center text-xl font-semibold text-rose-500 md:text-3xl lg:text-5xl">
-          High
+          4K
         </h1>
         <p className="text-center font-mono text-xs text-slate-600 dark:text-slate-400">
           resolution
@@ -69,9 +62,9 @@ const features = [
       <div className="grid items-center justify-center">
         <div className="">
           <h1 className="text-md text-center text-indigo-500 md:text-xl">
-            Instagram
+            Color
             <br />
-            Grid
+            Pallate
           </h1>
         </div>
       </div>
@@ -85,7 +78,7 @@ const features = [
         <div className="">
           <h1 className="text-md text-yellow-500 md:text-xl">Format</h1>
           <div className="flex h-5 flex-wrap items-center justify-center gap-4 font-mono text-[10px]">
-            <div>AI, PSD, PDF, JPG, PNG, SVG</div>
+            <div>AI, PSD, PDF</div>
           </div>
         </div>
       </div>
@@ -105,6 +98,13 @@ const features = [
               {" "}
               <ScrollArea className="h-[450px] w-full">
                 <div>
+                  <p className="pb-4 text-slate-400 dark:text-slate-600">
+                    The project includes the creation and layout of the cover
+                    and pages, considering the typographic families, format,
+                    types of paper, color palette and usage of images, seeking
+                    to bring dynamics to each page and result in a project that
+                    arouses curiosity in the reader.
+                  </p>
                   <ul role="list" className="space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-x-3">
@@ -154,7 +154,7 @@ const features = [
   },
 ];
 
-export function SMPostsGet() {
+export function BrochureGet() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (
