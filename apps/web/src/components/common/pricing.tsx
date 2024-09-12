@@ -50,7 +50,7 @@ const tiers = [
 export default function FUIPricingWithSpecialTwo() {
   return (
     <div className="relative isolate overflow-hidden bg-transparent">
-      <div className="-z-1 absolute inset-0 h-[600px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-10 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
+      <div className="absolute inset-0 -z-10 h-[600px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-10 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
       <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
         <div className="flex justify-center py-10">
           <DIcons.IndianRupee
@@ -208,7 +208,7 @@ export default function FUIPricingWithSpecialTwo() {
         <div className="relative">
           <svg
             viewBox="0 0 1208 1024"
-            className="-z-8 absolute -top-10 left-1/2 h-[64rem] -translate-x-1/2 opacity-20 [mask-image:radial-gradient(closest-side,white,transparent)] dark:opacity-40 sm:-top-12 md:-top-20 lg:-top-12 xl:top-0"
+            className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 opacity-20 [mask-image:radial-gradient(closest-side,white,transparent)] dark:opacity-40 sm:-top-12 md:-top-20 lg:-top-12 xl:top-0"
           >
             <ellipse
               cx={604}

@@ -102,7 +102,6 @@ const features = [
               key={tier.id}
               className="z-10 flex h-[450px] flex-col items-center justify-between rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
             >
-              {" "}
               <ScrollArea className="h-[450px]">
                 <div>
                   <ul role="list" className="space-y-3 text-sm">
@@ -121,7 +120,6 @@ const features = [
             </div>
           ))}
         </div>
-
         <DotPattern width={5} height={5} />
       </div>
     ),

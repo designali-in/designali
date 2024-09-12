@@ -256,6 +256,7 @@ export default function ReviewList({
           to write a review
         </div>
       )}
+
       <div className="grid gap-3 md:grid-cols-2">
         {reviews.slice(0, 2).map((review) => (
           <Card className="h-full w-full" key={review.id}>
