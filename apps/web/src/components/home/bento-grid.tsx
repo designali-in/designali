@@ -39,7 +39,7 @@ const features = [
     background: (
       <div>
         <div className="grid gap-4 p-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-4">
             <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center">
               <h1 className="mt-2 font-mono text-7xl font-bold text-indigo-500 md:text-9xl">
                 <Counter value={8} />
