@@ -9,7 +9,6 @@ import { CodeBlock } from "@/src/components/mdx/layers/code-block";
 import { Button } from "@designali/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/dtabs";
 import { ScrollArea } from "@designali/ui/scroll-area";
-import { DIcons } from "dicons";
 
 interface InstallIconProps {
   settings;
@@ -39,7 +38,7 @@ export const InstallIcon = ({ settings }: InstallIconProps) => {
           </div>
 
           <ScrollArea>
-            <div className="w-[400px] px-6 md:h-[800px]">
+            <div className="w-[400px] px-6 md:h-[780px]">
               <div className="">
                 <h1 className="py-3 text-slate-600 dark:text-slate-400">
                   Import
@@ -152,7 +151,7 @@ export default App;`}
               </div>
             </div>
           </ScrollArea>
-          <div className="w-full p-6">
+          <div className="w-full px-6 pb-6">
             <Link href={"/documentation"}>
               <Button size="lg" className="h-10 w-full">
                 Go to Docs

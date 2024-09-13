@@ -40,7 +40,7 @@ const navigation = {
           name: "Products",
           items: [
             { name: "Products", href: "/products" },
-            { name: "DIcons", href: "/dicons" },
+            { name: "DIcons", href: "/products/dicons" },
             { name: "Graaadients", href: "/products/graaadients" },
             { name: "3D Icons", href: "/products/3dicons" },
           ],

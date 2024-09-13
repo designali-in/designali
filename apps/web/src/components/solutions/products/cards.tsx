@@ -1,12 +1,8 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { CardStack } from "@/components/ui/image-card";
-import { Avegra } from "@/src/app/fonts";
-import { cn } from "@/src/lib/dutils";
-import { Button } from "@designali/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -39,6 +35,16 @@ const ICONS3D = [
   },
 ];
 
+const ICONS2D = [
+  {
+    id: 1,
+    name: "2D Icons",
+    src: "/images/products/3dbg.jpg",
+    designation: "Download. Edit. Upload.",
+    content: <p>+100 Beautifully designed icons.</p>,
+  },
+];
+
 const DICONS = [
   {
     id: 1,
@@ -51,16 +57,19 @@ const DICONS = [
 
 export function Graaadients() {
   return (
-    <div className="grid justify-center gap-4">
-      <Link href="/dicons" className="rounded-3xl border">
-        <CardStack items={DICONS} />
-      </Link>
-      <div className="grid justify-center gap-4 md:flex">
+    <div className=" ">
+      <div className="grid grid-cols-2 justify-center gap-4">
+        <Link href="/products/dicons" className="rounded-3xl border">
+          <CardStack items={DICONS} />
+        </Link>
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
         </Link>
         <Link href="/products/3dicons" className="rounded-3xl border">
           <CardStack items={ICONS3D} />
+        </Link>
+        <Link href="/products/2dicons" className="rounded-3xl border">
+          <CardStack items={ICONS2D} />
         </Link>
       </div>
     </div>
@@ -81,7 +90,7 @@ export function CarouselGraaadients() {
       >
         <CarouselContent className=" ">
           <CarouselItem className=" ">
-            <Link href="/dicons">
+            <Link href="/products/dicons">
               <CardStack items={DICONS} />
             </Link>
           </CarouselItem>
@@ -93,6 +102,11 @@ export function CarouselGraaadients() {
           <CarouselItem className=" ">
             <Link href="/products/3dicons">
               <CardStack items={ICONS3D} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
+            <Link href="/products/2dicons">
+              <CardStack items={ICONS2D} />
             </Link>
           </CarouselItem>
         </CarouselContent>

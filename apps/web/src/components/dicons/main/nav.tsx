@@ -34,7 +34,7 @@ export const Navigation = ({
       <nav className="z-20 mx-auto w-auto border-b px-6 md:sticky md:top-14 md:bg-slate-100/60 md:backdrop-blur-md md:backdrop-filter md:hover:bg-slate-50 md:dark:bg-slate-900/60 md:hover:dark:bg-slate-950">
         <div className="grid w-full justify-center gap-3 md:flex md:justify-between">
           <div className="grid w-full items-center justify-center gap-3 text-center md:flex md:h-16 md:justify-start md:pb-0">
-            <Link href={"/dicons"}>
+            <Link href={"/products/dicons"}>
               <h1 className="text-3xl font-semibold hover:text-ali">DIcons</h1>
             </Link>
             <div className="flex gap-3">
@@ -65,7 +65,7 @@ export const Navigation = ({
             </div>
           </div>
           <div className="flex items-center justify-center gap-1 pb-6 md:pb-0">
-            <h1 className="rounded-md border px-4 py-1 font-mono text-ali">{`<${settings.icon} />`}</h1>
+            <h1 className="text-nowrap rounded-md border px-4 py-1 font-mono text-ali">{`<${settings.icon} />`}</h1>
             <CopyButton value={`<${settings.icon} />`} />
           </div>
         </div>
@@ -166,7 +166,7 @@ export const ToolNavigation = ({
       <div className="fixed top-14 z-10 flex h-28 w-full items-center justify-center gap-2 border-b border-t bg-slate-100/60 backdrop-blur-md backdrop-filter dark:bg-slate-900/60 md:h-14">
         <div className={cn("grid items-center justify-center gap-2 md:flex")}>
           <div>
-            <Link href={"/dicons"}>
+            <Link href={"/products/dicons"}>
               <h1 className="text-center text-2xl font-semibold hover:text-ali">
                 DIcons
               </h1>

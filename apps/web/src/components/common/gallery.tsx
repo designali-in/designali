@@ -123,6 +123,29 @@ export function Grid5BG({ images }: { images: any }) {
   );
 }
 
+export function Grid8GapBG({ images }: { images: any }) {
+  return (
+    <>
+      <PhotoProvider>
+        <div className="grid grid-cols-4 items-stretch gap-2 md:grid-cols-8">
+          {images.map((image: any) => (
+            <PhotoView src={image.secure_url}>
+              <CldImage
+                src={image.secure_url}
+                alt={image.secure_url}
+                loading="lazy"
+                width={300}
+                height={300}
+                className="rounded-xl border border-slate-200 bg-slate-100 object-cover p-2 hover:cursor-zoom-in hover:saturate-0 dark:border-slate-800 dark:bg-slate-900 xl:p-6"
+              />
+            </PhotoView>
+          ))}
+        </div>
+      </PhotoProvider>
+    </>
+  );
+}
+
 export function Grid6({ images }: { images: any }) {
   return (
     <>

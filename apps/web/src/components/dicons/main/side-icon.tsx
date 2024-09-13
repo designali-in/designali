@@ -236,10 +236,10 @@ export const SideIcon = ({
             </div>
           </div>
           <div className="hidden md:block">
-            <Link href={"/dicons"}>
+            <Link href={"/products/dicons"}>
               <h1 className="text-md mb-2 mt-6">All Icons</h1>
             </Link>
-            <Link href={"/dicons/categories"}>
+            <Link href={"/products/dicons/categories"}>
               <h1 className="text-md mb-2">Categories</h1>
             </Link>
             <ScrollArea className="h-[360px]">

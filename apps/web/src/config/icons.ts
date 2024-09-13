@@ -6,187 +6,187 @@ export const diconsConfig: DIconsConfig = {
       title: "",
       items: [
         {
-          href: "/dicons/categories#accessibility",
+          href: "/products/dicons/categories#accessibility",
           title: "Accessibility",
         },
         {
-          href: "/dicons/categories#account",
+          href: "/products/dicons/categories#account",
           title: "Accounts & access",
         },
         {
-          href: "/dicons/categories#animals",
+          href: "/products/dicons/categories#animals",
           title: "Animals",
         },
         {
-          href: "/dicons/categories#arrows",
+          href: "/products/dicons/categories#arrows",
           title: "Arrows",
         },
         {
-          href: "/dicons/categories#brands",
+          href: "/products/dicons/categories#brands",
           title: "Brands",
         },
         {
-          href: "/dicons/categories#buildings",
+          href: "/products/dicons/categories#buildings",
           title: "Buildings",
         },
         {
-          href: "/dicons/categories#charts",
+          href: "/products/dicons/categories#charts",
           title: "Charts",
         },
         {
-          href: "/dicons/categories#communication",
+          href: "/products/dicons/categories#communication",
           title: "Communication",
         },
         {
-          href: "/dicons/categories#connectivity",
+          href: "/products/dicons/categories#connectivity",
           title: "Connectivity",
         },
         {
-          href: "/dicons/categories#currency",
+          href: "/products/dicons/categories#currency",
           title: "Currency",
         },
         {
-          href: "/dicons/categories#cursors",
+          href: "/products/dicons/categories#cursors",
           title: "Cursors",
         },
         {
-          href: "/dicons/categories#design",
+          href: "/products/dicons/categories#design",
           title: "Design",
         },
         {
-          href: "/dicons/categories#coding",
+          href: "/products/dicons/categories#coding",
           title: "Coding & development",
         },
         {
-          href: "/dicons/categories#devices",
+          href: "/products/dicons/categories#devices",
           title: "Devices",
         },
         {
-          href: "/dicons/categories#emoji",
+          href: "/products/dicons/categories#emoji",
           title: "Emoji",
         },
         {
-          href: "/dicons/categories#files",
+          href: "/products/dicons/categories#files",
           title: "File icons",
         },
         {
-          href: "/dicons/categories#food-beverage",
+          href: "/products/dicons/categories#food-beverage",
           title: "Food & beverage",
         },
         {
-          href: "/dicons/categories#furniture",
+          href: "/products/dicons/categories#furniture",
           title: "Furniture",
         },
         {
-          href: "/dicons/categories#gaming",
+          href: "/products/dicons/categories#gaming",
           title: "Gaming",
         },
         {
-          href: "/dicons/categories#home",
+          href: "/products/dicons/categories#home",
           title: "Home",
         },
         {
-          href: "/dicons/categories#layout",
+          href: "/products/dicons/categories#layout",
           title: "Layout",
         },
         {
-          href: "/dicons/categories#mail",
+          href: "/products/dicons/categories#mail",
           title: "Mail",
         },
         {
-          href: "/dicons/categories#maps",
+          href: "/products/dicons/categories#maps",
           title: "Maps",
         },
         {
-          href: "/dicons/categories#maths",
+          href: "/products/dicons/categories#maths",
           title: "Maths",
         },
         {
-          href: "/dicons/categories#medical",
+          href: "/products/dicons/categories#medical",
           title: "Medical",
         },
         {
-          href: "/dicons/categories#money",
+          href: "/products/dicons/categories#money",
           title: "Money",
         },
         {
-          href: "/dicons/categories#multimedia",
+          href: "/products/dicons/categories#multimedia",
           title: "Multimedia",
         },
         {
-          href: "/dicons/categories#nature",
+          href: "/products/dicons/categories#nature",
           title: "Nature",
         },
         {
-          href: "/dicons/categories#navigation",
+          href: "/products/dicons/categories#navigation",
           title: "Navigation",
         },
         {
-          href: "/dicons/categories#notifications",
+          href: "/products/dicons/categories#notifications",
           title: "Notifications",
         },
         {
-          href: "/dicons/categories#people",
+          href: "/products/dicons/categories#people",
           title: "People",
         },
         {
-          href: "/dicons/categories#photography",
+          href: "/products/dicons/categories#photography",
           title: "Photography",
         },
         {
-          href: "/dicons/categories#science",
+          href: "/products/dicons/categories#science",
           title: "Science",
         },
         {
-          href: "/dicons/categories#seasons",
+          href: "/products/dicons/categories#seasons",
           title: "Seasons",
         },
         {
-          href: "/dicons/categories#security",
+          href: "/products/dicons/categories#security",
           title: "Security",
         },
         {
-          href: "/dicons/categories#shapes",
+          href: "/products/dicons/categories#shapes",
           title: "Shapes",
         },
         {
-          href: "/dicons/categories#shopping",
+          href: "/products/dicons/categories#shopping",
           title: "Shopping",
         },
         {
-          href: "/dicons/categories#social",
+          href: "/products/dicons/categories#social",
           title: "Social",
         },
         {
-          href: "/dicons/categories#sports",
+          href: "/products/dicons/categories#sports",
           title: "Sports",
         },
         {
-          href: "/dicons/categories#sustainability",
+          href: "/products/dicons/categories#sustainability",
           title: "Sustainability",
         },
         {
-          href: "/dicons/categories#text",
+          href: "/products/dicons/categories#text",
           title: "Text formatting",
         },
         {
-          href: "/dicons/categories#time",
+          href: "/products/dicons/categories#time",
           title: "Time & calendar",
         },
         {
-          href: "/dicons/categories#tools",
+          href: "/products/dicons/categories#tools",
           title: "Tools",
         },
         {
-          href: "/dicons/categories#transportation",
+          href: "/products/dicons/categories#transportation",
           title: "Transportation",
         },
         {
-          href: "/dicons/categories#travel",
+          href: "/products/dicons/categories#travel",
           title: "Travel",
         },
         {
-          href: "/dicons/categories#weather",
+          href: "/products/dicons/categories#weather",
           title: "Weather",
         },
       ],
