@@ -138,7 +138,7 @@ const features = [
                   autoPlay
                   muted
                   loop
-                  className="h-full w-full rounded-3xl"
+                  className="h-full w-full rounded-2xl"
                 >
                   <source
                     width={450}
