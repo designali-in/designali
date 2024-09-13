@@ -41,7 +41,7 @@ const features = [
         <div className="grid gap-4 p-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center">
-              <h1 className="mt-2 font-mono text-7xl font-bold text-indigo-500 md:text-9xl">
+              <h1 className="mt-2 font-mono text-6xl font-bold text-indigo-500 md:text-9xl">
                 <Counter value={8} />
               </h1>
               <p className="-mt-2 text-xs text-slate-600 dark:text-indigo-400">
@@ -50,7 +50,7 @@ const features = [
               <DotPattern width={5} height={5} />
             </div>
             <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center">
-              <h1 className="mt-2 font-mono text-7xl font-bold text-lime-500 md:text-9xl">
+              <h1 className="mt-2 font-mono text-6xl font-bold text-lime-500 md:text-9xl">
                 <Counter value={reviews.reviewsCount[0].count} />
               </h1>
               <p className="-mt-2 text-xs text-lime-500">Reviews</p>
