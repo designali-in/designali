@@ -35,7 +35,8 @@ export const Service: Experience[] = [
   {
     post: "Logo",
     link: "/solutions/logo",
-    comlogo: "https://utfs.io/f/240e81c4-976b-48b3-aa1d-998ec6c0397b-1evuz.jpg",
+    comlogo:
+      "https://utfs.io/f/b8c6bf81-a9de-4d4d-b4c8-7939789bc824-6vt0jf.jpg",
     company: "Logos that stand out",
     price: "₹1999",
   },
