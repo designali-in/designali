@@ -98,10 +98,10 @@ const features = [
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className="z-10 flex h-[450px] w-full flex-col items-center rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
+              className="z-10 flex h-[500px] w-full flex-col items-center rounded-2xl border bg-white p-8 shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] sm:p-10"
             >
               {" "}
-              <ScrollArea className="h-[450px] w-full">
+              <ScrollArea className="h-[500px] w-full">
                 <div>
                   <ul role="list" className="space-y-3 text-sm">
                     {tier.features.map((feature) => (
@@ -134,13 +134,13 @@ const features = [
           <div className="z-10 flex flex-col justify-between rounded-2xl border bg-white shadow-xl dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]">
             <div>
               <div>
-                <Image
-                  src="https://utfs.io/f/8671e2d6-802d-48b3-943a-a18cb5169f48-lyh2sl.jpg"
-                  alt="Your Image"
-                  height={400}
-                  width={400}
-                  className="h-[450px] w-full rounded-2xl object-cover"
-                />
+                <video autoPlay muted loop className="rounded-3xl">
+                  <source
+                    width={450}
+                    height={450}
+                    src="/videos/designali.mp4"
+                  />
+                </video>
               </div>
             </div>
           </div>
