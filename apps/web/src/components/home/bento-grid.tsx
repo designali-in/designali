@@ -1,17 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CarouselGraaadients } from "@/components/solutions/products/cards";
-import { CarouselServices } from "@/components/solutions/services";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import { DIcons } from "dicons";
+import { Avegra } from "@/src/app/fonts";
+import { getAdminSummary } from "@/src/lib/actions/user.actions";
+import { cn } from "@designali/ui";
+import { Button } from "@designali/ui/button";
 
+import { HomeItems } from "../about/items";
 import { Chatbot } from "../common/chat";
-import Marquee from "../ui/marquee";
+import Counter from "../common/countnumber";
+import DotPattern from "../ui/dot-pattern";
+import Ripple from "../ui/ripple";
+import ShineBorder from "../ui/shine-border";
+
+const reviews = await getAdminSummary();
 
 const features = [
   {
     name: "Notifications 3",
     className:
-      "col-span-8 md:col-span-8 h-auto  cursor-pointer lg:col-span-6 xl:col-span-3",
+      "col-span-8 md:col-span-4 h-auto  cursor-pointer lg:col-span-4 xl:col-span-4",
     background: (
       <div className="">
         <CarouselGraaadients />
@@ -20,80 +29,86 @@ const features = [
   },
   {
     name: "",
-    className: "col-span-8  md:col-span-4 lg:col-span-2 xl:col-span-2",
-    background: <CarouselServices />,
+    className: "col-span-8 md:col-span-4 lg:col-span-4 xl:col-span-4",
+    background: <Chatbot />,
   },
+
   {
     name: "",
-    className: "col-span-8 md:col-span-4 lg:col-span-8 xl:col-span-3",
-    background: <Chatbot />,
+    className: "col-span-8 md:col-span-4  lg:col-span-3 xl:col-span-3",
+    background: (
+      <div>
+        <div className="grid gap-4 p-4">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center">
+              <h1 className="mt-2 font-mono text-7xl font-bold text-indigo-500 md:text-9xl">
+                <Counter value={8} />
+              </h1>
+              <p className="-mt-2 text-xs text-slate-600 dark:text-indigo-400">
+                Years of experience
+              </p>
+              <DotPattern width={5} height={5} />
+            </div>
+            <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center">
+              <h1 className="mt-2 font-mono text-7xl font-bold text-lime-500 md:text-9xl">
+                <Counter value={reviews.reviewsCount[0].count} />
+              </h1>
+              <p className="-mt-2 text-xs text-lime-500">Reviews</p>
+              <Ripple />
+            </div>
+          </div>
+          <HomeItems />
+        </div>
+      </div>
+    ),
   },
   {
     name: "Notifications 3",
-    className: "col-span-8 md:col-span-8 lg:col-span-8 xl:col-span-8",
+    className: "col-span-8 md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
       <div>
-        <Link href={"/dicons"}>
-          <div className="flex h-full w-full gap-2">
-            <div className="group relative w-full overflow-hidden rounded-2xl p-1 transition-colors duration-150 hover:bg-accent">
-              <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-64 group-focus:-translate-y-24">
-                <div className="flex items-center justify-center">
-                  {" "}
-                  <Marquee
-                    direction="left"
-                    speed={100}
-                    delay={0}
-                    pauseOnHover={true}
-                  >
-                    <DIcons.Activity
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.Plus
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.Award
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.Printer
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.ChartBar
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.BadgePercent
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.Bird
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.Cat
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.Inbox
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                    <DIcons.ChartPie
-                      strokeWidth={0.5}
-                      className="h-10 w-10 rounded-md border p-2"
-                    />
-                  </Marquee>
-                </div>
-              </div>
-              <span className="absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-24 items-center gap-1 text-sm font-semibold uppercase tracking-[.3em] opacity-0 transition duration-300 group-hover:-translate-y-1/2 group-hover:opacity-100 group-focus:-translate-y-1/2 group-focus:opacity-100">
-                DIcons
-              </span>
-            </div>
+        <div className="flex flex-col items-center justify-center gap-6 p-6">
+          <div className="mx-auto mt-6 grid items-center justify-center text-center">
+            <h3
+              className={cn(
+                Avegra.className,
+                "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-center text-3xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-4xl",
+              )}
+            >
+              Make your business shine with unlimited* creativity​.
+            </h3>
           </div>
-        </Link>
+          <p className="lg:text-md px-2 text-center text-xs font-light text-slate-600 dark:text-slate-400">
+            Forget the messy job of hiring and surprise expenses. Enjoy
+            top-notch designs whenever you want, all for a monthly price. It’s
+            really that easy!
+          </p>
+          <div className="grid justify-center gap-2">
+            <Link href={"/pricing#pricing"}>
+              <Button variant="default" size="lg">
+                See Pricing
+              </Button>
+            </Link>
+            <Link href={"https://cal.com/aliimam/designali"} target="_blank">
+              <Button variant="outline" size="lg">
+                Book a Call
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    name: "",
+    className: "col-span-8 md:col-span-8 lg:col-span-3 xl:col-span-3",
+    background: (
+      <div>
+        <ShineBorder className="" color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+          <video autoPlay muted loop className="h-full w-full rounded-2xl">
+            <source width={450} height={450} src="/videos/designali.mp4" />
+          </video>
+        </ShineBorder>
       </div>
     ),
   },

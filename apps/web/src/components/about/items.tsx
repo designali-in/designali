@@ -141,3 +141,95 @@ export const Items = () => {
     </div>
   );
 };
+
+export const HomeItems = () => {
+  const { data: vData } = useSWR<Views>(`/api/views`, fetcher);
+  const { data: lData } = useSWR<Likes>(`/api/likes`, fetcher);
+
+  const ddata: Card[] = [
+    {
+      title: " Total Views",
+      link: "/solutions",
+      target: "",
+      value: vData?.views,
+      icon: (
+        <Icons.eye
+          fill="#14b8a6"
+          strokeWidth={1}
+          className="h-10 w-10 text-white dark:text-black"
+        />
+      ),
+      linkText: "Solutions",
+      gradient: {
+        startColor: "#14b8a6",
+        endColor: "#14b8a6",
+      },
+    },
+    {
+      title: " Total Likes",
+      link: "/products",
+      target: "",
+      value: lData?.likes,
+      icon: <DIcons.Heart strokeWidth={1} className="h-10 w-10 p-1 text-ali" />,
+      linkText: "Products",
+      gradient: {
+        startColor: "#ef4444",
+        endColor: "#ef4444",
+      },
+    },
+  ];
+
+  return (
+    <div className="">
+      <div className="grid grid-cols-2 gap-4">
+        {ddata.map((item) => {
+          const {
+            icon,
+            link,
+            target,
+            title,
+            value,
+            gradient: { startColor, endColor },
+          } = item;
+
+          return (
+            <Link
+              key={title}
+              target={target}
+              rel="noopener noreferrer"
+              href={link}
+              className="w-full rounded-xl border p-6 transition hover:border-slate-300 dark:hover:border-slate-700 md:py-10"
+            >
+              <div className="grid w-full items-center justify-center gap-2">
+                <div className="grid items-center gap-2">
+                  {value ? (
+                    <div className="flex flex-col items-center justify-center gap-3">
+                      <span className=" ">{icon}</span>
+                      <span
+                        style={{
+                          background: `linear-gradient(122.25deg, ${startColor} 12.16%, ${endColor} 70.98%)`,
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        <Counter
+                          className="text-5xl font-bold"
+                          value={Number(value)}
+                        />
+                      </span>
+                    </div>
+                  ) : (
+                    <p className="text-center text-secondary">--</p>
+                  )}
+                </div>
+                <div className="text-center text-xs text-slate-600 dark:text-slate-400 md:text-sm">
+                  {title}
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+};

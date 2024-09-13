@@ -81,6 +81,11 @@ export function CarouselGraaadients() {
       >
         <CarouselContent className=" ">
           <CarouselItem className=" ">
+            <Link href="/dicons">
+              <CardStack items={DICONS} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
             <Link href="/products/graaadients">
               <CardStack items={GRADS} />
             </Link>

@@ -30,7 +30,7 @@ export const Accessibility = ({
 }: AccessibilityProps) => {
   return (
     <div className="px-6">
-      <div id="accessibility" className="">
+      <div id="accessibility" className="scroll-mt-40">
         <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
           {"Accessibility"}
         </h4>
