@@ -89,7 +89,7 @@ const ColorConverter = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="relative flex w-full items-center justify-center gap-3">
-        <div className="flex w-full max-w-[200px] items-center justify-between gap-3">
+        <div className="relative flex w-full max-w-[200px] items-center justify-between gap-3">
           <label htmlFor="color" className="text-lg font-bold">
             <div
               className="size-10 cursor-pointer rounded-full border-2 border-ali"

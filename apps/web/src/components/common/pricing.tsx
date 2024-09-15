@@ -142,7 +142,7 @@ export default function FUIPricingWithSpecialTwo() {
               <CardTitle className="flex justify-center">
                 <DIcons.ArrowUp
                   strokeWidth={0.5}
-                  className="h-12 w-12 text-green-500"
+                  className="h-12 w-12 rotate-90 text-green-500"
                 />
               </CardTitle>
             </CardHeader>
@@ -177,7 +177,7 @@ export default function FUIPricingWithSpecialTwo() {
               <CardTitle className="flex justify-center">
                 <DIcons.ArrowUp
                   strokeWidth={0.5}
-                  className="h-12 w-12 rotate-90 text-green-500"
+                  className="h-12 w-12 text-green-500"
                 />
               </CardTitle>
             </CardHeader>
@@ -198,7 +198,7 @@ export default function FUIPricingWithSpecialTwo() {
           <h3
             className={cn(
               Avegra.className,
-              "z-20 inline-flex items-baseline pb-1 text-center text-3xl text-green-500 md:text-6xl",
+              "z-20 inline-flex items-baseline pb-1 text-center text-4xl text-green-500 md:text-6xl",
             )}
           >
             No hidden fees
@@ -211,7 +211,7 @@ export default function FUIPricingWithSpecialTwo() {
         <div className="relative">
           <svg
             viewBox="0 0 1208 1024"
-            className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 opacity-20 [mask-image:radial-gradient(closest-side,white,transparent)] dark:opacity-40 sm:-top-12 md:-top-20 lg:-top-12 xl:top-0"
+            className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 opacity-20 [mask-image:radial-gradient(closest-side,white,transparent)] dark:opacity-40 sm:-top-12 md:-top-20 lg:-top-12 xl:top-20"
           >
             <ellipse
               cx={604}
