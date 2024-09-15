@@ -122,7 +122,7 @@ export default function FUIPricingWithSpecialTwo() {
             </dl>
           </div>
         </div>
-        <div className="mx-auto my-10 grid max-w-3xl items-center justify-center text-center text-slate-500">
+        <div className="mx-auto my-10 mt-20 grid max-w-3xl items-center justify-center text-center text-slate-500">
           <span className="text-5xl font-bold tracking-tight">
             How does this magic happen?
           </span>
@@ -191,7 +191,10 @@ export default function FUIPricingWithSpecialTwo() {
             </CardContent>
           </Card>
         </div>
-        <div className="mx-auto mt-20 grid max-w-3xl items-center justify-center px-8 pb-1 text-center">
+        <div
+          id="pricing"
+          className="mx-auto mt-20 grid max-w-3xl items-center justify-center px-8 pb-1 text-center"
+        >
           <h3
             className={cn(
               Avegra.className,
