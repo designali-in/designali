@@ -265,7 +265,7 @@ export default function ReviewList({
                 <CardTitle>{review.title}</CardTitle>
                 <div className="flex items-center gap-1 text-sm italic text-green-500">
                   <Check className="h-4 w-4" />
-                  {""} Verified Purchase
+                  {""} Verified
                 </div>
               </div>
             </CardHeader>
