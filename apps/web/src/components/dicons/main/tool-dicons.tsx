@@ -27,6 +27,8 @@ interface ToolProps {
   showExportModal;
   iconstrokeWidth;
   setShowExportModal;
+  pngClipboardSupported;
+  onCopyImageToClipboard;
 }
 
 export const MainToolIcons = ({
@@ -34,6 +36,8 @@ export const MainToolIcons = ({
   settings,
   IconComponent,
   showExportModal,
+  pngClipboardSupported,
+  onCopyImageToClipboard,
   iconstrokeWidth,
   setShowExportModal,
 }: ToolProps) => {
@@ -94,6 +98,14 @@ export const MainToolIcons = ({
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
+              {pngClipboardSupported && (
+                <DropdownMenuItem
+                  className="flex justify-between"
+                  onSelect={onCopyImageToClipboard}
+                >
+                  Copy Image <DIcons.Copy className="h-4 w-4" />
+                </DropdownMenuItem>
+              )}
               <DropdownMenuItem>
                 <DownloadPNG
                   open={showExportModal}

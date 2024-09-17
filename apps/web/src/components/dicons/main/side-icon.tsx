@@ -52,6 +52,8 @@ export const SideIcon = ({
   recentColors,
   formRef,
   onChangeColorSetting,
+  onCopyImageToClipboard,
+  pngClipboardSupported,
   onFormChange,
   setShowExportModal,
   showExportModal,
@@ -118,6 +120,14 @@ export const SideIcon = ({
                   </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
+                  {pngClipboardSupported && (
+                    <DropdownMenuItem
+                      className="flex justify-between"
+                      onSelect={onCopyImageToClipboard}
+                    >
+                      Copy Image <DIcons.Copy className="h-4 w-4" />
+                    </DropdownMenuItem>
+                  )}
                   <DropdownMenuItem>
                     <DownloadPNG
                       open={showExportModal}

@@ -3,6 +3,7 @@
 import type { Review } from "@/types";
 import type { SubmitHandler } from "react-hook-form";
 import type { z } from "zod";
+import * as React from "react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Rating } from "@/components/admin/product/rating";
@@ -22,6 +23,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@designali/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@designali/ui/carousel";
 import {
   Dialog,
   DialogContent,
@@ -50,6 +58,7 @@ import { Separator } from "@designali/ui/separator";
 import { Textarea } from "@designali/ui/textarea";
 import { useToast } from "@designali/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Autoplay from "embla-carousel-autoplay";
 import { Calendar, Check, StarIcon, User } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useInView } from "react-intersection-observer";
@@ -81,6 +90,9 @@ export default function ReviewList({
       });
     }
   };
+  const plugin = React.useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: true }),
+  );
   useEffect(() => {
     const loadMoreReviews = async () => {
       if (page === totalPages) return;
@@ -257,39 +269,59 @@ export default function ReviewList({
         </div>
       )}
 
-      <div className="grid gap-3 md:grid-cols-2">
-        {reviews.slice(0, 2).map((review) => (
-          <Card className="h-full w-full" key={review.id}>
-            <CardHeader>
-              <div className="flex justify-between">
-                <CardTitle>{review.title}</CardTitle>
-                <div className="flex items-center gap-1 text-sm italic text-green-500">
-                  <Check className="h-4 w-4" />
-                  {""} Verified
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="h-[200px] py-4 text-xs md:h-[100px]">
-                {review.description}
-              </p>
-            </CardContent>
-            <Separator />
-            <div className="grid gap-y-3 p-6 text-sm text-muted-foreground md:flex md:w-full md:justify-between">
-              <Rating value={review.rating} />
-              <div className="flex items-center gap-6">
-                <div className="flex items-center gap-1">
-                  <User className="h-3 w-3" />
-                  {review.user ? review.user.name : "Deleted User"}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Calendar className="h-3 w-3" />
-                  {formatDateTime(review.createdAt).dateOnly}
-                </div>
-              </div>
-            </div>
-          </Card>
-        ))}
+      <div className="pb-3">
+        <Carousel
+          className="mx-auto max-w-sm px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl xl:px-0"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          opts={{
+            align: "start",
+          }}
+        >
+          <div className="mt-10 flex justify-center gap-3">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
+          <CarouselContent className="-ml-3">
+            {reviews.slice(0, 8).map((review) => (
+              <CarouselItem
+                key={review.id}
+                className="w-auto pl-3 lg:basis-1/2"
+              >
+                <Card className="h-full w-full" key={review.id}>
+                  <CardHeader>
+                    <div className="flex justify-between">
+                      <CardTitle>{review.title}</CardTitle>
+                      <div className="flex items-center gap-1 text-sm italic text-green-500">
+                        <Check className="h-4 w-4" />
+                        {""} Verified
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="h-[200px] py-4 text-xs md:h-[100px]">
+                      {review.description}
+                    </p>
+                  </CardContent>
+                  <Separator />
+                  <div className="grid gap-y-3 p-6 text-sm text-muted-foreground md:flex md:w-full md:justify-between">
+                    <Rating value={review.rating} />
+                    <div className="flex items-center gap-6">
+                      <div className="flex items-center gap-1">
+                        <User className="h-3 w-3" />
+                        {review.user ? review.user.name : "Deleted User"}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        {formatDateTime(review.createdAt).dateOnly}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
         <div ref={ref}>{page < totalPages && "Loading..."}</div>
       </div>
     </div>

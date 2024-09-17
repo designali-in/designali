@@ -515,8 +515,6 @@ export const IconGenerator = () => {
         onFileNameKeydown={onFileNameKeydown}
         settings={settings}
         setShowExportModal={setShowExportModal}
-        pngClipboardSupported={pngClipboardSupported}
-        onCopyImageToClipboard={onCopyImageToClipboard}
       />
       <main
         className={"mt-40 grid justify-center gap-8 md:mt-28 lg:h-screen"}
@@ -527,6 +525,7 @@ export const IconGenerator = () => {
             <div>
               <IconNavigation
                 searchTerm={searchTerm}
+                filteredDIcons={filteredDIcons}
                 onRandomIconClick={onRandomIconClick}
                 onSelectCustomIcon={onSelectCustomIcon}
                 onChangeSearchTerm={onChangeSearchTerm}
@@ -569,6 +568,8 @@ export const IconGenerator = () => {
           showExportModal={showExportModal}
           setShowExportModal={setShowExportModal}
           iconstrokeWidth={settings.strokeWidth}
+          pngClipboardSupported={pngClipboardSupported}
+          onCopyImageToClipboard={onCopyImageToClipboard}
         />
         <div className="right-0 mx-auto mb-10 flex max-w-md bg-slate-50 p-6 dark:bg-slate-950 lg:absolute lg:h-screen lg:border-l">
           <ScrollArea>

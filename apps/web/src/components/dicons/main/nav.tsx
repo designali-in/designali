@@ -79,6 +79,7 @@ interface IconNavProps {
   onRandomIconClick;
   onSelectCustomIcon;
   onChangeSearchTerm;
+  filteredDIcons;
   searchRef;
 }
 
@@ -87,19 +88,20 @@ export const IconNavigation = ({
   onRandomIconClick,
   onSelectCustomIcon,
   onChangeSearchTerm,
+  filteredDIcons,
   searchRef,
 }: IconNavProps) => {
   return (
     <main>
       <div className="p-6">
-        <div className="flex justify-center gap-3">
+        <div className="flex justify-center gap-2">
           <div className="relative mb-4">
             <Input
               type="text"
               value={searchTerm}
               ref={searchRef}
               onChange={onChangeSearchTerm}
-              placeholder="Search Icon"
+              placeholder={`Search ${filteredDIcons.length} icons...`}
               aria-label="Search Icon"
               className="h-10 w-full rounded-full pl-12"
               id="search"
@@ -128,7 +130,7 @@ export const IconNavigation = ({
               onChange={onSelectCustomIcon}
               accept=".svg, .png"
             />
-            <DIcons.FolderKanban strokeWidth={1} className="h-4 w-4" />
+            <DIcons.FolderRoot strokeWidth={1} className="h-4 w-4" />
           </Button>
         </div>
       </div>
@@ -145,8 +147,6 @@ interface ToolNavProps {
   onFileNameKeydown;
   settings;
   setShowExportModal;
-  pngClipboardSupported;
-  onCopyImageToClipboard;
 }
 
 export const ToolNavigation = ({
@@ -158,8 +158,6 @@ export const ToolNavigation = ({
   settings,
   undoHistory,
   setShowExportModal,
-  pngClipboardSupported,
-  onCopyImageToClipboard,
 }: ToolNavProps) => {
   return (
     <main>
@@ -213,16 +211,6 @@ export const ToolNavigation = ({
                   <DIcons.Download className="mr-1 h-4 w-4" />
                   <span className="hidden lg:block">Export</span>
                 </Button>
-                {pngClipboardSupported && (
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="h-10 w-10"
-                    onSelect={onCopyImageToClipboard}
-                  >
-                    <DIcons.Copy className="h-4 w-4" />
-                  </Button>
-                )}
               </div>
             </div>
           </div>

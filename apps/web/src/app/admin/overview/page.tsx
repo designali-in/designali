@@ -16,7 +16,8 @@ import {
   TableHeader,
   TableRow,
 } from "@designali/ui/table";
-import { BadgeDollarSign, Barcode, CreditCard, Users } from "lucide-react";
+import { DIcons } from "dicons";
+import { BadgeDollarSign, CreditCard, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: `Admin - Designali`,
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default async function DashboardPage() {
   const users = await getAdminSummary();
   const products = await getAdminSummary();
+  const reviews = await getAdminSummary();
   return (
     <div className="space-y-4 px-6">
       <PageTitle
@@ -42,15 +44,19 @@ export default async function DashboardPage() {
             <div className="text-3xl font-semibold"></div>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Sales</CardTitle>
-            <CreditCard strokeWidth={1} />
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-semibold"></div>
-          </CardContent>
-        </Card>
+        <Link href={"/solutions"}>
+          <Card className="hover:bg-slate-100 dark:hover:bg-slate-900">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Reviews</CardTitle>
+              <DIcons.Star strokeWidth={1} />
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-semibold">
+                {reviews.reviewsCount[0].count}
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
         <Link href={"/admin/users"}>
           <Card className="hover:bg-slate-100 dark:hover:bg-slate-900">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -68,7 +74,7 @@ export default async function DashboardPage() {
           <Card className="hover:bg-slate-100 dark:hover:bg-slate-900">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Products</CardTitle>
-              <Barcode strokeWidth={1} />
+              <DIcons.PenTool strokeWidth={1} />
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-semibold">

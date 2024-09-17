@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CarouselGraaadients } from "@/components/solutions/products/cards";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";

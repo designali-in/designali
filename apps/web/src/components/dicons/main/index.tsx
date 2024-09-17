@@ -23,6 +23,12 @@ import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
 import { presets } from "@/src/components/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
 import { Button } from "@designali/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@designali/ui/ddropdown-menu";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
@@ -266,6 +272,7 @@ export const DIconGenerator = () => {
                 onChangeSearchTerm={onChangeSearchTerm}
                 filteredDIcons={filteredDIcons}
               />
+
               <div className="px-6">
                 {filteredDIcons.length === 0 ? (
                   <div className="mt-20 grid gap-2 text-center">
