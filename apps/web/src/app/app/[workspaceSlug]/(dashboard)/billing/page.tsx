@@ -1,4 +1,5 @@
 import React from "react";
+import Billing from "@/components/common/pricing";
 import ManageSubscription from "@/components/dashboard/billing/ManageSubscription";
 import UpdgradeAccBtn from "@/src/components/dashboard/billing/updgradeAccBtn";
 import { auth, signIn } from "@designali/auth";
@@ -21,10 +22,13 @@ const billing = async () => {
   const plan = user.subscribed ? "premium" : "free";
 
   return (
-    <main className="mx-auto mt-40 h-screen max-w-xl">
-      <ManageSubscription />
-      <p className="text-center">You currently are on a {plan} plan</p>
-      <UpdgradeAccBtn />
+    <main className="">
+      <div className="mx-auto mb-20 mt-40 max-w-xl">
+        <ManageSubscription />
+        <p className="text-center">You currently are on a {plan} plan</p>
+        <UpdgradeAccBtn />
+      </div>
+      <Billing />
     </main>
   );
 };

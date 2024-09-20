@@ -4,7 +4,10 @@ import type { UserLink } from "@designali/db/src/schema";
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { action, authAction, MyCustomError } from "@/lib/safe-action";
+import { PAGE_SIZE } from "@/src/lib/constant/constants";
 import { auth } from "@designali/auth";
+import { count, db, desc } from "@designali/db";
+import { links } from "@designali/db/src/schema";
 import { redis } from "@designali/kv";
 import { editLinkSchema, insertLinkSchema } from "@designali/validators";
 import { z } from "zod";
@@ -149,3 +152,22 @@ export const checkSlug = authAction(
     return await checkSlugExists(slug);
   },
 );
+
+export async function getAllLinks({
+  limit = PAGE_SIZE,
+  page,
+}: {
+  limit?: number;
+  page: number;
+}) {
+  const data = await db.query.links.findMany({
+    orderBy: [desc(links.createdAt)],
+    limit,
+    offset: (page - 1) * limit,
+  });
+  const dataCount = await db.select({ count: count() }).from(links);
+  return {
+    data,
+    totalPages: Math.ceil(dataCount[0].count / limit),
+  };
+}
