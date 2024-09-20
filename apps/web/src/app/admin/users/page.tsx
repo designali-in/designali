@@ -26,6 +26,7 @@ export default async function AdminUser({
   searchParams: { page: string };
 }) {
   const page = Number(searchParams.page) || 1;
+
   const users = await getAllUsers({
     page,
   });
@@ -63,7 +64,7 @@ export default async function AdminUser({
             ))}
           </TableBody>
         </Table>
-        {users.totalPages > 1 && (
+        {users.totalPages > 0 && (
           <Paginations page={page} totalPages={users.totalPages} />
         )}
       </div>

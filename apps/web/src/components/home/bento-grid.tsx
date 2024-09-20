@@ -41,11 +41,11 @@ const features = [
           <div className="grid grid-cols-2 gap-4">
             <Link className="cursor-pointer" href={"/about"}>
               <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
-                <p className="-mb-2 text-xs text-indigo-400">Total</p>
-                <h1 className="font-mono text-6xl font-bold text-indigo-500 md:text-9xl">
+                <p className="text-xs text-indigo-400 md:-mb-2">Total</p>
+                <h1 className="font-mono text-6xl font-bold tracking-tighter text-indigo-500 md:text-9xl">
                   <Counter value={8} />
                 </h1>
-                <p className="-mt-2 text-xs text-slate-600 dark:text-indigo-400">
+                <p className="text-xs text-slate-600 dark:text-indigo-400 md:-mt-2">
                   Years of experience
                 </p>
                 <DotPattern width={5} height={5} />
@@ -53,11 +53,11 @@ const features = [
             </Link>
             <Link className="cursor-pointer" href={"/solutions"}>
               <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
-                <p className="-mb-2 text-xs text-lime-400">Total</p>
-                <h1 className="font-mono text-6xl font-bold text-lime-500 md:text-9xl">
+                <p className="text-xs text-lime-400 md:-mb-2">Total</p>
+                <h1 className="font-mono text-6xl font-bold tracking-tighter text-lime-500 md:text-9xl">
                   <Counter value={reviews.reviewsCount[0].count} />
                 </h1>
-                <p className="-mt-2 text-xs text-lime-500">Reviews</p>
+                <p className="text-xs text-lime-500 md:-mt-2">Reviews</p>
                 <Ripple />
               </div>
             </Link>

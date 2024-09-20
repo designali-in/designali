@@ -213,7 +213,7 @@ export const HomeItems = () => {
                         }}
                       >
                         <Counter
-                          className="text-5xl font-bold"
+                          className="px-2 text-5xl font-bold tracking-tighter"
                           value={Number(value)}
                         />
                       </span>

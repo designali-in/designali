@@ -5,13 +5,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { formUrlQuery } from "@/lib/dutils";
 import { cn } from "@designali/ui";
 import { Button, buttonVariants } from "@designali/ui/button";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-} from "@designali/ui/pagination";
 
 interface PaginationProps {
   page: number | string;
