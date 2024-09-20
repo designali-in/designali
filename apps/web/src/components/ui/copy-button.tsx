@@ -53,7 +53,7 @@ export function CopyButton({
       size="lgicon"
       variant={variant}
       className={cn(
-        "hover:text-slate-10 relative z-10 h-8 w-8 text-slate-900 hover:bg-slate-600 [&_svg]:h-3 [&_svg]:w-3",
+        "relative z-10 h-8 w-8 text-slate-800 hover:bg-slate-200 dark:text-slate-200 hover:dark:bg-slate-800 [&_svg]:h-3 [&_svg]:w-3",
         className,
       )}
       onClick={() => {

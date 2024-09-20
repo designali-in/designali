@@ -10,6 +10,10 @@ export const GET = async () => {
   );
   const data = await res.json();
 
+  if (!data.items || data.items.length === 0) {
+    throw new Error("No channel data found");
+  }
+
   const channel = data.items[0];
   const statistics = channel.statistics;
 

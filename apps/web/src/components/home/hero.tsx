@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="relative flex items-center whitespace-nowrap rounded-full bg-white px-3 py-1 text-xs leading-6 text-slate-600 ring-1 ring-slate-200 dark:bg-black dark:text-slate-400 dark:ring-slate-800">
             <Icons.shapes className="h-5 p-1" /> Introducing Dicons.
             <a
-              href="/dicons"
+              href="/products/dicons"
               rel="noreferrer"
               className="ml-1 flex items-center font-semibold hover:text-ali"
             >

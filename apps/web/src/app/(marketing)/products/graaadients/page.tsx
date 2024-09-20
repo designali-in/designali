@@ -153,7 +153,7 @@ export default async function AboutAI() {
           </div>
         </div>
       </div>
-      <div className="-z-1 absolute -bottom-40 h-[500px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_top,#57534e_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-10 [mask-image:radial-gradient(ellipse_100%_50%_at_50%_100%,#000_70%,transparent_110%)]"></div>
+      <div className="absolute -bottom-40 -z-10 h-[500px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_top,#57534e_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-10 [mask-image:radial-gradient(ellipse_100%_50%_at_50%_100%,#000_70%,transparent_110%)]"></div>
     </div>
   );
 }

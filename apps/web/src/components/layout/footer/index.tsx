@@ -138,14 +138,6 @@ export function Footer() {
       <div className="flex flex-wrap justify-center gap-y-6">
         <div className="flex flex-wrap items-center justify-center gap-6 gap-y-4 px-6">
           <Link
-            href="tel:+917678432186"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            <Icons.phone strokeWidth={1.5} className="h-5 w-5" />
-          </Link>
-          <Link
             href="mailto:contact@designali.in"
             rel="noreferrer"
             target="_blank"
