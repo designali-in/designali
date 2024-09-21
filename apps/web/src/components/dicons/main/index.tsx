@@ -23,12 +23,6 @@ import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
 import { presets } from "@/src/components/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
 import { Button } from "@designali/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@designali/ui/ddropdown-menu";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";

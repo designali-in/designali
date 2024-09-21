@@ -110,7 +110,12 @@ const features = [
     background: (
       <div>
         <ShineBorder className="" color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
-          <video autoPlay muted loop className="h-full w-full rounded-2xl">
+          <video
+            autoPlay
+            muted
+            loop
+            className="h-full w-full rounded-md md:rounded-2xl"
+          >
             <source width={450} height={450} src="/videos/designali.mp4" />
           </video>
         </ShineBorder>
