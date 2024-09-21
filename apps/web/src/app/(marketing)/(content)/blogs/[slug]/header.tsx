@@ -99,7 +99,7 @@ const Header = (props: HeaderProps) => {
           {isLoading || !data ? (
             <Skeleton className="h-6 rounded-md" />
           ) : (
-            <div>{data.likes}</div>
+            <div className="text-lg font-bold">{data.likes}</div>
           )}
         </div>
         <div className="flex items-center gap-2">

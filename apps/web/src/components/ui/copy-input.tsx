@@ -44,7 +44,7 @@ export function CopyInput({ value, className }: Props) {
         >
           <DIcons.Copy
             strokeWidth={1}
-            className="z-10 h-10 w-10 rounded-full bg-ali p-2.5"
+            className="z-10 h-10 w-10 rounded-md border p-2.5"
           />
         </motion.div>
 
@@ -53,7 +53,7 @@ export function CopyInput({ value, className }: Props) {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: isCopied ? 1 : 0, scale: isCopied ? 1 : 0 }}
         >
-          <Icons.check className="z-10 h-10 w-10 rounded-full bg-ali p-2.5" />
+          <Icons.check className="z-10 h-10 w-10 rounded-md border p-2.5" />
         </motion.div>
       </button>
     </div>
