@@ -13,6 +13,7 @@ export function Header() {
       <div className="mx-auto flex items-center md:px-20">
         <div className="mx-auto flex h-14 max-w-7xl flex-1 items-center">
           <Link
+            aria-label="Logo"
             href="/"
             className="flex items-center justify-center px-6 md:px-0 lg:flex"
           >

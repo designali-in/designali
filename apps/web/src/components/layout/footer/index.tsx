@@ -83,14 +83,14 @@ export function Footer() {
   return (
     <footer className="mx-auto w-full border-b border-t border-ali/20 bg-white px-2 dark:bg-slate-950 sm:px-4">
       <div className="relative -mt-10 flex flex-wrap justify-center gap-8">
-        <Link href="/">
+        <Link aria-label="Logo" href="/">
           <p className="flex h-20 w-20 items-center justify-center rounded-full bg-background">
             <Logo className="w-8" />
           </p>
         </Link>
       </div>
 
-      <p className="mx-auto max-w-7xl px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
+      <p className="mx-auto max-w-7xl bg-transparent px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
         Welcome to Designali, where creativity meets strategy to bring your
         vision to life. I am passionate about transforming ideas into compelling
         visual experiences. I specialize in crafting unique brand identities,
@@ -138,6 +138,7 @@ export function Footer() {
       <div className="flex flex-wrap justify-center gap-y-6">
         <div className="flex flex-wrap items-center justify-center gap-6 gap-y-4 px-6">
           <Link
+            aria-label="Logo"
             href="mailto:contact@designali.in"
             rel="noreferrer"
             target="_blank"
@@ -146,6 +147,7 @@ export function Footer() {
             <Icons.mail strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://x.com/designali_in"
             rel="noreferrer"
             target="_blank"
@@ -154,6 +156,7 @@ export function Footer() {
             <DIcons.X className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://www.instagram.com/designali.in/"
             rel="noreferrer"
             target="_blank"
@@ -162,6 +165,7 @@ export function Footer() {
             <DIcons.Instagram strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://wa.me/917678432186"
             rel="noreferrer"
             target="_blank"
@@ -170,6 +174,7 @@ export function Footer() {
             <DIcons.WhatsApp className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://www.behance.net/designali-in"
             rel="noreferrer"
             target="_blank"
@@ -178,6 +183,7 @@ export function Footer() {
             <DIcons.Behance className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://www.facebook.com/designali.agency"
             rel="noreferrer"
             target="_blank"
@@ -186,6 +192,7 @@ export function Footer() {
             <DIcons.Facebook className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://www.linkedin.com/company/designali"
             rel="noreferrer"
             target="_blank"
@@ -194,6 +201,7 @@ export function Footer() {
             <DIcons.LinkedIn className="h-5 w-5" />
           </Link>
           <Link
+            aria-label="Logo"
             href="https://www.youtube.com/@designali-in"
             rel="noreferrer"
             target="_blank"
@@ -214,6 +222,7 @@ export function Footer() {
           <span> by </span>
           <span className="cursor-pointer text-black hover:text-ali dark:text-white dark:hover:text-ali">
             <Link
+              aria-label="Logo"
               className="font-bold"
               href="https://www.instagram.com/aliimam.in/"
               target="_blank"
@@ -223,7 +232,7 @@ export function Footer() {
           </span>
           -
           <span className="cursor-pointer text-slate-600 hover:text-ali dark:text-slate-400 dark:hover:text-ali">
-            <Link className="" href="/">
+            <Link aria-label="Logo" className="" href="/">
               Designali
             </Link>
           </span>
