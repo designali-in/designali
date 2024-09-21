@@ -28,20 +28,7 @@ import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
-import {
-  Access,
-  Account,
-  Animal,
-  Buildings,
-  DArrows,
-  DBrands,
-  DCharts,
-  DCoding,
-  DCommunication,
-  DConnectivity,
-  DCursor,
-  DDesign,
-} from "../icons";
+import { DBrands } from "../icons";
 import { InstallIcon } from "../main/install-icon";
 import { Navigation } from "../main/nav";
 import { SideIcon } from "../main/side-icon";
@@ -259,51 +246,7 @@ export const DIconCategories = () => {
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
-  const filteredAccount = Object.keys(Account).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredAnimal = Object.keys(Animal).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredAccess = Object.keys(Access).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredBuildings = Object.keys(Buildings).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
   const filteredBrands = Object.keys(DBrands).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredCharts = Object.keys(DCharts).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredArrows = Object.keys(DArrows).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredCommunication = Object.keys(DCommunication).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredCursor = Object.keys(DCursor).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredDesign = Object.keys(DDesign).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredConnectivity = Object.keys(DConnectivity).filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase()),
-  ) as ""[];
-
-  const filteredCoding = Object.keys(DCoding).filter((key) =>
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 
@@ -351,19 +294,8 @@ export const DIconCategories = () => {
                     <ScrollArea className="md:h-[950px]">
                       <MainIcons
                         settings={settings}
-                        filteredBuildings={filteredBuildings}
-                        filteredAccess={filteredAccess}
                         filteredBrands={filteredBrands}
-                        filteredAccount={filteredAccount}
-                        filteredArrows={filteredArrows}
-                        filteredCharts={filteredCharts}
-                        filteredAnimal={filteredAnimal}
-                        filteredCommunication={filteredCommunication}
-                        filteredCursor={filteredCursor}
                         onChangeIcon={onChangeIcon}
-                        filteredDesign={filteredDesign}
-                        filteredConnectivity={filteredConnectivity}
-                        filteredCoding={filteredCoding}
                       />
                     </ScrollArea>
                   </div>

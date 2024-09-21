@@ -13,12 +13,11 @@ import {
 } from "@designali/ui/form";
 import { Input } from "@designali/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { DIcons } from "dicons";
 import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
-
-import { Icons } from "../../icons";
 
 const formSchema = z.object({
   url: z.string().url(),
@@ -80,12 +79,11 @@ export const LinkForm = ({ renderCustomLink }: LinkFormProps) => {
             />
           </div>
           <Button
-            size="icon"
-            variant="default"
             className="h-10 w-10"
+            size="lgicon"
             isLoading={createLinkStatus === "executing"}
           >
-            <Icons.scissors className="h-6 w-6" />
+            <DIcons.Scissors className={"h-6 w-6"} />
             <span className="sr-only">Create short link</span>
           </Button>
         </form>

@@ -11,4 +11,5 @@ export * from "./charts";
 export * from "./cursors";
 export * from "./coding";
 export * from "./design";
+export * from "./devices";
 export * from "./shapes";

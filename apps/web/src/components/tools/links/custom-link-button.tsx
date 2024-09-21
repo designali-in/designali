@@ -3,7 +3,7 @@
 import * as React from "react";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
-import { Icons, iconVariants } from "@designali/ui/icons";
+import { Icons } from "@designali/ui/icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@designali/ui/tooltip";
 
 const CustomLinkButton = React.forwardRef<
