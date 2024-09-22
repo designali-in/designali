@@ -31,6 +31,21 @@ export function Banner() {
               </CardContent>
             </Card>
           </CarouselItem>
+          <CarouselItem className="">
+            <Card>
+              <CardContent className="flex items-center justify-center p-2">
+                <Image
+                  src={
+                    "https://utfs.io/f/9E7Q8MSIBADGU1bQ37SfmdXtbAZR7qID64FpxroyQWlUgYe8"
+                  }
+                  alt={""}
+                  className="h-[400px] w-full rounded-lg object-cover object-center md:h-[700px]"
+                  width={1000}
+                  height={600}
+                />
+              </CardContent>
+            </Card>
+          </CarouselItem>
 
           <CarouselItem className="">
             <Card>
