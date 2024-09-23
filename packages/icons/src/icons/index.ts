@@ -12,4 +12,6 @@ export * from "./cursors";
 export * from "./coding";
 export * from "./design";
 export * from "./devices";
+export * from "./emoji";
+export * from "./file";
 export * from "./shapes";
