@@ -14,4 +14,7 @@ export * from "./design";
 export * from "./devices";
 export * from "./emoji";
 export * from "./file";
+export * from "./food";
+export * from "./furniture";
+export * from "./gaming";
 export * from "./shapes";
