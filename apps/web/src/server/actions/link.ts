@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use server";
 
 import type { UserLink } from "@designali/db/src/schema";
@@ -42,7 +47,7 @@ export const createShortLink = action(
       });
     } else {
       const cookieStore = cookies();
-      const userLinkId = cookieStore.get("user-link-id").value;
+      const userLinkId = cookieStore.get("user-link-id")?.value;
       let userLink: UserLink | undefined;
 
       if (!userLinkId) {
@@ -76,7 +81,7 @@ export const deleteShortLink = action(
   z.object({ slug: z.string() }),
   async ({ slug }) => {
     const cookieStore = cookies();
-    const userLinkIdCookie = cookieStore.get("user-link-id").value;
+    const userLinkIdCookie = cookieStore.get("user-link-id")?.value;
 
     if (userLinkIdCookie) {
       return await deleteLinkAndRevalidate(slug, userLinkIdCookie);

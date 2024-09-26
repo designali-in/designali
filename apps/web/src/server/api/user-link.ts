@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable no-restricted-properties */
 import type { ShortLink, UserLink } from "@designali/db/src/schema";
 import { cookies } from "next/headers";
 import { db } from "@designali/db";

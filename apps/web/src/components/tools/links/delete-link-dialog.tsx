@@ -13,11 +13,11 @@ import { toast } from "sonner";
 
 import { deleteShortLink } from "~/server/actions/link";
 
-type DeleteLinkDialogProps = {
+interface DeleteLinkDialogProps {
   slug: string;
   isOpen?: boolean;
   onOpenChange?: (isOpen: boolean) => void;
-};
+}
 
 export const DeleteLinkDialog = ({
   slug,
@@ -29,7 +29,7 @@ export const DeleteLinkDialog = ({
     {
       onSuccess() {
         toast.info("Link deleted successfully");
-        onOpenChange?.(false);
+        onOpenChange(false);
       },
       onError(error) {
         toast.error(error.serverError ?? error.fetchError);

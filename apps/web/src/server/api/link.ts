@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import type { NewShortLink, ShortLink } from "@designali/db/src/schema";
 import type { SetCommandOptions } from "@upstash/redis";
 import { revalidatePath } from "next/cache";

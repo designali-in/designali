@@ -43,7 +43,7 @@ const supportedFormats = [
 export const LinkCard = ({ link, session }: LinkCardProps) => {
   const { slug, url, clicks } = link;
   const decodedURL = decodeURIComponent(url);
-  const shortenedURL = `${"https://www.designali.in"}/${slug}`;
+  const shortenedURL = `${"https://designali.in"}/${slug}`;
 
   const qrcodeRef = React.useRef<React.ElementRef<"div">>(null);
   const anchorRef = React.useRef<React.ElementRef<"a">>(null);
