@@ -139,7 +139,10 @@ const AIConverter = () => {
   };
 
   return (
-    <div className="mx-auto mt-20 flex max-w-5xl flex-col items-center justify-center">
+    <div
+      id="image-converter"
+      className="mx-auto mt-20 flex max-w-5xl flex-col items-center justify-center"
+    >
       <p className="lg:text-md my-6 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
         Image Converter
       </p>

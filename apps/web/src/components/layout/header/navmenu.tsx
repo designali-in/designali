@@ -142,11 +142,82 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/tools" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Tools
-              </NavigationMenuLink>
+            <Link href={"/tools"}>
+              <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
             </Link>
+
+            <NavigationMenuContent className="space-y-3">
+              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      href="/tools/dicons"
+                    >
+                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Icon maker
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      href="/tools#short-links"
+                    >
+                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        AI short links.
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        QR Code Generator. We've built a suite of powerful
+                        features that gives you marketing superpowers.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      href="/tools#image-converter"
+                    >
+                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Image Converter
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Drag some images here, or click to select files. Image
+                        converter tool convert JPG, PNG, etc.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      href="/tools#word-counter"
+                    >
+                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Word Counter
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Count words, characters, characters without spaces,
+                        paragraphs and many more...
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

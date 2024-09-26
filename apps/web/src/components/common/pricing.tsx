@@ -3,14 +3,7 @@ import { Icons } from "@/components/icons";
 import { Avegra } from "@/src/app/fonts";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@designali/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@designali/ui/card";
 import { DIcons } from "dicons";
 
 import CountUpNumber from "./countnumber";
@@ -20,7 +13,7 @@ const tiers = [
   {
     name: "Basic",
     id: "tier-hobby",
-    href: "#",
+    href: "https://cal.com/aliimam/designali",
     priceMonthly: "₹20,000",
     description: "One request at a time. Pause or cancel anytime.",
     features: [
@@ -34,7 +27,7 @@ const tiers = [
   {
     name: "Premium",
     id: "tier-team",
-    href: "#",
+    href: "https://cal.com/aliimam/designali",
     priceMonthly: "₹50,000",
     description: "Five requests at a time. Pause or cancel anytime.",
     features: [
@@ -277,6 +270,7 @@ export default function FUIPricingWithSpecialTwo() {
                         href={tier.href}
                         aria-describedby={tier.id}
                         className=""
+                        target="_blank"
                       >
                         Get started today
                       </Link>
@@ -294,7 +288,11 @@ export default function FUIPricingWithSpecialTwo() {
                   </p>
                 </div>
                 <Button variant="outline" size="lg">
-                  <Link href="#" className="">
+                  <Link
+                    href="https://cal.com/aliimam/designali"
+                    target="_blank"
+                    className=""
+                  >
                     Request <span aria-hidden="true">→</span>
                   </Link>
                 </Button>

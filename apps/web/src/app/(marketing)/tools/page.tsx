@@ -22,7 +22,10 @@ export default function HomePage() {
         description={`You can use any without any cost.`}
       />
       <IconsGen />
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-4">
+      <div
+        id="short-links"
+        className="mx-auto flex max-w-xl flex-col items-center gap-4"
+      >
         <p className="lg:text-md my-6 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
           AI Short Links & QR Code Generator
         </p>

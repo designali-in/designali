@@ -1,13 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@designali/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@designali/ui/card";
 import { Textarea } from "@designali/ui/textarea";
 
 const WordCounter = () => {
@@ -19,7 +14,10 @@ const WordCounter = () => {
     value.split("\n").filter((paragraph) => paragraph !== "").length || 0;
 
   return (
-    <div className="mx-auto my-10 flex max-w-5xl flex-col items-center justify-center md:my-20">
+    <div
+      id="word-counter"
+      className="mx-auto my-10 flex max-w-5xl flex-col items-center justify-center md:my-20"
+    >
       <p className="lg:text-md my-6 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
         Word Counter
       </p>
