@@ -1,8 +1,8 @@
 import { getColors } from "@/lib/colors";
 import { ColorBW } from "@/src/components/common/colors/color-bw";
+import ColorConverter from "@/src/components/common/colors/color-convert";
 import { ColorPalette } from "@/src/components/common/colors/color-palette";
 import PageTitle from "@/src/components/mdx/page-title";
-import ColorConverter from "@/src/components/tools/color-convert";
 import { ScrollProgress } from "@/src/components/ui/scroll-progress";
 
 const colors = getColors();
