@@ -19,4 +19,7 @@ export * from "./furniture";
 export * from "./gaming";
 export * from "./home";
 export * from "./layout";
+export * from "./mail";
+export * from "./medical";
+export * from "./maps";
 export * from "./shapes";
