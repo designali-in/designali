@@ -21,5 +21,6 @@ export * from "./home";
 export * from "./layout";
 export * from "./mail";
 export * from "./medical";
+export * from "./maths";
 export * from "./maps";
 export * from "./shapes";
