@@ -17,4 +17,6 @@ export * from "./file";
 export * from "./food";
 export * from "./furniture";
 export * from "./gaming";
+export * from "./home";
+export * from "./layout";
 export * from "./shapes";
