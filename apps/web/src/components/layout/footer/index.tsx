@@ -166,7 +166,7 @@ export function Footer() {
           </Link>
           <Link
             aria-label="Logo"
-            href="https://wa.me/917678432186"
+            href="https://chat.whatsapp.com/LWsNPcz5BlWDVOha41vzuh"
             rel="noreferrer"
             target="_blank"
             className={Underline}
