@@ -239,7 +239,7 @@ export const DIconGenerator = () => {
   }
 
   return (
-    <main className={"md:flex md:h-screen"}>
+    <main className={"md:flex"}>
       <SideIcon
         settings={settings}
         svgRef={svgRef}
@@ -283,7 +283,7 @@ export const DIconGenerator = () => {
                     <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
                       {searchTerm ? "Results" : "All Icons"}
                     </h4>
-                    <ScrollArea className="w-full md:h-[900px]">
+                    <ScrollArea className="h-screen w-full">
                       <MainIcons
                         settings={settings}
                         filteredDIcons={filteredDIcons}

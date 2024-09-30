@@ -62,7 +62,7 @@ export const SideIcon = ({
 }: SideIconProps) => {
   return (
     <main className={""}>
-      <div className="-z-0 mx-auto grid max-w-sm md:h-screen md:border-r">
+      <div className="-z-0 mx-auto grid max-w-sm md:h-full md:border-r">
         <div className="p-6">
           <div className="relative">
             <p className="mb-2 text-center text-lg font-semibold text-ali">
