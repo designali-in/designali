@@ -84,7 +84,7 @@ export default async function AboutAI() {
             {(await session) ? (
               <Button variant="default" size="lg">
                 <Link
-                  href="https://drive.google.com/file/d/1zAO2dwMuho4zuTSyZQ5WiEa-OZxeiI3e/view?usp=sharing"
+                  href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
                   target="_blank"
                   className=""
                 >
@@ -134,7 +134,7 @@ export default async function AboutAI() {
             {(await session) ? (
               <Button variant="default" size="lg">
                 <Link
-                  href="https://drive.google.com/file/d/1zAO2dwMuho4zuTSyZQ5WiEa-OZxeiI3e/view?usp=sharing"
+                  href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
                   target="_blank"
                   className=""
                 >
