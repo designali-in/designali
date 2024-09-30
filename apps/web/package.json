@@ -44,6 +44,7 @@
     "colord": "^2.9.3",
     "dayjs": "^1.11.11",
     "dicons": "workspace:*",
+    "dshapes": "workspace:*",
     "embla-carousel-autoplay": "^8.1.6",
     "file-saver": "^2.0.5",
     "filesize": "^10.1.2",
