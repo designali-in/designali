@@ -1,6 +1,8 @@
 "use client";
 
-import { Number } from "dshapes";
+import { Avegra } from "@/src/app/fonts";
+import Landing from "@/src/components/products/landing";
+import { cn } from "@designali/ui";
 
 export default function Home() {
   return (
@@ -11,12 +13,19 @@ export default function Home() {
             TAKE A LOOK AT WHAT’S NEW RIGHT NOW.
           </p>
           <div className="grid items-center justify-center px-8 pb-1 text-center">
+            <h3
+              className={cn(
+                Avegra.className,
+                "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-200 to-slate-800 bg-clip-text pb-1 text-center text-7xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-8xl",
+              )}
+            >
+              Shapes
+            </h3>{" "}
             <hr className="mx-auto my-4 mb-16 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
         </div>
-        <div className="flex justify-center py-20">
-          <Number index={2} />
-        </div>
+
+        <Landing />
       </div>
     </div>
   );

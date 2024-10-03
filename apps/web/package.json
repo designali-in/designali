@@ -42,6 +42,7 @@
     "canvas-confetti": "^1.9.3",
     "cloudinary": "^2.2.0",
     "colord": "^2.9.3",
+    "copy-to-clipboard": "^3.3.3",
     "dayjs": "^1.11.11",
     "dicons": "workspace:*",
     "dshapes": "workspace:*",
