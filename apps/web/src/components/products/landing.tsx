@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
+import type { Key } from "react";
 import { useEffect, useState } from "react";
-import { shapes } from "dshapes";
 
+import { shapes } from "../../../../../packages/shapes/src/index";
 import ShapeGrid from "./shapeGrid";
 
 export default function Landing() {
@@ -60,7 +63,7 @@ export default function Landing() {
           <div className="flex flex-wrap justify-center gap-3">
             {coolshapeskeys.map((shapeType) => {
               const shapesMeta = shapes[shapeType];
-              return shapesMeta.map((_, i) => {
+              return shapesMeta.map((_: never, i: Key) => {
                 return (
                   <ShapeGrid
                     index={i}

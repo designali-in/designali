@@ -3,8 +3,10 @@ import React from "react";
 const NoiseMask = ({
   showNoise = true,
   id,
+  baseFrequency,
 }: {
   showNoise?: boolean;
+  baseFrequency: number;
   id: string;
 }) => {
   return (
@@ -26,22 +28,26 @@ const NoiseMask = ({
               height="100%"
               x="0%"
               y="0%"
-              filterUnits="objectBoundingBox">
+              filterUnits="objectBoundingBox"
+            >
               <feTurbulence
-                baseFrequency="0.6"
+                baseFrequency={baseFrequency}
                 numOctaves="5"
                 result="out1"
-                seed="4"></feTurbulence>
+                seed="4"
+              ></feTurbulence>
               <feComposite
                 in="out1"
                 in2="SourceGraphic"
                 operator="in"
-                result="out2"></feComposite>
+                result="out2"
+              ></feComposite>
               <feBlend
                 in="SourceGraphic"
                 in2="out2"
                 mode="overlay"
-                result="out3"></feBlend>
+                result="out3"
+              ></feBlend>
             </filter>
           </defs>
         </>

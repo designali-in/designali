@@ -1,57 +1,18 @@
-# designali
+# shadcn-ui
 
-A CLI for adding magic ui components to your project. Superset of shadcn-ui.
+A CLI for adding components to your project.
 
-```bash
- ##   ##                      ##                  ##   ##   ####
- ### ###                                          ##   ##    ##
- #######   ####     ### ##   ###      ####        ##   ##    ##
- #######      ##   ##  ##     ##     ##  ##       ##   ##    ##
- ## # ##   #####   ##  ##     ##     ##           ##   ##    ##
- ##   ##  ##  ##    #####     ##     ##  ##       ##   ##    ##
- ##   ##   #####       ##    ####     ####         #####    ####
-                   #####
-```
+> [!WARNING]
+> The shadcn-ui CLI is going to be deprecated soon. Bug fixes and new features should be added to the `.packages/shadcn` instead.
 
 ## Usage
 
 Use the `init` command to initialize dependencies for a new project.
 
-The `init` command installs dependencies (`framer-motion`), adds the `cn` util, configures `tailwind.config.js`, and CSS variables for the project.
-
-```bash
-npx designali-cli init
-```
-
-### shadcn-ui project
-
-If your project is already using the `shadcn-ui`, don't worry! You can still use designali.
+The `init` command installs dependencies, adds the `cn` util, configures `tailwind.config.js`, and CSS variables for the project.
 
 ```bash
 npx shadcn-ui init
-```
-
-Just add these two lines to your `components.json` file:
-
-```diff
-{
-  "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "default",
-  "rsc": true,
-  "tsx": true,
-  "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "app/globals.css",
-    "baseColor": "slate",
-    "cssVariables": true
-  },
-  "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-+   "ui": "@/components/ui",
-+   "designali": "@/components/designali"
-  }
-}
 ```
 
 ## add
@@ -61,49 +22,25 @@ Use the `add` command to add components to your project.
 The `add` command adds a component to your project and installs all required dependencies.
 
 ```bash
-npx designali-cli add [component]
+npx shadcn-ui add [component]
 ```
 
 ### Example
 
 ```bash
-npx designali-cli add bento-grid
-```
-
-You can also use the optional `--all` flag to install all components:
-
-```bash
-npx designali-cli add --all
-```
-
-You can also use the `--exmaple` flag to select and install example & demo you saw on webside:
-
-```bash
-npx designali-cli add --example
+npx shadcn-ui add alert-dialog
 ```
 
 You can also run the command without any arguments to view a list of all available components:
 
 ```bash
-npx designali-cli add
-```
-
-## shadcn-ui
-
-You can also use the same CLI for selecting & installing shadcn-ui components:
-
-```bash
-npx designali-cli add --shadcn button
-```
-
-```bash
-npx designali-cli add --shadcn --all
+npx shadcn-ui add
 ```
 
 ## Documentation
 
-Visit [https://designali.design/docs/installation](https://designali.design/docs/installation) to view the documentation.
+Visit https://ui.shadcn.com/docs/cli to view the documentation.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/designalidesign/designali/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).

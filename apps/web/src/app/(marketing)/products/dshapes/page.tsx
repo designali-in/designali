@@ -16,7 +16,7 @@ export default function Home() {
             <h3
               className={cn(
                 Avegra.className,
-                "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-200 to-slate-800 bg-clip-text pb-1 text-center text-7xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-8xl",
+                "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 text-center text-7xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-8xl",
               )}
             >
               Shapes

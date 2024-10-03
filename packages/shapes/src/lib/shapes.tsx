@@ -1,9 +1,10 @@
 import React, {
-  ForwardRefExoticComponent,
   forwardRef,
+  ForwardRefExoticComponent,
   useEffect,
   useState,
 } from "react";
+
 import shapes, { getRandomShape, shapeTypes } from "../shapes";
 import { ShapeProps, ShapeType } from "./iconBase";
 
@@ -16,35 +17,35 @@ interface BaseShapeOptions extends ShapeProps {
   random?: boolean;
 }
 
-const Coolshape: ForwardRefExoticComponent<ShapeOptions> = forwardRef(
+const Dshapes: ForwardRefExoticComponent<ShapeOptions> = forwardRef(
   (options, ref) => {
     const { type, index, random, ...rest } = options;
 
     if (index !== undefined && type && !random) {
       const Shape = shapes[type][index];
-      return <Shape {...rest} ref={ref}/>
+      return <Shape {...rest} ref={ref} />;
     }
-    
+
     const [RandomShape, setRandomShape] = useState<ShapeType | null>(null);
     useEffect(() => {
-        const shape = getRandomShape({ type }) as ShapeType;
-        setRandomShape(shape);
+      const shape = getRandomShape({ type }) as ShapeType;
+      setRandomShape(shape);
     }, []);
     if (!RandomShape) {
-      return null; 
+      return null;
     }
     return <RandomShape {...rest} ref={ref} />;
-  }
+  },
 );
-Coolshape.displayName = "Coolshape";
+Dshapes.displayName = "Dshapes";
 
 const getComponentWithShape = (
-  shapeType: keyof typeof shapes
+  shapeType: keyof typeof shapes,
 ): ForwardRefExoticComponent<BaseShapeOptions> => {
   const Component = forwardRef<SVGSVGElement, BaseShapeOptions>(
     (props, ref) => {
-      return <Coolshape {...props} type={shapeType} ref={ref} />;
-    }
+      return <Dshapes {...props} type={shapeType} ref={ref} />;
+    },
   );
   Component.displayName = shapeType;
   return Component;
@@ -61,7 +62,7 @@ const Polygon = getComponentWithShape("polygon");
 const Number = getComponentWithShape("number");
 
 export {
-  Coolshape,
+  Dshapes,
   Star,
   Flower,
   Ellipse,

@@ -1,14 +1,15 @@
 import React, {
+  forwardRef,
   ForwardRefExoticComponent,
   RefAttributes,
   SVGProps,
-  forwardRef,
 } from "react";
+
 import NoiseMask from "./noiseMask";
 
 // icon base props
-type svgProps = RefAttributes<SVGSVGElement> &  Partial<SVGProps<SVGSVGElement>>;
-export interface ShapeProps extends svgProps{
+type svgProps = RefAttributes<SVGSVGElement> & Partial<SVGProps<SVGSVGElement>>;
+export interface ShapeProps extends svgProps {
   size?: number;
   noise?: boolean;
 }
@@ -23,7 +24,7 @@ export type ShapeType = ForwardRefExoticComponent<ShapeProps>;
 const defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   fill: "none",
-  className: "coolshapes",
+  className: "dshapes",
   viewBox: "0 0 200 200",
   width: 200,
   height: 200,
@@ -51,9 +52,10 @@ const ShapeBase = forwardRef<SVGSVGElement, BaseProps>((props, ref) => {
       width={size || defaultWidth}
       height={size || defaultHeight}
       {...rest}
-      className={`${defaultClassName} ${iconName} ${className || ""}`}>
+      className={`${defaultClassName} ${iconName} ${className || ""}`}
+    >
       {children}
-      {<NoiseMask showNoise={noise} id={iconName} />}
+      {<NoiseMask showNoise={noise} id={iconName} baseFrequency={0.7} />}
     </svg>
   );
 });
