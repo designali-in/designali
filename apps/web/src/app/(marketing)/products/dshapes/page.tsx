@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <div>
-        <div className="mx-auto mt-40 max-w-3xl px-6 md:max-w-7xl">
+        <div className="mx-auto mt-40 max-w-3xl px-6 md:max-w-7xl xl:px-0">
           <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
             TAKE A LOOK AT WHAT’S NEW RIGHT NOW.
           </p>
@@ -24,6 +24,7 @@ export default function Home() {
             </h3>{" "}
             <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
+
           <p className="text-center text-sm text-slate-600 dark:text-slate-400">
             100+ Abstract shapes with cool grainy gradient. Ready to use with
             any design dev project.
