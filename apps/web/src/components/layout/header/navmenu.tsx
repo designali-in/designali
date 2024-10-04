@@ -55,6 +55,23 @@ export function Menu() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      href="/products/dshapes"
+                    >
+                      <Icons.gradient strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        DShapes
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +100 abstract shapes elements and backgrounds for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
                       href="/products/graaadients"
                     >
                       <Icons.gradient strokeWidth={1} className="h-8 w-8" />
@@ -85,12 +102,6 @@ export function Menu() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem
-                  href="/documentation/dicons/installation"
-                  title="Documentation"
-                >
-                  Installation
-                </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>

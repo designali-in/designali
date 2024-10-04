@@ -127,7 +127,7 @@ export default function ShapeGrid({ type, size, noise, index }) {
                 {type} {""}
                 {index}
               </p>
-              <CopyButton value={`${type}`} />
+              <CopyButton value={`<${type} />`} />
             </DropdownMenuItem>
             <DropdownMenuItem>
               <div

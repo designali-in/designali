@@ -1,0 +1,89 @@
+import React, { forwardRef } from "react";
+
+import { ShapeBase, ShapeType } from "../../lib";
+
+const Abstract91: ShapeType = forwardRef((props, ref) => {
+  const ShapeId = "abstract-91";
+
+  return (
+    <ShapeBase {...props} shapeName={ShapeId} ref={ref}>
+      <g clipPath={`url(#cs_clip_1_${ShapeId})`}>
+        <mask
+          id={`cs_mask_1_${ShapeId}`}
+          style={{ maskType: "alpha" }}
+          width="200"
+          height="200"
+          x="0"
+          y="0"
+          maskUnits="userSpaceOnUse"
+        >
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            d="M100,5.84c-17.58,0-31.83,42.15-31.83,94.16s14.25,94.16,31.83,94.16,31.83-42.16,31.83-94.16S117.58,5.84,100,5.84ZM67.23,196.96V3.04h65.54v193.92h-65.54ZM100,69.12c-52.01,0-94.16,14.25-94.16,31.83s42.15,31.82,94.16,31.82,94.16-14.25,94.16-31.82-42.15-31.83-94.16-31.83ZM3.04,133.71v-65.54h193.92v65.54H3.04Z"
+            clipRule="evenodd"
+          ></path>
+        </mask>
+        <g mask={`url(#cs_mask_1_${ShapeId})`}>
+          <path fill="#fff" d="M200 0H0v200h200V0z"></path>
+          <path
+            fill="url(#paint0_linear_748_4808)"
+            d="M200 0H0v200h200V0z"
+          ></path>
+          <g filter="url(#filter0_f_748_4808)">
+            <path fill="#FF58E4" d="M130 0H69v113h61V0z"></path>
+            <path
+              fill="#0CE548"
+              fillOpacity="0.35"
+              d="M196 91H82v102h114V91z"
+            ></path>
+            <path
+              fill="#FFE500"
+              fillOpacity="0.74"
+              d="M113 80H28v120h85V80z"
+            ></path>
+          </g>
+        </g>
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_748_4808"
+          width="278"
+          height="310"
+          x="-27"
+          y="-55"
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+          <feBlend
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          ></feBlend>
+          <feGaussianBlur
+            result="effect1_foregroundBlur_748_4808"
+            stdDeviation="27.5"
+          ></feGaussianBlur>
+        </filter>
+        <linearGradient
+          id="paint0_linear_748_4808"
+          x1="186.5"
+          x2="37"
+          y1="37"
+          y2="186.5"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#0E6FFF" stopOpacity="0.51"></stop>
+          <stop offset="1" stopColor="#00F0FF" stopOpacity="0.59"></stop>
+        </linearGradient>
+        <clipPath id={`cs_clip_1_${ShapeId}`}>
+          <path fill="#fff" d="M0 0H200V200H0z"></path>
+        </clipPath>
+      </defs>
+    </ShapeBase>
+  );
+});
+
+Abstract91.displayName = "Abstract91";
+export { Abstract91 };

@@ -1,6 +1,7 @@
 "use client";
 
 import { Avegra } from "@/src/app/fonts";
+import { InstallShapes } from "@/src/components/products/install-icon";
 import Landing from "@/src/components/products/landing";
 import { cn } from "@designali/ui";
 
@@ -19,13 +20,17 @@ export default function Home() {
                 "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 text-center text-7xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-8xl",
               )}
             >
-              Shapes
+              DShapes
             </h3>{" "}
-            <hr className="mx-auto my-4 mb-16 h-1 w-6 rounded border-0 bg-ali"></hr>
+            <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
+          <p className="text-center text-sm text-slate-600 dark:text-slate-400">
+            100+ Abstract shapes with cool grainy gradient. Ready to use with
+            any design dev project.
+          </p>
         </div>
-
         <Landing />
+        <InstallShapes />
       </div>
     </div>
   );

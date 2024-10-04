@@ -1,5 +1,167 @@
 // stars
 import { ShapeType } from "../lib";
+import {
+  Abstract1,
+  Abstract2,
+  Abstract3,
+  Abstract4,
+  Abstract5,
+  Abstract6,
+  Abstract7,
+  Abstract8,
+  Abstract9,
+  Abstract10,
+  Abstract11,
+  Abstract12,
+  Abstract13,
+  Abstract14,
+  Abstract15,
+  Abstract16,
+  Abstract17,
+  Abstract18,
+  Abstract19,
+  Abstract20,
+  Abstract21,
+  Abstract22,
+  Abstract23,
+  Abstract24,
+  Abstract25,
+  Abstract26,
+  Abstract27,
+  Abstract28,
+  Abstract29,
+  Abstract30,
+  Abstract31,
+  Abstract32,
+  Abstract33,
+  Abstract34,
+  Abstract35,
+  Abstract36,
+  Abstract37,
+  Abstract38,
+  Abstract39,
+  Abstract40,
+  Abstract41,
+  Abstract42,
+  Abstract43,
+  Abstract44,
+  Abstract45,
+  Abstract46,
+  Abstract47,
+  Abstract48,
+  Abstract49,
+  Abstract50,
+  Abstract51,
+  Abstract52,
+  Abstract53,
+  Abstract54,
+  Abstract55,
+  Abstract56,
+  Abstract57,
+  Abstract58,
+  Abstract59,
+  Abstract60,
+  Abstract61,
+  Abstract62,
+  Abstract63,
+  Abstract64,
+  Abstract65,
+  Abstract66,
+  Abstract67,
+  Abstract68,
+  Abstract69,
+  Abstract70,
+  Abstract71,
+  Abstract72,
+  Abstract73,
+  Abstract74,
+  Abstract75,
+  Abstract76,
+  Abstract77,
+  Abstract78,
+  Abstract79,
+  Abstract80,
+  Abstract81,
+  Abstract82,
+  Abstract83,
+  Abstract84,
+  Abstract85,
+  Abstract86,
+  Abstract87,
+  Abstract88,
+  Abstract89,
+  Abstract90,
+  Abstract91,
+  Abstract92,
+  Abstract93,
+  Abstract94,
+  Abstract95,
+  Abstract96,
+  Abstract97,
+  Abstract98,
+  Abstract99,
+  Abstract100,
+  Abstract101,
+  Abstract102,
+  Abstract103,
+  Abstract104,
+  Abstract105,
+  Abstract106,
+  Abstract107,
+  Abstract108,
+  Abstract109,
+  Abstract110,
+  Abstract111,
+  Abstract112,
+  Abstract113,
+  Abstract114,
+  Abstract115,
+  Abstract116,
+  Abstract117,
+  Abstract118,
+  Abstract119,
+  Abstract120,
+  Abstract121,
+  Abstract122,
+  Abstract123,
+  Abstract124,
+  Abstract125,
+  Abstract126,
+  Abstract127,
+  Abstract128,
+  Abstract129,
+  Abstract130,
+  Abstract131,
+  Abstract132,
+  Abstract133,
+  Abstract134,
+  Abstract135,
+  Abstract136,
+  Abstract137,
+  Abstract138,
+  Abstract139,
+  Abstract140,
+  Abstract141,
+  Abstract142,
+  Abstract143,
+  Abstract144,
+  Abstract145,
+  Abstract146,
+  Abstract147,
+  Abstract148,
+  Abstract149,
+  Abstract150,
+  Abstract151,
+  Abstract152,
+  Abstract153,
+  Abstract154,
+  Abstract155,
+  Abstract156,
+  Abstract157,
+  Abstract158,
+  Abstract159,
+  Abstract160,
+} from "./abstract";
 import { Ellipse1 } from "./ellipses/e_1";
 import { Ellipse2 } from "./ellipses/e_2";
 import { Ellipse3 } from "./ellipses/e_3";
@@ -54,16 +216,6 @@ import { Moon12 } from "./moons/m_12";
 import { Moon13 } from "./moons/m_13";
 import { Moon14 } from "./moons/m_14";
 import { Moon15 } from "./moons/m_15";
-import { Number0 } from "./numbers/n_0";
-import { Number1 } from "./numbers/n_1";
-import { Number2 } from "./numbers/n_2";
-import { Number3 } from "./numbers/n_3";
-import { Number4 } from "./numbers/n_4";
-import { Number5 } from "./numbers/n_5";
-import { Number6 } from "./numbers/n_6";
-import { Number7 } from "./numbers/n_7";
-import { Number8 } from "./numbers/n_8";
-import { Number9 } from "./numbers/n_9";
 import { Polygon1 } from "./polygons/p_1";
 import { Polygon2 } from "./polygons/p_2";
 import { Polygon3 } from "./polygons/p_3";
@@ -117,6 +269,290 @@ import { Wheel6 } from "./wheels/w_6";
 import { Wheel7 } from "./wheels/w_7";
 
 const shapes = {
+  abstract: [
+    Abstract1,
+
+    Abstract2,
+
+    Abstract3,
+
+    Abstract4,
+
+    Abstract5,
+
+    Abstract6,
+
+    Abstract7,
+
+    Abstract8,
+
+    Abstract9,
+
+    Abstract10,
+
+    Abstract11,
+
+    Abstract12,
+
+    Abstract13,
+
+    Abstract14,
+
+    Abstract15,
+
+    Abstract16,
+
+    Abstract17,
+
+    Abstract18,
+
+    Abstract19,
+
+    Abstract20,
+
+    Abstract21,
+
+    Abstract22,
+
+    Abstract23,
+
+    Abstract24,
+
+    Abstract25,
+
+    Abstract26,
+
+    Abstract27,
+
+    Abstract28,
+
+    Abstract29,
+
+    Abstract30,
+
+    Abstract31,
+
+    Abstract32,
+
+    Abstract33,
+
+    Abstract34,
+
+    Abstract35,
+
+    Abstract36,
+
+    Abstract37,
+
+    Abstract38,
+
+    Abstract39,
+
+    Abstract40,
+
+    Abstract41,
+
+    Abstract42,
+    Abstract43,
+
+    Abstract44,
+
+    Abstract45,
+
+    Abstract46,
+
+    Abstract47,
+
+    Abstract48,
+
+    Abstract49,
+
+    Abstract50,
+
+    Abstract51,
+
+    Abstract52,
+
+    Abstract53,
+
+    Abstract54,
+
+    Abstract55,
+
+    Abstract56,
+
+    Abstract57,
+
+    Abstract58,
+
+    Abstract59,
+
+    Abstract60,
+
+    Abstract61,
+
+    Abstract62,
+
+    Abstract63,
+
+    Abstract64,
+
+    Abstract65,
+
+    Abstract66,
+
+    Abstract67,
+
+    Abstract68,
+
+    Abstract69,
+
+    Abstract70,
+
+    Abstract71,
+
+    Abstract72,
+
+    Abstract73,
+
+    Abstract74,
+
+    Abstract75,
+
+    Abstract76,
+
+    Abstract77,
+
+    Abstract78,
+
+    Abstract79,
+
+    Abstract80,
+
+    Abstract81,
+
+    Abstract82,
+
+    Abstract83,
+    Abstract84,
+
+    Abstract85,
+
+    Abstract86,
+
+    Abstract87,
+
+    Abstract88,
+
+    Abstract89,
+
+    Abstract90,
+
+    Abstract91,
+
+    Abstract92,
+
+    Abstract93,
+
+    Abstract94,
+
+    Abstract95,
+
+    Abstract96,
+
+    Abstract97,
+
+    Abstract98,
+
+    Abstract99,
+
+    Abstract100,
+
+    Abstract101,
+
+    Abstract102,
+
+    Abstract103,
+
+    Abstract104,
+
+    Abstract105,
+
+    Abstract106,
+
+    Abstract107,
+
+    Abstract108,
+
+    Abstract109,
+
+    Abstract110,
+
+    Abstract111,
+
+    Abstract112,
+
+    Abstract113,
+
+    Abstract114,
+
+    Abstract115,
+
+    Abstract116,
+
+    Abstract117,
+
+    Abstract118,
+
+    Abstract119,
+
+    Abstract120,
+
+    Abstract121,
+
+    Abstract122,
+
+    Abstract123,
+
+    Abstract124,
+    Abstract125,
+    Abstract126,
+    Abstract127,
+    Abstract128,
+    Abstract129,
+    Abstract130,
+    Abstract131,
+    Abstract132,
+    Abstract133,
+    Abstract134,
+    Abstract135,
+    Abstract136,
+    Abstract137,
+    Abstract138,
+    Abstract139,
+    Abstract140,
+    Abstract141,
+    Abstract142,
+    Abstract143,
+    Abstract144,
+    Abstract145,
+    Abstract146,
+    Abstract147,
+    Abstract148,
+    Abstract149,
+    Abstract150,
+    Abstract151,
+    Abstract152,
+    Abstract153,
+    Abstract154,
+    Abstract155,
+    Abstract156,
+    Abstract157,
+    Abstract158,
+    Abstract159,
+    Abstract160,
+  ],
+
   star: [
     Star1,
     Star2,
@@ -231,18 +667,6 @@ const shapes = {
     Rectangle7,
     Rectangle8,
     Rectangle9,
-  ],
-  number: [
-    Number0,
-    Number1,
-    Number2,
-    Number3,
-    Number4,
-    Number5,
-    Number6,
-    Number7,
-    Number8,
-    Number9,
   ],
 };
 

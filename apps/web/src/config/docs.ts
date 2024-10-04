@@ -127,7 +127,7 @@ export const documentationConfig: DocumentationConfig = {
       ],
     },
     {
-      title: "Basics",
+      title: "DIcons",
       items: [
         {
           title: "Installation",
@@ -152,6 +152,31 @@ export const documentationConfig: DocumentationConfig = {
         {
           title: "Fill",
           href: "/documentation/dicons/fill",
+        },
+      ],
+    },
+    {
+      title: "DShapes",
+      items: [
+        {
+          title: "Installation",
+          href: "/documentation/dshapes/installation",
+        },
+        {
+          title: "How to use",
+          href: "/documentation/dshapes/how-to-use",
+        },
+        {
+          title: "Noise",
+          href: "/documentation/dshapes/noise",
+        },
+        {
+          title: "Sizing",
+          href: "/documentation/dshapes/sizing",
+        },
+        {
+          title: "Index",
+          href: "/documentation/dshapes/ind",
         },
       ],
     },
