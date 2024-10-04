@@ -52,24 +52,5 @@ const getComponentWithShape = (
 };
 
 const Abstract = getComponentWithShape("abstract");
-const Star = getComponentWithShape("star");
-const Ellipse = getComponentWithShape("ellipse");
-const Flower = getComponentWithShape("flower");
-const Misc = getComponentWithShape("misc");
-const Moon = getComponentWithShape("moon");
-const Triangle = getComponentWithShape("triangle");
-const Rectangle = getComponentWithShape("rectangle");
-const Polygon = getComponentWithShape("polygon");
 
-export {
-  Dshapes,
-  Abstract,
-  Star,
-  Flower,
-  Ellipse,
-  Misc,
-  Moon,
-  Triangle,
-  Rectangle,
-  Polygon,
-};
+export { Dshapes, Abstract };
