@@ -23,7 +23,7 @@ import { renderToString } from "react-dom/server";
 import { CopyButton } from "../ui/copy-button";
 import ShapeRenderer from "./shape-renderer";
 
-export default function ShapeGrid({ type, size, noise, index, name }) {
+export default function ShapeGrid({ type, size, noise, index }) {
   const [infoText, setInfoText] = useState("");
 
   const [isCopy, setIsCopy] = useState(false);
@@ -61,13 +61,7 @@ export default function ShapeGrid({ type, size, noise, index, name }) {
 
   const setSVGandName = () => {
     const str = renderToString(
-      <ShapeRenderer
-        name={type}
-        type={type}
-        index={index}
-        showNoise={noise}
-        size={400}
-      />,
+      <ShapeRenderer type={type} index={index} showNoise={noise} size={400} />,
     );
     setSvg(str);
 
@@ -124,7 +118,6 @@ export default function ShapeGrid({ type, size, noise, index, name }) {
                 index={index}
                 showNoise={noise}
                 size={size}
-                name={name}
               />
             </div>
           </DropdownMenuTrigger>

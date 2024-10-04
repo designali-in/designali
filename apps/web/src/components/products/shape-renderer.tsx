@@ -1,15 +1,9 @@
 import { Dshapes } from "../../../../../packages/shapes/src/index";
 
-const ShapeRenderer = ({ type, showNoise, index, size, name }) => {
+const ShapeRenderer = ({ type, showNoise, index, size }) => {
   return (
     <>
-      <Dshapes
-        type={type}
-        index={index}
-        noise={showNoise}
-        size={size}
-        name={name}
-      />
+      <Dshapes type={type} index={index} noise={showNoise} size={size} />
     </>
   );
 };
