@@ -71,6 +71,7 @@ export default function Landing() {
                     noise={isNoise}
                     size={shapeSize}
                     key={i}
+                    name={name}
                   />
                 );
               });

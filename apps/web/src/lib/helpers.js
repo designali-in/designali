@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 export const handleDownloadPNG = (imgRef, canvasRef) => {
   const canvasS = canvasRef.current;
 };
@@ -40,6 +42,7 @@ export const getImageData = (image, canvasRef) => {
 export const loadImage = async (src, imgRef) => {
   return new Promise((resolve, reject) => {
     const img = imgRef.current;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     img.crossOrigin = "anonymous";
     img.onload = () => resolve(img);
     img.onerror = () => {

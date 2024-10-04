@@ -20,9 +20,10 @@ import copy from "copy-to-clipboard";
 import { DIcons } from "dicons";
 import { renderToString } from "react-dom/server";
 
+import { CopyButton } from "../ui/copy-button";
 import ShapeRenderer from "./shape-renderer";
 
-export default function ShapeGrid({ type, size, noise, index }) {
+export default function ShapeGrid({ type, size, noise, index, name }) {
   const [infoText, setInfoText] = useState("");
 
   const [isCopy, setIsCopy] = useState(false);
@@ -60,7 +61,13 @@ export default function ShapeGrid({ type, size, noise, index }) {
 
   const setSVGandName = () => {
     const str = renderToString(
-      <ShapeRenderer type={type} index={index} showNoise={noise} size={400} />,
+      <ShapeRenderer
+        name={type}
+        type={type}
+        index={index}
+        showNoise={noise}
+        size={400}
+      />,
     );
     setSvg(str);
 
@@ -117,10 +124,18 @@ export default function ShapeGrid({ type, size, noise, index }) {
                 index={index}
                 showNoise={noise}
                 size={size}
+                name={name}
               />
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
+            <DropdownMenuItem>
+              <p className="capitalize text-slate-600 dark:text-slate-400">
+                {type} {""}
+                {index}
+              </p>
+              <CopyButton value={`${type}`} />
+            </DropdownMenuItem>
             <DropdownMenuItem>
               <div
                 onClick={handleCopySvg}
