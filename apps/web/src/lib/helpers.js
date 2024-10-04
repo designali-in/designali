@@ -1,4 +1,12 @@
+/* eslint-disable prefer-const */
+/* eslint-disable no-var */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+// 18 Nov, 2022
 
 export const handleDownloadPNG = (imgRef, canvasRef) => {
   const canvasS = canvasRef.current;
@@ -42,7 +50,6 @@ export const getImageData = (image, canvasRef) => {
 export const loadImage = async (src, imgRef) => {
   return new Promise((resolve, reject) => {
     const img = imgRef.current;
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     img.crossOrigin = "anonymous";
     img.onload = () => resolve(img);
     img.onerror = () => {
@@ -87,7 +94,7 @@ export const setBg = async (imageData) => {
 };
 
 export const svgBase64 = (svg) => {
-  const base64 = btoa(svg);
+  var base64 = btoa(svg);
   return `data:image/svg+xml;base64,${base64}`;
 };
 
@@ -142,12 +149,12 @@ export function adjustNoiseParameters(value) {
   const numOctavesRange = [6, 18]; // Range of numOctaves values
 
   // Reverse the scaling logic for baseFrequency
-  let baseFrequency =
+  var baseFrequency =
     (baseFrequencyRange[1] - baseFrequencyRange[0]) * ((16 - value) / 16) +
     baseFrequencyRange[0];
 
   // Reverse the scaling logic for numOctaves
-  let numOctaves = Math.floor(
+  var numOctaves = Math.floor(
     (numOctavesRange[1] - numOctavesRange[0]) * ((18 - value) / 18) +
       numOctavesRange[0],
   );
@@ -167,7 +174,7 @@ export const convertToCamelCase = (inputString) => {
   if (!inputString) {
     return "";
   }
-  const cleanedString = inputString
+  let cleanedString = inputString
     .replace(/^[^a-zA-Z_]+/, "")
     .replace(/[^a-zA-Z0-9_]+/g, "");
 

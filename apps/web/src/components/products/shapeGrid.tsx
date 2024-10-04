@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -9,12 +10,7 @@ import {
   svgBase64,
   unit8toPng,
 } from "@/lib/helpers";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@designali/ui/ddropdown-menu";
+import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import { toast } from "@designali/ui/toaster";
 import copy from "copy-to-clipboard";
 import { DIcons } from "dicons";
@@ -79,7 +75,7 @@ export default function ShapeGrid({ type, size, noise, index }) {
     setImageSrc(dataUrl);
     const a = document.createElement("a");
     a.href = dataUrl;
-    a.download = "CS_" + svgName + ".png";
+    a.download = "D_" + svgName + ".png";
     document.body.appendChild(a);
 
     a.click();
@@ -95,7 +91,7 @@ export default function ShapeGrid({ type, size, noise, index }) {
 
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CS_" + svgName + ".svg";
+      a.download = "D_" + svgName + ".svg";
       document.body.appendChild(a);
 
       a.click();
@@ -110,8 +106,8 @@ export default function ShapeGrid({ type, size, noise, index }) {
   return (
     <div>
       <div className="flex justify-center gap-2">
-        <DropdownMenu>
-          <DropdownMenuTrigger>
+        <Popover>
+          <PopoverTrigger asChild>
             <div className="rounded-2xl border p-6">
               <ShapeRenderer
                 type={type}
@@ -120,35 +116,34 @@ export default function ShapeGrid({ type, size, noise, index }) {
                 size={size}
               />
             </div>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem>
-              <p className="capitalize text-slate-600 dark:text-slate-400">
+          </PopoverTrigger>
+          <PopoverContent className="-mt-3 grid w-52 gap-2 p-2 text-slate-600 dark:text-slate-400">
+            <div className="flex items-center justify-between gap-2 rounded-md p-2 px-4 hover:bg-slate-200 hover:dark:bg-slate-800">
+              <p className="capitalize">
                 {type} {""}
                 {index}
               </p>
-              <CopyButton value={`<${type} />`} />
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <div
-                onClick={handleCopySvg}
-                className="flex items-center justify-between gap-4 hover:text-slate-600 dark:hover:text-slate-400"
-              >
-                Copy SVG
-                <DIcons.Copy className="h-4 w-4" />
-              </div>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <div
-                onClick={dwnSVG}
-                className="flex items-center justify-between gap-4 hover:text-slate-600 dark:hover:text-slate-400"
-              >
-                Download SVG
-                <DIcons.Download className="h-4 w-4" />
-              </div>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+              <CopyButton
+                className="h-4 w-4 capitalize"
+                value={`<${type} />`}
+              />
+            </div>
+            <div
+              onClick={handleCopySvg}
+              className="flex items-center justify-between gap-2 rounded-md p-2 px-4 hover:bg-slate-200 hover:dark:bg-slate-800"
+            >
+              <div>Copy SVG</div>
+              <DIcons.Copy className="h-4 w-4" />
+            </div>
+            <div
+              onClick={dwnSVG}
+              className="flex items-center justify-between gap-2 rounded-md p-2 px-4 hover:bg-slate-200 hover:dark:bg-slate-800"
+            >
+              <div>Download SVG</div>
+              <DIcons.Download className="h-4 w-4" />
+            </div>
+          </PopoverContent>
+        </Popover>
       </div>
     </div>
   );

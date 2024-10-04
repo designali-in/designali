@@ -31,8 +31,8 @@ export const CardStack = ({
                 alt={""}
                 loading="lazy"
                 className="w-xl -z-10 h-full rounded-2xl object-cover object-center"
-                width={1400}
-                height={800}
+                width={700}
+                height={400}
               />
               <div className="grid">
                 <div className="absolute top-0 p-6">

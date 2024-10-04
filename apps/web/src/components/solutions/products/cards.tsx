@@ -55,12 +55,25 @@ const DICONS = [
   },
 ];
 
+const DSHAPES = [
+  {
+    id: 1,
+    name: "DShapes",
+    src: "/images/products/shapes.jpg",
+    designation: "Download. Edit. Upload.",
+    content: <p>+100 Beautifully designed shapes.</p>,
+  },
+];
+
 export function Graaadients() {
   return (
     <div className=" ">
       <div className="grid grid-cols-2 justify-center gap-4">
         <Link href="/products/dicons" className="rounded-3xl border">
           <CardStack items={DICONS} />
+        </Link>
+        <Link href="/products/dshapes" className="rounded-3xl border">
+          <CardStack items={DSHAPES} />
         </Link>
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
@@ -92,6 +105,11 @@ export function CarouselGraaadients() {
           <CarouselItem className=" ">
             <Link href="/products/dicons">
               <CardStack items={DICONS} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
+            <Link href="/products/dshapes">
+              <CardStack items={DSHAPES} />
             </Link>
           </CarouselItem>
           <CarouselItem className=" ">

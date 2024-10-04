@@ -13,9 +13,9 @@ export const InstallShapes = () => {
       <div className="mx-auto max-w-5xl gap-6 md:h-full">
         <div className="grid justify-center text-center">
           <h1 className="text-2xl font-semibold">What is DShapes?</h1>
-          <p className="flex max-w-3xl justify-center py-3 text-sm text-slate-600 dark:text-slate-400">
-            DShapes is a fun, creative project offering a collection of over 100
-            abstract shapes with grainy gradients, designed by realvjy. These
+          <p className="flex max-w-2xl justify-center py-3 text-sm text-slate-600 dark:text-slate-400">
+            DShapes is a fun, creative project offering a collection of over
+            100+ abstract shapes with grainy gradients, designed by Ali. These
             unique shapes are perfect for enhancing any design or development
             project. Best of all, the entire set is open-source and free for
             both personal and commercial use!
@@ -94,7 +94,7 @@ export const InstallShapes = () => {
         </div>
 
         <div className="flex w-full justify-center px-6 py-6">
-          <Link href={"/documentation"}>
+          <Link href={"/documentation/dshapes/installation"}>
             <Button size="lg" className="h-10">
               Go to Docs
             </Button>

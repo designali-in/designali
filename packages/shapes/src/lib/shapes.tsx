@@ -51,6 +51,6 @@ const getComponentWithShape = (
   return Component;
 };
 
-const Abstract = getComponentWithShape("abstract");
+const Abstract = getComponentWithShape("Abstract");
 
 export { Dshapes, Abstract };

@@ -164,7 +164,7 @@ import {
 } from "./abstract";
 
 const shapes = {
-  abstract: [
+  Abstract: [
     Abstract1,
 
     Abstract2,
