@@ -147,15 +147,6 @@ export default function ShapeGrid({ type, size, noise, index }) {
                 <DIcons.Download className="h-4 w-4" />
               </div>
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <div
-                onClick={svgToPng}
-                className="flex items-center justify-between gap-4 hover:text-slate-600 dark:hover:text-slate-400"
-              >
-                Download PNG
-                <DIcons.Copy className="h-4 w-4" />
-              </div>
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
