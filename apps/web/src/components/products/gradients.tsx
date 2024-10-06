@@ -52,6 +52,13 @@ export const Service: Experience[] = [
       "https://utfs.io/f/9E7Q8MSIBADGFRv6f61GEaGcsyQiU8gmfnWudpMk3AORNtCv",
     company: "200 Green Photoshop Gradients",
   },
+  {
+    post: "Pink",
+    link: "https://drive.google.com/file/d/15YkfWuosI3HC9sMRUJOYmR7CLbWxJEX6/view?usp=sharing",
+    comlogo:
+      "https://utfs.io/f/9E7Q8MSIBADGfpQZb3ET6nHCtWkPr08Dx1LNXvYasVqFZwcG",
+    company: "200 Pink Photoshop Gradients",
+  },
 ];
 
 export function PhotoshopGradients() {
