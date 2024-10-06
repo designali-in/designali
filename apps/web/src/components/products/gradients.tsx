@@ -1,0 +1,89 @@
+"use client";
+
+import * as React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@designali/ui/button";
+import { DIcons } from "dicons";
+
+import ImageZoom from "../common/image-zoom";
+import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
+
+export interface Experience {
+  post: string;
+  comlogo: string;
+  company: string;
+  link: string;
+}
+
+export const Service: Experience[] = [
+  {
+    post: "Gold",
+    link: "https://drive.google.com/file/d/1mG024T473Ue9kqY2gyEmELRGNgaYTUSN/view?usp=sharing",
+    comlogo:
+      "https://utfs.io/f/9E7Q8MSIBADGRjjKg57nbEl79Zda8xc3pmMgjCwikuUPFRBv",
+    company: "200 Gold Photoshop Gradients",
+  },
+];
+
+export function PhotoshopGradients() {
+  return (
+    <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
+      <div className="grid justify-center gap-3 md:grid-cols-2">
+        {Service.map((Experience) => (
+          <HighlightGroup className="group">
+            <div
+              key={Experience.post}
+              className="group/item h-full md:col-span-6 lg:col-span-4"
+              data-aos="fade-down"
+            >
+              <HighlighterItem className="h-full rounded-3xl">
+                <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
+                  <div className="flex flex-col">
+                    <div
+                      className="pointer-events-none absolute bottom-0 right-1 -z-10 aspect-square w-1/2 -translate-y-1/2 translate-x-1"
+                      aria-hidden="true"
+                    >
+                      <div className="translate-z-0 absolute inset-0 rounded-full bg-slate-100 blur-[80px] dark:bg-slate-800" />
+                    </div>
+
+                    <ImageZoom>
+                      <Image
+                        src={Experience.comlogo}
+                        alt={`designali`}
+                        className="h-full w-full object-cover"
+                        width={600}
+                        height={400}
+                      />
+                    </ImageZoom>
+
+                    <div className="p-6">
+                      <div className="grid items-center gap-3 md:flex md:justify-between">
+                        <div>
+                          <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
+                            <span className="text-2xl md:text-4xl">
+                              {Experience.post}
+                            </span>
+                          </h1>
+                          <p className="text-sm text-slate-600 dark:text-slate-400">
+                            {Experience.company}
+                          </p>
+                        </div>
+                        <Link target="_blank" href={Experience.link}>
+                          <Button>
+                            Download{" "}
+                            <DIcons.Download className="ml-2 h-4 w-4" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </HighlighterItem>
+            </div>
+          </HighlightGroup>
+        ))}
+      </div>
+    </div>
+  );
+}
