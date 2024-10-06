@@ -14,7 +14,11 @@ export default function Home() {
       <div>
         <div className="mx-auto mt-24 max-w-3xl px-6 md:mt-40 md:max-w-7xl xl:px-0">
           <div className="mb-10 flex justify-center">
-            <Abstract size={300} className="" noise={false} />
+            <Abstract
+              className="animate-spin transition hover:animate-none"
+              size={300}
+              noise={false}
+            />
           </div>
           <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
             TAKE A LOOK AT WHAT’S NEW RIGHT NOW.
@@ -23,7 +27,7 @@ export default function Home() {
             <h3
               className={cn(
                 Avegra.className,
-                "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 text-center text-7xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-8xl",
+                "z-20 inline-flex items-baseline bg-gradient-to-r from-purple-500 via-yellow-500 to-pink-500 bg-clip-text pb-1 text-center text-7xl text-transparent md:text-8xl",
               )}
             >
               DShapes
