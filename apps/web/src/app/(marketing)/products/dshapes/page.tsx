@@ -14,11 +14,7 @@ export default function Home() {
       <div>
         <div className="mx-auto mt-24 max-w-3xl px-6 md:mt-40 md:max-w-7xl xl:px-0">
           <div className="mb-10 flex justify-center">
-            <Abstract
-              className="animate-spin transition hover:animate-none"
-              size={300}
-              noise={false}
-            />
+            <Abstract className="" size={300} noise={false} />
           </div>
           <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
             TAKE A LOOK AT WHAT’S NEW RIGHT NOW.

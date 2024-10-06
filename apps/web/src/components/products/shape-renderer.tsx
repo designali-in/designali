@@ -4,7 +4,7 @@ const ShapeRenderer = ({ type, showNoise, index, size }) => {
   return (
     <>
       <Dshapes
-        className="animate-none cursor-pointer transition hover:animate-spin"
+        className="cursor-pointer"
         type={type}
         index={index}
         noise={showNoise}
