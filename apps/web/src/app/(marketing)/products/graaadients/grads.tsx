@@ -1,8 +1,8 @@
 import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 
-import { Grad1 } from "./types/mesh";
-import Video from "./types/video";
+import { Halftone } from "./types/halftone";
+import { Noise } from "./types/noise";
 
 export function Grads() {
   return (
@@ -11,21 +11,21 @@ export function Grads() {
         <ScrollArea className="whitespace-nowrap">
           <div className="space-x-2">
             <TabsTrigger value="1" className="px-6">
-              Mesh Backgrounds
+              Noise
             </TabsTrigger>
             <TabsTrigger value="2" className="px-6">
-              Video
+              Halftone
             </TabsTrigger>
           </div>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </TabsList>
 
-      <TabsContent className="grid gap-y-2" value="1">
-        <Grad1 />
+      <TabsContent value="1">
+        <Noise />
       </TabsContent>
       <TabsContent value="2">
-        <Video />
+        <Halftone />
       </TabsContent>
     </Tabs>
   );

@@ -1,9 +1,9 @@
 import { Grid5 } from "@/components/common/gallery";
 import cloudinary from "@/lib/cloudinary";
 
-export async function Grad1() {
+export async function Halftone() {
   const data = await cloudinary.v2.search
-    .expression(`folder:products/graaadients/*`)
+    .expression(`folder:products/graaadients/halftone/*`)
     .sort_by("created_at", "desc")
     .max_results(400)
     .execute();
