@@ -49,7 +49,7 @@ export default async function AboutAI() {
             Graaadients
           </h1>
           <p className="mx-auto max-w-lg text-center text-sm font-light text-white lg:-mt-4 lg:text-lg">
-            +1000 abstract gradient elements and backgrounds for your amazing
+            +2000 abstract gradient elements and backgrounds for your amazing
             design projects.
           </p>
           <div className="mt-10 flex justify-center">
@@ -128,7 +128,7 @@ export default async function AboutAI() {
             The Beauty of Gradients
           </h1>
           <p className="mx-auto max-w-lg text-center text-sm font-light text-slate-600 dark:text-slate-400 lg:text-lg">
-            +1000 abstract gradient elements and backgrounds for your amazing
+            +2000 abstract gradient elements and backgrounds for your amazing
             design projects.
           </p>
           <div className="mt-10 grid justify-center gap-4">
