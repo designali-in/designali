@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
 import React from "react";
@@ -25,9 +27,9 @@ const formSchema = z.object({
 
 type FormSchema = z.infer<typeof formSchema>;
 
-interface LinkFormProps {
+type LinkFormProps = {
   renderCustomLink: React.ReactNode;
-}
+};
 
 export const LinkForm = ({ renderCustomLink }: LinkFormProps) => {
   const form = useForm<FormSchema>({

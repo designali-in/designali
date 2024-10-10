@@ -8,6 +8,10 @@ export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)", "/"],
 };
 
+function link(request: NextRequest) {
+  return linkMiddleware(request);
+}
+
 const middleware = () => {
   const csp = `
     default-src 'self';
@@ -35,7 +39,3 @@ const middleware = () => {
 };
 
 export default middleware;
-
-function link(request: NextRequest) {
-  return linkMiddleware(request);
-}
