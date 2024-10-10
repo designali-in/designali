@@ -162,8 +162,10 @@ import {
   Abstract159,
   Abstract160,
 } from "./abstract";
+import { Flower1 } from "./flowers";
 
 const shapes = {
+  Flowers: [Flower1],
   Abstract: [
     Abstract1,
 

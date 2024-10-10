@@ -2,20 +2,23 @@
 
 import Image from "next/image";
 import { Avegra } from "@/src/app/fonts";
+import Editor from "@/src/components/products/editor";
 import { InstallShapes } from "@/src/components/products/install-icon";
 import Landing from "@/src/components/products/landing";
 import { cn } from "@designali/ui";
+import { getRandomShape } from "dshapes";
 
 import { Abstract } from "../../../../../../../packages/shapes/src";
+
+// <Abstract className="" size={300} noise={false} />
 
 export default function Home() {
   return (
     <div>
       <div>
         <div className="mx-auto mt-24 max-w-3xl px-6 md:mt-40 md:max-w-7xl xl:px-0">
-          <div className="mb-10 flex justify-center">
-            <Abstract className="" size={300} noise={false} />
-          </div>
+          <div className="mb-10 flex justify-center"></div>
+
           <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
             TAKE A LOOK AT WHAT’S NEW RIGHT NOW.
           </p>
@@ -30,12 +33,12 @@ export default function Home() {
             </h3>{" "}
             <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
-
           <p className="text-center text-sm text-slate-600 dark:text-slate-400">
             100+ Abstract shapes with cool grainy gradient. Ready to use with
             any design dev project.
           </p>
         </div>
+        <Editor initialShape={getRandomShape({ onlyId: true })} />
         <Landing />
         <InstallShapes />
       </div>

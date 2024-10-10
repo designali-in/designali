@@ -1,0 +1,97 @@
+"use client";
+
+// @ts-ignore
+import { useEffect, useState } from "react";
+import { convertToCamelCase } from "@/lib/utils";
+import { Button } from "@designali/ui/button";
+import { Switch } from "@designali/ui/switch";
+// @ts-ignore
+import * as copy from "copy-to-clipboard";
+import { DIcons } from "dicons";
+
+import {
+  Abstract,
+  getRandomShape,
+  shapes,
+} from "../../../../../packages/shapes/src/index";
+import { Dropdown } from "../ui/dropdown";
+import { DInput } from "../ui/input";
+
+export default function Editor({ initialShape }) {
+  const [shape, setShape] = useState(initialShape);
+  const [noise, setNoise] = useState(false);
+  return (
+    <section className="grid justify-center py-10">
+      <div className="flex justify-center">
+        <Abstract
+          className=""
+          size={300}
+          index={shape.index}
+          type={shape.shapeType}
+          noise={noise}
+        />
+      </div>
+
+      <div className="mt-10 flex gap-3">
+        <Dropdown
+          // @ts-ignore
+          text={shape.shapeType}
+          items={Object.keys(shapes)}
+          value={shape.shapeType}
+          onChange={(type) => {
+            const maxShapes = shapes[type].length - 1;
+            const index = shape.index > maxShapes ? maxShapes : shape.index;
+            setShape({ index, shapeType: type });
+          }}
+        />
+
+        <div className={""}>
+          <div className="flex items-center gap-2">
+            <p className="text-slate-600 dark:text-slate-400">Index</p>
+            <DInput
+              value={shape.index}
+              onChange={(value) => {
+                let index = Number(value);
+                console.log(index);
+                if (typeof index !== "number" || isNaN(index)) {
+                  return;
+                }
+                let maxShapes = shapes[shape.shapeType].length;
+                if (value < 0) {
+                  index = maxShapes - 1;
+                }
+                if (value > maxShapes - 1) {
+                  index = maxShapes - 1;
+                }
+                if (value == maxShapes - 1) {
+                  index = 0;
+                }
+                setShape({ ...shape, index: index });
+              }}
+            />
+            <Switch
+              onChange={(e) => {
+                // @ts-ignore
+                setNoise(e);
+              }}
+              // @ts-ignore
+              id={noise}
+              // @ts-ignore
+              value={noise}
+            />
+          </div>
+        </div>
+        <Button
+          size="lgicon"
+          variant="outline"
+          className="h-10 w-10"
+          onClick={() => {
+            setShape(getRandomShape({ onlyId: true }));
+          }}
+        >
+          <DIcons.Shuffle strokeWidth={1} className="h-5 w-5" />
+        </Button>
+      </div>
+    </section>
+  );
+}

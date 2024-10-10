@@ -21,7 +21,7 @@ export default function Landing() {
   return (
     <div className="mx-auto mb-20 max-w-7xl">
       <div className="">
-        <div className="flex justify-center py-10">
+        <div className="flex justify-center pb-10">
           <div>
             <div className="flex items-center gap-3">
               <input
