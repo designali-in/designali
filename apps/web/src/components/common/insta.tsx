@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import ImageZoom from "./image-zoom";
-
 const InstagramFeed = () => {
   const [posts, setPosts] = useState([]);
 
@@ -26,8 +24,8 @@ const InstagramFeed = () => {
   }, []);
 
   return (
-    <div className="mb-20 grid grid-cols-3 gap-1 px-6 py-10 md:grid-cols-6 xl:px-0">
-      {posts.slice(0, 6).map((post) => (
+    <div className="grid grid-cols-3 gap-1 px-6 py-10 md:mb-20 md:grid-cols-6 xl:px-0">
+      {posts.slice(0, 12).map((post) => (
         <a
           key={post.id}
           href={post.permalink}
