@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { env } from "@designali/env";
 import axios from "axios";
+
+import ImageZoom from "./image-zoom";
 
 const InstagramFeed = () => {
   const [posts, setPosts] = useState([]);
@@ -33,6 +33,7 @@ const InstagramFeed = () => {
           href={post.permalink}
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:opacity-90"
         >
           {post.media_type === "IMAGE" ||
           post.media_type === "CAROUSEL_ALBUM" ? (
