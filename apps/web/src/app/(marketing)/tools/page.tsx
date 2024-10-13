@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import AIConverter from "@/components/tools/aiconverter";
 import { IconsGen } from "@/components/tools/icons-gen";
 import WordCounter from "@/components/tools/wordcount";
-import InstagramFeed from "@/src/components/common/insta";
 import PageTitle from "@/src/components/mdx/page-title";
 import { CustomLink } from "@/src/components/tools/links/custom-link";
 import { CustomLinkButton } from "@/src/components/tools/links/custom-link-button";
@@ -22,7 +21,7 @@ export default function HomePage() {
         title="Tools"
         description={`You can use any without any cost.`}
       />
-      <InstagramFeed />
+
       <IconsGen />
       <div
         id="short-links"

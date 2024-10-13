@@ -3,6 +3,7 @@ import Bento from "@/components/home/bento";
 import CallToActionSection from "@/components/home/cta-section";
 import Dash from "@/components/home/dash";
 import Hero from "@/components/home/hero";
+import InstagramFeed from "@/src/components/common/insta";
 import { DBentoGrid } from "@/src/components/home/bento-grid";
 import { Quote } from "@/src/components/home/quote";
 
@@ -17,6 +18,7 @@ export default function HomePage() {
       <CallToActionSection />
       <Quote />
       <DBentoGrid />
+      <InstagramFeed />
       <Projects />
     </main>
   );

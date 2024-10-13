@@ -1,5 +1,6 @@
 import { CarouselSpacing } from "@/components/common/carousel";
 import Projects from "@/components/common/projects";
+import InstagramFeed from "@/src/components/common/insta";
 import PageTitle from "@/src/components/mdx/page-title";
 
 import { Work } from "./Work";
@@ -20,6 +21,7 @@ export default function Portfolio() {
           title="Crafting Aesthetics, Shaping Brands"
           description={``}
         />
+        <InstagramFeed />
         <div className="mb-10">
           <Projects />
         </div>

@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { env } from "@designali/env";
 import axios from "axios";
 
 const InstagramFeed = () => {
@@ -9,7 +11,8 @@ const InstagramFeed = () => {
   useEffect(() => {
     const fetchInstagramPosts = async () => {
       try {
-        const token = process.env.INSTAGRAM_KEY;
+        const token =
+          "IGQWRNaW9LUG0wY2E4ckNrUGNZAQi0yOFlZAU0FiaWJScVR6RU9BMG1neGx0aER5a1JmWlR5a1FMZAFJ2bEtGV1dIZAVVnMS1DS281Q01lZA1pkSEl5NDJvejNLbDJLSmhCbm1RMGg5YnF5b0RjNWEwSl8wXzNDWHBYYzAZD";
         const response = await axios.get(
           `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,permalink&access_token=${token}`,
         );
@@ -23,8 +26,8 @@ const InstagramFeed = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-1 md:grid-cols-5">
-      {posts.slice(5).map((post) => (
+    <div className="mb-20 grid grid-cols-3 gap-1 px-6 py-10 md:grid-cols-6 xl:px-0">
+      {posts.slice(0, 6).map((post) => (
         <a
           key={post.id}
           href={post.permalink}
@@ -33,9 +36,14 @@ const InstagramFeed = () => {
         >
           {post.media_type === "IMAGE" ||
           post.media_type === "CAROUSEL_ALBUM" ? (
-            <img src={post.media_url} alt="Instagram Post" />
+            <img
+              width={500}
+              height={400}
+              src={post.media_url}
+              alt="designali"
+            />
           ) : post.media_type === "VIDEO" ? (
-            <video className="h-auto" src={post.media_url} controls />
+            <video src={post.media_url} controls />
           ) : null}
         </a>
       ))}

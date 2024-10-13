@@ -50,6 +50,7 @@ export const env = createEnv({
       ? { RESEND_API_KEY: z.string().min(1), AUTHOR_EMAIL: z.string().email() }
       : {}),
 
+    INSTAGRAM_KEY: z.string().min(1),
     TURSO_URL: z.string().min(1),
     TURSO_AUTH_TOKEN: z.string().min(1),
     UPSTASH_REDIS_REST_URL: z.string().url(),
