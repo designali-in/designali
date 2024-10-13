@@ -1,6 +1,6 @@
 import { CarouselSpacing } from "@/components/common/carousel";
 import Projects from "@/components/common/projects";
-import InstagramFeed from "@/src/components/common/insta";
+import { InstagramFeed } from "@/src/components/common/insta";
 import PageTitle from "@/src/components/mdx/page-title";
 
 import { Work } from "./Work";

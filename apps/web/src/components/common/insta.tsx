@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@designali/ui/button";
 import axios from "axios";
+import { DIcons } from "dicons";
 
-const InstagramFeed = () => {
+export const InstagramFeed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -24,30 +28,51 @@ const InstagramFeed = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-1 px-6 py-10 md:mb-20 md:grid-cols-6 xl:px-0">
-      {posts.slice(0, 12).map((post) => (
-        <a
-          key={post.id}
-          href={post.permalink}
+    <div className="grid justify-center md:mb-20">
+      <Link
+        href={"https://www.instagram.com/designali.in/"}
+        target="_blank"
+        className="flex justify-center"
+      >
+        <DIcons.Instagram className="h-6 w-6 hover:text-ali" />
+      </Link>
+      <div className="grid grid-cols-3 gap-1 py-10 md:grid-cols-6">
+        {posts.slice(0, 12).map((post) => (
+          <Link
+            key={post.id}
+            href={post.permalink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-90"
+          >
+            {post.media_type === "IMAGE" ||
+            post.media_type === "CAROUSEL_ALBUM" ? (
+              <img
+                width={400}
+                height={300}
+                src={post.media_url}
+                alt="designali"
+              />
+            ) : post.media_type === "VIDEO" ? (
+              <video src={post.media_url} controls />
+            ) : null}
+          </Link>
+        ))}
+      </div>
+      <div>
+        <Link href={"/products/graaadients"} className="flex justify-center">
+          <Button className="w-40">Free Download</Button>
+        </Link>
+        <Link
+          href={"https://www.instagram.com/designali.in/"}
+          className="flex justify-center"
           target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-90"
         >
-          {post.media_type === "IMAGE" ||
-          post.media_type === "CAROUSEL_ALBUM" ? (
-            <img
-              width={500}
-              height={400}
-              src={post.media_url}
-              alt="designali"
-            />
-          ) : post.media_type === "VIDEO" ? (
-            <video src={post.media_url} controls />
-          ) : null}
-        </a>
-      ))}
+          <Button variant="ghost" className="w-80 text-xs">
+            Do you need any open file, DM me
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
-
-export default InstagramFeed;

@@ -30,12 +30,30 @@ const config = {
         hostname: "t3.gstatic.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "scontent-del1-2.cdninstagram.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent-del1-1.cdninstagram.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent-del2-1.cdninstagram.com",
+        port: "",
+      },
     ],
     domains: [
       "avatars.githubusercontent.com",
       "res.cloudinary.com",
       "lh3.googleusercontent.com",
       "utfs.io",
+      "scontent-del1-2.cdninstagram.com",
+      "scontent-del1-1.cdninstagram.com",
+      "scontent-del2-1.cdninstagram.com",
     ],
   },
 
