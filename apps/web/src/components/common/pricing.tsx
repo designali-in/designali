@@ -14,7 +14,7 @@ const tiers = [
     name: "Basic",
     id: "tier-hobby",
     href: "https://cal.com/aliimam/designali",
-    priceMonthly: "₹20,000",
+    priceMonthly: "₹30,000",
     description: "One request at a time. Pause or cancel anytime.",
     features: [
       "One request at a time",
