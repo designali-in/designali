@@ -41,12 +41,12 @@ const features = [
           <div className="grid grid-cols-2 gap-4">
             <Link className="cursor-pointer" href={"/about"}>
               <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
-                <p className="text-xs text-indigo-400 md:-mb-2">Total</p>
+                <p className="text-xs text-indigo-400 md:-mb-2">Experience</p>
                 <h1 className="font-mono text-6xl font-bold tracking-tighter text-indigo-500 md:text-9xl">
                   <Counter value={8} />
                 </h1>
                 <p className="text-xs text-slate-600 dark:text-indigo-400 md:-mt-2">
-                  Years of experience
+                  Years
                 </p>
                 <DotPattern width={5} height={5} />
               </div>

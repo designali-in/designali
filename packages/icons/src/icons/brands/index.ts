@@ -12,6 +12,8 @@ export * from "./Nike";
 export * from "./X";
 export * from "./WhatsApp";
 export * from "./Typescript";
+export * from "./Threads";
+export * from "./ThreadsFill";
 export * from "./Vercel";
 export * from "./VercelFull";
 export * from "./Wordpress";

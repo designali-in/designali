@@ -36,6 +36,7 @@ export const InstagramFeed = () => {
       >
         <DIcons.Instagram className="h-6 w-6 hover:text-ali" />
       </Link>
+
       <div className="grid grid-cols-3 gap-1 py-10 md:grid-cols-6">
         {posts.slice(0, 12).map((post) => (
           <Link

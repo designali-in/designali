@@ -167,6 +167,15 @@ export function Footer() {
           </Link>
           <Link
             aria-label="Logo"
+            href="https://www.threads.net/designali.in"
+            rel="noreferrer"
+            target="_blank"
+            className={Underline}
+          >
+            <DIcons.Threads strokeWidth={1.5} className="h-5 w-5" />
+          </Link>
+          <Link
+            aria-label="Logo"
             href="https://chat.whatsapp.com/LWsNPcz5BlWDVOha41vzuh"
             rel="noreferrer"
             target="_blank"
