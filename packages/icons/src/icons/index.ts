@@ -23,4 +23,6 @@ export * from "./mail";
 export * from "./medical";
 export * from "./maths";
 export * from "./maps";
+export * from "./multimedia";
+export * from "./nature";
 export * from "./shapes";
