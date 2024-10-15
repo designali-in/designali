@@ -14,7 +14,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@designali/ui/tooltip";
-import { DIcons } from "dicons";
+
+import { DIcons } from "../../../../../../packages/icons/src/dicons";
 
 interface AccessProps {
   onChangeIcon;

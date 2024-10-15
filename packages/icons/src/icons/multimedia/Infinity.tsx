@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../types";
+import type { DesignaliProps } from "../types";
 
-export const Infinity = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const Infinit = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
     return (
       <svg
@@ -24,4 +24,4 @@ export const Infinity = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default Infinity;
+export default Infinit;
