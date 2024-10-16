@@ -26,3 +26,4 @@ export * from "./maps";
 export * from "./multimedia";
 export * from "./nature";
 export * from "./shapes";
+export * from "./text";
