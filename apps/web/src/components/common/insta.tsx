@@ -44,7 +44,7 @@ export const InstagramFeed = () => {
             href={post.permalink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-90"
+            className="h-full w-full hover:opacity-90"
           >
             {post.media_type === "IMAGE" ||
             post.media_type === "CAROUSEL_ALBUM" ? (
@@ -55,7 +55,10 @@ export const InstagramFeed = () => {
                 alt="designali"
               />
             ) : post.media_type === "VIDEO" ? (
-              <video src={post.media_url} controls />
+              <video
+                className="max-h-[140px] w-full object-cover md:max-h-[200px] lg:max-h-[240px] xl:max-h-[396px]"
+                src={post.media_url}
+              />
             ) : null}
           </Link>
         ))}

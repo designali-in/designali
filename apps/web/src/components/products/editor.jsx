@@ -69,16 +69,6 @@ export default function Editor({ initialShape }) {
                 setShape({ ...shape, index: index });
               }}
             />
-            <Switch
-              onChange={(e) => {
-                // @ts-ignore
-                setNoise(e);
-              }}
-              // @ts-ignore
-              id={noise}
-              // @ts-ignore
-              value={noise}
-            />
           </div>
         </div>
         <Button
