@@ -6,9 +6,11 @@ import Editor from "@/src/components/products/editor";
 import { InstallShapes } from "@/src/components/products/install-icon";
 import Landing from "@/src/components/products/landing";
 import { cn } from "@designali/ui";
-import { getRandomShape } from "dshapes";
 
-import { Abstract } from "../../../../../../../packages/shapes/src";
+import {
+  Abstract,
+  getRandomShape,
+} from "../../../../../../../packages/shapes/src";
 
 // <Abstract className="" size={300} noise={false} />
 
