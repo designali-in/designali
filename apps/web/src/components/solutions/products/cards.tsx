@@ -68,7 +68,7 @@ const DSHAPES = [
 export function Graaadients() {
   return (
     <div className=" ">
-      <div className="grid grid-cols-2 justify-center gap-4">
+      <div className="grid justify-center gap-4 md:grid-cols-2">
         <Link href="/products/dicons" className="rounded-3xl border">
           <CardStack items={DICONS} />
         </Link>
