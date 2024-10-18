@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
@@ -70,7 +72,7 @@ const Cursor = ({ isDesktop }) => {
       <div ref={cursor} className="" />
       <div
         ref={follower}
-        className="pointer-events-none fixed -left-3 -top-3 z-50 hidden h-3 w-3 select-none rounded-full  bg-ali "
+        className="pointer-events-none fixed -left-3 -top-3 z-50 hidden h-3 w-3 select-none rounded-full bg-ali"
       />
     </>
   );

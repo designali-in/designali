@@ -1,3 +1,5 @@
+"use client";
+
 import type { SafeActionError } from "@/server/types";
 import type { ShortLink } from "@designali/db/src/schema";
 import type { z } from "zod";

@@ -1,5 +1,6 @@
 /* eslint-disable */
 // @ts-nocheck
+"use client";
 
 /**
  * @license qrcode.react

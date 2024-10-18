@@ -64,6 +64,7 @@
     "next-safe-action": "^6.1.0",
     "query-string": "^9.1.0",
     "react": "^18.3.1",
+    "react-aria-components": "^1.4.0",
     "react-color": "^2.19.3",
     "react-colorful": "^5.6.1",
     "react-dom": "^18.3.1",
