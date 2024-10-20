@@ -59,7 +59,7 @@
     "marked": "^12.0.2",
     "mdast-util-toc": "^7.0.1",
     "merge-refs": "^1.3.0",
-    "next": "^14.2.6",
+    "next": "^14.2.15",
     "next-cloudinary": "^6.6.2",
     "next-safe-action": "^6.1.0",
     "query-string": "^9.1.0",

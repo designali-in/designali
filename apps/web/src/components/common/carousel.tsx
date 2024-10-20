@@ -100,7 +100,7 @@ export function CarouselSpacing() {
     }
   }
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-full">
+    <div className="mx-auto mb-20 max-w-3xl px-4 sm:px-6 md:max-w-full">
       <Carousel
         className="w-full max-w-sm md:max-w-full"
         onMouseEnter={plugin.current.stop}

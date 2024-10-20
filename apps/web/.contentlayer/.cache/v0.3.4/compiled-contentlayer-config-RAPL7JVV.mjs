@@ -182,6 +182,32 @@ var Index = {
       category: "undefined",
       subcategory: "undefined",
       chunks: []
+    },
+    // According
+    "accordion-01": {
+      name: "accordion-01",
+      type: "",
+      component: React.lazy(
+        () => import("@/registry/default/designali/accordion/accordion-01")
+      ),
+      source: "",
+      files: ["src/registry/default/designali/accordion/accordion-01.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    // Inputs
+    "input-01": {
+      name: "input-01",
+      type: "components:example",
+      component: React.lazy(
+        () => import("@/registry/default/designali/inputs/input-01")
+      ),
+      source: "",
+      files: ["src/registry/default/designali/inputs/input-01.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
     }
   }
 };
@@ -554,4 +580,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-7BPU7IU6.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-RAPL7JVV.mjs.map

@@ -39,6 +39,15 @@ export const designConfig: DesignConfig = {
       ],
     },
     {
+      title: "UI",
+      items: [
+        {
+          title: "Inputs",
+          href: "/designs/ui/inputs",
+        },
+      ],
+    },
+    {
       title: "Coding",
       items: [
         {

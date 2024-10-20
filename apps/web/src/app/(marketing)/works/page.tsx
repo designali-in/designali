@@ -12,24 +12,22 @@ export const metadata = {
 
 export default function Portfolio() {
   return (
-    <main>
-      <div className="mx-auto mt-40 max-w-3xl px-6 md:max-w-7xl xl:px-0">
-        <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
-          Welcome to My Portfolio
-        </p>
-        <PageTitle
-          title="Crafting Aesthetics, Shaping Brands"
-          description={``}
-        />
-        <InstagramFeed />
+    <main className="mt-40 px-6 xl:px-0">
+      <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
+        Welcome to My Portfolio
+      </p>
+      <PageTitle title="Crafting Aesthetics, Shaping Brands" description={``} />
+      <InstagramFeed />
+      <div className="mx-auto max-w-3xl md:max-w-7xl">
         <div className="mb-10">
           <Projects />
         </div>
       </div>
-      <CarouselSpacing />
-      <div className="mx-auto mt-10 max-w-3xl px-6 md:max-w-7xl xl:px-0">
+
+      <div className="mx-auto mt-10 max-w-3xl md:max-w-7xl">
         <Work />
       </div>
+      <CarouselSpacing />
     </main>
   );
 }
