@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Avegra } from "@/src/app/fonts";
 import Editor from "@/src/components/products/editor";
 import { InstallShapes } from "@/src/components/products/install-icon";
@@ -8,8 +7,8 @@ import Landing from "@/src/components/products/landing";
 import { cn } from "@designali/ui";
 
 import {
-  Abstract,
   getRandomShape,
+  shapes,
 } from "../../../../../../../packages/shapes/src";
 
 // <Abstract className="" size={300} noise={false} />
@@ -36,8 +35,8 @@ export default function Home() {
             <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-ali"></hr>
           </div>
           <p className="text-center text-sm text-slate-600 dark:text-slate-400">
-            100+ Abstract shapes with cool grainy gradient. Ready to use with
-            any design dev project.
+            {shapes.Abstract.length + shapes.Flowers.length} Abstract shapes
+            with cool grainy gradient. Ready to use with any design dev project.
           </p>
         </div>
         <Editor initialShape={getRandomShape({ onlyId: true })} />
