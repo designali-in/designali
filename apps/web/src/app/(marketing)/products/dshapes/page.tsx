@@ -28,7 +28,7 @@ export default function Home() {
             <h3
               className={cn(
                 Avegra.className,
-                "z-20 inline-flex items-baseline bg-gradient-to-r from-purple-500 via-yellow-500 to-pink-500 bg-clip-text pb-1 text-center text-7xl text-transparent md:text-8xl",
+                "z-20 inline-flex items-baseline bg-gradient-to-r from-purple-400 via-yellow-400 to-pink-400 bg-clip-text pb-1 text-center text-7xl text-transparent md:text-8xl",
               )}
             >
               DShapes

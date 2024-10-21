@@ -1,0 +1,275 @@
+import React, { forwardRef } from "react";
+
+import { ShapeBase, ShapeType } from "../../lib";
+
+const Flower12: ShapeType = forwardRef((props, ref) => {
+  const ShapeId = "flower-12";
+
+  return (
+    <ShapeBase {...props} shapeName={ShapeId} ref={ref}>
+      <g clipPath={`url(#cs_clip_1_${ShapeId})`}>
+        <mask
+          id={`cs_mask_1_${ShapeId}`}
+          style={{ maskType: "alpha" }}
+          width="200"
+          height="186"
+          x="0"
+          y="7"
+          maskUnits="userSpaceOnUse"
+        >
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M100,46.62c1.3-5.29,2.31-8.72,2.31-8.72,0,0,13.51-6.2,28.66-9.11-6.91-11.18-17.11-21.79-30.97-21.79-11.32,0-21.13,9.96-28.45,20.75,14.27,3.37,26.14,10.15,26.14,10.15,0,0,1,3.43,2.31,8.72Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M100,153.38c-1.3,5.29-2.31,8.72-2.31,8.72,0,0-13.51,6.2-28.66,9.11,6.91,11.18,17.11,21.79,30.97,21.79,11.32,0,21.13-9.96,28.45-20.75-14.27-3.37-26.14-10.15-26.14-10.15,0,0-1-3.43-2.31-8.72Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M192.99,100c0-11.32-9.96-21.13-20.75-28.45-3.37,14.27-10.15,26.14-10.15,26.14,0,0-3.43,1-8.72,2.31,5.29,1.3,8.72,2.31,8.72,2.31,0,0,6.2,13.51,9.11,28.66,11.18-6.91,21.79-17.11,21.79-30.97Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M46.62,100c-5.29-1.3-8.72-2.31-8.72-2.31,0,0-6.2-13.51-9.11-28.66-11.18,6.91-21.79,17.11-21.79,30.97,0,11.32,9.96,21.13,20.75,28.45,3.37-14.27,10.15-26.14,10.15-26.14,0,0,3.43-1,8.72-2.31Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M137.74,62.26c4.66-2.82,7.8-4.53,7.8-4.53,0,0,13.94,5.17,26.7,13.83,3.02-12.79,3.31-27.5-6.49-37.3-8.01-8.01-21.98-7.9-34.79-5.45,7.7,12.47,11.31,25.66,11.31,25.66,0,0-1.72,3.14-4.53,7.8Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M105.02,94.98c2.68-.61,5.82-.88,9.23-.89,9.04-8.98,18.2-23.09,23.49-31.83-8.74,5.28-22.85,14.45-31.83,23.49-.01,3.41-.28,6.55-.89,9.23Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M62.26,137.74c-4.66,2.82-7.8,4.53-7.8,4.53,0,0-13.94-5.17-26.7-13.83-3.02,12.79-3.31,27.5,6.49,37.3,8.01,8.01,21.98,7.9,34.79,5.45-7.7-12.47-11.31-25.66-11.31-25.66,0,0,1.72-3.14,4.53-7.8Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M94.98,105.02c-2.68.61-5.82.88-9.23.89-9.04,8.98-18.2,23.09-23.49,31.83,8.74-5.28,22.85-14.45,31.83-23.49.01-3.41.28-6.55.89-9.23Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M137.74,137.74c2.82,4.66,4.53,7.8,4.53,7.8,0,0-5.17,13.94-13.83,26.7,12.79,3.02,27.5,3.31,37.3-6.49,8.01-8.01,7.9-21.98,5.45-34.79-12.47,7.7-25.66,11.31-25.66,11.31,0,0-3.14-1.72-7.8-4.53Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M105.02,105.02c.61,2.68.88,5.82.89,9.23,8.98,9.04,23.09,18.21,31.83,23.49-5.28-8.74-14.45-22.85-23.49-31.83-3.41-.01-6.55-.28-9.23-.89Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M107.07,100c2.33,1.46,4.75,3.5,7.18,5.91,12.74.04,29.21-3.46,39.12-5.91-9.92-2.45-26.39-5.95-39.12-5.91-2.43,2.41-4.85,4.45-7.18,5.91Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M103.12,100c.3.5.58,1.04.83,1.62,1.02-.41,2.06-.95,3.13-1.62-1.06-.67-2.11-1.21-3.13-1.62-.25.58-.53,1.12-.83,1.62Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M94.09,114.25c-.04,12.74,3.46,29.21,5.91,39.12,2.45-9.92,5.95-26.39,5.91-39.12-2.41-2.43-4.45-4.85-5.91-7.18-1.46,2.33-3.5,4.75-5.91,7.18Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M98.39,103.94c.41,1.02.95,2.06,1.61,3.13.67-1.06,1.21-2.11,1.61-3.13-.58-.25-1.12-.53-1.61-.83-.5.3-1.04.58-1.61.83Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M101.61,103.94c1.02.44,2.16.79,3.41,1.08-.28-1.24-.64-2.38-1.08-3.41-.6.24-1.18.43-1.76.57-.14.58-.33,1.17-.57,1.76Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M101.04,102.39c.38-.05.76-.12,1.15-.21.09-.39.16-.77.21-1.15-.2.25-.41.5-.63.72s-.47.43-.72.63Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M62.26,62.26c-2.82-4.66-4.53-7.8-4.53-7.8,0,0,5.17-13.94,13.83-26.7-12.79-3.02-27.5-3.31-37.3,6.49-8.01,8.01-7.9,21.98-5.45,34.79,12.47-7.7,25.66-11.31,25.66-11.31,0,0,3.14,1.72,7.8,4.53Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M94.98,94.98c-.61-2.68-.88-5.82-.89-9.23-8.98-9.04-23.09-18.2-31.83-23.49,5.28,8.74,14.45,22.85,23.49,31.83,3.41.01,6.55.28,9.23.89Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M105.91,85.75c.04-12.74-3.46-29.21-5.91-39.12-2.45,9.92-5.95,26.39-5.91,39.12,2.41,2.43,4.45,4.85,5.91,7.18,1.46-2.33,3.5-4.75,5.91-7.18Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M101.61,96.06c-.41-1.02-.95-2.06-1.62-3.13-.67,1.06-1.21,2.11-1.62,3.13.58.25,1.12.53,1.62.83.5-.3,1.04-.58,1.62-.83Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M85.75,94.09c-12.74-.04-29.21,3.46-39.12,5.91,9.92,2.45,26.39,5.95,39.12,5.91,2.43-2.41,4.85-4.45,7.18-5.91-2.33-1.46-4.75-3.5-7.18-5.91Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M96.06,98.38c-1.02.41-2.06.95-3.13,1.62,1.06.67,2.11,1.21,3.13,1.62.25-.58.53-1.12.83-1.62-.3-.5-.58-1.04-.83-1.62Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M98.38,96.06c-1.02-.44-2.16-.79-3.41-1.08.28,1.24.64,2.38,1.08,3.41.6-.24,1.18-.43,1.76-.57.14-.58.33-1.17.57-1.76Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M98.96,97.61c-.38.05-.76.12-1.15.21-.09.39-.16.77-.21,1.15.2-.25.41-.5.63-.72s.47-.43.72-.63Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M103.94,98.38c.44-1.02.79-2.16,1.08-3.41-1.24.28-2.38.64-3.41,1.08.24.6.43,1.18.57,1.76.58.14,1.17.33,1.76.57Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M102.39,98.96c-.05-.38-.12-.76-.21-1.15-.39-.09-.77-.16-1.15-.21.25.2.5.41.72.63s.43.47.63.72Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M96.06,101.62c-.44,1.02-.79,2.16-1.08,3.41,1.24-.28,2.38-.64,3.41-1.08-.24-.6-.43-1.18-.57-1.76-.58-.14-1.17-.33-1.76-.57Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M97.61,101.04c.05.38.12.76.21,1.15.39.09.77.16,1.15.21-.25-.2-.5-.41-.72-.63s-.43-.47-.63-.72Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M102.49,100c0,.34-.05.69-.09,1.04.26-.32.5-.67.72-1.04-.22-.37-.47-.71-.72-1.04.04.35.09.7.09,1.04Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M97.61,98.96c-.26.32-.5.67-.72,1.04.22.37.47.71.72,1.04-.04-.35-.09-.7-.09-1.04s.05-.69.09-1.04Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M101.04,97.61c-.32-.26-.67-.5-1.04-.72-.37.22-.71.47-1.04.72.35-.04.7-.09,1.04-.09s.69.05,1.04.09Z"
+          />
+          <path
+            fill="#fff"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M98.96,102.39c.32.26.67.5,1.04.72.37-.22.71-.47,1.04-.72-.35.04-.7.09-1.04.09s-.69-.05-1.04-.09Z"
+          />
+        </mask>
+        <g mask={`url(#cs_mask_1_${ShapeId})`}>
+          <path fill="#fff" d="M200 0H0v200h200V0z"></path>
+          <path
+            fill="url(#paint0_linear_748_4711)"
+            d="M200 0H0v200h200V0z"
+          ></path>
+          <g filter="url(#filter0_f_748_4711)">
+            <path fill="#FF58E4" d="M130 0H69v113h61V0z"></path>
+            <path
+              fill="#0CE548"
+              fillOpacity="0.35"
+              d="M196 91H82v102h114V91z"
+            ></path>
+            <path
+              fill="#FFE500"
+              fillOpacity="0.74"
+              d="M113 80H28v120h85V80z"
+            ></path>
+          </g>
+        </g>
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_748_4711"
+          width="278"
+          height="310"
+          x="-27"
+          y="-55"
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+          <feBlend
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          ></feBlend>
+          <feGaussianBlur
+            result="effect1_foregroundBlur_748_4711"
+            stdDeviation="27.5"
+          ></feGaussianBlur>
+        </filter>
+        <linearGradient
+          id="paint0_linear_748_4711"
+          x1="186.5"
+          x2="37"
+          y1="37"
+          y2="186.5"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#0E6FFF" stopOpacity="0.51"></stop>
+          <stop offset="1" stopColor="#00F0FF" stopOpacity="0.59"></stop>
+        </linearGradient>
+        <clipPath id={`cs_clip_1_${ShapeId}`}>
+          <path fill="#fff" d="M0 0H200V200H0z"></path>
+        </clipPath>
+      </defs>
+    </ShapeBase>
+  );
+});
+
+Flower12.displayName = "Flower12";
+export { Flower12 };

@@ -42,8 +42,8 @@ export const designConfig: DesignConfig = {
       title: "UI",
       items: [
         {
-          title: "Inputs",
-          href: "/designs/ui/inputs",
+          title: "iPhone",
+          href: "/designs/ui/iphone",
         },
       ],
     },

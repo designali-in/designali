@@ -76,6 +76,12 @@ export function ComponentPreview({
               >
                 Code
               </TabsTrigger>
+              <TabsTrigger
+                value="cli"
+                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+              >
+                CLI
+              </TabsTrigger>
             </TabsList>
           )}
         </div>
@@ -83,7 +89,7 @@ export function ComponentPreview({
           <div className="flex items-center justify-between p-4">
             <div className="flex items-center justify-end gap-2">
               <CopyButton
-                value={name}
+                value={`npx shadcn@latest add "https://designali.in/r/${name}"`}
                 variant="outline"
                 className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
               />
@@ -117,6 +123,22 @@ export function ComponentPreview({
           <div className="flex flex-col space-y-4">
             <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
               {Code}
+            </div>
+          </div>
+        </TabsContent>
+        <TabsContent value="cli" className="relative rounded-md border py-6">
+          <div className="flex items-center justify-between px-4">
+            <CopyButton
+              value={`npx shadcn@latest add "https://designali.in/r/${name}"`}
+              variant="outline"
+              className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+            />
+          </div>
+          <div className="flex items-center justify-between px-4">
+            <div className="flex flex-col space-y-4">
+              <div className="w-full rounded-md text-slate-600 dark:text-slate-400 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+                {`npx shadcn@latest add "https://designali.in/r/${name}"`}
+              </div>
             </div>
           </div>
         </TabsContent>

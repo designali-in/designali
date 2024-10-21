@@ -199,5 +199,19 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: [],
     },
+
+    // Mockup
+    "iphone-16-pro": {
+      name: "iphone-16-pro",
+      type: "components:example",
+      component: React.lazy(
+        () => import("@/registry/default/designali/mockup/iphone-16-pro"),
+      ),
+      source: "",
+      files: ["src/registry/default/designali/mockup/iphone-16-pro.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: [],
+    },
   },
 };
