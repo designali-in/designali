@@ -10,7 +10,13 @@
 
 import type { SettingsType } from "@/src/types";
 import type { ColorChangeHandler } from "react-color";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
@@ -52,10 +58,10 @@ export const DIconGenerator = () => {
     icon: "",
     backgroundRadius: 72,
     iconFill: "",
-    iconColor: "",
+    iconColor: "#555555",
     backgroundOpacity: 0,
     backgroundStrokeSize: 0,
-    backgroundStrokeColor: "",
+    backgroundStrokeColor: "#555555",
     backgroundRadialGlare: false,
     backgroundNoiseTexture: false,
     backgroundNoiseTextureOpacity: 25,
@@ -186,11 +192,16 @@ export const DIconGenerator = () => {
     });
   };
 
+  const handleSearch = debounce((value: string) => {
+    router.replace(`?q=${value}`);
+  }, 300); // 300ms delay
+
   const onChangeSearchTerm: React.FormEventHandler<HTMLInputElement> = (
     event,
   ) => {
-    const newSeachTerm = (event.target as HTMLInputElement).value;
-    router.replace(`?q=${newSeachTerm}`);
+    const newSearchTerm = (event.target as HTMLInputElement).value;
+    setSearchTerm(newSearchTerm);
+    handleSearch(newSearchTerm);
   };
 
   const onChangeColorSetting =
@@ -239,67 +250,69 @@ export const DIconGenerator = () => {
   }
 
   return (
-    <main className={"md:flex"}>
-      <SideIcon
-        settings={settings}
-        svgRef={svgRef}
-        IconComponent={IconComponent}
-        showExportModal={showExportModal}
-        setShowExportModal={setShowExportModal}
-        pngClipboardSupported={pngClipboardSupported}
-        onCopyImageToClipboard={onCopyImageToClipboard}
-        onChangeColorSetting={onChangeColorSetting}
-        customSvgIsPng={customSvgIsPng}
-        recentColors={recentColors}
-        formRef={formRef}
-        onFormChange={onFormChange}
-        iconFill={settings.iconFill}
-      />
-      <div className="">
-        <div className="">
-          <div className="h-full w-full">
-            <div ref={iconsWrapperRef}>
-              <Navigation
-                settings={settings}
-                searchTerm={searchTerm}
-                searchRef={searchRef}
-                onChangeSearchTerm={onChangeSearchTerm}
-                filteredDIcons={filteredDIcons}
-              />
+    <Suspense>
+      <main className={"md:flex"}>
+        <SideIcon
+          settings={settings}
+          svgRef={svgRef}
+          IconComponent={IconComponent}
+          showExportModal={showExportModal}
+          setShowExportModal={setShowExportModal}
+          pngClipboardSupported={pngClipboardSupported}
+          onCopyImageToClipboard={onCopyImageToClipboard}
+          onChangeColorSetting={onChangeColorSetting}
+          customSvgIsPng={customSvgIsPng}
+          recentColors={recentColors}
+          formRef={formRef}
+          onFormChange={onFormChange}
+          iconFill={settings.iconFill}
+        />
+        <div className="w-full">
+          <div className="w-full">
+            <div className="h-full w-full">
+              <div ref={iconsWrapperRef}>
+                <Navigation
+                  settings={settings}
+                  searchTerm={searchTerm}
+                  searchRef={searchRef}
+                  onChangeSearchTerm={onChangeSearchTerm}
+                  filteredDIcons={filteredDIcons}
+                />
 
-              <div className="px-6">
-                {filteredDIcons.length === 0 ? (
-                  <div className="mt-20 grid gap-2 text-center">
-                    <p>We couldn’t find an icon for that</p>
-                    <Link
-                      className=""
-                      href={`mailto:${FEEDBACK_EMAIL}?subject=Request%20Icon`}
-                    >
-                      <Button>Request an Icon</Button>
-                    </Link>
-                  </div>
-                ) : (
-                  <div className="my-6">
-                    <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
-                      {searchTerm ? "Results" : "All Icons"}
-                    </h4>
-                    <ScrollArea className="h-screen w-full">
-                      <MainIcons
-                        settings={settings}
-                        filteredDIcons={filteredDIcons}
-                        onChangeIcon={onChangeIcon}
-                      />
-                    </ScrollArea>
-                  </div>
-                )}
+                <div className="w-full px-6">
+                  {filteredDIcons.length === 0 ? (
+                    <div className="mt-20 grid gap-2 text-center">
+                      <p>We couldn’t find an icon for that</p>
+                      <Link
+                        className=""
+                        href={`mailto:${FEEDBACK_EMAIL}?subject=Request%20Icon`}
+                      >
+                        <Button>Request an Icon</Button>
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="my-6 w-full">
+                      <h4 className="pb-3 text-center text-slate-600 dark:text-slate-400">
+                        {searchTerm ? "Results" : "All Icons"}
+                      </h4>
+                      <ScrollArea className="h-screen w-full">
+                        <MainIcons
+                          settings={settings}
+                          filteredDIcons={filteredDIcons}
+                          onChangeIcon={onChangeIcon}
+                        />
+                      </ScrollArea>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="">
-        <InstallIcon settings={settings} />
-      </div>
-    </main>
+        <div className="">
+          <InstallIcon settings={settings} />
+        </div>
+      </main>
+    </Suspense>
   );
 };
