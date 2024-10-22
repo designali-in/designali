@@ -1,4 +1,5 @@
 // contentlayer.config.js
+import { getHighlighter } from "@shikijs/compat";
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -21,6 +22,171 @@ var Index = {
       registryDependencies: void 0,
       files: ["registry/default/designali/mockup/iphone-16-pro.tsx"],
       component: React.lazy(() => import("@/registry/default/designali/mockup/iphone-16-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-blockquote": {
+      name: "typography-blockquote",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-blockquote.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-blockquote.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-demo": {
+      name: "typography-demo",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-demo.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-h1": {
+      name: "typography-h1",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-h1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-h1.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-h2": {
+      name: "typography-h2",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-h2.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-h2.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-h3": {
+      name: "typography-h3",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-h3.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-h3.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-h4": {
+      name: "typography-h4",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-h4.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-h4.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-inline-code": {
+      name: "typography-inline-code",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-inline-code.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-inline-code.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-large": {
+      name: "typography-large",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-large.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-large.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-lead": {
+      name: "typography-lead",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-lead.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-lead.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-list": {
+      name: "typography-list",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-list.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-list.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-muted": {
+      name: "typography-muted",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-muted.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-muted.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-p": {
+      name: "typography-p",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-p.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-p.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-small": {
+      name: "typography-small",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-small.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-small.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "typography-table": {
+      name: "typography-table",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/typography-table.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/typography-table.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "utils": {
+      name: "utils",
+      type: "registry:lib",
+      registryDependencies: void 0,
+      files: ["registry/default/lib/utils.ts"],
+      component: React.lazy(() => import("@/registry/default/lib/utils.ts")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -385,27 +551,18 @@ var contentlayer_config_default = makeSource({
         });
       },
       [
-        // @ts-ignore
         rehypePrettyCode,
         {
-          theme: { dark: "one-dark-pro", light: "github-light" },
-          /**
-           * @param {{ children: string | any[]; }} node
-           */
+          theme: "github-dark",
+          getHighlighter,
           onVisitLine(node) {
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
           },
-          /**
-           * @param {{ properties: { className: string[]; }; }} node
-           */
           onVisitHighlightedLine(node) {
             node.properties.className.push("line--highlighted");
           },
-          /**
-           * @param {{ properties: { className: string[]; }; }} node
-           */
           onVisitHighlightedWord(node) {
             node.properties.className = ["word--highlighted"];
           }
@@ -455,4 +612,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-XEN25DDG.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-TTNKPOSE.mjs.map

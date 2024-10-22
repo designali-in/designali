@@ -36,6 +36,10 @@ export const designConfig: DesignConfig = {
           title: "Graphic Design",
           href: "/designs/graphic-design",
         },
+        {
+          title: "Typography",
+          href: "/designs/typography",
+        },
       ],
     },
     {
@@ -47,15 +51,7 @@ export const designConfig: DesignConfig = {
         },
       ],
     },
-    {
-      title: "Coding",
-      items: [
-        {
-          title: "Typography",
-          href: "/designs/typography",
-        },
-      ],
-    },
+
     {
       title: "Open File",
       items: [

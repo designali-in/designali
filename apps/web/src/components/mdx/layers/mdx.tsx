@@ -1,13 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
+import type { Event } from "@/lib/events";
+import type { NpmCommands } from "@/types/unist";
 import ImageZoom from "@/components/common/image-zoom";
 import { cn } from "@designali/ui";
 import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
+import { CopyButton, CopyNpmCommandButton } from "../../ui/copy-button";
 import Callout from "./callout";
-import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { ComponentExample } from "./component-example";
 import { ComponentPreview } from "./component-preview";
@@ -132,6 +135,7 @@ const components = {
     />
   ),
   hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
+
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
       <table className={cn("w-full", className)} {...props} />
@@ -237,6 +241,21 @@ const components = {
       </>
     );
   },
+  Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
+    <h3
+      className={cn(
+        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        className,
+      )}
+      {...props}
+    />
+  ),
+  Steps: ({ ...props }) => (
+    <div
+      className="[&>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]"
+      {...props}
+    />
+  ),
   Alert: (props: React.ComponentPropsWithoutRef<typeof Alert>) => (
     <Alert {...props} />
   ),
@@ -249,8 +268,61 @@ const components = {
   CodeBlockWrapper: ({ ...props }) => (
     <CodeBlockWrapper className="rounded-md border" {...props} />
   ),
-  pre: CodeBlock,
+  // pre: CodeBlock,
 
+  pre: ({
+    className,
+    __rawString__,
+    __npmCommand__,
+    __yarnCommand__,
+    __pnpmCommand__,
+    __bunCommand__,
+    __withMeta__,
+    __src__,
+    __event__,
+    // __style__,
+    ...props
+  }: React.HTMLAttributes<HTMLPreElement> & {
+    // __style__?: Style["name"]
+    __rawString__?: string;
+    __withMeta__?: boolean;
+    __src__?: string;
+    __event__?: Event["name"];
+  } & NpmCommands) => {
+    return (
+      <div className="relative">
+        <pre
+          className={cn(
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg p-4",
+            className,
+          )}
+          {...props}
+        />
+        {__rawString__ && !__npmCommand__ && __event__ && (
+          <CopyButton
+            value={__rawString__}
+            src={__src__}
+            event={__event__}
+            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+          />
+        )}
+        {__npmCommand__ &&
+          __yarnCommand__ &&
+          __pnpmCommand__ &&
+          __bunCommand__ && (
+            <CopyNpmCommandButton
+              commands={{
+                __npmCommand__,
+                __yarnCommand__,
+                __pnpmCommand__,
+                __bunCommand__,
+              }}
+              className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+            />
+          )}
+      </div>
+    );
+  },
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(

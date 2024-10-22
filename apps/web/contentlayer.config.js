@@ -1,7 +1,10 @@
+import { getHighlighter } from "@shikijs/compat";
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+import { codeImport } from "remark-code-import";
+import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
 
 import { rehypeComponent } from "./src/lib/rehype-component";
@@ -165,10 +168,10 @@ export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Page, Designs, Documentation, Guide, BlogPost],
   mdx: {
-    // remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
-      rehypeComponent,
       rehypeSlug,
+      rehypeComponent,
       () => (tree) => {
         visit(tree, (node) => {
           if (node?.type === "element" && node?.tagName === "pre") {
@@ -197,25 +200,18 @@ export default makeSource({
         // @ts-ignore
         rehypePrettyCode,
         {
-          theme: { dark: "one-dark-pro", light: "github-light" },
-
-          /**
-           * @param {{ children: string | any[]; }} node
-           */
+          theme: "github-dark",
+          getHighlighter,
           onVisitLine(node) {
+            // Prevent lines from collapsing in `display: grid` mode, and allow empty
+            // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
           },
-          /**
-           * @param {{ properties: { className: string[]; }; }} node
-           */
           onVisitHighlightedLine(node) {
             node.properties.className.push("line--highlighted");
           },
-          /**
-           * @param {{ properties: { className: string[]; }; }} node
-           */
           onVisitHighlightedWord(node) {
             node.properties.className = ["word--highlighted"];
           },
