@@ -1,6 +1,13 @@
 import type { Registry } from "@/registry/schema";
 
 export const ui: Registry = [
+  // Safari
+  {
+    name: "safari",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/mockup/safari.tsx"],
+  },
   // Macbook
   {
     name: "macbook-pro",

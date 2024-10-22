@@ -1,6 +1,13 @@
 import type { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
+  // Safari
+  {
+    name: "safari-1",
+    type: "registry:example",
+    files: ["example/safari-1.tsx"],
+  },
+
   // Macbook
   {
     name: "macbook-pro-1",

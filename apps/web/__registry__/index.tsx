@@ -5,6 +5,17 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
+    "safari": {
+      name: "safari",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/mockup/safari.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/mockup/safari.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "macbook-pro": {
       name: "macbook-pro",
       type: "registry:ui",
@@ -33,6 +44,17 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/designali/mockup/iphone-16-pro.tsx"],
       component: React.lazy(() => import("@/registry/default/designali/mockup/iphone-16-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari-1": {
+      name: "safari-1",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: ["registry/default/example/safari-1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/safari-1.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

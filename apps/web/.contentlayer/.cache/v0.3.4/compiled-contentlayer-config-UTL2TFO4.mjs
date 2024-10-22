@@ -18,6 +18,17 @@ import { visit } from "unist-util-visit";
 import * as React from "react";
 var Index = {
   "default": {
+    "safari": {
+      name: "safari",
+      type: "registry:ui",
+      registryDependencies: void 0,
+      files: ["registry/default/designali/mockup/safari.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/mockup/safari.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "macbook-pro": {
       name: "macbook-pro",
       type: "registry:ui",
@@ -46,6 +57,17 @@ var Index = {
       registryDependencies: void 0,
       files: ["registry/default/designali/mockup/iphone-16-pro.tsx"],
       component: React.lazy(() => import("@/registry/default/designali/mockup/iphone-16-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari-1": {
+      name: "safari-1",
+      type: "registry:example",
+      registryDependencies: void 0,
+      files: ["registry/default/example/safari-1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/safari-1.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -659,4 +681,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-VQ4PNLQ3.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-UTL2TFO4.mjs.map

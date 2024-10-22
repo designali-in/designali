@@ -1,5 +1,18 @@
 [
   {
+    "name": "safari",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/mockup/safari.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "macbook-pro",
     "type": "registry:ui",
     "dependencies": [
