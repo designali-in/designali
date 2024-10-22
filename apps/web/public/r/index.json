@@ -1,0 +1,15 @@
+[
+  {
+    "name": "iphone-16-pro",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/mockup/iphone-16-pro.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  }
+]

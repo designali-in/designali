@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "pnpm with-env next build",
+    "build:docs": "contentlayer build",
+    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && prettier --loglevel silent --write \"registry/**/*.{ts,tsx,mdx}\" --cache",
     "clean": "git clean -xdf .next .turbo node_modules",
     "dev": "pnpm with-env next dev",
     "format": "prettier --check . --ignore-path ./.gitignore",
@@ -106,9 +108,11 @@
     "jiti": "^1.21.6",
     "next-contentlayer": "^0.3.4",
     "prettier": "catalog:",
+    "rimraf": "^5.0.7",
     "tailwindcss": "^3.4.4",
     "typescript": "catalog:",
-    "unist-builder": "3.0.0"
+    "unist-builder": "3.0.0",
+    "unist-util-visit": "^4.1.2"
   },
   "prettier": "@designali/prettier-config"
 }

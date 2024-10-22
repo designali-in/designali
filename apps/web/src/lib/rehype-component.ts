@@ -1,11 +1,17 @@
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import fs from "fs";
 import path from "path";
-import { UnistNode, UnistTree } from "@/types/unist";
+import type { UnistNode, UnistTree } from "@/types/unist";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
 
-import { Index } from "../registry";
-import { styles } from "./registry/styles";
+import { Index } from "../../__registry__";
+import { styles } from "../../registry/registry-styles";
 
 export function rehypeComponent() {
   return async (tree: UnistTree) => {
@@ -262,18 +268,4 @@ export function rehypeComponent() {
 
 function getNodeAttributeByName(node: UnistNode, name: string) {
   return node.attributes?.find((attribute) => attribute.name === name);
-}
-
-function getComponentSourceFileContent(node: UnistNode) {
-  const src = getNodeAttributeByName(node, "src")?.value as string;
-
-  if (!src) {
-    return null;
-  }
-
-  // Read the source file.
-  const filePath = path.join(process.cwd(), src);
-  const source = fs.readFileSync(filePath, "utf8");
-
-  return source;
 }

@@ -5,6 +5,7 @@ import rehypeSlug from "rehype-slug";
 import { visit } from "unist-util-visit";
 
 import { rehypeComponent } from "./src/lib/rehype-component";
+import { rehypeNpmCommand } from "./src/lib/rehype-npm-command";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 
@@ -250,6 +251,7 @@ export default makeSource({
           }
         });
       },
+      rehypeNpmCommand,
       [
         rehypeAutolinkHeadings,
         {
