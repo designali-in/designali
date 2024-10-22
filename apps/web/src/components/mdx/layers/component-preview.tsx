@@ -56,15 +56,6 @@ export function ComponentPreview({
     return <Component />;
   }, [name, config.style]);
 
-  const codeString = React.useMemo(() => {
-    if (typeof Code.props["data-rehype-pretty-code-fragment"] !== "undefined") {
-      const [Button] = React.Children.toArray(
-        Code.props.children,
-      ) as React.ReactElement[];
-      return Button.props?.value || Button.props?.__rawString__ || null;
-    }
-  }, [Code]);
-
   return (
     <div
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
@@ -86,12 +77,6 @@ export function ComponentPreview({
               >
                 Code
               </TabsTrigger>
-              <TabsTrigger
-                value="cli"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                Install
-              </TabsTrigger>
             </TabsList>
           )}
         </div>
@@ -99,7 +84,7 @@ export function ComponentPreview({
           <div className="flex items-center justify-between p-4">
             <div className="flex items-center justify-end gap-2">
               <CopyButton
-                value={codeString}
+                value={name}
                 variant="outline"
                 className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
               />
@@ -143,13 +128,6 @@ export function ComponentPreview({
               variant="outline"
               className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
             />
-          </div>
-          <div className="flex items-center justify-between px-4">
-            <div className="flex flex-col space-y-4">
-              <div className="w-full rounded-md text-slate-600 dark:text-slate-400 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-                {`npx shadcn@latest add "https://designali.in/r/${name}"`}
-              </div>
-            </div>
           </div>
         </TabsContent>
       </Tabs>

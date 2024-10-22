@@ -1,5 +1,31 @@
 [
   {
+    "name": "macbook-pro",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/mockup/macbook-pro.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "iphone-16",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/mockup/iphone-16.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "iphone-16-pro",
     "type": "registry:ui",
     "dependencies": [

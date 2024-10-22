@@ -49,6 +49,10 @@ export const designConfig: DesignConfig = {
           title: "iPhone",
           href: "/designs/ui/iphone",
         },
+        {
+          title: "Macbook",
+          href: "/designs/ui/macbook",
+        },
       ],
     },
 

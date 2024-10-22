@@ -1,6 +1,21 @@
-import { Registry } from "@/registry/schema";
+import type { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
+  // Macbook
+  {
+    name: "macbook-pro-1",
+    type: "registry:example",
+    files: ["example/macbook-pro-1.tsx"],
+  },
+
+  // iPhone
+  {
+    name: "iphone-16-pro-1",
+    type: "registry:example",
+    files: ["example/iphone-16-pro-1.tsx"],
+  },
+
+  //Typo
   {
     name: "typography-blockquote",
     type: "registry:example",

@@ -5,12 +5,56 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
+    "macbook-pro": {
+      name: "macbook-pro",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/mockup/macbook-pro.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/mockup/macbook-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-16": {
+      name: "iphone-16",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/mockup/iphone-16.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/mockup/iphone-16.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "iphone-16-pro": {
       name: "iphone-16-pro",
       type: "registry:ui",
       registryDependencies: undefined,
       files: ["registry/default/designali/mockup/iphone-16-pro.tsx"],
       component: React.lazy(() => import("@/registry/default/designali/mockup/iphone-16-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "macbook-pro-1": {
+      name: "macbook-pro-1",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: ["registry/default/example/macbook-pro-1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/macbook-pro-1.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-16-pro-1": {
+      name: "iphone-16-pro-1",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: ["registry/default/example/iphone-16-pro-1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/iphone-16-pro-1.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
