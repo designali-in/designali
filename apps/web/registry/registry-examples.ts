@@ -1,40 +1,6 @@
 import type { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
-  // Safari
-  {
-    name: "safari-1",
-    type: "registry:example",
-    files: ["example/safari-1.tsx"],
-  },
-
-  // Macbook
-  {
-    name: "macbook-pro-1",
-    type: "registry:example",
-    files: ["example/macbook-pro-1.tsx"],
-  },
-  // Mac
-  {
-    name: "mac-1",
-    type: "registry:example",
-    files: ["example/mac-1.tsx"],
-  },
-
-  // iPad
-  {
-    name: "ipad-pro-1",
-    type: "registry:example",
-    files: ["example/ipad-pro-1.tsx"],
-  },
-
-  // iPhone
-  {
-    name: "iphone-16-pro-1",
-    type: "registry:example",
-    files: ["example/iphone-16-pro-1.tsx"],
-  },
-
   //Typo
   {
     name: "typography-blockquote",

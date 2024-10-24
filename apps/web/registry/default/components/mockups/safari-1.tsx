@@ -1,4 +1,4 @@
-import Safari from "../designali/mockup/safari";
+import Safari from "../../designali/mockups/safari";
 
 export default function SafariDemo() {
   return (

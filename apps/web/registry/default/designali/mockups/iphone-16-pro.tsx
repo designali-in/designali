@@ -31,6 +31,7 @@ export default function Iphone16Pro({
       />
 
       <rect
+        fill="currentColor"
         x="12.7"
         y="10.11"
         width="174.62"
@@ -46,8 +47,6 @@ export default function Iphone16Pro({
           y="10.11"
           width="174.62"
           height="379.78"
-          rx="26.97"
-          ry="26.97"
           preserveAspectRatio="xMidYMid slice"
           clipPath="url(#roundedCorners)"
         />

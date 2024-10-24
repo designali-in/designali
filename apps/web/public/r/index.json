@@ -13,6 +13,19 @@
     ]
   },
   {
+    "name": "tabs",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/tabs.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "safari",
     "type": "registry:ui",
     "dependencies": [
@@ -20,7 +33,7 @@
     ],
     "files": [
       {
-        "path": "designali/mockup/safari.tsx",
+        "path": "designali/mockups/safari.tsx",
         "type": "registry:ui"
       }
     ]
@@ -33,7 +46,7 @@
     ],
     "files": [
       {
-        "path": "designali/mockup/ipad-pro.tsx",
+        "path": "designali/mockups/ipad-pro.tsx",
         "type": "registry:ui"
       }
     ]
@@ -46,7 +59,7 @@
     ],
     "files": [
       {
-        "path": "designali/mockup/macbook-pro.tsx",
+        "path": "designali/mockups/macbook-pro.tsx",
         "type": "registry:ui"
       }
     ]
@@ -59,7 +72,7 @@
     ],
     "files": [
       {
-        "path": "designali/mockup/mac.tsx",
+        "path": "designali/mockups/mac.tsx",
         "type": "registry:ui"
       }
     ]
@@ -72,7 +85,7 @@
     ],
     "files": [
       {
-        "path": "designali/mockup/iphone-16.tsx",
+        "path": "designali/mockups/iphone-16.tsx",
         "type": "registry:ui"
       }
     ]
@@ -85,7 +98,7 @@
     ],
     "files": [
       {
-        "path": "designali/mockup/iphone-16-pro.tsx",
+        "path": "designali/mockups/iphone-16-pro.tsx",
         "type": "registry:ui"
       }
     ]

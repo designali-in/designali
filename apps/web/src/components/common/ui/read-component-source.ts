@@ -7,7 +7,7 @@ export async function readComponentSource(
 ) {
   const filePath = path.join(
     process.cwd(),
-    "components",
+    "registry/default/components",
     directory,
     `${componentName}.tsx`,
   );
