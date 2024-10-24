@@ -2,15 +2,13 @@
 
 // @ts-ignore
 import { useEffect, useState } from "react";
-import { convertToCamelCase } from "@/lib/utils";
 import { Button } from "@designali/ui/button";
-import { Switch } from "@designali/ui/switch";
 // @ts-ignore
 import * as copy from "copy-to-clipboard";
 import { DIcons } from "dicons";
 
 import {
-  Abstract,
+  Dshapes,
   getRandomShape,
   shapes,
 } from "../../../../../packages/shapes/src/index";
@@ -23,7 +21,7 @@ export default function Editor({ initialShape }) {
   return (
     <section className="grid justify-center py-10">
       <div className="flex justify-center">
-        <Abstract
+        <Dshapes
           className=""
           size={300}
           index={shape.index}
@@ -71,6 +69,7 @@ export default function Editor({ initialShape }) {
             />
           </div>
         </div>
+
         <Button
           size="lgicon"
           variant="outline"

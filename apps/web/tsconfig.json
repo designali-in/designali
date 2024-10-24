@@ -25,6 +25,7 @@
     "node_modules",
     "packages/**/*",
     "scripts/**/*",
+    "./scripts/build-registry.ts",
     "scripts/build-registry.ts",
     "__registry__"
   ]

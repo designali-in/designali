@@ -3,7 +3,10 @@ import MacbookPro from "../designali/mockup/macbook-pro";
 export default function MacbookProDemo() {
   return (
     <div className="relative">
-      <MacbookPro src="/images/products/grad-full.jpg" className="size-full" />
+      <MacbookPro
+        src="/images/blogs/gradient/cover.jpg"
+        className="size-full"
+      />
     </div>
   );
 }

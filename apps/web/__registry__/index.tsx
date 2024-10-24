@@ -5,6 +5,17 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
+    "button": {
+      name: "button",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/button.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/button.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "safari": {
       name: "safari",
       type: "registry:ui",
@@ -16,12 +27,34 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "ipad-pro": {
+      name: "ipad-pro",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/mockup/ipad-pro.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/mockup/ipad-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "macbook-pro": {
       name: "macbook-pro",
       type: "registry:ui",
       registryDependencies: undefined,
       files: ["registry/default/designali/mockup/macbook-pro.tsx"],
       component: React.lazy(() => import("@/registry/default/designali/mockup/macbook-pro.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "mac": {
+      name: "mac",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/mockup/mac.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/mockup/mac.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -66,6 +99,28 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/example/macbook-pro-1.tsx"],
       component: React.lazy(() => import("@/registry/default/example/macbook-pro-1.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "mac-1": {
+      name: "mac-1",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: ["registry/default/example/mac-1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/mac-1.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "ipad-pro-1": {
+      name: "ipad-pro-1",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: ["registry/default/example/ipad-pro-1.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/ipad-pro-1.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -231,6 +286,17 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/example/typography-table.tsx"],
       component: React.lazy(() => import("@/registry/default/example/typography-table.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "button-01": {
+      name: "button-01",
+      type: "registry:components",
+      registryDependencies: undefined,
+      files: ["registry/default/components/buttons/button-01.tsx"],
+      component: React.lazy(() => import("@/registry/default/components/buttons/button-01.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

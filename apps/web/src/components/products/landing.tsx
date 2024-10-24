@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
@@ -12,7 +11,7 @@ import ShapeGrid from "./shapeGrid";
 
 export default function Landing() {
   const [isNoise, setNoise] = useState(true);
-  const coolshapeskeys = Object.keys(shapes).flat();
+  const flowersKeys = Object.keys(shapes);
   const [shapeSize] = useState(120);
   const handleToggleChange = () => {
     setNoise(!isNoise);
@@ -39,7 +38,7 @@ export default function Landing() {
         </div>
         <div className="">
           <div className="flex flex-wrap justify-center gap-3">
-            {coolshapeskeys.map((shapeType) => {
+            {flowersKeys.map((shapeType) => {
               const shapesMeta = shapes[shapeType];
               return shapesMeta.map((_: never, i: Key) => {
                 return (

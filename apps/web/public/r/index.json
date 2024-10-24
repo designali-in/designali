@@ -1,5 +1,18 @@
 [
   {
+    "name": "button",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/button.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "safari",
     "type": "registry:ui",
     "dependencies": [
@@ -13,6 +26,19 @@
     ]
   },
   {
+    "name": "ipad-pro",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/mockup/ipad-pro.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "macbook-pro",
     "type": "registry:ui",
     "dependencies": [
@@ -21,6 +47,19 @@
     "files": [
       {
         "path": "designali/mockup/macbook-pro.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "mac",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/mockup/mac.tsx",
         "type": "registry:ui"
       }
     ]

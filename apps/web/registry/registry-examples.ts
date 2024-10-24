@@ -14,6 +14,19 @@ export const examples: Registry = [
     type: "registry:example",
     files: ["example/macbook-pro-1.tsx"],
   },
+  // Mac
+  {
+    name: "mac-1",
+    type: "registry:example",
+    files: ["example/mac-1.tsx"],
+  },
+
+  // iPad
+  {
+    name: "ipad-pro-1",
+    type: "registry:example",
+    files: ["example/ipad-pro-1.tsx"],
+  },
 
   // iPhone
   {
