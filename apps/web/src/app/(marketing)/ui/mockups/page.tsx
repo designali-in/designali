@@ -1,4 +1,4 @@
-import DemoComponent from "@/components/common/ui/demo-component";
+import { DemoComponent } from "@/components/common/ui/DemoComponent";
 import PageTitle from "@/src/components/mdx/page-title";
 import {
   Breadcrumb,

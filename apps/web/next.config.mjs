@@ -12,7 +12,16 @@ const config = {
 
   /** Enables hot reloading for local packages without a build step */
   transpilePackages: ["@designali/*", "dicons"],
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
 
+    return config;
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

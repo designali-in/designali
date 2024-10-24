@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+"use client";
+
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import {
   Tabs,
@@ -8,36 +12,50 @@ import {
   TabsTrigger,
 } from "@/registry/default/designali/ui/tabs";
 import { CodeBlock } from "@/src/components/mdx/layers/code-block";
+import { useConfig } from "@/src/hooks/use-config";
 
 import { CopyButton } from "../../ui/copy-button";
-import { readComponentSource } from "./read-component-source";
+import { ThemeWrapper } from "../theme-wrapper";
 
-export default async function DemoComponent({
+// Load the component dynamically in the client
+export default function ClientDemoComponent({
   directory,
   componentName,
   className,
+  source,
 }: {
   directory: string;
   componentName: string;
   className?: string;
+  source: string;
 }) {
-  const Component = (
-    await import(`@/registry/default/components/${directory}/${componentName}`)
-  ).default;
-  const source = await readComponentSource(directory, componentName);
+  const [config] = useConfig();
+  const DynamicComponent = dynamic(
+    () =>
+      import(
+        `@/registry/default/components/${directory}/${componentName}`
+      ).then((mod) => mod.default),
+    { ssr: false }, // Prevents server-side rendering for this component
+  );
 
   return (
     <div className={cn("group/item relative mt-10", className)}>
       <Tabs defaultValue="1" className="">
-        <TabsList className="mb-10 space-x-4 text-xs lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100">
+        <TabsList className="space-x-4 text-xs lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100">
           <TabsTrigger value="1">{componentName}</TabsTrigger>
           <TabsTrigger value="2">Code</TabsTrigger>
         </TabsList>
         <TabsContent className="relative flex justify-center" value="1">
-          <Component />
+          <ThemeWrapper defaultTheme="slate" className=" ">
+            {config.style === "default" && (
+              <div>
+                <DynamicComponent />
+              </div>
+            )}
+          </ThemeWrapper>
         </TabsContent>
         <TabsContent value="2">
-          <CodeBlock title={".tsx"} children={source || ""} />
+          <CodeBlock title={".tsx"}>{source || ""}</CodeBlock>
         </TabsContent>
       </Tabs>
       <div className="mt-10 space-x-4 text-xs lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100">
