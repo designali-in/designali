@@ -46,12 +46,8 @@ export default function ClientDemoComponent({
           <TabsTrigger value="2">Code</TabsTrigger>
         </TabsList>
         <TabsContent className="relative flex justify-center" value="1">
-          <ThemeWrapper defaultTheme="slate" className=" ">
-            {config.style === "default" && (
-              <div>
-                <DynamicComponent />
-              </div>
-            )}
+          <ThemeWrapper>
+            {config.style === "default" && <DynamicComponent />}
           </ThemeWrapper>
         </TabsContent>
         <TabsContent value="2">

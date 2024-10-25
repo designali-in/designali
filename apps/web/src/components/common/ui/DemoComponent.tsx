@@ -1,7 +1,7 @@
 import ClientDemoComponent from "./demo-component"; // Client Component
 import { readComponentSource } from "./read-component-source";
 
-export async function DemoComponent({
+export default async function DemoComponent({
   directory,
   componentName,
   className,

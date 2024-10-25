@@ -5,8 +5,8 @@ import * as React from "react";
 import { copyToClipboardWithMeta } from "@/components/ui/copy-button";
 import { useConfig } from "@/hooks/use-config";
 import { cn } from "@/lib/utils";
+import { Button } from "@/registry/default/designali/ui/button";
 import { baseColors } from "@/registry/registry-base-colors";
-import { Button } from "@designali/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -16,14 +16,11 @@ import {
   DialogTrigger,
 } from "@designali/ui/dialog";
 import { Drawer, DrawerContent, DrawerTrigger } from "@designali/ui/drawer";
-import { Label } from "@designali/ui/label";
-import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import { Skeleton } from "@designali/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@designali/ui/tooltip";
 import {
   CheckIcon,
   CopyIcon,
-  InfoCircledIcon,
   MoonIcon,
   ResetIcon,
   SunIcon,
@@ -31,7 +28,7 @@ import {
 import template from "lodash.template";
 import { useTheme } from "next-themes";
 
-import { ThemeWrapper } from "./theme-wrapper";
+import { ThemeWrapper } from "../theme-wrapper";
 
 import "@/styles/mdx.css";
 
@@ -47,7 +44,7 @@ export function ThemeCustomizer() {
   return (
     <div className="grid items-center gap-2">
       <Drawer>
-        <DrawerTrigger asChild>
+        <DrawerTrigger className="mt-2" asChild>
           <Button size="sm" className="md:hidden">
             Customize
           </Button>
@@ -84,12 +81,12 @@ export function ThemeCustomizer() {
                         className={cn(
                           "flex h-8 w-8 items-center justify-center rounded-full border-2 text-xs",
                           isActive
-                            ? "border-[--theme-primary]"
+                            ? "border-[--theme-ali]"
                             : "border-transparent",
                         )}
                         style={
                           {
-                            "--theme-primary": `hsl(${
+                            "--theme-ali": `hsl(${
                               baseColor.activeColor[
                                 mode === "dark" ? "dark" : "light"
                               ]
@@ -99,7 +96,7 @@ export function ThemeCustomizer() {
                       >
                         <span
                           className={cn(
-                            "flex h-5 w-5 items-center justify-center rounded-full bg-[--theme-primary]",
+                            "flex h-5 w-5 items-center justify-center rounded-full bg-[--theme-ali]",
                           )}
                         >
                           {isActive && (
@@ -122,15 +119,10 @@ export function ThemeCustomizer() {
           ) : (
             <div className="mr-1 flex items-center gap-4">
               <Skeleton className="h-5 w-5 rounded-full" />
-              <Skeleton className="h-5 w-5 rounded-full" />
-              <Skeleton className="h-5 w-5 rounded-full" />
-              <Skeleton className="h-5 w-5 rounded-full" />
-              <Skeleton className="h-5 w-5 rounded-full" />
             </div>
           )}
         </div>
       </div>
-      <CopyCodeButton variant="ghost" size="sm" className="[&_svg]:hidden" />
     </div>
   );
 }
@@ -147,7 +139,7 @@ function Customizer() {
   return (
     <ThemeWrapper
       defaultTheme="slate"
-      className="flex justify-center space-y-4 border p-6 md:space-y-6"
+      className="justify-center space-y-4 rounded-2xl border p-6 md:space-y-6"
     >
       <div className="flex items-start pt-4 md:pt-0">
         <div className="space-y-1 pr-2">
@@ -165,8 +157,8 @@ function Customizer() {
           onClick={() => {
             setConfig({
               ...config,
-              theme: "slate",
-              radius: 0,
+              theme: "red",
+              radius: 0.75,
             });
           }}
         >
@@ -174,164 +166,123 @@ function Customizer() {
           <span className="sr-only">Reset</span>
         </Button>
       </div>
-      <div className="flex flex-1 flex-col space-y-4 md:space-y-6">
-        <div className="space-y-1.5">
-          <div className="flex w-full items-center">
-            <Label className="text-xs">Style</Label>
-            <Popover>
-              <PopoverTrigger>
-                <InfoCircledIcon className="ml-1 h-3 w-3" />
-                <span className="sr-only">About styles</span>
-              </PopoverTrigger>
-              <PopoverContent
-                className="space-y-3 rounded-[0.5rem] text-sm"
-                side="right"
-                align="start"
-                alignOffset={-20}
-              >
-                <p className="font-medium">
-                  What is the difference between the New York and Default style?
-                </p>
-                <p>
-                  A style comes with its own set of components, animations,
-                  icons and more.
-                </p>
-                <p>
-                  The <span className="font-medium">Default</span> style has
-                  larger inputs, uses lucide-react for icons and
-                  tailwindcss-animate for animations.
-                </p>
-                <p>
-                  The <span className="font-medium">New York</span> style ships
-                  with smaller buttons and cards with shadows. It uses icons
-                  from Radix Icons.
-                </p>
-              </PopoverContent>
-            </Popover>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            <Button
-              variant={"outline"}
-              size="sm"
-              onClick={() => setConfig({ ...config, style: "default" })}
-              className={cn(
-                config.style === "default" && "border-2 border-primary",
+      <div className="space-y-4 md:space-y-6">
+        <div className="flex flex-wrap items-center justify-between">
+          <Button
+            variant={"outline"}
+            size="sm"
+            onClick={() => setConfig({ ...config, style: "default" })}
+            className={cn(config.style === "default" && "border border-ali")}
+          >
+            Default
+          </Button>
+          <div className=" ">
+            <div className="grid grid-cols-2 gap-2">
+              {mounted ? (
+                <>
+                  <Button
+                    variant={"outline"}
+                    size="sm"
+                    onClick={() => setMode("light")}
+                    className={cn(mode === "light" && "border border-ali")}
+                  >
+                    <SunIcon className="mr-1 -translate-x-1" />
+                    Light
+                  </Button>
+                  <Button
+                    variant={"outline"}
+                    size="sm"
+                    onClick={() => setMode("dark")}
+                    className={cn(mode === "dark" && "border-2 border-ali")}
+                  >
+                    <MoonIcon className="mr-1 -translate-x-1" />
+                    Dark
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Skeleton className="h-8 w-full" />
+                  <Skeleton className="h-8 w-full" />
+                </>
               )}
-            >
-              Default
-            </Button>
-            <Button
-              variant={"outline"}
-              size="sm"
-              onClick={() => setConfig({ ...config, style: "default" })}
-              className={cn(
-                config.style === "default" && "border-2 border-primary",
-              )}
-            >
-              New York
-            </Button>
+            </div>
           </div>
+          <div className="flex flex-wrap gap-2">
+            {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
+              return (
+                <div>
+                  <Button
+                    variant={"outline"}
+                    size="sm"
+                    key={value}
+                    onClick={() => {
+                      setConfig({
+                        ...config,
+                        radius: parseFloat(value),
+                      });
+                    }}
+                    className={cn(
+                      config.radius === parseFloat(value) &&
+                        "border-2 border-ali",
+                    )}
+                  >
+                    {value}
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
+
+          <CopyCodeButton
+            variant="outline"
+            size="sm"
+            className="[&_svg]:hidden"
+          />
         </div>
+
         <div className="space-y-1.5">
-          <Label className="text-xs">Color</Label>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="flex flex-wrap gap-2">
             {baseColors.map((theme) => {
               const isActive = config.theme === theme.name;
 
               return mounted ? (
-                <Button
-                  variant={"outline"}
-                  size="sm"
-                  key={theme.name}
-                  onClick={() => {
-                    setConfig({
-                      ...config,
-                      theme: theme.name,
-                    });
-                  }}
-                  className={cn(
-                    "justify-start",
-                    isActive && "border-2 border-primary",
-                  )}
-                  style={
-                    {
-                      "--theme-primary": `hsl(${
-                        theme.activeColor[mode === "dark" ? "dark" : "light"]
-                      })`,
-                    } as React.CSSProperties
-                  }
-                >
-                  <span
+                <div>
+                  <Button
+                    variant={"outline"}
+                    size="sm"
+                    key={theme.name}
+                    onClick={() => {
+                      setConfig({
+                        ...config,
+                        theme: theme.name,
+                      });
+                    }}
                     className={cn(
-                      "mr-1 flex h-5 w-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-primary]",
+                      "justify-start",
+                      isActive && "border-2 border-ali",
                     )}
+                    style={
+                      {
+                        "--theme-ali": `hsl(${
+                          theme.activeColor[mode === "dark" ? "dark" : "light"]
+                        })`,
+                      } as React.CSSProperties
+                    }
                   >
-                    {isActive && <CheckIcon className="h-4 w-4 text-white" />}
-                  </span>
-                  {theme.label}
-                </Button>
+                    <span
+                      className={cn(
+                        "flex h-5 w-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-ali]",
+                      )}
+                    >
+                      {isActive && <CheckIcon className="h-4 w-4 text-white" />}
+                    </span>
+                    {theme.label}
+                  </Button>
+                </div>
               ) : (
                 <Skeleton className="h-8 w-full" key={theme.name} />
               );
             })}
-          </div>
-        </div>
-        <div className="space-y-1.5">
-          <Label className="text-xs">Radius</Label>
-          <div className="grid grid-cols-5 gap-2">
-            {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
-              return (
-                <Button
-                  variant={"outline"}
-                  size="sm"
-                  key={value}
-                  onClick={() => {
-                    setConfig({
-                      ...config,
-                      radius: parseFloat(value),
-                    });
-                  }}
-                  className={cn(
-                    config.radius === parseFloat(value) &&
-                      "border-2 border-primary",
-                  )}
-                >
-                  {value}
-                </Button>
-              );
-            })}
-          </div>
-        </div>
-        <div className="space-y-1.5">
-          <Label className="text-xs">Mode</Label>
-          <div className="grid grid-cols-3 gap-2">
-            {mounted ? (
-              <>
-                <Button
-                  variant={"outline"}
-                  size="sm"
-                  onClick={() => setMode("light")}
-                  className={cn(mode === "light" && "border-2 border-primary")}
-                >
-                  <SunIcon className="mr-1 -translate-x-1" />
-                  Light
-                </Button>
-                <Button
-                  variant={"outline"}
-                  size="sm"
-                  onClick={() => setMode("dark")}
-                  className={cn(mode === "dark" && "border-2 border-primary")}
-                >
-                  <MoonIcon className="mr-1 -translate-x-1" />
-                  Dark
-                </Button>
-              </>
-            ) : (
-              <>
-                <Skeleton className="h-8 w-full" />
-                <Skeleton className="h-8 w-full" />
-              </>
-            )}
           </div>
         </div>
       </div>
@@ -448,7 +399,7 @@ function CustomizerCode() {
             {[
               "card",
               "popover",
-              "primary",
+              "ali",
               "secondary",
               "muted",
               "accent",
@@ -518,7 +469,7 @@ function CustomizerCode() {
             {[
               "card",
               "popover",
-              "primary",
+              "ali",
               "secondary",
               "muted",
               "accent",
@@ -599,8 +550,8 @@ const BASE_STYLES_WITH_VARIABLES = `
     --card-foreground: <%- colors.light["card-foreground"] %>;
     --popover: <%- colors.light["popover"] %>;
     --popover-foreground: <%- colors.light["popover-foreground"] %>;
-    --primary: <%- colors.light["primary"] %>;
-    --primary-foreground: <%- colors.light["primary-foreground"] %>;
+    --ali: <%- colors.light["ali"] %>;
+    --ali-foreground: <%- colors.light["ali-foreground"] %>;
     --secondary: <%- colors.light["secondary"] %>;
     --secondary-foreground: <%- colors.light["secondary-foreground"] %>;
     --muted: <%- colors.light["muted"] %>;
@@ -627,8 +578,8 @@ const BASE_STYLES_WITH_VARIABLES = `
     --card-foreground: <%- colors.dark["card-foreground"] %>;
     --popover: <%- colors.dark["popover"] %>;
     --popover-foreground: <%- colors.dark["popover-foreground"] %>;
-    --primary: <%- colors.dark["primary"] %>;
-    --primary-foreground: <%- colors.dark["primary-foreground"] %>;
+    --ali: <%- colors.dark["ali"] %>;
+    --ali-foreground: <%- colors.dark["ali-foreground"] %>;
     --secondary: <%- colors.dark["secondary"] %>;
     --secondary-foreground: <%- colors.dark["secondary-foreground"] %>;
     --muted: <%- colors.dark["muted"] %>;
