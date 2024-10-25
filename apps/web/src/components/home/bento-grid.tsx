@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CarouselGraaadients } from "@/components/solutions/products/cards";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { Avegra } from "@/src/app/fonts";
+import { BentoCard, BentoGrid } from "@/src/components/uis/bento-grid";
 import { getAdminSummary } from "@/src/lib/actions/user.actions";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
@@ -9,9 +9,9 @@ import { Button } from "@designali/ui/button";
 import { HomeItems } from "../about/items";
 import { Chatbot } from "../common/chat";
 import Counter from "../common/countnumber";
-import DotPattern from "../ui/dot-pattern";
-import Ripple from "../ui/ripple";
-import ShineBorder from "../ui/shine-border";
+import DotPattern from "../uis/dot-pattern";
+import Ripple from "../uis/ripple";
+import ShineBorder from "../uis/shine-border";
 
 const reviews = await getAdminSummary();
 

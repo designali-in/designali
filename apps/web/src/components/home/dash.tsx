@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
-import { BorderBeam } from "../ui/border-beam";
-import Safari from "../ui/safari";
+import { BorderBeam } from "../uis/border-beam";
+import Safari from "../uis/safari";
 
 const Hero = () => {
   const ref = useRef(null);

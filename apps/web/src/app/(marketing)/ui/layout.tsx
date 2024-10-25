@@ -23,7 +23,7 @@ export default function MarketingLayout({ children }: RootLayoutProps) {
   return (
     <main className="mx-auto my-20 mt-40 max-w-7xl px-6 xl:px-0">
       <PageTitle
-        title="UI Components"
+        title={lastSegment}
         description={` Designali an extensive collection of copy-and-paste components for quickly building app UIs. It's free, open-source, and ready to drop into your projects.`}
       />
       <div className="mt-4 flex justify-center">

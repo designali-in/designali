@@ -16,7 +16,7 @@ import copy from "copy-to-clipboard";
 import { DIcons } from "dicons";
 import { renderToString } from "react-dom/server";
 
-import { CopyButton } from "../ui/copy-button";
+import { CopyButton } from "../uis/copy-button";
 import ShapeRenderer from "./shape-renderer";
 
 export default function ShapeGrid({ type, size, noise, index }) {

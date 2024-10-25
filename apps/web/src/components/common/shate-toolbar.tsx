@@ -18,7 +18,7 @@ import {
 } from "@designali/ui/tooltip";
 
 import { Icons } from "../icons";
-import { CopyInput } from "../ui/copy-input";
+import { CopyInput } from "../uis/copy-input";
 
 const popupCenter = ({ url, title, w, h }) => {
   const dualScreenLeft =

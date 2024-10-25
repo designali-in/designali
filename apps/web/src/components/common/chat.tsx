@@ -6,7 +6,7 @@ import { useChat } from "ai/react";
 import "@/styles/text.css";
 
 import { useRouter } from "next/navigation";
-import { CanvasRevealEffect } from "@/components/ui/canvas-effect";
+import { CanvasRevealEffect } from "@/src/components/uis/canvas-effect";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { Input } from "@designali/ui/input";

@@ -1,6 +1,6 @@
 "use client";
 
-import DotPattern from "@/components/ui/dot-pattern";
+import DotPattern from "@/src/components/uis/dot-pattern";
 
 export function Quote() {
   return (

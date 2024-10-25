@@ -12,8 +12,8 @@ import {
   getRandomShape,
   shapes,
 } from "../../../../../packages/shapes/src/index";
-import { Dropdown } from "../ui/dropdown";
-import { DInput } from "../ui/input";
+import { Dropdown } from "../uis/dropdown";
+import { DInput } from "../uis/input";
 
 export default function Editor({ initialShape }) {
   const [shape, setShape] = useState(initialShape);

@@ -8,8 +8,8 @@ import { useAnimate } from "framer-motion";
 
 import { Icons } from "../icons";
 import { Logo } from "../logo";
-import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
-import { Particles } from "../ui/particles";
+import { HighlighterItem, HighlightGroup } from "../uis/highlighter";
+import { Particles } from "../uis/particles";
 
 export const Connect: React.FC = () => {
   const [scope, animate] = useAnimate();

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUserById } from "@/lib/actions/user.actions";
 import PageTitle from "@/src/components/mdx/page-title";
-import { LinkCopyButton } from "@/src/components/ui/link-copy-button";
+import { LinkCopyButton } from "@/src/components/uis/link-copy-button";
 import {
   Breadcrumb,
   BreadcrumbItem,

@@ -1,7 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { CopyButton, CopyWithClassNames } from "@/components/ui/copy-button";
+import {
+  CopyButton,
+  CopyWithClassNames,
+} from "@/src/components/uis/copy-button";
 import { cn } from "@designali/ui";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 
@@ -26,9 +29,7 @@ export function ComponentExample({
   ) as React.ReactElement[];
 
   const codeString = React.useMemo(() => {
-    if (
-      typeof Code.props["data-rehype-pretty-code-fragment"] !== "undefined"
-    ) {
+    if (typeof Code.props["data-rehype-pretty-code-fragment"] !== "undefined") {
       const [, Button] = React.Children.toArray(
         Code.props.children,
       ) as React.ReactElement[];

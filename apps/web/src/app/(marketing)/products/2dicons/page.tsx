@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Avegra } from "@/app/fonts";
-import DotPattern from "@/components/ui/dot-pattern";
+import DotPattern from "@/src/components/uis/dot-pattern";
 import { auth } from "@designali/auth";
 import { cn } from "@designali/ui";
 import {

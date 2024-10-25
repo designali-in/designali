@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import DotPattern from "@/src/components/ui/dot-pattern";
-import Ripple from "@/src/components/ui/ripple";
+import { BentoCard, BentoGrid } from "@/src/components/uis/bento-grid";
+import DotPattern from "@/src/components/uis/dot-pattern";
+import Ripple from "@/src/components/uis/ripple";
 import { ScrollArea } from "@designali/ui/scroll-area";
 
 import { Icons } from "../../../icons";

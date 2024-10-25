@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import "@/styles/text.css";
 
-import DotPattern from "@/components/ui/dot-pattern";
+import DotPattern from "@/src/components/uis/dot-pattern";
 import { Button } from "@designali/ui/button";
 
 import { renderCanvas } from "../common/render";

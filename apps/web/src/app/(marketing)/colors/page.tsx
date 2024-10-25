@@ -3,7 +3,7 @@ import { ColorBW } from "@/src/components/common/colors/color-bw";
 import ColorConverter from "@/src/components/common/colors/color-convert";
 import { ColorPalette } from "@/src/components/common/colors/color-palette";
 import PageTitle from "@/src/components/mdx/page-title";
-import { ScrollProgress } from "@/src/components/ui/scroll-progress";
+import { ScrollProgress } from "@/src/components/uis/scroll-progress";
 
 const colors = getColors();
 

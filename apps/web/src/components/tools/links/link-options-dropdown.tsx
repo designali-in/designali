@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ProtectedElement } from "@/components/ui/protected-element";
+import { ProtectedElement } from "@/src/components/uis/protected-element";
 import { ShortLink } from "@designali/db/src/schema";
 import {
   DropdownMenu,

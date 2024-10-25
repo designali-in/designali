@@ -1,4 +1,4 @@
-import IPadPro from "../../designali/mockups/ipad-pro";
+import IPadPro from "@/components/mockups/ipad-pro";
 
 export default function iPadProDemo() {
   return (

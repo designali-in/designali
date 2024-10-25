@@ -18,7 +18,7 @@ import { CSSTransition } from "react-transition-group";
 
 import { DownloadPNG, DownloadSVG } from "../../common/colors/export-modal";
 import { ResultIcon } from "../../common/colors/result-dicon";
-import GridPattern from "../../ui/grid-pattern";
+import GridPattern from "../../uis/grid-pattern";
 
 interface ToolProps {
   svgRef;

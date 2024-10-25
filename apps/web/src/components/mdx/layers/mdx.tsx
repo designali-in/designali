@@ -9,7 +9,7 @@ import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import { CopyButton, CopyNpmCommandButton } from "../../ui/copy-button";
+import { CopyButton, CopyNpmCommandButton } from "../../uis/copy-button";
 import Callout from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import { ComponentExample } from "./component-example";

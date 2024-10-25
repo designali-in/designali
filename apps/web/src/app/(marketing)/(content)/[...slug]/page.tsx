@@ -7,7 +7,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/mdx/page-header";
-import { ScrollProgress } from "@/src/components/ui/scroll-progress";
+import { ScrollProgress } from "@/src/components/uis/scroll-progress";
 import { Separator } from "@designali/ui/separator";
 import { allPages } from "contentlayer/generated";
 

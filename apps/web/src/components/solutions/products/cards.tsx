@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { CardStack } from "@/components/ui/image-card";
+import { CardStack } from "@/src/components/uis/image-card";
 import {
   Carousel,
   CarouselContent,

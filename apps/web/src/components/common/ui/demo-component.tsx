@@ -14,7 +14,7 @@ import {
 import { CodeBlock } from "@/src/components/mdx/layers/code-block";
 import { useConfig } from "@/src/hooks/use-config";
 
-import { CopyButton } from "../../ui/copy-button";
+import { CopyButton } from "../../uis/copy-button";
 import { ThemeWrapper } from "../theme-wrapper";
 
 // Load the component dynamically in the client

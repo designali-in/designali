@@ -5,7 +5,7 @@ import {
   ResponsiveDialogContent,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
-} from "@/components/ui/responsive-dialog";
+} from "@/src/components/uis/responsive-dialog";
 import { Button } from "@designali/ui/button";
 import {
   DropdownMenu,

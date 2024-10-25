@@ -1,4 +1,4 @@
-import MacbookPro from "../../designali/mockups/macbook-pro";
+import MacbookPro from "@/components/mockups/macbook-pro";
 
 export default function MacbookProDemo() {
   return (

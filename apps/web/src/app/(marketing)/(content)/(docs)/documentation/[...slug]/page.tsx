@@ -8,7 +8,7 @@ import { allDocumentations } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
-import { ScrollProgress } from "@/src/components/ui/scroll-progress";
+import { ScrollProgress } from "@/src/components/uis/scroll-progress";
 import { Button } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
 

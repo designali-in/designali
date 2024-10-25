@@ -1,5 +1,8 @@
-import { HighlighterItem, HighlightGroup } from "@/components/ui/highlighter";
-import { Particles } from "@/components/ui/particles";
+import {
+  HighlighterItem,
+  HighlightGroup,
+} from "@/src/components/uis/highlighter";
+import { Particles } from "@/src/components/uis/particles";
 
 export interface DExperience {
   post: string;

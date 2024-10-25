@@ -7,7 +7,7 @@ import { Button } from "@designali/ui/button";
 import { DIcons } from "dicons";
 
 import ImageZoom from "../common/image-zoom";
-import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
+import { HighlighterItem, HighlightGroup } from "../uis/highlighter";
 
 export interface Experience {
   post: string;

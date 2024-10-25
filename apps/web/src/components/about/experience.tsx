@@ -10,8 +10,8 @@ import {
   CarouselPrevious,
 } from "@designali/ui/carousel";
 
-import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
-import { Particles } from "../ui/particles";
+import { HighlighterItem, HighlightGroup } from "../uis/highlighter";
+import { Particles } from "../uis/particles";
 import { Exp } from "./exp";
 
 export interface Experience {

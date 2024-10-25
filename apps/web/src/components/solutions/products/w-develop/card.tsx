@@ -3,10 +3,10 @@
 import Link from "next/link";
 import CountUpNumber from "@/components/common/countnumber";
 import { ImageZoomThree } from "@/components/common/gallery";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import cloudinary from "@/lib/cloudinary";
 import { TypeWriter } from "@/src/components/common/type";
-import WebVitals from "@/src/components/ui/web-vitals";
+import { BentoCard, BentoGrid } from "@/src/components/uis/bento-grid";
+import WebVitals from "@/src/components/uis/web-vitals";
 import { Button } from "@designali/ui/button";
 import {
   Accordion,

@@ -5,8 +5,8 @@ import type { Session } from "next-auth";
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LinkCopyButton } from "@/components/ui/link-copy-button";
 import { getQRAsCanvas, getQRAsSVGDataUri, QRCodeSVG } from "@/lib/qrcode";
+import { LinkCopyButton } from "@/src/components/uis/link-copy-button";
 import {
   Accordion,
   AccordionContent,

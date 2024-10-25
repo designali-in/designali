@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef, useRef } from "react";
-import { AnimatedBeam } from "@/components/ui/beams";
+import { AnimatedBeam } from "@/src/components/uis/beams";
 import { cn } from "@designali/ui";
 
 import { Icons } from "../icons";

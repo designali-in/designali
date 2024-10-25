@@ -8,7 +8,7 @@ import { allDesigns } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
-import { ScrollProgress } from "@/src/components/ui/scroll-progress";
+import { ScrollProgress } from "@/src/components/uis/scroll-progress";
 import { Separator } from "@designali/ui/separator";
 
 interface DesignPageProps {

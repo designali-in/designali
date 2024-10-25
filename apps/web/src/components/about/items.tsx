@@ -3,8 +3,8 @@
 
 import type { Likes, Views, YouTube } from "@/types";
 import React from "react";
-import { Link } from "@/components/ui/link";
 import fetcher from "@/lib/fetcher";
+import { Link } from "@/src/components/uis/link";
 import { DIcons } from "dicons";
 import useSWR from "swr";
 

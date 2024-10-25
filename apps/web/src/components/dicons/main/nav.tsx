@@ -12,7 +12,7 @@ import { Input } from "@designali/ui/input";
 import { Label } from "@designali/ui/label";
 import { DIcons } from "dicons";
 
-import { CopyButton } from "../../ui/copy-button";
+import { CopyButton } from "../../uis/copy-button";
 
 interface NavProps {
   settings;

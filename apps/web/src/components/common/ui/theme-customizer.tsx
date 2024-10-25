@@ -2,11 +2,11 @@
 
 import type { BaseColor } from "@/registry/registry-base-colors";
 import * as React from "react";
-import { copyToClipboardWithMeta } from "@/components/ui/copy-button";
 import { useConfig } from "@/hooks/use-config";
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/default/designali/ui/button";
 import { baseColors } from "@/registry/registry-base-colors";
+import { copyToClipboardWithMeta } from "@/src/components/uis/copy-button";
 import {
   Dialog,
   DialogContent,
@@ -280,7 +280,7 @@ function Customizer() {
                   </Button>
                 </div>
               ) : (
-                <Skeleton className="h-8 w-full" key={theme.name} />
+                <Skeleton className="h-8" key={theme.name} />
               );
             })}
           </div>

@@ -7,9 +7,9 @@ import { buttonVariants } from "@designali/ui/button";
 
 import { Icons } from "../icons";
 import PageTitle from "../mdx/page-title";
-import { HighlighterItem, HighlightGroup } from "../ui/highlighter";
-import { Particles } from "../ui/particles";
-import ShineBorder from "../ui/shine-border";
+import { HighlighterItem, HighlightGroup } from "../uis/highlighter";
+import { Particles } from "../uis/particles";
+import ShineBorder from "../uis/shine-border";
 
 export const IconsGen: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import type { BlogPost } from "contentlayer/generated";
 import Mdx from "@/components/mdx/layers";
-import { LikeButton } from "@/components/ui/like-button";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { LikeButton } from "@/src/components/uis/like-button";
+import { ScrollProgress } from "@/src/components/uis/scroll-progress";
 import { getHeadings } from "@/utils/get-headings";
 
 import TableOfContents from "./table-of-contents";

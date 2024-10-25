@@ -1,13 +1,11 @@
-import { Trash } from "lucide-react";
-
-import { Button } from "../../designali/ui/button";
+import { Button } from "@/components/ui/button";
+import { Trash } from "dicons";
 
 export default function Button05() {
   return (
     <Button variant="destructive">
       <Trash
-        className="-ms-1 me-2 opacity-60"
-        size={16}
+        className="mr-1 h-4 w-4 opacity-60"
         strokeWidth={2}
         aria-hidden="true"
       />

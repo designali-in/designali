@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons";
 import { LinkCount } from "@/src/components/dashboard/overview/link-count";
 import PageTitle from "@/src/components/mdx/page-title";
 import { AllLinkList } from "@/src/components/tools/links/link-list";
-import Paginations from "@/src/components/ui/pagination";
+import Paginations from "@/src/components/uis/pagination";
 import { getAllLinks } from "@/src/server/actions/link";
 import { Button } from "@designali/ui/button";
 

@@ -1,4 +1,4 @@
-import Mac from "../../designali/mockups/mac";
+import Mac from "@/components/mockups/mac";
 
 export default function MacDemo() {
   return (

@@ -9,7 +9,7 @@ import { Connect } from "@/components/common/connect";
 import ImageZoom from "@/components/common/image-zoom";
 import Logos from "@/components/common/logos";
 import { SubscribeInput } from "@/src/components/common/subscribe/subscribe-input";
-import { BackgroundBeams } from "@/src/components/ui/background-beams";
+import { BackgroundBeams } from "@/src/components/uis/background-beams";
 import { cn } from "@designali/ui";
 import { Plus } from "dicons";
 

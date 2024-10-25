@@ -3,8 +3,8 @@
 import Link from "next/link";
 import CountUpNumber from "@/components/common/countnumber";
 import { ImageZoomThree } from "@/components/common/gallery";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import cloudinary from "@/lib/cloudinary";
+import { BentoCard, BentoGrid } from "@/src/components/uis/bento-grid";
 import { Button } from "@designali/ui/button";
 import {
   Accordion,

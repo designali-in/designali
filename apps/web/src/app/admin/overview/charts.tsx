@@ -1,11 +1,11 @@
 "use client";
 
-import type { ChartConfig } from "@/components/ui/chart";
+import type { ChartConfig } from "@/src/components/uis/chart";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "@/src/components/uis/chart";
 import {
   Bar,
   BarChart,

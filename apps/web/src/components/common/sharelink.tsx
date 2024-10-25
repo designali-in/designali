@@ -16,7 +16,7 @@ import {
 import useSWR from "swr";
 
 import { Icons } from "../icons";
-import { LikeButtonIcon } from "../ui/like-button";
+import { LikeButtonIcon } from "../uis/like-button";
 import { UpdatesToolbar } from "./shate-toolbar";
 
 const ShareLink = ({ name, slug }: { name: string; slug }) => {
