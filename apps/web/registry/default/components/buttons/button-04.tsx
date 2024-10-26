@@ -1,15 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Archive } from "lucide-react";
+import { Archive } from "dicons";
 
 export default function Button04() {
   return (
     <Button>
-      <Archive
-        className="mr-1 opacity-60"
-        size={16}
-        strokeWidth={2}
-        aria-hidden="true"
-      />
+      <Archive className="mr-1 size-4" />
       Button
     </Button>
   );

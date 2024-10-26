@@ -1,18 +1,13 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
+import { Sparkles } from "dicons";
 
 export default function Button07() {
   return (
     <Button variant="outline">
       Button
-      <Sparkles
-        className="-me-1 ms-2 opacity-60"
-        size={16}
-        strokeWidth={2}
-        aria-hidden="true"
-      />
+      <Sparkles className="ml-1 h-4 w-4" />
     </Button>
   );
 }

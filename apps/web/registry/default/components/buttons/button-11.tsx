@@ -1,18 +1,13 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "dicons";
 
 export default function Button11() {
   return (
     <Button>
       Button
-      <ChevronDown
-        className="-me-1 ms-2 opacity-60"
-        size={16}
-        strokeWidth={2}
-        aria-hidden="true"
-      />
+      <ChevronDown className="ml-1 size-4" />
     </Button>
   );
 }

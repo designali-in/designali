@@ -36,7 +36,7 @@ export const MainIcons = ({
             const Component = DIcons[icon];
             return (
               <div>
-                <TooltipProvider>
+                <TooltipProvider delayDuration={0}>
                   <Tooltip>
                     <RadioGroup className="relative" defaultValue="option-one">
                       <RadioGroupItem

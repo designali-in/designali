@@ -1,17 +1,12 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "dicons";
 
 export default function Button08() {
   return (
     <Button className="group" variant="ghost">
-      <ArrowLeft
-        className="-ms-1 me-2 opacity-60 transition-transform group-hover:-translate-x-0.5"
-        size={16}
-        strokeWidth={2}
-        aria-hidden="true"
-      />
+      <ArrowLeft className="mr-1 size-4 transition-transform duration-300 group-hover:-translate-x-1" />
       Button
     </Button>
   );

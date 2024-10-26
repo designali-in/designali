@@ -1,17 +1,12 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { LoaderCircle } from "lucide-react";
+import { LoaderCircle } from "dicons";
 
 export default function Button13() {
   return (
     <Button disabled>
-      <LoaderCircle
-        className="-ms-1 me-2 animate-spin"
-        size={16}
-        strokeWidth={2}
-        aria-hidden="true"
-      />
+      <LoaderCircle className="mr-1 size-4 animate-spin" />
       Button
     </Button>
   );

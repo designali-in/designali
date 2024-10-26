@@ -1,10 +1,10 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 "use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Plus } from "dicons";
 
 export default function Button21() {
   const [open, setOpen] = useState<boolean>(false);
@@ -18,12 +18,7 @@ export default function Button21() {
       aria-expanded={open}
       aria-label={open ? "Close menu" : "Open menu"}
     >
-      <Plus
-        className="transition-transform duration-500 [transition-timing-function:cubic-bezier(0.68,-0.6,0.32,1.6)] group-aria-expanded:rotate-[135deg]"
-        size={16}
-        strokeWidth={2}
-        aria-hidden="true"
-      />
+      <Plus className="size-4 transition-transform duration-500 group-aria-expanded:rotate-[135deg]" />
     </Button>
   );
 }

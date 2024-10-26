@@ -1,10 +1,9 @@
-// Dependencies: npm install lucide-react
-
+// Dependencies: npm install dicons
 "use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { LoaderCircle } from "lucide-react";
+import { LoaderCircle } from "dicons";
 
 export default function Button14() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -29,12 +28,7 @@ export default function Button14() {
       </span>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <LoaderCircle
-            className="animate-spin"
-            size={16}
-            strokeWidth={2}
-            aria-hidden="true"
-          />
+          <LoaderCircle className="size-4 animate-spin" />
         </div>
       )}
     </Button>

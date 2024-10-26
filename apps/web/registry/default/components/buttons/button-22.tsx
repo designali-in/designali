@@ -1,4 +1,4 @@
-// Dependencies: npm install lucide-react @radix-ui/react-tooltip
+// Dependencies: npm install dicons @radix-ui/react-tooltip
 
 "use client";
 
@@ -9,7 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Plus } from "lucide-react";
+import { Plus } from "dicons";
 
 export default function Button22() {
   return (
@@ -17,7 +17,7 @@ export default function Button22() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button variant="outline" size="icon" aria-label="Add new item">
-            <Plus size={16} strokeWidth={2} aria-hidden="true" />
+            <Plus className="size-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent className="border border-input bg-popover px-2 py-1 text-xs text-muted-foreground">

@@ -1,17 +1,12 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Plus } from "dicons";
 
 export default function Button20() {
   return (
-    <Button
-      className="rounded-full"
-      variant="outline"
-      size="icon"
-      aria-label="Add new item"
-    >
-      <Plus size={16} strokeWidth={2} aria-hidden="true" />
+    <Button variant="default" size="icon" className="rounded-full">
+      <Plus className="size-4" />
     </Button>
   );
 }

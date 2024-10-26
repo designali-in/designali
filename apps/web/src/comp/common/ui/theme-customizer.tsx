@@ -157,7 +157,7 @@ function Customizer() {
           onClick={() => {
             setConfig({
               ...config,
-              theme: "red",
+              theme: "violet",
               radius: 0.75,
             });
           }}
