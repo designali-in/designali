@@ -15,6 +15,8 @@ import {
 
 import "public/registry/themes.css";
 
+import { Suspense } from "react";
+
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -23,32 +25,34 @@ export default function MarketingLayout({ children }: RootLayoutProps) {
   const pathname = usePathname();
   const lastSegment = pathname.split("/").pop();
   return (
-    <main className="mx-auto my-20 mt-40 max-w-7xl px-6 xl:px-0">
-      <PageTitle
-        title={lastSegment}
-        description={` Designali an extensive collection of copy-and-paste components for quickly building app UIs. It's free, open-source, and ready to drop into your projects.`}
-      />
-      <div className="mt-4 flex justify-center">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/ui">ui</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>{lastSegment}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
-      <ThemeWrapper>
-        <ThemeCustomizer />
-        {children}
-      </ThemeWrapper>
-    </main>
+    <Suspense>
+      <main className="mx-auto my-20 mt-40 max-w-7xl px-6 xl:px-0">
+        <PageTitle
+          title={lastSegment}
+          description={` Designali an extensive collection of copy-and-paste components for quickly building app UIs. It's free, open-source, and ready to drop into your projects.`}
+        />
+        <div className="mt-4 flex justify-center">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/ui">ui</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{lastSegment}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        <ThemeWrapper>
+          <ThemeCustomizer />
+          {children}
+        </ThemeWrapper>
+      </main>
+    </Suspense>
   );
 }
