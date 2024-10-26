@@ -2,11 +2,11 @@
 
 import type { Likes, Views } from "@/types";
 import React from "react";
-import ImageZoom from "@/components/common/image-zoom";
-import Image from "@/components/mdx/layers/image";
+import ImageZoom from "@/comp/common/image-zoom";
+import Image from "@/comp/mdx/layers/image";
 import fetcher from "@/lib/fetcher";
-import { UpdatesToolbar } from "@/src/components/common/shate-toolbar";
-import { LikeButtonIcon } from "@/src/components/uis/like-button";
+import { UpdatesToolbar } from "@/src/comp/common/shate-toolbar";
+import { LikeButtonIcon } from "@/src/comp/uis/like-button";
 import { Skeleton } from "@designali/ui/skeleton";
 import dayjs from "dayjs";
 import useSWR from "swr";

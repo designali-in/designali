@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
-import { DocsPageHeader } from "@/components/mdx/doc/page-header";
-import { DocsPager } from "@/components/mdx/doc/pager";
-import { DashboardTableOfContents } from "@/components/mdx/doc/toc";
-import Mdx from "@/components/mdx/layers";
+import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
+import { DocsPager } from "@/comp/mdx/doc/pager";
+import { DashboardTableOfContents } from "@/comp/mdx/doc/toc";
+import Mdx from "@/comp/mdx/layers";
 import { getTableOfContents } from "@/lib/toc";
 import { allDesigns } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
-import { ScrollProgress } from "@/src/components/uis/scroll-progress";
+import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 import { Separator } from "@designali/ui/separator";
 
 interface DesignPageProps {

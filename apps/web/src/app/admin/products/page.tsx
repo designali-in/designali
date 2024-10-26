@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { formatCurrency, formatId } from "@/lib/dutils";
-import DeleteDialog from "@/src/components/admin/delete-dialog";
-import PageTitle from "@/src/components/mdx/page-title";
-import Paginations from "@/src/components/uis/pagination";
+import DeleteDialog from "@/src/comp/admin/delete-dialog";
+import PageTitle from "@/src/comp/mdx/page-title";
+import Paginations from "@/src/comp/uis/pagination";
 import {
   deleteProduct,
   getAllProducts,

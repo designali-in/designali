@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import DeleteDialog from "@/components/admin/delete-dialog";
+import DeleteDialog from "@/comp/admin/delete-dialog";
 import { deleteUser, getAllUsers } from "@/lib/actions/user.actions";
 import { formatId } from "@/lib/dutils";
-import PageTitle from "@/src/components/mdx/page-title";
-import Paginations from "@/src/components/uis/pagination";
+import PageTitle from "@/src/comp/mdx/page-title";
+import Paginations from "@/src/comp/uis/pagination";
 import { Button } from "@designali/ui/button";
 import {
   Table,

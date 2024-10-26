@@ -1,9 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { ThemeWrapper } from "@/components/common/theme-wrapper";
-import { ThemeCustomizer } from "@/src/components/common/ui/theme-customizer";
-import PageTitle from "@/src/components/mdx/page-title";
+import { ThemeWrapper } from "@/comp/common/theme-wrapper";
+import { ThemeCustomizer } from "@/src/comp/common/ui/theme-customizer";
+import PageTitle from "@/src/comp/mdx/page-title";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,6 +12,8 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@designali/ui/breadcrumb";
+
+import "public/registry/themes.css";
 
 interface RootLayoutProps {
   children: React.ReactNode;

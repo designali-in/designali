@@ -1,5 +1,5 @@
-import Dashboard from "@/components/dashboard/overview/dash";
-import UserId from "@/components/dashboard/user-id";
+import Dashboard from "@/comp/dashboard/overview/dash";
+import UserId from "@/comp/dashboard/user-id";
 
 export default function OrderDetailsPage() {
   return (

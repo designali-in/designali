@@ -1,4 +1,4 @@
-import { DesignSidebarNav } from "@/components/mdx/doc/sidebar-nav";
+import { DesignSidebarNav } from "@/comp/mdx/doc/sidebar-nav";
 import { designConfig } from "@/config/docs";
 import { ScrollArea } from "@designali/ui/scroll-area";
 

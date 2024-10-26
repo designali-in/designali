@@ -14,6 +14,24 @@ export const ui: Registry = [
     dependencies: [""],
     files: ["designali/ui/tabs.tsx"],
   },
+  {
+    name: "toggle",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/toggle.tsx"],
+  },
+  {
+    name: "toggle-group",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/toggle-group.tsx"],
+  },
+  {
+    name: "tooltip",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/tooltip.tsx"],
+  },
   // Safari
   {
     name: "safari",

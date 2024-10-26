@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Link from "next/link";
-import { DocsPageHeader } from "@/components/mdx/doc/page-header";
-import { DashboardTableOfContents } from "@/components/mdx/doc/toc";
-import Mdx from "@/components/mdx/layers";
+import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
+import { DashboardTableOfContents } from "@/comp/mdx/doc/toc";
+import Mdx from "@/comp/mdx/layers";
 import { getTableOfContents } from "@/lib/toc";
 import { allGuides } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
-import { ScrollProgress } from "@/src/components/uis/scroll-progress";
+import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 import { Button } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
 

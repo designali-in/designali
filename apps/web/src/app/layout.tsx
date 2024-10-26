@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import Analytics from "@/components/analytics";
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
+import Analytics from "@/comp/analytics";
+import { Footer } from "@/comp/layout/footer";
+import { Header } from "@/comp/layout/header";
 import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@designali/ui";
 import { ThemeProvider } from "@designali/ui/theme";
@@ -16,7 +16,7 @@ import "@/styles/globals.css";
 
 import { env } from "@designali/env";
 
-import NowPlaying from "../components/layout/footer/now-playing";
+import NowPlaying from "../comp/layout/footer/now-playing";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

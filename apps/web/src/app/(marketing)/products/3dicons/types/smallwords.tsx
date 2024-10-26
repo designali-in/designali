@@ -1,4 +1,4 @@
-import { Grid5BG } from "@/components/common/gallery";
+import { Grid5BG } from "@/comp/common/gallery";
 import cloudinary from "@/lib/cloudinary";
 
 export default async function SmallWords() {

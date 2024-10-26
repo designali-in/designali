@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Avegra } from "@/app/fonts";
-import { PhotoshopGradients } from "@/components/products/gradients";
+import { PhotoshopGradients } from "@/comp/products/gradients";
 import { auth } from "@designali/auth";
 import { cn } from "@designali/ui";
 import {

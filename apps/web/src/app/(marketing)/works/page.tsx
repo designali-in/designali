@@ -1,7 +1,7 @@
-import { CarouselSpacing } from "@/components/common/carousel";
-import Projects from "@/components/common/projects";
-import { InstagramFeed } from "@/src/components/common/insta";
-import PageTitle from "@/src/components/mdx/page-title";
+import { CarouselSpacing } from "@/comp/common/carousel";
+import Projects from "@/comp/common/projects";
+import { InstagramFeed } from "@/src/comp/common/insta";
+import PageTitle from "@/src/comp/mdx/page-title";
 
 import { Work } from "./Work";
 

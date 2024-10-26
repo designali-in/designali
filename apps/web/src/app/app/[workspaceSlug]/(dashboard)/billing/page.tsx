@@ -1,7 +1,7 @@
 import React from "react";
-import Billing from "@/components/common/pricing";
-import ManageSubscription from "@/components/dashboard/billing/ManageSubscription";
-import UpdgradeAccBtn from "@/src/components/dashboard/billing/updgradeAccBtn";
+import Billing from "@/comp/common/pricing";
+import ManageSubscription from "@/comp/dashboard/billing/ManageSubscription";
+import UpdgradeAccBtn from "@/src/comp/dashboard/billing/updgradeAccBtn";
 import { auth, signIn } from "@designali/auth";
 import { db } from "@designali/db";
 import { users } from "@designali/db/src/schema";

@@ -1,4 +1,4 @@
-import { DocumentationSidebarNav } from "@/components/mdx/doc/sidebar-nav";
+import { DocumentationSidebarNav } from "@/comp/mdx/doc/sidebar-nav";
 import { documentationConfig } from "@/config/docs";
 import { ScrollArea } from "@designali/ui/scroll-area";
 

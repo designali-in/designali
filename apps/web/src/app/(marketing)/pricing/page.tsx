@@ -1,5 +1,5 @@
-import Billing from "@/components/common/pricing";
-import { FAQ } from "@/components/home/faq";
+import Billing from "@/comp/common/pricing";
+import { FAQ } from "@/comp/home/faq";
 
 export const metadata = {
   title: "Pricing - Designali",

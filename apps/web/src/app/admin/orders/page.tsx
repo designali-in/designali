@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { formatCurrency, formatDateTime, formatId } from "@/lib/dutils";
-import { Icons } from "@/src/components/icons";
-import PageTitle from "@/src/components/mdx/page-title";
-import Paginations from "@/src/components/uis/pagination";
+import { Icons } from "@/src/comp/icons";
+import PageTitle from "@/src/comp/mdx/page-title";
+import Paginations from "@/src/comp/uis/pagination";
 import { Button } from "@designali/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import {

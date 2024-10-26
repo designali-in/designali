@@ -1,5 +1,5 @@
 import React from "react";
-import { AdminTabs } from "@/components/layout/dashboard/app-tabs";
+import { AdminTabs } from "@/comp/layout/dashboard/app-tabs";
 import { auth } from "@designali/auth";
 
 export default async function AdminLayout({

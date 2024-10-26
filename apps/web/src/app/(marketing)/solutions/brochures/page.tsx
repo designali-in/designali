@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Connect } from "@/components/common/connect";
+import { Connect } from "@/comp/common/connect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
-import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/solutions/products/brochure/about";
-import { Banner } from "@/src/components/solutions/products/brochure/banner";
-import { BrochuresCards } from "@/src/components/solutions/products/brochure/card";
-import { BrochureGet } from "@/src/components/solutions/products/brochure/get";
-import ReviewList from "@/src/components/solutions/review-list";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { About } from "@/src/comp/solutions/products/brochure/about";
+import { Banner } from "@/src/comp/solutions/products/brochure/banner";
+import { BrochuresCards } from "@/src/comp/solutions/products/brochure/card";
+import { BrochureGet } from "@/src/comp/solutions/products/brochure/get";
+import ReviewList from "@/src/comp/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

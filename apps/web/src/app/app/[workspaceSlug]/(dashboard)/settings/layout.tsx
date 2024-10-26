@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import PageTitle from "@/src/components/mdx/page-title";
+import PageTitle from "@/src/comp/mdx/page-title";
 import { Separator } from "@designali/ui/separator";
 
 import { SidebarNav } from "./_components/sidebar-nav";

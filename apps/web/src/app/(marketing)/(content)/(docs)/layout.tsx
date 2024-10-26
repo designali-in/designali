@@ -1,6 +1,6 @@
-import { MainNav } from "@/components/mdx/doc/main-nav";
-import { DocsSearch } from "@/components/mdx/doc/search";
-import { DesignSidebarNav } from "@/components/mdx/doc/sidebar-nav";
+import { MainNav } from "@/comp/mdx/doc/main-nav";
+import { DocsSearch } from "@/comp/mdx/doc/search";
+import { DesignSidebarNav } from "@/comp/mdx/doc/sidebar-nav";
 import { designConfig } from "@/config/docs";
 
 interface DocsLayoutProps {

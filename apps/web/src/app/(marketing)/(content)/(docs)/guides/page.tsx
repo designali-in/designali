@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DocsPageHeader } from "@/components/mdx/doc/page-header";
+import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
 import { formatDate } from "@/lib/utils";
 import { allGuides } from "contentlayer/generated";
 import { compareDesc } from "date-fns";

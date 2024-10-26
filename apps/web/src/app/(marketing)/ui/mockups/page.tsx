@@ -1,4 +1,4 @@
-import DemoComponent from "@/components/common/ui/DemoComponent";
+import DemoComponent from "@/comp/common/ui/DemoComponent";
 
 const directory = "mockups";
 // Define an array of file names

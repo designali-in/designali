@@ -1,4 +1,4 @@
-import { Grid5 } from "@/components/common/gallery";
+import { Grid5 } from "@/comp/common/gallery";
 import cloudinary from "@/lib/cloudinary";
 
 export async function Noise() {

@@ -1,9 +1,9 @@
 "use client";
 
 import { Avegra } from "@/src/app/fonts";
-import Editor from "@/src/components/products/editor";
-import { InstallShapes } from "@/src/components/products/install-icon";
-import Landing from "@/src/components/products/landing";
+import Editor from "@/src/comp/products/editor";
+import { InstallShapes } from "@/src/comp/products/install-icon";
+import Landing from "@/src/comp/products/landing";
 import { cn } from "@designali/ui";
 
 import {

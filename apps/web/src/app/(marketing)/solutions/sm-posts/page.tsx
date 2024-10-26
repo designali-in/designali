@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Connect } from "@/components/common/connect";
+import { Connect } from "@/comp/common/connect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
-import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/solutions/products/sm-posts/about";
-import { Banner } from "@/src/components/solutions/products/sm-posts/banner";
-import { SocialMedisCards } from "@/src/components/solutions/products/sm-posts/card";
-import { SMPostsGet } from "@/src/components/solutions/products/sm-posts/get";
-import ReviewList from "@/src/components/solutions/review-list";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { About } from "@/src/comp/solutions/products/sm-posts/about";
+import { Banner } from "@/src/comp/solutions/products/sm-posts/banner";
+import { SocialMedisCards } from "@/src/comp/solutions/products/sm-posts/card";
+import { SMPostsGet } from "@/src/comp/solutions/products/sm-posts/get";
+import ReviewList from "@/src/comp/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

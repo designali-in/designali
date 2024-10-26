@@ -1,7 +1,7 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import type { Blog, WithContext } from "schema-dts";
-import { BlogFilteredPosts } from "@/components/mdx/filtered-posts";
-import PageTitle from "@/components/mdx/page-title";
+import { BlogFilteredPosts } from "@/comp/mdx/filtered-posts";
+import PageTitle from "@/comp/mdx/page-title";
 import site from "@/config/site";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getAllBlogPosts } from "@/lib/mdx";

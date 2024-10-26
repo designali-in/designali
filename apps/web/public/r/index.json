@@ -26,6 +26,45 @@
     ]
   },
   {
+    "name": "toggle",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/toggle.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "toggle-group",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/toggle-group.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "tooltip",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/tooltip.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "safari",
     "type": "registry:ui",
     "dependencies": [

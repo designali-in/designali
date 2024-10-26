@@ -1,9 +1,9 @@
 import { getColors } from "@/lib/colors";
-import { ColorBW } from "@/src/components/common/colors/color-bw";
-import ColorConverter from "@/src/components/common/colors/color-convert";
-import { ColorPalette } from "@/src/components/common/colors/color-palette";
-import PageTitle from "@/src/components/mdx/page-title";
-import { ScrollProgress } from "@/src/components/uis/scroll-progress";
+import { ColorBW } from "@/src/comp/common/colors/color-bw";
+import ColorConverter from "@/src/comp/common/colors/color-convert";
+import { ColorPalette } from "@/src/comp/common/colors/color-palette";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 
 const colors = getColors();
 

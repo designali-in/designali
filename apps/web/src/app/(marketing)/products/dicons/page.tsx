@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { DIconGenerator } from "@/components/dicons/main";
+import { DIconGenerator } from "@/comp/dicons/main";
 
 export const metadata = {
   title: "DIcons - Designali",

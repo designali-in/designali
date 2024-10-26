@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { DIconCategories } from "@/components/dicons/catego";
+import { DIconCategories } from "@/comp/dicons/catego";
 
 export const metadata = {
   title: "DIcons Categories - Designali",

@@ -1,12 +1,12 @@
 import { Suspense } from "react";
-import AIConverter from "@/components/tools/aiconverter";
-import { IconsGen } from "@/components/tools/icons-gen";
-import WordCounter from "@/components/tools/wordcount";
-import PageTitle from "@/src/components/mdx/page-title";
-import { CustomLink } from "@/src/components/tools/links/custom-link";
-import { CustomLinkButton } from "@/src/components/tools/links/custom-link-button";
-import { LinkForm } from "@/src/components/tools/links/link-form";
-import { LinkList } from "@/src/components/tools/links/link-list";
+import AIConverter from "@/comp/tools/aiconverter";
+import { IconsGen } from "@/comp/tools/icons-gen";
+import WordCounter from "@/comp/tools/wordcount";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { CustomLink } from "@/src/comp/tools/links/custom-link";
+import { CustomLinkButton } from "@/src/comp/tools/links/custom-link-button";
+import { LinkForm } from "@/src/comp/tools/links/link-form";
+import { LinkList } from "@/src/comp/tools/links/link-list";
 import { Loader } from "@designali/ui/loader";
 
 export const metadata = {

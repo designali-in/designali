@@ -1,8 +1,8 @@
-import { Connect } from "@/components/common/connect";
-import { FAQ } from "@/components/home/faq";
-import PageTitle from "@/src/components/mdx/page-title";
-import { DesignProcess } from "@/src/components/solutions/process";
-import { Related, Services } from "@/src/components/solutions/services";
+import { Connect } from "@/comp/common/connect";
+import { FAQ } from "@/comp/home/faq";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { DesignProcess } from "@/src/comp/solutions/process";
+import { Related, Services } from "@/src/comp/solutions/services";
 
 export const metadata = {
   title: "Solutions - Designali",

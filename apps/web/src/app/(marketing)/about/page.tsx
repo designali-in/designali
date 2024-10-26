@@ -2,14 +2,14 @@
 
 import { Suspense } from "react";
 import Image from "next/image";
-import About from "@/components/about/about";
-import { Experience } from "@/components/about/experience";
-import { Items } from "@/components/about/items";
-import { Connect } from "@/components/common/connect";
-import ImageZoom from "@/components/common/image-zoom";
-import Logos from "@/components/common/logos";
-import { SubscribeInput } from "@/src/components/common/subscribe/subscribe-input";
-import { BackgroundBeams } from "@/src/components/uis/background-beams";
+import About from "@/comp/about/about";
+import { Experience } from "@/comp/about/experience";
+import { Items } from "@/comp/about/items";
+import { Connect } from "@/comp/common/connect";
+import ImageZoom from "@/comp/common/image-zoom";
+import Logos from "@/comp/common/logos";
+import { SubscribeInput } from "@/src/comp/common/subscribe/subscribe-input";
+import { BackgroundBeams } from "@/src/comp/uis/background-beams";
 import { cn } from "@designali/ui";
 import { Plus } from "dicons";
 

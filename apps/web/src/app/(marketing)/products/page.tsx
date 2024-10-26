@@ -1,5 +1,5 @@
-import { FAQ } from "@/components/home/faq";
-import { Graaadients } from "@/src/components/solutions/products/cards";
+import { FAQ } from "@/comp/home/faq";
+import { Graaadients } from "@/src/comp/solutions/products/cards";
 import { cn } from "@designali/ui";
 
 import { Avegra } from "../../fonts";

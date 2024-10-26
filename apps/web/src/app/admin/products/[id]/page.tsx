@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ProductForm from "@/components/admin/product-form";
+import ProductForm from "@/comp/admin/product-form";
 import { getProductById } from "@/lib/actions/product.actions";
-import PageTitle from "@/src/components/mdx/page-title";
+import PageTitle from "@/src/comp/mdx/page-title";
 import {
   Breadcrumb,
   BreadcrumbItem,

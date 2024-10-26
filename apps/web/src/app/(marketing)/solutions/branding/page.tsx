@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { Connect } from "@/components/common/connect";
+import { Connect } from "@/comp/common/connect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
-import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/solutions/products/branding/about";
-import { Banner } from "@/src/components/solutions/products/branding/banner";
-import { BrandingCars } from "@/src/components/solutions/products/branding/card";
-import { BrandingGet } from "@/src/components/solutions/products/branding/get";
-import { Process } from "@/src/components/solutions/products/branding/process";
-import ReviewList from "@/src/components/solutions/review-list";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { About } from "@/src/comp/solutions/products/branding/about";
+import { Banner } from "@/src/comp/solutions/products/branding/banner";
+import { BrandingCars } from "@/src/comp/solutions/products/branding/card";
+import { BrandingGet } from "@/src/comp/solutions/products/branding/get";
+import { Process } from "@/src/comp/solutions/products/branding/process";
+import ReviewList from "@/src/comp/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

@@ -1,4 +1,4 @@
-import { GuidesSidebarNav } from "@/components/mdx/doc/sidebar-nav";
+import { GuidesSidebarNav } from "@/comp/mdx/doc/sidebar-nav";
 import { guidesConfig } from "@/config/docs";
 import { ScrollArea } from "@designali/ui/scroll-area";
 

@@ -1,4 +1,4 @@
-import { Grid3 } from "@/components/common/gallery";
+import { Grid3 } from "@/comp/common/gallery";
 import cloudinary from "@/lib/cloudinary";
 
 export default async function Home() {

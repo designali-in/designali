@@ -1,4 +1,4 @@
-import { Grid8GapBG } from "@/components/common/gallery";
+import { Grid8GapBG } from "@/comp/common/gallery";
 import cloudinary from "@/lib/cloudinary";
 
 export default async function Icons() {

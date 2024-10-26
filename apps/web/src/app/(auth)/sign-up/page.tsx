@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Icons } from "@/components/icons";
+import { Icons } from "@/comp/icons";
 import { signIn } from "@designali/auth";
 import { Button } from "@designali/ui/button";
 import { Card, CardContent } from "@designali/ui/card";

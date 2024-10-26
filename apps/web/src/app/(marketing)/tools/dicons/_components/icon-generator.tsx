@@ -20,17 +20,14 @@ import {
   randomNumberBetween,
   uniq,
 } from "@/lib/dutils";
-import CustomSvgIcon from "@/src/components/common/colors/CustomSvgIcon";
-import { ExportModal } from "@/src/components/common/colors/export-modal";
-import { presets } from "@/src/components/common/colors/grad-types";
-import usePngClipboardSupported from "@/src/components/common/colors/usePngClipboardSupported";
-import { MainIcons } from "@/src/components/dicons/main/dicons";
-import {
-  IconNavigation,
-  ToolNavigation,
-} from "@/src/components/dicons/main/nav";
-import { DIconsSettings } from "@/src/components/dicons/main/settings";
-import { MainToolIcons } from "@/src/components/dicons/main/tool-dicons";
+import CustomSvgIcon from "@/src/comp/common/colors/CustomSvgIcon";
+import { ExportModal } from "@/src/comp/common/colors/export-modal";
+import { presets } from "@/src/comp/common/colors/grad-types";
+import usePngClipboardSupported from "@/src/comp/common/colors/usePngClipboardSupported";
+import { MainIcons } from "@/src/comp/dicons/main/dicons";
+import { IconNavigation, ToolNavigation } from "@/src/comp/dicons/main/nav";
+import { DIconsSettings } from "@/src/comp/dicons/main/settings";
+import { MainToolIcons } from "@/src/comp/dicons/main/tool-dicons";
 import { Button } from "@designali/ui/button";
 import { ScrollArea } from "@designali/ui/scroll-area";
 import { toast } from "@designali/ui/toaster";

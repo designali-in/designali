@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { Connect } from "@/components/common/connect";
+import { Connect } from "@/comp/common/connect";
 import { getProductBySlug } from "@/lib/actions/product.actions";
-import Projects from "@/src/components/common/projects";
-import PageTitle from "@/src/components/mdx/page-title";
-import { About } from "@/src/components/solutions/products/w-develop/about";
-import { Banner } from "@/src/components/solutions/products/w-develop/banner";
-import { WebsiteDevelopCards } from "@/src/components/solutions/products/w-develop/card";
-import { WebDevelopGet } from "@/src/components/solutions/products/w-develop/get";
-import { Include } from "@/src/components/solutions/products/w-develop/include";
-import ReviewList from "@/src/components/solutions/review-list";
+import Projects from "@/src/comp/common/projects";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { About } from "@/src/comp/solutions/products/w-develop/about";
+import { Banner } from "@/src/comp/solutions/products/w-develop/banner";
+import { WebsiteDevelopCards } from "@/src/comp/solutions/products/w-develop/card";
+import { WebDevelopGet } from "@/src/comp/solutions/products/w-develop/get";
+import { Include } from "@/src/comp/solutions/products/w-develop/include";
+import ReviewList from "@/src/comp/solutions/review-list";
 import { auth } from "@designali/auth";
 import {
   Breadcrumb,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import PageTitle from "@/src/components/mdx/page-title";
+import PageTitle from "@/src/comp/mdx/page-title";
 import { getAdminSummary } from "@/src/lib/actions/user.actions";
 import {
   Card,

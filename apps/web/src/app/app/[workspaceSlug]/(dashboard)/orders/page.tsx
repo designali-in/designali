@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageTitle from "@/src/components/mdx/page-title";
+import PageTitle from "@/src/comp/mdx/page-title";
 import {
   Table,
   TableBody,
