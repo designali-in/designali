@@ -16,6 +16,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "calendar": {
+      name: "calendar",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/calendar.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/calendar.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "tabs": {
       name: "tabs",
       type: "registry:ui",

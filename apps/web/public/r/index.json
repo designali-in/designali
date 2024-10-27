@@ -13,6 +13,19 @@
     ]
   },
   {
+    "name": "calendar",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/calendar.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "tabs",
     "type": "registry:ui",
     "dependencies": [

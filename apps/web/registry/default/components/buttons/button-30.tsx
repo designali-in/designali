@@ -1,10 +1,10 @@
-// Dependencies: npm install lucide-react @radix-ui/react-toggle-group
+// Dependencies: npm install dicons @radix-ui/react-toggle-group
 
 "use client";
 
 import { useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { AlignCenter, AlignJustify, AlignLeft, AlignRight } from "lucide-react";
+import { AlignCenter, AlignJustify, AlignLeft, AlignRight } from "dicons";
 
 export default function Button30() {
   const [value, setValue] = useState<string>("center");
@@ -19,32 +19,32 @@ export default function Button30() {
       }}
     >
       <ToggleGroupItem
-        className="rounded-none bg-primary/80 text-primary-foreground shadow-none first:rounded-s-lg last:rounded-e-lg hover:bg-primary focus-visible:z-10 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+        className="data-[state=on]: rounded-none bg-primary/80 first:rounded-s-lg last:rounded-e-lg hover:bg-primary/50 focus-visible:z-10 data-[state=on]:bg-primary"
         aria-label="Align Left"
         value="left"
       >
-        <AlignLeft size={16} strokeWidth={2} aria-hidden="true" />
+        <AlignLeft className="size-4" />
       </ToggleGroupItem>
       <ToggleGroupItem
-        className="rounded-none bg-primary/80 text-primary-foreground shadow-none first:rounded-s-lg last:rounded-e-lg hover:bg-primary focus-visible:z-10 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+        className="data-[state=on]: rounded-none bg-primary/80 first:rounded-s-lg last:rounded-e-lg hover:bg-primary/50 focus-visible:z-10 data-[state=on]:bg-primary"
         aria-label="Align Center"
         value="center"
       >
-        <AlignCenter size={16} strokeWidth={2} aria-hidden="true" />
+        <AlignCenter className="size-4" />
       </ToggleGroupItem>
       <ToggleGroupItem
-        className="rounded-none bg-primary/80 text-primary-foreground shadow-none first:rounded-s-lg last:rounded-e-lg hover:bg-primary focus-visible:z-10 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+        className="data-[state=on]: rounded-none bg-primary/80 first:rounded-s-lg last:rounded-e-lg hover:bg-primary/50 focus-visible:z-10 data-[state=on]:bg-primary"
         aria-label="Align Right"
         value="right"
       >
-        <AlignRight size={16} strokeWidth={2} aria-hidden="true" />
+        <AlignRight className="size-4" />
       </ToggleGroupItem>
       <ToggleGroupItem
-        className="rounded-none bg-primary/80 text-primary-foreground shadow-none first:rounded-s-lg last:rounded-e-lg hover:bg-primary focus-visible:z-10 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+        className="data-[state=on]: rounded-none bg-primary/80 first:rounded-s-lg last:rounded-e-lg hover:bg-primary/50 focus-visible:z-10 data-[state=on]:bg-primary"
         aria-label="Align Justify"
         value="justify"
       >
-        <AlignJustify size={16} strokeWidth={2} aria-hidden="true" />
+        <AlignJustify className="size-4" />
       </ToggleGroupItem>
     </ToggleGroup>
   );

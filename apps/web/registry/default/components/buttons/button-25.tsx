@@ -1,7 +1,7 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "dicons";
 
 export default function Button25() {
   return (
@@ -12,7 +12,7 @@ export default function Button25() {
         size="icon"
         aria-label="Upvote"
       >
-        <ChevronUp size={16} strokeWidth={2} aria-hidden="true" />
+        <ChevronUp className="size-4" />
       </Button>
       <span className="flex items-center border border-input px-3 text-sm font-medium">
         235
@@ -23,7 +23,7 @@ export default function Button25() {
         size="icon"
         aria-label="Downvote"
       >
-        <ChevronDown size={16} strokeWidth={2} aria-hidden="true" />
+        <ChevronDown className="size-4" />
       </Button>
     </div>
   );

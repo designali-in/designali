@@ -1,7 +1,7 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { QrCode } from "lucide-react";
+import { QrCode } from "dicons";
 
 export default function Button34() {
   return (
@@ -11,7 +11,7 @@ export default function Button34() {
         size="icon"
         aria-label="QR code"
       >
-        <QrCode size={16} strokeWidth={2} aria-hidden="true" />
+        <QrCode className="size-5" />
       </Button>
       <Button className="rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10">
         Sign in

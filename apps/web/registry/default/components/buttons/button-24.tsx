@@ -1,4 +1,4 @@
-// Dependencies: npm install lucide-react @radix-ui/react-tooltip @radix-ui/react-toggle
+// Dependencies: npm install dicons @radix-ui/react-tooltip @radix-ui/react-toggle
 
 "use client";
 
@@ -10,7 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Bookmark } from "lucide-react";
+import { Bookmark } from "dicons";
 
 export default function Button24() {
   const [bookmarked, setBookmarked] = useState<boolean>(false);
@@ -20,12 +20,12 @@ export default function Button24() {
         <TooltipTrigger asChild>
           <div>
             <Toggle
-              className="group size-9 p-0 hover:bg-indigo-50 hover:text-indigo-500 data-[state=on]:bg-indigo-50 data-[state=on]:text-indigo-500"
+              className="group size-9 p-0 hover:bg-violet-50 hover:text-violet-500 data-[state=on]:bg-violet-50 data-[state=on]:text-violet-500"
               aria-label="Bookmark this"
               pressed={bookmarked}
               onPressedChange={setBookmarked}
             >
-              <Bookmark size={16} strokeWidth={2} aria-hidden="true" />
+              <Bookmark className="size-4" />
             </Toggle>
           </div>
         </TooltipTrigger>

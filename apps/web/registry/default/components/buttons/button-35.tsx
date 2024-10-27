@@ -1,7 +1,7 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight } from "dicons";
 
 export default function Button35() {
   return (
@@ -18,7 +18,7 @@ export default function Button35() {
         size="icon"
         aria-label="Open link"
       >
-        <SquareArrowOutUpRight size={16} strokeWidth={2} aria-hidden="true" />
+        <SquareArrowOutUpRight className="size-4" />
       </Button>
     </div>
   );

@@ -14,12 +14,9 @@ export default function Input47() {
     <div className="space-y-2">
       <Label htmlFor="cardNumber">Card Number</Label>
       <div className="relative">
-        <Input
-          {...getCardNumberProps()}
-          className="peer ps-9 [direction:inherit]"
-        />
+        <Input {...getCardNumberProps()} className="pl-8 [direction:inherit]" />
         <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 peer-disabled:opacity-50">
-          <CreditCard size={16} strokeWidth={2} aria-hidden="true" />
+          <CreditCard className="ml-2 size-4" />
         </div>
       </div>
       <p

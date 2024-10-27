@@ -12,7 +12,7 @@ export default function Input44() {
       <Label htmlFor="input-44">OTP input single</Label>
       <OTPInput
         id="input-44"
-        containerClassName="flex items-center gap-3 has-[:disabled]:opacity-50"
+        containerClassName="flex   items-center gap-3 "
         maxLength={4}
         render={({ slots }) => (
           <div className="flex">
@@ -22,11 +22,7 @@ export default function Input44() {
           </div>
         )}
       />
-      <p
-        className="mt-2 text-xs text-muted-foreground"
-        role="region"
-        aria-live="polite"
-      >
+      <p className="mt-2 text-xs" role="region" aria-live="polite">
         Built with{" "}
         <a
           className="underline hover:text-foreground"

@@ -1,11 +1,12 @@
-// Dependencies: npm install lucide-react
-
 "use client";
 
 import { useState } from "react";
+// Dependencies: npm install dicons
+
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "dicons";
 
 export default function Input23() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -18,12 +19,14 @@ export default function Input23() {
       <div className="relative">
         <Input
           id="input-23"
-          className="pe-9"
+          className="absolute"
           placeholder="Password"
           type={isVisible ? "text" : "password"}
         />
-        <button
-          className="absolute inset-y-px end-px flex h-full w-9 items-center justify-center rounded-e-lg text-muted-foreground/80 ring-offset-background transition-shadow hover:text-foreground focus-visible:border focus-visible:border-ring focus-visible:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+        <Button
+          className="absolute right-0"
+          size="icon"
+          variant="ghost"
           type="button"
           onClick={toggleVisibility}
           aria-label={isVisible ? "Hide password" : "Show password"}
@@ -31,11 +34,11 @@ export default function Input23() {
           aria-controls="password"
         >
           {isVisible ? (
-            <EyeOff size={16} strokeWidth={2} aria-hidden="true" />
+            <EyeOff className="size-4" />
           ) : (
-            <Eye size={16} strokeWidth={2} aria-hidden="true" />
+            <Eye className="size-4" />
           )}
-        </button>
+        </Button>
       </div>
     </div>
   );

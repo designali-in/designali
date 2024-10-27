@@ -43,7 +43,7 @@ export default function ClientDemoComponent({
     <Suspense>
       <div className={cn("group/item relative mt-10", className)}>
         <Tabs defaultValue="1" className="">
-          <TabsList className="space-x-2 text-xs lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100">
+          <TabsList className="-mt-10 space-x-2 text-xs lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100">
             <TabsTrigger value="1">{componentName}</TabsTrigger>
             <TabsTrigger value="2">Code</TabsTrigger>
           </TabsList>

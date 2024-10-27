@@ -1,11 +1,11 @@
-// Dependencies: npm install lucide-react
-
 "use client";
 
+// Dependencies: npm install dicons
 import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CircleX } from "lucide-react";
+import { CircleX } from "dicons";
 
 export default function Input24() {
   const [inputValue, setInputValue] = useState("Click to clear");
@@ -25,20 +25,21 @@ export default function Input24() {
         <Input
           id="input-24"
           ref={inputRef}
-          className="pe-9"
+          className="absolute"
           placeholder="Type something..."
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         {inputValue && (
-          <button
-            className="absolute inset-y-px end-px flex h-full w-9 items-center justify-center rounded-e-lg border border-transparent text-muted-foreground/80 ring-offset-background transition-shadow animate-in fade-in zoom-in-75 hover:text-foreground focus-visible:border-ring focus-visible:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+          <Button
+            className="absolute right-0"
+            variant="ghost"
             aria-label="Clear input"
             onClick={handleClearInput}
           >
-            <CircleX size={16} strokeWidth={2} aria-hidden="true" />
-          </button>
+            <CircleX className="size-4" />
+          </Button>
         )}
       </div>
     </div>

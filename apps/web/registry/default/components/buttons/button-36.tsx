@@ -1,7 +1,7 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Pin } from "lucide-react";
+import { ChevronDown, Pin } from "dicons";
 
 export default function Button36() {
   return (
@@ -14,12 +14,7 @@ export default function Button36() {
         <ChevronDown size={16} strokeWidth={2} aria-hidden="true" />
       </Button>
       <Button className="rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10">
-        <Pin
-          className="-ms-1 me-2 opacity-60"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
+        <Pin className="mr-1 size-4" />
         Pinned
       </Button>
     </div>

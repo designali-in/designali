@@ -1,10 +1,10 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 "use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Minus, Plus, Volume, Volume1, Volume2, VolumeX } from "lucide-react";
+import { DIcons } from "dicons";
 
 export default function Button27() {
   const [volume, setVolume] = useState(3); // Initialize volume state (0-9)
@@ -15,12 +15,12 @@ export default function Button27() {
   // Optimized volume icon selection
   const VolumeIcon =
     volume === 0
-      ? VolumeX
+      ? DIcons.VolumeX
       : volume < 3
-        ? Volume
+        ? DIcons.Volume
         : volume < 5
-          ? Volume1
-          : Volume2;
+          ? DIcons.Volume1
+          : DIcons.Volume2;
 
   return (
     <div
@@ -39,20 +39,15 @@ export default function Button27() {
         onClick={decreaseVolume}
         disabled={volume === 0}
       >
-        <Minus size={16} strokeWidth={2} aria-hidden="true" />
+        <DIcons.Minus className="size-4" />
         <span className="sr-only">Decrease</span>
       </Button>
       <div
         className="flex items-center px-3 text-sm font-medium tabular-nums"
         aria-live="polite"
       >
-        <VolumeIcon
-          className="opacity-60"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
-        <span className="ms-2" aria-label={`Current volume is ${volume}`}>
+        <VolumeIcon className="size-4" />
+        <span className="ml-1" aria-label={`Current volume is ${volume}`}>
           {volume}
         </span>
       </div>
@@ -64,7 +59,7 @@ export default function Button27() {
         onClick={increaseVolume}
         disabled={volume === 6}
       >
-        <Plus size={16} strokeWidth={2} aria-hidden="true" />
+        <DIcons.Plus className="size-4" />
         <span className="sr-only">Increase</span>
       </Button>
     </div>

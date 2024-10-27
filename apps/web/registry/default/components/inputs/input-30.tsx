@@ -7,7 +7,7 @@ export default function Input30() {
       <Label htmlFor="input-30">File input</Label>
       <Input
         id="input-30"
-        className="p-0 pe-3 file:me-3 file:border-0 file:border-e"
+        className="px-3 py-1.5 file:me-3 file:border-0 file:border-e"
         type="file"
       />
     </div>

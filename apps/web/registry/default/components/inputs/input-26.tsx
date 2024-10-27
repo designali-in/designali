@@ -1,8 +1,9 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search } from "dicons";
 
 export default function Input26() {
   return (
@@ -11,20 +12,19 @@ export default function Input26() {
       <div className="relative">
         <Input
           id="input-26"
-          className="peer pe-9 ps-9"
+          className="absolute pl-8"
           placeholder="Search..."
           type="search"
         />
-        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 peer-disabled:opacity-50">
-          <Search size={16} strokeWidth={2} />
-        </div>
-        <button
-          className="absolute inset-y-px end-px flex h-full w-9 items-center justify-center rounded-e-lg text-muted-foreground/80 ring-offset-background transition-shadow hover:text-foreground focus-visible:border focus-visible:border-ring focus-visible:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+        <Search className="absolute left-2 top-2.5 size-4" />
+        <Button
+          className="absolute right-0"
+          variant="ghost"
           aria-label="Submit search"
           type="submit"
         >
-          <ArrowRight size={16} strokeWidth={2} aria-hidden="true" />
-        </button>
+          <ArrowRight className="size-4" />
+        </Button>
       </div>
     </div>
   );

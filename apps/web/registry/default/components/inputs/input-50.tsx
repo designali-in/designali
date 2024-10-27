@@ -22,10 +22,10 @@ export default function Input50() {
       <legend className="text-sm font-medium text-foreground">
         Card Details
       </legend>
-      <div className="rounded-lg shadow-sm shadow-black/[.04]">
+      <div className="grid gap-2">
         <div className="relative focus-within:z-10">
           <Input
-            className="peer rounded-b-none pe-9 shadow-none [direction:inherit]"
+            className="pl-8 shadow-none [direction:inherit]"
             {...getCardNumberProps()}
           />
           <div className="pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-muted-foreground/80 peer-disabled:opacity-50">
@@ -38,7 +38,7 @@ export default function Input50() {
                 width={20}
               />
             ) : (
-              <CreditCard size={16} strokeWidth={2} aria-hidden="true" />
+              <CreditCard className="ml-2 size-4" />
             )}
           </div>
         </div>

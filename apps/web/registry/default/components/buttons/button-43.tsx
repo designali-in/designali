@@ -5,38 +5,18 @@ import { DIcons } from "dicons";
 
 export default function Button43() {
   return (
-    <div className="flex flex-wrap gap-2">
-      <Button
-        className="flex-1"
-        variant="outline"
-        aria-label="Login with Google"
-        size="icon"
-      >
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
+    <div className="grid w-full gap-2">
+      <Button variant="outline">
+        <DIcons.VercelFull className="size-12" />
       </Button>
-      <Button
-        className="flex-1"
-        variant="outline"
-        aria-label="Login with Facebook"
-        size="icon"
-      >
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
+      <Button variant="outline">
+        <DIcons.BehanceFull className="size-12" />
       </Button>
-      <Button
-        className="flex-1"
-        variant="outline"
-        aria-label="Login with X"
-        size="icon"
-      >
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
+      <Button variant="outline">
+        <DIcons.Nextjs className="size-12" />
       </Button>
-      <Button
-        className="flex-1"
-        variant="outline"
-        aria-label="Login with GitHub"
-        size="icon"
-      >
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
+      <Button variant="outline">
+        <DIcons.NPM className="size-12" />
       </Button>
     </div>
   );

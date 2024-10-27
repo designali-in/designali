@@ -1,7 +1,7 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { FlipHorizontal, FlipVertical } from "lucide-react";
+import { FlipHorizontal, FlipVertical } from "dicons";
 
 export default function Button29() {
   return (
@@ -12,7 +12,7 @@ export default function Button29() {
         size="icon"
         aria-label="Flip Horizontal"
       >
-        <FlipHorizontal size={16} strokeWidth={2} aria-hidden="true" />
+        <FlipHorizontal className="size-4" />
       </Button>
       <Button
         className="rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10"
@@ -20,7 +20,7 @@ export default function Button29() {
         size="icon"
         aria-label="Flip Vertical"
       >
-        <FlipVertical size={16} strokeWidth={2} aria-hidden="true" />
+        <FlipVertical className="size-4" />
       </Button>
     </div>
   );

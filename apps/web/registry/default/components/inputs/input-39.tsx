@@ -21,11 +21,11 @@ export default function Input39() {
           {(segment) => (
             <DateSegment
               segment={segment}
-              className="inline rounded p-0.5 text-foreground caret-transparent outline outline-0 data-[disabled]:cursor-not-allowed data-[focused]:bg-accent data-[invalid]:data-[focused]:bg-destructive data-[type=literal]:px-0 data-[focused]:data-[placeholder]:text-foreground data-[focused]:text-foreground data-[invalid]:data-[focused]:data-[placeholder]:text-destructive-foreground data-[invalid]:data-[focused]:text-destructive-foreground data-[invalid]:data-[placeholder]:text-destructive data-[invalid]:text-destructive data-[placeholder]:text-muted-foreground/70 data-[type=literal]:text-muted-foreground/70 data-[disabled]:opacity-50"
+              className="inline rounded p-0.5 text-foreground"
             />
           )}
         </DateInput>
-        <div className="pointer-events-none absolute inset-y-0 end-0 z-10 flex items-center justify-center pe-3 text-muted-foreground/80">
+        <div className="pointer-events-none absolute inset-y-0 right-2 z-10 flex items-center justify-center pe-3 text-muted-foreground/80">
           <Clock size={16} strokeWidth={2} aria-hidden="true" />
         </div>
       </div>

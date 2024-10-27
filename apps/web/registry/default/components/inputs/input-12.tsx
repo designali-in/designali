@@ -8,11 +8,11 @@ export default function Input12() {
       <div className="relative">
         <Input
           id="input-12"
-          className="peer pe-12"
+          className="pl-3"
           placeholder="google"
           type="text"
         />
-        <span className="pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-sm text-muted-foreground peer-disabled:opacity-50">
+        <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center px-3 text-sm text-muted-foreground peer-disabled:opacity-50">
           .com
         </span>
       </div>

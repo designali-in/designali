@@ -7,9 +7,9 @@ export default function Button51() {
   return (
     <Button className="group h-auto gap-4 py-3 text-left" variant="outline">
       <div className="space-y-1">
-        <h3>Talent Agency</h3>
+        <h3>Design Agency</h3>
         <p className="font-normal text-muted-foreground">
-          Matches for your roster
+          With a Touch of Magic
         </p>
       </div>
       <ChevronRight

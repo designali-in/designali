@@ -8,11 +8,11 @@ export default function Input11() {
       <div className="relative">
         <Input
           id="input-11"
-          className="peer ps-16"
-          placeholder="google.com"
+          className="pl-12"
+          placeholder="    google.com"
           type="text"
         />
-        <span className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm text-muted-foreground peer-disabled:opacity-50">
+        <span className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center px-3 text-sm text-muted-foreground">
           https://
         </span>
       </div>

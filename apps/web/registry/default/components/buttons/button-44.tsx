@@ -7,20 +7,20 @@ export default function Button44() {
   return (
     <div className="flex flex-col gap-2">
       <Button variant="outline">
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
-        Login with Google
+        <DIcons.Instagram className="mr-1 size-6" aria-hidden="true" />
+        Login with Instagram
       </Button>
       <Button variant="outline">
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
+        <DIcons.X className="mr-1 size-6" aria-hidden="true" />
         Login with X
       </Button>
       <Button variant="outline">
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
+        <DIcons.Facebook className="mr-1 size-6" aria-hidden="true" />
         Login with Facebook
       </Button>
       <Button variant="outline">
-        <DIcons.Plus className="opacity-60" aria-hidden="true" />
-        Login with GitHub
+        <DIcons.Threads className="mr-1 size-6" aria-hidden="true" />
+        Login with Threads
       </Button>
     </div>
   );

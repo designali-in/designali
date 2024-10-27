@@ -1,4 +1,4 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
 import {
@@ -7,30 +7,28 @@ import {
   ChevronRight,
   ChevronUp,
   Circle,
-} from "lucide-react";
+} from "dicons";
 
 export default function Button50() {
   return (
-    <div className="inline-grid w-fit grid-cols-3 gap-1">
-      <div></div>
+    <div className="flex w-full flex-col items-center justify-center gap-1">
       <Button variant="outline" size="icon" aria-label="Pan camera up">
-        <ChevronUp size={16} strokeWidth={2} aria-hidden="true" />
+        <ChevronUp className="size-4" />
       </Button>
-      <div></div>
-      <Button variant="outline" size="icon" aria-label="Pan camera left">
-        <ChevronLeft size={16} strokeWidth={2} aria-hidden="true" />
-      </Button>
-      <div className="flex items-center justify-center" aria-hidden="true">
-        <Circle className="opacity-60" size={16} strokeWidth={2} />
+      <div className="flex gap-3">
+        <Button variant="outline" size="icon" aria-label="Pan camera left">
+          <ChevronLeft className="size-4" />
+        </Button>
+        <div className="flex items-center justify-center" aria-hidden="true">
+          <Circle className="size-4" />
+        </div>
+        <Button variant="outline" size="icon" aria-label="Pan camera right">
+          <ChevronRight className="size-4" />
+        </Button>
       </div>
-      <Button variant="outline" size="icon" aria-label="Pan camera right">
-        <ChevronRight size={16} strokeWidth={2} aria-hidden="true" />
-      </Button>
-      <div></div>
       <Button variant="outline" size="icon" aria-label="Pan camera down">
-        <ChevronDown size={16} strokeWidth={2} aria-hidden="true" />
+        <ChevronDown className="size-4" />
       </Button>
-      <div></div>
     </div>
   );
 }

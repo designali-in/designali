@@ -1,10 +1,10 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 "use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "dicons";
 
 export default function Button46() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -22,19 +22,9 @@ export default function Button46() {
     >
       {isExpanded ? "Show less" : "Show more"}
       {isExpanded ? (
-        <ChevronUp
-          className="-me-1 ms-1"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
+        <ChevronUp className="ml-1 size-4" />
       ) : (
-        <ChevronDown
-          className="-me-1 ms-1"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
+        <ChevronDown className="ml-1 size-4" />
       )}
     </Button>
   );

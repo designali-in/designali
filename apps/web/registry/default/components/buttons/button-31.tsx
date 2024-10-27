@@ -1,7 +1,7 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { Ellipsis, Files, Film } from "lucide-react";
+import { Files, Film, Menu } from "dicons";
 
 export default function Button31() {
   return (
@@ -10,24 +10,14 @@ export default function Button31() {
         className="rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10"
         variant="outline"
       >
-        <Files
-          className="-ms-1 me-2 opacity-60"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
+        <Files className="mr-1 size-4" />
         Files
       </Button>
       <Button
         className="rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10"
         variant="outline"
       >
-        <Film
-          className="-ms-1 me-2 opacity-60"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
+        <Film className="mr-1 size-4" />
         Media
       </Button>
       <Button
@@ -36,7 +26,7 @@ export default function Button31() {
         size="icon"
         aria-label="Menu"
       >
-        <Ellipsis size={16} strokeWidth={2} aria-hidden="true" />
+        <Menu className="size-4" />
       </Button>
     </div>
   );

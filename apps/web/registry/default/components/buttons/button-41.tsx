@@ -1,13 +1,13 @@
-// Dependencies: npm install lucide-react
+// Dependencies: npm install dicons
 
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { Star } from "dicons";
 
 export default function Button41() {
   return (
     <Button>
       <Star
-        className="-ms-1 me-2 opacity-60"
+        className="mr-2 size-4"
         size={16}
         strokeWidth={2}
         aria-hidden="true"

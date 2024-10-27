@@ -17,7 +17,6 @@ import {
 } from "@designali/ui/dialog";
 import { Drawer, DrawerContent, DrawerTrigger } from "@designali/ui/drawer";
 import { Skeleton } from "@designali/ui/skeleton";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@designali/ui/tooltip";
 import {
   CheckIcon,
   CopyIcon,
@@ -42,10 +41,10 @@ export function ThemeCustomizer() {
   }, []);
 
   return (
-    <div className="grid items-center gap-2">
+    <div className="grid items-center gap-2 md:sticky md:top-6 md:z-20">
       <Drawer>
         <DrawerTrigger className="mt-2" asChild>
-          <Button size="sm" className="md:hidden">
+          <Button size="lg" className="mt-10 md:hidden">
             Customize
           </Button>
         </DrawerTrigger>
@@ -53,75 +52,8 @@ export function ThemeCustomizer() {
           <Customizer />
         </DrawerContent>
       </Drawer>
-      <div className="hidden items-center justify-center py-10 md:grid">
+      <div className="mt-10 hidden items-center justify-center md:grid">
         <Customizer />
-        <div className="ml-2 hidden items-center gap-0.5">
-          {mounted ? (
-            <>
-              {["zinc", "rose", "blue", "green", "orange"].map((color) => {
-                const baseColor = baseColors.find(
-                  (baseColor) => baseColor.name === color,
-                );
-                const isActive = config.theme === color;
-
-                if (!baseColor) {
-                  return null;
-                }
-
-                return (
-                  <Tooltip key={baseColor.name}>
-                    <TooltipTrigger asChild>
-                      <button
-                        onClick={() =>
-                          setConfig({
-                            ...config,
-                            theme: baseColor.name,
-                          })
-                        }
-                        className={cn(
-                          "flex h-8 w-8 items-center justify-center rounded-full border-2 text-xs",
-                          isActive
-                            ? "border-[--theme-ali]"
-                            : "border-transparent",
-                        )}
-                        style={
-                          {
-                            "--theme-ali": `hsl(${
-                              baseColor.activeColor[
-                                mode === "dark" ? "dark" : "light"
-                              ]
-                            })`,
-                          } as React.CSSProperties
-                        }
-                      >
-                        <span
-                          className={cn(
-                            "flex h-5 w-5 items-center justify-center rounded-full bg-[--theme-ali]",
-                          )}
-                        >
-                          {isActive && (
-                            <CheckIcon className="h-4 w-4 text-white" />
-                          )}
-                        </span>
-                        <span className="sr-only">{baseColor.label}</span>
-                      </button>
-                    </TooltipTrigger>
-                    <TooltipContent
-                      align="center"
-                      className="rounded-[0.5rem] bg-zinc-900 text-zinc-50"
-                    >
-                      {baseColor.label}
-                    </TooltipContent>
-                  </Tooltip>
-                );
-              })}
-            </>
-          ) : (
-            <div className="mr-1 flex items-center gap-4">
-              <Skeleton className="h-5 w-5 rounded-full" />
-            </div>
-          )}
-        </div>
       </div>
     </div>
   );
@@ -139,7 +71,7 @@ function Customizer() {
   return (
     <ThemeWrapper
       defaultTheme="slate"
-      className="justify-center space-y-4 rounded-2xl border p-6 md:space-y-6"
+      className="justify-center space-y-4 rounded-2xl border bg-white p-6 dark:bg-black md:space-y-6"
     >
       <div className="flex items-start pt-4 md:pt-0">
         <div className="space-y-1 pr-2">
@@ -167,7 +99,7 @@ function Customizer() {
         </Button>
       </div>
       <div className="space-y-4 md:space-y-6">
-        <div className="flex flex-wrap items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <Button
             variant={"outline"}
             size="sm"
@@ -207,6 +139,7 @@ function Customizer() {
               )}
             </div>
           </div>
+          <p className="rounded-lg border px-4 py-1">{config.theme}</p>
           <div className="flex flex-wrap gap-2">
             {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
               return (
@@ -241,7 +174,7 @@ function Customizer() {
         </div>
 
         <div className="space-y-1.5">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             {baseColors.map((theme) => {
               const isActive = config.theme === theme.name;
 
@@ -249,7 +182,7 @@ function Customizer() {
                 <div>
                   <Button
                     variant={"outline"}
-                    size="sm"
+                    size="icon"
                     key={theme.name}
                     onClick={() => {
                       setConfig({
@@ -258,8 +191,8 @@ function Customizer() {
                       });
                     }}
                     className={cn(
-                      "justify-start",
-                      isActive && "border-2 border-ali",
+                      "rounded-2xl",
+                      isActive && "rounded-2xl border-2 border-ali",
                     )}
                     style={
                       {
@@ -271,16 +204,15 @@ function Customizer() {
                   >
                     <span
                       className={cn(
-                        "flex h-5 w-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-ali]",
+                        "flex h-6 w-6 items-center justify-center rounded-xl bg-[--theme-ali]",
                       )}
                     >
                       {isActive && <CheckIcon className="h-4 w-4 text-white" />}
                     </span>
-                    {theme.label}
                   </Button>
                 </div>
               ) : (
-                <Skeleton className="h-8" key={theme.name} />
+                <Skeleton className="h-5" key={theme.name} />
               );
             })}
           </div>

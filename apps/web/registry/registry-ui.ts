@@ -9,6 +9,12 @@ export const ui: Registry = [
     files: ["designali/ui/button.tsx"],
   },
   {
+    name: "calendar",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/calendar.tsx"],
+  },
+  {
     name: "tabs",
     type: "registry:ui",
     dependencies: [""],

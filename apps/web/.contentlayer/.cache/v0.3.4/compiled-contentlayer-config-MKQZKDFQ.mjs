@@ -29,6 +29,17 @@ var Index = {
       subcategory: "undefined",
       chunks: []
     },
+    "calendar": {
+      name: "calendar",
+      type: "registry:ui",
+      registryDependencies: void 0,
+      files: ["registry/default/designali/ui/calendar.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/calendar.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "tabs": {
       name: "tabs",
       type: "registry:ui",
@@ -1902,4 +1913,4 @@ export {
   Page,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-UARKRWIF.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-MKQZKDFQ.mjs.map
