@@ -26,6 +26,32 @@
     ]
   },
   {
+    "name": "dropdown-menu",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/dropdown-menu.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "mode-toggle",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/mode-toggle.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "tabs",
     "type": "registry:ui",
     "dependencies": [

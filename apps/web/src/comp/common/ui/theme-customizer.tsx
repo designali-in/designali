@@ -73,31 +73,6 @@ function Customizer() {
       defaultTheme="slate"
       className="justify-center space-y-4 rounded-2xl border bg-white p-6 dark:bg-black md:space-y-6"
     >
-      <div className="flex items-start pt-4 md:pt-0">
-        <div className="space-y-1 pr-2">
-          <div className="font-semibold leading-none tracking-tight">
-            Customize
-          </div>
-          <div className="text-xs text-muted-foreground">
-            Pick a style and color for your components.
-          </div>
-        </div>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="ml-auto rounded-[0.5rem]"
-          onClick={() => {
-            setConfig({
-              ...config,
-              theme: "violet",
-              radius: 0.75,
-            });
-          }}
-        >
-          <ResetIcon />
-          <span className="sr-only">Reset</span>
-        </Button>
-      </div>
       <div className="space-y-4 md:space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Button
@@ -171,6 +146,21 @@ function Customizer() {
             size="sm"
             className="[&_svg]:hidden"
           />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="ml-auto rounded-[0.5rem]"
+            onClick={() => {
+              setConfig({
+                ...config,
+                theme: "violet",
+                radius: 0.75,
+              });
+            }}
+          >
+            <ResetIcon />
+            <span className="sr-only">Reset</span>
+          </Button>
         </div>
 
         <div className="space-y-1.5">

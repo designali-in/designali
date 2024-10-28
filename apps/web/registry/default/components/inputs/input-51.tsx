@@ -3,6 +3,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Check, Eye, EyeOff, X } from "lucide-react";
@@ -53,10 +54,10 @@ export default function Input51() {
       {/* Password input field with toggle visibility button */}
       <div className="space-y-2">
         <Label htmlFor="input-51">Input with password strength indicator</Label>
-        <div className="relative">
+        <div className="relative h-10">
           <Input
             id="input-51"
-            className="pe-9"
+            className="absolute pe-9"
             placeholder="Password"
             type={isVisible ? "text" : "password"}
             value={password}
@@ -64,9 +65,10 @@ export default function Input51() {
             aria-invalid={strengthScore < 4}
             aria-describedby="password-strength"
           />
-          <button
-            className="absolute inset-y-px end-px flex h-full w-9 items-center justify-center rounded-e-lg text-muted-foreground/80 transition-shadow hover:text-foreground focus-visible:border focus-visible:border-ring focus-visible:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+          <Button
+            className="absolute right-0"
             type="button"
+            variant="ghost"
             onClick={toggleVisibility}
             aria-label={isVisible ? "Hide password" : "Show password"}
             aria-pressed={isVisible}
@@ -77,13 +79,13 @@ export default function Input51() {
             ) : (
               <Eye size={16} strokeWidth={2} aria-hidden="true" />
             )}
-          </button>
+          </Button>
         </div>
       </div>
 
       {/* Password strength indicator */}
       <div
-        className="mb-4 mt-3 h-1 w-full overflow-hidden rounded-full bg-border"
+        className="mb-4 mt-3 h-1 w-full rounded-full bg-border"
         role="progressbar"
         aria-valuenow={strengthScore}
         aria-valuemin={0}

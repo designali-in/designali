@@ -2,7 +2,7 @@ import type {
   DesignConfig,
   DocumentationConfig,
   GuidesConfig,
-} from "@/components/mdx/doc/types";
+} from "@/comp/mdx/doc/types";
 
 export const designConfig: DesignConfig = {
   mainNav: [
@@ -26,6 +26,14 @@ export const designConfig: DesignConfig = {
         {
           title: "Introduction",
           href: "/designs",
+        },
+        {
+          title: "Installation",
+          href: "/designs/installation/next",
+        },
+        {
+          title: "Dark Mode",
+          href: "/designs/installation/dark-mode",
         },
       ],
     },

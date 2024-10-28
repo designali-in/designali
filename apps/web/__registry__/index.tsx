@@ -27,6 +27,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "dropdown-menu": {
+      name: "dropdown-menu",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/dropdown-menu.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/dropdown-menu.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "mode-toggle": {
+      name: "mode-toggle",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/mode-toggle.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/mode-toggle.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "tabs": {
       name: "tabs",
       type: "registry:ui",

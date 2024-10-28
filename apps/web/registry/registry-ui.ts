@@ -15,6 +15,18 @@ export const ui: Registry = [
     files: ["designali/ui/calendar.tsx"],
   },
   {
+    name: "dropdown-menu",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/dropdown-menu.tsx"],
+  },
+  {
+    name: "mode-toggle",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/mode-toggle.tsx"],
+  },
+  {
     name: "tabs",
     type: "registry:ui",
     dependencies: [""],

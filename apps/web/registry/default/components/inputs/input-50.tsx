@@ -42,7 +42,7 @@ export default function Input50() {
             )}
           </div>
         </div>
-        <div className="-mt-px flex">
+        <div className="-mt-px flex gap-2">
           <div className="w-1/2 min-w-0 flex-1 focus-within:z-10">
             <Input
               className="rounded-e-none rounded-t-none shadow-none [direction:inherit]"
