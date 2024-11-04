@@ -13,7 +13,7 @@
     "lint": "eslint",
     "start": "pnpm with-env next start",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "with-env": "dotenv -e .env --"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.4.1",
@@ -37,7 +37,7 @@
     "@tanstack/react-table": "^8.10.7",
     "@typescript-eslint/parser": "^6.9.0",
     "@vercel/analytics": "^1.3.1",
-    "@vercel/og": "^0.5.20", 
+    "@vercel/og": "^0.5.20",
     "@vercel/speed-insights": "^1.0.12",
     "ai": "^3.2.45",
     "axios": "^1.7.7",
@@ -61,7 +61,7 @@
     "geist": "^1.3.0",
     "gsap": "^3.12.5",
     "html-escaper": "^3.0.3",
-    "jotai": "^2.1.0", 
+    "jotai": "^2.1.0",
     "lodash.template": "^4.5.0",
     "lucide-react": "^0.397.0",
     "marked": "^12.0.2",
@@ -76,7 +76,7 @@
     "nodemailer": "^6.9.7",
     "onborda": "^1.2.2",
     "openai": "^4.16.1",
-    "postmark": "^3.1.1", 
+    "postmark": "^3.1.1",
     "prop-types": "^15.8.1",
     "query-string": "^9.1.0",
     "react": "18.2.0",

@@ -11,9 +11,9 @@ const config = {
   swcMinify: true,
   resolve: {
     fallback: {
-      "https": false,
-      "http": false
-    }
+      https: false,
+      http: false,
+    },
   },
   webpack(config, { isServer }) {
     if (!isServer) {
@@ -21,7 +21,7 @@ const config = {
         ...config.resolve.fallback,
         fs: false,
         http: false,
-        https: false 
+        https: false,
       };
     }
 
@@ -29,7 +29,7 @@ const config = {
   },
   /** Enables hot reloading for local packages without a build step */
   transpilePackages: ["@designali/*", "dicons"],
-   
+
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
