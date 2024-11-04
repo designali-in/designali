@@ -1,39 +1,31 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "globalDependencies": [
-    "**/.env"
-  ],
+  "globalDependencies": ["**/.env"],
   "globalEnv": [
     "NEXT_PUBLIC_APP_NAME",
     "NEXT_PUBLIC_APP_URL",
     "DOMAIN_URL",
-    "GOOGLE_API_KEY",
-    "AUTH_GITHUB_ID",
-    "AUTH_GITHUB_SECRET",
-    "AUTH_GOOGLE_ID",
-    "AUTH_GOOGLE_SECRET",
-    "TURSO_URL",
-    "TURSO_AUTH_TOKEN",
+    "NEXTAUTH_URL",
+    "PAGE_SIZE",
+    "INSTAGRAM_KEY",
+    "YOUTUBE_API_KEY",
+    "GOOGLE_CLIENT_ID",
+    "GOOGLE_CLIENT_SECRET",
+    "DATABASE_URL",
+    "DATABASE_URL_UNPOOLED",
+    "POSTGRES_URL",
     "RESEND_API_KEY",
     "NEXTAUTH_SECRET",
-    "UPSTASH_REDIS_REST_URL",
-    "UPSTASH_REDIS_REST_TOKEN",
-    "IP_ADDRESS_SALT",
     "CLOUDINARY_URL",
     "CLOUDINARY_API_KEY",
     "CLOUDINARY_FOLDER",
     "CLOUDINARY_API_SECRET",
     "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME",
     "CLOUDINARY_CLOUD_NAME",
-    "NEXTAUTH_SECRET",
-    "CRON_SECRET",
-    "YOUTUBE_API_KEY",
-    "UPLOADTHING_SECRET",
-    "UPLOADTHING_APP_ID",
     "SPOTIFY_CLIENT_ID",
     "SPOTIFY_CLIENT_SECRET",
     "SPOTIFY_REFRESH_TOKEN",
-    "STRIPE_WEBHOOK_SERCRET",
+    "STRIPE_WEBHOOK_SECRET",
     "STRIPE_API_KEY",
     "STRIPE_SECRET_KEY",
     "PORT"
@@ -48,9 +40,7 @@
   ],
   "tasks": {
     "topo": {
-      "dependsOn": [
-        "^topo"
-      ]
+      "dependsOn": ["^topo"]
     },
     "db:generate": {
       "cache": false
@@ -59,9 +49,7 @@
       "cache": false
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
+      "dependsOn": ["^build"],
       "outputs": [
         ".next/**",
         "!.next/cache/**",
@@ -75,26 +63,16 @@
       "cache": false
     },
     "format": {
-      "outputs": [
-        "node_modules/.cache/.prettiercache"
-      ],
+      "outputs": ["node_modules/.cache/.prettiercache"],
       "outputLogs": "new-only"
     },
     "lint": {
-      "dependsOn": [
-        "^topo"
-      ],
-      "outputs": [
-        "node_modules/.cache/.eslintcache"
-      ]
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/.eslintcache"]
     },
     "typecheck": {
-      "dependsOn": [
-        "^topo"
-      ],
-      "outputs": [
-        "node_modules/.cache/tsbuildinfo.json"
-      ]
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
     },
     "clean": {
       "cache": false
