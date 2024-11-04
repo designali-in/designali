@@ -9,7 +9,6 @@ export const Apple = React.forwardRef<SVGSVGElement, DesignaliProps>(
         xmlns="http://www.w3.org/2000/svg"
         width="20.66"
         height="24"
-        stroke-width="0"
         viewBox="0 0 20.66 24"
         {...props}
         ref={forwardedRef}

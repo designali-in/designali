@@ -9,6 +9,7 @@ export interface DesignaliProps extends ElementAttributes {
   children?: never;
   color?: string;
   size?: number;
+  strokeWigth?: number;
 }
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
