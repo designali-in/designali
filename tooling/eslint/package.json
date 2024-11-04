@@ -1,7 +1,7 @@
 {
   "name": "@designali/eslint-config",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.1.0",
   "type": "module",
   "exports": {
     "./base": "./base.js",
@@ -14,21 +14,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@eslint/compat": "^1.1.1",
-    "@next/eslint-plugin-next": "^14.2.4",
+    "@next/eslint-plugin-next": "^14.2.0",
+    "eslint-config-turbo": "^1.13.2",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "rc",
-    "eslint-plugin-turbo": "^2.0.8",
-    "typescript-eslint": "rc-v8"
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript-eslint": "^7.6.0"
   },
   "devDependencies": {
     "@designali/prettier-config": "workspace:*",
     "@designali/tsconfig": "workspace:*",
-    "eslint": "catalog:",
-    "prettier": "catalog:",
-    "typescript": "catalog:"
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   },
   "prettier": "@designali/prettier-config"
 }

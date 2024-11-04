@@ -1,6 +1,9 @@
-// FIXME: This kinda stinks...
 /// <reference types="../../tooling/eslint/types.d.ts" />
 
-import baseConfig from "@designali/eslint-config/base";
+import baseConfig from "@dingify/eslint-config/base";
 
-export default [...baseConfig];
+export default [
+  ...baseConfig,
+  // TODO: Resolve errors when setting these rules to 'error'
+  { rules: { "@typescript-eslint/ban-ts-comment": "warn" } },
+];

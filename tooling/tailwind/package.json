@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./native": "./native.ts",
+    ".": "./index.ts",
     "./web": "./web.ts"
   },
   "license": "MIT",
@@ -15,17 +15,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4",
+    "@tailwindcss/typography": "^0.5.10",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@designali/eslint-config": "workspace:*",
     "@designali/prettier-config": "workspace:*",
     "@designali/tsconfig": "workspace:*",
-    "eslint": "catalog:",
-    "prettier": "catalog:",
-    "typescript": "catalog:"
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   },
   "prettier": "@designali/prettier-config"
 }

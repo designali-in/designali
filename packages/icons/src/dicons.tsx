@@ -1381,7 +1381,6 @@ import {
   ZoomIn,
   ZoomOut,
 } from "./icons";
-import Heart from "./icons/multimedia/Heart";
 import HeartOff from "./icons/multimedia/HeartOff";
 
 export type DIcon = DesignaliIcon;

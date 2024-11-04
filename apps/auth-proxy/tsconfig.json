@@ -1,4 +1,0 @@
-{
-  "extends": "@designali/tsconfig/base.json",
-  "include": ["routes"]
-}

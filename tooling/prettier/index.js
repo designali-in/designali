@@ -11,40 +11,45 @@ const config = {
     "prettier-plugin-tailwindcss",
   ],
   tailwindConfig: fileURLToPath(
-    new URL("../../tooling/tailwind/web.ts", import.meta.url),
+    new URL("../../tooling/tailwind/index.ts", import.meta.url)
   ),
+  bracketSpacing: true,
+  endOfLine: "lf",
+  semi: true,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: "all",
+  printWidth: 80,
   tailwindFunctions: ["cn", "cva"],
+  arrowParens: "always",
+  proseWrap: "always",
   importOrder: [
     "<TYPES>",
     "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
     "^(next/(.*)$)|^(next$)",
-    "^(expo(.*)$)|^(expo$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "<TYPES>^@acme",
-    "^@acme/(.*)$",
+    "<TYPES>^@dingify",
+    "^@dingify/(.*)$",
     "",
     "<TYPES>^[.|..|~]",
+    "",
+    "^@/env(.*)$",
+    "^@/types/(.*)$",
+    "^@/config/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/components/ui/(.*)$",
+    "^@/components/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/app/(.*)$",
+    "",
     "^~/",
     "^[../]",
     "^[./]",
   ],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   importOrderTypeScriptVersion: "4.4.0",
-  overrides: [
-    {
-      files: "*.json.hbs",
-      options: {
-        parser: "json",
-      },
-    },
-    {
-      files: "*.js.hbs",
-      options: {
-        parser: "babel",
-      },
-    },
-  ],
 };
 
 export default config;

@@ -1,16 +1,22 @@
 {
   "name": "designali",
+  "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=20.15.0"
+  "author": {
+    "name": "designali",
+    "url": "https://twitter.com/designali"
   },
-  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": "20.10.0"
+  },
+  "packageManager": "pnpm@8.15.5",
+  "prettier": "@designali/prettier-config",
   "scripts": {
     "build": "turbo run build",
     "build:apps": "turbo build --filter=./apps/*",
     "build:packages": "turbo build --filter=./packages/*",
     "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo run clean",
+    "clean:workspaces": "turbo clean",
     "db:generate": "turbo db:generate",
     "db:migrate": "turbo db:migrate",
     "db:push": "turbo db:push",
@@ -18,11 +24,11 @@
     "db:studio": "turbo db:studio",
     "dev": "turbo watch dev",
     "dev:packages": "turbo dev --filter=./packages/*",
-    "dev:next": "turbo watch dev -F @designali/nextjs...",
-    "format": "turbo run format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
-    "format:fix": "turbo run format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
-    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "dev:next": "turbo watch dev -F @designali/www...",
+    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo run typecheck",
@@ -30,11 +36,11 @@
   },
   "devDependencies": {
     "@designali/prettier-config": "workspace:*",
-    "@turbo/gen": "^2.1.1",
-    "prettier": "catalog:",
+    "@types/react": "^18.2.77",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.5",
     "tsup": "^8.2.4",
     "turbo": "^2.2.3",
-    "typescript": "catalog:"
-  },
-  "prettier": "@designali/prettier-config"
+    "typescript": "^5.4.5"
+  }
 }

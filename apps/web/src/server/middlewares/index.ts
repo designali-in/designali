@@ -1,1 +1,0 @@
-export { linkMiddleware } from "./linkMiddleware";

@@ -5,26 +5,20 @@ node_modules
 .pnp
 .pnp.js
 
+# turbo
+.turbo/
+.turbo/
+
 # testing
 coverage
 
 # next.js
 .next/
 out/
-next-env.d.ts
 
-# nitro
-.nitro/
-.output/
-
-# expo
-.expo/
-apps/expo/.gitignore
-apps/expo/ios
-apps/expo/android
-
-# production
+# build
 build
+dist
 
 # misc
 .DS_Store
@@ -37,19 +31,22 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env
 .env*.local
+.env
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-dist/
+next-env.d.ts
 
-# turbo
-.turbo
+# email
+.react-email/
 
-# packages
-.react-email
+.vscode
+.contentlayer
 
+#API
+.wrangler.toml
+wrangler.toml
