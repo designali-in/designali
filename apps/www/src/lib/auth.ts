@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/require-await */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import authConfig from "./auth.config";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import type { UserRole } from "@prisma/client";
-import NextAuth from "next-auth";
-import type {DefaultSession} from "next-auth";
 
-import {prisma} from "@/lib/db";
+import type { UserRole } from "@prisma/client";
+import type { DefaultSession } from "next-auth";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import NextAuth from "next-auth";
+
+import { prisma } from "@/lib/db";
 import { getUserById } from "@/lib/validations/auth";
- 
+
+import authConfig from "./auth.config";
+
 declare module "next-auth" {
   interface Session {
     user: {
@@ -40,7 +40,7 @@ export const {
           session.user.email = token.email;
         }
 
-        if (token.role) { 
+        if (token.role) {
           session.user.role = token.role;
         }
 

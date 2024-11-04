@@ -1,9 +1,10 @@
-import type { ClassValue } from "clsx";
-import { clsx } from "clsx"; 
-import { twMerge } from "tailwind-merge";
-import qs from "query-string";
-import ms from "ms";
 import crypto from "crypto";
+import type { ClassValue } from "clsx";
+import { clsx } from "clsx";
+import ms from "ms";
+import qs from "query-string";
+import { twMerge } from "tailwind-merge";
+
 import { env } from "../env";
 
 export function cn(...inputs: ClassValue[]) {
@@ -13,7 +14,6 @@ export function cn(...inputs: ClassValue[]) {
 export function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`;
 }
-
 
 export function truncate(str: string, length: number) {
   return str.length > length ? `${str.substring(0, length)}...` : str;
@@ -49,7 +49,6 @@ export function formUrlQuery({
     { skipNull: true },
   );
 }
-
 
 export const expirationTime = (
   expiration: string,
@@ -98,7 +97,6 @@ export async function fetcher<JSON = any>(
   return res.json();
 }
 
-
 export function removeUrlSuffix(url: string): string {
   return url.startsWith("http") ? url.split("//")[1] : url;
 }
@@ -111,7 +109,6 @@ export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   }`;
 };
 
-
 // eslint-disable-next-line @typescript-eslint/no-inferrable-types
 export function generateUrlSuffix(length: number = 6): string {
   const characters =
@@ -119,7 +116,17 @@ export function generateUrlSuffix(length: number = 6): string {
   const charactersLength = characters.length;
   let result = "";
 
-  const randomValues = crypto.randomBytes(length);
+  const randomValues = new Uint8Array(length);
+  // Use crypto.getRandomValues for browser compatibility
+  if (typeof window !== "undefined" && window.crypto) {
+    window.crypto.getRandomValues(randomValues);
+  } else {
+    // Fallback to Node.js crypto module if in Node environment
+    const crypto = require("crypto");
+    const nodeRandomValues = crypto.randomBytes(length);
+    randomValues.set(nodeRandomValues);
+  }
+
   for (let i = 0; i < length; i++) {
     result += characters[randomValues[i] % charactersLength];
   }

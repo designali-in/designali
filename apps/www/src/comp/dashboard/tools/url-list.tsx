@@ -4,7 +4,7 @@ import type { FormType, ShortUrlFormData } from "@/types/urls";
 import type { User } from "@prisma/client";
 import { useState } from "react";
 import Link from "next/link";
-import { UrlForm } from "@/comp/forms/url-form"; 
+import { UrlForm } from "@/comp/forms/url-form";
 import { Button } from "@designali/ui/button";
 import {
   Card,
@@ -39,16 +39,18 @@ import {
   removeUrlSuffix,
   timeAgo,
 } from "@/lib/utils";
+
 import { CopyButton } from "../../uis/copy-button";
+import { LinkPreviewer } from "./link-previewer";
+import UserUrlMetaInfo from "./meta";
 
 export interface UrlListProps {
-  user: Pick<User, "id" | "name">;
+  user: Pick<User, "id" | "name" | "apiKey">;
   action: string;
 }
 
 function TableColumnSekleton() {
   return (
-    <div>
     <TableRow className="grid grid-cols-3 items-center sm:grid-cols-8">
       <TableCell className="col-span-1">
         <Skeleton className="h-5 w-20" />
@@ -72,7 +74,6 @@ function TableColumnSekleton() {
         <Skeleton className="h-5 w-16" />
       </TableCell>
     </TableRow>
-    </div>
   );
 }
 
@@ -101,7 +102,6 @@ export default function UserUrlsList({ user, action }: UrlListProps) {
 
   return (
     <>
-    <div className="mx-auto max-w-7xl">
       <Card className="xl:col-span-2">
         <CardHeader className="flex flex-row items-center">
           {action.includes("/admin") ? (
@@ -188,7 +188,7 @@ export default function UserUrlsList({ user, action }: UrlListProps) {
                   <TableColumnSekleton />
                   <TableColumnSekleton />
                 </>
-              ) : data?.list?.length ? (
+              ) : data && data.list && data.list.length ? (
                 data.list.map((short) => (
                   <>
                     <TableRow
@@ -212,7 +212,13 @@ export default function UserUrlsList({ user, action }: UrlListProps) {
                           )}
                         />
                       </TableCell>
-                      
+                      <TableCell className="col-span-1 truncate sm:col-span-2">
+                        <LinkPreviewer
+                          apiKey={user.apiKey ?? ""}
+                          url={short.target}
+                          formatUrl={removeUrlSuffix(short.target)}
+                        />
+                      </TableCell>
                       <TableCell className="col-span-1 hidden justify-center truncate sm:flex">
                         <TooltipProvider>
                           <Tooltip delayDuration={200}>
@@ -255,7 +261,8 @@ export default function UserUrlsList({ user, action }: UrlListProps) {
                           variant={"outline"}
                           onClick={() => {
                             setSelectedUrlId(short.id);
-                            if (isShowStats && selectedUrlId !== short.id) { /* empty */ } else {
+                            if (isShowStats && selectedUrlId !== short.id) {
+                            } else {
                               setShowStats(!isShowStats);
                             }
                           }}
@@ -264,7 +271,13 @@ export default function UserUrlsList({ user, action }: UrlListProps) {
                         </Button>
                       </TableCell>
                     </TableRow>
-                     
+                    {isShowStats && selectedUrlId === short.id && (
+                      <UserUrlMetaInfo
+                        user={{ id: user.id, name: user.name || "" }}
+                        action="/api/url/meta"
+                        urlId={short.id}
+                      />
+                    )}
                   </>
                 ))
               ) : (
@@ -274,7 +287,6 @@ export default function UserUrlsList({ user, action }: UrlListProps) {
           </Table>
         </CardContent>
       </Card>
-      </div>
     </>
-  )
+  );
 }

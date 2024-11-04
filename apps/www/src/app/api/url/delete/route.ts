@@ -1,23 +1,22 @@
 import { getCurrentUser } from "@/lib/session";
-import { getUserShortUrls } from "@/lib/validations/url";
+import { deleteUserShortUrl } from "@/lib/validations/url";
 import { checkUserStatus } from "@/lib/validations/user";
 
-export async function GET(req: Request) {
+export async function POST(req: Request) {
   try {
     const user = checkUserStatus(await getCurrentUser());
     if (user instanceof Response) return user;
 
-    const url = new URL(req.url);
-    const page = url.searchParams.get("page");
-    const size = url.searchParams.get("size");
-    const data = await getUserShortUrls(
-      user.id,
-      1,
-      Number(page || "1"),
-      Number(size || "10"),
-    );
+    const { url_id } = await req.json();
+    if (!url_id) {
+      return Response.json("url id is required", {
+        status: 400,
+        statusText: "url id is required",
+      });
+    }
 
-    return Response.json(data);
+    await deleteUserShortUrl(user.id, url_id);
+    return Response.json("success");
   } catch (error) {
     return Response.json(error?.statusText || error, {
       status: error.status || 500,

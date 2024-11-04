@@ -1,0 +1,40 @@
+{
+  "name": "@designali/emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "scripts": {
+    "email": "email dev with-env --dir ./emails --port 3002",
+    "dev": "email dev with-env --port 3001 --dir emails",
+    "dev:email": "email dev with-env",
+    "lint": "eslint ",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write --check . --ignore-path ./.gitignore",
+    "type-check": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "keywords": [
+    "email"
+  ],
+  "author": "@designali",
+  "license": "MIT",
+  "dependencies": {
+    "@react-email/button": "0.0.11",
+    "@react-email/components": "0.0.7",
+    "@react-email/head": "0.0.5",
+    "@react-email/html": "0.0.6",
+    "@react-email/tailwind": "0.0.9",
+    "@t3-oss/env-core": "^0.9.2",
+    "react-email": "1.9.5",
+    "resend": "^1.1.0",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "@designali/eslint-config": "workspace:*",
+    "@designali/tsconfig": "workspace:*",
+    "@types/node": "^20.12.5",
+    "@types/react": "^18.2.77",
+    "react": "18.2.0",
+    "typescript": "^5.4.5"
+  }
+}

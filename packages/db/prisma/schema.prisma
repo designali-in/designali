@@ -56,6 +56,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  apiKey        String?
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @default(now()) @map(name: "updated_at")
 
@@ -103,8 +104,35 @@ model UserUrl {
   updatedAt  DateTime @default(now()) @map(name: "updated_at")
 
   user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  UrlMeta UrlMeta[]
 
   @@index([userId])
   @@map(name: "user_urls")
 }
  
+
+ model UrlMeta {
+  id    String @id @default(cuid())
+  urlId String
+  click Int
+
+  ip        String  @default("127.0.0.1")
+  city      String?
+  country   String?
+  region    String?
+  latitude  String?
+  longitude String?
+  referer   String?
+  lang      String?
+  device    String?
+  browser   String?
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  userUrl UserUrl @relation(fields: [urlId], references: [id], onDelete: Cascade)
+
+  @@unique([urlId, ip])
+  @@index([urlId])
+  @@map(name: "url_metas")
+}

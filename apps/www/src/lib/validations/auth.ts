@@ -1,10 +1,10 @@
 import * as z from "zod";
-import {prisma} from "@/lib/db";
+
+import { prisma } from "@/lib/db";
 
 export const userAuthSchema = z.object({
   email: z.string().email(),
 });
- 
 
 export const getUserByEmail = async (email: string) => {
   try {
@@ -33,19 +33,3 @@ export const getUserById = async (id: string) => {
     return null;
   }
 };
-
-export function checkUserStatus(user: any) {
-  if (!user?.id) {
-    throw new Response("Unauthorized", {
-      status: 401,
-      statusText: "Unauthorized",
-    });
-  }
-  if (user.active === 0) {
-    throw new Response("Forbidden", {
-      status: 403,
-      statusText: "Forbidden",
-    });
-  }
-  return user;
-}

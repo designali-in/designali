@@ -1,5 +1,5 @@
 import { getCurrentUser } from "@/lib/session";
-import { getUserShortUrls } from "@/lib/validations/url";
+import { getUserUrlMetaInfo } from "@/lib/validations/url";
 import { checkUserStatus } from "@/lib/validations/user";
 
 export async function GET(req: Request) {
@@ -8,14 +8,16 @@ export async function GET(req: Request) {
     if (user instanceof Response) return user;
 
     const url = new URL(req.url);
-    const page = url.searchParams.get("page");
-    const size = url.searchParams.get("size");
-    const data = await getUserShortUrls(
-      user.id,
-      1,
-      Number(page || "1"),
-      Number(size || "10"),
-    );
+    const urlId = url.searchParams.get("id");
+
+    if (!urlId) {
+      return Response.json("url id is required", {
+        status: 400,
+        statusText: "url id is required",
+      });
+    }
+
+    const data = await getUserUrlMetaInfo(urlId);
 
     return Response.json(data);
   } catch (error) {
