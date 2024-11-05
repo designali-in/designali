@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
- 
+import { cn } from "@/src/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +13,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@designali/ui/navigation-menu";
-import { cn } from "@/src/lib/utils";
 
 export function Menu() {
   return (
@@ -38,7 +37,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/products/dicons"
                     >
                       <Icons.shapes strokeWidth={1} className="h-8 w-8" />
@@ -55,10 +54,9 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/products/dshapes"
                     >
-                      
                       <div className="mb-2 mt-4 text-lg font-medium">
                         DShapes
                       </div>
@@ -72,10 +70,9 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/products/graaadients"
                     >
-                       
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Graaadients
                       </div>
@@ -89,7 +86,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/products/3dicons"
                     >
                       <Icons.box strokeWidth={1} className="h-8 w-8" />
@@ -108,33 +105,41 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href={"/solutions"}>
-              <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+            <Link href={"/agency"}>
+              <NavigationMenuTrigger>Agency</NavigationMenuTrigger>
             </Link>
 
             <NavigationMenuContent className="space-y-3">
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
-                <ListItem href="/solutions/branding" title="Branding">
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      href="/agency/works"
+                    >
+                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">Works</div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <ListItem href="/agency/branding" title="Branding">
                   Brand Identity
                 </ListItem>
-                
-                <ListItem href="/solutions/sm-posts" title="Social Media Posts">
+
+                <ListItem href="/agency/sm-posts" title="Social Media Posts">
                   Social Media Marketing
                 </ListItem>
-                <ListItem
-                  href="/solutions/web-design"
-                  title="Website Design"
-                >
+                <ListItem href="/agency/web-design" title="Website Design">
                   UI/UX, Landing Page
                 </ListItem>
-                <ListItem
-                  href="/solutions/web-develop"
-                  title="Website Develop"
-                >
+                <ListItem href="/agency/web-develop" title="Website Develop">
                   Build in Next.js & Vercel
                 </ListItem>
               </ul>
-              
             </NavigationMenuContent>
           </NavigationMenuItem>
 
@@ -142,14 +147,6 @@ export function Menu() {
             <Link href="/ui" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 UI
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <Link href="/works" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Works
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -164,7 +161,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/tools/dicons"
                     >
                       <Icons.shapes strokeWidth={1} className="h-8 w-8" />
@@ -181,7 +178,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/tools#short-links"
                     >
                       <Icons.shapes strokeWidth={1} className="h-8 w-8" />
@@ -198,7 +195,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/tools#image-converter"
                     >
                       <Icons.shapes strokeWidth={1} className="h-8 w-8" />
@@ -215,7 +212,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none hover:bg-ali focus:shadow-md"
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/tools#word-counter"
                     >
                       <Icons.shapes strokeWidth={1} className="h-8 w-8" />

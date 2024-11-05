@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Connect } from "@/comp/common/connect"; 
+import { Connect } from "@/comp/common/connect";
 import Projects from "@/src/comp/common/projects";
+import { About } from "@/src/comp/marketing/agency/products/w-develop/about";
+import { Banner } from "@/src/comp/marketing/agency/products/w-develop/banner";
+import { WebsiteDevelopCards } from "@/src/comp/marketing/agency/products/w-develop/card";
+import { WebDevelopGet } from "@/src/comp/marketing/agency/products/w-develop/get";
+import { Include } from "@/src/comp/marketing/agency/products/w-develop/include";
 import PageTitle from "@/src/comp/mdx/page-title";
-import { About } from "@/src/comp/marketing/solutions/products/w-develop/about";
-import { Banner } from "@/src/comp/marketing/solutions/products/w-develop/banner";
-import { WebsiteDevelopCards } from "@/src/comp/marketing/solutions/products/w-develop/card";
-import { WebDevelopGet } from "@/src/comp/marketing/solutions/products/w-develop/get";
-import { Include } from "@/src/comp/marketing/solutions/products/w-develop/include"; 
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -23,7 +23,6 @@ export const metadata = {
 };
 
 export default function Home() {
-  
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
       <PageTitle
@@ -57,7 +56,6 @@ export default function Home() {
             Reviews
           </h1>
         </div>
-         
       </div>
       <WebDevelopGet />
       <About />

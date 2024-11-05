@@ -3,11 +3,10 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@designali/ui/button";
-import { DIcons } from "dicons";
-
 import ImageZoom from "@/comp/common/image-zoom";
 import { HighlighterItem, HighlightGroup } from "@/comp/uis/highlighter";
+import { Button } from "@designali/ui/button";
+import { DIcons } from "dicons";
 
 export interface Experience {
   post: string;
@@ -25,7 +24,7 @@ export const Service: Experience[] = [
       "https://utfs.io/f/cb22130d-5369-4dab-a93a-44464be93e60-jrpk8e.jpg",
     company: "Brand Identity",
     price: " ",
-  }, 
+  },
   {
     post: "SM Posts",
     link: "/solutions/sm-posts",
@@ -33,7 +32,7 @@ export const Service: Experience[] = [
       "https://utfs.io/f/813bb6c1-f742-4c1d-b0d3-75cd4d984c05-cmsrrn.jpg",
     company: "Social Media Marketing",
     price: " ",
-  }, 
+  },
   {
     post: "Web Design",
     link: "/solutions/web-design",
@@ -54,8 +53,8 @@ export const Service: Experience[] = [
 
 export function Services() {
   return (
-    <div className="mt-10">
-      <div className="grid gap-3 md:grid-cols-3">
+    <div className="mt-10 px-6 xl:px-0">
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {Service.map((Experience) => (
           <HighlightGroup className="group">
             <div
@@ -155,7 +154,7 @@ export const DService: DExperience[] = [
 
 export function Related() {
   return (
-    <div className="mt-20 grid gap-3 md:grid-cols-3">
+    <div className="mt-3 grid gap-3 md:grid-cols-3">
       {DService.map((Experience) => (
         <HighlightGroup className="group">
           <div

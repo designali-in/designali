@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
+import { Logo } from "@/comp/logo";
 import { Separator } from "@designali/ui/separator";
 import { DIcons } from "dicons";
 
-import { Logo } from "@/comp/logo";
 import ThemeToogle from "./theme";
 
 const navigation = {
@@ -20,9 +20,9 @@ const navigation = {
           name: "About",
           items: [
             { name: "About", href: "/about" },
-            { name: "Works", href: "/works" },
+            { name: "Works", href: "/agency/works" },
             { name: "Pricing", href: "/pricing" },
-            { name: "Dashboard", href: "/app/dashboard/overview" },
+            { name: "Dashboard", href: "/dashboard" },
           ],
         },
         {
@@ -30,9 +30,9 @@ const navigation = {
           name: "Features",
           items: [
             { name: "Products", href: "/products" },
-            { name: "Solutions", href: "/solutions" },
-            { name: "Branding", href: "/solutions/branding" },
-            { name: "Web Develop", href: "/solutions/web-develop" },
+            { name: "Agency", href: "/agency" },
+            { name: "Branding", href: "/agency/branding" },
+            { name: "Web Develop", href: "/agency/web-develop" },
           ],
         },
         {
@@ -82,7 +82,7 @@ const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slat
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full border-b border-t border-ali/20 bg-white px-2 dark:bg-slate-950 sm:px-4">
+    <footer className="border-ali/20 mx-auto w-full border-b border-t bg-white px-2 dark:bg-slate-950 sm:px-4">
       <div className="relative -mt-10 flex flex-wrap justify-center gap-8">
         <Link aria-label="Logo" href="/">
           <p className="flex h-20 w-20 items-center justify-center rounded-full bg-background">
@@ -228,9 +228,9 @@ export function Footer() {
           <span> © </span>
           <span>{new Date().getFullYear()}</span>
           <span>Made with</span>
-          <Icons.heart className="mx-1 h-4 w-4 animate-pulse text-ali" />
+          <Icons.heart className="text-ali mx-1 h-4 w-4 animate-pulse" />
           <span> by </span>
-          <span className="cursor-pointer text-black hover:text-ali dark:text-white dark:hover:text-ali">
+          <span className="hover:text-ali dark:hover:text-ali cursor-pointer text-black dark:text-white">
             <Link
               aria-label="Logo"
               className="font-bold"
@@ -241,7 +241,7 @@ export function Footer() {
             </Link>
           </span>
           -
-          <span className="cursor-pointer text-slate-600 hover:text-ali dark:text-slate-400 dark:hover:text-ali">
+          <span className="hover:text-ali dark:hover:text-ali cursor-pointer text-slate-600 dark:text-slate-400">
             <Link aria-label="Logo" className="" href="/">
               Designali
             </Link>
