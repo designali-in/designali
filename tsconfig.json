@@ -12,7 +12,6 @@
     "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "allowImportingTsExtensions": true,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true
