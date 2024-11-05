@@ -88,10 +88,10 @@ export async function getProjectConfig(cwd: string): Promise<Config | null> {
   const isTsx = await isTypeScriptProject(cwd);
 
   const config: RawConfig = {
-    $schema: "https://designali.in/schema.json",
+    $schema: "https://ui.shadcn.com/schema.json",
     rsc: ["next-app", "next-app-src"].includes(projectType),
     tsx: isTsx,
-    style: "new-york",
+    style: "default",
     tailwind: {
       config: isTsx ? "tailwind.config.ts" : "tailwind.config.js",
       baseColor: "zinc",
@@ -133,7 +133,7 @@ export async function getProjectType(cwd: string): Promise<ProjectType | null> {
 }
 
 export async function getTailwindCssFile(cwd: string) {
-  const files = await fg.glob(["**/*.css", "**/*.scss"], {
+  const files = await fg.glob("**/*.css", {
     cwd,
     deep: 3,
     ignore: PROJECT_SHARED_IGNORE,

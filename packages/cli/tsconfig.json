@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@designali/tsconfig/base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "incremental": false,
     "isolatedModules": false,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]

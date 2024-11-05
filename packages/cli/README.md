@@ -1,46 +1,32 @@
-# shadcn-ui
+## FarmUI ![GitHub stars](https://img.shields.io/github/stars/Kinfe123/farm-ui)
 
-A CLI for adding components to your project.
+FarmUI is client first and animation rich ui component library built on top of radix and shadcn as well other primitive providers that we would like to support in near feature..
 
-> [!WARNING]
-> The shadcn-ui CLI is going to be deprecated soon. Bug fixes and new features should be added to the `.packages/shadcn` instead.
+## Prerequisites
 
-## Usage
+- [Node.js](https://nodejs.org/) version 14 or higher installed
+- [pnpm](https://pnpm.io/) package manager installed
 
-Use the `init` command to initialize dependencies for a new project.
+## Installation Guide
 
-The `init` command installs dependencies, adds the `cn` util, configures `tailwind.config.js`, and CSS variables for the project.
-
-```bash
-npx shadcn-ui init
-```
-
-## add
-
-Use the `add` command to add components to your project.
-
-The `add` command adds a component to your project and installs all required dependencies.
+1. Install the npm package
 
 ```bash
-npx shadcn-ui add [component]
+pnpm add @kinfe123/farm-ui@latest
 ```
 
-### Example
+2. Go to https://farmui.com and grab the id of the UI or component that you want
+
+3. Adding the UI or component based on that ID
 
 ```bash
-npx shadcn-ui add alert-dialog
+pnpm farm-ui add {id}
 ```
 
-You can also run the command without any arguments to view a list of all available components:
+**id** - being the id of the component from farmui.com
 
-```bash
-npx shadcn-ui add
-```
+4. Specify the directory where you want the componnt to be installed or it uses **components** dir by default.
 
-## Documentation
+5. Finally you get to see the component or UI block inside of **farmui** directory nested on directory you have mentioned on step 4.
 
-Visit https://ui.shadcn.com/docs/cli to view the documentation.
-
-## License
-
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+**Enjoy!**
