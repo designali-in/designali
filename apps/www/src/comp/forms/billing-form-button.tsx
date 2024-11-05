@@ -1,10 +1,11 @@
 "use client";
 
+import type { SubscriptionPlan, UserSubscriptionPlan } from "@/types";
 import { useTransition } from "react";
 import { generateUserStripe } from "@/actions/generate-user-stripe";
-import type { SubscriptionPlan, UserSubscriptionPlan } from "@/types";
 
-import { Button } from "@/components/ui/button"; 
+import { Button } from "@/components/ui/button";
+
 import { Icons } from "../icons";
 
 interface BillingFormButtonProps {
@@ -34,8 +35,7 @@ export function BillingFormButton({
   return (
     <Button
       variant={userOffer ? "default" : "outline"}
-      
-      className="w-full"
+      className="h-10 w-full"
       disabled={isPending}
       onClick={stripeSessionAction}
     >

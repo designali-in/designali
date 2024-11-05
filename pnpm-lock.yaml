@@ -141,7 +141,7 @@ importers:
         specifier: ^1.11.11
         version: 1.11.13
       dicons:
-        specifier: workspace:*
+        specifier: 1.0.9
         version: link:../../packages/icons
       embla-carousel-autoplay:
         specifier: ^8.1.6
@@ -557,6 +557,18 @@ importers:
       '@designali/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
+      '@rollup/plugin-commonjs':
+        specifier: ^25.0.7
+        version: 25.0.8(rollup@4.24.4)
+      '@rollup/plugin-node-resolve':
+        specifier: ^15.2.3
+        version: 15.3.0(rollup@4.24.4)
+      '@rollup/plugin-terser':
+        specifier: ^0.4.4
+        version: 0.4.4(rollup@4.24.4)
+      '@rollup/plugin-typescript':
+        specifier: ^11.1.6
+        version: 11.1.6(rollup@4.24.4)(tslib@2.8.1)(typescript@5.6.3)
       react:
         specifier: 18.2.0
         version: 18.2.0

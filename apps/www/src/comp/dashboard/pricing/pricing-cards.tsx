@@ -1,17 +1,18 @@
 "use client";
 
+import type { UserSubscriptionPlan } from "@/types";
+import type { SubscriptionPlan } from "@/types/index";
 import { useContext, useState } from "react";
 import Link from "next/link";
-import type { UserSubscriptionPlan } from "@/types";
+import { BillingFormButton } from "@/comp/forms/billing-form-button";
 
-import type { SubscriptionPlan } from "@/types/index";
 import { pricingData } from "@/config/subscriptions";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { BillingFormButton } from "@/comp/forms/billing-form-button";
-import { ModalContext } from "../providers"; 
+
 import { Icons } from "../../icons";
+import { ModalContext } from "../providers";
 
 interface PricingCardsProps {
   userId?: string;
@@ -20,7 +21,7 @@ interface PricingCardsProps {
 
 export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
   const isYearlyDefault =
-    !subscriptionPlan?.stripeCustomerId || subscriptionPlan.interval === "year"
+    !subscriptionPlan.stripeCustomerId || subscriptionPlan.interval === "year"
       ? true
       : false;
   const [isYearly, setIsYearly] = useState<boolean>(!!isYearlyDefault);
@@ -36,7 +37,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
         className={cn(
           "relative flex flex-col overflow-hidden rounded-3xl border shadow-sm",
           offer.title.toLocaleLowerCase() === "pro"
-            ? "-m-0.5 border-2 border-purple-400"
+            ? "-m-0.5 border-2 border-green-400"
             : "",
         )}
         key={offer.title}
@@ -52,12 +53,12 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
                 {isYearly && offer.prices.monthly > 0 ? (
                   <>
                     <span className="mr-2 text-muted-foreground/80 line-through">
-                      ${offer.prices.monthly}
+                      ₹{offer.prices.monthly}
                     </span>
-                    <span>${offer.prices.yearly / 12}</span>
+                    <span>₹{offer.prices.yearly / 12}</span>
                   </>
                 ) : (
-                  `$${offer.prices.monthly}`
+                  `₹${offer.prices.monthly}`
                 )}
               </div>
               <div className="-mb-1 ml-2 text-left text-sm font-medium text-muted-foreground">
@@ -68,7 +69,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           {offer.prices.monthly > 0 ? (
             <div className="text-left text-sm text-muted-foreground">
               {isYearly
-                ? `$${offer.prices.yearly} will be charged when annual`
+                ? `₹${offer.prices.yearly} will be charged when annual`
                 : "when charged monthly"}
             </div>
           ) : null}
@@ -78,7 +79,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           <ul className="space-y-2 text-left text-sm font-medium leading-normal">
             {offer.benefits.map((feature) => (
               <li className="flex items-start gap-x-3" key={feature}>
-                <Icons.check className="size-5 shrink-0 text-purple-500" />
+                <Icons.check className="size-5 shrink-0 text-green-500" />
                 <p>{feature}</p>
               </li>
             ))}
@@ -102,9 +103,8 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
                 className={cn(
                   buttonVariants({
                     variant: "outline",
-                     
                   }),
-                  "w-full",
+                  "h-10 w-full",
                 )}
               >
                 Go to dashboard
@@ -118,12 +118,12 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
             )
           ) : (
             <Button
+              className="h-12 w-full"
               variant={
                 offer.title.toLocaleLowerCase() === "pro"
                   ? "default"
                   : "outline"
               }
-               
               onClick={() => setShowSignInModal(true)}
             >
               Sign in
@@ -137,8 +137,6 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
   return (
     <div>
       <section className="flex flex-col items-center text-center">
-        
-
         <div className="mb-4 mt-10 flex items-center gap-5">
           <ToggleGroup
             type="single"

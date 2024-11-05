@@ -15,7 +15,6 @@
   ],
   "scripts": {
     "build": "pnpm run clean && rollup --config",
-    "test": "vitest --config ./vitest.config.mjs run",
     "clean": "rm -rf dist",
     "reformat": "prettier . --write"
   },

@@ -1,15 +1,7 @@
 {
   "name": "dicons",
   "description": "A react icons library for Designali",
-  "version": "1.0.8",
-  "scripts": {
-    "build": "tsup",
-    "clean": "rm -rf .turbo dist node_modules",
-    "format": "prettier --write --check . --ignore-path ./.gitignore",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix .",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
-  },
+  "version": "1.0.9",
   "keywords": [
     "designali",
     "shapes",
@@ -21,30 +13,37 @@
     "graphics",
     "placeholder"
   ],
+  "scripts": {
+    "build": "pnpm run clean && rollup --config",
+    "clean": "rm -rf .turbo dist node_modules",
+    "format": "prettier --write --check . --ignore-path ./.gitignore",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
   "author": {
     "name": "Designali",
     "email": "contact@designali.in",
     "twitter": "https://x.com/designali_in",
     "url": "https://designali.in"
   },
+  "main": "dist/cjs/dicons.js",
+  "main:umd": "dist/umd/dicons.js",
+  "module": "dist/esm/dicons.js",
+  "unpkg": "dist/umd/dicons.js",
+  "typings": "dist/index.d.ts",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.cjs",
-  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/designali-in/designali"
   },
-  "exports": {
-    ".": "./index.ts",
-    "./*": [
-      "./src/*.tsx",
-      "./src/*.ts"
-    ]
-  },
   "license": "MIT",
   "devDependencies": {
     "@designali/eslint-config": "workspace:*",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tsup": "^8.2.4",

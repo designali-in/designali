@@ -29,8 +29,8 @@
   "exports": "./dist/index.js",
   "bin": "./dist/index.js",
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup",
+    "dev": "tsup --watch --env.COMPONENTS_REGISTRY_URL http://localhost:3000",
+    "build": "tsup --env.COMPONENTS_REGISTRY_URL https://designali.in",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf dist && rimraf components",
     "start:dev": "cross-env COMPONENTS_REGISTRY_URL=http://localhost:3003 node dist/index.js",
