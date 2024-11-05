@@ -1,8 +1,0 @@
-{
-  "extends": "@designali/tsconfig/base.json",
-  "include": [".", "env.ts"],
-  "compilerOptions": {
-    "jsx": "preserve"
-  },
-  "exclude": ["dist", "build", "node_modules"]
-}
