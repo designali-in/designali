@@ -3,8 +3,9 @@ import Link from "next/link";
 import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
 import { DashboardTableOfContents } from "@/comp/mdx/doc/toc";
 import Mdx from "@/comp/mdx/layers";
+import { allDesigns } from "contentlayer/generated";
+
 import { getTableOfContents } from "@/lib/toc";
-import { allGuides } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
@@ -20,7 +21,7 @@ interface GuidePageProps {
 
 async function getGuideFromParams(params: { slug: any }) {
   const slug = params.slug?.join("/");
-  const guide = allGuides.find((guide) => guide.slugAsParams === slug);
+  const guide = allDesigns.find((guide) => guide.slugAsParams === slug);
 
   if (!guide) {
     null;
@@ -32,7 +33,7 @@ async function getGuideFromParams(params: { slug: any }) {
 export async function generateStaticParams(): Promise<
   GuidePageProps["params"][]
 > {
-  return allGuides.map((guide) => ({
+  return allDesigns.map((guide) => ({
     slug: guide.slugAsParams.split("/"),
   }));
 }
@@ -50,16 +51,16 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <Mdx code={guide.body.code} />
         <Separator className="my-8" />
         <div className="flex py-6 lg:py-10">
-          <Link href="/guides" className="">
+          <Link href="/documentation" className="">
             <Button variant="outline" size="lg">
-              See all guides
+              See all documentation
             </Button>
           </Link>
         </div>
       </div>
 
       <div className="hidden text-sm xl:block">
-        <div className="sticky top-24 -my-10 h-[calc(100vh-3.5rem)] overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
+        <div className="sticky top-24 -my-10 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
           <DashboardTableOfContents toc={toc} />
         </div>
       </div>

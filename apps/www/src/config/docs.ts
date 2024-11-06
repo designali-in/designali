@@ -1,22 +1,77 @@
 import type {
+  ComponentsConfig,
   DesignConfig,
   DocumentationConfig,
   GuidesConfig,
 } from "@/comp/mdx/doc/types";
 
-export const designConfig: DesignConfig = {
+export const componentsConfig: ComponentsConfig = {
   mainNav: [
+    {
+      title: "Components",
+      href: "/components",
+    },
     {
       title: "Designs",
       href: "/designs",
     },
     {
-      title: "Guides",
-      href: "/guides",
-    },
-    {
       title: "Documentation",
       href: "/documentation",
+    },
+  ],
+  sidebarNav: [
+    {
+      title: "Getting Started",
+      items: [
+        {
+          title: "Introduction",
+          href: "/components",
+        },
+      ],
+    },
+    {
+      title: "Components",
+      items: [
+        {
+          title: "Button",
+          href: "/components/button",
+        },
+      ],
+    },
+    {
+      title: "Mockups",
+      items: [
+        {
+          title: "Macbook",
+          href: "/components/mockups/macbook",
+        },
+        {
+          title: "Mac",
+          href: "/components/mockups/mac",
+        },
+        {
+          title: "iPhone",
+          href: "/components/mockups/iphone",
+        },
+        {
+          title: "iPad",
+          href: "/components/mockups/ipad",
+        },
+        {
+          title: "Safari",
+          href: "/components/mockups/safari",
+        },
+      ],
+    },
+  ],
+};
+
+export const designsConfig: DesignConfig = {
+  mainNav: [
+    {
+      title: "Designs",
+      href: "/designs",
     },
   ],
   sidebarNav: [
@@ -51,31 +106,18 @@ export const designConfig: DesignConfig = {
       ],
     },
     {
-      title: "Components",
+      title: "Social Media",
       items: [
         {
-          title: "Macbook",
-          href: "/designs/ui/macbook",
+          title: "LinkedIn",
+          href: "/designs/guides/linkedin",
         },
         {
-          title: "Mac",
-          href: "/designs/ui/mac",
-        },
-        {
-          title: "iPhone",
-          href: "/designs/ui/iphone",
-        },
-        {
-          title: "iPad",
-          href: "/designs/ui/ipad",
-        },
-        {
-          title: "Safari",
-          href: "/designs/ui/safari",
+          title: "Youtube",
+          href: "/designs/guides/youtube",
         },
       ],
     },
-
     {
       title: "Open File",
       items: [

@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 
 import { env } from "process";
 import type { Metadata, Viewport } from "next";
-import { Suspense } from "react";
 import Analytics from "@/comp/analytics";
 import { Footer } from "@/comp/marketing/layout/footer";
 import NowPlaying from "@/comp/marketing/layout/footer/now-playing";

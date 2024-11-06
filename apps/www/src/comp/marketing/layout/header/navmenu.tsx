@@ -20,11 +20,44 @@ export function Menu() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/about" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About
-              </NavigationMenuLink>
+            <Link href={"/about"}>
+              <NavigationMenuTrigger>Designali</NavigationMenuTrigger>
             </Link>
+
+            <NavigationMenuContent className="space-y-3">
+              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      href="/about"
+                    >
+                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium">About</div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <ListItem href="/blogs" title="Blogs">
+                  Blogs
+                </ListItem>
+                <ListItem href="/pricing" title="Pricing">
+                  Pricing
+                </ListItem>
+                <ListItem href="/contact" title="Contact">
+                  Contact
+                </ListItem>
+                <ListItem href="/terms" title="Terms">
+                  Terms
+                </ListItem>
+                <ListItem href="/privacy" title="Privacy">
+                  Privacy
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
@@ -127,14 +160,6 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/ui" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                UI
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
             <Link href={"/tools"}>
               <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
             </Link>
@@ -214,25 +239,17 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/pricing" legacyBehavior passHref>
+            <Link href="/ui" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Pricing
+                UI
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/blogs" legacyBehavior passHref>
+            <Link href="/components" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Blogs
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <Link href="/designs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Designs
+                Components
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

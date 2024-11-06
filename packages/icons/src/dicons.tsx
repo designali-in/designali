@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { DesignaliIcon, DesignaliProps } from "./types";
+
 import {
   AArrowDown,
   AArrowUp,
@@ -265,6 +266,7 @@ import {
   ChartPie,
   ChartScatter,
   ChartSpline,
+  Check,
   Cherry,
   ChevronDown,
   ChevronFirst,
@@ -2846,6 +2848,7 @@ export const DIcons = {
 
   Plus,
   Scissors,
+  Check,
   Copy,
 
   // Brands

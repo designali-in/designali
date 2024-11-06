@@ -1,15 +1,13 @@
 "use client";
 
 import type { MainNavItem } from "@/types";
-import type { User } from "next-auth"; 
+import type { User } from "next-auth";
+
 import useScroll from "@/hooks/use-scroll";
 import { useSigninModal } from "@/hooks/use-signin-modal";
- 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 import { UserAccountNav } from "./user-account-nav";
-import Link from "next/link";
-import { cn } from "@/src/lib/utils";
 
 interface NavBarProps {
   user: Pick<User, "name" | "image" | "email"> | undefined;
@@ -19,11 +17,7 @@ interface NavBarProps {
   scroll?: boolean;
 }
 
-export function NavBar({
-  user, 
-  rightElements,
-  scroll = false,
-}: NavBarProps) {
+export function NavBar({ user, rightElements, scroll = false }: NavBarProps) {
   const scrolled = useScroll(50);
   const signInModal = useSigninModal();
 
@@ -34,9 +28,7 @@ export function NavBar({
       }`}
     >
       <div className="container flex h-16 items-center justify-between py-4">
-      
         <div className="flex items-center space-x-3">
-          
           {user ? (
             <UserAccountNav user={user} />
           ) : (

@@ -3,8 +3,9 @@ import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
 import { DocsPager } from "@/comp/mdx/doc/pager";
 import { DashboardTableOfContents } from "@/comp/mdx/doc/toc";
 import Mdx from "@/comp/mdx/layers";
+import { allComponents } from "contentlayer/generated";
+
 import { getTableOfContents } from "@/lib/toc";
-import { allDesigns } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
@@ -19,7 +20,7 @@ interface DesignPageProps {
 
 async function getDocFromParams(params: { slug: any }) {
   const slug = params.slug?.join("/") || "";
-  const doc = allDesigns.find(
+  const doc = allComponents.find(
     (doc: { slugAsParams: any }) => doc.slugAsParams === slug,
   );
 
@@ -33,7 +34,7 @@ async function getDocFromParams(params: { slug: any }) {
 export async function generateStaticParams(): Promise<
   DesignPageProps["params"][]
 > {
-  return allDesigns.map((doc: { slugAsParams: string }) => ({
+  return allComponents.map((doc: { slugAsParams: string }) => ({
     slug: doc.slugAsParams.split("/"),
   }));
 }
@@ -51,13 +52,13 @@ export default async function DocPage({ params }: DesignPageProps) {
     <main className="relative grid lg:gap-10 xl:grid-cols-[1fr_260px]">
       <div className="mx-auto w-full min-w-0 py-10">
         <DocsPageHeader heading={doc.title} text={doc.description} />
-        <ScrollProgress className="top-28" />
+        <ScrollProgress className="top-14" />
         <Mdx code={doc.body.code} />
         <Separator className="my-8" />
         <DocsPager doc={doc} />
       </div>
       <div className="hidden text-sm xl:block">
-        <div className="sticky top-24 h-[calc(100vh-3.5rem)] overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
+        <div className="sticky top-24 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
           <DashboardTableOfContents toc={toc} />
         </div>
       </div>

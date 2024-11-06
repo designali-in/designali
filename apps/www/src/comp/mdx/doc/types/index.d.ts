@@ -40,6 +40,11 @@ export interface DesignConfig {
   sidebarNav: SidebarNavItem[];
 }
 
+export interface ComponentsConfig {
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
+}
+
 export interface DIconsConfig {
   sidebarNav: SidebarNavItem[];
 }

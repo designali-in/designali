@@ -3,8 +3,9 @@ import Link from "next/link";
 import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
 import { DashboardTableOfContents } from "@/comp/mdx/doc/toc";
 import Mdx from "@/comp/mdx/layers";
-import { getTableOfContents } from "@/lib/toc";
 import { allDocumentations } from "contentlayer/generated";
+
+import { getTableOfContents } from "@/lib/toc";
 
 import "@/styles/mdx.css";
 
@@ -59,7 +60,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       </div>
 
       <div className="hidden text-sm xl:block">
-        <div className="sticky top-24 -my-10 h-[calc(100vh-3.5rem)] overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
+        <div className="sticky top-24 -my-10 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
           <DashboardTableOfContents toc={toc} />
         </div>
       </div>

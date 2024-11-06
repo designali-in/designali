@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Link from "next/link";
+import { Icons } from "@/comp/icons";
 import {
   Accordion,
   AccordionContent,
@@ -13,28 +14,21 @@ import { ScrollArea } from "@designali/ui/scroll-area";
 import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
 import { signOut } from "next-auth/react";
 
-import { Icons } from "@/comp/icons";
- 
-
 const navigation = [
   { name: "About AI", href: "/about", current: true },
-  { name: "Solutions", href: "/solutions", current: true },
+  { name: "Agency", href: "/agency", current: true },
   { name: "Products", href: "/products", current: true },
   { name: "Works", href: "/works", current: true },
-  { name: "Tools", href: "/tools", current: true },
-  { name: "Pricing", href: "/pricing", current: true },
-  { name: "Blogs", href: "/blogs", current: true },
-  { name: "Designs", href: "/designs", current: true },
+  { name: "Components", href: "/components", current: true },
 ];
 
 const helps = [
-  { name: "Contact", href: "/contact", current: true },
-  { name: "Privacy", href: "/privacy", current: true },
+  { name: "Tools", href: "/tools", current: true },
+  { name: "Blogs", href: "/blogs", current: true },
   { name: "Terms", href: "/terms", current: true },
 ];
 
 export default function Navbar() {
-   
   return (
     <Disclosure as="nav" className="w-full">
       {({ open }) => (
@@ -73,9 +67,7 @@ export default function Navbar() {
                 <Disclosure.Panel className="mx-auto px-6 md:max-w-3xl lg:hidden">
                   <ScrollArea>
                     <div className="flex flex-col py-3">
-                      <div className="mt-6 pb-3">
-                        
-                      </div>
+                      <div className="mt-6 pb-3"></div>
                       {navigation.map((item) => (
                         <DisclosureButton
                           key={item.name}
@@ -89,29 +81,26 @@ export default function Navbar() {
                           </p>
                         </DisclosureButton>
                       ))}
-                      
-                        <Accordion type="single" collapsible className="w-full">
-                          <AccordionItem value="item-1">
-                            <AccordionTrigger>
-                                Account
-                            </AccordionTrigger>
-                            <AccordionContent>
+
+                      <Accordion type="single" collapsible className="w-full">
+                        <AccordionItem value="item-1">
+                          <AccordionTrigger>Account</AccordionTrigger>
+                          <AccordionContent>
+                            <Link href={`/app/dashboard/settings`}>
+                              <p className="text-md flex px-4 py-2 font-semibold">
+                                Settings
+                              </p>
+                            </Link>
+                          </AccordionContent>
+                          <AccordionContent>
+                            <Button size="sm" onClick={() => signOut()}>
                               <Link href={`/app/dashboard/settings`}>
-                                <p className="text-md flex px-4 py-2 font-semibold">
-                                  Settings
-                                </p>
+                                <p>Log out</p>
                               </Link>
-                            </AccordionContent>
-                            <AccordionContent>
-                              <Button size="sm" onClick={() => signOut()}>
-                                <Link href={`/app/dashboard/settings`}>
-                                  <p>Log out</p>
-                                </Link>
-                              </Button>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-                      
+                            </Button>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
 
                       <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
