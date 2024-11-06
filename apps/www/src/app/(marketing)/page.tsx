@@ -14,8 +14,8 @@ export default function HomePage() {
       <Hero />
       <Bento />
       <Dash />
-      <Quote />
       <DBentoGrid />
+      <Quote />
       <div className="px-6 xl:px-0">
         <InstagramFeed />
       </div>

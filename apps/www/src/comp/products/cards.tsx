@@ -78,10 +78,18 @@ export function Graaadients() {
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
         </Link>
-        <Link href="/products/3dicons" className="rounded-3xl border">
+        <Link
+          href="https://drive.google.com/file/d/1yYm0Xwfz_a9Q6lLqsRNTK6X10egd5O0N/view?usp=drive_link"
+          target="_blank"
+          className="rounded-3xl border"
+        >
           <CardStack items={ICONS3D} />
         </Link>
-        <Link href="/products/2dicons" className="rounded-3xl border">
+        <Link
+          href="https://drive.google.com/file/d/1yYm0Xwfz_a9Q6lLqsRNTK6X10egd5O0N/view?usp=drive_link"
+          target="_blank"
+          className="rounded-3xl border"
+        >
           <CardStack items={ICONS2D} />
         </Link>
       </div>

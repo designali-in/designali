@@ -83,23 +83,6 @@ export function Menu() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/products/3dicons"
-                    >
-                      <Icons.box strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        3D Icons
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        +100 3D icons and shapes elements and backgrounds for
-                        your amazing design projects.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>

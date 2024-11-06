@@ -1,26 +1,5 @@
 import { existsSync, promises as fs } from "fs";
 import path from "path";
-import type { Config } from "@/src/utils/get-config";
-import { DEPRECATED_MESSAGE } from "@/src/deprecated";
-import {
-  DEFAULT_COMPONENTS,
-  DEFAULT_TAILWIND_CONFIG,
-  DEFAULT_TAILWIND_CSS,
-  DEFAULT_UTILS,
-  getConfig,
-  rawConfigSchema,
-  resolveConfigPaths,
-} from "@/src/utils/get-config";
-import { getPackageManager } from "@/src/utils/get-package-manager";
-import { getProjectConfig, preFlight } from "@/src/utils/get-project-info";
-import { handleError } from "@/src/utils/handle-error";
-import { logger } from "@/src/utils/logger";
-import {
-  getRegistryBaseColor,
-  getRegistryBaseColors,
-  getRegistryStyles,
-} from "@/src/utils/registry";
-import * as templates from "@/src/utils/templates";
 import chalk from "chalk";
 import { Command } from "commander";
 import { execa } from "execa";
@@ -29,6 +8,28 @@ import ora from "ora";
 import prompts from "prompts";
 import { z } from "zod";
 
+import type { Config } from "../utils/get-config";
+
+import { DEPRECATED_MESSAGE } from "../deprecated";
+import {
+  DEFAULT_COMPONENTS,
+  DEFAULT_TAILWIND_CONFIG,
+  DEFAULT_TAILWIND_CSS,
+  DEFAULT_UTILS,
+  getConfig,
+  rawConfigSchema,
+  resolveConfigPaths,
+} from "../utils/get-config";
+import { getPackageManager } from "../utils/get-package-manager";
+import { getProjectConfig, preFlight } from "../utils/get-project-info";
+import { handleError } from "../utils/handle-error";
+import { logger } from "../utils/logger";
+import {
+  getRegistryBaseColor,
+  getRegistryBaseColors,
+  getRegistryStyles,
+} from "../utils/registry";
+import * as templates from "../utils/templates";
 import { applyPrefixesCss } from "../utils/transformers/transform-tw-prefix";
 
 const PROJECT_DEPENDENCIES = [

@@ -1,15 +1,16 @@
 import path from "path";
-import { Config } from "@/src/utils/get-config";
+import { HttpsProxyAgent } from "https-proxy-agent";
+import fetch from "node-fetch";
+import { z } from "zod";
+
+import { Config } from "../get-config";
 import {
   registryBaseColorSchema,
   registryIndexSchema,
   registryItemWithContentSchema,
   registryWithContentSchema,
   stylesSchema,
-} from "@/src/utils/registry/schema";
-import { HttpsProxyAgent } from "https-proxy-agent";
-import fetch from "node-fetch";
-import { z } from "zod";
+} from "../registry/schema";
 
 const baseUrl = process.env.COMPONENTS_REGISTRY_URL ?? "https://designali.in";
 const agent = process.env.https_proxy
