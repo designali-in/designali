@@ -11,7 +11,7 @@ interface DocsLayoutProps {
 export default function DocsLayout({ children }: DocsLayoutProps) {
   return (
     <div className="mt-14 flex flex-col">
-      <div className="sticky top-14 z-40 w-full overflow-clip border-b border-t border-slate-400 bg-slate-100/60 backdrop-blur-md backdrop-filter hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900/60 hover:dark:bg-slate-950">
+      <div className="sticky z-40 w-full overflow-clip border-b border-t border-slate-400 bg-slate-100/60 backdrop-blur-md backdrop-filter hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900/60 hover:dark:bg-slate-950">
         <div className="flex h-14 items-center space-x-4 px-6 sm:justify-between sm:space-x-0 md:px-8">
           <MainNav items={componentsConfig.mainNav}>
             <ComponentsSidebarNav items={componentsConfig.sidebarNav} />
@@ -23,7 +23,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
           </div>
         </div>
       </div>
-      <div className="flex-1">{children}</div>
+      <div className=" flex-1">{children}</div>
     </div>
   );
 }

@@ -56,10 +56,9 @@ export default async function DocPage({ params }: DesignPageProps) {
     <main className="relative grid lg:gap-10 xl:grid-cols-[1fr_260px]">
       <div className="mx-auto w-full min-w-0 py-10">
         <DocsPageHeader heading={doc.title} text={doc.description} />
-        <ScrollProgress className="top-14" />
         {doc.links ? (
           <div className="flex items-center space-x-2 pt-4">
-            {doc.links?.doc && (
+            {doc.links.doc && (
               <Link
                 href={doc.links.doc}
                 target="_blank"
@@ -73,7 +72,7 @@ export default async function DocPage({ params }: DesignPageProps) {
                 <DIcons.ExternalLink className="h-3 w-3" />
               </Link>
             )}
-            {doc.links?.api && (
+            {doc.links.api && (
               <Link
                 href={doc.links.api}
                 target="_blank"

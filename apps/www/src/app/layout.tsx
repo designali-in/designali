@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { env } from "process";
 import type { Metadata, Viewport } from "next";
 import Analytics from "@/comp/analytics";
+import CookieConsent from "@/comp/common/CookieConsent";
 import { Footer } from "@/comp/marketing/layout/footer";
 import NowPlaying from "@/comp/marketing/layout/footer/now-playing";
 import { Header } from "@/comp/marketing/layout/header";
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <Header />
           {children}
+          <CookieConsent />
           <Footer />
           <NowPlaying />
 

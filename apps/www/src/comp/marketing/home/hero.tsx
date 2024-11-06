@@ -6,12 +6,11 @@ import Link from "next/link";
 
 import "@/styles/text.css";
 
-import DotPattern from "@/src/comp/uis/dot-pattern";
-import { Button } from "@designali/ui/button";
-
 import { renderCanvas } from "@/comp/common/render";
 import { TypeWriter } from "@/comp/common/type";
 import { Icons } from "@/comp/icons";
+import DotPattern from "@/src/comp/uis/dot-pattern";
+import { Button } from "@designali/ui/button";
 
 const Hero = () => {
   const talkAbout = [
@@ -39,7 +38,7 @@ const Hero = () => {
             <a
               href="/products/dicons"
               rel="noreferrer"
-              className="ml-1 flex items-center font-semibold hover:text-ali"
+              className="hover:text-ali ml-1 flex items-center font-semibold"
             >
               <div className="absolute inset-0 flex" aria-hidden="true" />
               Explore{" "}
@@ -52,28 +51,25 @@ const Hero = () => {
 
         <div className="mb-10 mt-4 md:mt-6">
           <div className="px-2">
-            <div className="relative mx-auto h-full max-w-6xl border border-ali/50 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)] md:p-12">
-              <span className="absolute bottom-20 right-40 hidden p-2 px-4 text-xs text-ali md:block">
-                Design in India
-              </span>
+            <div className="border-ali/50 relative mx-auto h-full max-w-6xl border p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)] md:px-6 md:py-12">
               <h1 className="flex select-none flex-col px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
                 <Icons.plus
                   strokeWidth={4}
-                  className="absolute -left-4 -top-4 h-8 w-8 text-ali"
+                  className="text-ali absolute -left-4 -top-4 h-8 w-8"
                 />
                 <Icons.plus
                   strokeWidth={4}
-                  className="absolute -bottom-4 -left-4 h-8 w-8 text-ali"
+                  className="text-ali absolute -bottom-4 -left-4 h-8 w-8"
                 />
                 <Icons.plus
                   strokeWidth={4}
-                  className="absolute -right-4 -top-4 h-8 w-8 text-ali"
+                  className="text-ali absolute -right-4 -top-4 h-8 w-8"
                 />
                 <Icons.plus
                   strokeWidth={4}
-                  className="absolute -bottom-4 -right-4 h-8 w-8 text-ali"
+                  className="text-ali absolute -bottom-4 -right-4 h-8 w-8"
                 />
-                A design agency with a touch of magic.
+                Your complete platform for the Design.
               </h1>
               <DotPattern className="-z-10 opacity-50" width={5} height={5} />
             </div>
@@ -81,7 +77,7 @@ const Hero = () => {
 
           <h1 className="mt-8 text-2xl md:text-2xl">
             Welcome to my creative playground! I&#39;m{" "}
-            <span className="font-bold text-ali">Ali </span>
+            <span className="text-ali font-bold">Ali </span>
           </h1>
 
           <p className="md:text-md mx-auto mb-16 mt-2 max-w-2xl px-6 text-sm text-slate-600 dark:text-slate-400 sm:px-6 md:max-w-4xl md:px-20 lg:text-lg">

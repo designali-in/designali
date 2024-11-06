@@ -19,12 +19,6 @@ import React, {
 } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  debounce,
-  randomElement,
-  randomNumberBetween,
-  uniq,
-} from "@/lib/dutils";
 import CustomSvgIcon from "@/src/comp/common/colors/CustomSvgIcon";
 import { presets } from "@/src/comp/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/comp/common/colors/usePngClipboardSupported";
@@ -34,12 +28,17 @@ import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
+import {
+  debounce,
+  randomElement,
+  randomNumberBetween,
+  uniq,
+} from "@/lib/dutils";
+
 import { MainIcons } from "./dicons";
 import { InstallIcon } from "./install-icon";
 import { Navigation } from "./nav";
 import { SideIcon } from "./side-icon";
-
-const scales = [0.25, 0.5, 1, 2];
 
 const FEEDBACK_EMAIL = "contact@designali.in";
 
@@ -193,7 +192,7 @@ export const DIconGenerator = () => {
   };
 
   const handleSearch = debounce((value: string) => {
-    router.replace(`?q=${value}`);
+    router.replace(`${value}`);
   }, 300); // 300ms delay
 
   const onChangeSearchTerm: React.FormEventHandler<HTMLInputElement> = (
@@ -236,18 +235,6 @@ export const DIconGenerator = () => {
   const filteredDIcons = Object.keys(DIcons).filter((key) =>
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
-
-  const scaleOptions = scales.map((value) => ({
-    value,
-    label: `${Math.round(value * 100)}%`,
-  }));
-
-  if (!scales.includes(scale)) {
-    scaleOptions.unshift({
-      value: scale,
-      label: `${Math.round(scale * 100)}%`,
-    });
-  }
 
   return (
     <Suspense>
