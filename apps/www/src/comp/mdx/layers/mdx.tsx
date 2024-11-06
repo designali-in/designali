@@ -9,6 +9,13 @@ import { Alert, AlertDescription, AlertTitle } from "@designali/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import { CopyButton, CopyNpmCommandButton } from "../../uis/copy-button";
 import Callout from "./callout";
 import { CodeBlockWrapper } from "./code-block-wrapper";
@@ -38,6 +45,10 @@ interface MdxProps {
 }
 
 const components = {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
   a: Link,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
@@ -245,7 +256,7 @@ const components = {
   Step: ({ className, ...props }: React.ComponentProps<"h1">) => (
     <h1
       className={cn(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "mt-8 scroll-m-20 font-heading text-xl font-semibold tracking-tight",
         className,
       )}
       {...props}
@@ -253,7 +264,7 @@ const components = {
   ),
   Steps: ({ ...props }) => (
     <div
-      className="[&>h1]:step steps mb-12 ml-4 border-l border-ali pl-8 [counter-reset:step]"
+      className="[&>h1]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]"
       {...props}
     />
   ),
@@ -316,7 +327,7 @@ const components = {
             value={__rawString__}
             src={__src__}
             event={__event__}
-            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+            className={cn(" absolute right-4 top-4", __withMeta__ && "top-16")}
           />
         )}
         {__npmCommand__ &&
@@ -370,7 +381,7 @@ const Mdx = (props: MdxProps) => {
   const Component = useMDXComponent(code);
 
   return (
-    <div className="prose dark:prose-invert w-full max-w-none">
+    <div className="prose w-full max-w-none dark:prose-invert">
       <Component components={{ ...components }} />
     </div>
   );

@@ -1,6 +1,12 @@
 import type { Registry } from "@/registry/schema";
 
 export const components: Registry = [
+  // Accordion
+  {
+    name: "accordion-01",
+    type: "registry:components",
+    files: ["components/accordion/accordion-01.tsx"],
+  },
   // Buttons
   {
     name: "button-01",

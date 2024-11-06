@@ -1,5 +1,9 @@
 import { getHighlighter } from "@shikijs/compat";
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  defineNestedType,
+  makeSource,
+} from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -92,6 +96,18 @@ export const Designs = defineDocumentType(() => ({
   computedFields,
 }));
 
+const LinksProperties = defineNestedType(() => ({
+  name: "LinksProperties",
+  fields: {
+    doc: {
+      type: "string",
+    },
+    api: {
+      type: "string",
+    },
+  },
+}));
+
 export const Components = defineDocumentType(() => ({
   name: "Components",
   filePathPattern: `components/**/*.mdx`,
@@ -104,6 +120,15 @@ export const Components = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    featured: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
+    links: {
+      type: "nested",
+      of: LinksProperties,
+    },
     component: {
       type: "boolean",
       default: false,
@@ -112,6 +137,11 @@ export const Components = defineDocumentType(() => ({
     published: {
       type: "boolean",
       default: true,
+    },
+    toc: {
+      type: "boolean",
+      default: true,
+      required: false,
     },
   },
   computedFields,

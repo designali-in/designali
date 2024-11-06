@@ -37,6 +37,10 @@ export const componentsConfig: ComponentsConfig = {
           title: "Button",
           href: "/components/button",
         },
+        {
+          title: "Accordion",
+          href: "/components/accordion",
+        },
       ],
     },
     {

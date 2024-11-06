@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
 import { DocsPager } from "@/comp/mdx/doc/pager";
@@ -10,7 +11,10 @@ import { getTableOfContents } from "@/lib/toc";
 import "@/styles/mdx.css";
 
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
+import { cn } from "@designali/ui";
+import { buttonVariants } from "@designali/ui/button";
 import { Separator } from "@designali/ui/separator";
+import { DIcons } from "dicons";
 
 interface DesignPageProps {
   params: {
@@ -53,6 +57,38 @@ export default async function DocPage({ params }: DesignPageProps) {
       <div className="mx-auto w-full min-w-0 py-10">
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <ScrollProgress className="top-14" />
+        {doc.links ? (
+          <div className="flex items-center space-x-2 pt-4">
+            {doc.links?.doc && (
+              <Link
+                href={doc.links.doc}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(
+                  buttonVariants({ size: "sm", variant: "outline" }),
+                  "gap-1",
+                )}
+              >
+                Docs
+                <DIcons.ExternalLink className="h-3 w-3" />
+              </Link>
+            )}
+            {doc.links?.api && (
+              <Link
+                href={doc.links.api}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(
+                  buttonVariants({ size: "sm", variant: "outline" }),
+                  "gap-1",
+                )}
+              >
+                API Reference
+                <DIcons.ExternalLink className="h-3 w-3" />
+              </Link>
+            )}
+          </div>
+        ) : null}
         <Mdx code={doc.body.code} />
         <Separator className="my-8" />
         <DocsPager doc={doc} />

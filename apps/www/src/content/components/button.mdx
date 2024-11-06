@@ -1,6 +1,7 @@
 ---
 title: Button
 description: Displays a button or a component that looks like a button.
+featured: true
 component: true
 ---
 
@@ -8,19 +9,11 @@ component: true
 
 ## Installation
 
-<Tabs defaultValue="cli">
+<Tabs defaultValue="manual">
 
 <TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
-<TabsContent value="cli">
-
-```bash
-npx shadcn@latest add button
-```
-
-</TabsContent>
 
 <TabsContent value="manual">
 
@@ -46,13 +39,90 @@ npm install @radix-ui/react-slot
 
 ## Usage
 
+```tsx
+import { Button } from "@/components/ui/button";
+```
+
+```tsx
+<Button variant="outline">Button</Button>
+```
+
 ## Link
 
 You can use the `buttonVariants` helper to create a link that looks like a
 button.
 
+```tsx
+import { buttonVariants } from "@/components/ui/button";
+```
+
+```tsx
+<Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
+```
+
 Alternatively, you can set the `asChild` parameter and nest the link component.
+
+```tsx
+<Button asChild>
+  <Link href="/login">Login</Link>
+</Button>
+```
 
 ## Examples
 
 ### Primary
+
+<ComponentPreview name="button-01" description="A primary button" />
+
+### Secondary
+
+<ComponentPreview name="button-02" description="A secondary button" />
+
+### Destructive
+
+<ComponentPreview name="button-05" description="A destructive button" />
+
+### Outline
+
+<ComponentPreview
+  name="button-07"
+  description="A button using the outline variant."
+/>
+
+### Ghost
+
+<ComponentPreview
+  name="button-08"
+  description="A button using the ghost variant"
+/>
+
+### Link
+
+<ComponentPreview
+  name="button-47"
+  description="A button using the link variant."
+/>
+
+### Icon
+
+<ComponentPreview name="button-20" description="An icon button" />
+
+### With Icon
+
+<ComponentPreview name="button-07" description="A button with an icon" />
+
+### Loading
+
+<ComponentPreview
+  name="button-13"
+  description="A button with a loading state."
+/>
+
+### As Child
+
+<ComponentPreview
+  name="button-03"
+  description="A button wrapping a custom Link component"
+/>
+
+## Changelog
