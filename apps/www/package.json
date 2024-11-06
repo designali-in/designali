@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm with-env next build",
+    "build": "contentlayer build && pnpm build:registry && next build",
     "clean": "git clean -xdf .next .turbo node_modules",
     "build:docs": "contentlayer build",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && prettier --loglevel silent --write \"registry/**/*.{ts,tsx,mdx}\" --cache",
