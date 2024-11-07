@@ -7,6 +7,17 @@ export const components: Registry = [
     type: "registry:components",
     files: ["components/accordion/accordion-01.tsx"],
   },
+  {
+    name: "accordion-02",
+    type: "registry:components",
+    files: ["components/accordion/accordion-02.tsx"],
+  },
+  // Toggle
+  {
+    name: "mode-toggle-01",
+    type: "registry:components",
+    files: ["components/toggle/mode-toggle-01.tsx"],
+  },
   // Buttons
   {
     name: "button-01",

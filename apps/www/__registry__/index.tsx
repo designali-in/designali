@@ -676,6 +676,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "accordion-02": {
+      name: "accordion-02",
+      type: "registry:components",
+      registryDependencies: undefined,
+      files: ["registry/default/components/accordion/accordion-02.tsx"],
+      component: React.lazy(() => import("@/registry/default/components/accordion/accordion-02.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "mode-toggle-01": {
+      name: "mode-toggle-01",
+      type: "registry:components",
+      registryDependencies: undefined,
+      files: ["registry/default/components/toggle/mode-toggle-01.tsx"],
+      component: React.lazy(() => import("@/registry/default/components/toggle/mode-toggle-01.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "button-01": {
       name: "button-01",
       type: "registry:components",

@@ -1,0 +1,72 @@
+---
+title: Dark Mode
+description: Adding dark mode to your next app.
+---
+
+## Dark mode
+
+<Steps>
+
+<Step>Install next-themes</Step>
+
+Start by installing next-themes:
+
+```bash
+npm install next-themes
+```
+
+<Step>Create a theme provider</Step>
+
+_components/theme-provider.tsx_
+
+```bash
+"use client"
+
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+import { type ThemeProviderProps } from "next-themes/dist/types"
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+}
+
+```
+
+<Step>Wrap your root layout</Step>
+
+Add the ThemeProvider to your root layout.
+
+_app/layout.tsx_
+
+```bash
+import { ThemeProvider } from "@/components/theme-provider"
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
+  )
+}
+
+```
+
+<Step>Add a mode toggle</Step>
+
+</Steps>
+
+Place a mode toggle on your site to toggle between light and dark mode.
+
+<ComponentPreview name="mode-toggle-01" />

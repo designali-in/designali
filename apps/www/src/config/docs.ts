@@ -28,6 +28,14 @@ export const componentsConfig: ComponentsConfig = {
           title: "Introduction",
           href: "/components",
         },
+        {
+          title: "Installation",
+          href: "/components/installation/next",
+        },
+        {
+          title: "Dark Mode",
+          href: "/components/installation/dark-mode",
+        },
       ],
     },
     {
@@ -85,14 +93,6 @@ export const designsConfig: DesignConfig = {
         {
           title: "Introduction",
           href: "/designs",
-        },
-        {
-          title: "Installation",
-          href: "/designs/installation/next",
-        },
-        {
-          title: "Dark Mode",
-          href: "/designs/installation/dark-mode",
         },
       ],
     },
