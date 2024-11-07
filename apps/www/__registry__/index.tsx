@@ -687,6 +687,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "navigation-menu-01": {
+      name: "navigation-menu-01",
+      type: "registry:components",
+      registryDependencies: undefined,
+      files: ["registry/default/components/navigation-menu/navigation-menu-01.tsx"],
+      component: React.lazy(() => import("@/registry/default/components/navigation-menu/navigation-menu-01.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "mode-toggle-01": {
       name: "mode-toggle-01",
       type: "registry:components",

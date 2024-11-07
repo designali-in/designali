@@ -2,8 +2,6 @@
 
 import type { BaseColor } from "@/registry/registry-base-colors";
 import * as React from "react";
-import { useConfig } from "@/hooks/use-config";
-import { cn } from "@/lib/utils";
 import { Button } from "@/registry/default/designali/ui/button";
 import { baseColors } from "@/registry/registry-base-colors";
 import { copyToClipboardWithMeta } from "@/src/comp/uis/copy-button";
@@ -26,6 +24,10 @@ import {
 } from "@radix-ui/react-icons";
 import template from "lodash.template";
 import { useTheme } from "next-themes";
+
+import { cn } from "@/lib/utils";
+import { useConfig } from "@/hooks/use-config";
+import { Slider } from "@/components/ui/slider";
 
 import { ThemeWrapper } from "../theme-wrapper";
 
@@ -79,7 +81,7 @@ function Customizer() {
             variant={"outline"}
             size="sm"
             onClick={() => setConfig({ ...config, style: "default" })}
-            className={cn(config.style === "default" && "border border-ali")}
+            className={cn(config.style === "default" && "border-ali border")}
           >
             Default
           </Button>
@@ -91,7 +93,7 @@ function Customizer() {
                     variant={"outline"}
                     size="sm"
                     onClick={() => setMode("light")}
-                    className={cn(mode === "light" && "border border-ali")}
+                    className={cn(mode === "light" && "border-ali border")}
                   >
                     <SunIcon className="mr-1 -translate-x-1" />
                     Light
@@ -100,7 +102,7 @@ function Customizer() {
                     variant={"outline"}
                     size="sm"
                     onClick={() => setMode("dark")}
-                    className={cn(mode === "dark" && "border-2 border-ali")}
+                    className={cn(mode === "dark" && "border-ali border-2")}
                   >
                     <MoonIcon className="mr-1 -translate-x-1" />
                     Dark
@@ -115,31 +117,6 @@ function Customizer() {
             </div>
           </div>
           <p className="rounded-lg border px-4 py-1">{config.theme}</p>
-          <div className="flex flex-wrap gap-2">
-            {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
-              return (
-                <div>
-                  <Button
-                    variant={"outline"}
-                    size="sm"
-                    key={value}
-                    onClick={() => {
-                      setConfig({
-                        ...config,
-                        radius: parseFloat(value),
-                      });
-                    }}
-                    className={cn(
-                      config.radius === parseFloat(value) &&
-                        "border-2 border-ali",
-                    )}
-                  >
-                    {value}
-                  </Button>
-                </div>
-              );
-            })}
-          </div>
 
           <CopyCodeButton
             variant="outline"
@@ -154,13 +131,32 @@ function Customizer() {
               setConfig({
                 ...config,
                 theme: "violet",
-                radius: 0.75,
+                radius: 1,
               });
             }}
           >
             <ResetIcon />
             <span className="sr-only">Reset</span>
           </Button>
+        </div>
+        <div className="flex gap-2">
+          <p>Radius</p>
+          <Slider
+            defaultValue={[1]}
+            max={1.5}
+            min={0}
+            step={0.1}
+            onValueChange={(value) => {
+              setConfig({
+                ...config,
+                radius: value[0], // Access the first element if value is passed as an array
+              });
+            }}
+            name="value"
+            value={[config.radius]}
+            className="w-full"
+          />
+          {config.radius}
         </div>
 
         <div className="space-y-1.5">
@@ -182,7 +178,7 @@ function Customizer() {
                     }}
                     className={cn(
                       "rounded-2xl",
-                      isActive && "rounded-2xl border-2 border-ali",
+                      isActive && "border-ali rounded-2xl border-2",
                     )}
                     style={
                       {

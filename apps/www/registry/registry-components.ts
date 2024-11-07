@@ -12,6 +12,12 @@ export const components: Registry = [
     type: "registry:components",
     files: ["components/accordion/accordion-02.tsx"],
   },
+  // Navigation Menu
+  {
+    name: "navigation-menu-01",
+    type: "registry:components",
+    files: ["components/navigation-menu/navigation-menu-01.tsx"],
+  },
   // Toggle
   {
     name: "mode-toggle-01",

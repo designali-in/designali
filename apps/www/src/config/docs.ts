@@ -49,6 +49,10 @@ export const componentsConfig: ComponentsConfig = {
           title: "Accordion",
           href: "/components/accordion",
         },
+        {
+          title: "Navigation Menu",
+          href: "/components/navigation-menu",
+        },
       ],
     },
     {

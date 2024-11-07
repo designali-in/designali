@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
 import { cn } from "@/src/lib/utils";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@designali/ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 
 export function Menu() {
   return (
@@ -29,7 +30,7 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/about"
                     >
                       <Icons.shapes strokeWidth={1} className="h-8 w-8" />
