@@ -33,7 +33,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  " group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-xs text-accent transition-colors  hover:text-primary",
+  " group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-xs  transition-colors hover:text-primary",
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -57,7 +57,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "mx-auto w-full p-8 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out",
+      "mx-auto w-full p-8 transition duration-500 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out",
       className,
     )}
     {...props}
@@ -74,7 +74,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full w-full")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "relative h-full w-full border-b border-primary bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out ",
+        "relative h-full w-full border-b border-primary bg-popover text-popover-foreground transition duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
         className,
       )}
       ref={ref}
@@ -92,7 +92,7 @@ const NavigationMenuIndicator = React.forwardRef<
   <NavigationMenuPrimitive.Indicator
     ref={ref}
     className={cn(
-      "top-full z-[1] flex h-1.5 items-end overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
+      "top-full z-[1] flex h-1.5 items-end overflow-hidden transition duration-500 data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className,
     )}
     {...props}

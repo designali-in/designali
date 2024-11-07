@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Icons } from "@/comp/icons";
 import { cn } from "@/src/lib/utils";
+import { DIcons } from "dicons";
 
 import {
   NavigationMenu,
@@ -18,7 +18,16 @@ import {
 export default function Menu() {
   return (
     <nav className="z-50 w-full  bg-popover backdrop-blur-md ">
-      <div className=" flex items-center   ">
+      <div className=" flex items-center justify-between  ">
+        <div className="  px-6  ">
+          <Link
+            aria-label="Logo"
+            href="/"
+            className="flex items-center px-6   md:px-0 lg:flex"
+          >
+            <DIcons.Designali className="text-ali w-5" />
+          </Link>
+        </div>
         <div className="px-4">
           <NavigationMenu>
             <NavigationMenuList>
@@ -35,7 +44,7 @@ export default function Menu() {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                           href="/about"
                         >
-                          <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                          <DIcons.Shapes strokeWidth={1} className="h-8 w-8" />
                           <div className="mb-2 mt-4 text-lg font-medium">
                             About
                           </div>
@@ -78,7 +87,7 @@ export default function Menu() {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                           href="/products/dicons"
                         >
-                          <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                          <DIcons.Shapes strokeWidth={1} className="h-8 w-8" />
                           <div className="mb-2 mt-4 text-lg font-medium">
                             DIcons
                           </div>
@@ -96,6 +105,7 @@ export default function Menu() {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                           href="/products/graaadients"
                         >
+                          <DIcons.Clover strokeWidth={1} className="h-8 w-8" />
                           <div className="mb-2 mt-4 text-lg font-medium">
                             Graaadients
                           </div>
@@ -120,6 +130,15 @@ export default function Menu() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
+        <div className="  px-6  ">
+          <Link
+            aria-label="Logo"
+            href="/"
+            className="flex items-center px-6 md:px-0 lg:flex"
+          >
+            <DIcons.Search className=" w-4" />
+          </Link>
+        </div>
       </div>
     </nav>
   );
@@ -135,14 +154,12 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md bg-slate-100 p-4 leading-none text-slate-600 no-underline outline-none transition-colors hover:bg-slate-200 dark:bg-slate-900 dark:text-slate-400 dark:hover:bg-slate-800",
+            "block select-none space-y-1 rounded-md bg-secondary p-4 leading-none  no-underline outline-none transition-colors hover:bg-accent  ",
             className,
           )}
           {...props}
         >
-          <div className="text-md text-black hover:text-black dark:text-white hover:dark:text-white">
-            {title}
-          </div>
+          <div className="text-md ">{title}</div>
           <p className="line-clamp-2 text-xs leading-snug text-muted-foreground/70">
             {children}
           </p>

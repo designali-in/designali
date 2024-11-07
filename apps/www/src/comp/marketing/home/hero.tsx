@@ -71,6 +71,14 @@ const Hero = () => {
                 />
                 Your complete platform for the Design.
               </h1>
+              <div className="flex items-center justify-center gap-1">
+                <span className="relative flex h-3 w-3 items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                </span>
+                <p className="text-xs text-green-500">Available Now</p>
+              </div>
+
               <DotPattern className="-z-10 opacity-50" width={5} height={5} />
             </div>
           </div>

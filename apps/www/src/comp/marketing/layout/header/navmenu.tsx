@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
 import { cn } from "@/src/lib/utils";
+import { DIcons } from "dicons";
 
 import {
   NavigationMenu,
@@ -33,11 +34,9 @@ export function Menu() {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/about"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">About</div>
+                      <div className="mb-2 text-lg font-medium">About</div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        Welcome to my creative playground! I'm Ali
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -71,10 +70,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dicons"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         DIcons
                       </div>
@@ -88,9 +87,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dshapes"
                     >
+                      <DIcons.Shapes strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         DShapes
                       </div>
@@ -104,9 +104,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/graaadients"
                     >
+                      <DIcons.Clover strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Graaadients
                       </div>
@@ -131,10 +132,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/agency/works"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">Works</div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         +10000 icons, alphabet, numbers and shapes for your
@@ -170,10 +171,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/tools/dicons"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Scissors strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Icon maker
                       </div>
@@ -187,10 +188,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/tools#short-links"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Link strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         AI short links.
                       </div>
@@ -204,10 +205,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/tools#image-converter"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Image strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Image Converter
                       </div>
@@ -221,10 +222,10 @@ export function Menu() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
-                      className="hover:bg-ali flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/tools#word-counter"
                     >
-                      <Icons.shapes strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.LetterText strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Word Counter
                       </div>
@@ -270,14 +271,12 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md bg-slate-100 p-4 leading-none text-slate-600 no-underline outline-none transition-colors hover:bg-slate-200 dark:bg-slate-900 dark:text-slate-400 dark:hover:bg-slate-800",
+            "block select-none space-y-1 rounded-md bg-secondary p-4 leading-none  no-underline outline-none transition-colors hover:bg-accent  ",
             className,
           )}
           {...props}
         >
-          <div className="text-md text-black hover:text-black dark:text-white hover:dark:text-white">
-            {title}
-          </div>
+          <div className="text-md ">{title}</div>
           <p className="line-clamp-2 text-xs leading-snug text-muted-foreground/70">
             {children}
           </p>
