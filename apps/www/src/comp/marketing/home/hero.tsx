@@ -10,7 +10,8 @@ import { renderCanvas } from "@/comp/common/render";
 import { TypeWriter } from "@/comp/common/type";
 import { Icons } from "@/comp/icons";
 import DotPattern from "@/src/comp/uis/dot-pattern";
-import { Button } from "@designali/ui/button";
+
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const talkAbout = [

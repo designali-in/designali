@@ -33,7 +33,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  " group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-xs  transition-colors hover:text-primary",
+  " group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-xs text-muted-foreground transition-colors hover:text-primary",
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -74,7 +74,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full w-full")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "relative h-full w-full border-b border-primary bg-popover text-popover-foreground transition duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
+        "relative h-full w-full border-b border-primary bg-popover text-muted-foreground transition duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
         className,
       )}
       ref={ref}

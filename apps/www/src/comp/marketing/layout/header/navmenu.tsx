@@ -34,7 +34,9 @@ export function Menu() {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/about"
                     >
-                      <div className="mb-2 text-lg font-medium">About</div>
+                      <div className="mb-2 text-lg font-medium text-primary">
+                        About
+                      </div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         Welcome to my creative playground! I'm Ali
                       </p>
@@ -74,7 +76,7 @@ export function Menu() {
                       href="/products/dicons"
                     >
                       <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         DIcons
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -91,7 +93,7 @@ export function Menu() {
                       href="/products/dshapes"
                     >
                       <DIcons.Shapes strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         DShapes
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -108,7 +110,7 @@ export function Menu() {
                       href="/products/graaadients"
                     >
                       <DIcons.Clover strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         Graaadients
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -136,7 +138,9 @@ export function Menu() {
                       href="/agency/works"
                     >
                       <DIcons.Book strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">Works</div>
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Works
+                      </div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         +10000 icons, alphabet, numbers and shapes for your
                         amazing design projects.
@@ -175,7 +179,7 @@ export function Menu() {
                       href="/tools/dicons"
                     >
                       <DIcons.Scissors strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         Icon maker
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -192,7 +196,7 @@ export function Menu() {
                       href="/tools#short-links"
                     >
                       <DIcons.Link strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         AI short links.
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -209,7 +213,7 @@ export function Menu() {
                       href="/tools#image-converter"
                     >
                       <DIcons.Image strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         Image Converter
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -226,7 +230,7 @@ export function Menu() {
                       href="/tools#word-counter"
                     >
                       <DIcons.LetterText strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         Word Counter
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -276,7 +280,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-md ">{title}</div>
+          <div className="text-md text-primary">{title}</div>
           <p className="line-clamp-2 text-xs leading-snug text-muted-foreground/70">
             {children}
           </p>
