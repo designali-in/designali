@@ -24,7 +24,7 @@ export default function HomePage() {
       </main>
       <Pricing />
       <CallToActionSection />
-      <main className="mx-auto md:max-w-7xl">
+      <main className="mx-auto px-6 md:max-w-7xl xl:px-0">
         <FAQ />
       </main>
       <Connect />

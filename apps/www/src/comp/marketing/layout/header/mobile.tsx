@@ -3,16 +3,18 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
+import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
+import { DIcons } from "dicons";
+import { signOut } from "next-auth/react";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/accordion";
-import { Button } from "@designali/ui/button";
-import { ScrollArea } from "@designali/ui/scroll-area";
-import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
-import { signOut } from "next-auth/react";
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const navigation = [
   { name: "About AI", href: "/about", current: true },
@@ -39,13 +41,13 @@ export default function Navbar() {
                 <DisclosureButton className="items-center justify-center p-2 text-center text-slate-600 dark:text-slate-400">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <Icons.close
+                    <DIcons.Close
                       strokeWidth={1}
                       className="block h-6 w-6"
                       aria-hidden="true"
                     />
                   ) : (
-                    <Icons.menu
+                    <DIcons.Equal
                       strokeWidth={1}
                       className="block h-6 w-6"
                       aria-hidden="true"
@@ -81,45 +83,48 @@ export default function Navbar() {
                           </p>
                         </DisclosureButton>
                       ))}
-
-                      <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="item-1">
-                          <AccordionTrigger>Account</AccordionTrigger>
-                          <AccordionContent>
-                            <Link href={`/app/dashboard/settings`}>
-                              <p className="text-md flex px-4 py-2 font-semibold">
-                                Settings
-                              </p>
-                            </Link>
-                          </AccordionContent>
-                          <AccordionContent>
-                            <Button size="sm" onClick={() => signOut()}>
+                      <div className="grid gap-3">
+                        <Accordion type="single" collapsible className="w-full">
+                          <AccordionItem value="item-1">
+                            <AccordionTrigger>Account</AccordionTrigger>
+                            <AccordionContent>
                               <Link href={`/app/dashboard/settings`}>
-                                <p>Log out</p>
+                                <p className="text-md flex px-4 py-2 font-semibold">
+                                  Settings
+                                </p>
                               </Link>
-                            </Button>
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
+                            </AccordionContent>
+                            <AccordionContent>
+                              <Button size="sm" onClick={() => signOut()}>
+                                <Link href={`/app/dashboard/settings`}>
+                                  <p>Log out</p>
+                                </Link>
+                              </Button>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
 
-                      <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="item-1">
-                          <AccordionTrigger>Others</AccordionTrigger>
-                          <AccordionContent>
-                            {helps.map((item) => (
-                              <Disclosure.Button
-                                key={item.name}
-                                as="a"
-                                href={item.href}
-                                className="text-md flex px-4 py-2 font-semibold"
-                                aria-current={item.current ? "page" : undefined}
-                              >
-                                {item.name}
-                              </Disclosure.Button>
-                            ))}
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
+                        <Accordion type="single" collapsible className="w-full">
+                          <AccordionItem value="item-1">
+                            <AccordionTrigger>Others</AccordionTrigger>
+                            <AccordionContent>
+                              {helps.map((item) => (
+                                <Disclosure.Button
+                                  key={item.name}
+                                  as="a"
+                                  href={item.href}
+                                  className="text-md flex px-4 py-2 font-semibold"
+                                  aria-current={
+                                    item.current ? "page" : undefined
+                                  }
+                                >
+                                  {item.name}
+                                </Disclosure.Button>
+                              ))}
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                      </div>
                     </div>
                   </ScrollArea>
                 </Disclosure.Panel>

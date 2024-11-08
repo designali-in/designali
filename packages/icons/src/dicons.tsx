@@ -336,6 +336,7 @@ import {
   ClipboardPlus,
   ClipboardType,
   ClipboardX,
+  Close,
   CloudCog,
   CloudDownload,
   CloudUpload,
@@ -2850,6 +2851,7 @@ export const DIcons = {
   Scissors,
   Check,
   Copy,
+  Close,
 
   // Brands
   X,

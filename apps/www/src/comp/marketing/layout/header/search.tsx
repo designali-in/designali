@@ -1,8 +1,10 @@
 "use client";
 
 import * as React from "react";
+import { DIcons } from "dicons";
+
 import { useCopyToClipboard } from "@/hooks/use-copy-clipboard";
-import { Button } from "@designali/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,9 +13,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@designali/ui/command";
-
-import { Icons } from "@/comp/icons";
+} from "@/components/ui/command";
 
 type Groups = {
   name: string;
@@ -51,7 +51,7 @@ const CommandMenu = () => {
       actions: [
         {
           title: "Copy Link",
-          icon: <Icons.copy strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.Copy strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: async () => {
             setOpen(false);
 
@@ -70,7 +70,7 @@ const CommandMenu = () => {
         },
         {
           title: "Download CV",
-          icon: <Icons.download strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.Download strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () => openLink("/Ali-CV.pdf"),
         },
       ],
@@ -80,33 +80,33 @@ const CommandMenu = () => {
       actions: [
         {
           title: "Whatsapp",
-          icon: <Icons.whatsapp strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.WhatsApp strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () => openLink("https://wa.me/917678432186"),
         },
         {
           title: "Instagram",
-          icon: <Icons.instagram strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.Instagram strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () => openLink("https://www.instagram.com/designali.in/"),
         },
         {
           title: "Linkedin",
-          icon: <Icons.linked strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.LinkedIn strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () =>
             openLink("https://www.linkedin.com/company/designali"),
         },
         {
           title: "Youtube",
-          icon: <Icons.youtube strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.YouTube strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () => openLink("https://www.youtube.com/@designali-in"),
         },
         {
           title: "Twitter",
-          icon: <Icons.twitterx strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.X strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () => openLink("https://x.com/designali_in"),
         },
         {
           title: "Facebook",
-          icon: <Icons.facebook strokeWidth={1} className="mr-3 h-5 w-5" />,
+          icon: <DIcons.Facebook strokeWidth={1} className="mr-3 h-5 w-5" />,
           onSelect: () => openLink("https://www.facebook.com/designali.agency"),
         },
       ],
@@ -118,12 +118,10 @@ const CommandMenu = () => {
       <Button
         variant="ghost"
         size="icon"
-        className="hidden md:block"
+        className="hidden justify-center md:flex"
         onClick={() => setOpen(true)}
-      >
-        <Icons.command strokeWidth={1} className="h-5 w-5" />
-        <span className="sr-only">Toggle theme</span>
-      </Button>
+        icon="Command"
+      ></Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>

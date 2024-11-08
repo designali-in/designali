@@ -52,7 +52,7 @@ export default function FUIPricingWithSpecialTwo() {
 
         <div className=" mt-6">
           <div className="mx-auto max-w-5xl rounded-[100px] border p-2 lg:rounded-full">
-            <dl className="grid grid-cols-1 gap-y-10 border py-10 text-center lg:grid-cols-3 lg:rounded-full">
+            <dl className="grid grid-cols-1 gap-y-10 rounded-[90px] border py-10 text-center lg:grid-cols-3 lg:rounded-full">
               <div className="mx-auto flex max-w-xs flex-col gap-y-2">
                 <dt className="ml-6 text-sm font-semibold uppercase tracking-[.3em] text-slate-400">
                   <p className="">Projects</p>

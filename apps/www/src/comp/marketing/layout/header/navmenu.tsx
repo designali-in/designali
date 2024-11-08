@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Icons } from "@/comp/icons";
 import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
@@ -193,52 +192,34 @@ export function Menu() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/tools#short-links"
+                      href="/tools/colors"
                     >
-                      <DIcons.Link strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Flower2 strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        AI short links.
+                        Colors
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        QR Code Generator. We've built a suite of powerful
-                        features that gives you marketing superpowers.
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/tools#image-converter"
-                    >
-                      <DIcons.Image strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Image Converter
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Drag some images here, or click to select files. Image
-                        converter tool convert JPG, PNG, etc.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
+                <li className="grid  gap-y-3">
+                  <ListItem href="/tools#short-links" title=" AI short links">
+                    AI short links
+                  </ListItem>
+                  <ListItem
+                    href="/tools#image-converter"
+                    title="Image Converter"
+                  >
+                    Image Converter
+                  </ListItem>
                 </li>
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/tools#word-counter"
-                    >
-                      <DIcons.LetterText strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Word Counter
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Count words, characters, characters without spaces,
-                        paragraphs and many more...
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
+                <li className="grid   gap-y-3">
+                  <ListItem href="/tools#word-counter" title=" Word Counter">
+                    Word Counter
+                  </ListItem>
                 </li>
               </ul>
             </NavigationMenuContent>

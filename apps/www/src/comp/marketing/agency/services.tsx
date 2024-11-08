@@ -154,7 +154,7 @@ export const DService: DExperience[] = [
 
 export function Related() {
   return (
-    <div className="mt-3 grid gap-3 md:grid-cols-3">
+    <div className="mt-3 grid grid-cols-2 gap-3 px-6 md:grid-cols-3 xl:px-0">
       {DService.map((Experience) => (
         <HighlightGroup className="group">
           <div

@@ -51,7 +51,7 @@ const navigation = {
           items: [
             { name: "Documentation", href: "/documentation" },
             { name: "Design", href: "/designs" },
-            { name: "Guides", href: "/guides" },
+            { name: "Components", href: "/components" },
             { name: "Blogs", href: "/blogs" },
           ],
         },

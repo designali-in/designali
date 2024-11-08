@@ -2,15 +2,15 @@
 
 import * as React from "react";
 import Link from "next/link";
- 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/src/lib/utils";
 import { useAnimate } from "framer-motion";
+
+import { Button, buttonVariants } from "@/components/ui/button";
 
 import { Icons } from "../icons";
 import { Logo } from "../logo";
 import { HighlighterItem, HighlightGroup } from "../uis/highlighter";
 import { Particles } from "../uis/particles";
-import { cn } from "@/src/lib/utils";
 
 export const Connect: React.FC = () => {
   const [scope, animate] = useAnimate();
@@ -54,7 +54,7 @@ export const Connect: React.FC = () => {
     );
   }, [animate]);
   return (
-    <section className="relative mx-auto mb-20 mt-6 max-w-7xl">
+    <section className="relative mx-auto mb-20 mt-6 max-w-7xl px-6 xl:px-0">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"

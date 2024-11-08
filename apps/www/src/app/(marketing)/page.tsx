@@ -13,8 +13,8 @@ export default function HomePage() {
     <main className="">
       <Hero />
       <Bento />
-      <Dash />
       <DBentoGrid />
+      <Dash />
       <Quote />
       <div className="px-6 xl:px-0">
         <InstagramFeed />

@@ -10,10 +10,7 @@ const BentoGrid = ({
 }) => {
   return (
     <div
-      className={cn(
-        "z-10 mx-auto grid max-w-7xl grid-cols-8 gap-3 pb-20",
-        className,
-      )}
+      className={cn("z-10 mx-auto grid max-w-7xl grid-cols-8 gap-3", className)}
     >
       {children}
     </div>
