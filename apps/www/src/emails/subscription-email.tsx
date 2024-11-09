@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   Body,
   Button,
@@ -9,8 +10,8 @@ import {
   Section,
   Text,
 } from "@react-email/components";
-import { siteConfig } from "@/config/site";
-import * as React from "react";
+
+import site from "@/config/site";
 
 interface SubscriptionEmailProps {
   name: string;
@@ -27,9 +28,9 @@ export const SubscriptionEmail = ({ name, type }: SubscriptionEmailProps) => {
   }[type];
 
   const content = {
-    created: `Thanks for subscribing to ${siteConfig.name}! We're excited to have you on board.`,
-    updated: `Your subscription to ${siteConfig.name} has been updated.`,
-    cancelled: `We're sorry to see you go. Your subscription to ${siteConfig.name} has been cancelled.`,
+    created: `Thanks for subscribing to ${site.name}! We're excited to have you on board.`,
+    updated: `Your subscription to ${site.name} has been updated.`,
+    cancelled: `We're sorry to see you go. Your subscription to ${site.name} has been cancelled.`,
   }[type];
 
   return (
@@ -43,7 +44,8 @@ export const SubscriptionEmail = ({ name, type }: SubscriptionEmailProps) => {
             <Text style={paragraph}>{content}</Text>
             <Hr style={hr} />
             <Text style={paragraph}>
-              If you have any questions, please don&apos;t hesitate to reach out.
+              If you have any questions, please don&apos;t hesitate to reach
+              out.
             </Text>
             <Button style={button} href={`${baseUrl}/dashboard`}>
               View Dashboard
@@ -51,7 +53,7 @@ export const SubscriptionEmail = ({ name, type }: SubscriptionEmailProps) => {
             <Text style={footer}>
               Best regards,
               <br />
-              The {siteConfig.name} Team
+              The {site.name} Team
             </Text>
           </Section>
         </Container>
