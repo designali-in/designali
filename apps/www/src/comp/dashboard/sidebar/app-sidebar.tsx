@@ -4,7 +4,9 @@ import type { User } from "next-auth";
 import * as React from "react";
 import Link from "next/link";
 import { Logo } from "@/comp/logo";
+import CommandMenu from "@/comp/marketing/layout/header/search";
 import { ThemeToggle } from "@/comp/marketing/layout/header/themetoggle";
+import { cn } from "@/src/lib/utils";
 import { Settings2, SquareTerminal } from "lucide-react";
 
 import {
@@ -61,6 +63,10 @@ const data = {
           title: "Appearance",
           url: "/dashboard/settings/appearance",
         },
+        {
+          title: "Notifications",
+          url: "/dashboard/settings/notifications",
+        },
       ],
     },
   ],
@@ -103,7 +109,10 @@ export function AppSidebar({
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={user} />
-        <ThemeToggle />
+        <div className={cn("grid flex-wrap gap-1 md:flex")}>
+          <ThemeToggle />
+          <CommandMenu />
+        </div>
       </SidebarFooter>
     </Sidebar>
   );

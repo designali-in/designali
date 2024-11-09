@@ -48,7 +48,9 @@ export function DeleteAccountForm() {
       </div>
       <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <DialogTrigger asChild>
-          <Button variant="destructive">Delete Account</Button>
+          <Button className="flex" variant="destructive">
+            Delete Account
+          </Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

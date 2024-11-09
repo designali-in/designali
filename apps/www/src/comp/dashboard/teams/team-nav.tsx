@@ -34,7 +34,7 @@ export function TeamNav({ slug, userRole }: TeamNavProps) {
   ];
 
   return (
-    <nav className="flex gap-4 pt-4">
+    <nav className="flex gap-1 py-4">
       {items.map((item) => (
         <Link
           key={item.href}
@@ -43,11 +43,11 @@ export function TeamNav({ slug, userRole }: TeamNavProps) {
             buttonVariants({ variant: "ghost" }),
             pathname === item.href
               ? "bg-muted hover:bg-muted"
-              : "hover:bg-transparent hover:underline",
+              : "hover:bg-secondary",
             "justify-start",
           )}
         >
-          <item.icon className="mr-2 h-4 w-4" />
+          <item.icon className=" h-4 w-4" />
           {item.title}
         </Link>
       ))}

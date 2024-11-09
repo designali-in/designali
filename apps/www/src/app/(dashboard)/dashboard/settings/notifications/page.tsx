@@ -16,27 +16,17 @@ export default async function SettingsProfile() {
   return (
     <main className="p-6">
       <div className="">
-        <h1 className="py-4 text-2xl font-semibold">Settings</h1>
-        <div className="grid gap-4">
+        <h1 className="py-4 text-2xl font-semibold">Notifications</h1>
+        <div className="grid gap-8">
           <Card>
             <CardHeader>
-              <CardTitle>Profile</CardTitle>
-              <CardDescription>Manage your profile information</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ProfileForm user={session.user} />
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Delete Account</CardTitle>
+              <CardTitle>Email Preferences</CardTitle>
               <CardDescription>
-                Permanently delete your account and all associated data
+                Manage your email notification preferences
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <DeleteAccountForm />
+              <EmailPreferencesForm user={session.user} />
             </CardContent>
           </Card>
         </div>

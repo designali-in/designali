@@ -84,9 +84,8 @@ export default async function TeamPage({
             <h1 className="py-4 text-2xl font-semibold">{team.name}</h1>
             {canManageTeam && <InviteMemberDialog teamId={team.id} />}
           </div>
-          <TeamNav slug={team.slug} userRole={userRole} />
         </div>
-
+        <TeamNav slug={team.slug} userRole={userRole} />
         <TeamOverview team={team} />
 
         <Card>

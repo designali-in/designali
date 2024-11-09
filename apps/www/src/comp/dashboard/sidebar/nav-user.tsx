@@ -2,7 +2,7 @@
 
 import type { User } from "next-auth";
 import Link from "next/link";
-import { BadgeCheck, ChevronsUpDown, LogOut } from "lucide-react";
+import { DIcons } from "dicons";
 import { signOut } from "next-auth/react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -19,7 +19,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from "@/components/ui/sidebar";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -44,7 +43,7 @@ export function NavUser({ user }: UserAccountNavProps) {
                 <span className="truncate font-semibold">{user.name}</span>
                 <span className="truncate text-xs">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <DIcons.ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -72,8 +71,17 @@ export function NavUser({ user }: UserAccountNavProps) {
                   className="flex items-center space-x-2.5"
                   href={`/dashboard`}
                 >
-                  <BadgeCheck className="h-4 w-4" />
+                  <DIcons.BadgeCheck className="h-4 w-4" />
                   <p className="text-sm"> Account</p>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  className="flex items-center space-x-2.5"
+                  href={`/dashboard/settings`}
+                >
+                  <DIcons.Settings className="h-4 w-4" />
+                  <p className="text-sm"> Settings</p>
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
@@ -87,7 +95,7 @@ export function NavUser({ user }: UserAccountNavProps) {
               }}
             >
               <div className="flex items-center space-x-2.5">
-                <LogOut className="h-4 w-4" />
+                <DIcons.LogOut className="h-4 w-4" />
                 <p className="text-sm">Log out </p>
               </div>
             </DropdownMenuItem>

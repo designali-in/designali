@@ -8,13 +8,13 @@ import { useSearchParams } from "next/navigation";
 import { Button } from "@designali/ui/button";
 import { Input } from "@designali/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { DIcons } from "dicons";
 import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 import { userAuthSchema } from "@/lib/validations/auth";
-import { Icons } from "../icons";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: string;
@@ -45,7 +45,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
 
     setIsLoading(false);
 
-    if (!signInResult?.ok) {
+    if (!signInResult.ok) {
       return toast.error("Your sign in request failed. Please try again.");
     }
 
@@ -99,31 +99,31 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
         </div>
       </div>
       <div>
-      <Button
-      className="w-full" variant="outline" size={"lg"}
-        type="button"
-        
-        onClick={() => {
-          setIsGoogleLoading(true);
-          signIn("google");
-        }}
-        disabled={isLoading || isGoogleLoading}
-      >
-        {isGoogleLoading ? (
-          <Icons.arrowright className="mr-2 size-4 animate-spin" />
-        ) : (
-          <Icons.send className="mr-2 size-4" />
-        )}{" "}
-        <p className="px-2">Continue with Google </p>
-        <Image
+        <Button
+          className="w-full"
+          variant="outline"
+          size={"lg"}
+          type="button"
+          onClick={() => {
+            setIsGoogleLoading(true);
+            signIn("google");
+          }}
+          disabled={isLoading || isGoogleLoading}
+        >
+          {isGoogleLoading ? (
+            <DIcons.Loader className="mr-2 size-4 animate-spin" />
+          ) : (
+            <DIcons.Send className="mr-2 size-4" />
+          )}{" "}
+          <p className="px-2">Continue with Google </p>
+          <Image
             src="/icons/google.svg"
             alt="Your Image"
             height={50}
             width={50}
             className="h-5 w-5"
           />
-      </Button>
-        
+        </Button>
       </div>
     </div>
   );

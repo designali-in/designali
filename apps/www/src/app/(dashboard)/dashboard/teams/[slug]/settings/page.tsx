@@ -1,5 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import { PendingInvites } from "@/comp/dashboard/teams/pending-invites";
+import { TeamNav } from "@/comp/dashboard/teams/team-nav";
 import { TeamSettingsForm } from "@/comp/forms/team-settings-form";
 
 import { auth } from "@/lib/auth";
@@ -66,9 +67,13 @@ export default async function TeamSettingsPage({
 
   return (
     <div className="p-6">
-      <div>
-        <h1 className="py-4 text-2xl font-semibold">Team Settings</h1>
-        <div className="grid gap-8">
+      <div className="grid gap-4">
+        <div className="flex flex-col gap-4">
+          <h1 className="py-4 text-2xl font-semibold">Team Settings</h1>
+        </div>
+        <TeamNav slug={team.slug} userRole={userRole} />
+
+        <div className="grid gap-4">
           <Card>
             <CardHeader>
               <CardTitle>General</CardTitle>
