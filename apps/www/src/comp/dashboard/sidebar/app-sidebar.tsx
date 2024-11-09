@@ -7,8 +7,9 @@ import { Logo } from "@/comp/logo";
 import CommandMenu from "@/comp/marketing/layout/header/search";
 import { ThemeToggle } from "@/comp/marketing/layout/header/themetoggle";
 import { cn } from "@/src/lib/utils";
-import { Settings2, SquareTerminal } from "lucide-react";
+import { DIcons } from "dicons";
 
+import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -17,9 +18,11 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 
 import { NavMain } from "./nav-main";
+import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
 
 const data = {
@@ -27,7 +30,7 @@ const data = {
     {
       title: "Dashboard",
       url: "/dashboard",
-      icon: SquareTerminal,
+      icon: DIcons.SquareTerminal,
       isActive: true,
       items: [
         {
@@ -44,7 +47,7 @@ const data = {
     {
       title: "Settings",
       url: "/dashboard/settings",
-      icon: Settings2,
+      icon: DIcons.Settings2,
       isActive: true,
       items: [
         {
@@ -69,19 +72,60 @@ const data = {
         },
       ],
     },
+    {
+      title: "Designs",
+      url: "/daesigns",
+      icon: DIcons.Shapes,
+      isActive: false,
+      items: [
+        {
+          title: "Components",
+          url: "/components",
+        },
+        {
+          title: "UI",
+          url: "/ui",
+        },
+        {
+          title: "Colors",
+          url: "/colors",
+        },
+        {
+          title: "Tools",
+          url: "/tools",
+        },
+        {
+          title: "Agency",
+          url: "/agency",
+        },
+      ],
+    },
+  ],
+  navSecondary: [
+    {
+      title: "Contact",
+      url: "/contact",
+      icon: DIcons.Mail,
+    },
+    {
+      title: "Feedback",
+      url: "https://www.instagram.com/designali.in/",
+      icon: DIcons.Send,
+    },
   ],
 };
 
 // {{user} : UserAccountNavProps}
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, "name" | "image" | "email">;
+  user: Pick<User, "name" | "image" | "email" | "id">;
 }
 
 export function AppSidebar({
   user,
   ...props
 }: React.ComponentProps<typeof Sidebar> & UserAccountNavProps) {
+  const { isMobile } = useSidebar();
   return (
     <Sidebar collapsible="icon" variant="inset" {...props}>
       <SidebarHeader>
@@ -106,6 +150,10 @@ export function AppSidebar({
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
+        <div className="px-2">
+          <Separator />
+        </div>
+        <NavSecondary items={data.navSecondary} className="" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={user} />

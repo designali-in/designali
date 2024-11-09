@@ -28,7 +28,7 @@ export default function MarketingLayout({ children }: RootLayoutProps) {
     <Suspense>
       <main className="mx-auto my-20 mt-40 max-w-7xl px-6 xl:px-0">
         <PageTitle
-          title={lastSegment}
+          title={lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1)}
           description={` Designali an extensive collection of copy-and-paste components for quickly building app UIs. It's free, open-source, and ready to drop into your projects.`}
         />
         <div className="mt-4 flex justify-center">
@@ -39,11 +39,13 @@ export default function MarketingLayout({ children }: RootLayoutProps) {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/ui">ui</BreadcrumbLink>
+                <BreadcrumbLink href="/ui">Ui</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>{lastSegment}</BreadcrumbPage>
+                <BreadcrumbPage>
+                  {lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1)}
+                </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

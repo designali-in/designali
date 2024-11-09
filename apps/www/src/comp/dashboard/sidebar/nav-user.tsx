@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/sidebar";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, "name" | "image" | "email">;
+  user: Pick<User, "name" | "image" | "email" | "id">;
 }
 
 export function NavUser({ user }: UserAccountNavProps) {
@@ -41,7 +41,7 @@ export function NavUser({ user }: UserAccountNavProps) {
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">{user.name}</span>
-                <span className="truncate text-xs">{user.email}</span>
+                <span className="truncate text-xs">{user.id}</span>
               </div>
               <DIcons.ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>

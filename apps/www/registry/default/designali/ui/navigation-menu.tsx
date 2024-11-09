@@ -74,7 +74,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full w-full")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "relative h-full w-full border-b border-primary bg-popover text-muted-foreground transition duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
+        "relative h-full w-full border-b border-secondary bg-popover text-muted-foreground transition duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
         className,
       )}
       ref={ref}
