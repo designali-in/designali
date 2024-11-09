@@ -18,7 +18,7 @@ interface ProtectedLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function Admin({ children }: ProtectedLayoutProps) {
+export default async function Users({ children }: ProtectedLayoutProps) {
   const user = await getCurrentUser();
 
   if (user || user.role !== "USER")

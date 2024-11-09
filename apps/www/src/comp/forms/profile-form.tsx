@@ -97,7 +97,12 @@ export function ProfileForm({ user }: ProfileFormProps) {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Your email" type="email" {...field} />
+                <Input
+                  disabled
+                  placeholder="Your email"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 This is the email associated with your account.

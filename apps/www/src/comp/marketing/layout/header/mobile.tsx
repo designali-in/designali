@@ -1,10 +1,8 @@
 "use client";
 
 import { Fragment } from "react";
-import Link from "next/link";
 import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
 import { DIcons } from "dicons";
-import { signOut } from "next-auth/react";
 
 import {
   Accordion,
@@ -12,7 +10,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const navigation = [
@@ -83,26 +80,6 @@ export default function Navbar() {
                         </DisclosureButton>
                       ))}
                       <div className="grid gap-3">
-                        <Accordion type="single" collapsible className="w-full">
-                          <AccordionItem value="item-1">
-                            <AccordionTrigger>Account</AccordionTrigger>
-                            <AccordionContent>
-                              <Link href={`/app/dashboard/settings`}>
-                                <p className="text-md flex px-4 py-2 font-semibold">
-                                  Settings
-                                </p>
-                              </Link>
-                            </AccordionContent>
-                            <AccordionContent>
-                              <Link href={`/app/dashboard/settings`}>
-                                <Button size="sm" onClick={() => signOut()}>
-                                  Log out
-                                </Button>
-                              </Link>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-
                         <Accordion type="single" collapsible className="w-full">
                           <AccordionItem value="item-1">
                             <AccordionTrigger>Others</AccordionTrigger>
