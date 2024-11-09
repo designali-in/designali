@@ -1,6 +1,6 @@
 /// <reference types="../../tooling/eslint/types.d.ts" />
 
-import baseConfig from "@dingify/eslint-config/base";
+import baseConfig from "@designali/eslint-config/base";
 
 export default [
   ...baseConfig,

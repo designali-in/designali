@@ -1,5 +1,18 @@
 [
   {
+    "name": "Sidebar",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/sidebar.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "accordion",
     "type": "registry:ui",
     "dependencies": [

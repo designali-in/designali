@@ -8,17 +8,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import type { SettingsType } from "@/src/types";
+import type { SettingsType } from "@/src/types/color";
 import type { ColorChangeHandler } from "react-color";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  debounce,
-  randomElement,
-  randomNumberBetween,
-  uniq,
-} from "@/lib/dutils";
 import CustomSvgIcon from "@/src/comp/common/colors/CustomSvgIcon";
 import { presets } from "@/src/comp/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/comp/common/colors/usePngClipboardSupported";
@@ -27,6 +21,13 @@ import { ScrollArea } from "@designali/ui/scroll-area";
 import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
+
+import {
+  debounce,
+  randomElement,
+  randomNumberBetween,
+  uniq,
+} from "@/lib/dutils";
 
 import { DBrands } from "../icons";
 import { InstallIcon } from "../main/install-icon";

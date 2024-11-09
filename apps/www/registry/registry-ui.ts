@@ -3,6 +3,12 @@ import type { Registry } from "@/registry/schema";
 export const ui: Registry = [
   // UI
   {
+    name: "Sidebar",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/sidebar.tsx"],
+  },
+  {
     name: "accordion",
     type: "registry:ui",
     dependencies: [""],

@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
 import * as React from "react";
 import { cn } from "@designali/ui";
 
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {

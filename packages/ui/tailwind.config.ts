@@ -1,4 +1,3 @@
- 
 import type { Config } from "tailwindcss";
 import baseConfig from "@designali/tailwind-config";
 

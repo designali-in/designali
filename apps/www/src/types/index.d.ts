@@ -1,12 +1,12 @@
+import type { Icons } from "@/components/shared/icons";
+import type { User } from "@prisma/client";
 import type { Icon } from "lucide-react";
-import { Icons } from "@/components/shared/icons";
-import { User } from "@prisma/client";
 
-export type NavItem = {
+export interface NavItem {
   title: string;
   href: string;
   disabled?: boolean;
-};
+}
 
 export type MainNavItem = NavItem;
 
@@ -26,7 +26,7 @@ export type SidebarNavItem = {
     }
 );
 
-export type SiteConfig = {
+export interface SiteConfig {
   name: string;
   description: string;
   url: string;
@@ -36,28 +36,28 @@ export type SiteConfig = {
     twitter: string;
     github: string;
   };
-};
+}
 
-export type DocsConfig = {
+export interface DocsConfig {
   mainNav: MainNavItem[];
   sidebarNav: SidebarNavItem[];
-};
+}
 
-export type MarketingConfig = {
+export interface MarketingConfig {
   mainNav: MainNavItem[];
-};
+}
 
-export type DashboardConfig = {
-  mainNav: MainNavItem[];
-  sidebarNav: SidebarNavItem[];
-};
-
-export type PropertyConfig = {
+export interface DashboardConfig {
   mainNav: MainNavItem[];
   sidebarNav: SidebarNavItem[];
-};
+}
 
-export type SubscriptionPlan = {
+export interface PropertyConfig {
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
+}
+
+export interface SubscriptionPlan {
   title: string;
   description: string;
   benefits: string[];
@@ -70,7 +70,7 @@ export type SubscriptionPlan = {
     monthly: string | null;
     yearly: string | null;
   };
-};
+}
 
 export type UserSubscriptionPlan = SubscriptionPlan &
   Pick<User, "stripeCustomerId" | "stripeSubscriptionId" | "stripePriceId"> & {
@@ -80,38 +80,72 @@ export type UserSubscriptionPlan = SubscriptionPlan &
     isCanceled?: boolean;
   };
 
-  // compare plans
+// compare plans
 export type ColumnType = string | boolean | null;
 export type PlansRow = { feature: string; tooltip?: string } & {
   [key in (typeof plansColumns)[number]]: ColumnType;
 };
 
-  export interface Artist {
+export interface Artist {
+  id: string;
+  name: string;
+  type: string;
+  href: string;
+}
+
+export interface NowPlayingSong {
+  album: string;
+  albumImageUrl: string;
+  artist: string;
+  isPlaying: boolean;
+  songUrl: string;
+  title: string;
+}
+
+export interface Views {
+  views: number;
+}
+
+export interface Likes {
+  likes: number;
+  currentUserLikes: number;
+}
+
+export interface YouTube {
+  subscribers: number;
+  views: number;
+}
+
+export interface TeamMember {
+  id: string;
+  role: Role;
+  userId: string;
+  teamId: string;
+  user: {
+    name: string | null;
+    email: string | null;
+    image: string | null;
+  };
+}
+
+export interface Team {
+  id: string;
+  name: string;
+  slug: string;
+  createdAt: Date;
+  updatedAt: Date;
+  members: {
+    user: {
+      name: string | null;
+      email: string | null;
+      image: string | null;
+    };
     id: string;
-    name: string;
-    type: string;
-    href: string;
-  }
-  
-  export interface NowPlayingSong {
-    album: string;
-    albumImageUrl: string;
-    artist: string;
-    isPlaying: boolean;
-    songUrl: string;
-    title: string;
-  }
-
-  export interface Views {
-    views: number;
-  }
-  
-  export interface Likes {
-    likes: number;
-    currentUserLikes: number;
-  }
-
-  export interface YouTube {
-    subscribers: number;
-    views: number;
-  }
+    userId: string;
+    role: Role;
+    teamId: string;
+  }[];
+  _count: {
+    members: number;
+  };
+}

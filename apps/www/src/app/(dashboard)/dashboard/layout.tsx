@@ -1,5 +1,7 @@
+import { AppSidebar } from "@/comp/dashboard/sidebar/app-sidebar";
+
 import { getCurrentUser } from "@/lib/session";
-import { AppTabs } from "@/src/comp/dashboard/app/app-tabs";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 interface ProtectedLayoutProps {
   children: React.ReactNode;
@@ -10,9 +12,11 @@ export default async function Admin({ children }: ProtectedLayoutProps) {
 
   if (user || user.role !== "USER")
     return (
-      <>
-      <AppTabs />
-        <div className="my-20">{children}</div>
-      </>
+      <div className="relative mt-14">
+        <SidebarProvider>
+          <AppSidebar />
+          <main>{children}</main>
+        </SidebarProvider>
+      </div>
     );
 }

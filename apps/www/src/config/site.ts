@@ -4,6 +4,7 @@ interface Site {
   url: string;
   title: string;
   name: string;
+  emails: string;
   keywords: string[];
   titleTemplate: string;
   description: string;
@@ -19,6 +20,7 @@ const site: Site = {
   url: process.env.NODE_ENV === "production" ? prodBaseURL : devBaseURL,
   title: "Ali Imam",
   name: "Ali Imam",
+  emails: "visual.imam@gmail.com",
   keywords: ["Ali Imam", "Next.js", "React", "TypeScript", "Node.js"],
   titleTemplate: "Ali Imam",
   description: "Ali Imam • Art Director",

@@ -46,6 +46,7 @@ export interface ButtonProps
   asChild?: boolean;
   icon?: keyof typeof DIcons; // Icon name as a string
   styleicon?: "left" | "right";
+  loading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -56,6 +57,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       styleicon = "right",
       asChild = false,
+      loading = false,
       icon,
       ...props
     },
@@ -72,6 +74,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {styleicon === "left" && IconComponent && (
           <IconComponent strokeWidth={1} className="h-5 w-5" />
         )}
+        {loading ? (
+          <>
+            <DIcons.Loader className="mr-2 h-4 w-4 animate-spin" />
+            Loading...
+          </>
+        ) : null}
 
         {props.children}
 

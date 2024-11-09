@@ -12,6 +12,13 @@ enum UserRole {
   USER
 }
 
+enum Role {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+
 model Account {
   id                String   @id @default(cuid())
   userId            String
@@ -62,9 +69,11 @@ model User {
 
   role          UserRole  @default(USER)
 
-  accounts Account[]
-  sessions Session[]
-  UserUrl  UserUrl[]
+  accounts      Account[]
+  sessions      Session[]
+  UserUrl       UserUrl[]
+  teams             TeamMember[]
+  teamActivities    TeamActivity[]
 
   stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
   stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
@@ -135,4 +144,55 @@ model UserUrl {
   @@unique([urlId, ip])
   @@index([urlId])
   @@map(name: "url_metas")
+}
+
+model Team {
+  id          String       @id @default(cuid())
+  name        String
+  slug        String       @unique
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  members     TeamMember[]
+  invitations Invitation[]
+  activities TeamActivity[]
+}
+
+model TeamMember {
+  id        String   @id @default(cuid())
+  role      Role     @default(MEMBER)
+  teamId    String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([teamId, userId])
+}
+
+model Invitation {
+  id        String   @id @default(cuid())
+  email     String
+  role      Role     @default(MEMBER)
+  token     String   @unique
+  expires   DateTime
+  teamId    String
+  createdAt DateTime @default(now())
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@index([email])
+}
+
+model TeamActivity {
+  id        String   @id @default(cuid())
+  teamId    String
+  userId    String
+  event     String   // e.g., "member_added", "member_removed", "role_updated"
+  metadata  Json     // Additional event data
+  createdAt DateTime @default(now())
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([teamId])
+  @@index([userId])
 }

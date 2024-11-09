@@ -1,12 +1,12 @@
 "use client";
 
 import type { Dispatch, SetStateAction } from "react";
+import { Dialog, DialogContent } from "@designali/ui/dialog";
 // import { useRouter } from "next/router";
 import { Drawer } from "vaul";
 
-import { Dialog, DialogContent } from "@designali/ui/dialog";
-import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 interface ModalProps {
   children: React.ReactNode;
@@ -45,9 +45,8 @@ export function Modal({
     // router.back();
     // }
   };
-  const { isMobile } = useMediaQuery();
 
-  if (isMobile && !desktopOnly) {
+  if (!desktopOnly) {
     return (
       <Drawer.Root
         open={setShowModal ? showModal : true}

@@ -5,6 +5,17 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
+    "Sidebar": {
+      name: "Sidebar",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/sidebar.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/sidebar.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion": {
       name: "accordion",
       type: "registry:ui",
