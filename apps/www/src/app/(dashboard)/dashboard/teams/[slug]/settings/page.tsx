@@ -58,37 +58,39 @@ export default async function TeamSettingsPage({
   const team = await getTeam(params.slug);
   const userRole = team.members.find(
     (member) => member.userId === session.user.id,
-  )?.role;
+  ).role;
 
   if (userRole !== "OWNER" && userRole !== "ADMIN") {
     redirect(`/dashboard/teams/${params.slug}`);
   }
 
   return (
-    <div className="mx-auto mt-40 flex max-w-7xl flex-col gap-8">
-      <h1 className="text-3xl font-bold">Team Settings</h1>
-      <div className="grid gap-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>General</CardTitle>
-            <CardDescription>
-              Manage your team settings and preferences
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <TeamSettingsForm team={team} userRole={userRole} />
-          </CardContent>
-        </Card>
+    <div className="p-6">
+      <div>
+        <h1 className="py-4 text-2xl font-semibold">Team Settings</h1>
+        <div className="grid gap-8">
+          <Card>
+            <CardHeader>
+              <CardTitle>General</CardTitle>
+              <CardDescription>
+                Manage your team settings and preferences
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <TeamSettingsForm team={team} userRole={userRole} />
+            </CardContent>
+          </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Pending Invitations</CardTitle>
-            <CardDescription>Manage pending team invitations</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <PendingInvites invitations={team.invitations} teamId={team.id} />
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Pending Invitations</CardTitle>
+              <CardDescription>Manage pending team invitations</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <PendingInvites invitations={team.invitations} teamId={team.id} />
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   );

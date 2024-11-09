@@ -15,6 +15,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import * as z from "zod";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -82,7 +83,7 @@ export function InviteMemberForm({ teamId, onSuccess }: InviteMemberFormProps) {
             <FormItem>
               <FormLabel>Email address</FormLabel>
               <FormControl>
-                <Input placeholder="member@example.com" {...field} />
+                <Input placeholder="contact@designali.in" {...field} />
               </FormControl>
               <FormDescription>
                 Enter the email address of the person you want to invite
@@ -115,7 +116,9 @@ export function InviteMemberForm({ teamId, onSuccess }: InviteMemberFormProps) {
             </FormItem>
           )}
         />
-        Send invitation
+        <Button type="submit" loading={isLoading}>
+          Send invitation
+        </Button>
       </form>
     </Form>
   );

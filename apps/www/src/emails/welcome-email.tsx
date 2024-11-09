@@ -1,7 +1,9 @@
-import { Button, Hr, Text } from "@react-email/components";
-import { BaseEmail } from "./components/base-email";
-import { siteConfig } from "@/config/site";
 import * as React from "react";
+import { Button, Hr, Text } from "@react-email/components";
+
+import site from "@/config/site";
+
+import { BaseEmail } from "./components/base-email";
 
 interface WelcomeEmailProps {
   name: string;
@@ -13,10 +15,10 @@ export default function WelcomeEmail({
   verificationUrl,
 }: WelcomeEmailProps) {
   return (
-    <BaseEmail preview={`Welcome to ${siteConfig.name}`}>
+    <BaseEmail preview={`Welcome to ${site.name}`}>
       <Text style={paragraph}>Hi {name},</Text>
       <Text style={paragraph}>
-        Welcome to {siteConfig.name}! We&apos;re excited to have you on board.
+        Welcome to {site.name}! We&apos;re excited to have you on board.
       </Text>
       {verificationUrl && (
         <>
@@ -32,7 +34,7 @@ export default function WelcomeEmail({
       <Text style={footer}>
         Best regards,
         <br />
-        The {siteConfig.name} Team
+        The {site.name} Team
       </Text>
     </BaseEmail>
   );

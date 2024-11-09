@@ -72,38 +72,40 @@ export default async function TeamPage({
   const team = await getTeam(params.slug);
   const userRole = team.members.find(
     (member) => member.userId === session.user.id,
-  )?.role;
+  ).role;
 
   const canManageTeam = userRole === "OWNER" || userRole === "ADMIN";
 
   return (
-    <div className="mx-auto mt-40 flex max-w-7xl flex-col gap-8">
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold">{team.name}</h1>
-          {canManageTeam && <InviteMemberDialog teamId={team.id} />}
+    <main className="p-6">
+      <div className="grid gap-4">
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <h1 className="py-4 text-2xl font-semibold">{team.name}</h1>
+            {canManageTeam && <InviteMemberDialog teamId={team.id} />}
+          </div>
+          <TeamNav slug={team.slug} userRole={userRole} />
         </div>
-        <TeamNav slug={team.slug} userRole={userRole} />
+
+        <TeamOverview team={team} />
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Team Members</CardTitle>
+            <CardDescription>
+              Manage your team members and their roles
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <TeamMembers
+              members={team.members}
+              teamId={team.id}
+              currentUserId={session.user.id}
+              userRole={userRole}
+            />
+          </CardContent>
+        </Card>
       </div>
-
-      <TeamOverview team={team} />
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Team Members</CardTitle>
-          <CardDescription>
-            Manage your team members and their roles
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <TeamMembers
-            members={team.members}
-            teamId={team.id}
-            currentUserId={session.user.id}
-            userRole={userRole}
-          />
-        </CardContent>
-      </Card>
-    </div>
+    </main>
   );
 }

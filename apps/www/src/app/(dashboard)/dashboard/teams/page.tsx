@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Suspense } from "react";
 import { CreateTeamDialog } from "@/comp/dashboard/teams/create-team-dialog";
 import { TeamList, TeamListSkeleton } from "@/comp/dashboard/teams/team-list";
@@ -49,22 +48,24 @@ export default async function TeamsPage() {
   const teams = await getTeams(session.user.id);
 
   return (
-    <div className="mx-auto mt-40 flex max-w-7xl flex-col gap-8">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Teams</h1>
-        <CreateTeamDialog />
+    <main className="p-6">
+      <div className="">
+        <div className="flex items-center justify-between">
+          <h1 className="py-4 text-2xl font-semibold">Teams</h1>
+          <CreateTeamDialog />
+        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle>Your Teams</CardTitle>
+            <CardDescription>Teams you own or are a member of</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Suspense fallback={<TeamListSkeleton />}>
+              <TeamList teams={teams} />
+            </Suspense>
+          </CardContent>
+        </Card>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Your Teams</CardTitle>
-          <CardDescription>Teams you own or are a member of</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Suspense fallback={<TeamListSkeleton />}>
-            <TeamList teams={teams} />
-          </Suspense>
-        </CardContent>
-      </Card>
-    </div>
+    </main>
   );
 }

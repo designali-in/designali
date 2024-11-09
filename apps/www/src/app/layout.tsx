@@ -4,9 +4,6 @@ import { env } from "process";
 import type { Metadata, Viewport } from "next";
 import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
-import { Footer } from "@/comp/marketing/layout/footer";
-import NowPlaying from "@/comp/marketing/layout/footer/now-playing";
-import { Header } from "@/comp/marketing/layout/header";
 import { ThemeProvider } from "@/comp/theme-provider";
 import { Toaster } from "@designali/ui/toast";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -71,11 +68,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           {children}
           <CookieConsent />
-          <Footer />
-          <NowPlaying />
 
           <Toaster />
           <Analytics />

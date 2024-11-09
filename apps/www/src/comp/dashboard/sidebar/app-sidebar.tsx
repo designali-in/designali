@@ -1,18 +1,11 @@
 "use client";
 
+import type { User } from "next-auth";
 import * as React from "react";
-import {
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react";
+import Link from "next/link";
+import { Logo } from "@/comp/logo";
+import { ThemeToggle } from "@/comp/marketing/layout/header/themetoggle";
+import { Settings2, SquareTerminal } from "lucide-react";
 
 import {
   Sidebar,
@@ -25,144 +18,92 @@ import {
 } from "@/components/ui/sidebar";
 
 import { NavMain } from "./nav-main";
-import { NavProjects } from "./nav-projects";
-import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Dashboard",
+      url: "/dashboard",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Urls",
+          url: "/dashboard/urls",
         },
         {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
+          title: "Downloads",
+          url: "/dashboard/#",
         },
       ],
     },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
+
     {
       title: "Settings",
-      url: "#",
+      url: "/dashboard/settings",
       icon: Settings2,
+      isActive: true,
       items: [
         {
           title: "General",
-          url: "#",
+          url: "/dashboard/settings",
         },
         {
           title: "Team",
-          url: "#",
+          url: "/dashboard/teams",
         },
         {
           title: "Billing",
-          url: "#",
+          url: "/dashboard/billing",
         },
         {
-          title: "Limits",
-          url: "#",
+          title: "Appearance",
+          url: "/dashboard/settings/appearance",
         },
       ],
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Support",
-      url: "#",
-      icon: LifeBuoy,
-    },
-    {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
     },
   ],
 };
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+// {{user} : UserAccountNavProps}
+
+interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
+  user: Pick<User, "name" | "image" | "email">;
+}
+
+export function AppSidebar({
+  user,
+  ...props
+}: React.ComponentProps<typeof Sidebar> & UserAccountNavProps) {
   return (
-    <Sidebar className="relative h-[1000px]" variant="inset" {...props}>
+    <Sidebar collapsible="icon" variant="inset" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Command className="size-4" />
+            <SidebarMenuButton className="h-12" size="lg" asChild>
+              <Link
+                aria-label="Logo"
+                href="/"
+                className="flex items-center justify-center px-2 lg:flex"
+              >
+                <div className="  flex aspect-square size-8 items-center justify-center rounded-lg">
+                  <Logo className="ml-2 h-6" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">Acme Inc</span>
-                  <span className="truncate text-xs">Enterprise</span>
+                  <span className="truncate font-semibold">Designali</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={user} />
+        <ThemeToggle />
       </SidebarFooter>
     </Sidebar>
   );

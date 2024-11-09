@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { getUserById } from "@/src/lib/validations/auth";
-import { auth } from "@/lib/auth";
-
 import { Icons } from "@/comp/icons";
+import { getUserById } from "@/src/lib/validations/auth";
+
+import { auth } from "@/lib/auth";
 
 export default async function UserId() {
   const session = await auth();
@@ -10,7 +10,7 @@ export default async function UserId() {
 
   return (
     <>
-      <div className="grid items-center justify-center gap-3 text-center">
+      <div className="mt-20 grid items-center justify-center gap-3 text-center">
         <div className="flex justify-center">
           <Image
             src={user.image}

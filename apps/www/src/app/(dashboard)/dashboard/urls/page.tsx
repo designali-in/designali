@@ -9,14 +9,14 @@ export default async function DashboardPage() {
   if (!user.id) redirect("/login");
 
   return (
-    <main className="mt-40">
-      <div className="grid justify-center text-center">
-        <h1 className="py-4">URLs</h1>
+    <main className="p-6">
+      <div className="">
+        <h1 className="py-4 text-2xl font-semibold">URLs</h1>
         <UserUrlsList
           user={{
             id: user.id,
             name: user.name || "",
-            apiKey: user.apiKey || "",
+            apiKey: "",
           }}
           action="/api/url"
         />

@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Settings, Users } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { Users, Settings } from "lucide-react";
 
 interface TeamNavProps {
   slug: string;
@@ -33,7 +34,7 @@ export function TeamNav({ slug, userRole }: TeamNavProps) {
   ];
 
   return (
-    <nav className="flex gap-4">
+    <nav className="flex gap-4 pt-4">
       {items.map((item) => (
         <Link
           key={item.href}
@@ -43,7 +44,7 @@ export function TeamNav({ slug, userRole }: TeamNavProps) {
             pathname === item.href
               ? "bg-muted hover:bg-muted"
               : "hover:bg-transparent hover:underline",
-            "justify-start"
+            "justify-start",
           )}
         >
           <item.icon className="mr-2 h-4 w-4" />

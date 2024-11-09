@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   Body,
   Button,
@@ -9,8 +10,8 @@ import {
   Section,
   Text,
 } from "@react-email/components";
-import { siteConfig } from "@/config/site";
-import * as React from "react";
+
+import site from "@/config/site";
 
 interface TeamInviteEmailProps {
   teamName: string;
@@ -28,15 +29,16 @@ export default function TeamInviteEmail({
   return (
     <Html>
       <Head />
-      <Preview>Join {teamName} on {siteConfig.name}</Preview>
+      <Preview>
+        Join {teamName} on {site.name}
+      </Preview>
       <Body style={main}>
         <Container style={container}>
           <Section style={box}>
+            <Text style={paragraph}>Hi there,</Text>
             <Text style={paragraph}>
-              Hi there,
-            </Text>
-            <Text style={paragraph}>
-              {inviterName} has invited you to join their team <strong>{teamName}</strong> on {siteConfig.name}.
+              {inviterName} has invited you to join their team{" "}
+              <strong>{teamName}</strong> on {site.name}.
             </Text>
             <Button style={button} href={inviteUrl}>
               Join Team
@@ -46,7 +48,8 @@ export default function TeamInviteEmail({
             </Text>
             <Hr style={hr} />
             <Text style={footer}>
-              If you weren&apos;t expecting this invitation, you can safely ignore this email.
+              If you weren&apos;t expecting this invitation, you can safely
+              ignore this email.
             </Text>
           </Section>
         </Container>
