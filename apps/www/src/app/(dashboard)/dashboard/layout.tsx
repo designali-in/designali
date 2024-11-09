@@ -29,7 +29,7 @@ export default async function Admin({ children }: ProtectedLayoutProps) {
           <main className="relative m-3 w-full rounded-xl border bg-white shadow-sm dark:bg-black md:ml-0 ">
             <header className="flex h-16 items-center gap-2">
               <div className="flex items-center gap-2 px-4">
-                <SidebarTrigger className="-ml-1" />
+                <SidebarTrigger className="" />
                 <Separator orientation="vertical" className="mr-2 h-4" />
                 <Breadcrumb>
                   <BreadcrumbList>

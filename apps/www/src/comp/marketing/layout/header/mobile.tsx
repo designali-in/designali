@@ -2,7 +2,6 @@
 
 import { Fragment } from "react";
 import Link from "next/link";
-import { Icons } from "@/comp/icons";
 import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
 import { DIcons } from "dicons";
 import { signOut } from "next-auth/react";
@@ -95,11 +94,11 @@ export default function Navbar() {
                               </Link>
                             </AccordionContent>
                             <AccordionContent>
-                              <Button size="sm" onClick={() => signOut()}>
-                                <Link href={`/app/dashboard/settings`}>
-                                  <p>Log out</p>
-                                </Link>
-                              </Button>
+                              <Link href={`/app/dashboard/settings`}>
+                                <Button size="sm" onClick={() => signOut()}>
+                                  Log out
+                                </Button>
+                              </Link>
                             </AccordionContent>
                           </AccordionItem>
                         </Accordion>
