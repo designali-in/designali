@@ -77,24 +77,7 @@ export default function Navbar({ user }: UserAccountNavProps) {
                           </p>
                         </DisclosureButton>
                       ))}
-                      <div className="mt-3 grid gap-3 rounded-xl border p-4">
-                        <div className="flex items-center gap-3">
-                          <Avatar className="h-10 w-10 rounded-lg">
-                            <AvatarImage src={user.image} alt={user.name} />
-                            <AvatarFallback className="rounded-lg">
-                              D
-                            </AvatarFallback>
-                          </Avatar>
-                          <div className="grid flex-1 gap-1 text-left text-lg leading-tight">
-                            <span className="truncate font-semibold">
-                              {user.name}
-                            </span>
-                            <span className="truncate text-xs text-primary/50">
-                              {user.email}
-                            </span>
-                          </div>
-                        </div>
-
+                      <div className="mt-3 grid gap-3 ">
                         <div>
                           {user ? (
                             <Link href="/dashboard">
