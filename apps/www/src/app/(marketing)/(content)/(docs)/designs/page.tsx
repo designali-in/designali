@@ -48,9 +48,7 @@ export default function GuidesPage() {
                   )}
                 </div>
                 {guide.date && (
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
-                    {formatDate(guide.date)}
-                  </p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400"></p>
                 )}
               </div>
               <Link href={guide.slug} className="absolute inset-0">

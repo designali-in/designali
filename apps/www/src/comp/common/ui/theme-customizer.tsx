@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
 import type { BaseColor } from "@/registry/registry-base-colors";
@@ -36,28 +34,28 @@ import { ThemeWrapper } from "../theme-wrapper";
 import "@/styles/mdx.css";
 
 export function ThemeCustomizer() {
-  const [, setMounted] = React.useState(false);
+  const [config, setConfig] = useConfig();
+  const { resolvedTheme: mode } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
   return (
-    <div className="relative">
-      <div className="sticky top-6 z-20 grid items-center gap-2">
-        <Drawer>
-          <DrawerTrigger className="mt-2" asChild>
-            <Button size="lg" className="mt-10 md:hidden">
-              Customize
-            </Button>
-          </DrawerTrigger>
-          <DrawerContent className="p-6 pt-0">
-            <Customizer />
-          </DrawerContent>
-        </Drawer>
-        <div className="mt-10 hidden items-center justify-center md:grid">
+    <div className="grid items-center gap-2 md:sticky md:top-6 md:z-20">
+      <Drawer>
+        <DrawerTrigger className="mt-2" asChild>
+          <Button size="lg" className="mt-10 md:hidden">
+            Customize
+          </Button>
+        </DrawerTrigger>
+        <DrawerContent className="p-6 pt-0">
           <Customizer />
-        </div>
+        </DrawerContent>
+      </Drawer>
+      <div className="mt-10 hidden items-center justify-center md:grid">
+        <Customizer />
       </div>
     </div>
   );

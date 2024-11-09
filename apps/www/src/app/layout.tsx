@@ -4,7 +4,6 @@ import { env } from "process";
 import type { Metadata, Viewport } from "next";
 import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
-import { TailwindIndicator } from "@/comp/common/tailwind-indicator";
 import { Footer } from "@/comp/marketing/layout/footer";
 import NowPlaying from "@/comp/marketing/layout/footer/now-playing";
 import { Header } from "@/comp/marketing/layout/header";
@@ -61,7 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body
         className={cn(
-          "  bg-white font-sans text-foreground dark:bg-black",
+          "bg-white font-sans text-foreground dark:bg-black",
           GeistSans.variable,
           GeistMono.variable,
         )}
@@ -74,7 +73,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <Header />
           {children}
-          <TailwindIndicator />
           <CookieConsent />
           <Footer />
           <NowPlaying />

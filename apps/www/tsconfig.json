@@ -5,17 +5,18 @@
     "jsx": "preserve",
     "strict": false,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*", "./src/*"],
+    "paths": { 
+     "@/*": ["./*", "./src/*"],
       "@/components/ui/*": ["./registry/default/designali/ui/*"],
-      "@/components/mockups/*": ["./registry/default/designali/mockups/*"],
+      "@/components/mockups/*": ["./registry/default/designali/mockups/*"], 
       "@/components/example/*": ["./registry/default/example/*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
       "~/*": ["./src/*"]
     },
     "plugins": [{ "name": "next" }],
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
-    "module": "esnext"
+    "module": "esnext",
+   
   },
   "include": [
     ".",
