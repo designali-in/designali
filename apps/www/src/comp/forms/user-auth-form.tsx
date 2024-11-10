@@ -112,9 +112,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
         >
           {isGoogleLoading ? (
             <DIcons.Loader className="mr-2 size-4 animate-spin" />
-          ) : (
-            <DIcons.Send className="mr-2 size-4" />
-          )}{" "}
+          ) : null}
           <p className="px-2">Continue with Google </p>
           <Image
             src="/icons/google.svg"

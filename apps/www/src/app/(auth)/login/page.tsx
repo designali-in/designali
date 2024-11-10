@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { Button } from "@/registry/default/designali/ui/button";
 import { UserAuthForm } from "@/src/comp/forms/user-auth-form";
 import { Card, CardContent } from "@designali/ui/card";
 
@@ -11,7 +12,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div>
-      <section className="relative h-full overflow-hidden bg-[linear-gradient(to_bottom,#bfdbfe_40%,#fff_80%)] dark:bg-[linear-gradient(to_bottom,#1e40af_40%,#000_80%)]">
+      <section className="relative h-screen overflow-hidden bg-[linear-gradient(to_bottom,#bfdbfe_40%,#fff_80%)] dark:bg-[linear-gradient(to_bottom,#1e40af_40%,#000_80%)]">
         <div className="absolute left-0 top-0 z-0 grid h-full w-full grid-cols-[clamp(28px,10vw,120px)_auto_clamp(28px,10vw,120px)]">
           <div className="col-span-1 flex h-full items-center justify-center" />
           <div className="col-span-1 flex h-full items-center justify-center border-x border-blue-300 dark:border-blue-700" />
@@ -22,6 +23,9 @@ export default function Page() {
         <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full opacity-50 blur-[100px] md:block" />
         <div className="relative z-10 flex flex-col divide-y divide-blue-300 pt-[35px] dark:divide-blue-700">
           <div className="mx-auto flex h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-10 lg:px-24">
+            <Link href="/" className=" ">
+              <Button variant="secondary">Back to Home</Button>
+            </Link>
             <h1 className="text-text-primary dark:text-dark-text-primary text-pretty text-center text-4xl font-medium leading-none tracking-[-1.44px] sm:text-5xl md:max-w-screen-lg md:text-6xl md:tracking-[-2.16px] lg:text-[clamp(50px,7vw,75px)]">
               Log in to your account
             </h1>
@@ -41,7 +45,7 @@ export default function Page() {
                     <div className="mt-4 text-center text-sm">
                       Don&apos;t have an account?{" "}
                       <Link
-                        href="/sign-up"
+                        href="/register"
                         className="text-ali font-semibold underline"
                       >
                         Sign Up

@@ -85,6 +85,7 @@ const config = {
     optimizePackageImports: ["shiki", "@tremor/react"],
     instrumentationHook: true,
   },
+
   async redirects() {
     return [
       {

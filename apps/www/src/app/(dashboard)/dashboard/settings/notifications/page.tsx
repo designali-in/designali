@@ -17,7 +17,7 @@ export default async function SettingsProfile() {
     <main className="p-6">
       <div className="">
         <h1 className="py-4 text-2xl font-semibold">Notifications</h1>
-        <div className="grid gap-8">
+        <div className="grid gap-4">
           <Card>
             <CardHeader>
               <CardTitle>Email Preferences</CardTitle>

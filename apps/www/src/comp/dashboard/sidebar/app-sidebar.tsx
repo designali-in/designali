@@ -91,12 +91,12 @@ export function AppSidebar({
               <Link
                 aria-label="Logo"
                 href="/"
-                className="flex items-center justify-center px-2 lg:flex"
+                className="flex items-center justify-center lg:flex"
               >
-                <div className="  flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Logo className="ml-2 h-6" />
+                <div className=" flex aspect-square size-10 items-center justify-center rounded-lg">
+                  <Logo className="ml-2 h-5" />
                 </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
+                <div className="grid flex-1  text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Designali</span>
                 </div>
               </Link>

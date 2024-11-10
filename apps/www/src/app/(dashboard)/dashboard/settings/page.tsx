@@ -17,8 +17,8 @@ export default async function SettingsProfile() {
     <main className="p-6">
       <div className="">
         <h1 className="py-4 text-2xl font-semibold">Settings</h1>
-        <div className="grid gap-4">
-          <Card>
+        <div className="grid gap-4 md:flex">
+          <Card className="w-80">
             <CardHeader>
               <CardTitle>Profile</CardTitle>
               <CardDescription>Manage your profile information</CardDescription>
@@ -28,7 +28,7 @@ export default async function SettingsProfile() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="w-80">
             <CardHeader>
               <CardTitle>Delete Account</CardTitle>
               <CardDescription>
