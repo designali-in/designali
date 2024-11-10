@@ -71,7 +71,7 @@ model User {
 
   accounts      Account[]
   sessions      Session[]
-  UserUrl       UserUrl[]
+  UserUrl       UserUrl[] 
   teams             TeamMember[]
   teamActivities    TeamActivity[]
 
@@ -99,7 +99,7 @@ model Post {
   likes     Int      @default(0)
   views     Int      @default(0) 
 }
-
+ 
 model UserUrl {
   id         String   @id @default(cuid())
   userId     String
@@ -118,9 +118,8 @@ model UserUrl {
   @@index([userId])
   @@map(name: "user_urls")
 }
- 
 
- model UrlMeta {
+model UrlMeta {
   id    String @id @default(cuid())
   urlId String
   click Int
@@ -145,6 +144,7 @@ model UserUrl {
   @@index([urlId])
   @@map(name: "url_metas")
 }
+
 
 model Team {
   id          String       @id @default(cuid())
