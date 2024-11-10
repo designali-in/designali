@@ -269,6 +269,9 @@ importers:
       react-hook-form:
         specifier: ^7.47.0
         version: 7.53.2(react@18.2.0)
+      react-image-crop:
+        specifier: ^11.0.5
+        version: 11.0.7(react@18.2.0)
       react-medium-image-zoom:
         specifier: ^5.2.4
         version: 5.2.10(react-dom@18.2.0)(react@18.2.0)
@@ -14781,6 +14784,14 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-image-crop@11.0.7(react@18.2.0):
+    resolution: {integrity: sha512-ZciKWHDYzmm366JDL18CbrVyjnjH0ojufGDmScfS4ZUqLHg4nm6ATY+K62C75W4ZRNt4Ii+tX0bSjNk9LQ2xzQ==}
+    peerDependencies:
+      react: '>=16.13.1'
     dependencies:
       react: 18.2.0
     dev: false

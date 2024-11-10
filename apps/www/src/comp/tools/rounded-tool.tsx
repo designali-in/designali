@@ -242,7 +242,7 @@ export function RoundedTool() {
             x={-1}
             y={-1}
             strokeDasharray={"1 1"}
-            className={cn("-z-10")}
+            className={cn("")}
           />
           <DIcons.Plus
             strokeWidth={1}
@@ -260,11 +260,13 @@ export function RoundedTool() {
             strokeWidth={1}
             className="text-ali absolute -bottom-3 -right-3 h-6"
           />
-          <ImageRenderer
-            imageContent={imageContent}
-            radius={radius}
-            background={background}
-          />
+          <div className="z-10">
+            <ImageRenderer
+              imageContent={imageContent}
+              radius={radius}
+              background={background}
+            />
+          </div>
         </div>
       </div>
       <p className="text-xs text-primary/50">{imageMetadata.name}</p>

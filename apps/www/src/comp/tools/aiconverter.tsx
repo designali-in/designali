@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Icons } from "@/comp/icons";
 import { Button } from "@designali/ui/button";
 import {
@@ -52,6 +52,8 @@ const download = async (result: string, filename: string, to: string) => {
 };
 
 const AIConverter = () => {
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
   const [files, setFiles] = React.useState<ImageFile[]>([]);
 
   const onDrop = React.useCallback((newFiles: File[]) => {
@@ -205,7 +207,11 @@ const AIConverter = () => {
                   className="flex flex-col gap-4 rounded-lg border p-4"
                 >
                   <div>{name}</div>
-
+                  <div>
+                    {previewUrl && (
+                      <img src={previewUrl} alt="Preview" className=" p-4" />
+                    )}
+                  </div>
                   <div className="flex flex-col justify-between sm:flex-row sm:items-center">
                     <div className="text-sm text-muted-foreground">{size}</div>
 

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import type { ChangeEvent } from "react";
@@ -84,7 +86,7 @@ export const SquareTool: React.FC = () => {
 
             // Create a smaller canvas for the preview
             const previewCanvas = document.createElement("canvas");
-            const previewSize = 200; // Set desired preview size
+            const previewSize = 600; // Set desired preview size
             previewCanvas.width = previewSize;
             previewCanvas.height = previewSize;
             const previewCtx = previewCanvas.getContext("2d");
@@ -149,7 +151,7 @@ export const SquareTool: React.FC = () => {
             x={-1}
             y={-1}
             strokeDasharray={"1 1"}
-            className={cn("-z-10")}
+            className={cn("")}
           />
           <DIcons.Plus
             strokeWidth={1}
@@ -167,9 +169,11 @@ export const SquareTool: React.FC = () => {
             strokeWidth={1}
             className="text-ali absolute -bottom-3 -right-3 h-6"
           />
-          {previewUrl && (
-            <img src={previewUrl} alt="Preview" className=" p-4" />
-          )}
+          <div className="z-10 h-[250px] w-[250px] md:h-[450px] md:w-[450px]">
+            {previewUrl && (
+              <img src={previewUrl} alt="Preview" className=" p-4" />
+            )}
+          </div>
         </div>
       </div>
       <p className="text-xs text-primary/50">{imageMetadata.name}</p>

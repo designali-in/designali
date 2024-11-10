@@ -211,14 +211,14 @@ export function SVGTool() {
   return (
     <div className="flex flex-col items-center justify-center gap-4 p-4 text-2xl">
       <div className="relative">
-        <div className="relative mx-auto flex h-auto w-auto max-w-3xl justify-center border">
+        <div className="relative mx-auto flex h-full w-full max-w-4xl justify-center border">
           <GridPattern
             width={9}
             height={9}
             x={-1}
             y={-1}
             strokeDasharray={"1 1"}
-            className={cn("-z-10")}
+            className={cn("")}
           />
           <DIcons.Plus
             strokeWidth={1}
@@ -236,7 +236,9 @@ export function SVGTool() {
             strokeWidth={1}
             className="text-ali absolute -bottom-3 -right-3 h-6"
           />
-          <SVGRenderer svgContent={svgContent} />
+          <div className="z-10 h-[250px] w-[250px] md:h-[450px] md:w-[450px]">
+            <SVGRenderer svgContent={svgContent} />
+          </div>
         </div>
       </div>
 

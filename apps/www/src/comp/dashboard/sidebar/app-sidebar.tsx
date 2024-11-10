@@ -66,6 +66,10 @@ const data = {
           url: "/dashboard/tools/square-image",
         },
         {
+          title: "Image Crop",
+          url: "/dashboard/tools/image-crop",
+        },
+        {
           title: "Word Counter",
           url: "/dashboard/tools/word-counter",
         },
