@@ -74,7 +74,7 @@ const data = {
     },
     {
       title: "Designs",
-      url: "/daesigns",
+      url: "/designs",
       icon: DIcons.Shapes,
       isActive: false,
       items: [

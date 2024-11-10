@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/accordionh";
+} from "@/components/ui/accordion";
 
 export function DesignProcess() {
   return (

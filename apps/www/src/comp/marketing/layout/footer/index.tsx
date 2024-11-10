@@ -82,10 +82,10 @@ const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slat
 
 export function Footer() {
   return (
-    <footer className="border-ali/20 mx-auto w-full border-b border-t bg-white px-2 dark:bg-slate-950 sm:px-4">
+    <footer className="border-ali/20 mx-auto w-full border-b border-t bg-white px-2 dark:bg-black sm:px-4">
       <div className="relative -mt-10 flex flex-wrap justify-center gap-8">
         <Link aria-label="Logo" href="/">
-          <p className="flex h-20 w-20 items-center justify-center rounded-full bg-background">
+          <p className="flex h-20 w-20 items-center justify-center rounded-full bg-white dark:bg-black">
             <Logo className="w-8" />
           </p>
         </Link>

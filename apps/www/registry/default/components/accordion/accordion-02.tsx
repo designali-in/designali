@@ -8,15 +8,9 @@ import {
 export default function DesignProcess() {
   return (
     <div className="px-6">
-      <Accordion
-        orientation="vertical"
-        type="single"
-        defaultValue="item-1"
-        collapsible
-        className="rounded-md border lg:rounded-3xl"
-      >
-        <div className="grid lg:flex">
-          <AccordionItem className="relative" value="item-1">
+      <Accordion type="single" className="rounded-md border lg:rounded-3xl">
+        <div className="  h-full w-full  ">
+          <AccordionItem className="relative h-full md:w-80  " value="item-1">
             <AccordionTrigger>BRIEF</AccordionTrigger>
             <AccordionContent>
               At the inception of any project, my creative journey begins by
@@ -27,9 +21,8 @@ export default function DesignProcess() {
               initial step lays a strong foundation for the entire creative
               process.
             </AccordionContent>
-            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">01</p>
           </AccordionItem>
-          <AccordionItem className="relative" value="item-2">
+          <AccordionItem className="relative h-full md:w-80 " value="item-2">
             <AccordionTrigger>Research</AccordionTrigger>
             <AccordionContent>
               With your vision as my compass, I embark on a journey of
@@ -40,7 +33,6 @@ export default function DesignProcess() {
               demographics, I gather invaluable insights that fuel the creative
               spark.
             </AccordionContent>
-            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">02</p>
           </AccordionItem>
         </div>
       </Accordion>
