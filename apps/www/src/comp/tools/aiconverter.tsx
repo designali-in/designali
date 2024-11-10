@@ -2,11 +2,6 @@
 
 import React from "react";
 import { Icons } from "@/comp/icons";
-import { base64ToSvg } from "@/lib/img/base64-to-svg";
-import { getExtension } from "@/lib/img/get-extension";
-import { imageToBase64 } from "@/lib/img/image-to-base64";
-import { svgToBase64 } from "@/lib/img/svg-to-base64";
-import { truncateFilename } from "@/lib/img/truncate-filename";
 import { Button } from "@designali/ui/button";
 import {
   Select,
@@ -16,11 +11,18 @@ import {
   SelectValue,
 } from "@designali/ui/select";
 import { toast } from "@designali/ui/toast";
+import { DIcons } from "dicons";
 import FileSaver from "file-saver";
 import { filesize } from "filesize";
 import { XIcon } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import { v4 as uuid } from "uuid";
+
+import { base64ToSvg } from "@/lib/img/base64-to-svg";
+import { getExtension } from "@/lib/img/get-extension";
+import { imageToBase64 } from "@/lib/img/image-to-base64";
+import { svgToBase64 } from "@/lib/img/svg-to-base64";
+import { truncateFilename } from "@/lib/img/truncate-filename";
 
 interface ImageFile {
   file: File;
@@ -141,17 +143,13 @@ const AIConverter = () => {
   return (
     <div
       id="image-converter"
-      className="mx-auto mt-20 flex max-w-5xl flex-col items-center justify-center"
+      className="mx-auto mt-10 flex  max-w-5xl flex-col items-center justify-center"
     >
-      <p className="lg:text-md my-6 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
-        Image Converter
-      </p>
-
       <div
         {...getRootProps()}
         className="flex cursor-pointer flex-col items-center gap-2 rounded-lg border border-dashed p-24 transition-colors duration-300 hover:bg-muted"
       >
-        <Icons.image strokeWidth={1} size={48} />
+        <DIcons.Image strokeWidth={1} className="h-16 w-16" />
         <input {...getInputProps()} />
         <p className="text-center text-xs text-slate-600 dark:text-slate-400">
           Drag some images here, or click to select files.

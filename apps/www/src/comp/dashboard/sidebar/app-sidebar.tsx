@@ -39,15 +39,42 @@ const data = {
         },
         {
           title: "Downloads",
-          url: "/dashboard/#",
+          url: "/dashboard/downloads",
         },
       ],
     },
-
+    {
+      title: "Tools",
+      url: "/dashboard/tools",
+      icon: DIcons.Settings2,
+      isActive: true,
+      items: [
+        {
+          title: "Image Converter",
+          url: "/dashboard/tools/image-converter",
+        },
+        {
+          title: "SVG to PNG",
+          url: "/dashboard/tools/svg-to-png",
+        },
+        {
+          title: "Round Corner",
+          url: "/dashboard/tools/round-corner",
+        },
+        {
+          title: "Square Image",
+          url: "/dashboard/tools/square-image",
+        },
+        {
+          title: "Word Counter",
+          url: "/dashboard/tools/word-counter",
+        },
+      ],
+    },
     {
       title: "Settings",
       url: "/dashboard/settings",
-      icon: DIcons.Settings2,
+      icon: DIcons.Settings,
       isActive: true,
       items: [
         {

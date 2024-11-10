@@ -119,6 +119,40 @@ export function Menu() {
                     </a>
                   </NavigationMenuLink>
                 </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/products/dicons-editor"
+                    >
+                      <DIcons.Scissors strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Icons Editor
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/products/colors"
+                    >
+                      <DIcons.Flower2 strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Colors
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -160,67 +194,6 @@ export function Menu() {
                 <ListItem href="/agency/web-develop" title="Website Develop">
                   Build in Next.js & Vercel
                 </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <Link href={"/tools"}>
-              <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
-            </Link>
-
-            <NavigationMenuContent className="space-y-3">
-              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/tools/dicons"
-                    >
-                      <DIcons.Scissors strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Icon maker
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/tools/colors"
-                    >
-                      <DIcons.Flower2 strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Colors
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li className="grid  gap-y-3">
-                  <ListItem href="/tools#short-links" title=" AI short links">
-                    AI short links
-                  </ListItem>
-                  <ListItem
-                    href="/tools#image-converter"
-                    title="Image Converter"
-                  >
-                    Image Converter
-                  </ListItem>
-                </li>
-                <li className="grid   gap-y-3">
-                  <ListItem href="/tools#word-counter" title=" Word Counter">
-                    Word Counter
-                  </ListItem>
-                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>

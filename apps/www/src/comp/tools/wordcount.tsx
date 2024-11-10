@@ -16,11 +16,8 @@ const WordCounter = () => {
   return (
     <div
       id="word-counter"
-      className="mx-auto my-10 flex max-w-5xl flex-col items-center justify-center md:my-20"
+      className="mx-auto mt-10  flex max-w-5xl flex-col items-center justify-center  "
     >
-      <p className="lg:text-md my-6 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
-        Word Counter
-      </p>
       <div className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4">
         <Card x-chunk="dashboard-01-chunk-0">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
