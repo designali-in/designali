@@ -100,42 +100,42 @@ const config = {
       },
       {
         source: "/0",
-        destination: "https://wr.do/s/0",
+        destination: "https://designali.in/s/0",
         permanent: true,
       },
       {
         source: "/9",
-        destination: "https://wr.do/s/9",
+        destination: "https://designali.in/s/9",
         permanent: true,
       },
       {
         source: "/ai",
-        destination: "https://wr.do/s/ai?ref=wrdo",
+        destination: "https://designali.in/s/ai?ref=wrdo",
         permanent: true,
       },
       {
         source: "/cps",
-        destination: "https://wr.do/s/cps",
+        destination: "https://designali.in/s/cps",
         permanent: true,
       },
       {
         source: "/x",
-        destination: "https://wr.do/s/x",
+        destination: "https://designali.in/s/x",
         permanent: true,
       },
       {
         source: "/solo",
-        destination: "https://wr.do/s/solo",
+        destination: "https://designali.in/s/solo",
         permanent: true,
       },
       {
         source: "/rmbg",
-        destination: "https://wr.do/s/rmbg",
+        destination: "https://designali.in/s/rmbg",
         permanent: true,
       },
       {
         source: "/llk",
-        destination: "https://wr.do/s/llk",
+        destination: "https://designali.in/s/llk",
         permanent: true,
       },
       {
