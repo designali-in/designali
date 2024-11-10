@@ -1,18 +1,12 @@
 "use client";
 
+import type { User } from "next-auth";
 import { Fragment } from "react";
 import Link from "next/link";
-import { Icons } from "@/comp/icons";
 import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
 import { DIcons } from "dicons";
-import { signOut } from "next-auth/react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -22,15 +16,15 @@ const navigation = [
   { name: "Products", href: "/products", current: true },
   { name: "Works", href: "/works", current: true },
   { name: "Components", href: "/components", current: true },
+  { name: "UI", href: "/ui", current: true },
+  { name: "Graaadients", href: "/products/graaadients", current: true },
 ];
 
-const helps = [
-  { name: "Tools", href: "/tools", current: true },
-  { name: "Blogs", href: "/blogs", current: true },
-  { name: "Terms", href: "/terms", current: true },
-];
+interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
+  user: Pick<User, "name" | "image" | "email">;
+}
 
-export default function Navbar() {
+export default function Navbar({ user }: UserAccountNavProps) {
   return (
     <Disclosure as="nav" className="w-full">
       {({ open }) => (
@@ -83,47 +77,22 @@ export default function Navbar() {
                           </p>
                         </DisclosureButton>
                       ))}
-                      <div className="grid gap-3">
-                        <Accordion type="single" collapsible className="w-full">
-                          <AccordionItem value="item-1">
-                            <AccordionTrigger>Account</AccordionTrigger>
-                            <AccordionContent>
-                              <Link href={`/app/dashboard/settings`}>
-                                <p className="text-md flex px-4 py-2 font-semibold">
-                                  Settings
-                                </p>
-                              </Link>
-                            </AccordionContent>
-                            <AccordionContent>
-                              <Button size="sm" onClick={() => signOut()}>
-                                <Link href={`/app/dashboard/settings`}>
-                                  <p>Log out</p>
-                                </Link>
+                      <div className="mt-3 grid gap-3 ">
+                        <div>
+                          {user ? (
+                            <Link href="/dashboard">
+                              <Button variant={"outline"} size={"md"}>
+                                Dashboard
                               </Button>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-
-                        <Accordion type="single" collapsible className="w-full">
-                          <AccordionItem value="item-1">
-                            <AccordionTrigger>Others</AccordionTrigger>
-                            <AccordionContent>
-                              {helps.map((item) => (
-                                <Disclosure.Button
-                                  key={item.name}
-                                  as="a"
-                                  href={item.href}
-                                  className="text-md flex px-4 py-2 font-semibold"
-                                  aria-current={
-                                    item.current ? "page" : undefined
-                                  }
-                                >
-                                  {item.name}
-                                </Disclosure.Button>
-                              ))}
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
+                            </Link>
+                          ) : (
+                            <Link href="/login">
+                              <Button variant={"outline"} size={"md"}>
+                                Sign In
+                              </Button>
+                            </Link>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </ScrollArea>

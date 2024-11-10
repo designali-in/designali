@@ -17,7 +17,7 @@ interface NavBarProps {
   scroll?: boolean;
 }
 
-export function NavBar({ user, rightElements, scroll = false }: NavBarProps) {
+export function NavBar({ user, scroll = false }: NavBarProps) {
   const scrolled = useScroll(50);
   const signInModal = useSigninModal();
 

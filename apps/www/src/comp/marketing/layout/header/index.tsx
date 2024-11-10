@@ -1,13 +1,16 @@
- 
 import Link from "next/link";
-import { Logo } from "@/comp/logo"; 
+import { Logo } from "@/comp/logo";
+
+import { getCurrentUser } from "@/lib/session";
+
+import SiteHeader from "./mobile";
 import { Menu } from "./navmenu";
 import CommandMenu from "./search";
-import SiteHeader from "./mobile";
+import { DashboardButton, LoginButton } from "./sign-in";
 import { ThemeToggle } from "./themetoggle";
-import { DashboardButton, LoginButton } from "./sign-in";  
 
-export function Header() {
+export async function Header() {
+  const user = await getCurrentUser();
   return (
     <nav className="fixed top-0 z-50 w-full bg-slate-100/60 backdrop-blur-md backdrop-filter hover:bg-slate-50 dark:bg-slate-900/60 hover:dark:bg-slate-950">
       <div className="mx-auto flex items-center md:px-20">
@@ -25,13 +28,13 @@ export function Header() {
               <ThemeToggle />
               <CommandMenu />
               <DashboardButton />
-              <LoginButton/>
+              <LoginButton />
             </div>
           </div>
         </div>
       </div>
       <div className="relative mx-auto flex flex-1 items-center">
-      <SiteHeader/>
+        <SiteHeader user={user} />
       </div>
     </nav>
   );
