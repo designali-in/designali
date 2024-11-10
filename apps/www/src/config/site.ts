@@ -1,7 +1,5 @@
 import type { IconDescriptor } from "next/dist/lib/metadata/types/metadata-types";
 
-import { env } from "@/env";
-
 interface Site {
   url: string;
   title: string;
@@ -18,10 +16,8 @@ interface Site {
 const prodBaseURL = "https://designali.in";
 const devBaseURL = "http://localhost:3000";
 
-const site_url = env.NEXT_PUBLIC_APP_URL;
-
 const site: Site = {
-  url: site_url,
+  url: process.env.NODE_ENV === "production" ? prodBaseURL : devBaseURL,
   title: "Ali Imam",
   name: "Ali Imam",
   emails: "visual.imam@gmail.com",

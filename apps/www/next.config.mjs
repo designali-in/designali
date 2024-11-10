@@ -89,13 +89,30 @@ const config = {
   async redirects() {
     return [
       {
-        source: "/s",
-        destination: "/",
+        source: "/r",
+        destination: "/r/index.json",
         permanent: true,
       },
       {
-        source: "/r",
+        source: "/r/index",
         destination: "/r/index.json",
+        permanent: true,
+      },
+      {
+        source: "/r/:name((?!index\\.json|styles/).*)",
+        destination: "/r/styles/default/:name.json",
+        permanent: true,
+        missing: [
+          {
+            type: "query",
+            key: "_redirected",
+            value: undefined,
+          },
+        ],
+      },
+      {
+        source: "/s",
+        destination: "/",
         permanent: true,
       },
       {
@@ -137,23 +154,6 @@ const config = {
         source: "/llk",
         destination: "https://designali.in/s/llk",
         permanent: true,
-      },
-      {
-        source: "/r/index",
-        destination: "/r/index.json",
-        permanent: true,
-      },
-      {
-        source: "/r/:name((?!index\\.json|styles/).*)",
-        destination: "/r/styles/default/:name.json",
-        permanent: true,
-        missing: [
-          {
-            type: "query",
-            key: "_redirected",
-            value: undefined,
-          },
-        ],
       },
     ];
   },

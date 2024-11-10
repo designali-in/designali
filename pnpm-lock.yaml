@@ -98,6 +98,9 @@ importers:
       '@vercel/analytics':
         specifier: ^1.3.1
         version: 1.3.2(next@14.2.17)(react@18.2.0)
+      '@vercel/functions':
+        specifier: ^1.4.0
+        version: 1.5.0
       '@vercel/og':
         specifier: ^0.5.20
         version: 0.5.20
@@ -326,6 +329,9 @@ importers:
       tsx:
         specifier: ^4.19.2
         version: 4.19.2
+      ua-parser-js:
+        specifier: ^1.0.38
+        version: 1.0.39
       use-breakpoint:
         specifier: ^4.0.1
         version: 4.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -7825,6 +7831,16 @@ packages:
       next: 14.2.17(@opentelemetry/api@1.9.0)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       server-only: 0.0.1
+    dev: false
+
+  /@vercel/functions@1.5.0:
+    resolution: {integrity: sha512-ub3ptVeOsx8UPgiTv9+rpQJqmF7VG8QIzguBZo0E0VRAyJliB8bt1ooB9Wrh3333dKzMNS8NMe3iFtf6OPUP3A==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-web-identity': '*'
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-web-identity':
+        optional: true
     dev: false
 
   /@vercel/og@0.5.20:
@@ -16868,6 +16884,11 @@ packages:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  /ua-parser-js@1.0.39:
+    resolution: {integrity: sha512-k24RCVWlEcjkdOxYmVJgeD/0a1TiSpqLg+ZalVGV9lsnr4yqu0w7tX/x2xX6G4zpkgQnRf89lxuZ1wsbjXM8lw==}
+    hasBin: true
+    dev: false
 
   /ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
