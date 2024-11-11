@@ -1,4 +1,5 @@
-import { PlansRow, SubscriptionPlan } from "@/types";
+import type { PlansRow, SubscriptionPlan } from "@/types";
+
 import { env } from "@/env";
 
 export const pricingData: SubscriptionPlan[] = [
@@ -40,8 +41,8 @@ export const pricingData: SubscriptionPlan[] = [
       "Limited access to business resources.",
     ],
     prices: {
-      monthly: 15,
-      yearly: 144,
+      monthly: 60000,
+      yearly: 600000,
     },
     stripeIds: {
       monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID,
@@ -60,8 +61,8 @@ export const pricingData: SubscriptionPlan[] = [
     ],
     limitations: [],
     prices: {
-      monthly: 30,
-      yearly: 300,
+      monthly: 100000,
+      yearly: 900000,
     },
     stripeIds: {
       monthly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
@@ -79,85 +80,67 @@ export const plansColumns = [
 
 export const comparePlans: PlansRow[] = [
   {
-    feature: "Access to Analytics",
+    feature: "Production ready designs",
     starter: true,
     pro: true,
     business: true,
     enterprise: "Custom",
-    tooltip: "All plans include basic analytics for tracking performance.",
+    tooltip: "Production ready designs",
   },
   {
-    feature: "Custom Branding",
+    feature: "Regular quality checks by senior designers",
     starter: null,
     pro: "500/mo",
     business: "1,500/mo",
     enterprise: "Unlimited",
-    tooltip: "Custom branding is available from the Pro plan onwards.",
+    tooltip: "Production ready designs",
   },
   {
-    feature: "Priority Support",
+    feature: "Quick revisions on request",
     starter: null,
     pro: "Email",
     business: "Email & Chat",
     enterprise: "24/7 Support",
   },
   {
-    feature: "Advanced Reporting",
+    feature: "Chat one-on-one without rushing",
     starter: null,
     pro: null,
     business: true,
     enterprise: "Custom",
-    tooltip:
-      "Advanced reporting is available in Business and Enterprise plans.",
+    tooltip: "Production ready designs",
   },
   {
-    feature: "Dedicated Manager",
+    feature: "All products",
     starter: null,
     pro: null,
     business: null,
     enterprise: true,
-    tooltip: "Enterprise plan includes a dedicated account manager.",
+    tooltip: "Production ready designs",
   },
   {
-    feature: "API Access",
+    feature: "No software cost",
     starter: "Limited",
     pro: "Standard",
     business: "Enhanced",
     enterprise: "Full",
   },
   {
-    feature: "Monthly Webinars",
+    feature: "Daily project updates",
     starter: false,
     pro: true,
     business: true,
     enterprise: "Custom",
-    tooltip: "Pro and higher plans include access to monthly webinars.",
+    tooltip: "Production ready designs",
   },
+
   {
-    feature: "Custom Integrations",
-    starter: false,
-    pro: false,
-    business: "Available",
-    enterprise: "Available",
-    tooltip:
-      "Custom integrations are available in Business and Enterprise plans.",
-  },
-  {
-    feature: "Roles and Permissions",
-    starter: null,
-    pro: "Basic",
-    business: "Advanced",
-    enterprise: "Advanced",
-    tooltip:
-      "User roles and permissions management improves with higher plans.",
-  },
-  {
-    feature: "Onboarding Assistance",
+    feature: "Tools Access",
     starter: false,
     pro: "Self-service",
     business: "Assisted",
     enterprise: "Full Service",
-    tooltip: "Higher plans include more comprehensive onboarding assistance.",
+    tooltip: "Production ready designs",
   },
   // Add more rows as needed
 ];

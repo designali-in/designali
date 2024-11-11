@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Icons } from "@/comp/icons";
 import { Button } from "@designali/ui/button";
 import {
   Select,

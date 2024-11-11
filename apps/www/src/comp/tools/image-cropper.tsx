@@ -20,7 +20,6 @@ import "react-image-crop/dist/ReactCrop.css";
 import type { FileWithPreview } from "@/app/(dashboard)/dashboard/tools/image-crop/page";
 import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
-import { CropIcon, Trash2Icon } from "lucide-react";
 
 import GridPattern from "../uis/grid-pattern";
 
@@ -170,7 +169,7 @@ export function ImageCropper({
                         setSelectedFile(null);
                       }}
                     >
-                      <Trash2Icon className="mr-1.5 size-4" />
+                      <DIcons.Trash2 className="mr-1.5 size-4" />
                       Cancel
                     </Button>
                   </DialogClose>
@@ -180,7 +179,7 @@ export function ImageCropper({
                     className="w-fit"
                     onClick={onCrop}
                   >
-                    <CropIcon className="mr-1.5 size-4" />
+                    <DIcons.Crop className="mr-1.5 size-4" />
                     Crop
                   </Button>
                 </DialogFooter>
