@@ -1,20 +1,14 @@
-import React, { Suspense } from "react";
 import Link from "next/link";
-import { getIcons } from "@/actions/get-icons";
-import { IconsList } from "@/comp/dicons/list";
 import { Button } from "@/registry/default/designali/ui/button";
 
 import "public/registry/themes.css";
-
-// <IconsList icons={icons} />
 
 export const metadata = {
   title: "UI - Designali",
   description: "A design agency with a touch of magic.",
 };
 
-export default async function HomePage() {
-  const icons = await getIcons();
+export default function HomePage() {
   return (
     <main>
       <div className="mx-auto mt-10 grid max-w-xl grid-cols-2 gap-3">
@@ -60,7 +54,6 @@ export default async function HomePage() {
             </div>
           </Button>
         </Link>
-        <Suspense></Suspense>
       </div>
     </main>
   );

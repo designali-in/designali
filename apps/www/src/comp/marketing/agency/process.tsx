@@ -8,12 +8,15 @@ import {
 export function DesignProcess() {
   return (
     <div className="px-6">
-      <Accordion type="single" defaultValue="item-1" collapsible>
-        <div className="grid w-full xl:flex">
-          <AccordionItem
-            className="relative h-full xl:mx-auto xl:aspect-auto xl:h-80 xl:w-full xl:min-w-80 xl:max-w-lg  xl:border-b-0 xl:border-r xl:pr-6 "
-            value="item-1"
-          >
+      <Accordion
+        orientation="horizontal"
+        type="single"
+        defaultValue="item-1"
+        collapsible
+        className="rounded-md border lg:rounded-3xl"
+      >
+        <div className="grid lg:flex">
+          <AccordionItem className="relative" value="item-1">
             <AccordionTrigger>BRIEF</AccordionTrigger>
             <AccordionContent>
               At the inception of any project, my creative journey begins by
@@ -24,14 +27,9 @@ export function DesignProcess() {
               initial step lays a strong foundation for the entire creative
               process.
             </AccordionContent>
-            <p className="bottom-6 hidden pb-4 lg:absolute lg:pb-0 xl:block">
-              01
-            </p>
+            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">01</p>
           </AccordionItem>
-          <AccordionItem
-            className="relative h-full xl:mx-auto xl:aspect-auto xl:h-80 xl:w-full xl:min-w-80 xl:max-w-lg  xl:border-b-0 xl:border-r xl:px-6 "
-            value="item-2"
-          >
+          <AccordionItem className="relative" value="item-2">
             <AccordionTrigger>Research</AccordionTrigger>
             <AccordionContent>
               With your vision as my compass, I embark on a journey of
@@ -42,14 +40,9 @@ export function DesignProcess() {
               demographics, I gather invaluable insights that fuel the creative
               spark.
             </AccordionContent>
-            <p className="bottom-6 hidden pb-4 lg:absolute lg:pb-0 xl:block">
-              02
-            </p>
+            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">02</p>
           </AccordionItem>
-          <AccordionItem
-            className="relative h-full xl:mx-auto xl:aspect-auto xl:h-80 xl:w-full xl:min-w-80 xl:max-w-lg  xl:border-b-0 xl:border-r xl:px-6 "
-            value="item-3"
-          >
+          <AccordionItem className="relative" value="item-3">
             <AccordionTrigger>IDEATION</AccordionTrigger>
             <AccordionContent>
               Drawing upon the insights gathered, I enter the conceptualization
@@ -60,14 +53,9 @@ export function DesignProcess() {
               and innovative thinking as I explore diverse concepts to
               encapsulate your brand identity.
             </AccordionContent>
-            <p className="bottom-6 hidden pb-4 lg:absolute lg:pb-0 xl:block">
-              03
-            </p>
+            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">03</p>
           </AccordionItem>
-          <AccordionItem
-            className="relative h-full xl:mx-auto xl:aspect-auto xl:h-80 xl:w-full xl:min-w-80 xl:max-w-lg  xl:border-b-0 xl:border-r xl:px-6 "
-            value="item-4"
-          >
+          <AccordionItem className="relative" value="item-4">
             <AccordionTrigger>DESIGN</AccordionTrigger>
             <AccordionContent>
               As the concepts take shape, I transition into the design phase,
@@ -78,14 +66,9 @@ export function DesignProcess() {
               elements, each design decision is a deliberate step towards
               creating an immersive user experience.
             </AccordionContent>
-            <p className="bottom-6 hidden pb-4 lg:absolute lg:pb-0 xl:block">
-              04
-            </p>
+            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">04</p>
           </AccordionItem>
-          <AccordionItem
-            className="relative h-full border-b-0 xl:mx-auto xl:aspect-auto xl:h-80 xl:w-full   xl:min-w-80  xl:max-w-lg xl:border-r-0 xl:pl-6 "
-            value="item-5"
-          >
+          <AccordionItem className="relative" value="item-5">
             <AccordionTrigger>Iteration</AccordionTrigger>
             <AccordionContent>
               Recognizing that perfection is a journey, not a destination, I
@@ -96,9 +79,7 @@ export function DesignProcess() {
               approach guarantees that your website evolves dynamically, staying
               ahead of the curve and exceeding expectations.
             </AccordionContent>
-            <p className="bottom-6 hidden pb-4 lg:absolute lg:pb-0 xl:block">
-              05
-            </p>
+            <p className="bottom-6 pb-4 lg:absolute lg:pb-0">05</p>
           </AccordionItem>
         </div>
       </Accordion>
