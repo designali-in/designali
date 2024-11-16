@@ -9,8 +9,8 @@ export const ourFileRouter = {
     .middleware(async ({ req }) => {
       const user = await getToken({
         req,
-        salt: "d59aCVFRS/nssHYlGaredV80Nf2ZOp1DQ33yaRkSRRE=",
-        secret: "d59aCVFRS/nssHYlGaredV80Nf2ZOp1DQ33yaRkSRRE=",
+        secret: process.env.NEXTAUTH_SECRET,
+        salt: "",
       });
 
       if (!user) throw new Error("Unauthorized");

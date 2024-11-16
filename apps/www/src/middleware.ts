@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { geolocation } from "@vercel/functions";
+import { getToken } from "next-auth/jwt";
 import UAParser from "ua-parser-js";
 
 import { auth } from "@/lib/auth";
@@ -9,6 +10,30 @@ import site from "./config/site";
 export { auth as middleware } from "@/lib/auth";
 
 export default auth(async (req) => {
+  const isAuthenticated = await getToken({
+    req,
+    salt: "",
+    secret: process.env.NEXTAUTH_SECRET,
+  });
+
+  const pathname = req.nextUrl.pathname;
+  const isSignInPage = pathname === "/sign-in";
+  const isAdminPage = pathname === "/admin" || pathname.startsWith("/admin/");
+
+  if (isAuthenticated) {
+    if (isAdminPage && isAuthenticated.role !== "ADMIN") {
+      return NextResponse.redirect(new URL("/", req.nextUrl));
+    }
+  }
+
+  if (isSignInPage && isAuthenticated) {
+    return NextResponse.redirect(new URL("/", req.nextUrl));
+  }
+
+  if (!isAuthenticated && !isSignInPage) {
+    return NextResponse.redirect(new URL("/sign-in", req.nextUrl));
+  }
+
   // console.log(req.auth);
   try {
     const ip = req.headers.get("X-Forwarded-For");
@@ -36,12 +61,12 @@ export default auth(async (req) => {
             slug: match[1],
             referer,
             ip,
-            city: geo?.city,
-            region: geo?.region,
-            country: geo?.country,
-            latitude: geo?.latitude,
-            longitude: geo?.longitude,
-            flag: geo?.flag,
+            city: geo.city,
+            region: geo.region,
+            country: geo.country,
+            latitude: geo.latitude,
+            longitude: geo.longitude,
+            flag: geo.flag,
             lang: userLanguage,
             device: device.model || "Unknown",
             browser: browser.name || "Unknown",
@@ -68,5 +93,13 @@ export default auth(async (req) => {
 
 // Read more: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    "/community/:path*",
+    "/browse",
+    "/watchlist",
+    "/poll/:path*",
+    "/admin/:path*",
+    "/sign-in",
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  ],
 };

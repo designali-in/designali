@@ -64,6 +64,7 @@ const config = {
       },
     ],
     domains: [
+      "uploadthing.com",
       "avatars.githubusercontent.com",
       "res.cloudinary.com",
       "lh3.googleusercontent.com",
