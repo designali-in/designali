@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { UserDisplay } from "@/types";
 import UserClient from "@/comp/dashboard/admin/users/UserClient";
 import { format } from "date-fns";
