@@ -4,7 +4,7 @@ import { env } from "process";
 import type { Metadata, Viewport } from "next";
 import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
-import { ThemeProvider } from "@/comp/theme-provider";
+import Providers from "@/comp/Providers";
 import { Toaster } from "@designali/ui/toast";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistMono } from "geist/font/mono";
@@ -62,19 +62,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           GeistMono.variable,
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           {children}
           <CookieConsent />
 
           <Toaster />
           <Analytics />
           <GoogleAnalytics gaId="G-85BCJQ64HE" />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -206,28 +206,12 @@ const admindata = {
       isActive: true,
       items: [
         {
-          title: "Products",
-          url: "/admin/products",
+          title: "Agency",
+          url: "/admin/agency",
         },
         {
           title: "Users",
           url: "/admin/users",
-        },
-      ],
-    },
-    {
-      title: "Tools",
-      url: "/admin/tools",
-      icon: DIcons.Settings2,
-      isActive: true,
-      items: [
-        {
-          title: "Image Converter",
-          url: "/admin/tools/image-converter",
-        },
-        {
-          title: "SVG to PNG",
-          url: "/admin/tools/svg-to-png",
         },
       ],
     },

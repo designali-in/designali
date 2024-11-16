@@ -10,6 +10,13 @@ export interface NavItem {
 
 export type MainNavItem = NavItem;
 
+export interface SidebarNavType {
+  id: number;
+  href: string;
+  label: string;
+  Icon: Icon;
+}
+
 export type SidebarNavItem = {
   title: string;
   disabled?: boolean;
@@ -149,3 +156,35 @@ export interface Team {
     members: number;
   };
 }
+
+export interface UserDisplay {
+  name: string | null;
+  email: string | null;
+  createdAt: string;
+  rating: number;
+  pollsVoted: number;
+  postsCreated: number;
+}
+
+export interface AnimeRanking {
+  rank: string;
+  agency: string;
+  designer: string;
+  catalog: string;
+  stars: number;
+  votes: string;
+}
+
+export interface AdminDisplay {
+  name: string | null;
+  email: string | null;
+  createdAt: string;
+  animeAdded: number;
+}
+
+export interface ComboBoxItemType {
+  value: string;
+  label: string;
+}
+
+export type ZodCategoryType = "pending" | "watching" | "finished";

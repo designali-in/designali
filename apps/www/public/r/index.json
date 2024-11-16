@@ -169,6 +169,19 @@
     ]
   },
   {
+    "name": "combobox",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/combobox.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "collapsible",
     "type": "registry:ui",
     "dependencies": [
@@ -229,6 +242,19 @@
     "files": [
       {
         "path": "designali/ui/dropdown-menu.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "form",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/form.tsx",
         "type": "registry:ui"
       }
     ]

@@ -1,3 +1,10 @@
+import type {
+  Agency,
+  DesignPost,
+  PollVote,
+  Rating,
+  User,
+} from "@prisma/client";
 import * as z from "zod";
 
 export const userNameSchema = z.object({
@@ -19,3 +26,10 @@ export function checkUserStatus(user: any) {
   }
   return user;
 }
+
+export type ExtendedUser = User & {
+  agency: Agency[];
+  pollVote: PollVote[];
+  post: DesignPost[];
+  rating: Rating[];
+};

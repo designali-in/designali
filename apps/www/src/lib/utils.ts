@@ -19,6 +19,10 @@ export function truncate(str: string, length: number) {
   return str.length > length ? `${str.substring(0, length)}...` : str;
 }
 
+export function capitalizeFirstCharacter(text: string) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 export function formatDate(input: string | number): string {
   const date = new Date(input);
   return date.toLocaleDateString("en-US", {
@@ -132,4 +136,21 @@ export function generateUrlSuffix(length: number = 6): string {
   }
 
   return result;
+}
+
+export function formatDescription(description: string, trim: number) {
+  if (description.length > trim) {
+    const trimmedDescription = description.slice(0, trim).trimEnd();
+    return trimmedDescription + "...";
+  }
+
+  return description;
+}
+
+export function formatUrl(name: string, reverse?: boolean) {
+  if (reverse) {
+    return decodeURIComponent(name.split("-").join(" "));
+  }
+
+  return name.split(" ").join("-");
 }

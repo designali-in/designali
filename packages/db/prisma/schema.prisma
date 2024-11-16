@@ -60,6 +60,7 @@ model Session {
 model User {
   id            String    @id @default(cuid())
   name          String?
+  username      String?   @unique
   email         String?   @unique
   emailVerified DateTime?
   image         String?
@@ -74,6 +75,24 @@ model User {
   UserUrl       UserUrl[] 
   teams             TeamMember[]
   teamActivities    TeamActivity[]
+
+  agency              Agency[]
+  rating             Rating[]
+  finishedWatching   FinishedDesign[]
+  currentlyWatching  CurrentlyDesign[]
+  notStartedWatching NotStartedDesign[]
+
+  community Community[]
+  post      DesignPost[]
+  comment   Comment[]
+
+  reviews     Reviews[]
+  reviewLikes ReviewLike[]
+
+  like Like[]
+
+  pollVote PollVote[]
+  poll     Poll[]
 
   stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
   stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
@@ -195,4 +214,230 @@ model TeamActivity {
 
   @@index([teamId])
   @@index([userId])
+}
+
+model Agency {
+  id    String @id @default(cuid())
+  name  String @unique
+
+  catalog String
+  
+  filetype String
+  software String
+
+  releaseYear String
+  designer    String
+
+  description String @db.VarChar(1500)
+
+  tutorialLink String
+  coverImage  String
+
+  rating       Rating[]
+  totalRatings Int      @default(0)
+
+  finishedDesign   FinishedDesign[]
+  currentlyDesign  CurrentlyDesign[]
+  notStartedDesign NotStartedDesign[]
+
+  reviews Reviews[]
+
+  creatorId String
+  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([name])
+  @@index([creatorId])
+}
+
+model Reviews {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  agencyId String
+  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+
+  reviewLikes ReviewLike[]
+
+  title String @db.VarChar(50)
+  text  String @db.VarChar(1500)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([agencyId])
+}
+
+model ReviewLike {
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  reviewId String
+  review   Reviews @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+
+  @@id([userId, reviewId])
+}
+
+model Rating {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  agencyId String
+  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+
+  rating Int
+
+  @@index([userId])
+  @@index([agencyId])
+}
+
+//----------------------------------------
+model FinishedDesign {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  agencyId String
+  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([agencyId])
+}
+
+model CurrentlyDesign {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  agencyId String
+  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([agencyId])
+}
+
+model NotStartedDesign {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  agencyId String
+  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([agencyId])
+}
+
+
+model Community {
+  id          String @id @default(cuid())
+  name        String @unique
+  description String @db.VarChar(300)
+
+  category String
+
+  creatorId String
+  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  post DesignPost[]
+
+  createdAt DateTime @default(now())
+
+  @@index([creatorId])
+}
+
+model DesignPost {
+  id String @id @default(cuid())
+
+  title   String @db.VarChar(80)
+  message String @db.VarChar(600)
+
+  creatorId String
+  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  communityId String
+  community   Community @relation(fields: [communityId], references: [id], onDelete: Cascade)
+  like        Like[]
+
+  comment Comment[]
+
+  createdAt DateTime @default(now())
+
+  @@index([communityId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  text      String   @db.VarChar(300)
+  createdAt DateTime @default(now())
+
+  author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId String
+
+  post   DesignPost   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId String
+}
+
+model Like {
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  postId String
+  post   DesignPost   @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@id([userId, postId])
+}
+
+//----------------------------------------
+model Poll {
+  id String @id @default(cuid())
+
+  question String @db.VarChar(150)
+
+  creatorId String
+  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  option PollOption[]
+
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model PollOption {
+  id String @id @default(cuid())
+
+  option String @db.VarChar(80)
+
+  pollId String
+  poll   Poll   @relation(fields: [pollId], references: [id], onDelete: Cascade)
+
+  vote PollVote[]
+
+  createdAt DateTime @default(now())
+}
+
+model PollVote {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  pollOptionId String
+  pollOption   PollOption @relation(fields: [pollOptionId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
 }

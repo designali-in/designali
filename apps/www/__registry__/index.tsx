@@ -148,6 +148,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "combobox": {
+      name: "combobox",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/combobox.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/combobox.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "collapsible": {
       name: "collapsible",
       type: "registry:ui",
@@ -198,6 +209,17 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/designali/ui/dropdown-menu.tsx"],
       component: React.lazy(() => import("@/registry/default/designali/ui/dropdown-menu.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "form": {
+      name: "form",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/form.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/form.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

@@ -14,6 +14,8 @@ export const env = createEnv({
     YOUTUBE_API_KEY: z.string().min(1),
     RESEND_API_KEY: z.string().min(1),
     ADMIN_EMAIL: z.string().optional(),
+    UPLOADTHING_SECRET: z.string(),
+    UPLOADTHING_APP_ID: z.string(),
     STRIPE_API_KEY: z.string().min(1),
     STRIPE_WEBHOOK_SECRET: z.string().min(1),
     NODE_ENV: z.enum(["development", "test", "production"]),
@@ -37,6 +39,8 @@ export const env = createEnv({
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     ADMIN_EMAIL: process.env.ADMIN_EMAIL,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+    UPLOADTHING_SECRET: process.env.UPLOADTHING_SECRET,
+    UPLOADTHING_APP_ID: process.env.UPLOADTHING_APP_ID,
     // Stripe
     STRIPE_API_KEY: process.env.STRIPE_API_KEY,
     STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
@@ -48,7 +52,7 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
     NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID:
       process.env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID,
-      NEXT_PUBLIC_FREE_URL_QUOTA: process.env.NEXT_PUBLIC_FREE_URL_QUOTA,
+    NEXT_PUBLIC_FREE_URL_QUOTA: process.env.NEXT_PUBLIC_FREE_URL_QUOTA,
     NODE_ENV: process.env.NODE_ENV,
   },
 });

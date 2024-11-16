@@ -81,6 +81,12 @@ export const ui: Registry = [
     files: ["designali/ui/checkbox.tsx"],
   },
   {
+    name: "combobox",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/combobox.tsx"],
+  },
+  {
     name: "collapsible",
     type: "registry:ui",
     dependencies: [""],
@@ -111,12 +117,17 @@ export const ui: Registry = [
     files: ["designali/ui/dropdown-menu.tsx"],
   },
   {
+    name: "form",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/form.tsx"],
+  },
+  {
     name: "hover-card",
     type: "registry:ui",
     dependencies: [""],
     files: ["designali/ui/hover-card.tsx"],
   },
-
   {
     name: "mode-toggle",
     type: "registry:ui",

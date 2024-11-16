@@ -4,6 +4,7 @@
 import type { UserRole } from "@prisma/client";
 import type { DefaultSession } from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import { nanoid } from "nanoid";
 import NextAuth from "next-auth";
 
 import { prisma } from "@/lib/db";
