@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
@@ -80,7 +81,7 @@ const Users: FC<UsersProps> = ({ initialUsers, initialFetchedUsers }) => {
       setUsers(structuredUserData);
     } else if (infiniteQueryData) {
       const fetchedInfiniteData =
-        infiniteQueryData?.pages.flatMap((page) => page) ?? initialFetchedUsers;
+        infiniteQueryData.pages.flatMap((page) => page) ?? initialFetchedUsers;
 
       const structuredUserData: UserDisplay[] = fetchedInfiniteData.flatMap(
         (user) => ({
