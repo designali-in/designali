@@ -196,3 +196,129 @@ export function AppSidebar({
     </Sidebar>
   );
 }
+
+const admindata = {
+  navMain: [
+    {
+      title: "Admin",
+      url: "/admin",
+      icon: DIcons.SquareTerminal,
+      isActive: true,
+      items: [
+        {
+          title: "Products",
+          url: "/admin/products",
+        },
+        {
+          title: "Users",
+          url: "/admin/users",
+        },
+      ],
+    },
+    {
+      title: "Tools",
+      url: "/admin/tools",
+      icon: DIcons.Settings2,
+      isActive: true,
+      items: [
+        {
+          title: "Image Converter",
+          url: "/admin/tools/image-converter",
+        },
+        {
+          title: "SVG to PNG",
+          url: "/admin/tools/svg-to-png",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      url: "/admin/settings",
+      icon: DIcons.Settings,
+      isActive: true,
+      items: [
+        {
+          title: "General",
+          url: "/admin/settings",
+        },
+        {
+          title: "Team",
+          url: "/admin/teams",
+        },
+      ],
+    },
+    {
+      title: "Designs",
+      url: "/designs",
+      icon: DIcons.Shapes,
+      isActive: false,
+      items: [
+        {
+          title: "Components",
+          url: "/components",
+        },
+        {
+          title: "UI",
+          url: "/ui",
+        },
+      ],
+    },
+  ],
+  navSecondary: [
+    {
+      title: "Contact",
+      url: "/contact",
+      icon: DIcons.Mail,
+    },
+    {
+      title: "Feedback",
+      url: "https://www.instagram.com/designali.in/",
+      icon: DIcons.Send,
+    },
+  ],
+};
+
+export function AdminAppSidebar({
+  user,
+  ...props
+}: React.ComponentProps<typeof Sidebar> & UserAccountNavProps) {
+  const { isMobile } = useSidebar();
+  return (
+    <Sidebar collapsible="icon" variant="inset" {...props}>
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton className="h-12" size="lg" asChild>
+              <Link
+                aria-label="Logo"
+                href="/"
+                className="flex items-center justify-center lg:flex"
+              >
+                <div className=" flex aspect-square size-10 items-center justify-center rounded-lg">
+                  <Logo className="ml-2 h-5" />
+                </div>
+                <div className="grid flex-1  text-left text-sm leading-tight">
+                  <span className="truncate font-semibold">Designali</span>
+                </div>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarHeader>
+      <SidebarContent>
+        <NavMain items={admindata.navMain} />
+        <div className="px-2">
+          <Separator />
+        </div>
+        <NavSecondary items={admindata.navSecondary} className="" />
+      </SidebarContent>
+      <SidebarFooter>
+        <NavUser user={user} />
+        <div className={cn("grid flex-wrap gap-1 md:flex")}>
+          <ThemeToggle />
+          <CommandMenu />
+        </div>
+      </SidebarFooter>
+    </Sidebar>
+  );
+}
