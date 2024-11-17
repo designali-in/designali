@@ -34,6 +34,10 @@ const data = {
       isActive: true,
       items: [
         {
+          title: "Community",
+          url: "/dashboard/community",
+        },
+        {
           title: "Urls",
           url: "/dashboard/urls",
         },

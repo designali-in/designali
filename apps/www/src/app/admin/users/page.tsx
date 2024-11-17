@@ -21,9 +21,12 @@ const UsersPage = async () => {
     name: user.name,
     email: user.email,
     createdAt: format(new Date(user.createdAt), "do MMMM',' yyyy"),
-    rating: user.rating.length,
-    pollsVoted: user.pollVote.length,
-    postsCreated: user.post.length,
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    rating: user.rating?.length || 0,
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    pollsVoted: user.pollVote?.length || 0,
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    postsCreated: user.post?.length || 0,
   }));
   return (
     <main className="p-6">

@@ -23,7 +23,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 interface ComboboxProps extends React.HTMLAttributes<HTMLInputElement> {
   placeholder: string;
   data: ComboBoxItemType[];
-  setState: (genre: string) => void;
+  setState: (catalog: string) => void;
   selectedOption?: string;
   disabled?: boolean;
   large?: boolean;
@@ -63,7 +63,7 @@ export const Combobox: FC<ComboboxProps> = forwardRef<
       if (value) {
         const findIndex = data.findIndex((item) => item.value === value);
 
-        setState(data[findIndex].value);
+        setState(data[findIndex]?.value || "");
       } else {
         setState("");
       }
@@ -79,7 +79,8 @@ export const Combobox: FC<ComboboxProps> = forwardRef<
             className="w-[200px] justify-between"
           >
             {value
-              ? data.find((item) => item.value === value).label
+              ? data?.find((item) => item.value === value)?.label ||
+                "Default Label"
               : placeholder}
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>

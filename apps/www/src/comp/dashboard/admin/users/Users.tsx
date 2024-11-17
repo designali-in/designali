@@ -88,9 +88,12 @@ const Users: FC<UsersProps> = ({ initialUsers, initialFetchedUsers }) => {
           name: user.name,
           email: user.email,
           createdAt: format(new Date(user.createdAt), "do MMMM',' yyyy"),
-          rating: user.rating.length,
-          pollsVoted: user.pollVote.length,
-          postsCreated: user.post.length,
+
+          rating: user.rating?.length || 0,
+
+          pollsVoted: user.pollVote?.length || 0,
+
+          postsCreated: user.post?.length || 0,
         }),
       );
       setUsers(structuredUserData);

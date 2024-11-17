@@ -6,8 +6,8 @@ export const categories: ComboBoxItemType[] = [
     label: "General",
   },
   {
-    value: "anime",
-    label: "Anime",
+    value: "agency",
+    label: "Agency",
   },
   {
     value: "manga",

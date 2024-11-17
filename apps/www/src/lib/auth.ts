@@ -12,14 +12,6 @@ import { getUserById } from "@/lib/validations/auth";
 
 import authConfig from "./auth.config";
 
-declare module "next-auth" {
-  interface Session {
-    user: {
-      role: UserRole;
-    } & DefaultSession["user"];
-  }
-}
-
 export const {
   handlers: { GET, POST },
   auth,
@@ -33,39 +25,53 @@ export const {
   },
   callbacks: {
     async session({ token, session }) {
-      if (session.user) {
-        if (token.sub) {
-          session.user.id = token.sub;
-        }
-
-        if (token.email) {
-          session.user.email = token.email;
-        }
-
-        if (token.role) {
-          session.user.role = token.role;
-        }
-
+      if (token) {
+        session.user.id = token.id;
         session.user.name = token.name;
+        session.user.email = token.email;
         session.user.image = token.picture;
+        session.user.username = token.username;
+        session.user.role = token.role;
       }
 
       return session;
     },
 
-    async jwt({ token }) {
+    async jwt({ token, user }) {
       if (!token.sub) return token;
 
-      const dbUser = await getUserById(token.sub);
+      const dbUser = await prisma.user.findFirst({
+        where: {
+          email: token.email,
+        },
+      });
 
-      if (!dbUser) return token;
+      if (!dbUser) {
+        token.id = user.id;
+        return token;
+      }
 
-      token.name = dbUser.name;
-      token.email = dbUser.email;
-      token.picture = dbUser.image;
-      token.role = dbUser.role;
-
-      return token;
+      if (!dbUser.username) {
+        await prisma.user.update({
+          where: {
+            id: dbUser.id,
+          },
+          data: {
+            username: nanoid(10),
+          },
+        });
+      }
+      return {
+        id: dbUser.id,
+        name: dbUser.name,
+        email: dbUser.email,
+        picture: dbUser.image,
+        username: dbUser.username,
+        role: dbUser.role,
+      };
+    },
+    redirect() {
+      return "/";
     },
   },
   ...authConfig,

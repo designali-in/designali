@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
 import type { Icons } from "@/components/shared/icons";
 import type { User } from "@prisma/client";
 import type { Icon } from "lucide-react";
@@ -188,3 +189,19 @@ export interface ComboBoxItemType {
 }
 
 export type ZodCategoryType = "pending" | "watching" | "finished";
+
+export type ExtendedCommunity = Community & {
+  creator: User;
+  post: DesignPost[];
+};
+
+export type ExtendedPost = DesignPost & {
+  creator: User;
+  comment: Comment[];
+  like: Like[];
+  community: Community;
+};
+
+export type ExtendedComment = Comment & {
+  author: User;
+};

@@ -10,7 +10,7 @@ import type { FC } from "react";
 import { forwardRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Combobox } from "@/comp/uis/combobox";
-import { genres } from "@/src/data/agency";
+import { catalog } from "@/src/data/agency";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
@@ -53,10 +53,10 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     defaultValues: {
       name: anime.name,
       description: anime.description,
-      director: anime.designer,
-      genre: anime.catalog,
+      designer: anime.designer,
+      catalog: anime.catalog,
       releaseYear: anime.releaseYear,
-      trailerLink: anime.tutorialLink,
+      tutorialLink: anime.tutorialLink,
     },
   });
 
@@ -71,11 +71,11 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
 
       const payload = { ...content, genre, coverImage: fileUrl, id: anime.id };
 
-      const { data } = await axios.patch("/api/anime", payload);
+      const { data } = await axios.patch("/api/agency", payload);
       return data;
     },
     onSuccess: () => {
-      router.push("/admin/anime");
+      router.push("/admin/agency");
       router.refresh();
       form.reset();
 
@@ -125,7 +125,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
       return data;
     },
     onSuccess: () => {
-      router.push("/admin/anime");
+      router.push("/admin/agency");
       router.refresh();
       form.reset();
 
@@ -218,7 +218,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
         />
         <FormField
           control={form.control}
-          name="director"
+          name="designer"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Director</FormLabel>
@@ -235,13 +235,13 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
         />
         <FormField
           control={form.control}
-          name="genre"
+          name="catalog"
           render={() => (
             <FormItem className="flex flex-col gap-y-1">
               <FormLabel>Genre</FormLabel>
               <FormControl>
                 <Combobox
-                  data={genres}
+                  data={catalog}
                   placeholder="Select genre..."
                   selectedOption={capitalizeFirstCharacter(genre)}
                   setState={setGenre}
@@ -271,7 +271,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
         />
         <FormField
           control={form.control}
-          name="trailerLink"
+          name="tutorialLink"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Trailor Link</FormLabel>
