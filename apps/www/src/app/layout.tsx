@@ -5,6 +5,7 @@ import type { Metadata, Viewport } from "next";
 import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
 import Providers from "@/comp/Providers";
+import { DToaster } from "@/comp/uis/toaster";
 import { Toaster } from "@designali/ui/toast";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistMono } from "geist/font/mono";
@@ -65,7 +66,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Providers>
           {children}
           <CookieConsent />
-
+          <DToaster />
           <Toaster />
           <Analytics />
           <GoogleAnalytics gaId="G-85BCJQ64HE" />

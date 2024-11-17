@@ -38,6 +38,10 @@ const data = {
           url: "/dashboard/community",
         },
         {
+          title: "Poll",
+          url: "/dashboard/poll",
+        },
+        {
           title: "Urls",
           url: "/dashboard/urls",
         },

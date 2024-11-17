@@ -1,6 +1,6 @@
 import type { ComboBoxItemType, ZodCategoryType } from "@/types";
 
-export const catalog: ComboBoxItemType[] = [
+export const catalogs: ComboBoxItemType[] = [
   {
     value: "shōnen",
     label: "Shōnen",
@@ -12,54 +12,6 @@ export const catalog: ComboBoxItemType[] = [
   {
     value: "comedy",
     label: "Comedy",
-  },
-  {
-    value: "isekai",
-    label: "Isekai",
-  },
-  {
-    value: "sports",
-    label: "Sports",
-  },
-  {
-    value: "horror",
-    label: "Horror",
-  },
-  {
-    value: "mystery",
-    label: "Mystery",
-  },
-  {
-    value: "ecchi",
-    label: "Ecchi",
-  },
-  {
-    value: "shoujo",
-    label: "Shoujo",
-  },
-  {
-    value: "adventure",
-    label: "Adventure",
-  },
-  {
-    value: "fantasy",
-    label: "Fantasy",
-  },
-  {
-    value: "romance",
-    label: "Romance",
-  },
-  {
-    value: "seinen",
-    label: "Seinen",
-  },
-  {
-    value: "mecha",
-    label: "Mecha",
-  },
-  {
-    value: "thriller",
-    label: "Thriller",
   },
 ];
 

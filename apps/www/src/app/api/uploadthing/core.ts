@@ -2,6 +2,8 @@ import type { FileRouter } from "uploadthing/next";
 import { getToken } from "next-auth/jwt";
 import { createUploadthing } from "uploadthing/next";
 
+import { auth } from "@/lib/auth";
+
 const f = createUploadthing();
 
 export const ourFileRouter = {

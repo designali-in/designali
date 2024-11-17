@@ -33,7 +33,7 @@ const page = async () => {
     <div className="p-6">
       <Card>
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl">Add anime</CardTitle>
+          <CardTitle className="text-2xl">Add Solution</CardTitle>
           <CardDescription>Add a new anime for the users</CardDescription>
         </CardHeader>
         <CardContent>

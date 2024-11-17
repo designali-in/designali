@@ -53,7 +53,7 @@ export async function POST(req: Request) {
     }
 
     if (catalog.length === 0) {
-      return new Response("Please enter a genre", { status: 422 });
+      return new Response("Please enter a catalog", { status: 422 });
     }
 
     if (name.includes("-")) {
@@ -64,9 +64,9 @@ export async function POST(req: Request) {
     await prisma.agency.create({
       data: {
         description,
+        designer,
         software,
         filetype,
-        designer,
         catalog,
         name,
         releaseYear,
@@ -113,8 +113,6 @@ export async function PATCH(req: Request) {
     const {
       id,
       description,
-      software,
-      filetype,
       designer,
       catalog,
       name,
@@ -134,7 +132,7 @@ export async function PATCH(req: Request) {
     }
 
     if (catalog.length === 0) {
-      return new Response("Please enter a genre", { status: 422 });
+      return new Response("Please enter a catalog", { status: 422 });
     }
 
     //all checks complete ✅
@@ -145,8 +143,6 @@ export async function PATCH(req: Request) {
       data: {
         description,
         designer,
-        software,
-        filetype,
         catalog,
         name,
         releaseYear,
@@ -176,12 +172,12 @@ export async function GET(req: Request) {
       return new Response("Unauthorized", { status: 401 });
     }
 
-    const { limit, page, query, orderBy, genre, year } = z
+    const { limit, page, query, orderBy, catalog, year } = z
       .object({
         limit: z.string(),
         page: z.string(),
         query: z.string().nullish().optional(),
-        genre: z.string().nullish().optional(),
+        catalog: z.string().nullish().optional(),
         year: z.string().nullish().optional(),
         orderBy: z.string().nullish().optional(),
       })
@@ -189,7 +185,7 @@ export async function GET(req: Request) {
         limit: url.searchParams.get("limit"),
         page: url.searchParams.get("page"),
         query: url.searchParams.get("q"),
-        genre: url.searchParams.get("genre"),
+        catalog: url.searchParams.get("catalog"),
         year: url.searchParams.get("year"),
         orderBy: url.searchParams.get("orderBy"),
       });
@@ -197,14 +193,14 @@ export async function GET(req: Request) {
     let whereClause = {};
     let orderByClause = {};
 
-    if (genre && year) {
+    if (catalog && year) {
       whereClause = {
-        genre,
+        catalog,
         releaseYear: year,
       };
-    } else if (genre) {
+    } else if (catalog) {
       whereClause = {
-        genre,
+        catalog,
       };
     } else if (year) {
       whereClause = {

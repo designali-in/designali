@@ -205,3 +205,8 @@ export type ExtendedPost = DesignPost & {
 export type ExtendedComment = Comment & {
   author: User;
 };
+
+export type ExtendedPoll = Poll & {
+  creator: User;
+  option: (PollOption & { vote: PollVote[] })[];
+};

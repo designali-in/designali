@@ -54,8 +54,8 @@ const CommunityCategoryPage = async ({
   });
 
   return (
-    <div className="px-1">
-      <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]">
+    <div className="space-y-3">
+      <h1 className="py-4 text-2xl font-semibold">
         {formattedCategory} Communities
       </h1>
       <Link

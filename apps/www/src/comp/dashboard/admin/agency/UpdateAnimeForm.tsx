@@ -10,7 +10,7 @@ import type { FC } from "react";
 import { forwardRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Combobox } from "@/comp/uis/combobox";
-import { catalog } from "@/src/data/agency";
+import { catalogs } from "@/src/data/agency";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
@@ -121,7 +121,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     mutationFn: async () => {
       const payload: IdAnimeSchemaType = { id: anime.id };
 
-      const { data } = await axios.post("/api/anime/delete", payload);
+      const { data } = await axios.post("/api/agency/delete", payload);
       return data;
     },
     onSuccess: () => {
@@ -241,7 +241,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
               <FormLabel>Genre</FormLabel>
               <FormControl>
                 <Combobox
-                  data={catalog}
+                  data={catalogs}
                   placeholder="Select genre..."
                   selectedOption={capitalizeFirstCharacter(genre)}
                   setState={setGenre}

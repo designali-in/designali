@@ -1,0 +1,44 @@
+import Link from "next/link";
+import PollClient from "@/comp/dashboard/admin/poll/PollClient";
+import { Button } from "@/registry/default/designali/ui/button";
+
+import { auth } from "@/lib/auth";
+import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
+import { prisma } from "@/lib/db";
+
+const PollPage = async () => {
+  const session = await auth();
+
+  const initialPolls = await prisma.poll.findMany({
+    orderBy: { createdAt: "desc" },
+    include: {
+      option: {
+        include: {
+          vote: true,
+        },
+      },
+      creator: true,
+    },
+    take: INFINITE_SCROLLING_PAGINATION_BROWSE,
+    where: {
+      expiresAt: {
+        gt: new Date(), // only show polls that haven't expired yet
+      },
+    },
+  });
+
+  return (
+    <div className="space-y-3">
+      <Link href="/dashboard/poll/create">
+        <Button>Create Poll</Button>
+      </Link>
+      <PollClient
+        initialPolls={initialPolls}
+        interaction
+        sessionId={session.user.id}
+      />
+    </div>
+  );
+};
+
+export default PollPage;

@@ -10,21 +10,10 @@ import site from "./config/site";
 export { auth as middleware } from "@/lib/auth";
 
 export default auth(async (req) => {
-  const isAuthenticated = await getToken({
-    req,
-    salt: "",
-    secret: process.env.NEXTAUTH_SECRET,
-  });
+  const isAuthenticated = await auth();
 
   const pathname = req.nextUrl.pathname;
   const isSignInPage = pathname === "/sign-in";
-  const isAdminPage = pathname === "/admin" || pathname.startsWith("/admin/");
-
-  if (isAuthenticated) {
-    if (isAdminPage && isAuthenticated.role !== "ADMIN") {
-      return NextResponse.redirect(new URL("/", req.nextUrl));
-    }
-  }
 
   if (isSignInPage && isAuthenticated) {
     return NextResponse.redirect(new URL("/", req.nextUrl));

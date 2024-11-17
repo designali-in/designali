@@ -4,9 +4,9 @@ export const animeSchema = z.object({
   id: z.string().optional(), //server validation
   name: z.string().min(3).max(150),
   description: z.string().min(3).max(1200),
-  software: z.string(),
+  software: z.string().min(3).max(50),
   catalog: z.string(),
-  filetype: z.string(),
+  filetype: z.string().min(3).max(50),
   releaseYear: z
     .string()
     .regex(/^[0-9_]+$/, { message: "Please enter a valid year." })

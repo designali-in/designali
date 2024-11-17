@@ -204,3 +204,42 @@ export function formatTimeToNow(date: Date): string {
     },
   });
 }
+
+export function formatTimeLeft(expiryDate: Date) {
+  const currentDate = new Date();
+
+  const duration = intervalToDuration({ start: currentDate, end: expiryDate });
+
+  if (!duration) return "Expired";
+
+  const years = duration.years ?? 0;
+  const months = duration.months ?? 0;
+  const days = duration.days ?? 0;
+  const hours = duration.hours ?? 0;
+  const minutes = duration.minutes ?? 0;
+  const seconds = duration.seconds ?? 0;
+
+  if (years > 0) {
+    return `${years} year${years > 1 ? "s" : ""}`;
+  } else if (months > 0) {
+    return `${months} month${months > 1 ? "s" : ""}`;
+  } else if (days > 0) {
+    return `${days} day${days > 1 ? "s" : ""}`;
+  } else if (hours > 0) {
+    return `${hours} hour${hours > 1 ? "s" : ""}`;
+  } else if (minutes > 0) {
+    return `${minutes} minute${minutes > 1 ? "s" : ""}`;
+  } else {
+    return `${seconds} second${seconds > 1 ? "s" : ""}`;
+  }
+}
+
+export function convertToSingleDecimalPlace(
+  number: number,
+  decimalPlaces: number,
+) {
+  const roundedNumber = number.toFixed(decimalPlaces);
+  const singleDecimalPlace = parseFloat(roundedNumber).toFixed(1);
+
+  return parseFloat(singleDecimalPlace);
+}

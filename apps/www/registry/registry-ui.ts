@@ -99,6 +99,12 @@ export const ui: Registry = [
     files: ["designali/ui/command.tsx"],
   },
   {
+    name: "date-picker",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/date-picker.tsx"],
+  },
+  {
     name: "dialog",
     type: "registry:ui",
     dependencies: [""],

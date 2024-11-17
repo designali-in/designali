@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import type { AnimeSchemaType } from "@/lib/validations/agency";
 import { forwardRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Combobox } from "@/comp/uis/combobox";
-import { catalog } from "@/data/agency";
+import { catalogs } from "@/data/agency";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
@@ -33,7 +32,7 @@ const AddAnimeForm = () => {
   const { loginToast, endErrorToast } = useAuthToast();
 
   const [file, setFile] = useState<File | null>(null);
-  const [genre, setGenre] = useState("");
+  const [catalog, setCatalog] = useState("");
 
   //react-hook-form initialization
   const form = useForm<AnimeSchemaType>({
@@ -43,8 +42,6 @@ const AddAnimeForm = () => {
       description: "",
       designer: "",
       catalog: "",
-      software: "",
-      filetype: "",
       releaseYear: "",
       tutorialLink: "",
     },
@@ -59,7 +56,7 @@ const AddAnimeForm = () => {
         fileUrl = url;
       }
 
-      const payload = { ...content, genre, coverImage: fileUrl };
+      const payload = { ...content, catalog, coverImage: fileUrl };
 
       const { data } = await axios.post("/api/agency", payload);
       return data;
@@ -185,7 +182,7 @@ const AddAnimeForm = () => {
               <FormLabel>Director</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Type anime designer here."
+                  placeholder="Type anime director here."
                   {...field}
                   disabled={isLoading}
                 />
@@ -202,9 +199,9 @@ const AddAnimeForm = () => {
               <FormLabel>Genre</FormLabel>
               <FormControl>
                 <Combobox
-                  data={catalog}
-                  placeholder="Select catalog..."
-                  setState={setGenre}
+                  data={catalogs}
+                  placeholder="Select genre..."
+                  setState={setCatalog}
                   disabled={isLoading}
                   large
                 />
@@ -238,7 +235,7 @@ const AddAnimeForm = () => {
               <FormLabel>Trailor Link</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Enter a tutorial link."
+                  placeholder="Enter a trailer link."
                   {...field}
                   disabled={isLoading}
                 />
@@ -272,8 +269,8 @@ const AddAnimeForm = () => {
               aria-hidden="true"
             />
           )}
-          Add Anime
-          <span className="sr-only">Add Anime</span>
+          Add Solution
+          <span className="sr-only">Add Solution</span>
         </Button>
       </form>
     </Form>
@@ -296,7 +293,7 @@ const FileInput = forwardRef<
       placeholder={placeholder}
       disabled={disabled}
       onChange={(e) => {
-        const selectedFile = e.target.files[0];
+        const selectedFile = e.target.files?.[0];
         if (selectedFile) {
           setFile(selectedFile);
         }
