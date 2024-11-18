@@ -1,8 +1,8 @@
+import { rateAnimeSchema } from "@/src/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { rateAnimeSchema } from "@/lib/validations/agency";
 
 export async function POST(req: Request) {
   try {
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const { id, rating } = rateAnimeSchema.parse(body);
 
-    const anime = await prisma.agency.findFirst({
+    const anime = await prisma.graphic.findFirst({
       where: {
         id,
       },
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     const alreadyRated = await prisma.rating.findFirst({
       where: {
         userId: session.user.id,
-        agencyId: id,
+        graphicId: id,
       },
     });
 
@@ -41,7 +41,7 @@ export async function POST(req: Request) {
           where: {
             id: alreadyRated.id,
             userId: session.user.id,
-            agencyId: id,
+            graphicId: id,
           },
         });
 
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
           where: {
             id: alreadyRated.id,
             userId: session.user.id,
-            agencyId: id,
+            graphicId: id,
           },
           data: {
             rating,
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
       await prisma.rating.create({
         data: {
           userId: session.user.id,
-          agencyId: id,
+          graphicId: id,
           rating,
         },
       });
@@ -71,7 +71,7 @@ export async function POST(req: Request) {
     }
 
     //add the rating to the existing anime
-    await prisma.agency.update({
+    await prisma.graphic.update({
       where: {
         id,
       },

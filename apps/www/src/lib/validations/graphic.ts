@@ -4,17 +4,15 @@ export const animeSchema = z.object({
   id: z.string().optional(), //server validation
   name: z.string().min(3).max(150),
   description: z.string().min(3).max(1200),
-  software: z.string().min(3).max(50),
-  catalog: z.string(),
-  filetype: z.string().min(3).max(50),
+  genre: z.string(),
   releaseYear: z
     .string()
     .regex(/^[0-9_]+$/, { message: "Please enter a valid year." })
     .min(4, { message: "Please enter a valid year." })
     .max(4, { message: "Please enter a valid year." }),
-  designer: z.string().min(3).max(50),
+  director: z.string().min(3).max(50),
 
-  tutorialLink: z.string().regex(/^(ftp|http|https):\/\/[^ "]+$/, {
+  trailerLink: z.string().regex(/^(ftp|http|https):\/\/[^ "]+$/, {
     message: "Please enter a valid link.",
   }),
   coverImage: z
@@ -41,7 +39,7 @@ export type RateAnimeSchemaType = z.infer<typeof rateAnimeSchema>;
 
 export const AnimeWatchlistSchema = z.object({
   category: z.string().optional(),
-  agencyId: z.string().optional(),
+  animeId: z.string().optional(),
 });
 
 export type AnimeWatchlistSchemaType = z.infer<typeof AnimeWatchlistSchema>;
@@ -53,21 +51,21 @@ export const ZodCategoryType = z.union([
 ]);
 
 export const AnimeWatchlistClient = z.object({
-  agencyId: z.string(),
+  animeId: z.string(),
   category: z.string(),
 });
 
 export type AnimeWatchlistClientType = z.infer<typeof AnimeWatchlistClient>;
 
 export const AnimeWatchlistServer = z.object({
-  agencyId: z.string(),
+  animeId: z.string(),
   category: ZodCategoryType,
 });
 
 export type AnimeWatchlistServerType = z.infer<typeof AnimeWatchlistServer>;
 
 export const AnimeWatchlistUpdate = z.object({
-  agencyId: z.string(),
+  animeId: z.string(),
   category: ZodCategoryType,
   dropTo: ZodCategoryType,
 });
@@ -89,7 +87,7 @@ export const AnimeReviewSchema = z.object({
 export type AnimeReviewSchemaType = z.infer<typeof AnimeReviewSchema>;
 
 export const AnimeReviewServerSchema = AnimeReviewSchema.extend({
-  agencyId: z.string(),
+  animeId: z.string(),
 });
 
 export type AnimeReviewServerSchemaType = z.infer<

@@ -208,6 +208,19 @@
     ]
   },
   {
+    "name": "date-picker",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/date-picker.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "dialog",
     "type": "registry:ui",
     "dependencies": [

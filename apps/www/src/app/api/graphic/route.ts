@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { animeSchema } from "@/lib/validations/agency";
+import { animeSchema } from "@/lib/validations/graphic";
 
 export async function POST(req: Request) {
   try {
@@ -32,17 +36,15 @@ export async function POST(req: Request) {
 
     const {
       description,
-      designer,
-      catalog,
-      software,
-      filetype,
+      director,
+      genre,
       name,
       releaseYear,
       coverImage,
-      tutorialLink,
+      trailerLink,
     } = animeSchema.parse(body);
 
-    const existingAnime = await prisma.agency.findFirst({
+    const existingAnime = await prisma.graphic.findFirst({
       where: {
         name,
       },
@@ -52,8 +54,8 @@ export async function POST(req: Request) {
       return new Response("Anime already exists", { status: 409 });
     }
 
-    if (catalog.length === 0) {
-      return new Response("Please enter a catalog", { status: 422 });
+    if (genre.length === 0) {
+      return new Response("Please enter a genre", { status: 422 });
     }
 
     if (name.includes("-")) {
@@ -61,17 +63,15 @@ export async function POST(req: Request) {
     }
 
     //all checks complete ✅
-    await prisma.agency.create({
+    await prisma.graphic.create({
       data: {
         description,
-        designer,
-        software,
-        filetype,
-        catalog,
+        director,
+        genre,
         name,
         releaseYear,
-        coverImage: coverImage,
-        tutorialLink,
+        coverImage: coverImage!,
+        trailerLink,
         creatorId: session.user.id,
       },
     });
@@ -113,15 +113,15 @@ export async function PATCH(req: Request) {
     const {
       id,
       description,
-      designer,
-      catalog,
+      director,
+      genre,
       name,
       releaseYear,
       coverImage,
-      tutorialLink,
+      trailerLink,
     } = animeSchema.parse(body);
 
-    const existingAnime = await prisma.agency.findFirst({
+    const existingAnime = await prisma.graphic.findFirst({
       where: {
         name,
       },
@@ -131,23 +131,23 @@ export async function PATCH(req: Request) {
       return new Response("Anime already exists", { status: 409 });
     }
 
-    if (catalog.length === 0) {
-      return new Response("Please enter a catalog", { status: 422 });
+    if (genre.length === 0) {
+      return new Response("Please enter a genre", { status: 422 });
     }
 
     //all checks complete ✅
-    await prisma.agency.update({
+    await prisma.graphic.update({
       where: {
         id,
       },
       data: {
         description,
-        designer,
-        catalog,
+        director,
+        genre,
         name,
         releaseYear,
-        coverImage: coverImage,
-        tutorialLink,
+        coverImage: coverImage!,
+        trailerLink,
         creatorId: session.user.id,
       },
     });
@@ -172,12 +172,12 @@ export async function GET(req: Request) {
       return new Response("Unauthorized", { status: 401 });
     }
 
-    const { limit, page, query, orderBy, catalog, year } = z
+    const { limit, page, query, orderBy, genre, year } = z
       .object({
         limit: z.string(),
         page: z.string(),
         query: z.string().nullish().optional(),
-        catalog: z.string().nullish().optional(),
+        genre: z.string().nullish().optional(),
         year: z.string().nullish().optional(),
         orderBy: z.string().nullish().optional(),
       })
@@ -185,7 +185,7 @@ export async function GET(req: Request) {
         limit: url.searchParams.get("limit"),
         page: url.searchParams.get("page"),
         query: url.searchParams.get("q"),
-        catalog: url.searchParams.get("catalog"),
+        genre: url.searchParams.get("genre"),
         year: url.searchParams.get("year"),
         orderBy: url.searchParams.get("orderBy"),
       });
@@ -193,14 +193,14 @@ export async function GET(req: Request) {
     let whereClause = {};
     let orderByClause = {};
 
-    if (catalog && year) {
+    if (genre && year) {
       whereClause = {
-        catalog,
+        genre,
         releaseYear: year,
       };
-    } else if (catalog) {
+    } else if (genre) {
       whereClause = {
-        catalog,
+        genre,
       };
     } else if (year) {
       whereClause = {
@@ -229,7 +229,7 @@ export async function GET(req: Request) {
       };
     }
 
-    const animes = await prisma.agency.findMany({
+    const animes = await prisma.graphic.findMany({
       take: parseInt(limit),
       skip: (parseInt(page) - 1) * parseInt(limit),
       where: whereClause,

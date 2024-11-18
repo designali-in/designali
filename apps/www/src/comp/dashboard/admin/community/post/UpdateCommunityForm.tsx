@@ -1,10 +1,10 @@
 "use client";
 
-import type { IdAnimeSchemaType } from "@/lib/validations/agency";
 import type {
   CreateCommunityValidatorType,
   EditCommunityValidatorType,
 } from "@/lib/validations/community";
+import type { IdAnimeSchemaType } from "@/src/lib/validations/graphic";
 import type { Community } from "@prisma/client";
 import type { FC } from "react";
 import { useState } from "react";

@@ -170,8 +170,8 @@ export interface UserDisplay {
 export interface AnimeRanking {
   rank: string;
   agency: string;
-  designer: string;
-  catalog: string;
+  director: string;
+  genre: string;
   stars: number;
   votes: string;
 }

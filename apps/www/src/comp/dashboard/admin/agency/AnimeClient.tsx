@@ -1,6 +1,6 @@
 "use client";
 
-import type { Agency } from "@prisma/client";
+import type { Graphic } from "@prisma/client";
 import dynamic from "next/dynamic";
 
 import { Skeleton } from "@/components/ui/skeleton";
@@ -10,7 +10,7 @@ const Animes = dynamic(() => import("./Animes"), {
   loading: () => <AnimeSkeleton />,
 });
 
-const AnimeClient = ({ initialAnimes }: { initialAnimes: Agency[] }) => {
+const AnimeClient = ({ initialAnimes }: { initialAnimes: Graphic[] }) => {
   return <Animes initialAnimes={initialAnimes} />;
 };
 
@@ -18,7 +18,7 @@ export default AnimeClient;
 
 const AnimeSkeleton = () => {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className=" flex flex-col gap-y-4">
       <Skeleton className="h-10 w-full" />
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {Array.from({ length: 6 }).map((_, index) => (

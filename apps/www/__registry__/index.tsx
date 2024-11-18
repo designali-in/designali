@@ -181,6 +181,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "date-picker": {
+      name: "date-picker",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/date-picker.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/date-picker.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "dialog": {
       name: "dialog",
       type: "registry:ui",

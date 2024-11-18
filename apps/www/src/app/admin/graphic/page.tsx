@@ -25,7 +25,7 @@ const AnimePage = () => {
           </CardHeader>
           <CardContent>
             <Link
-              href="/admin/agency/new"
+              href="/admin/graphic/new"
               className={cn(
                 buttonVariants({
                   size: "sm",

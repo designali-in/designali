@@ -1,6 +1,6 @@
 "use client";
 
-import type { Agency } from "@prisma/client";
+import type { Graphic } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import { DIcons } from "dicons";
@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/card";
 
 interface AnimeAdminCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  anime: Agency;
+  anime: Graphic;
 }
 
 export function AnimeAdminCard({
@@ -33,7 +33,7 @@ export function AnimeAdminCard({
     >
       <CardHeader className="border-b p-0">
         <AspectRatio ratio={4 / 5}>
-          {anime?.coverImage?.length ? (
+          {anime.coverImage.length ? (
             <Image
               src={anime.coverImage ?? "/images/anime-placeholder.png"}
               alt={anime.name}
@@ -65,7 +65,7 @@ export function AnimeAdminCard({
       </CardContent>
       <CardFooter className="p-4">
         <Link
-          href={`/admin/anime/${anime.id}`}
+          href={`/admin/graphic/${anime.id}`}
           className="w-full"
           tabIndex={-1}
         >

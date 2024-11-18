@@ -4,13 +4,14 @@
 import type {
   AnimeSchemaType,
   IdAnimeSchemaType,
-} from "@/lib/validations/agency";
-import type { Agency } from "@prisma/client";
+} from "@/src/lib/validations/graphic";
+import type { Graphic } from "@prisma/client";
 import type { FC } from "react";
 import { forwardRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Combobox } from "@/comp/uis/combobox";
 import { catalogs } from "@/src/data/agency";
+import { animeSchema } from "@/src/lib/validations/graphic";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
@@ -19,7 +20,6 @@ import { useForm } from "react-hook-form";
 
 import { uploadFiles } from "@/lib/uploadthing";
 import { capitalizeFirstCharacter, cn } from "@/lib/utils";
-import { animeSchema } from "@/lib/validations/agency";
 import { toast } from "@/hooks/use-toast";
 import { useAuthToast } from "@/hooks/useAuthToast";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -37,7 +37,7 @@ import { Textarea } from "@/components/ui/textarea";
 import CustomAlertBox from "./CustomAlertBox";
 
 interface UpdateAnimeFormProps {
-  anime: Agency;
+  anime: Graphic;
 }
 
 const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
@@ -45,7 +45,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
   const { loginToast, endErrorToast } = useAuthToast();
 
   const [file, setFile] = useState<File | null>(null);
-  const [genre, setGenre] = useState(anime.catalog);
+  const [genre, setGenre] = useState(anime.genre);
 
   //react-hook-form initialization
   const form = useForm<AnimeSchemaType>({
@@ -53,10 +53,10 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     defaultValues: {
       name: anime.name,
       description: anime.description,
-      designer: anime.designer,
-      catalog: anime.catalog,
+      director: anime.director,
+      genre: anime.genre,
       releaseYear: anime.releaseYear,
-      tutorialLink: anime.tutorialLink,
+      trailerLink: anime.trailerLink,
     },
   });
 
@@ -71,11 +71,11 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
 
       const payload = { ...content, genre, coverImage: fileUrl, id: anime.id };
 
-      const { data } = await axios.patch("/api/agency", payload);
+      const { data } = await axios.patch("/api/graphic", payload);
       return data;
     },
     onSuccess: () => {
-      router.push("/admin/agency");
+      router.push("/admin/graphic");
       router.refresh();
       form.reset();
 
@@ -121,11 +121,11 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     mutationFn: async () => {
       const payload: IdAnimeSchemaType = { id: anime.id };
 
-      const { data } = await axios.post("/api/agency/delete", payload);
+      const { data } = await axios.post("/api/graphic/delete", payload);
       return data;
     },
     onSuccess: () => {
-      router.push("/admin/agency");
+      router.push("/admin/graphic");
       router.refresh();
       form.reset();
 
@@ -218,7 +218,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
         />
         <FormField
           control={form.control}
-          name="designer"
+          name="director"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Director</FormLabel>
@@ -235,7 +235,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
         />
         <FormField
           control={form.control}
-          name="catalog"
+          name="genre"
           render={() => (
             <FormItem className="flex flex-col gap-y-1">
               <FormLabel>Genre</FormLabel>
@@ -271,7 +271,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
         />
         <FormField
           control={form.control}
-          name="tutorialLink"
+          name="trailerLink"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Trailor Link</FormLabel>

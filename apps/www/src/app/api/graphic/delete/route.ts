@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
+import { idAnimeSchema } from "@/src/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { idAnimeSchema } from "@/lib/validations/agency";
 
 export async function POST(req: Request) {
   try {
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { id } = idAnimeSchema.parse(body);
 
-    const anime = await prisma.agency.findFirst({
+    const anime = await prisma.graphic.findFirst({
       where: {
         id,
       },
@@ -41,7 +41,7 @@ export async function POST(req: Request) {
     }
 
     //all checks complete ✅
-    await prisma.agency.delete({
+    await prisma.graphic.delete({
       where: {
         id,
       },

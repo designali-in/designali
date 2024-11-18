@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
-import type { Agency } from "@prisma/client";
+import type { Graphic } from "@prisma/client";
 import type { FC } from "react";
 import { useEffect, useRef, useState } from "react";
 import { useIntersection } from "@mantine/hooks";
@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { AnimeAdminCard } from "./AdminAnime";
 
 interface AnimesProps {
-  initialAnimes: Agency[];
+  initialAnimes: Graphic[];
 }
 
 const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
@@ -43,11 +43,11 @@ const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
     useInfiniteQuery(
       infiniteQueryKey,
       async ({ pageParam = 1 }) => {
-        const queryUrl = `/api/anime?limit=${INFINITE_SCROLLING_PAGINATION_ANIME}&page=${pageParam}&q=${query}`;
+        const queryUrl = `/api/graphic?limit=${INFINITE_SCROLLING_PAGINATION_ANIME}&page=${pageParam}&q=${query}`;
 
         const { data } = await axios(queryUrl);
 
-        return data as Agency[];
+        return data as Graphic[];
       },
       {
         getNextPageParam: (_, pages) => {
@@ -103,7 +103,7 @@ const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mt-3 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {animes.map((anime, index) => {
           if (index === animes.length - 1) {
             return (
@@ -126,7 +126,7 @@ const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
         </p>
       )}
       {isFetchingNextPage && (
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {Array.from({ length: 3 }).map((_, index) => (
             <div key={index}>AXSADF</div>
           ))}

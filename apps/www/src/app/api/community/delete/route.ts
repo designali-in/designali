@@ -1,8 +1,8 @@
+import { idAnimeSchema } from "@/src/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { idAnimeSchema } from "@/lib/validations/agency";
 
 export async function POST(req: Request) {
   try {

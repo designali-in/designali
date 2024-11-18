@@ -1,6 +1,6 @@
 "use client";
 
-import type { Agency } from "@prisma/client";
+import type { Graphic } from "@prisma/client";
 import Image from "next/image";
 import { DIcons } from "dicons";
 
@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/card";
 
 interface AnimeCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  anime: Agency;
+  anime: Graphic;
 }
 
 export default function AnimeCard({
@@ -23,7 +23,7 @@ export default function AnimeCard({
   className,
   ...props
 }: AnimeCardProps) {
-  const formattedHref = `/anime/${formatUrl(anime.name)}`;
+  const formattedHref = `/graphic/${formatUrl(anime.name)}`;
 
   return (
     <a href={formattedHref} className="group focus:outline-none">
@@ -36,7 +36,7 @@ export default function AnimeCard({
       >
         <CardHeader className="border-b p-0">
           <AspectRatio ratio={4 / 5} className="overflow-hidden">
-            {anime?.coverImage?.length ? (
+            {anime.coverImage.length ? (
               <Image
                 src={anime.coverImage ?? "/images/anime-placeholder.png"}
                 alt={anime.name}

@@ -1,14 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable @typescript-eslint/require-await */
 
-import type { UserRole } from "@prisma/client";
-import type { DefaultSession } from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { nanoid } from "nanoid";
 import NextAuth from "next-auth";
 
 import { prisma } from "@/lib/db";
-import { getUserById } from "@/lib/validations/auth";
 
 import authConfig from "./auth.config";
 

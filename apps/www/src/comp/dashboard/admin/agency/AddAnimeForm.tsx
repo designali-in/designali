@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
-import type { AnimeSchemaType } from "@/lib/validations/agency";
+import type { AnimeSchemaType } from "@/src/lib/validations/graphic";
 import { forwardRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Combobox } from "@/comp/uis/combobox";
 import { catalogs } from "@/data/agency";
+import { animeSchema } from "@/src/lib/validations/graphic";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
@@ -12,7 +16,6 @@ import { DIcons } from "dicons";
 import { useForm } from "react-hook-form";
 
 import { uploadFiles } from "@/lib/uploadthing";
-import { animeSchema } from "@/lib/validations/agency";
 import { toast } from "@/hooks/use-toast";
 import { useAuthToast } from "@/hooks/useAuthToast";
 import { Button } from "@/components/ui/button";
@@ -32,7 +35,7 @@ const AddAnimeForm = () => {
   const { loginToast, endErrorToast } = useAuthToast();
 
   const [file, setFile] = useState<File | null>(null);
-  const [catalog, setCatalog] = useState("");
+  const [genre, setGenre] = useState("");
 
   //react-hook-form initialization
   const form = useForm<AnimeSchemaType>({
@@ -40,10 +43,10 @@ const AddAnimeForm = () => {
     defaultValues: {
       name: "",
       description: "",
-      designer: "",
-      catalog: "",
+      director: "",
+      genre: "",
       releaseYear: "",
-      tutorialLink: "",
+      trailerLink: "",
     },
   });
 
@@ -56,13 +59,13 @@ const AddAnimeForm = () => {
         fileUrl = url;
       }
 
-      const payload = { ...content, catalog, coverImage: fileUrl };
+      const payload = { ...content, genre, coverImage: fileUrl };
 
-      const { data } = await axios.post("/api/agency", payload);
+      const { data } = await axios.post("/api/graphic", payload);
       return data;
     },
     onSuccess: () => {
-      router.push("/admin/agency");
+      router.push("/admin/graphic");
       router.refresh();
       form.reset();
 
@@ -73,7 +76,7 @@ const AddAnimeForm = () => {
     },
     onError: (error) => {
       if (error instanceof AxiosError) {
-        const statusCode = error.response.status;
+        const statusCode = error.response?.status;
         if (statusCode === 401) {
           return loginToast();
         }
@@ -176,7 +179,7 @@ const AddAnimeForm = () => {
         />
         <FormField
           control={form.control}
-          name="designer"
+          name="director"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Director</FormLabel>
@@ -193,7 +196,7 @@ const AddAnimeForm = () => {
         />
         <FormField
           control={form.control}
-          name="catalog"
+          name="genre"
           render={() => (
             <FormItem className="flex flex-col gap-y-1">
               <FormLabel>Genre</FormLabel>
@@ -201,7 +204,7 @@ const AddAnimeForm = () => {
                 <Combobox
                   data={catalogs}
                   placeholder="Select genre..."
-                  setState={setCatalog}
+                  setState={setGenre}
                   disabled={isLoading}
                   large
                 />
@@ -229,7 +232,7 @@ const AddAnimeForm = () => {
         />
         <FormField
           control={form.control}
-          name="tutorialLink"
+          name="trailerLink"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Trailor Link</FormLabel>
@@ -269,8 +272,8 @@ const AddAnimeForm = () => {
               aria-hidden="true"
             />
           )}
-          Add Solution
-          <span className="sr-only">Add Solution</span>
+          Add Anime
+          <span className="sr-only">Add Anime</span>
         </Button>
       </form>
     </Form>

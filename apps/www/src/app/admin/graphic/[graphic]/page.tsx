@@ -25,7 +25,7 @@ const AnimeUpdatePage = async ({ params }: AnimeUpdatePageProps) => {
     redirect("/");
   }
 
-  const anime = await prisma.agency.findFirst({
+  const anime = await prisma.graphic.findFirst({
     where: {
       id: animeId,
     },

@@ -214,8 +214,8 @@ const admindata = {
       isActive: true,
       items: [
         {
-          title: "Agency",
-          url: "/admin/agency",
+          title: "Graphic",
+          url: "/admin/graphic",
         },
         {
           title: "Users",
@@ -257,6 +257,11 @@ const admindata = {
     },
   ],
   navSecondary: [
+    {
+      title: "Admin",
+      url: "/admin",
+      icon: DIcons.User,
+    },
     {
       title: "Contact",
       url: "/contact",

@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import type { ComboBoxItemType } from "@/types";
 import type { ClassValue } from "clsx";
 import { clsx } from "clsx";
 import { formatDistanceToNowStrict, intervalToDuration } from "date-fns";
@@ -22,8 +23,9 @@ export function truncate(str: string, length: number) {
 }
 
 export function capitalizeFirstCharacter(text: string) {
-  return text.charAt(0).toUpperCase() + text.slice(1);
+  return null;
 }
+// text.charAt(0).toUpperCase() + text.slice(1);
 
 export function formatDate(input: string | number): string {
   const date = new Date(input);
@@ -242,4 +244,18 @@ export function convertToSingleDecimalPlace(
   const singleDecimalPlace = parseFloat(roundedNumber).toFixed(1);
 
   return parseFloat(singleDecimalPlace);
+}
+
+export function getYearData() {
+  const currentYear = new Date().getFullYear();
+  const years: ComboBoxItemType[] = [];
+
+  for (let i = currentYear; i >= 1980; i--) {
+    years.push({
+      value: i.toString(),
+      label: i.toString(),
+    });
+  }
+
+  return years;
 }

@@ -1,12 +1,12 @@
-import type { AnimeWatchlistServerType } from "@/lib/validations/agency";
+import type { AnimeWatchlistServerType } from "@/src/lib/validations/graphic";
+import {
+  AnimeWatchlistServer,
+  AnimeWatchlistUpdate,
+} from "@/src/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import {
-  AnimeWatchlistServer,
-  AnimeWatchlistUpdate,
-} from "@/lib/validations/agency";
 
 export async function POST(req: Request) {
   try {

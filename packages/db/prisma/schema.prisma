@@ -76,7 +76,7 @@ model User {
   teams             TeamMember[]
   teamActivities    TeamActivity[]
 
-  agency              Agency[]
+  graphic              Graphic[]
   rating             Rating[]
   finishedWatching   FinishedDesign[]
   currentlyWatching  CurrentlyDesign[]
@@ -216,21 +216,15 @@ model TeamActivity {
   @@index([userId])
 }
 
-model Agency {
+model Graphic {
   id    String @id @default(cuid())
   name  String @unique
-
-  catalog String
-  
-  filetype String
-  software String
+  genre String
 
   releaseYear String
-  designer    String
-
+  director    String
   description String @db.VarChar(1500)
-
-  tutorialLink String
+  trailerLink String
   coverImage  String
 
   rating       Rating[]
@@ -257,8 +251,8 @@ model Reviews {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  agencyId String
-  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+  graphicId String
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
 
   reviewLikes ReviewLike[]
 
@@ -268,7 +262,7 @@ model Reviews {
   createdAt DateTime @default(now())
 
   @@index([userId])
-  @@index([agencyId])
+  @@index([graphicId])
 }
 
 model ReviewLike {
@@ -287,13 +281,13 @@ model Rating {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  agencyId String
-  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+  graphicId String
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
 
   rating Int
 
   @@index([userId])
-  @@index([agencyId])
+  @@index([graphicId])
 }
 
 //----------------------------------------
@@ -303,13 +297,13 @@ model FinishedDesign {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  agencyId String
-  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+  graphicId String
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
 
   @@index([userId])
-  @@index([agencyId])
+  @@index([graphicId])
 }
 
 model CurrentlyDesign {
@@ -318,13 +312,13 @@ model CurrentlyDesign {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  agencyId String
-  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+  graphicId String
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
 
   @@index([userId])
-  @@index([agencyId])
+  @@index([graphicId])
 }
 
 model NotStartedDesign {
@@ -333,13 +327,13 @@ model NotStartedDesign {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  agencyId String
-  agency   Agency  @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+  graphicId String
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
 
   @@index([userId])
-  @@index([agencyId])
+  @@index([graphicId])
 }
 
 
