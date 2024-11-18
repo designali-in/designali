@@ -9,7 +9,7 @@ export async function GET(req: Request) {
   }
 
   try {
-    const results = await prisma.agency.findMany({
+    const results = await prisma.graphic.findMany({
       where: {
         name: {
           contains: q,

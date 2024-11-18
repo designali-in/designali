@@ -42,6 +42,10 @@ const data = {
           url: "/dashboard/poll",
         },
         {
+          title: "Leaderboard",
+          url: "/dashboard/leaderboard",
+        },
+        {
           title: "Urls",
           url: "/dashboard/urls",
         },

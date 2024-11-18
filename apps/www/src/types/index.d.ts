@@ -9,6 +9,10 @@ export interface NavItem {
   disabled?: boolean;
 }
 
+export type ExtendedAnime = Anime & {
+  rating: Rating[];
+};
+
 export type MainNavItem = NavItem;
 
 export interface SidebarNavType {
@@ -169,7 +173,7 @@ export interface UserDisplay {
 
 export interface AnimeRanking {
   rank: string;
-  agency: string;
+  graphic: string;
   director: string;
   genre: string;
   stars: number;

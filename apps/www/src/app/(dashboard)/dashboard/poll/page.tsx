@@ -28,7 +28,7 @@ const PollPage = async () => {
   });
 
   return (
-    <div className="space-y-3">
+    <div className=" p-6">
       <Link href="/dashboard/poll/create">
         <Button>Create Poll</Button>
       </Link>

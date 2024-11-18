@@ -46,7 +46,7 @@ const AnimeRating: FC<AnimeRatingProps> = ({
     mutationFn: async (index: number) => {
       const payload: RateAnimeSchemaType = { id: animeId, rating: index };
 
-      const { data } = await axios.post("/api/anime/rate", payload);
+      const { data } = await axios.post("/api/graphic/rate", payload);
       return data;
     },
     onError: (error) => {
@@ -102,15 +102,16 @@ const AnimeRating: FC<AnimeRatingProps> = ({
       <span className="text-sm font-semibold text-muted-foreground">
         Rate this
       </span>
-      <div className="flex w-full gap-x-3 text-zinc-600 dark:text-muted">
+      <div className="flex w-full gap-x-3  ">
         {Array.from({ length: 10 }, (_, i) => i + 1).map((index) => {
           const isFilled = index <= (hoveredRating || rating) ? true : false;
 
           return (
             <DIcons.Star
+              fill={cn({ "#3b82f6": isFilled }, "")}
               key={index}
-              className={cn("h-4 w-4 cursor-pointer", {
-                "text-yellow-700": isFilled,
+              className={cn("h-4 w-4 cursor-pointer text-blue-500", {
+                "text-blue-500 ": isFilled,
               })}
               onClick={() => handleRateAnime(index)}
               onMouseEnter={() => setHoveredRating(index)}

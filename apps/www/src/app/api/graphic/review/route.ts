@@ -14,11 +14,11 @@ export async function POST(req: Request) {
 
     const body = await req.json();
 
-    const { agencyId, review, title } = AnimeReviewServerSchema.parse(body);
+    const { graphicId, review, title } = AnimeReviewServerSchema.parse(body);
 
-    const anime = await prisma.agency.findUnique({
+    const anime = await prisma.graphic.findUnique({
       where: {
-        id: agencyId,
+        id: graphicId,
       },
     });
 
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     await prisma.reviews.create({
       data: {
         text: review,
-        agencyId,
+        graphicId,
         userId: session.user.id,
         title,
       },
@@ -49,23 +49,23 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
 
   try {
-    const { limit, page, agencyId } = z
+    const { limit, page, graphicId } = z
       .object({
         limit: z.string(),
         page: z.string(),
-        agencyId: z.string(),
+        graphicId: z.string(),
       })
       .parse({
         limit: url.searchParams.get("limit"),
         page: url.searchParams.get("page"),
-        agencyId: url.searchParams.get("agencyId"),
+        graphicId: url.searchParams.get("graphicId"),
       });
 
     const reviews = await prisma.reviews.findMany({
       take: parseInt(limit),
       skip: (parseInt(page) - 1) * parseInt(limit),
       where: {
-        agencyId,
+        graphicId,
       },
       include: {
         user: true,

@@ -19,7 +19,7 @@ import {
   convertToSingleDecimalPlace,
   formatUrl,
 } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const dynamic = "force-dynamic";
@@ -62,26 +62,62 @@ const AnimePage = async ({ params }: AnimePageProps) => {
     return convertToSingleDecimalPlace(rawRating, 2);
   };
 
-  const userRating = anime.rating.find(
-    (r) => r.userId === session.user.id,
-  )?.rating;
+  const userRating =
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    anime.rating.find((r) => r.userId === session.user.id)?.rating || null;
 
   return (
-    <div>
-      <div className="grid grid-cols-1 lg:grid-cols-3">
-        <div className="flex flex-col gap-8 sm:flex-row lg:flex-col">
-          <div className="flex w-full sm:w-auto">
-            <div className="relative h-96 w-72">
+    <div className="">
+      <div className="w-full">
+        <div className="grid gap-3 lg:flex">
+          <div className="flex w-full ">
+            <div className="relative h-full w-full">
               <Image
                 src={anime.coverImage ?? "/images/anime-placeholder.png"}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                fill
+                width={800}
+                height={800}
                 alt={`${anime.name}'s cover image`}
-                className="rounded-sm object-cover"
+                className="h-full w-full rounded-sm border object-cover"
               />
             </div>
           </div>
-          <div className="flex flex-col justify-end gap-y-4">
+
+          <div className="sticky top-24 rounded-lg border p-6">
+            <div className="flex flex-col gap-y-4">
+              <div className="text-md font-semibold text-muted-foreground">
+                <Suspense>
+                  <TopTenAnimeCheck name={name} />
+                </Suspense>
+              </div>
+              <div className="flex items-center gap-x-3 text-xs font-bold">
+                <span>{anime.director}</span>
+                <span>{capitalizeFirstCharacter(anime.genre)}</span>
+                <span>{anime.releaseYear}</span>
+              </div>
+              <p className="text-muted-foreground lg:w-60">
+                {anime.description}
+              </p>
+              <div className="flex items-center gap-x-2">
+                <Link
+                  href={anime.trailerLink}
+                  target="_blank"
+                  className={cn(buttonVariants({ size: "sm" }), "w-fit")}
+                >
+                  <DIcons.Play className="mr-2 h-4 w-4" />
+                  Watch Trailer
+                </Link>
+                {session && (
+                  <CustomReviewSheet animeId={anime.id}>
+                    <DIcons.Plus className="mr-2 h-4 w-4" /> Review
+                  </CustomReviewSheet>
+                )}
+              </div>
+              {session && (
+                <Suspense>
+                  <AnimeStatus graphicId={anime.id} session={session} />
+                </Suspense>
+              )}
+            </div>
             <div className="font-medium text-muted-foreground">
               <span className="text-4xl font-bold text-zinc-800 dark:text-zinc-300">
                 {calculatedRating()}
@@ -99,59 +135,33 @@ const AnimePage = async ({ params }: AnimePageProps) => {
                 session={session}
               />
             </div>
-            <Suspense fallback={<Skeleton className="h-4 w-1/2" />}>
-              <AnimeWatchers graphicId={anime.id} />
-            </Suspense>
-          </div>
-        </div>
-        <div className="col-span-2 mt-8 flex flex-col gap-y-4">
-          <div className="flex flex-col">
-            <div className="text-md font-semibold text-muted-foreground">
-              <Suspense>
-                <TopTenAnimeCheck name={name} />
-              </Suspense>
+
+            <div className="mt-4 grid gap-1">
+              <Button size="lg" className="w-full">
+                Download Now
+              </Button>
+              <Button size="lg" variant="outline" className="w-full">
+                Unlock all for just ₹99/m
+              </Button>
             </div>
-            <h1 className="lg:leading[1.1] text-4xl font-bold leading-tight tracking-tighter lg:text-5xl">
-              {anime.name}
-            </h1>
           </div>
-          <div className="flex items-center gap-x-3 text-xs font-bold">
-            <span>{anime.director}</span>
-            <span>{capitalizeFirstCharacter(anime.genre)}</span>
-            <span>{anime.releaseYear}</span>
-          </div>
-          <p className="text-muted-foreground">{anime.description}</p>
-          <div className="flex items-center gap-x-2">
-            <Link
-              href={anime.trailerLink}
-              target="_blank"
-              className={cn(buttonVariants({ size: "sm" }), "w-fit")}
-            >
-              <DIcons.Play className="mr-2 h-4 w-4" />
-              Watch Trailer
-            </Link>
-            {session && (
-              <CustomReviewSheet animeId={anime.id}>
-                <DIcons.Plus className="mr-2 h-4 w-4" /> Review
-              </CustomReviewSheet>
-            )}
-          </div>
-          {session && (
-            <Suspense>
-              <AnimeStatus graphicId={anime.id} session={session} />
-            </Suspense>
-          )}
         </div>
       </div>
-      <div className="space-y-4">
+      <div className="mt-4 space-y-4">
         <h1 className="lg:leading[1.1] text-4xl font-bold leading-tight tracking-tighter lg:text-5xl">
           Reviews
         </h1>
         <Suspense>
-          <Reviews graphicId={anime.id} />
+          {
+            // <Reviews
+            // graphicId={anime.id}
+            // session={session}
+            // initialReviews={undefined}
+            ///>
+          }
         </Suspense>
       </div>
-      <div className="flex flex-col gap-y-2">
+      <div className="mt-3 flex flex-col gap-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
           More like this
         </h2>

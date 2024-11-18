@@ -6,14 +6,26 @@ import ReviewClient from "./ReviewClient";
 
 interface ReviewsProps {
   graphicId: string;
+  session: any; // Replace with appropriate session type
+  initialReviews: any; // Replace with appropriate reviews type
 }
 
-const Reviews = async ({ graphicId }: ReviewsProps) => {
-  const session = await auth();
+const Reviews = ({ graphicId, session, initialReviews }: ReviewsProps) => {
+  return (
+    <ReviewClient
+      graphicId={graphicId}
+      session={session}
+      initialReviews={initialReviews}
+    />
+  );
+};
+
+export async function getServerSideProps(context) {
+  const session = await auth(context.req.headers);
 
   const reviews = await prisma.reviews.findMany({
     where: {
-      graphicId,
+      graphicId: context.params.graphicId,
     },
     include: {
       user: true,
@@ -27,13 +39,13 @@ const Reviews = async ({ graphicId }: ReviewsProps) => {
     take: INFINITE_SCROLLING_PAGINATION_ANIME,
   });
 
-  return (
-    <ReviewClient
-      graphicId={graphicId}
-      session={session}
-      initialReviews={reviews}
-    />
-  );
-};
+  return {
+    props: {
+      graphicId: context.params.graphicId,
+      session,
+      initialReviews: reviews,
+    },
+  };
+}
 
 export default Reviews;

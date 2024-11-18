@@ -1,6 +1,6 @@
 "use client";
 
-import type { Agency } from "@prisma/client";
+import type { Graphic } from "@prisma/client";
 import dynamic from "next/dynamic";
 
 import { Skeleton } from "@/components/ui/skeleton";
@@ -10,7 +10,7 @@ const UpdateAnimeForm = dynamic(() => import("./UpdateAnimeForm"), {
   loading: () => <AnimeFormSkeleton />,
 });
 
-const UpdateAnimeClient = ({ anime }: { anime: Agency }) => {
+const UpdateAnimeClient = ({ anime }: { anime: Graphic }) => {
   return <UpdateAnimeForm anime={anime} />;
 };
 

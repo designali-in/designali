@@ -65,7 +65,7 @@ const CustomReviewSheet: FC<CustomReviewSheetProps> = ({
             done.
           </SheetDescription>
         </SheetHeader>
-        <AddAnimeReviewForm animeId={animeId} />
+        <AddAnimeReviewForm graphicId={animeId} />
       </SheetContent>
     </Sheet>
   );

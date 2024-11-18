@@ -39,7 +39,7 @@ export type RateAnimeSchemaType = z.infer<typeof rateAnimeSchema>;
 
 export const AnimeWatchlistSchema = z.object({
   category: z.string().optional(),
-  animeId: z.string().optional(),
+  graphicId: z.string().optional(),
 });
 
 export type AnimeWatchlistSchemaType = z.infer<typeof AnimeWatchlistSchema>;
@@ -51,21 +51,21 @@ export const ZodCategoryType = z.union([
 ]);
 
 export const AnimeWatchlistClient = z.object({
-  animeId: z.string(),
+  graphicId: z.string(),
   category: z.string(),
 });
 
 export type AnimeWatchlistClientType = z.infer<typeof AnimeWatchlistClient>;
 
 export const AnimeWatchlistServer = z.object({
-  animeId: z.string(),
+  graphicId: z.string(),
   category: ZodCategoryType,
 });
 
 export type AnimeWatchlistServerType = z.infer<typeof AnimeWatchlistServer>;
 
 export const AnimeWatchlistUpdate = z.object({
-  animeId: z.string(),
+  graphicId: z.string(),
   category: ZodCategoryType,
   dropTo: ZodCategoryType,
 });
@@ -87,7 +87,7 @@ export const AnimeReviewSchema = z.object({
 export type AnimeReviewSchemaType = z.infer<typeof AnimeReviewSchema>;
 
 export const AnimeReviewServerSchema = AnimeReviewSchema.extend({
-  animeId: z.string(),
+  graphicId: z.string(),
 });
 
 export type AnimeReviewServerSchemaType = z.infer<

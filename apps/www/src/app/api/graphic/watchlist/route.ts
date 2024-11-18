@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import type { AnimeWatchlistServerType } from "@/src/lib/validations/graphic";
 import {
   AnimeWatchlistServer,
@@ -25,11 +27,11 @@ export async function POST(req: Request) {
 
     const results = await Promise.all(
       payloads.map(async (payload: AnimeWatchlistServerType) => {
-        const { animeId, category } = AnimeWatchlistServer.parse(payload);
+        const { graphicId, category } = AnimeWatchlistServer.parse(payload);
 
-        const anime = await prisma.agency.findUnique({
+        const anime = await prisma.graphic.findUnique({
           where: {
-            id: animeId,
+            id: graphicId,
           },
         });
 
@@ -38,51 +40,51 @@ export async function POST(req: Request) {
         }
 
         const promises = [
-          prisma.notStartedWatching.findFirst({
+          prisma.notStartedDesign.findFirst({
             where: {
-              animeId,
+              graphicId,
               userId: session.user.id,
             },
           }),
-          prisma.currentlyWatching.findFirst({
+          prisma.currentlyDesign.findFirst({
             where: {
-              animeId,
+              graphicId,
               userId: session.user.id,
             },
           }),
-          prisma.finishedWatching.findFirst({
+          prisma.finishedDesign.findFirst({
             where: {
-              animeId,
+              graphicId,
               userId: session.user.id,
             },
           }),
         ];
 
-        const [pendingAnimes, watchingAnimes, finishedAnimes] =
+        const [pendingAnimes, DesignAnimes, finishedAnimes] =
           await Promise.all(promises);
 
-        if (pendingAnimes || watchingAnimes || finishedAnimes) {
+        if (pendingAnimes || DesignAnimes || finishedAnimes) {
           return new Response("Anime already in watchlist", { status: 409 });
         }
 
         if (category === "pending") {
-          await prisma.notStartedWatching.create({
+          await prisma.notStartedDesign.create({
             data: {
-              animeId,
+              graphicId,
               userId: session.user.id,
             },
           });
         } else if (category === "watching") {
-          await prisma.currentlyWatching.create({
+          await prisma.currentlyDesign.create({
             data: {
-              animeId,
+              graphicId,
               userId: session.user.id,
             },
           });
         } else if (category === "finished") {
-          await prisma.finishedWatching.create({
+          await prisma.finishedDesign.create({
             data: {
-              animeId,
+              graphicId,
               userId: session.user.id,
             },
           });
@@ -125,11 +127,11 @@ export async function PATCH(req: Request) {
 
     const body = await req.json();
 
-    const { animeId, category, dropTo } = AnimeWatchlistUpdate.parse(body);
+    const { graphicId, category, dropTo } = AnimeWatchlistUpdate.parse(body);
 
-    const anime = await prisma.anime.findUnique({
+    const anime = await prisma.graphic.findUnique({
       where: {
-        id: animeId,
+        id: graphicId,
       },
     });
 
@@ -139,9 +141,9 @@ export async function PATCH(req: Request) {
 
     // Delete from previous category
     if (category === "pending") {
-      const pendingAnime = await prisma.notStartedWatching.findFirst({
+      const pendingAnime = await prisma.notStartedDesign.findFirst({
         where: {
-          animeId,
+          graphicId,
           userId: session.user.id,
         },
       });
@@ -152,34 +154,34 @@ export async function PATCH(req: Request) {
         });
       }
 
-      await prisma.notStartedWatching.delete({
+      await prisma.notStartedDesign.delete({
         where: {
           id: pendingAnime.id,
         },
       });
     } else if (category === "watching") {
-      const watchingAnime = await db.currentlyWatching.findFirst({
+      const DesignAnime = await prisma.currentlyDesign.findFirst({
         where: {
-          animeId,
+          graphicId,
           userId: session.user.id,
         },
       });
 
-      if (!watchingAnime) {
-        return new Response("Anime not found in watching watchlist.", {
+      if (!DesignAnime) {
+        return new Response("Anime not found in Design watchlist.", {
           status: 404,
         });
       }
 
-      await prisma.currentlyWatching.delete({
+      await prisma.currentlyDesign.delete({
         where: {
-          id: watchingAnime.id,
+          id: DesignAnime.id,
         },
       });
     } else if (category === "finished") {
-      const finishedAnime = await prisma.finishedWatching.findFirst({
+      const finishedAnime = await prisma.finishedDesign.findFirst({
         where: {
-          animeId,
+          graphicId,
           userId: session.user.id,
         },
       });
@@ -190,7 +192,7 @@ export async function PATCH(req: Request) {
         });
       }
 
-      await prisma.finishedWatching.delete({
+      await prisma.finishedDesign.delete({
         where: {
           id: finishedAnime.id,
         },
@@ -199,23 +201,23 @@ export async function PATCH(req: Request) {
 
     // Add to new category
     if (dropTo === "pending") {
-      await prisma.notStartedWatching.create({
+      await prisma.notStartedDesign.create({
         data: {
-          animeId,
+          graphicId,
           userId: session.user.id,
         },
       });
     } else if (dropTo === "watching") {
-      await prisma.currentlyWatching.create({
+      await prisma.currentlyDesign.create({
         data: {
-          animeId,
+          graphicId,
           userId: session.user.id,
         },
       });
     } else if (dropTo === "finished") {
-      await prisma.finishedWatching.create({
+      await prisma.finishedDesign.create({
         data: {
-          animeId,
+          graphicId,
           userId: session.user.id,
         },
       });

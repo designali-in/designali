@@ -23,7 +23,7 @@ export function truncate(str: string, length: number) {
 }
 
 export function capitalizeFirstCharacter(text: string) {
-  return null;
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 // text.charAt(0).toUpperCase() + text.slice(1);
 

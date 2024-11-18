@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     const { category, watchlistId } = AnimeWatchlistDelete.parse(body);
 
     if (category === "pending") {
-      const pendingAnime = await prisma.notStartedWatching.findFirst({
+      const pendingAnime = await prisma.notStartedDesign.findFirst({
         where: {
           id: watchlistId,
           userId: session.user.id,
@@ -29,32 +29,32 @@ export async function POST(req: Request) {
         });
       }
 
-      await prisma.notStartedWatching.delete({
+      await prisma.notStartedDesign.delete({
         where: {
           id: watchlistId,
         },
       });
     } else if (category === "watching") {
-      const watchingAnime = await prisma.currentlyWatching.findFirst({
+      const DesignAnime = await prisma.currentlyDesign.findFirst({
         where: {
           id: watchlistId,
           userId: session.user.id,
         },
       });
 
-      if (!watchingAnime) {
-        return new Response("Anime not found in watching watchlist.", {
+      if (!DesignAnime) {
+        return new Response("Anime not found in Design watchlist.", {
           status: 404,
         });
       }
 
-      await prisma.currentlyWatching.delete({
+      await prisma.currentlyDesign.delete({
         where: {
           id: watchlistId,
         },
       });
     } else if (category === "finished") {
-      const finishedAnime = await prisma.finishedWatching.findFirst({
+      const finishedAnime = await prisma.finishedDesign.findFirst({
         where: {
           id: watchlistId,
           userId: session.user.id,
@@ -67,7 +67,7 @@ export async function POST(req: Request) {
         });
       }
 
-      await prisma.finishedWatching.delete({
+      await prisma.finishedDesign.delete({
         where: {
           id: watchlistId,
         },

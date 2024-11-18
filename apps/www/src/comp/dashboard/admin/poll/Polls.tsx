@@ -68,7 +68,7 @@ const Polls: FC<PollsProps> = ({ initialPolls, interaction, sessionId }) => {
   }, [entry, fetchNextPage, noNewData]);
 
   return (
-    <div className="  space-y-8">
+    <div className="w-full">
       {polls.map((poll, index) => {
         if (index === polls.length - 1) {
           return (

@@ -51,7 +51,7 @@ const AnimeStatusQuestion: FC<AnimeStatusQuestionProps> = ({ animeId }) => {
     mutationFn: async (category: ZodCategoryType) => {
       const payload: AnimeWatchlistClientType[] = [
         {
-          animeId: animeId,
+          graphicId: animeId,
           category,
         },
       ];

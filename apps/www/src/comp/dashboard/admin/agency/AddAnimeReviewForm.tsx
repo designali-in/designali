@@ -27,10 +27,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 interface AddAnimeReviewFormProps {
-  animeId: string;
+  graphicId: string;
 }
 
-const AddAnimeReviewForm: FC<AddAnimeReviewFormProps> = ({ animeId }) => {
+const AddAnimeReviewForm: FC<AddAnimeReviewFormProps> = ({ graphicId }) => {
   const { loginToast, endErrorToast } = useAuthToast();
   const queryClient = useQueryClient();
 
@@ -46,18 +46,20 @@ const AddAnimeReviewForm: FC<AddAnimeReviewFormProps> = ({ animeId }) => {
   const { mutate: addReview, isLoading } = useMutation({
     mutationFn: async (content: AnimeReviewSchemaType) => {
       const payload: AnimeReviewServerSchemaType = {
-        animeId,
+        graphicId,
         review: content.review,
         title: content.title,
       };
 
-      const { data } = await axios.post("/api/anime/review", payload);
+      const { data } = await axios.post("/api/graphic/review", payload);
       return data;
     },
     onSuccess: () => {
       form.reset();
 
-      const reviewInfiniteQueryKey = [`anime-review-infinite-query-${animeId}`];
+      const reviewInfiniteQueryKey = [
+        `anime-review-infinite-query-${graphicId}`,
+      ];
       queryClient.resetQueries(reviewInfiniteQueryKey);
 
       toast({
