@@ -35,14 +35,14 @@ export default function AnimeCard({
         {...props}
       >
         <CardHeader className="border-b p-0">
-          <AspectRatio ratio={4 / 5} className="overflow-hidden">
+          <AspectRatio className="overflow-hidden">
             {anime.coverImage.length ? (
               <Image
                 src={anime.coverImage ?? "/images/anime-placeholder.png"}
                 alt={anime.name}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                fill
-                className="object-cover transition-all group-hover:scale-105"
+                width={400}
+                height={400}
+                className="h-full w-full object-cover transition-all group-hover:scale-105"
                 loading="lazy"
               />
             ) : (
@@ -62,9 +62,7 @@ export default function AnimeCard({
         </CardHeader>
         <CardContent className="grid gap-[2px] p-4">
           <CardTitle className="truncate py-[2px]">{anime.name}</CardTitle>
-          <CardDescription className="line-clamp-2">
-            {formatDescription(anime.description, 100)}
-          </CardDescription>
+          <CardDescription className="line-clamp-2"></CardDescription>
         </CardContent>
       </Card>
     </a>

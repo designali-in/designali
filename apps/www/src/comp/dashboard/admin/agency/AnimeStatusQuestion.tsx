@@ -26,12 +26,12 @@ interface StatusType {
 const status: StatusType[] = [
   {
     id: 1,
-    label: "Want to watch",
+    label: "Want to Design",
     category: "pending",
   },
   {
     id: 2,
-    label: "Watching",
+    label: "Designing",
     category: "watching",
   },
   {
@@ -94,7 +94,7 @@ const AnimeStatusQuestion: FC<AnimeStatusQuestionProps> = ({ animeId }) => {
         description: "We'll keep a track of it in your watchlist.",
         action: (
           <Link
-            href="/watchlist"
+            href="/dashboard/downloads"
             onClick={() => dismiss()}
             className={buttonVariants({ variant: "outline" })}
           >

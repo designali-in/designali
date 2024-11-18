@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const AnimeLoading = () => {
   return (
-    <div>
+    <div className="mx-auto my-40 max-w-7xl px-6 xl:px-0">
       <div className="grid grid-cols-1 gap-x-2 lg:grid-cols-3">
         <div className="flex flex-col gap-8 sm:flex-row lg:flex-col">
           <Skeleton className="h-96 w-72" />

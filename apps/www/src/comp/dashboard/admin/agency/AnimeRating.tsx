@@ -99,9 +99,7 @@ const AnimeRating: FC<AnimeRatingProps> = ({
 
   return (
     <div className="flex w-full flex-col gap-y-2">
-      <span className="text-sm font-semibold text-muted-foreground">
-        Rate this
-      </span>
+      <span className="text-sm text-muted-foreground">Rate this</span>
       <div className="flex w-full gap-x-3  ">
         {Array.from({ length: 10 }, (_, i) => i + 1).map((index) => {
           const isFilled = index <= (hoveredRating || rating) ? true : false;

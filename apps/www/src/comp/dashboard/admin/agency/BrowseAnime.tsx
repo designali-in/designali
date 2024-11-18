@@ -92,14 +92,14 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
             data={catalogs}
             selectedOption={genre}
             setState={setGenre}
-            placeholder="Select genre..."
+            placeholder="Catagories"
             reset={reset}
             large
           />
           <Combobox
             data={yearData}
             selectedOption={year}
-            placeholder="Select year..."
+            placeholder="File type"
             setState={setYear}
             reset={reset}
             large
@@ -112,7 +112,7 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
       {isFetching && !isFetchingNextPage ? (
         ""
       ) : (
-        <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
+        <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {animes.map((anime, index) => {
             if (index === animes.length - 1) {
               return (
