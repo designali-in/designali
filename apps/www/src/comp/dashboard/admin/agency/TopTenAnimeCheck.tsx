@@ -16,10 +16,10 @@ const TopTenAnimeCheck = async ({ name }: { name: string }) => {
 
   return (
     <Link
-      href="/leaderboard"
+      href="/dashboard/leaderboard"
       className="focus:outline:none underline-offset-4 hover:underline focus:underline focus-visible:outline-none"
     >
-      Top Rated
+      Top Downloads
     </Link>
   );
 };
