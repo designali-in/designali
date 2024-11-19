@@ -94,18 +94,7 @@ const AnimePage = async ({ params }: AnimePageProps) => {
                 <p className="text-muted-foreground lg:w-60">
                   {anime.features}
                 </p>
-                <div className="flex items-center gap-x-2">
-                  <Link
-                    href={anime.trailerLink}
-                    target="_blank"
-                    className={cn(
-                      buttonVariants({ variant: "outline", size: "sm" }),
-                      "w-fit",
-                    )}
-                  >
-                    View Turorial
-                  </Link>
-                </div>
+
                 <Separator />
                 <Header slug={name} />
                 <Separator />
