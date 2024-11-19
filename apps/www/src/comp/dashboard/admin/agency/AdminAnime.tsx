@@ -64,6 +64,9 @@ export function AnimeAdminCard({
         <CardDescription className="line-clamp-2">
           {formatDescription(anime.description, 100)}
         </CardDescription>
+        <CardDescription className="line-clamp-2 py-3">
+          {anime.id}
+        </CardDescription>
       </CardContent>
       <CardFooter className="grid gap-2 p-4">
         <Link
