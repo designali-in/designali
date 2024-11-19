@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
+
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { z } from "zod";
 
@@ -39,8 +38,10 @@ export async function POST(req: Request) {
       director,
       genre,
       name,
+      downloadLink,
       releaseYear,
       coverImage,
+      galleryImage,
       trailerLink,
     } = animeSchema.parse(body);
 
@@ -68,9 +69,11 @@ export async function POST(req: Request) {
         description,
         director,
         genre,
+        downloadLink,
         name,
         releaseYear,
         coverImage: coverImage!,
+        galleryImage: galleryImage!,
         trailerLink,
         creatorId: session.user.id,
       },
@@ -116,8 +119,10 @@ export async function PATCH(req: Request) {
       director,
       genre,
       name,
+      downloadLink,
       releaseYear,
       coverImage,
+      galleryImage,
       trailerLink,
     } = animeSchema.parse(body);
 
@@ -145,8 +150,10 @@ export async function PATCH(req: Request) {
         director,
         genre,
         name,
+        downloadLink,
         releaseYear,
         coverImage: coverImage!,
+        galleryImage: galleryImage!,
         trailerLink,
         creatorId: session.user.id,
       },

@@ -15,11 +15,21 @@ export const animeSchema = z.object({
   trailerLink: z.string().regex(/^(ftp|http|https):\/\/[^ "]+$/, {
     message: "Please enter a valid link.",
   }),
+  downloadLink: z.string().regex(/^(ftp|http|https):\/\/[^ "]+$/, {
+    message: "Please enter a valid link.",
+  }),
   coverImage: z
     .string()
     .regex(/^(ftp|http|https):\/\/[^ "]+$/, {
       message: "Error uploading image.",
     })
+    .optional(),
+  galleryImage: z
+    .array(
+      z.string().regex(/^(ftp|http|https):\/\/[^ "]+$/, {
+        message: "Error uploading image.",
+      }),
+    )
     .optional(),
 });
 

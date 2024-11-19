@@ -3,21 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider     = "postgresql"
-  url          = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
-
-enum UserRole {
-  ADMIN
-  USER
-}
-
-enum Role {
-  OWNER
-  ADMIN
-  MEMBER
-}
-
 
 model Account {
   id                String   @id @default(cuid())
@@ -25,21 +13,20 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?  @db.Text
-  access_token      String?  @db.Text
+  refresh_token     String?
+  access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?  @db.Text
+  id_token          String?
   session_state     String?
-  createdAt         DateTime @default(now()) @map(name: "created_at")
-  updatedAt         DateTime @default(now()) @map(name: "updated_at")
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @default(now()) @map("updated_at")
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@index([userId])
-  @@map(name: "accounts")
+  @@map("accounts")
 }
 
 model Session {
@@ -47,59 +34,48 @@ model Session {
   sessionToken String   @unique
   userId       String
   expires      DateTime
-
+  likes        Int      @default(0)
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  likes        Int      @default(0)
-
   @@index([userId])
-  @@map(name: "sessions")
+  @@map("sessions")
 }
 
-
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  username      String?   @unique
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  apiKey        String?
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+  id                     String             @id @default(cuid())
+  name                   String?
+  username               String?            @unique
+  email                  String?            @unique
+  emailVerified          DateTime?
+  image                  String?
+  apiKey                 String?
+  createdAt              DateTime           @default(now()) @map("created_at")
+  updatedAt              DateTime           @default(now()) @map("updated_at")
+  role                   UserRole           @default(USER)
+  stripeCustomerId       String?            @unique @map("stripe_customer_id")
+  stripeSubscriptionId   String?            @unique @map("stripe_subscription_id")
+  stripePriceId          String?            @map("stripe_price_id")
+  stripeCurrentPeriodEnd DateTime?          @map("stripe_current_period_end")
+  comment                Comment[]
+  community              Community[]
+  currentlyWatching      CurrentlyDesign[]
+  post                   DesignPost[]
+  finishedWatching       FinishedDesign[]
+  graphic                Graphic[]
+  like                   Like[]
+  notStartedWatching     NotStartedDesign[]
+  poll                   Poll[]
+  pollVote               PollVote[]
+  rating                 Rating[]
+  reviewLikes            ReviewLike[]
+  reviews                Reviews[]
+  teamActivities         TeamActivity[]
+  teams                  TeamMember[]
+  accounts               Account[]
+  sessions               Session[]
+  UserUrl                UserUrl[]
 
-  role          UserRole  @default(USER)
-
-  accounts      Account[]
-  sessions      Session[]
-  UserUrl       UserUrl[] 
-  teams             TeamMember[]
-  teamActivities    TeamActivity[]
-
-  graphic              Graphic[]
-  rating             Rating[]
-  finishedWatching   FinishedDesign[]
-  currentlyWatching  CurrentlyDesign[]
-  notStartedWatching NotStartedDesign[]
-
-  community Community[]
-  post      DesignPost[]
-  comment   Comment[]
-
-  reviews     Reviews[]
-  reviewLikes ReviewLike[]
-
-  like Like[]
-
-  pollVote PollVote[]
-  poll     Poll[]
-
-  stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
-  stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
-  stripePriceId          String?   @map(name: "stripe_price_id")
-  stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
-
-  @@map(name: "users")
+  @@map("users")
 }
 
 model VerificationToken {
@@ -108,7 +84,7 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
-  @@map(name: "verification_tokens")
+  @@map("verification_tokens")
 }
 
 model Post {
@@ -116,34 +92,32 @@ model Post {
   createdAt DateTime @default(now())
   slug      String   @unique
   likes     Int      @default(0)
-  views     Int      @default(0) 
+  views     Int      @default(0)
 }
- 
+
 model UserUrl {
-  id         String   @id @default(cuid())
+  id         String    @id @default(cuid())
   userId     String
   userName   String
   target     String
-  url        String   @unique
-  visible    Int      @default(0)
-  active     Int      @default(1)
-  expiration String   @default("-1")
-  createdAt  DateTime @default(now()) @map(name: "created_at")
-  updatedAt  DateTime @default(now()) @map(name: "updated_at")
-
-  user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  UrlMeta UrlMeta[]
+  url        String    @unique
+  visible    Int       @default(0)
+  active     Int       @default(1)
+  expiration String    @default("-1")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @default(now()) @map("updated_at")
+  UrlMeta    UrlMeta[]
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
-  @@map(name: "user_urls")
+  @@map("user_urls")
 }
 
 model UrlMeta {
-  id    String @id @default(cuid())
-  urlId String
-  click Int
-
-  ip        String  @default("127.0.0.1")
+  id        String   @id @default(cuid())
+  urlId     String
+  click     Int
+  ip        String   @default("127.0.0.1")
   city      String?
   country   String?
   region    String?
@@ -153,27 +127,24 @@ model UrlMeta {
   lang      String?
   device    String?
   browser   String?
-
-  createdAt DateTime @default(now()) @map(name: "created_at")
-  updatedAt DateTime @default(now()) @map(name: "updated_at")
-
-  userUrl UserUrl @relation(fields: [urlId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @map("updated_at")
+  userUrl   UserUrl  @relation(fields: [urlId], references: [id], onDelete: Cascade)
 
   @@unique([urlId, ip])
   @@index([urlId])
-  @@map(name: "url_metas")
+  @@map("url_metas")
 }
 
-
 model Team {
-  id          String       @id @default(cuid())
+  id          String         @id @default(cuid())
   name        String
-  slug        String       @unique
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  members     TeamMember[]
+  slug        String         @unique
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
   invitations Invitation[]
-  activities TeamActivity[]
+  activities  TeamActivity[]
+  members     TeamMember[]
 }
 
 model TeamMember {
@@ -206,8 +177,8 @@ model TeamActivity {
   id        String   @id @default(cuid())
   teamId    String
   userId    String
-  event     String   // e.g., "member_added", "member_removed", "role_updated"
-  metadata  Json     // Additional event data
+  event     String
+  metadata  Json
   createdAt DateTime @default(now())
   team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -217,221 +188,189 @@ model TeamActivity {
 }
 
 model Graphic {
-  id    String @id @default(cuid())
-  name  String @unique
-  genre String
+  id           String @id @default(cuid())
+  name         String @unique
+  genre        String
+  releaseYear  String
+  director     String
+  description  String @db.VarChar(1500)
+  trailerLink  String
+  downloadLink String
 
-  releaseYear String
-  director    String
-  description String @db.VarChar(1500)
-  trailerLink String
-  coverImage  String
+  coverImage   String
+  galleryImage String[]
 
-  rating       Rating[]
-  totalRatings Int      @default(0)
-
-  finishedDesign   FinishedDesign[]
-  currentlyDesign  CurrentlyDesign[]
-  notStartedDesign NotStartedDesign[]
-
-  reviews Reviews[]
+  totalRatings Int @default(0)
 
   creatorId String
-  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
-
   createdAt DateTime @default(now())
+
+  currentlyDesign CurrentlyDesign[]
+  finishedDesign  FinishedDesign[]
+
+  creator          User               @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  notStartedDesign NotStartedDesign[]
+  rating           Rating[]
+  reviews          Reviews[]
 
   @@index([name])
   @@index([creatorId])
 }
 
 model Reviews {
-  id String @id @default(cuid())
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  graphicId String
-  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
-
+  id          String       @id @default(cuid())
+  userId      String
+  graphicId   String
+  title       String       @db.VarChar(50)
+  text        String       @db.VarChar(1500)
+  createdAt   DateTime     @default(now())
   reviewLikes ReviewLike[]
-
-  title String @db.VarChar(50)
-  text  String @db.VarChar(1500)
-
-  createdAt DateTime @default(now())
+  graphic     Graphic      @relation(fields: [graphicId], references: [id], onDelete: Cascade)
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([graphicId])
 }
 
 model ReviewLike {
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  userId   String
   reviewId String
   review   Reviews @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@id([userId, reviewId])
 }
 
 model Rating {
-  id String @id @default(cuid())
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id        String  @id @default(cuid())
+  userId    String
   graphicId String
-  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
-
-  rating Int
+  rating    Int
+  graphic   Graphic @relation(fields: [graphicId], references: [id], onDelete: Cascade)
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([graphicId])
 }
 
-//----------------------------------------
 model FinishedDesign {
-  id String @id @default(cuid())
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id        String   @id @default(cuid())
+  userId    String
   graphicId String
-  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
-
   createdAt DateTime @default(now())
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([graphicId])
 }
 
 model CurrentlyDesign {
-  id String @id @default(cuid())
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id        String   @id @default(cuid())
+  userId    String
   graphicId String
-  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
-
   createdAt DateTime @default(now())
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([graphicId])
 }
 
 model NotStartedDesign {
-  id String @id @default(cuid())
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id        String   @id @default(cuid())
+  userId    String
   graphicId String
-  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
-
   createdAt DateTime @default(now())
+  graphic   Graphic  @relation(fields: [graphicId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([graphicId])
 }
 
-
 model Community {
-  id          String @id @default(cuid())
-  name        String @unique
-  description String @db.VarChar(300)
-
-  category String
-
-  creatorId String
-  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
-
-  post DesignPost[]
-
-  createdAt DateTime @default(now())
+  id          String       @id @default(cuid())
+  name        String       @unique
+  description String       @db.VarChar(300)
+  category    String
+  creatorId   String
+  createdAt   DateTime     @default(now())
+  creator     User         @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  post        DesignPost[]
 
   @@index([creatorId])
 }
 
 model DesignPost {
-  id String @id @default(cuid())
-
-  title   String @db.VarChar(80)
-  message String @db.VarChar(600)
-
-  creatorId String
-  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
-
+  id          String    @id @default(cuid())
+  title       String    @db.VarChar(80)
+  message     String    @db.VarChar(600)
+  creatorId   String
   communityId String
+  createdAt   DateTime  @default(now())
+  comment     Comment[]
   community   Community @relation(fields: [communityId], references: [id], onDelete: Cascade)
+  creator     User      @relation(fields: [creatorId], references: [id], onDelete: Cascade)
   like        Like[]
-
-  comment Comment[]
-
-  createdAt DateTime @default(now())
 
   @@index([communityId])
 }
 
 model Comment {
-  id        String   @id @default(cuid())
-  text      String   @db.VarChar(300)
-  createdAt DateTime @default(now())
-
-  author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  authorId String
-
-  post   DesignPost   @relation(fields: [postId], references: [id], onDelete: Cascade)
-  postId String
+  id        String     @id @default(cuid())
+  text      String     @db.VarChar(300)
+  createdAt DateTime   @default(now())
+  authorId  String
+  postId    String
+  author    User       @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  post      DesignPost @relation(fields: [postId], references: [id], onDelete: Cascade)
 }
 
 model Like {
   userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
   postId String
-  post   DesignPost   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  post   DesignPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user   User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@id([userId, postId])
 }
 
-//----------------------------------------
 model Poll {
-  id String @id @default(cuid())
-
-  question String @db.VarChar(150)
-
+  id        String       @id @default(cuid())
+  question  String       @db.VarChar(150)
   creatorId String
-  creator   User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
-
-  option PollOption[]
-
   expiresAt DateTime
-  createdAt DateTime @default(now())
+  createdAt DateTime     @default(now())
+  creator   User         @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  option    PollOption[]
 }
 
 model PollOption {
-  id String @id @default(cuid())
-
-  option String @db.VarChar(80)
-
-  pollId String
-  poll   Poll   @relation(fields: [pollId], references: [id], onDelete: Cascade)
-
-  vote PollVote[]
-
-  createdAt DateTime @default(now())
+  id        String     @id @default(cuid())
+  option    String     @db.VarChar(80)
+  pollId    String
+  createdAt DateTime   @default(now())
+  poll      Poll       @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  vote      PollVote[]
 }
 
 model PollVote {
-  id String @id @default(cuid())
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  id           String     @id @default(cuid())
+  userId       String
   pollOptionId String
+  createdAt    DateTime   @default(now())
   pollOption   PollOption @relation(fields: [pollOptionId], references: [id], onDelete: Cascade)
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
 
-  createdAt DateTime @default(now())
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum Role {
+  OWNER
+  ADMIN
+  MEMBER
 }

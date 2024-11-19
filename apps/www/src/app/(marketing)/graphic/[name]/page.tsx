@@ -6,8 +6,14 @@ import { notFound } from "next/navigation";
 import MoreLikeThis from "@/comp/dashboard/admin/agency/MoreLikeThis";
 import TopTenAnimeCheck from "@/comp/dashboard/admin/agency/TopTenAnimeCheck";
 
+import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { capitalizeFirstCharacter, cn, formatUrl } from "@/lib/utils";
+import {
+  capitalizeFirstCharacter,
+  cn,
+  convertToSingleDecimalPlace,
+  formatUrl,
+} from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 export const dynamic = "force-dynamic";
@@ -24,6 +30,8 @@ const AnimePage = async ({ params }: AnimePageProps) => {
   const { name: rawName } = params;
   const name = formatUrl(rawName, true);
 
+  const session = await auth();
+
   const anime = await prisma.graphic.findUnique({
     where: {
       name,
@@ -37,6 +45,21 @@ const AnimePage = async ({ params }: AnimePageProps) => {
     notFound();
   }
 
+  const calculatedRating = () => {
+    const totalRatings = anime.totalRatings;
+    const ratingLength = anime.rating.length * 10;
+
+    if (ratingLength === 0) return 0;
+
+    const rawRating = (totalRatings / ratingLength) * 10;
+
+    return convertToSingleDecimalPlace(rawRating, 2);
+  };
+
+  const userRating =
+    session.user.id && Array.isArray(anime.rating)
+      ? anime.rating.find((r) => r.userId === session.user.id)?.rating || null
+      : null;
   return (
     <div className="">
       <div className="w-full">
@@ -47,25 +70,19 @@ const AnimePage = async ({ params }: AnimePageProps) => {
                 src={anime.coverImage ?? "/images/anime-placeholder.png"}
                 width={800}
                 height={800}
-                priority
                 alt={`${anime.name}'s cover image`}
                 className="h-full w-full rounded-sm border object-cover"
               />
             </div>
           </div>
 
-          <div className="sticky top-24 grid justify-between rounded-lg border p-6">
+          <div className="sticky top-24 grid  justify-between rounded-lg border p-6">
             <div>
               <div className="flex flex-col gap-y-4">
-                <div className="flex items-center justify-between text-xs  text-muted-foreground">
+                <div className="text-md font-semibold text-muted-foreground">
                   <Suspense>
                     <TopTenAnimeCheck name={name} />
                   </Suspense>
-                  <p className="text-xs">
-                    {new Intl.DateTimeFormat("en-US", {
-                      dateStyle: "medium",
-                    }).format(new Date(anime.createdAt))}
-                  </p>
                 </div>
                 <div className="flex items-center gap-x-3 text-xs font-bold">
                   <span>{anime.director}</span>
@@ -89,13 +106,17 @@ const AnimePage = async ({ params }: AnimePageProps) => {
                 </div>
               </div>
             </div>
-            <div className="mt-4 grid h-fit  gap-1">
-              <Button size="lg" className="w-full">
-                Download Now
-              </Button>
-              <Button size="lg" variant="outline" className="w-full">
-                Unlock all for just ₹99/m
-              </Button>
+            <div className="mt-4 grid h-fit   gap-1">
+              <Link href={anime.downloadLink} download={true} target="_blank">
+                <Button size="lg" className="w-full">
+                  Download Now
+                </Button>
+              </Link>
+              <Link href={"/pricing"}>
+                <Button size="lg" variant="outline" className="w-full">
+                  Unlock all for just ₹99/m
+                </Button>
+              </Link>
               <p className="p-2 text-xs">
                 The standard VAT rate may be charged, following the law of your
                 country
@@ -105,7 +126,33 @@ const AnimePage = async ({ params }: AnimePageProps) => {
         </div>
       </div>
 
-      <div className="mt-3 flex flex-col gap-y-2">
+      <div className="mt-3 grid w-full grid-cols-2 gap-3">
+        {anime.galleryImage && anime.galleryImage.length > 0 ? (
+          anime.galleryImage.map((image, index) => (
+            <div key={index} className="relative h-full w-full">
+              <Image
+                src={image ?? "/images/placeholder.svg"}
+                width={800}
+                height={800}
+                alt={`${anime.name} gallery image ${index + 1}`}
+                className="h-full w-full rounded-sm border object-cover"
+              />
+            </div>
+          ))
+        ) : (
+          <div className="relative h-full w-full">
+            <Image
+              src="/images/anime-placeholder.png"
+              width={800}
+              height={800}
+              alt="Placeholder for gallery image"
+              className="h-full w-full rounded-sm border object-cover"
+            />
+          </div>
+        )}
+      </div>
+
+      <div className="mt-20 flex flex-col gap-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
           More like this
         </h2>

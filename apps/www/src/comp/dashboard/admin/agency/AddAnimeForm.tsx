@@ -33,7 +33,6 @@ import { Textarea } from "@/components/ui/textarea";
 const AddAnimeForm = () => {
   const router = useRouter();
   const { loginToast, endErrorToast } = useAuthToast();
-
   const [file, setFile] = useState<File | null>(null);
   const [genre, setGenre] = useState("");
 
@@ -47,6 +46,7 @@ const AddAnimeForm = () => {
       genre: "",
       releaseYear: "",
       trailerLink: "",
+      downloadLink: "",
     },
   });
 
@@ -249,6 +249,23 @@ const AddAnimeForm = () => {
         />
         <FormField
           control={form.control}
+          name="downloadLink"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Download Link</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Enter a download link."
+                  {...field}
+                  disabled={isLoading}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="coverImage"
           render={({ field }) => (
             <FormItem>
@@ -265,6 +282,7 @@ const AddAnimeForm = () => {
             </FormItem>
           )}
         />
+
         <Button className="w-fit" disabled={isLoading} size="sm">
           {isLoading && (
             <DIcons.Loader
