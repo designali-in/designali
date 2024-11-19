@@ -262,9 +262,9 @@ const admindata = {
   ],
   navSecondary: [
     {
-      title: "Admin",
-      url: "/admin",
-      icon: DIcons.User,
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: DIcons.Monitor,
     },
     {
       title: "Contact",

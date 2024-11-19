@@ -15,7 +15,7 @@ export const columns: ColumnDef<AnimeRanking>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Rank <DIcons.Move className="ml-2 h-4 w-4" />
+          Rank <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -39,7 +39,7 @@ export const columns: ColumnDef<AnimeRanking>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Genre <DIcons.Move className="ml-2 h-4 w-4" />
+          Genre <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -55,7 +55,7 @@ export const columns: ColumnDef<AnimeRanking>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Stars <DIcons.Move className="ml-2 h-4 w-4" />
+          Stars <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -71,7 +71,7 @@ export const columns: ColumnDef<AnimeRanking>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Votes <DIcons.Move className="ml-2 h-4 w-4" />
+          Votes <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -89,7 +89,7 @@ export const adminColumns: ColumnDef<AdminDisplay>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Name <DIcons.Move className="ml-2 h-4 w-4" />
+        Name <DIcons.ArrowUpDown className="h-2 w-2" />
       </Button>
     ),
   },
@@ -100,7 +100,7 @@ export const adminColumns: ColumnDef<AdminDisplay>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Email <DIcons.Move className="ml-2 h-4 w-4" />
+        Email <DIcons.ArrowUpDown className="h-2 w-2" />
       </Button>
     ),
   },
@@ -112,7 +112,7 @@ export const adminColumns: ColumnDef<AdminDisplay>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Anime Added <DIcons.Move className="ml-2 h-4 w-4" />
+          Anime Added <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -127,7 +127,7 @@ export const adminColumns: ColumnDef<AdminDisplay>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Joined At <DIcons.Move className="ml-2 h-4 w-4" />
+        Joined At <DIcons.ArrowUpDown className="h-2 w-2" />
       </Button>
     ),
   },
@@ -141,7 +141,7 @@ export const userColumns: ColumnDef<UserDisplay>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Name <DIcons.Move className="ml-2 h-4 w-4" />
+        Name <DIcons.ArrowUpDown className="h-2 w-2" />
       </Button>
     ),
   },
@@ -152,7 +152,7 @@ export const userColumns: ColumnDef<UserDisplay>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Email <DIcons.Move className="ml-2 h-4 w-4" />
+        Email <DIcons.ArrowUpDown className="h-2 w-2" />
       </Button>
     ),
   },
@@ -164,7 +164,7 @@ export const userColumns: ColumnDef<UserDisplay>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Ratings <DIcons.Move className="ml-2 h-4 w-4" />
+          Ratings <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -179,7 +179,7 @@ export const userColumns: ColumnDef<UserDisplay>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Joined At <DIcons.Move className="ml-2 h-4 w-4" />
+        Joined At <DIcons.ArrowUpDown className="h-2 w-2" />
       </Button>
     ),
   },
@@ -191,7 +191,7 @@ export const userColumns: ColumnDef<UserDisplay>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Polls Voted <DIcons.Move className="ml-2 h-4 w-4" />
+          Polls Voted <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -207,7 +207,7 @@ export const userColumns: ColumnDef<UserDisplay>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Posts <DIcons.Move className="ml-2 h-4 w-4" />
+          Posts <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),

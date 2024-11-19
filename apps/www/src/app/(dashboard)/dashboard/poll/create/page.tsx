@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 const CreatePollPage = () => {
   return (
-    <div>
-      <Card className="flex h-full w-60  flex-col">
+    <div className=" p-6">
+      <Card className="flex h-full w-full flex-col">
         <CardHeader className="flex-1">
           <CardTitle>Create poll</CardTitle>
           <CardDescription className="line-clamp-2">

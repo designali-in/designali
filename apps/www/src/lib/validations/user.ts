@@ -1,6 +1,6 @@
 import type {
-  Agency,
   DesignPost,
+  Graphic,
   PollVote,
   Rating,
   User,
@@ -28,7 +28,7 @@ export function checkUserStatus(user: any) {
 }
 
 export type ExtendedUser = User & {
-  agency: Agency[];
+  graphic: Graphic[];
   pollVote: PollVote[];
   post: DesignPost[];
   rating: Rating[];

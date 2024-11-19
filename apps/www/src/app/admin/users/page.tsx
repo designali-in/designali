@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { UserDisplay } from "@/types";
 import UserClient from "@/comp/dashboard/admin/users/UserClient";
 import { format } from "date-fns";
@@ -11,9 +13,9 @@ const UsersPage = async () => {
       createdAt: "desc",
     },
     include: {
-      agency: true,
+      graphic: true,
       pollVote: true,
-      post: true,
+      designPost: true,
       rating: true,
     },
   });
@@ -21,12 +23,9 @@ const UsersPage = async () => {
     name: user.name,
     email: user.email,
     createdAt: format(new Date(user.createdAt), "do MMMM',' yyyy"),
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     rating: user.rating?.length || 0,
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     pollsVoted: user.pollVote?.length || 0,
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    postsCreated: user.post?.length || 0,
+    postsCreated: user.designPost?.length || 0,
   }));
   return (
     <main className="p-6">
