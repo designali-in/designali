@@ -94,7 +94,6 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
             setState={setGenre}
             placeholder="Catagories"
             reset={reset}
-            large
           />
           <Combobox
             data={yearData}

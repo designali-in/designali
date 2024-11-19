@@ -26,7 +26,7 @@ const MoreLikeThis: FC<MoreLikeThisProps> = async ({ anime }) => {
   if (sameGenreAnimes.length === 0) {
     return (
       <p className="font-medium text-muted-foreground">
-        More anime of this genre are yet to be added.
+        More graphics of this catalog are yet to be added.
       </p>
     );
   }

@@ -2,16 +2,24 @@ import type { ComboBoxItemType, ZodCategoryType } from "@/types";
 
 export const catalogs: ComboBoxItemType[] = [
   {
-    value: "shōnen",
-    label: "Shōnen",
+    value: "gradient",
+    label: "Gradient",
   },
   {
-    value: "fiction",
-    label: "Fiction",
+    value: "texture",
+    label: "Texture",
   },
   {
-    value: "comedy",
-    label: "Comedy",
+    value: "mockup",
+    label: "Mockup",
+  },
+  {
+    value: "abstract",
+    label: "Abstract",
+  },
+  {
+    value: "branding",
+    label: "Branding",
   },
 ];
 

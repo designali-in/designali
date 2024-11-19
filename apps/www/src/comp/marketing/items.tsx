@@ -3,10 +3,11 @@
 
 import type { Likes, Views, YouTube } from "@/types";
 import React from "react";
-import fetcher from "@/lib/fetcher";
 import { Link } from "@/src/comp/uis/link";
 import { DIcons } from "dicons";
 import useSWR from "swr";
+
+import fetcher from "@/lib/fetcher";
 
 import Counter from "../common/countnumber";
 import { Icons } from "../icons";
@@ -47,7 +48,7 @@ export const Items = () => {
       link: "/products",
       target: "",
       value: lData?.likes,
-      icon: <DIcons.Heart strokeWidth={1} className="h-5 w-5 text-ali" />,
+      icon: <DIcons.Heart strokeWidth={1} className="text-ali h-5 w-5" />,
       linkText: "Products",
       gradient: {
         startColor: "#ff0f7b",
@@ -170,7 +171,7 @@ export const HomeItems = () => {
       link: "/products",
       target: "",
       value: lData?.likes,
-      icon: <DIcons.Heart strokeWidth={1} className="h-10 w-10 p-1 text-ali" />,
+      icon: <DIcons.Heart strokeWidth={1} className="text-ali h-10 w-10 p-1" />,
       linkText: "Products",
       gradient: {
         startColor: "#ef4444",

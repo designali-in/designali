@@ -1,3 +1,5 @@
+import { UpdatesToolbar } from "@/src/comp/common/shate-toolbar";
+import { LikeButtonIcon } from "@/src/comp/uis/like-button";
 import { formatUrl } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
@@ -35,29 +37,33 @@ export default async function Graphic({
   });
 
   return (
-    <div className="mx-auto my-20 max-w-7xl px-6 xl:px-0">
+    <div className="mx-auto my-24 max-w-7xl px-6 xl:px-0">
       <main className=" ">
-        <header className="flex h-16 items-center gap-2">
-          <div className="flex items-center gap-2 ">
-            <Breadcrumb>
+        <header className="mb-4 flex items-center justify-between space-y-4 md:mb-0 md:flex md:gap-2 md:space-y-0">
+          <div className="items-center  gap-2 md:flex ">
+            <Breadcrumb className="mb-3 md:mb-0">
               <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
+                <BreadcrumbItem className=" ">
                   <BreadcrumbLink href="/">
                     <DIcons.Designali fill="#f50537" className="h-5 w-5" />
                   </BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem className="hidden md:block">
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
                   <BreadcrumbLink href="/graphic">Graphic</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
+                <BreadcrumbSeparator />
               </BreadcrumbList>
             </Breadcrumb>
-            <div className="flex flex-col">
-              <h1 className="  text-4xl  font-semibold lg:text-4xl">
+            <div className="flex  items-center justify-between">
+              <h1 className=" text-2xl font-semibold lg:text-4xl">
                 {anime.name}
               </h1>
             </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <LikeButtonIcon slug={name} />
+            <UpdatesToolbar posts={""} />
           </div>
         </header>
         {children}

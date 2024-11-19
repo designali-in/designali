@@ -36,6 +36,8 @@ export async function POST(req: Request) {
     const {
       description,
       director,
+      features,
+      dimention,
       genre,
       name,
       downloadLink,
@@ -66,6 +68,8 @@ export async function POST(req: Request) {
     //all checks complete ✅
     await prisma.graphic.create({
       data: {
+        features,
+        dimention,
         description,
         director,
         genre,
@@ -116,6 +120,8 @@ export async function PATCH(req: Request) {
     const {
       id,
       description,
+      features,
+      dimention,
       director,
       genre,
       name,
@@ -147,6 +153,8 @@ export async function PATCH(req: Request) {
       },
       data: {
         description,
+        features,
+        dimention,
         director,
         genre,
         name,

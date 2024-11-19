@@ -2,12 +2,19 @@
 
 import type { Likes } from "@/types";
 import React from "react";
-import fetcher from "@/lib/fetcher";
 import { cn } from "@designali/ui";
 import { Button } from "@designali/ui/button";
 import { toast } from "@designali/ui/toast";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@designali/ui/tooltip";
 import useSWR from "swr";
 import { useDebouncedCallback } from "use-debounce";
+
+import fetcher from "@/lib/fetcher";
 
 import { Icons } from "../icons";
 
@@ -86,9 +93,9 @@ export const LikeButton = (props: LikeButtonProps) => {
   }, 1000);
 
   const handleLike = () => {
-    if (isLoading || !data || data.currentUserLikes + cacheCount >= 3) return;
+    if (isLoading || !data || data.currentUserLikes + cacheCount >= 1) return;
 
-    const value = cacheCount === 3 ? cacheCount : cacheCount + 1;
+    const value = cacheCount === 1 ? cacheCount : cacheCount + 1;
     setCacheCount(value);
 
     if (data.currentUserLikes + cacheCount === 2) {
@@ -102,13 +109,14 @@ export const LikeButton = (props: LikeButtonProps) => {
     <div className="w-full">
       <Button
         size="lg"
+        variant="ghost"
         ref={buttonRef}
         className={cn(
           buttonClasses,
           ["group relative h-12 rounded-full"],
           data &&
-            data.currentUserLikes + cacheCount === 3 &&
-            "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
+            data.currentUserLikes + cacheCount === 1 &&
+            "bg-ali fill-ali dark:bg-ali dark:fill-ali text-white dark:text-white",
         )}
         type="button"
         onClick={handleLike}
@@ -117,18 +125,18 @@ export const LikeButton = (props: LikeButtonProps) => {
         <span
           className={cn(
             [
-              "absolute inset-0 z-10 flex h-full w-full items-center justify-center gap-2 rounded-full bg-slate-100 text-lg font-bold text-black dark:bg-slate-900 dark:text-white",
-              "hover:text-white group-hover:bg-ali",
+              "absolute inset-0 z-10 flex h-full w-full items-center justify-center gap-2 rounded-full bg-white text-lg font-bold text-black dark:bg-black dark:text-white",
+              "group-hover:bg-ali hover:text-white",
             ],
             data &&
-              data.currentUserLikes + cacheCount === 3 &&
-              "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
+              data.currentUserLikes + cacheCount === 1 &&
+              "bg-ali fill-ali dark:bg-ali dark:fill-ali text-white dark:text-white",
           )}
         >
           <Icons.heart
             className={cn(
               "h-7 w-7 animate-pulse",
-              data && data.currentUserLikes + cacheCount === 3 && "text-white",
+              data && data.currentUserLikes + cacheCount === 1 && "text-white",
             )}
           />
           {isLoading || !data ? (
@@ -150,7 +158,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
   const buttonRef = React.useRef<HTMLButtonElement>(null);
 
   const buttonClasses =
-    "relative flex w-full items-center justify-center rounded-full bg-ali p-4 tracking-wide text-white";
+    "relative flex w-full items-center justify-center rounded-full  p-4   text-black dark:text-white ";
 
   const { data, isLoading, mutate } = useSWR<Likes>(
     `/api/likes?slug=${slug}`,
@@ -213,9 +221,9 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
   }, 1000);
 
   const handleLike = () => {
-    if (isLoading || !data || data.currentUserLikes + cacheCount >= 3) return;
+    if (isLoading || !data || data.currentUserLikes + cacheCount >= 1) return;
 
-    const value = cacheCount === 3 ? cacheCount : cacheCount + 1;
+    const value = cacheCount === 1 ? cacheCount : cacheCount + 1;
     setCacheCount(value);
 
     if (data.currentUserLikes + cacheCount === 2) {
@@ -226,40 +234,55 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
   };
 
   return (
-    <div className="w-full">
-      <Button
-        size="lg"
-        ref={buttonRef}
-        className={cn(
-          buttonClasses,
-          ["group relative h-12 w-12 rounded-full"],
-          data &&
-            data.currentUserLikes + cacheCount === 3 &&
-            "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
-        )}
-        type="button"
-        onClick={handleLike}
-        aria-label="Like this post"
-      >
-        <span
-          className={cn(
-            [
-              "absolute inset-0 z-10 flex h-full w-full items-center justify-center gap-2 rounded-full bg-slate-100 text-lg font-bold text-black dark:bg-slate-900 dark:text-white",
-              "hover:text-white group-hover:bg-ali",
-            ],
-            data &&
-              data.currentUserLikes + cacheCount === 3 &&
-              "bg-ali fill-ali text-white dark:bg-ali dark:fill-ali dark:text-white",
-          )}
-        >
-          <Icons.heart
-            className={cn(
-              "h-5 w-5 animate-pulse",
-              data && data.currentUserLikes + cacheCount === 3 && "text-white",
-            )}
-          />
-        </span>
-      </Button>
+    <div className="mt-1.5 w-full">
+      <TooltipProvider delayDuration={20}>
+        <Tooltip>
+          <TooltipTrigger>
+            <Button
+              size="lg"
+              ref={buttonRef}
+              className={cn(
+                buttonClasses,
+                ["group relative h-12 w-12 cursor-pointer rounded-full"],
+                data &&
+                  data.currentUserLikes + cacheCount === 1 &&
+                  "  text-ali  ",
+              )}
+              type="button"
+              onClick={handleLike}
+              aria-label="Like this post"
+            >
+              <span
+                className={cn(
+                  [
+                    "absolute inset-0 z-10 flex h-full w-full items-center justify-center gap-2 rounded-full border  bg-white   dark:bg-black  ",
+                    "group-hover:text-ali ",
+                  ],
+                  data &&
+                    data.currentUserLikes + cacheCount === 1 &&
+                    "  text-ali",
+                )}
+              >
+                <Icons.heart
+                  className={cn(
+                    "h-5 w-5 animate-pulse",
+                    data &&
+                      data.currentUserLikes + cacheCount === 1 &&
+                      "text-ali",
+                  )}
+                />
+              </span>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent
+            className="rounded-sm px-2 py-1"
+            sideOffset={5}
+            side="top"
+          >
+            <span className="text-xs">Like</span>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   );
 };

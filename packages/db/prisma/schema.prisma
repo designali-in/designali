@@ -59,7 +59,7 @@ model User {
   comment                Comment[]
   community              Community[]
   currentlyWatching      CurrentlyDesign[]
-  post                   DesignPost[]
+  designPost             DesignPost[]
   finishedWatching       FinishedDesign[]
   graphic                Graphic[]
   like                   Like[]
@@ -188,11 +188,14 @@ model TeamActivity {
 }
 
 model Graphic {
-  id           String @id @default(cuid())
-  name         String @unique
+  id   String @id @default(cuid())
+  name String @unique
+
   genre        String
   releaseYear  String
   director     String
+  dimention    String
+  features     String @db.VarChar(500)
   description  String @db.VarChar(1500)
   trailerLink  String
   downloadLink String

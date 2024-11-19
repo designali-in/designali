@@ -96,7 +96,7 @@ export const Combobox: FC<ComboboxProps> = forwardRef<
             <CommandGroup>
               <ScrollArea
                 className={cn({
-                  "h-72": large,
+                  "h-48": large,
                 })}
               >
                 {data.map((item) => (

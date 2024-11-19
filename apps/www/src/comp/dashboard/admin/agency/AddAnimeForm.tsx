@@ -33,6 +33,7 @@ import { Textarea } from "@/components/ui/textarea";
 const AddAnimeForm = () => {
   const router = useRouter();
   const { loginToast, endErrorToast } = useAuthToast();
+  const [files, setFiles] = useState<File[]>([]); // Change state to an array
   const [file, setFile] = useState<File | null>(null);
   const [genre, setGenre] = useState("");
 
@@ -41,7 +42,9 @@ const AddAnimeForm = () => {
     resolver: zodResolver(animeSchema),
     defaultValues: {
       name: "",
+      features: "",
       description: "",
+      dimention: "",
       director: "",
       genre: "",
       releaseYear: "",
@@ -162,6 +165,23 @@ const AddAnimeForm = () => {
         />
         <FormField
           control={form.control}
+          name="features"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Features</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Type anime features here."
+                  disabled={isLoading}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="description"
           render={({ field }) => (
             <FormItem>
@@ -169,6 +189,23 @@ const AddAnimeForm = () => {
               <FormControl>
                 <Textarea
                   placeholder="Type anime description here."
+                  disabled={isLoading}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="dimention"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Dimentions</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Type anime dimentions here."
                   disabled={isLoading}
                   {...field}
                 />
@@ -282,7 +319,24 @@ const AddAnimeForm = () => {
             </FormItem>
           )}
         />
-
+        <FormField
+          control={form.control}
+          name="galleryImage"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Gallery Images</FormLabel>
+              <FormControl>
+                <MultiFileInput
+                  setFiles={setFiles} // Set the files using state
+                  placeholder="Add images"
+                  disabled={isLoading}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <Button className="w-fit" disabled={isLoading} size="sm">
           {isLoading && (
             <DIcons.Loader
@@ -327,3 +381,30 @@ const FileInput = forwardRef<
 });
 
 FileInput.displayName = "FileInput";
+
+const MultiFileInput = forwardRef<
+  HTMLInputElement,
+  {
+    setFiles: (files: File[]) => void; // Expect an array of File objects
+    placeholder: string;
+    disabled?: boolean;
+  }
+>(({ setFiles, placeholder, disabled }, ref) => {
+  return (
+    <input
+      type="file"
+      multiple // Allow multiple files
+      placeholder={placeholder}
+      disabled={disabled}
+      onChange={(e) => {
+        const selectedFiles = e.target.files ? Array.from(e.target.files) : [];
+        setFiles(selectedFiles); // Pass the array of files to setFiles
+      }}
+      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+      accept="image/*"
+      ref={ref}
+    />
+  );
+});
+
+MultiFileInput.displayName = "MultiFileInput";

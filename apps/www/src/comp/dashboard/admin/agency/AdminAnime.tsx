@@ -34,14 +34,16 @@ export function AnimeAdminCard({
       <CardHeader className="border-b p-0">
         <AspectRatio ratio={4 / 5}>
           {anime.coverImage.length ? (
-            <Image
-              src={anime.coverImage ?? "/images/anime-placeholder.png"}
-              alt={anime.name}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              fill
-              className="object-cover"
-              loading="lazy"
-            />
+            <Link href={`/admin/graphic/${anime.id}`}>
+              <Image
+                src={anime.coverImage ?? "/images/anime-placeholder.png"}
+                alt={anime.name}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                fill
+                className="object-cover"
+                loading="lazy"
+              />
+            </Link>
           ) : (
             <div
               aria-label="Placeholder"
@@ -63,7 +65,7 @@ export function AnimeAdminCard({
           {formatDescription(anime.description, 100)}
         </CardDescription>
       </CardContent>
-      <CardFooter className="p-4">
+      <CardFooter className="grid gap-2 p-4">
         <Link
           href={`/admin/graphic/${anime.id}`}
           className="w-full"
@@ -74,7 +76,17 @@ export function AnimeAdminCard({
             size="sm"
             className="w-full tracking-tight"
           >
-            Edit content
+            Edit Graphic
+          </Button>
+        </Link>
+        <Link href={`/graphic/${anime.name}`} className="w-full" tabIndex={-1}>
+          <Button
+            variant="outline"
+            aria-label="Edit content"
+            size="sm"
+            className="w-full tracking-tight"
+          >
+            View Graphic
           </Button>
         </Link>
       </CardFooter>

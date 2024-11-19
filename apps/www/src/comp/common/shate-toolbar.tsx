@@ -90,7 +90,7 @@ export function UpdatesToolbar({ posts }) {
               </DialogTrigger>
             </TooltipTrigger>
             <TooltipContent
-              className="rounded-sm px-2 py-1"
+              className="rounded-sm px-2"
               sideOffset={5}
               side="top"
             >

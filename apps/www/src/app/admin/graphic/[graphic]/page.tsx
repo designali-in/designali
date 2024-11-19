@@ -39,6 +39,7 @@ const AnimeUpdatePage = async ({ params }: AnimeUpdatePageProps) => {
     <div>
       <Card>
         <CardHeader className="space-y-1">
+          <p>{anime.id}</p>
           <CardTitle className="text-2xl">Update anime</CardTitle>
           <CardDescription>
             Update the content of this anime or delete it.
