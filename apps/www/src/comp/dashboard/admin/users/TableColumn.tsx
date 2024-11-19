@@ -25,11 +25,11 @@ export const columns: ColumnDef<AnimeRanking>[] = [
   },
   {
     accessorKey: "anime",
-    header: "Anime",
+    header: "Graphic",
   },
   {
     accessorKey: "director",
-    header: "Director",
+    header: "Designer",
   },
   {
     accessorKey: "genre",
@@ -39,7 +39,7 @@ export const columns: ColumnDef<AnimeRanking>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Genre <DIcons.ArrowUpDown className="h-2 w-2" />
+          Catalog <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),
@@ -71,7 +71,7 @@ export const columns: ColumnDef<AnimeRanking>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Votes <DIcons.ArrowUpDown className="h-2 w-2" />
+          Likes <DIcons.ArrowUpDown className="h-2 w-2" />
         </Button>
       </div>
     ),

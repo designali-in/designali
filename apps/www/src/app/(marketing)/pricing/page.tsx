@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { ComparePlans } from "@/comp/dashboard/pricing/compare-plans";
 import { PricingCards } from "@/comp/dashboard/pricing/pricing-cards";
 import { PricingFaq } from "@/comp/dashboard/pricing/pricing-faq";
@@ -31,7 +32,7 @@ export default async function PricingPage() {
           <hr className="bg-ali mx-auto my-4 h-1 w-6 rounded border-0"></hr>
         </div>
       </div>
-      <PricingCards userId={user.id} subscriptionPlan={subscriptionPlan} />
+      <PricingCards userId={user?.id} subscriptionPlan={subscriptionPlan} />
       <hr className="container" />
       <ComparePlans />
       <PricingFaq />

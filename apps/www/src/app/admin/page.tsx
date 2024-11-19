@@ -6,5 +6,9 @@ export const metadata: Metadata = {
 };
 
 export default function DashboardPage() {
-  return <div className="mt-40 space-y-4  px-6">Admin</div>;
+  return (
+    <div className="p-6">
+      <h1 className="py-4 text-2xl font-semibold">Admin</h1>
+    </div>
+  );
 }

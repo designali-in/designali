@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use client";
 
 import type { UserSubscriptionPlan } from "@/types";
@@ -21,7 +22,7 @@ interface PricingCardsProps {
 
 export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
   const isYearlyDefault =
-    !subscriptionPlan.stripeCustomerId || subscriptionPlan.interval === "year"
+    !subscriptionPlan?.stripeCustomerId || subscriptionPlan.interval === "year"
       ? true
       : false;
   const [isYearly, setIsYearly] = useState<boolean>(!!isYearlyDefault);

@@ -7,7 +7,6 @@ import { ImageZoomFive } from "@/comp/common/gallery";
 import MoreLikeThis from "@/comp/dashboard/admin/agency/MoreLikeThis";
 import TopTenAnimeCheck from "@/comp/dashboard/admin/agency/TopTenAnimeCheck";
 import { Separator } from "@/registry/default/designali/ui/separator";
-import ImageZoom from "@/src/comp/common/image-zoom";
 import { DIcons } from "dicons";
 
 import cloudinary from "@/lib/cloudinary";
@@ -61,15 +60,13 @@ const AnimePage = async ({ params }: AnimePageProps) => {
         <div className="grid gap-3 lg:flex">
           <div className="flex w-full ">
             <div className="relative h-full w-full">
-              <ImageZoom>
-                <Image
-                  src={anime.coverImage ?? "/placeholder.svg"}
-                  width={800}
-                  height={800}
-                  alt={`${anime.name}'s cover image`}
-                  className="h-full w-full rounded-sm border object-cover"
-                />
-              </ImageZoom>
+              <Image
+                src={anime.coverImage ?? "/placeholder.svg"}
+                width={700}
+                height={700}
+                alt={`${anime.name}'s cover image`}
+                className="h-full w-full rounded-sm border object-cover"
+              />
             </div>
           </div>
 
@@ -156,23 +153,21 @@ const AnimePage = async ({ params }: AnimePageProps) => {
         {anime.galleryImage && anime.galleryImage.length > 0 ? (
           anime.galleryImage.map((image, index) => (
             <div key={index} className="relative h-full w-full">
-              <ImageZoom>
-                <Image
-                  src={image ?? "/placeholder.svg"}
-                  width={800}
-                  height={800}
-                  alt={`${anime.name} gallery image ${index + 1}`}
-                  className="h-full w-full rounded-sm border object-cover"
-                />
-              </ImageZoom>
+              <Image
+                src={image ?? "/placeholder.svg"}
+                width={500}
+                height={500}
+                alt={`${anime.name} gallery image ${index + 1}`}
+                className="h-full w-full rounded-sm border object-cover"
+              />
             </div>
           ))
         ) : (
           <div className="relative h-full w-full">
             <Image
               src="/placeholder.svg"
-              width={800}
-              height={800}
+              width={500}
+              height={500}
               alt="Placeholder for gallery image"
               className="h-full w-full rounded-sm border object-cover"
             />
