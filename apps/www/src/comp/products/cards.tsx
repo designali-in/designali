@@ -25,26 +25,6 @@ const GRADS = [
   },
 ];
 
-const ICONS3D = [
-  {
-    id: 1,
-    name: "3D Icons",
-    src: "/images/products/3dicons.jpg",
-    designation: "Download. Edit. Upload.",
-    content: <p>+100 Beautifully designed components.</p>,
-  },
-];
-
-const ICONS2D = [
-  {
-    id: 1,
-    name: "2D Icons",
-    src: "/images/products/3dbg.jpg",
-    designation: "Download. Edit. Upload.",
-    content: <p>+100 Beautifully designed icons.</p>,
-  },
-];
-
 const DICONS = [
   {
     id: 1,
@@ -78,20 +58,6 @@ export function Graaadients() {
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
         </Link>
-        <Link
-          href="https://drive.google.com/file/d/1yYm0Xwfz_a9Q6lLqsRNTK6X10egd5O0N/view?usp=drive_link"
-          target="_blank"
-          className="rounded-3xl border"
-        >
-          <CardStack items={ICONS3D} />
-        </Link>
-        <Link
-          href="https://drive.google.com/file/d/1yYm0Xwfz_a9Q6lLqsRNTK6X10egd5O0N/view?usp=drive_link"
-          target="_blank"
-          className="rounded-3xl border"
-        >
-          <CardStack items={ICONS2D} />
-        </Link>
       </div>
     </div>
   );
@@ -123,16 +89,6 @@ export function CarouselGraaadients() {
           <CarouselItem className=" ">
             <Link href="/products/graaadients">
               <CardStack items={GRADS} />
-            </Link>
-          </CarouselItem>
-          <CarouselItem className=" ">
-            <Link href="/products/3dicons">
-              <CardStack items={ICONS3D} />
-            </Link>
-          </CarouselItem>
-          <CarouselItem className=" ">
-            <Link href="/products/2dicons">
-              <CardStack items={ICONS2D} />
             </Link>
           </CarouselItem>
         </CarouselContent>
