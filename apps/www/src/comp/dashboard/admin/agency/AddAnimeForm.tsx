@@ -44,6 +44,7 @@ const AddAnimeForm = () => {
       features: "",
       description: "",
       dimention: "",
+      freepro: "",
       director: "",
       genre: "",
       releaseYear: "",
@@ -196,23 +197,42 @@ const AddAnimeForm = () => {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="dimention"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Dimentions</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Type anime dimentions here."
-                  disabled={isLoading}
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="flex flex-wrap gap-3">
+          <FormField
+            control={form.control}
+            name="dimention"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Dimentions</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Type anime director here."
+                    {...field}
+                    disabled={isLoading}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="freepro"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Free Pro</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Type anime director here."
+                    {...field}
+                    disabled={isLoading}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
         <FormField
           control={form.control}
           name="director"

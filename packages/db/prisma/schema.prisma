@@ -195,6 +195,7 @@ model Graphic {
   releaseYear String
 
   director     String
+  freepro      String
   dimention    String
   features     String @db.VarChar(500)
   description  String @db.VarChar(1500)

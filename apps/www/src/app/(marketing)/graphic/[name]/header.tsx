@@ -43,7 +43,7 @@ const Header = (props: HeaderProps) => {
       <div className="flex flex-wrap justify-between gap-2">
         <div className="flex items-center gap-2">
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
-            Views
+            Views:
           </div>
           {viewsIsLoading ? (
             <Skeleton className="h-6 rounded-md" />
@@ -54,7 +54,7 @@ const Header = (props: HeaderProps) => {
         <Separator orientation="vertical" className="w-1" />
         <div className="flex items-center gap-2">
           <div className="text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400">
-            Likes
+            Likes:
           </div>
           {isLoading || !data ? (
             <Skeleton className="h-6 rounded-md" />

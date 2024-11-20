@@ -70,7 +70,7 @@ const AnimePage = async ({ params }: AnimePageProps) => {
             </div>
           </div>
 
-          <div className=" flex flex-col justify-between rounded-lg border p-6">
+          <div className=" flex flex-col justify-between rounded-lg border p-3 md:p-6">
             <div>
               <div className="flex flex-col gap-y-4">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
@@ -85,8 +85,11 @@ const AnimePage = async ({ params }: AnimePageProps) => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-x-3 text-xs font-bold">
-                  <span>{anime.director}</span>
+                <h1 className=" text-lg font-semibold lg:text-xl">
+                  {anime.name}
+                </h1>
+                <div className="flex items-center gap-x-3 text-xs font-semibold">
+                  <span>Design by: {anime.director}</span>
                   <span>{capitalizeFirstCharacter(anime.genre)}</span>
                   <span>{anime.releaseYear}</span>
                 </div>
@@ -121,7 +124,7 @@ const AnimePage = async ({ params }: AnimePageProps) => {
             <div className="mt-4 grid h-fit   gap-1">
               <Link href={anime.downloadLink} download={true} target="_blank">
                 <Button size="lg" className="w-full">
-                  Download Now
+                  Download {anime.freepro}
                 </Button>
               </Link>
               <Link href={"/pricing"}>
@@ -129,10 +132,6 @@ const AnimePage = async ({ params }: AnimePageProps) => {
                   Unlock all for just ₹99/m
                 </Button>
               </Link>
-              <p className="p-2 text-xs">
-                The standard VAT rate may be charged, following the law of your
-                country
-              </p>
             </div>
           </div>
         </div>
@@ -168,7 +167,7 @@ const AnimePage = async ({ params }: AnimePageProps) => {
         <h1 className="text-xl "> {anime.description}</h1>
       </div>
 
-      <div className="flex flex-col gap-y-2 rounded-xl bg-secondary p-6">
+      <div className="flex flex-col gap-y-2 rounded-xl bg-secondary p-3 md:p-6">
         <h2 className="mb-3 text-2xl font-semibold  ">Assets included:</h2>
         <ImageZoomFive images={data.resources} />
       </div>

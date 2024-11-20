@@ -3,6 +3,7 @@
 import type { Graphic } from "@prisma/client";
 import type { FC } from "react";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Combobox } from "@/comp/uis/combobox";
 import { catalogs } from "@/data/agency";
 import { useIntersection } from "@mantine/hooks";
@@ -19,7 +20,7 @@ interface BrowseAnimeProps {
   initialAnimes: Graphic[];
 }
 
-const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
+const HomeGraphic: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
   const yearData = getYearData();
   const queryClient = useQueryClient();
 
@@ -78,65 +79,39 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
     queryClient.resetQueries(["browse-anime-infinite-query"]);
   }, [genre, year, queryClient]);
 
-  const handleResetFilters = () => {
-    queryClient.resetQueries(["browse-anime-infinite-query"]);
-    setNoNewData(false);
-    setReset(true);
-  };
-
   return (
-    <>
-      <div className="flex flex-col justify-between gap-y-4 sm:flex-row sm:items-center">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-          <Combobox
-            data={catalogs}
-            selectedOption={genre}
-            setState={setGenre}
-            placeholder="Catagories"
-            reset={reset}
-          />
-          <Combobox
-            data={yearData}
-            selectedOption={year}
-            placeholder="File type"
-            setState={setYear}
-            reset={reset}
-            large
-          />
-        </div>
-        <Button size="sm" onClick={handleResetFilters} className="w-fit">
-          Reset filters
-        </Button>
+    <div className="mx-auto my-3 max-w-7xl rounded-xl bg-secondary p-3 px-6 md:p-6 xl:px-0">
+      <div className="flex justify-between p-3 md:p-6">
+        <h2 className="mb-3 text-2xl font-semibold ">Graphic</h2>
+        <Link href={"/graphic"}>
+          <Button>View All</Button>
+        </Link>
       </div>
-      {isFetching && !isFetchingNextPage ? (
-        ""
-      ) : (
-        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-          {animes.map((anime, index) => {
-            if (index === animes.length - 1) {
-              return (
-                <div key={anime.id} ref={ref}>
-                  <AnimeCard anime={anime} />
-                </div>
-              );
-            } else {
-              return (
-                <div key={anime.id}>
-                  <AnimeCard anime={anime} />
-                </div>
-              );
-            }
-          })}
-        </div>
-      )}
-      {!isFetching && animes.length === 0 && (
-        <p className="text-center text-sm text-muted-foreground">
-          No results found.
-        </p>
-      )}
-      {isFetchingNextPage && ""}
-    </>
+      <div className="">
+        {isFetching && !isFetchingNextPage ? (
+          ""
+        ) : (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {animes.slice(3).map((anime, index) => {
+              if (index === animes.length - 1) {
+                return (
+                  <div key={anime.id} ref={ref}>
+                    <AnimeCard anime={anime} />
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={anime.id}>
+                    <AnimeCard anime={anime} />
+                  </div>
+                );
+              }
+            })}
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 
-export default BrowseAnime;
+export default HomeGraphic;

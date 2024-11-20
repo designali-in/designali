@@ -6,6 +6,7 @@ export const animeSchema = z.object({
   features: z.string().min(3).max(200),
   description: z.string().min(3).max(1200),
   dimention: z.string().min(3).max(20),
+  freepro: z.string().min(3).max(20),
   genre: z.string(),
   releaseYear: z
     .string()
