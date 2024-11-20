@@ -29,9 +29,14 @@ const PollPage = async () => {
 
   return (
     <div className="p-6">
-      <Link href="/dashboard/poll/create">
-        <Button>Create Poll</Button>
-      </Link>
+      <div className="flex gap-2">
+        <Link href="/dashboard/poll/create">
+          <Button>Create Poll</Button>
+        </Link>
+        <Link href="/dashboard/poll/results">
+          <Button variant="outline">Results</Button>
+        </Link>
+      </div>
       <PollClient
         initialPolls={initialPolls}
         interaction

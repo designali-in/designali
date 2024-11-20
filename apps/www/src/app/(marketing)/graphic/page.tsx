@@ -12,7 +12,7 @@ import { Avegra } from "../../fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: "Browse",
+  title: "Graphic - Designali",
   description:
     "Discover your favorite anime on our browse page, designed to help you search for anime that suits your preferences. Browse through an extensive collection of anime and easily filter them by genres and release year.",
 };

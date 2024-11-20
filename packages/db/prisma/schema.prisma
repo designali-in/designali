@@ -191,8 +191,9 @@ model Graphic {
   id   String @id @default(cuid())
   name String @unique
 
-  genre        String
-  releaseYear  String
+  genre       String
+  releaseYear String
+
   director     String
   dimention    String
   features     String @db.VarChar(500)
