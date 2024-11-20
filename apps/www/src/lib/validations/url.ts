@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { ShortUrlFormData } from "@/src/types/urls";
 import type { UrlMeta, UserRole } from "@prisma/client";
 import * as z from "zod";

@@ -41,10 +41,7 @@ const data = {
           title: "Poll",
           url: "/dashboard/poll",
         },
-        {
-          title: "Leaderboard",
-          url: "/dashboard/leaderboard",
-        },
+
         {
           title: "Urls",
           url: "/dashboard/urls",

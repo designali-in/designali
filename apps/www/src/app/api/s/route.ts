@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { NextRequest } from "next/server";
 
 import { createUserShortUrlMeta, getUrlBySuffix } from "@/lib/validations/url";
@@ -21,7 +26,7 @@ export async function POST(req: NextRequest) {
     if (!slug || !ip) return Response.json(null);
 
     const res = await getUrlBySuffix(slug);
-    if (res.target && res.active === 1) {
+    if (res?.target && res?.active === 1) {
       const now = Date.now();
       const createdAt = new Date(res.updatedAt).getTime();
       const expirationMilliseconds = Number(res.expiration) * 1000;
