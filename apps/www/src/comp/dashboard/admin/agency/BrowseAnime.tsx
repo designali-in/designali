@@ -88,23 +88,24 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
     <>
       <div className="flex flex-col justify-between gap-y-4 sm:flex-row sm:items-center">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+          <Combobox
+            data={catalogs}
+            selectedOption={genre}
+            setState={setGenre}
+            placeholder="Catagories"
+            reset={reset}
+          />
+
           {
             //<Combobox
-            // data={catalogs}
-            //selectedOption={genre}
-            //setState={setGenre}
-            // placeholder="Catagories"
+            // data={yearData}
+            // selectedOption={year}
+            // placeholder="File type"
+            // setState={setYear}
             // reset={reset}
-            ///>
+            // large
+            // />
           }
-          <Combobox
-            data={yearData}
-            selectedOption={year}
-            placeholder="File type"
-            setState={setYear}
-            reset={reset}
-            large
-          />
         </div>
         <Button size="sm" onClick={handleResetFilters} className="w-fit">
           Reset filters

@@ -10,10 +10,6 @@ export const categories: ComboBoxItemType[] = [
     label: "Agency",
   },
   {
-    value: "manga",
-    label: "Manga",
-  },
-  {
     value: "question",
     label: "Question",
   },
