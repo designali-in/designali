@@ -25,7 +25,7 @@ const RecentlyAdded = async () => {
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-3  sm:grid-cols-2 md:grid-cols-3 ">
-          {animes.map((anime) => {
+          {animes.slice(0, 3).map((anime) => {
             return <AnimeCardClient key={anime.id} anime={anime} />;
           })}
         </div>
