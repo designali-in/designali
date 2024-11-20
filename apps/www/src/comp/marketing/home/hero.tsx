@@ -15,15 +15,13 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const talkAbout = [
-    "Photoshop",
-    "Illustrator",
-    "After Effects",
-    "Premiere Pro",
-    "Cinema 4D",
-    "Autodesk Maya",
-    "Visual Studio Code",
-    "Corel Draw",
-    "ZBrush",
+    "Graphic Design",
+    "Branding",
+    "Web Design",
+    "Web Develop",
+    "Marketing",
+    "UI UX",
+    "Social Media",
   ];
 
   useEffect(() => {
@@ -91,8 +89,8 @@ const Hero = () => {
 
           <p className="md:text-md mx-auto mb-16 mt-2 max-w-2xl px-6 text-sm text-slate-600 dark:text-slate-400 sm:px-6 md:max-w-4xl md:px-20 lg:text-lg">
             I craft enchanting visuals for brands, and conjure design resources
-            to empower others. Your complete platform for the design. I am an
-            expert in tools like <TypeWriter strings={talkAbout} />.
+            to empower others. I am an expert in design like{" "}
+            <TypeWriter strings={talkAbout} />.
           </p>
           <div className="flex justify-center gap-2">
             <Link href={"/app/dashboard/overview"}>

@@ -59,6 +59,7 @@ const navigation = {
           id: "other",
           name: "Others",
           items: [
+            { name: "Graphic", href: "/graphic" },
             { name: "Icons Editos", href: "/products/dicons-editor" },
             { name: "3D Icons", href: "/products/3dicons" },
             { name: "Colors", href: "/products/colors" },

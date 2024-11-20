@@ -8,6 +8,7 @@ import { DIcons } from "dicons";
 import useSWR from "swr";
 
 import fetcher from "@/lib/fetcher";
+import { Skeleton } from "@/components/ui/skeleton";
 
 import Counter from "../common/countnumber";
 import { Icons } from "../icons";
@@ -125,7 +126,7 @@ export const Items = () => {
                       </span>
                     </>
                   ) : (
-                    "--"
+                    <Skeleton className="h-12 w-full" />
                   )}
                 </div>
                 <div className="text-center text-xs text-slate-600 dark:text-slate-400 md:text-sm">
@@ -220,7 +221,7 @@ export const HomeItems = () => {
                       </span>
                     </div>
                   ) : (
-                    <p className="text-center text-secondary">--</p>
+                    <Skeleton className="h-12 w-full" />
                   )}
                 </div>
                 <div className="text-center text-xs text-slate-600 dark:text-slate-400 md:text-sm">

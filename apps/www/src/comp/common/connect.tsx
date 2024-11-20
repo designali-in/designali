@@ -54,7 +54,7 @@ export const Connect: React.FC = () => {
     );
   }, [animate]);
   return (
-    <section className="relative mx-auto mb-20 mt-6 max-w-7xl px-6 xl:px-0">
+    <section className="relative mx-auto mb-20 mt-6 max-w-5xl px-6 xl:px-0">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"
@@ -138,9 +138,7 @@ export const Connect: React.FC = () => {
                         href={"https://cal.com/aliimam/designali"}
                         target="_blank"
                       >
-                        <Button variant="default" size="lg">
-                          Book a call
-                        </Button>
+                        <Button>Book a call</Button>
                       </Link>
                       <Link
                         href="mailto:contact@designali.in"

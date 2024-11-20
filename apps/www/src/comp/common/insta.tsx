@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Skeleton } from "@/registry/default/designali/ui/skeleton";
 import { Button } from "@designali/ui/button";
 import axios from "axios";
 import { DIcons } from "dicons";
@@ -34,7 +35,7 @@ export const InstagramFeed = () => {
         target="_blank"
         className="flex justify-center"
       >
-        <DIcons.Instagram className="h-6 w-6 hover:text-ali" />
+        <DIcons.Instagram className="hover:text-ali h-6 w-6" />
       </Link>
 
       <div className="grid grid-cols-3 gap-1 py-10 md:grid-cols-6">
@@ -59,7 +60,9 @@ export const InstagramFeed = () => {
                 className="max-h-[140px] w-full object-cover md:max-h-[200px] lg:max-h-[240px] xl:max-h-[396px]"
                 src={post.media_url}
               />
-            ) : null}
+            ) : (
+              <Skeleton className="h-full w-full" />
+            )}
           </Link>
         ))}
       </div>

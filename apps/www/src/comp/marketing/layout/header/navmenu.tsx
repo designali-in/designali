@@ -89,6 +89,23 @@ export function Menu() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/ui"
+                    >
+                      <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        UI
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dshapes"
                     >
                       <DIcons.Shapes strokeWidth={1} className="h-8 w-8" />
@@ -199,9 +216,9 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/ui" legacyBehavior passHref>
+            <Link href="/graphic" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                UI
+                Graphic
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
