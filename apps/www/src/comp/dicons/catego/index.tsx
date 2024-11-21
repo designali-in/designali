@@ -30,7 +30,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "@/components/ui/toaster";
 
 import { DBrands } from "../icons";
-import { InstallIcon } from "../main/install-icon";
 import { Navigation } from "../main/nav";
 import { SideIcon } from "../main/side-icon";
 import { MainIcons } from "./catego";
@@ -305,9 +304,6 @@ export const DIconCategories = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <InstallIcon settings={settings} />
       </div>
     </main>
   );
