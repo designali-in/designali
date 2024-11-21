@@ -37,7 +37,7 @@ const features = [
         </h1>
 
         <Link
-          href={"/solutions/branding#process"}
+          href={"/agency/branding#process"}
           className="absolute bottom-4 right-4"
         >
           <Button
@@ -169,7 +169,7 @@ const features = [
     className: "col-span-8 p-3 md:col-span-4 lg:col-span-5",
     background: (
       <div>
-        <ScrollArea className="h-[410px]">
+        <ScrollArea className="h-[500px]">
           <ImageZoomThree images={data.resources} />
           <Link className="my-6 flex justify-center" href={"/works"}>
             <Button>See More</Button>

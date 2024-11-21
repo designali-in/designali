@@ -49,7 +49,7 @@ const features = [
         </h1>
 
         <Link
-          href={"/solutions/website-develop#include"}
+          href={"/agency/web-develop#include"}
           className="absolute bottom-4 right-4"
         >
           <Button
@@ -219,7 +219,7 @@ const features = [
             width={300}
             height={200}
           />
-          <Link className="flex justify-center" href={"/dicons"}>
+          <Link className="flex justify-center" href={"/products/dicons"}>
             <Button variant="outline">DIcons</Button>
           </Link>
         </div>

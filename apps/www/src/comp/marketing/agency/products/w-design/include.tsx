@@ -19,7 +19,7 @@ export const DService: DExperience[] = [
     post: "User experience consultation",
   },
   {
-    post: "Performance optimisation",
+    post: "Performance optimization",
   },
   {
     post: "SEO, social media, and analytics setup",

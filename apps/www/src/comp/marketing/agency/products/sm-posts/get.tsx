@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Icons } from "@/comp/icons";
 import { BentoCard, BentoGrid } from "@/src/comp/uis/bento-grid";
 import DotPattern from "@/src/comp/uis/dot-pattern";
@@ -27,7 +26,7 @@ const tiers = [
 const features = [
   {
     name: "Integrations",
-    className: "col-span-8 p-6 md:p-10",
+    className: "col-span-8 mt-3 p-6 md:p-10",
     background: (
       <div>
         <h1 className="flex justify-center text-2xl font-thin tracking-wide md:text-3xl lg:text-5xl">

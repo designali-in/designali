@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 
 export function About() {
   return (
-    <div className="mb-40 md:mb-20">
+    <div className="mb-40 mt-10 md:mb-20">
       <div className="">
         <div>
           <div className="flex justify-center">
@@ -22,22 +22,11 @@ export function About() {
             intuitive navigation, responsiveness for different devices, and fast
             loading times.
           </p>
-          <div className="my-3 grid items-center justify-center md:flex md:justify-between">
-            <div className="mt-2 flex flex-wrap items-center gap-1 gap-y-2">
-              <p className="text-xl font-semibold text-slate-600 dark:text-slate-400">
-                {" "}
-                5.0{" "}
-              </p>
-            </div>
-          </div>
         </div>
       </div>
       <div className="mt-10 grid justify-between gap-3 md:flex">
-        <div className="flex gap-2">
-          <Link
-            href={"https://buy.stripe.com/test_14k7uC4ZE3ZB5e8dQQ"}
-            target="_blank"
-          >
+        <div className="flex items-center gap-2">
+          <Link href={"/dashboard"} target="_blank">
             <Button variant="default" size="lg">
               Design Now
             </Button>
@@ -53,7 +42,7 @@ export function About() {
             </Button>
           </Link>
         </div>
-        <ShareLink name={"Web Design"} slug={"Web Design"} />
+        <ShareLink slug={"web-design"} />
       </div>
       <div className="mt-10">
         <div>
@@ -74,7 +63,7 @@ export function About() {
               <Separator orientation="vertical" />
               <div className="flex items-center gap-2">
                 <Icons.calendar strokeWidth={1} className="h-4 w-4" />
-                48 hours delivery
+                48 Hours Delivery
               </div>
               <Separator orientation="vertical" />
               <div className="flex items-center gap-2">
@@ -90,7 +79,7 @@ export function About() {
               <Separator orientation="vertical" />
               <div className="flex items-center gap-2">
                 <Icons.repeat strokeWidth={1} className="h-4 w-4" />
-                Unlimited stock photos
+                Unlimited Stock Photos
               </div>
             </div>
           </div>

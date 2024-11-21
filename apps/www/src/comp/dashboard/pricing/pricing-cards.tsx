@@ -170,13 +170,13 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           ))}
         </div>
 
-        <p className="mt-3 text-balance text-center text-base text-muted-foreground">
+        <p className="my-10 text-balance text-center text-base text-muted-foreground">
           Email{" "}
           <a
             className="font-medium text-primary hover:underline"
-            href="mailto:support@saas-starter.com"
+            href="mailto:contact@designali.in"
           >
-            support@saas-starter.com
+            contact@designali.in
           </a>{" "}
           for to contact our support team.
           <br />

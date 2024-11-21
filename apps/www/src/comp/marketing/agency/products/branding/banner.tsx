@@ -94,7 +94,7 @@ export function Banner() {
             </Card>
           </CarouselItem>
         </CarouselContent>
-        <div className="right-8 mt-10 flex justify-center gap-3 md:absolute md:-mt-16">
+        <div className="right-8 mt-10 flex justify-center gap-3 md:absolute md:right-10 md:-mt-16">
           <CarouselPrevious />
           <CarouselNext />
         </div>

@@ -90,7 +90,7 @@ const Hero = () => {
             expert in tools like <TypeWriter strings={talkAbout} />.
           </p>
           <div className="flex justify-center gap-2">
-            <Link href={"/app/dashboard/overview"}>
+            <Link href={"/dashboard"}>
               <Button variant="default" size="lg">
                 Start Project
               </Button>

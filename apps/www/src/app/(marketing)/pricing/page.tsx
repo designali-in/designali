@@ -18,19 +18,23 @@ export default async function PricingPage() {
   }
 
   return (
-    <div className="w-ful mx-auto flex max-w-7xl flex-col gap-16 px-6 xl:px-0">
-      <div className="mx-auto mt-40 max-w-3xl  md:max-w-7xl ">
-        <div className="grid items-center justify-center px-8 pb-1 text-center">
+    <div className="  mx-auto  max-w-7xl  px-6 xl:px-0">
+      <div className=" mt-28 ">
+        <div className="flex items-center justify-center px-8 pb-1 text-center">
           <h3
             className={cn(
               Avegra.className,
-              "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 text-center text-7xl text-transparent dark:bg-gradient-to-r dark:from-slate-200 dark:via-slate-400 dark:to-slate-200 dark:bg-clip-text md:text-8xl",
+              "z-20  items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 text-center text-3xl text-transparent dark:bg-gradient-to-r dark:from-slate-200 dark:via-slate-400 dark:to-slate-200 dark:bg-clip-text md:text-5xl",
             )}
           >
             Pricing
-          </h3>{" "}
-          <hr className="bg-ali mx-auto my-4 h-1 w-6 rounded border-0"></hr>
+          </h3>
         </div>
+        <p className="mx-auto max-w-xl text-center text-xs">
+          Forget the messy job of hiring and surprise expenses. Enjoy top-notch
+          designs whenever you want, all for a monthly price. It’s really that
+          easy!
+        </p>
       </div>
       <PricingCards userId={user?.id} subscriptionPlan={subscriptionPlan} />
       <hr className="container" />

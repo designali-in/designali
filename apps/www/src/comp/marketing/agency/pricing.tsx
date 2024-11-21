@@ -39,7 +39,7 @@ export default function FUIPricingWithSpecialTwo() {
               View Works
             </Button>
           </Link>
-          <Link href={"/pricing#pricing"}>
+          <Link href={"/pricing"}>
             <Button size="lg">See monthly plans</Button>
           </Link>
           <Link href={"https://cal.com/aliimam/designali"} target="_blank">

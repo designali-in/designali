@@ -35,7 +35,7 @@ export default function SMPosts() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/solutions">Solutions</BreadcrumbLink>
+              <BreadcrumbLink href="/agency">Agency</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -46,13 +46,6 @@ export default function SMPosts() {
       </div>
       <Banner />
       <SocialMedisCards />
-      <div className="" id="reviews">
-        <div className="flex justify-center">
-          <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
-            Reviews
-          </h1>
-        </div>
-      </div>
       <SMPostsGet />
       <About />
       <Connect />

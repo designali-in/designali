@@ -25,7 +25,12 @@ export const metadata = {
 export default function Design() {
   return (
     <div className="mx-auto mb-20 mt-28 max-w-3xl px-6 md:max-w-7xl xl:px-0">
-      <PageTitle title={"Web Design"} description={`✌️ Under Construction`} />
+      <PageTitle
+        title={"Web Design"}
+        description={`Select us for unparalleled web design that amplifies your brand and engages your audience
+
+`}
+      />
       <div className="mt-4 flex justify-center">
         <Breadcrumb>
           <BreadcrumbList>
@@ -34,7 +39,7 @@ export default function Design() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/solutions">Solutions</BreadcrumbLink>
+              <BreadcrumbLink href="/agency">Agency</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -47,13 +52,6 @@ export default function Design() {
       <WebsiteDesignCards />
       <DesignInclude />
       <Projects />
-      <div id="reviews">
-        <div className="flex justify-center">
-          <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-6 text-xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-3xl">
-            Reviews
-          </h1>
-        </div>
-      </div>
       <WebDesignGet />
       <About />
       <Connect />

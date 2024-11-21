@@ -39,7 +39,7 @@ const features = [
         </h1>
 
         <Link
-          href={"/solutions/branding#process"}
+          href={"/agency/sm-posts#process"}
           className="absolute bottom-4 right-4"
         >
           <Button
