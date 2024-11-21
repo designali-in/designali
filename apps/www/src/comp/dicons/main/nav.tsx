@@ -57,12 +57,6 @@ export const Navigation = ({
                   />
                 </Label>
               </div>
-
-              <Link href={"/tools/dicons"}>
-                <Button size="icon" className="h-10 w-10">
-                  <DIcons.Scissors className="mx-1 h-4 w-4" />
-                </Button>
-              </Link>
             </div>
           </div>
           <div className="flex items-center justify-center gap-1 pb-6 md:pb-0">

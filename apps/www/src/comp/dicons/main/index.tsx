@@ -36,7 +36,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "@/components/ui/toaster";
 
 import { MainIcons } from "./dicons";
-import { InstallIcon } from "./install-icon";
 import { Navigation } from "./nav";
 import { SideIcon } from "./side-icon";
 
@@ -295,9 +294,6 @@ export const DIconGenerator = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="">
-          <InstallIcon settings={settings} />
         </div>
       </main>
     </Suspense>
