@@ -54,13 +54,13 @@ export const Connect: React.FC = () => {
     );
   }, [animate]);
   return (
-    <section className="relative mx-auto mb-20 mt-6 max-w-5xl px-6 xl:px-0">
+    <section className="relative mx-auto mb-20 mt-6 max-w-5xl  ">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"
           data-aos="fade-down"
         >
-          <HighlighterItem className="rounded-3xl">
+          <HighlighterItem className="rounded-3xl p-6">
             <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
               <Particles
                 className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"

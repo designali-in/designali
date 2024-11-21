@@ -8,39 +8,40 @@ import {
 const pricingFaqData = [
   {
     id: "item-1",
-    question: "What is the cost of the free plan?",
+    question: "What payment methods do you accept?",
     answer:
-      "Our free plan is completely free, with no monthly or annual charges. It's a great way to get started and explore our basic features.",
+      "We accept credit cards, bank transfers, and payment platforms such as Paytm, UPI, Cred. Payment terms will be outlined in your proposal.",
   },
   {
     id: "item-2",
-    question: "How much does the Basic Monthly plan cost?",
+    question: "What makes your pricing different from other agencies?",
     answer:
-      "The Basic Monthly plan is priced at $15 per month. It provides access to our core features and is billed on a monthly basis.",
+      "Our pricing reflects the quality, expertise, and personalized service we provide. We focus on delivering value that aligns with your business goals.",
   },
   {
     id: "item-3",
-    question: "What is the price of the Pro Monthly plan?",
+    question: "What will I receive in 48 hours?",
     answer:
-      "The Pro Monthly plan is available for $25 per month. It offers advanced features and is billed on a monthly basis for added flexibility.",
+      "You can expect typical requests to be delivered within 48 hours on average. This includes items like a brand concept, a landing page, or a set of social media templates. For larger requests, deliverables will be provided in stages, with updates every 24 hours until the entire project is completed.",
   },
   {
     id: "item-4",
-    question: "Do you offer any annual subscription plans?",
+    question: "⁠What happens if I need to cancel my project?",
     answer:
-      "Yes, we offer annual subscription plans for even more savings. The Basic Annual plan is $144 per year, and the Pro Annual plan is $300 per year.",
+      "If you decide to cancel your project after it has begun, we will retain the initial deposit to cover the work completed up to that point. Depending on the timing, we may be able to offer a partial refund for work that has not yet been started.",
   },
   {
     id: "item-5",
-    question: "Is there a trial period for the paid plans?",
+    question:
+      "What if I need a design for something not listed on your website?",
     answer:
-      "We offer a 14-day free trial for both the Pro Monthly and Pro Annual plans. It's a great way to experience all the features before committing to a paid subscription.",
+      "We offer a wide range of custom design services, even if they’re not listed on our website. Whether you need a specialized design for an event, packaging, or a product, feel free to contact us with your requirements, and we’ll provide a solution tailored to your needs.",
   },
 ];
 
 export function PricingFaq() {
   return (
-    <section className="container max-w-4xl py-2">
+    <section className="mx-auto -mt-16 mb-20 max-w-5xl">
       <Accordion type="single" collapsible className="my-12 w-full">
         {pricingFaqData.map((faqItem) => (
           <AccordionItem key={faqItem.id} value={faqItem.id}>

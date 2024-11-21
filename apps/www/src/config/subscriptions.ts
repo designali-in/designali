@@ -4,19 +4,18 @@ import { env } from "@/env";
 
 export const pricingData: SubscriptionPlan[] = [
   {
-    title: "Starter",
-    description: "For Beginners",
+    title: "Free",
+    description: "Everything you need to kickstart your design project.",
     benefits: [
-      "Up to 100 monthly posts",
-      "Basic analytics and reporting",
-      "Access to standard templates",
+      "DIcons - Outline style",
+      "UI Components",
+      "Community",
+      "Tools",
+      "Graaadients",
+      "DShapes",
+      "Colors",
     ],
-    limitations: [
-      "No priority access to new features.",
-      "Limited customer support",
-      "No custom branding",
-      "Limited access to business resources.",
-    ],
+    limitations: [],
     prices: {
       monthly: 0,
       yearly: 0,
@@ -30,19 +29,18 @@ export const pricingData: SubscriptionPlan[] = [
     title: "Pro",
     description: "Unlock Advanced Features",
     benefits: [
-      "Up to 500 monthly posts",
-      "Advanced analytics and reporting",
-      "Access to business templates",
-      "Priority customer support",
-      "Exclusive webinars and training.",
+      "All include are Free",
+      "Unlimited access to Graphic",
+      "DIcons - 4x styles",
+      "Abstractions",
+      "Illustrations",
+      "Branding Mockups",
+      "Devices Mockups",
     ],
-    limitations: [
-      "No custom branding",
-      "Limited access to business resources.",
-    ],
+    limitations: [],
     prices: {
-      monthly: 60000,
-      yearly: 600000,
+      monthly: 300,
+      yearly: 3000,
     },
     stripeIds: {
       monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID,
@@ -50,19 +48,22 @@ export const pricingData: SubscriptionPlan[] = [
     },
   },
   {
-    title: "Business",
+    title: "Agency",
     description: "For Power Users",
     benefits: [
-      "Unlimited posts",
-      "Real-time analytics and reporting",
-      "Access to all templates, including custom branding",
-      "24/7 business customer support",
-      "Personalized onboarding and account management.",
+      "All include are Pro",
+      "Branding",
+      "Web Design",
+      "Web Develop",
+      "Motion Graphic",
+      "Updates every 48 hours",
+      "Unlimited revisions",
+      "Teams Access",
     ],
     limitations: [],
     prices: {
-      monthly: 100000,
-      yearly: 900000,
+      monthly: 50000,
+      yearly: 360000,
     },
     stripeIds: {
       monthly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
@@ -71,12 +72,7 @@ export const pricingData: SubscriptionPlan[] = [
   },
 ];
 
-export const plansColumns = [
-  "starter",
-  "pro",
-  "business",
-  "enterprise",
-] as const;
+export const plansColumns = ["free", "pro", "agency"] as const;
 
 export const comparePlans: PlansRow[] = [
   {

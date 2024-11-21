@@ -6,6 +6,7 @@ import type { SubscriptionPlan } from "@/types/index";
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { BillingFormButton } from "@/comp/forms/billing-form-button";
+import { DIcons } from "dicons";
 
 import { pricingData } from "@/config/subscriptions";
 import { cn } from "@/lib/utils";
@@ -36,15 +37,15 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
     return (
       <div
         className={cn(
-          "relative flex flex-col overflow-hidden rounded-3xl border shadow-sm",
+          "relative flex w-full flex-col overflow-hidden rounded-3xl border shadow-sm",
           offer.title.toLocaleLowerCase() === "pro"
             ? "-m-0.5 border-2 border-green-400"
             : "",
         )}
         key={offer.title}
       >
-        <div className="min-h-[150px] items-start space-y-4 bg-muted/50 p-6">
-          <p className="flex font-urban text-sm font-bold uppercase tracking-wider text-muted-foreground">
+        <div className="min-h-[150px] w-full items-start space-y-4 bg-muted/50 p-6">
+          <p className="flex text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             {offer.title}
           </p>
 
@@ -91,7 +92,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
                   className="flex items-start text-muted-foreground"
                   key={feature}
                 >
-                  <Icons.moon className="mr-3 size-5 shrink-0" />
+                  <DIcons.Close className="mr-3 size-5 shrink-0" />
                   <p>{feature}</p>
                 </li>
               ))}
@@ -145,7 +146,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
             defaultValue={isYearly ? "yearly" : "monthly"}
             onValueChange={toggleBilling}
             aria-label="toggle-year"
-            className="h-9 overflow-hidden rounded-full border bg-background p-1 *:h-7 *:text-muted-foreground"
+            className="h-12 overflow-hidden rounded-full border bg-background p-1 *:h-10 *:text-muted-foreground"
           >
             <ToggleGroupItem
               value="yearly"
@@ -164,26 +165,11 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           </ToggleGroup>
         </div>
 
-        <div className="grid gap-5 bg-inherit py-5 lg:grid-cols-3">
+        <div className="grid w-full gap-5 bg-inherit py-5 lg:grid-cols-3">
           {pricingData.map((offer) => (
             <PricingCard offer={offer} key={offer.title} />
           ))}
         </div>
-
-        <p className="my-10 text-balance text-center text-base text-muted-foreground">
-          Email{" "}
-          <a
-            className="font-medium text-primary hover:underline"
-            href="mailto:contact@designali.in"
-          >
-            contact@designali.in
-          </a>{" "}
-          for to contact our support team.
-          <br />
-          <strong>
-            You can test the subscriptions and won&apos;t be charged.
-          </strong>
-        </p>
       </section>
     </div>
   );
