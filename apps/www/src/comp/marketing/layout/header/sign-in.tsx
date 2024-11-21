@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { DropdownMenu } from "@designali/ui/dropdown-menu";
 
 import { getCurrentUser } from "@/lib/session";
 import { Button } from "@/components/ui/button";
+import { DropdownMenu } from "@/components/ui/dropdown-menu";
 
 import { UserAccountNav } from "./user-account-nav";
 

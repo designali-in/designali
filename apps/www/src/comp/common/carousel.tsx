@@ -2,15 +2,16 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@designali/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { PhotoProvider, PhotoView } from "react-photo-view";
+} from "@/components/ui/carousel";
 
 import "react-photo-view/dist/react-photo-view.css";
 

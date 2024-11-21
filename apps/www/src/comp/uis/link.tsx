@@ -1,8 +1,9 @@
 import type { VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 import NextLink from "next/link";
-import { cn } from "@designali/ui";
 import { cva } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
 
 export const linkVariants = cva("", {
   variants: {

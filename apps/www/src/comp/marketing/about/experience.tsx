@@ -2,16 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
+import { HighlighterItem, HighlightGroup } from "@/comp/uis/highlighter";
+import { Particles } from "@/comp/uis/particles";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@designali/ui/carousel";
+} from "@/components/ui/carousel";
 
-import { HighlighterItem, HighlightGroup } from "@/comp/uis/highlighter";
-import { Particles } from "@/comp/uis/particles";
 import { Exp } from "./exp";
 
 export interface Experience {

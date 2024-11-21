@@ -533,6 +533,32 @@
     ]
   },
   {
+    "name": "toasts",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/toasts.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "toaster",
+    "type": "registry:ui",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      {
+        "path": "designali/ui/toaster.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "toggle",
     "type": "registry:ui",
     "dependencies": [

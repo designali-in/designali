@@ -1,13 +1,14 @@
 import * as React from "react";
+
+import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { cn } from "@designali/ui";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@designali/ui/dialog";
+} from "@/components/ui/dialog";
 import {
   Drawer,
   DrawerClose,
@@ -16,11 +17,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@designali/ui/drawer";
+} from "@/components/ui/drawer";
 
-type ResponsiveDialogContextType = {
+interface ResponsiveDialogContextType {
   isDesktop: boolean;
-};
+}
 
 const ResponsiveDialogContext = React.createContext<
   ResponsiveDialogContextType | undefined
@@ -38,11 +39,11 @@ const useResponsiveDialog = () => {
   return context;
 };
 
-type ResponsiveDialogProps = {
+interface ResponsiveDialogProps {
   children?: React.ReactNode;
   onOpenChange?: (isOpen: boolean) => void;
   open?: boolean;
-};
+}
 
 const ResponsiveDialog = (props: ResponsiveDialogProps) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -55,11 +56,11 @@ const ResponsiveDialog = (props: ResponsiveDialogProps) => {
   );
 };
 
-type BaseProps = {
+interface BaseProps {
   children?: React.ReactNode;
   className?: React.ComponentProps<"div">["className"];
   asChild?: boolean;
-};
+}
 
 const ResponsiveDialogTrigger = (props: BaseProps) => {
   const { isDesktop } = useResponsiveDialog();

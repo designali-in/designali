@@ -1,21 +1,22 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { cn } from "@designali/ui";
-import { Button, buttonVariants } from "@designali/ui/button";
+
+import { cn } from "@/lib/utils";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@designali/ui/dialog";
+} from "@/components/ui/dialog";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@designali/ui/tooltip";
+} from "@/components/ui/tooltip";
 
 import { Icons } from "../icons";
 import { CopyInput } from "../uis/copy-input";
@@ -81,7 +82,7 @@ export function UpdatesToolbar({ posts }) {
               className={cn(
                 buttonVariants({
                   variant: "outline",
-                  size: "lgicon",
+                  size: "icon",
                 }),
               )}
             >

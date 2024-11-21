@@ -11,10 +11,11 @@ import { getTableOfContents } from "@/lib/toc";
 import "@/styles/mdx.css";
 
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
-import { Separator } from "@designali/ui/separator";
 import { DIcons } from "dicons";
+
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 interface DesignPageProps {
   params: {

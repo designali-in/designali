@@ -1,12 +1,13 @@
 import { useId } from "react";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 interface GridPatternProps {
   width?: any;
   height?: any;
   x?: any;
   y?: any;
-  squares?: Array<[x: number, y: number]>;
+  squares?: [x: number, y: number][];
   strokeDasharray?: any;
   className?: string;
   [key: string]: any;

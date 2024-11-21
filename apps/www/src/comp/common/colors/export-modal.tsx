@@ -2,19 +2,20 @@
 
 import React, { useState } from "react";
 import { Icons } from "@/comp/icons";
-import { Button } from "@designali/ui/button";
-import { Dialog, DialogContent, DialogTitle } from "@designali/ui/dialog";
-import { Input } from "@designali/ui/input";
-import { ScrollArea } from "@designali/ui/scroll-area";
+import { DIcons } from "dicons";
+import { saveSvgAsPng } from "save-svg-as-png";
+
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@designali/ui/select";
-import { DIcons } from "dicons";
-import { saveSvgAsPng } from "save-svg-as-png";
+} from "@/components/ui/select";
 
 type ExportFormat = "PNG" | "SVG";
 

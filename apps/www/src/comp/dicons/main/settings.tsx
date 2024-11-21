@@ -5,15 +5,16 @@
 "use client";
 
 import React from "react";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/daccordion";
-import { Input } from "@designali/ui/input";
-import { Label } from "@designali/ui/label";
-import { ScrollArea } from "@designali/ui/scroll-area";
+} from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Select,
   SelectContent,
@@ -21,9 +22,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@designali/ui/select";
-import { Slider } from "@designali/ui/slider";
-import { Switch } from "@designali/ui/switch";
+} from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
 
 import { ColorInput } from "../../common/colors/color-input";
 import { ResultIcon } from "../../common/colors/result-dicon";

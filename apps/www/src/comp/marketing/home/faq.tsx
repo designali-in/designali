@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/accordion";
+} from "@/components/ui/accordion";
 
 interface FAQProps {
   question: string;

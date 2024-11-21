@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useMemo, useRef } from "react";
-import { cn } from "@designali/ui";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
+
+import { cn } from "@/lib/utils";
 
 export const CanvasRevealEffect = ({
   animationSpeed = 0.4,
@@ -277,7 +278,6 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [size.width, size.height, source]);
 
   return (

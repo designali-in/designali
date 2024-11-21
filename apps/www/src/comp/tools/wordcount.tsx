@@ -2,8 +2,9 @@
 "use client";
 
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@designali/ui/card";
-import { Textarea } from "@designali/ui/textarea";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 
 const WordCounter = () => {
   const [value, setValue] = React.useState("");

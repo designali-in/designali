@@ -2,14 +2,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
 import BlurImage from "@/comp/uis/blur-image";
-import { Skeleton } from "@designali/ui/skeleton";
+
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Tooltip,
   TooltipArrow,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@designali/ui/tooltip";
+} from "@/components/ui/tooltip";
 
 export function LinkPreviewer({
   apiKey,

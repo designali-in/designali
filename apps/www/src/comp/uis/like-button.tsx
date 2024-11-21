@@ -2,19 +2,19 @@
 
 import type { Likes } from "@/types";
 import React from "react";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
-import { toast } from "@designali/ui/toast";
+import useSWR from "swr";
+import { useDebouncedCallback } from "use-debounce";
+
+import fetcher from "@/lib/fetcher";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/toaster";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@designali/ui/tooltip";
-import useSWR from "swr";
-import { useDebouncedCallback } from "use-debounce";
-
-import fetcher from "@/lib/fetcher";
+} from "@/components/ui/tooltip";
 
 import { Icons } from "../icons";
 

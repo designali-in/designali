@@ -1,10 +1,10 @@
 import Image from "next/image";
+import { Icons } from "@/comp/icons";
 import { BentoCard, BentoGrid } from "@/src/comp/uis/bento-grid";
 import DotPattern from "@/src/comp/uis/dot-pattern";
 import Ripple from "@/src/comp/uis/ripple";
-import { ScrollArea } from "@designali/ui/scroll-area";
 
-import { Icons } from "@/comp/icons";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const tiers = [
   {

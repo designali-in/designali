@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@designali/ui/button";
-import { toast } from "@designali/ui/toaster";
 import { Loader2 } from "lucide-react";
 import { useFormStatus } from "react-dom";
+
+import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/toaster";
 
 import { Icons } from "../../icons";
 import { subscribeAction } from "./subscribe-action";

@@ -3,10 +3,10 @@
 import type { Likes, Views } from "@/types";
 import React from "react";
 import { Separator } from "@/registry/default/designali/ui/separator";
-import { Skeleton } from "@designali/ui/skeleton";
 import useSWR from "swr";
 
 import fetcher from "@/lib/fetcher";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface HeaderProps {
   slug: string;

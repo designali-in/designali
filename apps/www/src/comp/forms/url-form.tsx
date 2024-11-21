@@ -1,29 +1,29 @@
 "use client";
 
-import type { Dispatch, SetStateAction} from "react";
+import type { ShortUrlFormData } from "@/types/urls";
+import type { User } from "@prisma/client";
+import type { Dispatch, SetStateAction } from "react";
 import { useTransition } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { User } from "@prisma/client";
 import { Sparkles } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
-import type { ShortUrlFormData } from "@/types/urls";
 import { EXPIRATION_ENUMS } from "@/types/enums";
 import { generateUrlSuffix } from "@/lib/utils";
 import { createUrlSchema } from "@/lib/validations/url";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label"; 
- 
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@designali/ui/select";
-import { Switch } from "@designali/ui/switch";
+} from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
+
 import { Icons } from "../icons";
 
 export type FormData = ShortUrlFormData;
@@ -59,12 +59,12 @@ export function UrlForm({
   } = useForm<FormData>({
     resolver: zodResolver(createUrlSchema),
     defaultValues: {
-      id: initData?.id || "",
-      target: initData?.target || "",
-      url: initData?.url || "",
-      active: initData?.active || 1,
-      visible: initData?.visible || 0,
-      expiration: initData?.expiration || "-1",
+      id: initData.id || "",
+      target: initData.target || "",
+      url: initData.url || "",
+      active: initData.active || 1,
+      visible: initData.visible || 0,
+      expiration: initData.expiration || "-1",
     },
   });
 
@@ -102,7 +102,7 @@ export function UrlForm({
       if (type === "edit") {
         const response = await fetch(`${action}/update`, {
           method: "POST",
-          body: JSON.stringify({ data, userId: initData?.userId }),
+          body: JSON.stringify({ data, userId: initData.userId }),
         });
         if (!response.ok || response.status !== 200) {
           toast.error("Update Failed", {
@@ -124,8 +124,8 @@ export function UrlForm({
         const response = await fetch(`${action}/delete`, {
           method: "POST",
           body: JSON.stringify({
-            url_id: initData?.id,
-            userId: initData?.userId,
+            url_id: initData.id,
+            userId: initData.userId,
           }),
         });
         if (!response.ok || response.status !== 200) {
@@ -161,7 +161,7 @@ export function UrlForm({
             />
           </div>
           <div className="flex flex-col justify-between p-1">
-            {errors?.target ? (
+            {errors.target ? (
               <p className="pb-0.5 text-[13px] text-red-600">
                 {errors.target.message}
               </p>
@@ -204,7 +204,7 @@ export function UrlForm({
             </div>
           </div>
           <div className="flex flex-col justify-between p-1">
-            {errors?.url ? (
+            {errors.url ? (
               <p className="pb-0.5 text-[13px] text-red-600">
                 {errors.url.message}
               </p>
@@ -224,7 +224,7 @@ export function UrlForm({
               setValue("expiration", value);
             }}
             name="expiration"
-            defaultValue={initData?.expiration || "-1"}
+            defaultValue={initData.expiration || "-1"}
           >
             <SelectTrigger className="w-full shadow-inner">
               <SelectValue placeholder="Select a time" />
@@ -250,7 +250,7 @@ export function UrlForm({
               id="visible"
               {...register("visible")}
               disabled
-              defaultChecked={initData?.visible === 1 || false}
+              defaultChecked={initData.visible === 1 || false}
               onCheckedChange={(value) => setValue("visible", value ? 1 : 0)}
             />
           </div>

@@ -2,14 +2,15 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { Card, CardContent } from "@designali/ui/card";
+
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@designali/ui/carousel";
+} from "@/components/ui/carousel";
 
 export function Banner() {
   return (

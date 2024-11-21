@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import ImageZoom from "@/comp/common/image-zoom";
 import { HighlighterItem, HighlightGroup } from "@/comp/uis/highlighter";
-import { Button } from "@designali/ui/button";
 import { DIcons } from "dicons";
+
+import { Button } from "@/components/ui/button";
 
 export interface Experience {
   post: string;
@@ -182,7 +183,7 @@ export function Related() {
                       href={"https://cal.com/aliimam/designali"}
                       target="_blank"
                     >
-                      <Button variant="outline" size="lgicon">
+                      <Button variant="outline" size="icon">
                         <DIcons.ArrowUpRight
                           strokeWidth={1}
                           className="h-8 hover:rotate-45"

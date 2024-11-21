@@ -6,16 +6,6 @@ import { Button } from "@/registry/default/designali/ui/button";
 import { baseColors } from "@/registry/registry-base-colors";
 import { copyToClipboardWithMeta } from "@/src/comp/uis/copy-button";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@designali/ui/dialog";
-import { Drawer, DrawerContent, DrawerTrigger } from "@designali/ui/drawer";
-import { Skeleton } from "@designali/ui/skeleton";
-import {
   CheckIcon,
   CopyIcon,
   MoonIcon,
@@ -27,6 +17,16 @@ import { useTheme } from "next-themes";
 
 import { cn } from "@/lib/utils";
 import { useConfig } from "@/hooks/use-config";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 
 import { ThemeWrapper } from "../theme-wrapper";

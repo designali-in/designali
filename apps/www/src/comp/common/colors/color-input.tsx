@@ -1,9 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { ColorChangeHandler } from "react-color";
-import { DInput } from "@designali/ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import { SketchPicker } from "react-color";
 import reactCSS from "reactcss";
+
+import { DInput } from "@/components/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 interface ColorInputPropTypes {
   value: string;
@@ -42,7 +47,7 @@ export const ColorInput = ({
           <PopoverTrigger>
             <div
               color={value}
-              className="h-10 w-10 rounded-full border-2 border-ali"
+              className="border-ali h-10 w-10 rounded-full border-2"
               style={styles.color}
             />
           </PopoverTrigger>

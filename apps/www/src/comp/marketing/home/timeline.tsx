@@ -1,7 +1,8 @@
 import type { ValidIcon } from "@/comp/icons";
 import type { ReactNode } from "react";
 import { Icons } from "@/comp/icons";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 export function TimelineContainer({ children }: { children: ReactNode }) {
   return (

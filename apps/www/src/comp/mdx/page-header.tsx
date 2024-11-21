@@ -1,8 +1,9 @@
 import type { VariantProps } from "class-variance-authority";
-import { cn } from "@designali/ui";
-import { Separator } from "@designali/ui/separator";
 import { cva } from "class-variance-authority";
 import { Balancer } from "react-wrap-balancer";
+
+import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 // Modified from: https://github.com/shadcn-ui/ui/blob/main/apps/www/components/page-header.tsx
 

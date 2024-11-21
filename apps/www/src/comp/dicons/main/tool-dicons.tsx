@@ -5,16 +5,17 @@
 "use client";
 
 import React from "react";
-import { cn } from "@designali/ui";
+import { DIcons } from "dicons";
+import { CSSTransition } from "react-transition-group";
+
+import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@designali/ui/ddropdown-menu";
-import { toast } from "@designali/ui/toaster";
-import { DIcons } from "dicons";
-import { CSSTransition } from "react-transition-group";
+} from "@/components/ui/dropdown-menu";
+import { toast } from "@/components/ui/toaster";
 
 import { DownloadPNG, DownloadSVG } from "../../common/colors/export-modal";
 import { ResultIcon } from "../../common/colors/result-dicon";
@@ -44,7 +45,7 @@ export const MainToolIcons = ({
   return (
     <main className={""}>
       <div className="relative mt-20 px-6">
-        <p className="mb-2 text-center text-xl font-semibold text-ali">
+        <p className="text-ali mb-2 text-center text-xl font-semibold">
           {settings.icon}
         </p>
         <div className="relative flex h-auto w-auto justify-center border p-4">

@@ -1,15 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@designali/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@designali/ui/select";
-import { toast } from "@designali/ui/toast";
 import { DIcons } from "dicons";
 import FileSaver from "file-saver";
 import { filesize } from "filesize";
@@ -22,6 +13,15 @@ import { getExtension } from "@/lib/img/get-extension";
 import { imageToBase64 } from "@/lib/img/image-to-base64";
 import { svgToBase64 } from "@/lib/img/svg-to-base64";
 import { truncateFilename } from "@/lib/img/truncate-filename";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { toast } from "@/components/ui/toaster";
 
 interface ImageFile {
   file: File;

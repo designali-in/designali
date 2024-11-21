@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { DIcons } from "dicons";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import * as z from "zod";
+
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -10,14 +17,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@designali/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { DIcons } from "dicons";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
-import * as z from "zod";
-
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
 const profileFormSchema = z.object({

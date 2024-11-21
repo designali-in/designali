@@ -456,6 +456,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "toasts": {
+      name: "toasts",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/toasts.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/toasts.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "toaster": {
+      name: "toaster",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/designali/ui/toaster.tsx"],
+      component: React.lazy(() => import("@/registry/default/designali/ui/toaster.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "toggle": {
       name: "toggle",
       type: "registry:ui",

@@ -13,13 +13,6 @@ import type { ColorChangeHandler } from "react-color";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  debounce,
-  getPastedSvgFile,
-  randomElement,
-  randomNumberBetween,
-  uniq,
-} from "@/lib/dutils";
 import CustomSvgIcon from "@/src/comp/common/colors/CustomSvgIcon";
 import { ExportModal } from "@/src/comp/common/colors/export-modal";
 import { presets } from "@/src/comp/common/colors/grad-types";
@@ -28,11 +21,19 @@ import { MainIcons } from "@/src/comp/dicons/main/dicons";
 import { IconNavigation, ToolNavigation } from "@/src/comp/dicons/main/nav";
 import { DIconsSettings } from "@/src/comp/dicons/main/settings";
 import { MainToolIcons } from "@/src/comp/dicons/main/tool-dicons";
-import { Button } from "@designali/ui/button";
-import { ScrollArea } from "@designali/ui/scroll-area";
-import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
+
+import {
+  debounce,
+  getPastedSvgFile,
+  randomElement,
+  randomNumberBetween,
+  uniq,
+} from "@/lib/dutils";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { toast } from "@/components/ui/toaster";
 
 const scales = [0.25, 0.5, 1, 2];
 

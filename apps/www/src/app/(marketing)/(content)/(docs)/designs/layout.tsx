@@ -1,7 +1,7 @@
 import { DesignsSidebarNav } from "@/comp/mdx/doc/sidebar-nav";
-import { ScrollArea } from "@designali/ui/scroll-area";
 
 import { designsConfig } from "@/config/docs";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface DesignsLayoutProps {
   children: React.ReactNode;

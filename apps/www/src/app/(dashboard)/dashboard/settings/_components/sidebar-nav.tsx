@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
-import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
+
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {

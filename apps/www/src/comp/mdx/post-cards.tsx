@@ -1,14 +1,15 @@
 "use client";
 
-import type {  Likes, Views } from "@/types";
+import type { Likes, Views } from "@/types";
 import type { BlogPostCore } from "@/types/blog";
 import React from "react";
 import Link from "next/link";
-import fetcher from "@/lib/fetcher";
-import { cn } from "@designali/ui";
-import { Skeleton } from "@designali/ui/skeleton";
 import dayjs from "dayjs";
 import useSWR from "swr";
+
+import fetcher from "@/lib/fetcher";
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 import Image from "./layers/image";
 

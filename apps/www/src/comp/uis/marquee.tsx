@@ -1,4 +1,4 @@
-import { cn } from "@designali/ui";
+import { cn } from "@/lib/utils";
 
 interface MarqueeProps {
   className?: string;

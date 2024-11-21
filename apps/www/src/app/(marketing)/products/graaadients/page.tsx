@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Avegra } from "@/app/fonts";
 import { PhotoshopGradients } from "@/comp/products/gradients";
-import { getCurrentUser } from "@/lib/session"; 
-import { cn } from "@designali/ui";
+
+import { getCurrentUser } from "@/lib/session";
+import { cn } from "@/lib/utils";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,8 +11,9 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@designali/ui/breadcrumb";
-import { Button } from "@designali/ui/button";
+} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
+import { Avegra } from "@/app/fonts";
 
 import { Grads } from "./grads";
 
@@ -22,7 +23,7 @@ export const metadata = {
 };
 
 export default async function AboutAI() {
-  const user = await getCurrentUser(); 
+  const user = await getCurrentUser();
   return (
     <div className="relative">
       <div className="my-40">
@@ -82,7 +83,7 @@ export default async function AboutAI() {
             </Breadcrumb>
           </div>
           <div className="mt-10 grid justify-center gap-4">
-            {(user) ? (
+            {user ? (
               <Button variant="default" size="lg">
                 <Link
                   href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
@@ -132,7 +133,7 @@ export default async function AboutAI() {
             design projects.
           </p>
           <div className="mt-10 grid justify-center gap-4">
-          {(user) ? (
+            {user ? (
               <Button variant="default" size="lg">
                 <Link
                   href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"

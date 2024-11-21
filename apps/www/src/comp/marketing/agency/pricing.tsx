@@ -1,9 +1,10 @@
 import Link from "next/link";
 import CountUpNumber from "@/comp/common/countnumber";
 import { Avegra } from "@/src/app/fonts";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
 import { DIcons } from "dicons";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export default function FUIPricingWithSpecialTwo() {
   return (
@@ -39,9 +40,7 @@ export default function FUIPricingWithSpecialTwo() {
             </Button>
           </Link>
           <Link href={"/pricing#pricing"}>
-            <Button variant="ali" size="lg">
-              See monthly plans
-            </Button>
+            <Button size="lg">See monthly plans</Button>
           </Link>
           <Link href={"https://cal.com/aliimam/designali"} target="_blank">
             <Button variant="outline" size="lg">

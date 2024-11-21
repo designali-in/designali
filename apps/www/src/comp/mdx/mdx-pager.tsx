@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { truncate } from "@/lib/utils";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
 import { ChevronRightIcon } from "lucide-react";
+
+import { cn, truncate } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface MdxPagerItem {
   title: string;
@@ -31,7 +31,7 @@ export function MdxPager({
       className={cn("flex items-center justify-between", className)}
       {...props}
     >
-      {pager?.prev ? (
+      {pager.prev ? (
         <Button variant="outline" size="lg">
           <Link
             aria-label="Previous post"
@@ -43,7 +43,7 @@ export function MdxPager({
           </Link>
         </Button>
       ) : null}
-      {pager?.next ? (
+      {pager.next ? (
         <Button variant="outline" size="lg">
           <Link
             aria-label="Next post"
@@ -62,7 +62,7 @@ export function MdxPager({
 export function getPager(currentItem: MdxPagerItem, allItems: MdxPagerItem[]) {
   const flattenedLinks = allItems.flat();
   const activeIndex = flattenedLinks.findIndex(
-    (link) => currentItem.slug === link?.slug,
+    (link) => currentItem.slug === link.slug,
   );
   const prev = activeIndex !== 0 ? flattenedLinks[activeIndex - 1] : null;
   const next =

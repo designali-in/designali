@@ -1,17 +1,16 @@
 import Link from "next/link";
-import { CarouselGraaadients } from "@/comp/products/cards";
-import { Avegra } from "@/src/app/fonts";
-import { BentoCard, BentoGrid } from "@/src/comp/uis/bento-grid"; 
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
-
-import { HomeItems } from "@/comp/marketing/items";
 import { Chatbot } from "@/comp/common/chat";
 import Counter from "@/comp/common/countnumber";
+import { HomeItems } from "@/comp/marketing/items";
+import { CarouselGraaadients } from "@/comp/products/cards";
 import DotPattern from "@/comp/uis/dot-pattern";
 import Ripple from "@/comp/uis/ripple";
 import ShineBorder from "@/comp/uis/shine-border";
- 
+import { Avegra } from "@/src/app/fonts";
+import { BentoCard, BentoGrid } from "@/src/comp/uis/bento-grid";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {

@@ -2,7 +2,8 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { Button } from "@/registry/default/designali/ui/button";
 import { UserAuthForm } from "@/src/comp/forms/user-auth-form";
-import { Card, CardContent } from "@designali/ui/card";
+
+import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata = {
   title: "Log In - Designali",

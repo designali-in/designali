@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
-import { Input } from "@designali/ui/input";
 import { colord, extend, getFormat } from "colord";
 import a11yPlugin from "colord/plugins/a11y";
 import cmykPlugin from "colord/plugins/cmyk";
 import hwbPlugin from "colord/plugins/hwb";
 import lchPlugin from "colord/plugins/lch";
 import namesPlugin from "colord/plugins/names";
+
+import { Input } from "@/components/ui/input";
 
 extend([hwbPlugin, cmykPlugin, lchPlugin, namesPlugin, a11yPlugin]);
 
@@ -92,7 +93,7 @@ const ColorConverter = () => {
         <div className="relative flex w-full max-w-[200px] items-center justify-between gap-3">
           <label htmlFor="color" className="text-lg font-bold">
             <div
-              className="size-10 cursor-pointer rounded-full border-2 border-ali"
+              className="border-ali size-10 cursor-pointer rounded-full border-2"
               style={{ backgroundColor: value }}
             />
           </label>
@@ -105,7 +106,7 @@ const ColorConverter = () => {
           <Input value={value} onChange={(e) => setValue(e.target.value)} />
         </div>
 
-        <p className="py-4 text-xl text-ali">
+        <p className="text-ali py-4 text-xl">
           {colord(value).toName({ closest: true })}
         </p>
       </div>

@@ -4,8 +4,9 @@ import type { LinkProps } from "next/link";
 import type { ReactNode } from "react";
 import React from "react";
 import Link from "next/link";
-import { cn } from "@designali/ui";
-import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
+
+import { cn } from "@/lib/utils";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export interface TabsContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -62,7 +63,7 @@ export function TabsLink({
   return (
     <li
       className={cn("flex shrink-0 list-none border-transparent", {
-        "rounded-full bg-ali/25": active,
+        "bg-ali/25 rounded-full": active,
         "pointer-events-none": disabled,
         "": position === "end" && direction === "horizontal",
         "": position === "start" && direction === "vertical",

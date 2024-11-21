@@ -1,5 +1,5 @@
-import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Halftone } from "./types/halftone";
 import { Noise } from "./types/noise";

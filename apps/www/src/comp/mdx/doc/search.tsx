@@ -1,10 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@designali/ui";
-import { Input } from "@designali/ui/input";
 
-interface DocsSearchProps extends React.HTMLAttributes<HTMLFormElement> {}
+import { cn } from "@/lib/utils";
+import { Input } from "@/components/ui/input";
+
+type DocsSearchProps = React.HTMLAttributes<HTMLFormElement>;
 
 export function DocsSearch({ className, ...props }: DocsSearchProps) {
   function onSubmit(event: React.SyntheticEvent) {

@@ -3,13 +3,14 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Marquee from "@/comp/uis/marquee";
 import ShineBorder from "@/src/comp/uis/shine-border";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
-import Marquee from "@/comp/uis/marquee";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+
 import { Beam } from "./anibeams";
 import { Timeline } from "./timeline";
 

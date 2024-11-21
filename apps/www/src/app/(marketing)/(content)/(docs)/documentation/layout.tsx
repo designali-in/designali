@@ -1,7 +1,7 @@
 import { DocumentationSidebarNav } from "@/comp/mdx/doc/sidebar-nav";
-import { ScrollArea } from "@designali/ui/scroll-area";
 
 import { documentationConfig } from "@/config/docs";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface DocumentationLayoutProps {
   children: React.ReactNode;

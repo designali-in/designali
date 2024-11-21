@@ -2,8 +2,9 @@
 
 import type { BlogPostCore } from "@/types/blog";
 import React from "react";
-import { Input } from "@designali/ui/input";
-import { Label } from "@designali/ui/label";
+
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 import { Icons } from "../icons";
 import PostCards from "./post-cards";

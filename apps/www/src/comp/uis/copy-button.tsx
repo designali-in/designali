@@ -3,22 +3,23 @@
 /* eslint-disable @typescript-eslint/require-await */
 "use client";
 
+import type { ButtonProps } from "@/components/ui/button";
 import type { Event } from "@/lib/events";
 import type { NpmCommands } from "@/types/unist";
-import type { ButtonProps } from "@designali/ui/button";
 import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
+import { CheckIcon, ClipboardIcon } from "lucide-react";
+
 import { trackEvent } from "@/lib/events";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@designali/ui/dropdown-menu";
-import { toast } from "@designali/ui/toaster";
-import { CheckIcon, ClipboardIcon } from "lucide-react";
+} from "@/components/ui/dropdown-menu";
+import { toast } from "@/components/ui/toaster";
 
 import { Icons } from "../icons";
 
@@ -53,7 +54,7 @@ export function CopyButton({
 
   return (
     <Button
-      size="lgicon"
+      size="icon"
       variant={variant}
       className={cn(
         "relative z-10 h-8 w-8 text-slate-800 hover:bg-slate-200 dark:text-slate-200 hover:dark:bg-slate-800 [&_svg]:h-3 [&_svg]:w-3",
@@ -115,7 +116,7 @@ export function CopyWithClassNames({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          size="lgicon"
+          size="icon"
           variant="ghost"
           className={cn(
             "relative z-10 h-6 w-6 text-slate-100 hover:bg-slate-800 hover:text-slate-50",
@@ -177,7 +178,7 @@ export function CopyNpmCommandButton({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          size="lgicon"
+          size="icon"
           variant="ghost"
           className={cn(
             "relative z-10 h-6 w-6 text-slate-50 hover:bg-slate-700 hover:text-slate-50",

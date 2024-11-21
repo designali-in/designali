@@ -1,10 +1,10 @@
 "use client";
 
 import type { UrlMeta, User } from "@prisma/client";
-import { Skeleton } from "@designali/ui/skeleton";
 import useSWR from "swr";
 
 import { fetcher } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export interface UrlMetaProps {
   user: Pick<User, "id" | "name">;

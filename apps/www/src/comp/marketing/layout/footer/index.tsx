@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { Icons } from "@/comp/icons";
 import { Logo } from "@/comp/logo";
-import { Separator } from "@designali/ui/separator";
 import { DIcons } from "dicons";
+
+import { Separator } from "@/components/ui/separator";
 
 import ThemeToogle from "./theme";
 

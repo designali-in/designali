@@ -1,9 +1,10 @@
 import * as React from "react";
 import Link from "next/link";
-import { useLockBody } from "@/hooks/use-lock-body";
-import { cn } from "@designali/ui";
 
 import type { MainNavItem } from "./types";
+
+import { cn } from "@/lib/utils";
+import { useLockBody } from "@/hooks/use-lock-body";
 
 interface MobileNavProps {
   items: MainNavItem[];

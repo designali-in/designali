@@ -10,8 +10,9 @@ import { getTableOfContents } from "@/lib/toc";
 import "@/styles/mdx.css";
 
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
-import { Button } from "@designali/ui/button";
-import { Separator } from "@designali/ui/separator";
+
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 interface GuidePageProps {
   params: {

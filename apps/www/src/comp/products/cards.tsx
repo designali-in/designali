@@ -3,12 +3,13 @@
 import * as React from "react";
 import Link from "next/link";
 import { CardStack } from "@/src/comp/uis/image-card";
+import Autoplay from "embla-carousel-autoplay";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@designali/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+} from "@/components/ui/carousel";
 
 const GRADS = [
   {

@@ -3,12 +3,13 @@
 import type { ButtonProps } from "@/components/ui/button";
 import { forwardRef, useEffect, useRef, useState } from "react";
 import { getIconByFilename } from "@/utils/get-icon-by-filename";
-import { cn } from "@/lib/utils";
-import { Button } from "@designali/ui/button";
-import { ScrollArea, ScrollBar } from "@designali/ui/scroll-area";
-import { toast } from "@designali/ui/toaster";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import mergeRefs from "merge-refs";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { toast } from "@/components/ui/toaster";
 
 type CodeBlockProps = {
   "data-lang"?: string;

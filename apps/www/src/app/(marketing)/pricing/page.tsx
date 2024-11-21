@@ -2,10 +2,10 @@
 import { ComparePlans } from "@/comp/dashboard/pricing/compare-plans";
 import { PricingCards } from "@/comp/dashboard/pricing/pricing-cards";
 import { PricingFaq } from "@/comp/dashboard/pricing/pricing-faq";
-import { cn } from "@designali/ui";
 
 import { getCurrentUser } from "@/lib/session";
 import { getUserSubscriptionPlan } from "@/lib/subscription";
+import { cn } from "@/lib/utils";
 
 import { Avegra } from "../../fonts";
 

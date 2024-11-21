@@ -1,32 +1,35 @@
-import Link from "next/link"; 
-import ShareLink from "@/src/comp/common/sharelink"; 
-import { Button } from "@designali/ui/button";
-import { Separator } from "@designali/ui/separator";
-
+import Link from "next/link";
 import { Icons } from "@/comp/icons";
+import ShareLink from "@/src/comp/common/sharelink";
 
-export  function About() {
-  
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+
+export function About() {
   return (
     <div className="mb-40 md:mb-20">
       <div className="">
         <div>
           <div className="flex justify-center">
             <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-3xl font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text sm:text-5xl">
-            Social Media Post
+              Social Media Post
             </h1>
           </div>
           <p className="mx-auto mt-2 max-w-3xl text-center text-slate-600 dark:text-slate-400">
-          Boost your online presence with eye-catching social media posts designed to captivate your audience. Whether you need content for Instagram, Facebook, LinkedIn, or any other platform, we craft visually appealing designs that align with your brand and drive engagement. Make your social media stand out with professional designs that get noticed. Let’s create posts that convert likes into leads!
+            Boost your online presence with eye-catching social media posts
+            designed to captivate your audience. Whether you need content for
+            Instagram, Facebook, LinkedIn, or any other platform, we craft
+            visually appealing designs that align with your brand and drive
+            engagement. Make your social media stand out with professional
+            designs that get noticed. Let’s create posts that convert likes into
+            leads!
           </p>
           <div className="my-3 grid items-center justify-center md:flex md:justify-between">
             <div className="mt-2 flex flex-wrap items-center gap-1 gap-y-2">
-               
               <p className="text-xl font-semibold text-slate-600 dark:text-slate-400">
                 {" "}
                 5.0{" "}
               </p>
-              
             </div>
           </div>
         </div>
@@ -47,7 +50,7 @@ export  function About() {
             </Button>
           </Link>
           <Link href={"https://wa.me/917678432186"} target="_blank">
-            <Button variant="outline" size="lgicon">
+            <Button variant="outline" size="icon">
               <Icons.whatsapp className="h-5 w-5" />
             </Button>
           </Link>

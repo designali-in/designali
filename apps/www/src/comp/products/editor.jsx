@@ -2,10 +2,9 @@
 
 // @ts-ignore
 import { useEffect, useState } from "react";
-import { Button } from "@designali/ui/button";
-// @ts-ignore
-import * as copy from "copy-to-clipboard";
 import { DIcons } from "dicons";
+
+import { Button } from "@/components/ui/button";
 
 import {
   Dshapes,
@@ -71,7 +70,7 @@ export default function Editor({ initialShape }) {
         </div>
 
         <Button
-          size="lgicon"
+          size="icon"
           variant="outline"
           className="h-10 w-10"
           onClick={() => {

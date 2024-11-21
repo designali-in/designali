@@ -16,9 +16,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import CustomSvgIcon from "@/src/comp/common/colors/CustomSvgIcon";
 import { presets } from "@/src/comp/common/colors/grad-types";
 import usePngClipboardSupported from "@/src/comp/common/colors/usePngClipboardSupported";
-import { Button } from "@designali/ui/button";
-import { ScrollArea } from "@designali/ui/scroll-area";
-import { toast } from "@designali/ui/toaster";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
@@ -28,6 +25,9 @@ import {
   randomNumberBetween,
   uniq,
 } from "@/lib/dutils";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { toast } from "@/components/ui/toaster";
 
 import { DBrands } from "../icons";
 import { InstallIcon } from "../main/install-icon";

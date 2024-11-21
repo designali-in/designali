@@ -7,6 +7,7 @@ import { WebsiteDevelopCards } from "@/src/comp/marketing/agency/products/w-deve
 import { WebDevelopGet } from "@/src/comp/marketing/agency/products/w-develop/get";
 import { Include } from "@/src/comp/marketing/agency/products/w-develop/include";
 import PageTitle from "@/src/comp/mdx/page-title";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,8 +15,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@designali/ui/breadcrumb";
-import { Button } from "@designali/ui/button";
+} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Website Develop - Designali",

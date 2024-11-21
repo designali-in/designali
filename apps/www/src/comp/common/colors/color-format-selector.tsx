@@ -2,17 +2,18 @@
 
 import type { Color } from "@/lib/colors";
 import * as React from "react";
-import { useColors } from "@/hooks/use-colors";
+
 import { getColorFormat } from "@/lib/colors";
-import { cn } from "@designali/ui";
+import { cn } from "@/lib/utils";
+import { useColors } from "@/hooks/use-colors";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@designali/ui/select";
-import { Skeleton } from "@designali/ui/skeleton";
+} from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function ColorFormatSelector({
   color,

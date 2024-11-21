@@ -2,20 +2,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ImageZoomThree } from "@/comp/common/gallery";
-import cloudinary from "@/lib/cloudinary";
 import { BentoCard, BentoGrid } from "@/src/comp/uis/bento-grid";
-import { Button } from "@designali/ui/button";
+import { FileTextIcon } from "@radix-ui/react-icons";
+import { DIcons } from "dicons";
+import { BellIcon, Share2Icon } from "lucide-react";
+
+import cloudinary from "@/lib/cloudinary";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/saccordion";
-import { ScrollArea } from "@designali/ui/scroll-area";
-import { Separator } from "@designali/ui/separator";
-import { FileTextIcon } from "@radix-ui/react-icons";
-import { DIcons } from "dicons";
-import { BellIcon, Share2Icon } from "lucide-react";
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
 
 const data = await cloudinary.v2.search
   .expression(`folder:creatives/creative/*`)
@@ -43,12 +44,12 @@ const features = [
         >
           <Button
             variant="outline"
-            size="lgicon"
+            size="icon"
             className="h-8 w-8 md:h-12 md:w-12"
           >
             <DIcons.ArrowDownRight
               strokeWidth={1}
-              className="animate-pulse text-ali"
+              className="text-ali animate-pulse"
             />
           </Button>
         </Link>
@@ -65,7 +66,7 @@ const features = [
     background: (
       <div className="grid items-center gap-4">
         <div className="flex justify-between">
-          <DIcons.Heart className="h-5 w-5 animate-pulse text-ali" />
+          <DIcons.Heart className="text-ali h-5 w-5 animate-pulse" />
           <p className="px-8 text-center font-mono text-xs text-slate-600 dark:text-slate-400">
             My designed post stats approx
           </p>

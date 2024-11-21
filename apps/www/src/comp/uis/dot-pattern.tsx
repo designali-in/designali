@@ -1,5 +1,6 @@
 import { useId } from "react";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 interface DotPatternProps {
   width?: any;

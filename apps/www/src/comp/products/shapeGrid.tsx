@@ -2,6 +2,10 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import copy from "copy-to-clipboard";
+import { DIcons } from "dicons";
+import { renderToString } from "react-dom/server";
+
 import {
   convertToCamelCase,
   encodeImage,
@@ -10,11 +14,12 @@ import {
   svgBase64,
   unit8toPng,
 } from "@/lib/helpers";
-import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
-import { toast } from "@designali/ui/toaster";
-import copy from "copy-to-clipboard";
-import { DIcons } from "dicons";
-import { renderToString } from "react-dom/server";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { toast } from "@/components/ui/toaster";
 
 import { CopyButton } from "../uis/copy-button";
 import ShapeRenderer from "./shape-renderer";

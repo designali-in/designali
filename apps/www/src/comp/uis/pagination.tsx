@@ -2,9 +2,9 @@
 
 import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { formUrlQuery } from "@/lib/utils";
-import { cn } from "@designali/ui";
-import { Button, buttonVariants } from "@designali/ui/button";
+
+import { cn, formUrlQuery } from "@/lib/utils";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 interface PaginationProps {
   page: number | string;

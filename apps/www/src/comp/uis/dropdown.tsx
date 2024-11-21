@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@designali/ui/select";
+} from "@/components/ui/select";
 
 export const Dropdown = ({ items, value, onChange }) => {
   const [isHidden, setHidden] = useState(true);

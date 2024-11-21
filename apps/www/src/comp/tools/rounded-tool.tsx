@@ -5,11 +5,11 @@ import React, { useMemo, useState } from "react";
 import { Button } from "@/registry/default/designali/ui/button";
 import { Separator } from "@/registry/default/designali/ui/separator";
 import { cn } from "@/src/lib/utils";
-import { Slider } from "@designali/ui/slider";
 import { DIcons } from "dicons";
 import { usePlausible } from "next-plausible";
 
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { Slider } from "@/components/ui/slider";
 
 import GridPattern from "../uis/grid-pattern";
 

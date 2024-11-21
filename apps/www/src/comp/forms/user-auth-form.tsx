@@ -5,8 +5,6 @@ import type * as z from "zod";
 import * as React from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { Button } from "@designali/ui/button";
-import { Input } from "@designali/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DIcons } from "dicons";
 import { signIn } from "next-auth/react";
@@ -15,6 +13,8 @@ import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 import { userAuthSchema } from "@/lib/validations/auth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: string;

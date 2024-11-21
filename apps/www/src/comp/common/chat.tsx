@@ -7,17 +7,18 @@ import "@/styles/text.css";
 
 import { useRouter } from "next/navigation";
 import { CanvasRevealEffect } from "@/src/comp/uis/canvas-effect";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
-import { Input } from "@designali/ui/input";
-import { ScrollArea } from "@designali/ui/scroll-area";
+import { AnimatePresence, motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@designali/ui/tooltip";
-import { AnimatePresence, motion } from "framer-motion";
+} from "@/components/ui/tooltip";
 
 import { Icons } from "../icons";
 
@@ -126,7 +127,7 @@ export function Chatbot() {
                     <Button
                       variant="default"
                       size="icon"
-                      className="absolute left-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-ali"
+                      className="bg-ali absolute left-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full"
                       onClick={() => {
                         router.push("/#chat");
                       }}
@@ -147,7 +148,7 @@ export function Chatbot() {
                         type="submit"
                         variant="default"
                         size="icon"
-                        className="absolute right-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-ali"
+                        className="bg-ali absolute right-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full"
                         disabled={input === ""}
                       >
                         <Icons.enter className="mx-1 h-4 w-4 text-white" />

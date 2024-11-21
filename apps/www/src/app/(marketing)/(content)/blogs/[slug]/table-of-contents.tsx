@@ -2,8 +2,9 @@
 
 import type { Heading } from "@/utils/get-headings";
 import React from "react";
+
+import { cn } from "@/lib/utils";
 import { useScrollspy } from "@/hooks/use-scrollspy";
-import { cn } from "@designali/ui";
 
 interface TableOfContentsProps {
   headings: Heading[];

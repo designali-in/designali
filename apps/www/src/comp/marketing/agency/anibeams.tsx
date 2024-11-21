@@ -1,11 +1,11 @@
 "use client";
 
 import React, { forwardRef, useRef } from "react";
-import { AnimatedBeam } from "@/src/comp/uis/beams";
-import { cn } from "@designali/ui";
-
 import { Icons } from "@/comp/icons";
 import { Logo } from "@/comp/logo";
+import { AnimatedBeam } from "@/src/comp/uis/beams";
+
+import { cn } from "@/lib/utils";
 
 const Circle = forwardRef<
   HTMLDivElement,

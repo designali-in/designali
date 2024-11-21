@@ -4,9 +4,11 @@ import * as React from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { Icons } from "@/comp/icons";
-import { cn } from "@designali/ui";
 
 import type { MainNavItem } from "./types";
+
+import { cn } from "@/lib/utils";
+
 import { MobileNav } from "./mobile-nav";
 
 interface MainNavProps {
@@ -20,7 +22,7 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className="flex gap-6 md:gap-10">
-      {items?.length ? (
+      {items.length ? (
         <nav className="hidden gap-6 md:flex">
           {items.map((item, index) => (
             <Link

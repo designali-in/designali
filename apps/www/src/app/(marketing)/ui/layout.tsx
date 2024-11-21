@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { ThemeWrapper } from "@/comp/common/theme-wrapper";
 import { ThemeCustomizer } from "@/src/comp/common/ui/theme-customizer";
 import PageTitle from "@/src/comp/mdx/page-title";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,7 +12,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@designali/ui/breadcrumb";
+} from "@/components/ui/breadcrumb";
 
 import "public/registry/themes.css";
 

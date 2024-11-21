@@ -5,29 +5,6 @@ import type { User } from "@prisma/client";
 import { useState } from "react";
 import Link from "next/link";
 import { UrlForm } from "@/comp/forms/url-form";
-import { Button } from "@designali/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@designali/ui/card";
-import { Skeleton } from "@designali/ui/skeleton";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@designali/ui/table";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@designali/ui/tooltip";
 import { LineChart, PenLine, RefreshCwIcon } from "lucide-react";
 import useSWR, { useSWRConfig } from "swr";
 
@@ -39,6 +16,29 @@ import {
   removeUrlSuffix,
   timeAgo,
 } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { CopyButton } from "../../uis/copy-button";
 import { LinkPreviewer } from "./link-previewer";

@@ -3,21 +3,22 @@
 import Link from "next/link";
 import CountUpNumber from "@/comp/common/countnumber";
 import { ImageZoomThree } from "@/comp/common/gallery";
-import cloudinary from "@/lib/cloudinary";
 import { TypeWriter } from "@/src/comp/common/type";
 import { BentoCard, BentoGrid } from "@/src/comp/uis/bento-grid";
 import WebVitals from "@/src/comp/uis/web-vitals";
-import { Button } from "@designali/ui/button";
+import { FileTextIcon } from "@radix-ui/react-icons";
+import { DIcons } from "dicons";
+import { BellIcon, Share2Icon } from "lucide-react";
+
+import cloudinary from "@/lib/cloudinary";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/saccordion";
-import { ScrollArea } from "@designali/ui/scroll-area";
-import { FileTextIcon } from "@radix-ui/react-icons";
-import { DIcons } from "dicons";
-import { BellIcon, Share2Icon } from "lucide-react";
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const data = await cloudinary.v2.search
   .expression(`folder:creatives/uiux/*`)
@@ -53,12 +54,12 @@ const features = [
         >
           <Button
             variant="outline"
-            size="lgicon"
+            size="icon"
             className="h-8 w-8 md:h-12 md:w-12"
           >
             <DIcons.ArrowDownRight
               strokeWidth={1}
-              className="animate-pulse text-ali"
+              className="text-ali animate-pulse"
             />
           </Button>
         </Link>
@@ -74,7 +75,7 @@ const features = [
     className: "col-span-8 md:col-span-4 lg:col-span-2 p-6 md:p-10",
     background: (
       <div className="grid items-center gap-4 text-center">
-        <h1 className="flex h-full items-center justify-center text-7xl font-semibold text-ali">
+        <h1 className="text-ali flex h-full items-center justify-center text-7xl font-semibold">
           <CountUpNumber value={100} />+
         </h1>
 
@@ -94,7 +95,7 @@ const features = [
     className: "col-span-8 md:col-span-4 lg:col-span-2 p-6 md:p-10",
     background: (
       <div className="grid items-center gap-4 text-center">
-        <h1 className="flex h-full items-center justify-center text-7xl font-semibold text-ali">
+        <h1 className="text-ali flex h-full items-center justify-center text-7xl font-semibold">
           <CountUpNumber value={99} />%
         </h1>
 
@@ -155,7 +156,7 @@ const features = [
           <DIcons.Wordpress className="h-10 w-10" />
         </div>
         <p className="hidden items-center text-center font-mono text-sm text-slate-600 dark:text-slate-400 md:flex">
-          I <DIcons.Heart className="mx-2 h-4 w-4 animate-pulse text-ali" />
+          I <DIcons.Heart className="text-ali mx-2 h-4 w-4 animate-pulse" />
           Coding and Designing modern digital experiences.
         </p>
       </div>

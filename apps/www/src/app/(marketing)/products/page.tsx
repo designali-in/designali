@@ -1,6 +1,7 @@
 import { FAQ } from "@/comp/marketing/home/faq";
 import { Graaadients } from "@/src/comp/products/cards";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 import { Avegra } from "../../fonts";
 
@@ -26,7 +27,7 @@ export default function Home() {
             >
               The latest.
             </h3>{" "}
-            <hr className="mx-auto my-4 mb-16 h-1 w-6 rounded border-0 bg-ali"></hr>
+            <hr className="bg-ali mx-auto my-4 mb-16 h-1 w-6 rounded border-0"></hr>
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-6 md:max-w-7xl xl:px-0">

@@ -6,6 +6,7 @@ import { BrandingCars } from "@/src/comp/marketing/agency/products/branding/card
 import { BrandingGet } from "@/src/comp/marketing/agency/products/branding/get";
 import { Process } from "@/src/comp/marketing/agency/products/branding/process";
 import PageTitle from "@/src/comp/mdx/page-title";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,8 +14,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@designali/ui/breadcrumb";
-import { Button } from "@designali/ui/button";
+} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Branding - Designali",

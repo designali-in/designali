@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Icons } from "@/comp/icons";
 import { Avegra } from "@/src/app/fonts";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@designali/ui/card";
 import { DIcons } from "dicons";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import CountUpNumber from "./countnumber";
 import Logos from "./logos";

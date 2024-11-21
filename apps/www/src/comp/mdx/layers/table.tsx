@@ -5,12 +5,12 @@ import {
   TableHeader,
   TableRow,
   Table as UITable,
-} from "@designali/ui/table";
+} from "@/components/ui/table";
 
-type TableProps = {
+interface TableProps {
   headers: string[];
   rows: string[][];
-};
+}
 
 const Table = (props: TableProps) => {
   const { headers, rows } = props;

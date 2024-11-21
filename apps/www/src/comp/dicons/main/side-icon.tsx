@@ -6,7 +6,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { diconsConfig } from "@/config/icons";
 import { ColorInput } from "@/src/comp/common/colors/color-input";
 import {
   DownloadPNG,
@@ -15,19 +14,21 @@ import {
 import { ResultDIcon } from "@/src/comp/common/colors/result-dicon";
 import { DiconsSidebarNav } from "@/src/comp/mdx/doc/sidebar-nav";
 import GridPattern from "@/src/comp/uis/grid-pattern";
-import { cn } from "@designali/ui";
+import { DIcons } from "dicons";
+import { CSSTransition } from "react-transition-group";
+
+import { diconsConfig } from "@/config/icons";
+import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@designali/ui/ddropdown-menu";
-import { ScrollArea } from "@designali/ui/scroll-area";
-import { Slider } from "@designali/ui/slider";
-import { Switch } from "@designali/ui/switch";
-import { toast } from "@designali/ui/toaster";
-import { DIcons } from "dicons";
-import { CSSTransition } from "react-transition-group";
+} from "@/components/ui/dropdown-menu";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/components/ui/toaster";
 
 interface SideIconProps {
   settings;
@@ -65,7 +66,7 @@ export const SideIcon = ({
       <div className="-z-0 mx-auto grid max-w-sm md:h-full md:border-r">
         <div className="p-6">
           <div className="relative">
-            <p className="mb-2 text-center text-lg font-semibold text-ali">
+            <p className="text-ali mb-2 text-center text-lg font-semibold">
               {settings.icon}
             </p>
             <div className="relative mx-auto flex h-auto w-auto max-w-[255px] justify-center border">
@@ -79,19 +80,19 @@ export const SideIcon = ({
               />
               <DIcons.Plus
                 strokeWidth={1}
-                className="absolute -left-3 -top-3 h-6 text-ali"
+                className="text-ali absolute -left-3 -top-3 h-6"
               />
               <DIcons.Plus
                 strokeWidth={1}
-                className="absolute -bottom-3 -left-3 h-6 text-ali"
+                className="text-ali absolute -bottom-3 -left-3 h-6"
               />
               <DIcons.Plus
                 strokeWidth={1}
-                className="absolute -right-3 -top-3 h-6 text-ali"
+                className="text-ali absolute -right-3 -top-3 h-6"
               />
               <DIcons.Plus
                 strokeWidth={1}
-                className="absolute -bottom-3 -right-3 h-6 text-ali"
+                className="text-ali absolute -bottom-3 -right-3 h-6"
               />
 
               <CSSTransition

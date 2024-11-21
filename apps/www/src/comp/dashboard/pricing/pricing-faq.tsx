@@ -3,8 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/accordion";
- 
+} from "@/components/ui/accordion";
 
 const pricingFaqData = [
   {
@@ -42,8 +41,6 @@ const pricingFaqData = [
 export function PricingFaq() {
   return (
     <section className="container max-w-4xl py-2">
-       
-
       <Accordion type="single" collapsible className="my-12 w-full">
         {pricingFaqData.map((faqItem) => (
           <AccordionItem key={faqItem.id} value={faqItem.id}>

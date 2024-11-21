@@ -1,8 +1,9 @@
 "use client";
 
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
-import { toast } from "@designali/ui/toaster";
 import { Check, Clipboard } from "lucide-react";
+
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { toast } from "@/components/ui/toaster";
 
 export function ColorBW() {
   const black = "#000000";

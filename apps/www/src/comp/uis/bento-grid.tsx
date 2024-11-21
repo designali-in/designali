@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 const BentoGrid = ({
   children,

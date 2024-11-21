@@ -1,8 +1,12 @@
 import type { PlansRow } from "@/types";
-import { Popover, PopoverContent, PopoverTrigger } from "@designali/ui/popover";
 import { CircleCheck, Info } from "lucide-react";
 
 import { comparePlans, plansColumns } from "@/config/subscriptions";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Table,
   TableBody,

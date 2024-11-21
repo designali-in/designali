@@ -1,4 +1,4 @@
-import { cn } from "@designali/ui";
+import { cn } from "@/lib/utils";
 
 export const SphereMask = ({ reverse = false }: { reverse?: boolean }) => {
   return (

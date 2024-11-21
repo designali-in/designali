@@ -4,16 +4,17 @@ import type { Likes } from "@/src/types";
 import * as React from "react";
 import Link from "next/link";
 import fetcher from "@/src/lib/fetcher";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
-import { Skeleton } from "@designali/ui/skeleton";
+import useSWR from "swr";
+
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@designali/ui/tooltip";
-import useSWR from "swr";
+} from "@/components/ui/tooltip";
 
 import { Icons } from "../icons";
 import { LikeButtonIcon } from "../uis/like-button";
@@ -33,7 +34,7 @@ const ShareLink = ({ name, slug }: { name: string; slug }) => {
               className={cn(
                 buttonVariants({
                   variant: "outline",
-                  size: "lgicon",
+                  size: "icon",
                 }),
               )}
             >

@@ -1,8 +1,9 @@
-import type { ButtonProps } from "@designali/ui/button";
+import type { ButtonProps } from "@/components/ui/button";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 import { useCopyToClipboard } from "@/hooks/use-copy-clipboard";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
+import { Button } from "@/components/ui/button";
 
 import { Icons } from "../../icons";
 import Image from "./image";

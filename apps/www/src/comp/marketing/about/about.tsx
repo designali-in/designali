@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ToolIcons } from "@/comp/tool-icons";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
-import { Separator } from "@designali/ui/separator";
-
 import CountUpNumber from "@/comp/common/countnumber";
 import { Icons } from "@/comp/icons";
+import { ToolIcons } from "@/comp/tool-icons";
+
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const skills = [
   { skill: "Graphic Design" },
@@ -41,10 +41,10 @@ const About = () => {
   return (
     <section id="about">
       <div className="relative h-full w-full border border-slate-200 py-8 dark:border-slate-800">
-        <div className="absolute -left-1.5 -top-1.5 h-3 w-3 bg-ali text-white" />
-        <div className="absolute -bottom-1.5 -left-1.5 h-3 w-3 bg-ali text-white" />
-        <div className="absolute -right-1.5 -top-1.5 h-3 w-3 bg-ali text-white" />
-        <div className="absolute -bottom-1.5 -right-1.5 h-3 w-3 bg-ali text-white" />
+        <div className="bg-ali absolute -left-1.5 -top-1.5 h-3 w-3 text-white" />
+        <div className="bg-ali absolute -bottom-1.5 -left-1.5 h-3 w-3 text-white" />
+        <div className="bg-ali absolute -right-1.5 -top-1.5 h-3 w-3 text-white" />
+        <div className="bg-ali absolute -bottom-1.5 -right-1.5 h-3 w-3 text-white" />
         <div className="absolute -bottom-1.5 left-1/2 h-2.5 w-2.5 border border-slate-200 bg-black text-white dark:border-slate-800 dark:bg-white" />
         <div className="absolute -top-1.5 left-1/2 h-2.5 w-2.5 border border-slate-200 bg-black text-white dark:border-slate-800 dark:bg-white" />
 
@@ -53,14 +53,14 @@ const About = () => {
             <h3 className="mt-6 inline-flex items-baseline bg-gradient-to-r from-slate-600 via-slate-400 to-slate-600 bg-clip-text pb-1 text-center font-bold text-transparent dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-200 dark:to-slate-600 dark:bg-clip-text">
               <span className="text-2xl md:text-4xl">Greetings!</span>
             </h3>
-            <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-ali"></hr>
+            <hr className="bg-ali mx-auto my-4 h-1 w-6 rounded border-0"></hr>
           </div>
 
           <div className="items-center justify-center text-center align-top leading-8 md:flex-row">
             <div className="mx-auto mb-8 max-w-5xl px-8">
               <p className="text-md">
                 Hi, my name is
-                <span className="font-bold text-ali">{" Ali Imam "}</span>
+                <span className="text-ali font-bold">{" Ali Imam "}</span>
                 and I am a highly ambitious, self-motivated and driven
                 <br />
                 <span className="font-bold">
@@ -95,11 +95,11 @@ const About = () => {
             <div className="relative my-8">
               <Icons.plus
                 strokeWidth={1}
-                className="absolute -left-3 -top-3 h-6 w-6 text-ali"
+                className="text-ali absolute -left-3 -top-3 h-6 w-6"
               />
               <Icons.plus
                 strokeWidth={1}
-                className="absolute -right-3 -top-3 h-6 w-6 text-ali"
+                className="text-ali absolute -right-3 -top-3 h-6 w-6"
               />
               <Separator />
             </div>
@@ -234,11 +234,11 @@ const About = () => {
             <div className="relative my-8">
               <Icons.plus
                 strokeWidth={1}
-                className="absolute -left-3 -top-3 h-6 w-6 text-ali"
+                className="text-ali absolute -left-3 -top-3 h-6 w-6"
               />
               <Icons.plus
                 strokeWidth={1}
-                className="absolute -right-3 -top-3 h-6 w-6 text-ali"
+                className="text-ali absolute -right-3 -top-3 h-6 w-6"
               />
               <Separator />
             </div>
@@ -249,7 +249,7 @@ const About = () => {
                     <dt className="ml-6 text-sm font-semibold uppercase tracking-[.3em] text-slate-400">
                       <p className="">Projects</p>
                     </dt>
-                    <dd className="order-first flex text-6xl font-extrabold tracking-tight text-ali">
+                    <dd className="text-ali order-first flex text-6xl font-extrabold tracking-tight">
                       <p className="">+</p>
                       <CountUpNumber value={1000} />
                     </dd>
@@ -258,7 +258,7 @@ const About = () => {
                     <dt className="ml-6 text-sm font-semibold uppercase tracking-[.3em] text-slate-400">
                       <p className="">Design Creatives</p>
                     </dt>
-                    <dd className="order-first flex text-6xl font-extrabold tracking-tight text-ali">
+                    <dd className="text-ali order-first flex text-6xl font-extrabold tracking-tight">
                       <p className="">+</p>
                       <CountUpNumber value={10000} />
                     </dd>
@@ -267,7 +267,7 @@ const About = () => {
                     <dt className="ml-6 text-sm font-semibold uppercase tracking-[.3em] text-slate-400">
                       <p className="">Brands</p>
                     </dt>
-                    <dd className="order-first flex text-6xl font-extrabold tracking-tight text-ali">
+                    <dd className="text-ali order-first flex text-6xl font-extrabold tracking-tight">
                       <p className="">+</p>
                       <CountUpNumber value={100} />
                     </dd>

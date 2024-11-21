@@ -5,6 +5,7 @@ import { Banner } from "@/src/comp/marketing/agency/products/sm-posts/banner";
 import { SocialMedisCards } from "@/src/comp/marketing/agency/products/sm-posts/card";
 import { SMPostsGet } from "@/src/comp/marketing/agency/products/sm-posts/get";
 import PageTitle from "@/src/comp/mdx/page-title";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,8 +13,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@designali/ui/breadcrumb";
-import { Button } from "@designali/ui/button";
+} from "@/components/ui/breadcrumb";
 
 export const metadata = {
   title: "Social Media Design - Designali",

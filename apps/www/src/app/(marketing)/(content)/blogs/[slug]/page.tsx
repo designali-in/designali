@@ -3,11 +3,12 @@ import type { Article, WithContext } from "schema-dts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MdxPager } from "@/comp/mdx/mdx-pager";
-import site from "@/config/site";
-import { Button } from "@designali/ui/button";
-import { Separator } from "@designali/ui/separator";
 import { allBlogPosts } from "contentlayer/generated";
 import { ChevronLeftIcon } from "lucide-react";
+
+import site from "@/config/site";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 import Content from "./content";
 import Header from "./header";

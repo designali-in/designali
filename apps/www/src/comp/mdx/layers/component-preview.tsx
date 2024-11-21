@@ -6,11 +6,12 @@ import * as React from "react";
 import { Index } from "@/__registry__";
 import { ThemeWrapper } from "@/comp/common/theme-wrapper";
 import { Icons } from "@/comp/icons";
-import { useConfig } from "@/hooks/use-config";
 import { styles } from "@/registry/registry-styles";
 import { CopyButton } from "@/src/comp/uis/copy-button";
-import { cn } from "@designali/ui";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/tabs";
+
+import { cn } from "@/lib/utils";
+import { useConfig } from "@/hooks/use-config";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;

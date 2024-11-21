@@ -6,9 +6,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
-import { Button } from "@designali/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@designali/ui/dtabs";
-import { ScrollArea } from "@designali/ui/scroll-area";
+
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface InstallIconProps {
   settings;

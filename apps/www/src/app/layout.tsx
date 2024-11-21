@@ -6,12 +6,12 @@ import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
 import Providers from "@/comp/Providers";
 import { DToaster } from "@/comp/uis/toaster";
-import { Toaster } from "@designali/ui/toast";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toasts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

@@ -4,14 +4,6 @@ import type { UserRole } from "@prisma/client";
 import type { User } from "next-auth";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-} from "@designali/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DIcons } from "dicons";
 import { useForm } from "react-hook-form";
@@ -19,6 +11,14 @@ import { toast } from "sonner";
 import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "@/components/ui/form";
 import { Switch } from "@/components/ui/switch";
 
 const emailPreferencesSchema = z.object({

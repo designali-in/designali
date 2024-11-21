@@ -2,7 +2,8 @@
 
 import React from "react";
 import NextImage from "next/image";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 export type ImageProps = {
   imageClassName?: string;

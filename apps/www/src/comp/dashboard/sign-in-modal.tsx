@@ -1,15 +1,11 @@
-import { signIn } from "next-auth/react";
-import {
-  Dispatch,
-  SetStateAction,
-  useCallback,
-  useMemo,
-  useState,
-} from "react";
- 
-import { Button } from "@designali/ui/button";
+import type { Dispatch, SetStateAction } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Modal } from "@/comp/uis/modal";
-import   site  from "@/config/site";
+import { signIn } from "next-auth/react";
+
+import site from "@/config/site";
+import { Button } from "@/components/ui/button";
+
 import { Icons } from "../icons";
 
 function SignInModal({

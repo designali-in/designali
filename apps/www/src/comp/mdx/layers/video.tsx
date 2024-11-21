@@ -1,5 +1,6 @@
 import React from "react";
-import { cn } from "@designali/ui";
+
+import { cn } from "@/lib/utils";
 
 type VideoProps = {
   src: string;

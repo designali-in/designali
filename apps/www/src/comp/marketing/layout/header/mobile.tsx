@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Disclosure, DisclosureButton, Transition } from "@headlessui/react";
 import { DIcons } from "dicons";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 

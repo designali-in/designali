@@ -6,11 +6,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { cn } from "@designali/ui";
-import { Button } from "@designali/ui/button";
-import { Input } from "@designali/ui/input";
-import { Label } from "@designali/ui/label";
 import { DIcons } from "dicons";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 import { CopyButton } from "../../uis/copy-button";
 
@@ -35,7 +36,7 @@ export const Navigation = ({
         <div className="grid w-full justify-center gap-3 md:flex md:justify-between">
           <div className="grid w-full items-center justify-center gap-3 text-center md:flex md:h-16 md:justify-start md:pb-0">
             <Link href={"/products/dicons"}>
-              <h1 className="text-3xl font-semibold hover:text-ali">DIcons</h1>
+              <h1 className="hover:text-ali text-3xl font-semibold">DIcons</h1>
             </Link>
             <div className="flex gap-3">
               <div className="relative">
@@ -58,14 +59,14 @@ export const Navigation = ({
               </div>
 
               <Link href={"/tools/dicons"}>
-                <Button size="lgicon" className="h-10 w-10">
+                <Button size="icon" className="h-10 w-10">
                   <DIcons.Scissors className="mx-1 h-4 w-4" />
                 </Button>
               </Link>
             </div>
           </div>
           <div className="flex items-center justify-center gap-1 pb-6 md:pb-0">
-            <h1 className="text-nowrap rounded-md border px-4 py-1 font-mono text-ali">{`<${settings.icon} />`}</h1>
+            <h1 className="text-ali text-nowrap rounded-md border px-4 py-1 font-mono">{`<${settings.icon} />`}</h1>
             <CopyButton value={`<${settings.icon} />`} />
           </div>
         </div>
@@ -116,14 +117,14 @@ export const IconNavigation = ({
 
           <Button
             variant="outline"
-            size="lgicon"
+            size="icon"
             className="h-10 w-10"
             onClick={onRandomIconClick}
             title="Random icon"
           >
             <DIcons.Shuffle strokeWidth={1} className="h-4 w-4" />
           </Button>
-          <Button variant="outline" size="lgicon" className="h-10 w-10">
+          <Button variant="outline" size="icon" className="h-10 w-10">
             <Input
               type="file"
               className="absolute w-0 opacity-0"
@@ -165,7 +166,7 @@ export const ToolNavigation = ({
         <div className={cn("grid items-center justify-center gap-2 md:flex")}>
           <div>
             <Link href={"/products/dicons"}>
-              <h1 className="text-center text-2xl font-semibold hover:text-ali">
+              <h1 className="hover:text-ali text-center text-2xl font-semibold">
                 DIcons
               </h1>
             </Link>

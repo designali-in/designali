@@ -7,6 +7,7 @@ import { WebsiteDesignCards } from "@/src/comp/marketing/agency/products/w-desig
 import { WebDesignGet } from "@/src/comp/marketing/agency/products/w-design/get";
 import { DesignInclude } from "@/src/comp/marketing/agency/products/w-design/include";
 import PageTitle from "@/src/comp/mdx/page-title";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,8 +15,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@designali/ui/breadcrumb";
-import { Button } from "@designali/ui/button";
+} from "@/components/ui/breadcrumb";
 
 export const metadata = {
   title: "Website Design - Designali",

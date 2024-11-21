@@ -1,8 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@designali/ui";
 import { useTheme } from "next-themes";
+
+import { cn } from "@/lib/utils";
 
 // TODO: improve keyboard navigation
 

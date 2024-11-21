@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
+
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 import { Icons } from "../icons";
 import PageTitle from "../mdx/page-title";

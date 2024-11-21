@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useScrollspy } from "@/src/hooks/use-scrollspy";
-import { cn } from "@designali/ui";
 
 import type { SidebarNavItem } from "./types";
+
+import { cn } from "@/lib/utils";
 
 export interface DocumentationSidebarNavProps {
   items: SidebarNavItem[];

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { toast } from "@designali/ui/toaster";
+
+import { toast } from "@/components/ui/toaster";
 
 interface CopyOptions {
   text: string;

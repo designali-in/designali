@@ -1,9 +1,14 @@
 "use client";
 
-import { Button } from "@designali/ui/button";
-import { Icons, iconVariants } from "@designali/ui/icons";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@designali/ui/tooltip";
+import { DIcons } from "dicons";
 import { toast } from "sonner";
+
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface LinkCopyButtonProps {
   textToCopy: string;
@@ -25,10 +30,7 @@ export const LinkCopyButton = ({ textToCopy }: LinkCopyButtonProps) => {
           variant="outline"
           size="sm"
         >
-          <Icons.Copy
-            className={iconVariants({ size: "sm" })}
-            onClick={handleOnCopy}
-          />
+          <DIcons.Copy onClick={handleOnCopy} />
           Copy link
         </Button>
       </TooltipTrigger>

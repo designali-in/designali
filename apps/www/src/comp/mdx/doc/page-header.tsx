@@ -1,5 +1,5 @@
-import { cn } from "@designali/ui";
-import { Separator } from "@designali/ui/separator";
+import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 interface DocsPageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   heading: string;

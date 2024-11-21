@@ -3,13 +3,13 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@designali/ui/accordion";
+} from "@/components/ui/accordion";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@designali/ui/card";
+} from "@/components/ui/card";
 
 export function Process() {
   return (
@@ -30,7 +30,7 @@ export function Process() {
           <AccordionContent>
             <div className="grid gap-3 md:grid-cols-4">
               <Card className="">
-                <p className="hidden h-full items-center justify-center text-center text-9xl font-semibold text-ali md:flex">
+                <p className="text-ali hidden h-full items-center justify-center text-center text-9xl font-semibold md:flex">
                   01.
                 </p>
               </Card>
@@ -73,7 +73,7 @@ export function Process() {
           <AccordionContent>
             <div className="grid gap-3 md:grid-cols-4">
               <Card className="">
-                <p className="hidden h-full items-center justify-center text-center text-9xl font-semibold text-ali md:flex">
+                <p className="text-ali hidden h-full items-center justify-center text-center text-9xl font-semibold md:flex">
                   02.
                 </p>
               </Card>
@@ -115,7 +115,7 @@ export function Process() {
           <AccordionContent>
             <div className="grid gap-3 md:grid-cols-4">
               <Card className="">
-                <p className="hidden h-full items-center justify-center text-center text-9xl font-semibold text-ali md:flex">
+                <p className="text-ali hidden h-full items-center justify-center text-center text-9xl font-semibold md:flex">
                   03.
                 </p>
               </Card>
@@ -155,7 +155,7 @@ export function Process() {
           <AccordionContent>
             <div className="grid gap-3 md:grid-cols-4">
               <Card className="">
-                <p className="hidden h-full items-center justify-center text-center text-9xl font-semibold text-ali md:flex">
+                <p className="text-ali hidden h-full items-center justify-center text-center text-9xl font-semibold md:flex">
                   04.
                 </p>
               </Card>

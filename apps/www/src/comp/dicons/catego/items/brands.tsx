@@ -5,15 +5,16 @@
 "use client";
 
 import React from "react";
-import { Input } from "@designali/ui/input";
-import { Label } from "@designali/ui/label";
-import { RadioGroup, RadioGroupItem } from "@designali/ui/radio-group";
+
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@designali/ui/tooltip";
+} from "@/components/ui/tooltip";
 
 import { DBrands } from "../../icons/brands";
 
@@ -52,7 +53,7 @@ export const Brands = ({
                     </RadioGroup>
                     <TooltipTrigger>
                       <Label className="" key={icon}>
-                        <div className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-md border transition hover:border-ali hover:bg-slate-100 hover:dark:bg-slate-900">
+                        <div className="hover:border-ali flex h-14 w-14 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900">
                           <Component
                             width={24}
                             height={24}

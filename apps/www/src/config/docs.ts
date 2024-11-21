@@ -8,12 +8,12 @@ import type {
 export const componentsConfig: ComponentsConfig = {
   mainNav: [
     {
-      title: "Components",
-      href: "/components",
-    },
-    {
       title: "Designs",
       href: "/designs",
+    },
+    {
+      title: "Components",
+      href: "/components",
     },
     {
       title: "Documentation",

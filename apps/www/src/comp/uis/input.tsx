@@ -1,6 +1,7 @@
-import { Button } from "@designali/ui/button";
-import { Input } from "@designali/ui/input";
 import { DIcons } from "dicons";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export const DInput = ({ value, onChange }) => {
   return (

@@ -249,6 +249,18 @@ export const ui: Registry = [
     files: ["designali/ui/toast.tsx"],
   },
   {
+    name: "toasts",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/toasts.tsx"],
+  },
+  {
+    name: "toaster",
+    type: "registry:ui",
+    dependencies: [""],
+    files: ["designali/ui/toaster.tsx"],
+  },
+  {
     name: "toggle",
     type: "registry:ui",
     dependencies: [""],

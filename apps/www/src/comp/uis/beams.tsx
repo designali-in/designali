@@ -2,8 +2,9 @@
 
 import type { RefObject } from "react";
 import { useEffect, useId, useState } from "react";
-import { cn } from "@designali/ui";
 import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 export interface AnimatedBeamProps {
   className?: string;

@@ -8,8 +8,9 @@ import {
   PageHeaderHeading,
 } from "@/comp/mdx/page-header";
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
-import { Separator } from "@designali/ui/separator";
 import { allPages } from "contentlayer/generated";
+
+import { Separator } from "@/components/ui/separator";
 
 interface PageProps {
   params: {

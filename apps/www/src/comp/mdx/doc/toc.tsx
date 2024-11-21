@@ -3,8 +3,9 @@
 
 import type { TableOfContents } from "@/lib/toc";
 import * as React from "react";
+
+import { cn } from "@/lib/utils";
 import { useMounted } from "@/hooks/use-mounted";
-import { cn } from "@designali/ui";
 
 import { UpdatesToolbarDoc } from "../../common/shate-toolbar";
 

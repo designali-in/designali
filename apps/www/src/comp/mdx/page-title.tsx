@@ -1,6 +1,5 @@
 "use client";
 
-import { Separator } from "@designali/ui/separator";
 import { motion } from "framer-motion";
 
 interface PageTitleProps {

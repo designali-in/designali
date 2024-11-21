@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@designali/ui";
 import { DIcons } from "dicons";
 import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 import { Icons } from "../icons";
 

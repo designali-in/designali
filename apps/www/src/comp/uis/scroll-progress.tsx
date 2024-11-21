@@ -1,7 +1,8 @@
 "use client";
 
-import { cn } from "@designali/ui";
 import { motion, useScroll, useSpring } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 interface ScrollProgressProps {
   className?: string;

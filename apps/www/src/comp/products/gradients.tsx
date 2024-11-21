@@ -3,8 +3,9 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@designali/ui/button";
 import { DIcons } from "dicons";
+
+import { Button } from "@/components/ui/button";
 
 import ImageZoom from "../common/image-zoom";
 
@@ -105,7 +106,7 @@ export const Service: Experience[] = [
 export function PhotoshopGradients() {
   return (
     <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
-      <h1 className="py-10 text-center text-3xl text-ali">
+      <h1 className="text-ali py-10 text-center text-3xl">
         Free Photoshp Gradients
       </h1>
       <div className="grid justify-center gap-3 md:grid-cols-3">

@@ -1,12 +1,11 @@
 "use client";
 
 import type { Dispatch, SetStateAction } from "react";
-import { Dialog, DialogContent } from "@designali/ui/dialog";
 // import { useRouter } from "next/router";
 import { Drawer } from "vaul";
 
 import { cn } from "@/lib/utils";
-import { useMediaQuery } from "@/hooks/use-media-query";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 interface ModalProps {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
 import type { Components } from "contentlayer/generated";
 import Link from "next/link";
-import { cn } from "@designali/ui";
-import { buttonVariants } from "@designali/ui/button";
 
 import { componentsConfig } from "@/config/docs";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 interface DocsPagerProps {
   doc: Components;
