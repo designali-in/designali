@@ -22,7 +22,7 @@ export function Banner() {
               <CardContent className="flex items-center justify-center p-2">
                 <Image
                   src={
-                    "https://utfs.io/f/5559d638-07d5-40b4-bf8b-635b83733ddb-lyh2sl.jpg"
+                    "https://utfs.io/f/9E7Q8MSIBADG4LyD0QdOsqWvHK8IhBm6bgX9lCPS5no1pRtZ"
                   }
                   alt={""}
                   className="h-[400px] w-full rounded-lg object-cover object-center md:h-[700px]"

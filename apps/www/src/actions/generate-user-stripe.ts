@@ -1,40 +1,45 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
 "use server";
+
+import { redirect } from "next/navigation";
 
 import { auth } from "@/lib/auth";
 import { stripe } from "@/lib/stripe";
 import { getUserSubscriptionPlan } from "@/lib/subscription";
 import { absoluteUrl } from "@/lib/utils";
-import { redirect } from "next/navigation";
 
 export type responseAction = {
   status: "success" | "error";
   stripeUrl?: string;
-}
+};
 
 // const billingUrl = absoluteUrl("/dashboard/billing")
-const billingUrl = absoluteUrl("/pricing")
+const billingUrl = absoluteUrl("/pricing");
 
-export async function generateUserStripe(priceId: string): Promise<responseAction> {
+export async function generateUserStripe(
+  priceId: string,
+): Promise<responseAction> {
   let redirectUrl = "";
 
   try {
-    const session = await auth()
+    const session = await auth();
     const user = session?.user;
 
     if (!user || !user.email || !user.id) {
       throw new Error("Unauthorized");
     }
 
-    const subscriptionPlan = await getUserSubscriptionPlan(user.id)
+    const subscriptionPlan = await getUserSubscriptionPlan(user.id);
 
     if (subscriptionPlan.isPaid && subscriptionPlan.stripeCustomerId) {
       // User on Paid Plan - Create a portal session to manage subscription.
       const stripeSession = await stripe.billingPortal.sessions.create({
         customer: subscriptionPlan.stripeCustomerId,
         return_url: billingUrl,
-      })
+      });
 
-      redirectUrl = stripeSession.url
+      redirectUrl = stripeSession.url;
     } else {
       // User on Free Plan - Create a checkout session to upgrade.
       const stripeSession = await stripe.checkout.sessions.create({
@@ -53,14 +58,14 @@ export async function generateUserStripe(priceId: string): Promise<responseActio
         metadata: {
           userId: user.id,
         },
-      })
+      });
 
-      redirectUrl = stripeSession.url
+      redirectUrl = stripeSession.url;
     }
   } catch (error) {
     throw new Error("Failed to generate user stripe session");
   }
 
   // no revalidatePath because redirect
-  redirect(redirectUrl)
+  redirect(redirectUrl);
 }

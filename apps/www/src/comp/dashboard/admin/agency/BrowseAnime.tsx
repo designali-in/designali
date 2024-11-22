@@ -5,9 +5,11 @@ import type { FC } from "react";
 import { useEffect, useRef, useState } from "react";
 import { Combobox } from "@/comp/uis/combobox";
 import { catalogs } from "@/data/agency";
+import { Input } from "@/registry/default/designali/ui/input";
 import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
+import { useDebounce } from "use-debounce";
 
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { getYearData } from "@/lib/utils";
@@ -22,6 +24,30 @@ interface BrowseAnimeProps {
 const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
   const yearData = getYearData();
   const queryClient = useQueryClient();
+
+  const [query, setQuery] = useState("");
+  const [enableSearch, setEnableSearch] = useState(false);
+  const debouncedQuery = useDebounce(query, 500);
+  const [debouncedQueryState, setDebouncedQueryState] = useState(false);
+
+  useEffect(() => {
+    if (!debouncedQueryState) return;
+
+    setEnableSearch(true);
+
+    queryClient.resetQueries(["anime-infinite-query"]);
+    setDebouncedQueryState(false);
+  }, [query, debouncedQueryState, queryClient]);
+
+  useEffect(() => {
+    if (!debouncedQuery) return;
+
+    setDebouncedQueryState(true);
+  }, [debouncedQuery]);
+
+  useEffect(() => {
+    setNoNewData(false);
+  }, [query]);
 
   const lastPostRef = useRef<HTMLElement>(null);
   const [animes, setAnimes] = useState<Graphic[]>(initialAnimes);
@@ -106,6 +132,14 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
             // large
             // />
           }
+        </div>
+        <div className="flex items-center gap-x-2">
+          <Input
+            placeholder="Type a anime name here."
+            disabled={isFetching}
+            autoFocus
+            onChange={(e) => setQuery(e.target.value)}
+          />
         </div>
         <Button size="sm" onClick={handleResetFilters} className="w-fit">
           Reset filters

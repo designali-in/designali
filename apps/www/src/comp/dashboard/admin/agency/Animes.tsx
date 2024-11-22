@@ -39,24 +39,23 @@ const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
 
   const infiniteQueryKey = ["anime-infinite-query", query];
 
-  const { data, fetchNextPage, isFetchingNextPage, isFetching } =
-    useInfiniteQuery(
-      infiniteQueryKey,
-      async ({ pageParam = 1 }) => {
-        const queryUrl = `/api/graphic?limit=${INFINITE_SCROLLING_PAGINATION_ANIME}&page=${pageParam}&q=${query}`;
+  const { data, isFetchingNextPage, isFetching } = useInfiniteQuery(
+    infiniteQueryKey,
+    async ({ pageParam = 1 }) => {
+      const queryUrl = `/api/graphic?limit=${INFINITE_SCROLLING_PAGINATION_ANIME}&page=${pageParam}&q=${query}`;
 
-        const { data } = await axios(queryUrl);
+      const { data } = await axios(queryUrl);
 
-        return data as Graphic[];
+      return data as Graphic[];
+    },
+    {
+      getNextPageParam: (_, pages) => {
+        return pages.length + 1;
       },
-      {
-        getNextPageParam: (_, pages) => {
-          return pages.length + 1;
-        },
-        initialData: { pages: [initialAnimes], pageParams: [1] },
-        enabled: enableSearch,
-      },
-    );
+      initialData: { pages: [initialAnimes], pageParams: [1] },
+      enabled: enableSearch,
+    },
+  );
   useEffect(() => {
     if (data.pages[data.pages.length - 1].length === 0) {
       setNoNewData(true);

@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 "use server";
 
 import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
 
+import { auth } from "@/lib/auth";
 import { stripe } from "@/lib/stripe";
 import { absoluteUrl } from "@/lib/utils";
 

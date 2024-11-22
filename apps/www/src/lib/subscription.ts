@@ -1,4 +1,5 @@
-// @ts-nocheck
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+
 // TODO: Fix this when we turn strict mode on.
 import type { UserSubscriptionPlan } from "@/types";
 

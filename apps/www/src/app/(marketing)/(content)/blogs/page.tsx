@@ -2,11 +2,12 @@ import type { Metadata, ResolvingMetadata } from "next";
 import type { Blog, WithContext } from "schema-dts";
 import { BlogFilteredPosts } from "@/comp/mdx/filtered-posts";
 import PageTitle from "@/comp/mdx/page-title";
+import { allBlogPosts } from "contentlayer/generated";
+
 import site from "@/config/site";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getAllBlogPosts } from "@/lib/mdx";
-import { allBlogPosts } from "contentlayer/generated";
- 
+
 const title = "Blogs - Designali";
 const description =
   "My personal website and blog where I share my thoughts on various topics including tutorials, notes, and personal experiences. As a full-stack developer from India, I started learning web development as a hobby in December 2023. I use Next.js for building websites, GitHub for code hosting, and Vercel for deployment. Explore my site to learn more about my Journey and discover some of the web development resources that have inspired me.";
@@ -62,7 +63,7 @@ const BlogPage = () => {
   const posts = getAllBlogPosts();
 
   return (
-    <div className="mx-auto my-40 max-w-5xl px-6">
+    <div className="mx-auto my-40 max-w-7xl px-6 xl:px-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

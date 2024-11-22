@@ -3,10 +3,9 @@
 import type { SubscriptionPlan, UserSubscriptionPlan } from "@/types";
 import { useTransition } from "react";
 import { generateUserStripe } from "@/actions/generate-user-stripe";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
-
-import { Icons } from "../icons";
 
 interface BillingFormButtonProps {
   offer: SubscriptionPlan;
@@ -41,7 +40,7 @@ export function BillingFormButton({
     >
       {isPending ? (
         <>
-          <Icons.moon className="mr-2 size-4 animate-spin" /> Loading...
+          <DIcons.Loader className="mr-2 size-4 animate-spin" /> Loading...
         </>
       ) : (
         <>{userOffer ? "Manage Subscription" : "Upgrade"}</>

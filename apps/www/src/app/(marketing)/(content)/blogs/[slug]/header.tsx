@@ -58,9 +58,8 @@ const Header = (props: HeaderProps) => {
             Written by
           </div>
           <a
-            href="https://www.aliimam.in/"
+            href="/"
             rel="noopener noreferrer"
-            target=""
             className="flex items-center gap-2"
           >
             <Image
@@ -109,16 +108,11 @@ const Header = (props: HeaderProps) => {
         </div>
       </div>
 
-      <ImageZoom
-        zoomImg={{
-          src: `/images/blogs/${slug}/cover.jpg`,
-          alt: title,
-        }}
-      >
+      <ImageZoom>
         <Image
           src={`/images/blogs/${slug}/cover.jpg`}
-          className="rounded-3xl"
-          width={1200}
+          className="h-full w-full rounded-3xl object-center"
+          width={1400}
           height={630}
           lazy={false}
           alt={title}

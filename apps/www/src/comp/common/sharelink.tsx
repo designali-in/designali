@@ -17,7 +17,7 @@ const ShareLink = ({ slug }: { slug }) => {
   );
   return (
     <div className="flex items-center justify-center gap-2">
-      <UpdatesToolbar posts={""} />
+      <UpdatesToolbar posts={slug} />
 
       <div className="flex items-center gap-3">
         <LikeButtonIcon slug={slug} />

@@ -33,7 +33,7 @@ export function About() {
       </div>
       <div className="mt-10 grid justify-between gap-3 md:flex">
         <div className="flex items-center gap-2">
-          <Link href={"/dashboard"} target="_blank">
+          <Link href={"/dashboard"}>
             <Button variant="default" size="lg">
               Design Now
             </Button>
