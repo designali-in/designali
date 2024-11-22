@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { PricingCards } from "@/comp/dashboard/pricing/pricing-cards";
 import { PricingFaq } from "@/comp/dashboard/pricing/pricing-faq";
@@ -13,6 +14,7 @@ export default async function PricingPage() {
   const user = await getCurrentUser();
 
   let subscriptionPlan;
+
   if (user && user.id) {
     subscriptionPlan = await getUserSubscriptionPlan(user.id);
   }

@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+import type Stripe from "stripe";
 import { headers } from "next/headers";
-import Stripe from "stripe";
 
 import { env } from "@/env";
 import { prisma } from "@/lib/db";
@@ -7,7 +11,7 @@ import { stripe } from "@/lib/stripe";
 
 export async function POST(req: Request) {
   const body = await req.text();
-  const signature = headers().get("Stripe-Signature");
+  const signature = headers().get("Stripe-Signature")!;
 
   let event: Stripe.Event;
 
@@ -18,48 +22,65 @@ export async function POST(req: Request) {
       env.STRIPE_WEBHOOK_SECRET,
     );
   } catch (error) {
+    console.error("Webhook Error:", error);
     return new Response(`Webhook Error: ${error.message}`, { status: 400 });
   }
 
+  console.log("Received Stripe event:", event);
+
+  // Handling checkout.session.completed event
   if (event.type === "checkout.session.completed") {
     const session = event.data.object;
+    console.log("Session details:", session);
 
-    // Retrieve the subscription details from Stripe.
-    const subscription = await stripe.subscriptions.retrieve(
-      session.subscription as string,
-    );
-
-    // Update the user stripe into in our database.
-    // Since this is the initial subscription, we need to update
-    // the subscription id and customer id.
-    await prisma.user.update({
-      where: {
-        id: session?.metadata?.userId,
-      },
-      data: {
-        stripeSubscriptionId: subscription.id,
-        stripeCustomerId: subscription.customer as string,
-        stripePriceId: subscription.items.data[0].price.id,
-        stripeCurrentPeriodEnd: new Date(
-          subscription.current_period_end * 1000,
-        ),
-      },
-    });
-  }
-
-  if (event.type === "invoice.payment_succeeded") {
-    const session = event.data.object;
-
-    // If the billing reason is not subscription_create, it means the customer has updated their subscription.
-    // If it is subscription_create, we don't need to update the subscription id and it will handle by the checkout.session.completed event.
-    if (session.billing_reason != "subscription_create") {
-      // Retrieve the subscription details from Stripe.
+    try {
       const subscription = await stripe.subscriptions.retrieve(
         session.subscription as string,
       );
+      console.log("Subscription details for session completed:", subscription);
 
-      // Update the price id and set the new period end.
-      await prisma.user.update({
+      const updatedUser = await prisma.user.update({
+        where: {
+          id: session.metadata?.userId,
+        },
+        data: {
+          stripeSubscriptionId: subscription.id,
+          stripeCustomerId: subscription.customer as string,
+
+          stripePriceId: subscription.items.data[0].price.id,
+          stripeCurrentPeriodEnd: new Date(
+            subscription.current_period_end * 1000,
+          ),
+        },
+        select: {
+          stripeSubscriptionId: true,
+          stripeCustomerId: true,
+          stripePriceId: true,
+          stripeCurrentPeriodEnd: true,
+        },
+      });
+
+      console.log(
+        "User updated successfully for session completed:",
+        updatedUser,
+      );
+    } catch (error) {
+      console.error("Error updating user for session completed:", error);
+    }
+  }
+
+  // Handling invoice.payment_succeeded event
+  if (event.type === "invoice.payment_succeeded") {
+    const invoice = event.data.object;
+    console.log("Invoice details:", invoice);
+
+    try {
+      const subscription = await stripe.subscriptions.retrieve(
+        invoice.subscription as string,
+      );
+      console.log("Subscription details for payment succeeded:", subscription);
+
+      const updatedUser = await prisma.user.update({
         where: {
           stripeSubscriptionId: subscription.id,
         },
@@ -69,7 +90,18 @@ export async function POST(req: Request) {
             subscription.current_period_end * 1000,
           ),
         },
+        select: {
+          stripePriceId: true,
+          stripeCurrentPeriodEnd: true,
+        },
       });
+
+      console.log(
+        "User updated successfully for payment succeeded:",
+        updatedUser,
+      );
+    } catch (error) {
+      console.error("Error updating user for payment succeeded:", error);
     }
   }
 

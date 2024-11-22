@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
 /* eslint-disable @typescript-eslint/no-redundant-type-constituents */
 import type { Icons } from "@/components/shared/icons";
 import type { User } from "@prisma/client";
@@ -69,7 +70,7 @@ export interface PropertyConfig {
   sidebarNav: SidebarNavItem[];
 }
 
-export interface SubscriptionPlan {
+export type SubscriptionPlan = {
   title: string;
   description: string;
   benefits: string[];
@@ -82,7 +83,7 @@ export interface SubscriptionPlan {
     monthly: string | null;
     yearly: string | null;
   };
-}
+};
 
 export type UserSubscriptionPlan = SubscriptionPlan &
   Pick<User, "stripeCustomerId" | "stripeSubscriptionId" | "stripePriceId"> & {

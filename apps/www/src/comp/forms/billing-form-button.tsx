@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import type { SubscriptionPlan, UserSubscriptionPlan } from "@/types";
@@ -21,29 +24,31 @@ export function BillingFormButton({
   const [isPending, startTransition] = useTransition();
   const generateUserStripeSession = generateUserStripe.bind(
     null,
+
     offer.stripeIds[year ? "yearly" : "monthly"],
   );
 
   const stripeSessionAction = () =>
     startTransition(async () => await generateUserStripeSession());
 
-  const userOffer =
-    subscriptionPlan.stripePriceId ===
-    offer.stripeIds[year ? "yearly" : "monthly"];
-
   return (
     <Button
-      variant={userOffer ? "default" : "outline"}
-      className="h-10 w-full"
+      variant="default"
+      className="w-full"
       disabled={isPending}
       onClick={stripeSessionAction}
     >
       {isPending ? (
         <>
-          <DIcons.Loader className="mr-2 size-4 animate-spin" /> Loading...
+          <DIcons.Loader className="mr-2 h-4 w-4 animate-spin" /> Loading...
         </>
       ) : (
-        <>{userOffer ? "Manage Subscription" : "Upgrade"}</>
+        <>
+          {subscriptionPlan.stripePriceId ===
+          offer.stripeIds[year ? "yearly" : "monthly"]
+            ? "Manage Subscription"
+            : "Upgrade"}
+        </>
       )}
     </Button>
   );

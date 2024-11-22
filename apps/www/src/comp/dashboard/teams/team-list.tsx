@@ -52,7 +52,7 @@ export function TeamList({ teams }: TeamListProps) {
           </div>
 
           <Link href={`/dashboard/teams/${team.slug}`}>
-            <Button variant="ghost"> View Team</Button>
+            <Button> View Team</Button>
           </Link>
         </div>
       ))}

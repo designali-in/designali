@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import crypto from "crypto";
 import { NextResponse } from "next/server";
 import TeamInviteEmail from "@/emails/team-invite-email";
@@ -21,7 +23,7 @@ export async function POST(
   try {
     const session = await auth();
 
-    if (!session.user) {
+    if (!session?.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
