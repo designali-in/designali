@@ -31,7 +31,6 @@ export const SingleAnimeCardSkeleton = () => {
       </CardHeader>
       <CardContent className="grid gap-2.5 p-4">
         <Skeleton className="h-4 w-1/2" />
-        <Skeleton className="h-4 w-full" />
       </CardContent>
     </Card>
   );

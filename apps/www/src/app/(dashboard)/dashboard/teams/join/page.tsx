@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import { JoinTeamForm } from "@/comp/forms/join-team-form";
 
 import { auth } from "@/lib/auth";

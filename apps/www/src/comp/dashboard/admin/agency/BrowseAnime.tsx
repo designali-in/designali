@@ -2,7 +2,7 @@
 
 import type { Graphic } from "@prisma/client";
 import type { FC } from "react";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Combobox } from "@/comp/uis/combobox";
 import { catalogs } from "@/data/agency";
 import { Input } from "@/registry/default/designali/ui/input";
@@ -16,6 +16,7 @@ import { getYearData } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 import AnimeCard from "./AnimeCard";
+import AnimeCardSkeleton from "./AnimeCardSkeleton";
 
 interface BrowseAnimeProps {
   initialAnimes: Graphic[];
@@ -153,7 +154,9 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
             if (index === animes.length - 1) {
               return (
                 <div key={anime.id} ref={ref}>
-                  <AnimeCard anime={anime} />
+                  <Suspense fallback={<AnimeCardSkeleton />}>
+                    <AnimeCard anime={anime} />
+                  </Suspense>
                 </div>
               );
             } else {

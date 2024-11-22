@@ -76,9 +76,7 @@ export const InstagramFeed = () => {
           className="flex justify-center"
           target="_blank"
         >
-          <Button variant="ghost" className="w-80 text-xs">
-            Do you need any open file, DM me
-          </Button>
+          <p className="py-3 text-xs">Do you need any open file, DM me</p>
         </Link>
       </div>
     </div>
