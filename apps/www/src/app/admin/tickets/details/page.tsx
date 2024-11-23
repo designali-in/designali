@@ -8,6 +8,15 @@ import { ChevronsUp, ChevronUp, Minus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -276,14 +285,14 @@ const AdminTicketDetails = () => {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold">Ticket Info</h1>
             <p className="text-gray-500 dark:text-gray-400">
               Your tickets informations.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-3">
             <Card>
               <CardHeader>
                 <CardTitle className="text-sm text-gray-500 dark:text-gray-400">
@@ -327,20 +336,24 @@ const AdminTicketDetails = () => {
                 <p className="text-lg font-bold">
                   {ticket ? (
                     <div className="flex flex-col space-y-3">
-                      <select
-                        className="rounded border border-gray-300 px-3 py-2"
+                      <Select
                         value={selectedStatus}
-                        onChange={(e) => setSelectedStatus(e.target.value)}
+                        onValueChange={setSelectedStatus}
                       >
-                        <option value={ticket.status || ""}>
-                          {ticket.status}
-                        </option>
-                        <option value="active">active</option>
-                        <option value="inprogress">inprogress</option>
-                        <option value="completed">completed</option>
-                        <option value="completed">completed</option>
-                        <option value="archived">archived</option>
-                      </select>
+                        <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Select status" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectGroup>
+                            <SelectItem value="active">Active</SelectItem>
+                            <SelectItem value="inprogress">
+                              In Progress
+                            </SelectItem>
+                            <SelectItem value="completed">Completed</SelectItem>
+                            <SelectItem value="archived">Archived</SelectItem>
+                          </SelectGroup>
+                        </SelectContent>
+                      </Select>
                       <Button onClick={() => handleUpdateStatus()}>
                         Set status
                       </Button>

@@ -27,6 +27,7 @@ export async function GET(req: NextRequest) {
       return new NextResponse("Ticket ID is required", { status: 400 });
     }
     const messages = await getMessages(ticketId);
+    console.log(messages); // Backend log
 
     return new NextResponse(JSON.stringify(messages), { status: 200 });
   } catch (error) {

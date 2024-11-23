@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { DIcons } from "dicons";
-import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -97,25 +96,20 @@ const DashboardTickets = () => {
     : tickets.filter((ticket) => ticket.status !== "archived");
 
   return (
-    <div className="mt-6">
+    <div className="">
       <div className="flex justify-between gap-3">
         {!noProject && !noTickets && (
           <Link href="/dashboard/agency/tickets/createticket">
             <Button size="sm" className=" mr-auto gap-1">
-              Create New Ticket
+              New Design Requests
             </Button>
           </Link>
         )}
-        <Link href="/dashboard/agency/tickets">
-          <Button size="sm" variant="outline" className=" mr-auto gap-1">
-            View All Tickets
-          </Button>
-        </Link>
       </div>
       {!noProject && !noTickets && (
         <div className="flex w-full justify-between gap-2 py-6 ">
           <Select value={filter} onValueChange={handleFilterChange}>
-            <SelectTrigger className="w-60">
+            <SelectTrigger className="w-40">
               <SelectValue placeholder="Select Status" />
             </SelectTrigger>
             <SelectContent>
@@ -131,7 +125,7 @@ const DashboardTickets = () => {
           <Button onClick={() => setFilter("")}>Reset Filter</Button>
         </div>
       )}
-      <p className="text-xs text-gray-500 md:hidden">
+      <p className="text-xs text-slate-500 md:hidden">
         Some details are hidden on mobile. For more details, please visit on
         your computer.{" "}
       </p>
@@ -153,7 +147,11 @@ const DashboardTickets = () => {
               tickets={filteredTickets}
               projectName={projects[0].projectName}
             />
-          ) : null}
+          ) : (
+            <div>
+              <p>Nothing here</p>
+            </div>
+          )}
         </>
       )}
     </div>

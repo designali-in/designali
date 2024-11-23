@@ -5,7 +5,7 @@ const AgencyPage = () => {
   return (
     <main className="p-6">
       <div className="">
-        <h1 className="py-4 text-2xl font-semibold">Tickets</h1>
+        <h1 className="py-4 text-2xl font-semibold">Designs</h1>
         <Suspense>
           <TicketDetails />
         </Suspense>

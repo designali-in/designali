@@ -31,12 +31,28 @@ import { useToast } from "@/components/ui/use-toast";
 
 const categories = [
   {
-    id: "frontend",
-    label: "Frontend Development",
+    id: "logo",
+    label: "Logo",
   },
   {
-    id: "backend",
-    label: "Backend Development",
+    id: "branding",
+    label: "Branding",
+  },
+  {
+    id: "web-design",
+    label: "Web Design",
+  },
+  {
+    id: "web-develop",
+    label: "Web Develop",
+  },
+  {
+    id: "social-media",
+    label: "Social Media",
+  },
+  {
+    id: "other",
+    label: "Other Design",
   },
 ] as const;
 
@@ -155,7 +171,7 @@ const CreateTicket = () => {
                   <FormItem>
                     <div className="mb-4">
                       <FormLabel className="text-base">Title</FormLabel>
-                      <FormDescription>Ticket title</FormDescription>
+                      <FormDescription>Design title</FormDescription>
                       <Input {...form.register("title")} />
                     </div>
                     <FormMessage />
@@ -217,9 +233,9 @@ const CreateTicket = () => {
               render={() => (
                 <FormItem>
                   <div className="mb-4">
-                    <FormLabel className="text-base">Dev. Category</FormLabel>
+                    <FormLabel className="text-base">Design Category</FormLabel>
                     <FormDescription>
-                      What kind of a development you need
+                      What kind of a design you need
                     </FormDescription>
                   </div>
                   {categories.map((item) => (

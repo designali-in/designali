@@ -109,8 +109,8 @@ const DashboardProgress = () => {
           : tickets
               .filter((ticket) => ticket.status === "completed")
               .length.toString(),
-      status: "completed",
-      subtitle: "Total completed tickets!",
+      status: "Completed",
+      subtitle: "Total completed designs!",
     },
     {
       index: 2,
@@ -121,8 +121,8 @@ const DashboardProgress = () => {
           : tickets
               .filter((ticket) => ticket.status === "inprogress")
               .length.toString(),
-      status: "In progress",
-      subtitle: "In progress tickets!",
+      status: "In Progress",
+      subtitle: "In progress designs!",
     },
     {
       index: 3,
@@ -133,8 +133,8 @@ const DashboardProgress = () => {
           : tickets
               .filter((ticket) => ticket.status === "active")
               .length.toString(),
-      status: "active",
-      subtitle: "Total active tickets!",
+      status: "Active",
+      subtitle: "Total active designs!",
     },
     {
       index: 4,
@@ -144,7 +144,7 @@ const DashboardProgress = () => {
           ? "0"
           : tickets.length.toString(),
       status: "All",
-      subtitle: "Total tickets!",
+      subtitle: "Total designs!",
     },
   ];
 

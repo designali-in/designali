@@ -164,20 +164,33 @@ const DashboardMain = () => {
   ];
 
   return (
-    <div className="my-6 w-full">
+    <div className="my-3 w-full">
       <div className=" ">
         <Card className="xl:col-span-2">
-          <CardHeader className="flex flex-row items-center">
+          <CardHeader className="flex flex-row items-center justify-between">
             <div className="grid gap-2">
-              <CardTitle>Tickets</CardTitle>
+              <CardTitle>Designs</CardTitle>
               <CardDescription>
                 {noProject
                   ? ""
-                  : "Active tickets for your great project: " +
+                  : "Active designs for your great project: " +
                     projects[0].projectName}
               </CardDescription>
             </div>
+            <div className="flex gap-2">
+              <Link href="/dashboard/agency/tickets/createticket">
+                <Button size="sm" className=" mr-auto gap-1">
+                  New Design Requests
+                </Button>
+              </Link>
+              <Link href="/dashboard/agency/tickets">
+                <Button size="sm" variant="outline" className=" mr-auto gap-1">
+                  View All Designs
+                </Button>
+              </Link>
+            </div>
           </CardHeader>
+
           <CardContent>
             {loadingTickets ? (
               <TicketList
@@ -195,9 +208,12 @@ const DashboardMain = () => {
                     <p className="text-sm text-muted-foreground">
                       You can start building as soon as you add a ticket.
                     </p>
-                    <a href="/createTicket" className="mt-4">
+                    <Link
+                      href="/dashboard/agency/tickets/createticket"
+                      className="mt-4"
+                    >
                       <Button>Create Ticket</Button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -218,9 +234,12 @@ const DashboardMain = () => {
                       You can start track your tickets as soon as you add a
                       ticket.
                     </p>
-                    <a href="/createTicket" className="mt-4">
+                    <Link
+                      href="/dashboard/agency/tickets/createticket"
+                      className="mt-4"
+                    >
                       <Button>Create Ticket</Button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
