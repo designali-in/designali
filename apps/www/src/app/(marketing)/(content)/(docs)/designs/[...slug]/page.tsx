@@ -12,6 +12,7 @@ import "@/styles/mdx.css";
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
 interface GuidePageProps {
@@ -48,8 +49,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
     <main className="relative py-6 lg:grid lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_260px]">
       <div>
         <DocsPageHeader heading={guide.title} text={guide.description} />
-        <ScrollProgress className="top-28" />
-        <Mdx code={guide.body.code} />
+        <ScrollProgress className="top-14" />
+        <ScrollArea>
+          <Mdx code={guide.body.code} />
+        </ScrollArea>
         <Separator className="my-8" />
         <div className="flex py-6 lg:py-10">
           <Link href="/documentation" className="">

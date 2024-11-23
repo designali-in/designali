@@ -53,6 +53,18 @@ const data = {
       ],
     },
     {
+      title: "Agency",
+      url: "/dashboard/agency",
+      icon: DIcons.SquareTerminal,
+      isActive: true,
+      items: [
+        {
+          title: "Tickets",
+          url: "/dashboard/agency/tickets",
+        },
+      ],
+    },
+    {
       title: "Tools",
       url: "/dashboard/tools",
       icon: DIcons.Settings2,
@@ -217,6 +229,22 @@ const admindata = {
         {
           title: "Users",
           url: "/admin/users",
+        },
+      ],
+    },
+    {
+      title: "Agency",
+      url: "/admin/projects",
+      icon: DIcons.SquareTerminal,
+      isActive: true,
+      items: [
+        {
+          title: "Projects",
+          url: "/admin/projects",
+        },
+        {
+          title: "Tickets",
+          url: "/admin/tickets",
         },
       ],
     },
