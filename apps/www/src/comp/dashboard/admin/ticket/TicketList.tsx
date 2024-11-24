@@ -91,7 +91,7 @@ const TicketList = ({
   const handleButtonClick = (ticketId: string) => {
     // Do something with the ticketId
     router.push(
-      `/dashboard/agency/ticketDetails?ticketId=${ticketId}&projectName=${projectName}`,
+      `/dashboard/agency/designDetails?ticketId=${ticketId}&projectName=${projectName}`,
     );
   };
 

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { usePathname } from "next/navigation";
 
 import {
@@ -29,15 +30,32 @@ export default function Users({ children }: ProtectedLayoutProps) {
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>
-                    {lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1)}
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
+                {pathname
+                  .split("/")
+                  .filter((segment) => segment) // Remove empty segments
+                  .map((segment, index, array) => {
+                    const href = `/${array.slice(0, index + 1).join("/")}`;
+                    const isLast = index === array.length - 1;
+
+                    return (
+                      <React.Fragment key={href}>
+                        {index > 0 && <BreadcrumbSeparator />}
+                        <BreadcrumbItem>
+                          {isLast ? (
+                            <BreadcrumbPage>
+                              {segment.charAt(0).toUpperCase() +
+                                segment.slice(1)}
+                            </BreadcrumbPage>
+                          ) : (
+                            <BreadcrumbLink href={href}>
+                              {segment.charAt(0).toUpperCase() +
+                                segment.slice(1)}
+                            </BreadcrumbLink>
+                          )}
+                        </BreadcrumbItem>
+                      </React.Fragment>
+                    );
+                  })}
               </BreadcrumbList>
             </Breadcrumb>
           </div>

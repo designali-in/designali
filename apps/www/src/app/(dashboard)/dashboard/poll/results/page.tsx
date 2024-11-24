@@ -31,7 +31,7 @@ const PollResultsPage = async () => {
   });
 
   return (
-    <div className="px-1">
+    <div className="p-6">
       <PollClient initialPolls={initialPolls} sessionId={session.user.id} />
     </div>
   );

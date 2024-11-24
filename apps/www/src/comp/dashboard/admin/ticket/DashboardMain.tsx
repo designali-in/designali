@@ -178,12 +178,12 @@ const DashboardMain = () => {
               </CardDescription>
             </div>
             <div className="flex gap-2">
-              <Link href="/dashboard/agency/tickets/createticket">
+              <Link href="/dashboard/agency/designs/createdesign">
                 <Button size="sm" className=" mr-auto gap-1">
                   New Design Requests
                 </Button>
               </Link>
-              <Link href="/dashboard/agency/tickets">
+              <Link href="/dashboard/agency/designs">
                 <Button size="sm" variant="outline" className=" mr-auto gap-1">
                   View All Designs
                 </Button>
@@ -209,10 +209,10 @@ const DashboardMain = () => {
                       You can start building as soon as you add a ticket.
                     </p>
                     <Link
-                      href="/dashboard/agency/tickets/createticket"
+                      href="/dashboard/agency/designs/createdesign"
                       className="mt-4"
                     >
-                      <Button>Create Ticket</Button>
+                      <Button>Create Designs</Button>
                     </Link>
                   </div>
                 </div>
@@ -228,17 +228,17 @@ const DashboardMain = () => {
                 <div className="flex h-full w-full flex-1 items-center justify-center rounded-lg border border-dashed py-12 shadow-sm">
                   <div className="flex flex-col items-center gap-1 text-center">
                     <h3 className="text-2xl font-bold tracking-tight">
-                      You have no active tickets
+                      You have no active designs
                     </h3>
                     <p className="text-sm text-muted-foreground">
                       You can start track your tickets as soon as you add a
                       ticket.
                     </p>
                     <Link
-                      href="/dashboard/agency/tickets/createticket"
+                      href="/dashboard/agency/tickets/createdesign"
                       className="mt-4"
                     >
-                      <Button>Create Ticket</Button>
+                      <Button>Create Design</Button>
                     </Link>
                   </div>
                 </div>

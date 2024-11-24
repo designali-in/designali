@@ -99,7 +99,7 @@ const DashboardTickets = () => {
     <div className="">
       <div className="flex justify-between gap-3">
         {!noProject && !noTickets && (
-          <Link href="/dashboard/agency/tickets/createticket">
+          <Link href="/dashboard/agency/designs/createdesign">
             <Button size="sm" className=" mr-auto gap-1">
               New Design Requests
             </Button>
