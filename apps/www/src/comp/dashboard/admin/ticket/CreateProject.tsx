@@ -24,44 +24,28 @@ import { useToast } from "@/components/ui/use-toast";
 
 const TechInfo = [
   {
-    id: "reactjs",
-    label: "ReactJS",
+    id: "logo",
+    label: "Logo",
   },
   {
-    id: "nextjs",
-    label: "NextJS",
+    id: "branding",
+    label: "Branding",
   },
   {
-    id: "tailwindcss",
-    label: "TailwindCSS",
+    id: "web-design",
+    label: "Web Design",
   },
   {
-    id: "mui",
-    label: "MaterialUI",
+    id: "web-develop",
+    label: "Web Develop",
   },
   {
-    id: "nodejs",
-    label: "NodeJS",
+    id: "social-media",
+    label: "Social Media",
   },
   {
-    id: "expressjs",
-    label: "ExpressJS",
-  },
-  {
-    id: "postgres",
-    label: "PostgresSQL",
-  },
-  {
-    id: "mysql",
-    label: "MySQL",
-  },
-  {
-    id: "mongodb",
-    label: "MongoDB",
-  },
-  {
-    id: "firebase",
-    label: "Firebase",
+    id: "other",
+    label: "Other Design",
   },
 ] as const;
 
@@ -123,13 +107,17 @@ const CreateProject = () => {
     fetchProjects();
   }, []);
 
-  if (projects.length > 0) {
-    router.push("/dashboard/agency/tickets");
-    toast({
-      title: "Nooo! You have a project already!",
-      description: <div>You have not access to create another project!</div>,
-    });
-  }
+  useEffect(() => {
+    if (projects.length > 0) {
+      // router.push("/dashboard/agency/designs");
+      toast({
+        title: "Nooo! You have a project already!",
+        description: (
+          <div>You do not have access to create another project!</div>
+        ),
+      });
+    }
+  }, [projects, router, toast]);
 
   const handleSubmit = async (data: z.infer<typeof FormSchema>) => {
     setLoading(true);
@@ -156,7 +144,7 @@ const CreateProject = () => {
         }),
       });
 
-      router.push("/dashboard/agency/tickets");
+      router.push("/dashboard/agency/designs");
       setLoading(false);
 
       toast({
@@ -173,7 +161,7 @@ const CreateProject = () => {
     }
   };
 
-  //   console.log(form.watch());
+  // console.log(form.watch());
 
   return (
     <div>
@@ -242,8 +230,8 @@ const CreateProject = () => {
               render={() => (
                 <FormItem>
                   <div className="mb-4">
-                    <FormLabel className="text-base">Tech Stack</FormLabel>
-                    <FormDescription>Select your tech stack</FormDescription>
+                    <FormLabel className="text-base">Design Stack</FormLabel>
+                    <FormDescription>Select your design stack</FormDescription>
                   </div>
                   {TechInfo.map((item) => (
                     <FormField
@@ -295,7 +283,7 @@ const CreateProject = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => router.push("/dashboard/agency/tickets")}
+                onClick={() => router.push("/dashboard/agency/projects")}
                 disabled={loading}
               >
                 Cancel
