@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
 "use client";
 
-import React from "react";
+import { Suspense } from "react";
 import { DIcons } from "dicons";
 
 import { Input } from "@/components/ui/input";
@@ -38,28 +37,26 @@ export const MainIcons = ({
               <div>
                 <TooltipProvider delayDuration={0}>
                   <Tooltip>
-                    <RadioGroup className="relative" defaultValue="option-one">
+                    <RadioGroup className="relative">
                       <RadioGroupItem
-                        className="absolute -z-10 "
+                        className="absolute -z-10"
                         value={icon}
                         checked={icon === settings.icon}
                         onChange={() => onChangeIcon(icon)}
                       />
                     </RadioGroup>
                     <TooltipTrigger>
-                      <Label className="" key={icon}>
+                      <Label className="">
                         <div className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900">
-                          <Component
-                            width={30}
-                            height={30}
-                            fill={settings.iconFill}
-                            stroke={settings.strokeColor}
-                            stroke-linecap={settings.linecap}
-                            linejoin={settings.linejoin}
-                            stroke-linejoin={settings.iconColor}
-                            stroke-width={settings.strokeWidth}
-                          />
-                          <Input
+                          <Suspense>
+                            <Component
+                              width={30}
+                              height={30}
+                              stroke={settings.strokeColor}
+                              strokeWidth={settings.strokeWidth}
+                            />
+                          </Suspense>
+                          <input
                             type="radio"
                             className="hidden"
                             name="icon"

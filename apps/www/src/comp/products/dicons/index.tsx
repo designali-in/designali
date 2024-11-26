@@ -39,10 +39,10 @@ export default function DIconsPage() {
     icon: "",
     iconFill: "none",
     strokeColor: "currentColor",
-    iconSize: 250,
+    iconSize: 150,
     linecap: "round",
     linejoin: "",
-    strokeWidth: 1,
+    strokeWidth: 1.5,
   });
 
   const onChangeSearchTerm: React.FormEventHandler<HTMLInputElement> = (
@@ -202,9 +202,9 @@ export default function DIconsPage() {
                   </div>
                 ) : (
                   <div className="my-6 w-full">
-                    <h4 className="pb-3 text-slate-600 dark:text-slate-400">
+                    <h1 className="pb-3 text-slate-600 dark:text-slate-400">
                       {searchTerm ? "Results" : "All Icons"}
-                    </h4>
+                    </h1>
                     <ScrollArea className="h-screen w-full">
                       <MainIcons
                         settings={settings}

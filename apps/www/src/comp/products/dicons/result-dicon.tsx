@@ -34,9 +34,7 @@ const ResultDIcon = React.forwardRef<SVGSVGElement, DPropTypes>(
               y={(size - settings.iconSize) / 2 + 0}
               alignmentBaseline="middle"
               stroke={settings.strokeColor}
-              stroke-width={settings.strokeWidth}
-              stroke-linecap={settings.linecap}
-              stroke-linejoin={settings.linejoin}
+              strokeWidth={settings.strokeWidth}
             />
           ) : null}
         </svg>

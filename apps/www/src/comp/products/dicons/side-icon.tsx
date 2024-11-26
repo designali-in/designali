@@ -57,24 +57,11 @@ export const SideIcon = ({
   formRef,
   onFormChange,
 }: SideIconProps) => {
-  const handleSwitchChange = (checked: boolean, settingName: string) => {
-    const newValue =
-      settingName === iconFill
-        ? checked
-          ? "currentColor"
-          : "none"
-        : checked
-          ? "sharp"
-          : "round";
-    onFormChange({ [settingName]: newValue });
-  };
-
   const handleReset = () => {
-    settings(() => ({
-      iconFill: "currentColor", // Default color or initial value
+    settings((prevSettings) => ({
+      ...prevSettings,
     }));
   };
-
   return (
     <main className={""}>
       <div className="-z-0 mx-auto grid max-w-sm md:h-full md:border-r">
@@ -165,18 +152,32 @@ export const SideIcon = ({
               >
                 <div className="mt-10 w-full ">
                   <div className="grid gap-6">
-                    {!customSvgIsPng && (
-                      <div className="flex items-center justify-between">
-                        <span className="pr-5 text-xs">Color</span>
-                        <ColorInput
-                          value={settings.strokeColor}
-                          name="strokeColor"
-                          onChange={onChangeColorSetting("strokeColor")}
-                          recentColors={recentColors}
-                        />
-                      </div>
-                    )}
-                    <div></div>
+                    <div>
+                      {!customSvgIsPng && (
+                        <div className="flex items-center justify-between">
+                          <span className="pr-5 text-xs">Color</span>
+                          <ColorInput
+                            value={settings.strokeColor}
+                            name="strokeColor"
+                            onChange={onChangeColorSetting("strokeColor")}
+                            recentColors={recentColors}
+                          />
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      {settings.iconFill && !customSvgIsPng && (
+                        <div className="flex items-center justify-between">
+                          <span className="pr-5 text-xs">BG Color</span>
+                          <ColorInput
+                            value={settings.iconFill ? "none" : "currentColor"}
+                            onChange={onChangeColorSetting("iconFill")}
+                            recentColors={recentColors}
+                            name={"iconFill"}
+                          />
+                        </div>
+                      )}
+                    </div>
                     <div className="grid items-center gap-2">
                       <div className="flex items-center justify-between">
                         <span className="pr-5 text-xs">Stroke Width</span>
@@ -194,7 +195,6 @@ export const SideIcon = ({
                             defaultValue={[settings.strokeWidth]}
                             min={0.1}
                             max={3}
-                            step={0.1}
                           />
                         </div>
                       </div>
@@ -217,7 +217,6 @@ export const SideIcon = ({
                             defaultValue={[settings.iconSize]}
                             min={16}
                             max={240}
-                            step={1}
                           />
                         </div>
                       </div>
