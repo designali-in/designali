@@ -134,14 +134,7 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
             // />
           }
         </div>
-        <div className="flex items-center gap-x-2">
-          <Input
-            placeholder="Type a anime name here."
-            disabled={isFetching}
-            autoFocus
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </div>
+
         <Button size="sm" onClick={handleResetFilters} className="w-fit">
           Reset filters
         </Button>

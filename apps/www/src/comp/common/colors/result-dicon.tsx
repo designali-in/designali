@@ -7,7 +7,6 @@ interface DPropTypes {
   iconFill: string;
   strokeWidth: number;
   isPreview?: boolean;
-  // TODO: fix icon type?
   IconComponent?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 

@@ -1,3 +1,14 @@
+export interface DIconsSettingsType {
+  strokeColor: string;
+  linecap: string;
+  linejoin: string;
+  iconFill: string;
+  iconSize: number;
+  strokeWidth: number;
+  icon?: "";
+  customSvg?: string;
+}
+
 export interface SettingsType {
   backgroundFillType: string;
   backgroundOpacity: number;

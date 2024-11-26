@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { DIconGenerator } from "@/comp/dicons/main";
+import DIconsPage from "@/comp/products/dicons";
 
 export const metadata = {
   title: "DIcons - Designali",
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="">
       <div className="mt-14 border-b border-t">
         <Suspense>
-          <DIconGenerator />
+          <DIconsPage />
         </Suspense>
       </div>
     </main>

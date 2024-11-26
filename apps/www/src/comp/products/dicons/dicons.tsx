@@ -5,6 +5,7 @@
 "use client";
 
 import React from "react";
+import { DIcons } from "dicons";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,8 +16,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
-import { DIcons } from "../../../../../../packages/icons/src/dicons";
 
 interface AccessProps {
   onChangeIcon;
@@ -41,7 +40,7 @@ export const MainIcons = ({
                   <Tooltip>
                     <RadioGroup className="relative" defaultValue="option-one">
                       <RadioGroupItem
-                        className="absolute -z-10"
+                        className="absolute -z-10 "
                         value={icon}
                         checked={icon === settings.icon}
                         onChange={() => onChangeIcon(icon)}
@@ -49,14 +48,17 @@ export const MainIcons = ({
                     </RadioGroup>
                     <TooltipTrigger>
                       <Label className="" key={icon}>
-                        <div className="hover:border-ali flex h-14 w-14 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900">
+                        <div className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900">
                           <Component
-                            width={24}
-                            height={24}
-                            stroke={settings.iconColor}
-                            strokeWidth={settings.strokeWidth}
+                            width={30}
+                            height={30}
+                            fill={settings.iconFill}
+                            stroke={settings.strokeColor}
+                            stroke-linecap={settings.linecap}
+                            linejoin={settings.linejoin}
+                            stroke-linejoin={settings.iconColor}
+                            stroke-width={settings.strokeWidth}
                           />
-
                           <Input
                             type="radio"
                             className="hidden"
