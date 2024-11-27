@@ -1,7 +1,7 @@
 export interface DIconsSettingsType {
   strokeColor: string;
-  linecap: string;
-  linejoin: string;
+  linecap: "inherit" | "butt" | "round" | "square";
+  linejoin: "inherit" | "round" | "miter" | "bevel";
   iconFill: string;
   iconSize: number;
   strokeWidth: number;

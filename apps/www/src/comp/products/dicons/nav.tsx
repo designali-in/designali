@@ -6,10 +6,16 @@
 
 import React from "react";
 import Link from "next/link";
+import { Button } from "@/registry/default/designali/ui/button";
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/default/designali/ui/scroll-area";
 import { DIcons } from "dicons";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { CopyButton } from "../../uis/copy-button";
 
@@ -36,24 +42,45 @@ export const Navigation = ({
             <Link href={"/products/dicons"}>
               <h1 className="hover:text-ali text-3xl font-semibold">DIcons</h1>
             </Link>
-            <div className="flex gap-3">
-              <div className="relative">
-                <Input
-                  type="text"
-                  value={searchTerm}
-                  ref={searchRef}
-                  onChange={onChangeSearchTerm}
-                  placeholder={`Search ${filteredDIcons.length} icons...`}
-                  aria-label="Search Icon"
-                  className="h-10 w-full rounded-full pl-12"
-                  id="search"
-                />
-                <Label htmlFor="search">
-                  <DIcons.Search
-                    strokeWidth={1}
-                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
+            <TabsList className=" w-auto   items-center justify-center text-center">
+              <ScrollArea className="whitespace-nowrap">
+                <div className="space-x-1">
+                  <TabsTrigger value="1" className="px-3">
+                    Outline
+                  </TabsTrigger>
+                  <TabsTrigger value="3" className="px-3">
+                    Sharp
+                  </TabsTrigger>
+                  <TabsTrigger value="2" className="px-3">
+                    Fill (round)
+                  </TabsTrigger>
+                  <TabsTrigger value="4" className="px-3">
+                    Fill (square)
+                  </TabsTrigger>
+                </div>
+                <ScrollBar orientation="horizontal" />
+              </ScrollArea>
+            </TabsList>
+            <div>
+              <div className="flex justify-center gap-3">
+                <div className="relative">
+                  <Input
+                    type="text"
+                    value={searchTerm}
+                    ref={searchRef}
+                    onChange={onChangeSearchTerm}
+                    placeholder={`Search ${filteredDIcons.length} icons...`}
+                    aria-label="Search Icon"
+                    className="h-12 w-full rounded-full pl-12"
+                    id="search"
                   />
-                </Label>
+                  <Label htmlFor="search">
+                    <DIcons.Search
+                      strokeWidth={1}
+                      className="absolute left-6 top-1/2 h-5 w-5 -translate-y-1/2"
+                    />
+                  </Label>
+                </div>
               </div>
             </div>
           </div>

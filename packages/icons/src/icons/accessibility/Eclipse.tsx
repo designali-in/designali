@@ -11,15 +11,15 @@ export const Eclipse = React.forwardRef<SVGSVGElement, DesignaliProps>(
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        color={color}
         {...props}
         ref={forwardedRef}
       >
         <circle cx="12" cy="12" r="10" />
-        <path d="M12 2a7 7 0 1 0 10 10" />
+        <path fill="none" d="M12 2a7 7 0 1 0 10 10" />
       </svg>
     );
   },

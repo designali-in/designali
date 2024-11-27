@@ -1,6 +1,6 @@
 "use client";
 
-import { Icons } from "@/comp/icons";
+import { DIcons } from "dicons";
 import { useTheme } from "next-themes";
 
 function handleScrollTop() {
@@ -18,22 +18,22 @@ const Footer = () => {
       <div className="rounded-full border border-slate-100 p-1 dark:border-slate-900">
         <button
           onClick={() => setTheme("light")}
-          className="mr-3 rounded-full bg-ali p-2 text-white dark:bg-background dark:text-slate-400"
+          className="bg-ali mr-3 rounded-full p-2 text-white dark:bg-background dark:text-slate-400"
         >
-          <Icons.sun className="h-5 w-5" strokeWidth={1} />
+          <DIcons.Sun className="h-5 w-5" strokeWidth={1} />
           <span className="sr-only">T</span>
         </button>
 
         <button type="button" onClick={handleScrollTop}>
-          <Icons.arrowup className="h-5 w-5" strokeWidth={1} />
+          <DIcons.ArrowUp className="h-5 w-5" />
           <span className="sr-only">Top</span>
         </button>
 
         <button
           onClick={() => setTheme("dark")}
-          className="ml-3 rounded-full p-2 text-slate-600 dark:bg-ali dark:text-white"
+          className="dark:bg-ali ml-3 rounded-full p-2 text-slate-600 dark:text-white"
         >
-          <Icons.moon className="h-5 w-5" strokeWidth={1} />
+          <DIcons.Moon className="h-5 w-5" strokeWidth={1} />
           <span className="sr-only">T</span>
         </button>
       </div>

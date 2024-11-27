@@ -10,10 +10,22 @@ import { Button } from "@/registry/default/designali/ui/button";
 import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
 import { Slider } from "@/registry/default/designali/ui/slider";
 import { Switch } from "@/registry/default/designali/ui/switch";
+import { TabsContent } from "@/registry/default/designali/ui/tabs";
+import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 import GridPattern from "@/src/comp/uis/grid-pattern";
-import { DIcons } from "dicons";
+import { DIcons } from "dicons/src/dicon";
 
 import { cn } from "@/lib/utils";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,8 +35,14 @@ import {
 import { toast } from "@/components/ui/toaster";
 
 import { ColorInput } from "./color-input";
+import { DIconsDrawer } from "./diconsdrawer";
 import { DownloadPNG, DownloadSVG } from "./export-modal";
-import { ResultDIcon } from "./result-dicon";
+import {
+  FillResultDIcon,
+  FillSharpResultDIcon,
+  ResultDIcon,
+  SharpResultDIcon,
+} from "./result-dicon";
 
 interface SideIconProps {
   settings;
@@ -37,7 +55,6 @@ interface SideIconProps {
   customSvgIsPng;
   recentColors;
   onChangeColorSetting;
-  iconFill;
   formRef;
   onFormChange;
 }
@@ -52,16 +69,10 @@ export const SideIcon = ({
   customSvgIsPng,
   recentColors,
   onChangeColorSetting,
-  iconFill,
   svgRef,
   formRef,
   onFormChange,
 }: SideIconProps) => {
-  const handleReset = () => {
-    settings((prevSettings) => ({
-      ...prevSettings,
-    }));
-  };
   return (
     <main className={""}>
       <div className="-z-0 mx-auto grid max-w-sm md:h-full md:border-r">
@@ -70,7 +81,7 @@ export const SideIcon = ({
             <p className="text-ali mb-2 text-center text-lg font-semibold">
               {settings.icon}
             </p>
-            <div className="relative mx-auto grid aspect-square h-full w-full justify-center border">
+            <div className="relative aspect-square h-full w-full items-center justify-center border p-3">
               <GridPattern
                 width={12}
                 height={12}
@@ -96,54 +107,82 @@ export const SideIcon = ({
                 className="text-ali absolute -bottom-3 -right-3 h-6"
               />
               <div className="flex h-full w-full items-center justify-center">
-                <ResultDIcon
-                  size={250}
-                  settings={settings}
-                  IconComponent={IconComponent}
-                  ref={svgRef}
-                />
-              </div>
-              <div className="mt-4 flex justify-center gap-2">
-                <DropdownMenu>
-                  <DropdownMenuTrigger>
-                    <div className="flex items-center gap-1 hover:text-slate-600 dark:hover:text-slate-400">
-                      Download
-                      <DIcons.Copy className="h-4 w-4" />
-                    </div>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    {pngClipboardSupported && (
-                      <DropdownMenuItem
-                        className="flex justify-between"
-                        onSelect={onCopyImageToClipboard}
-                      >
-                        Copy Image <DIcons.Copy className="h-4 w-4" />
-                      </DropdownMenuItem>
-                    )}
-                    <DropdownMenuItem>
-                      <DownloadPNG
-                        open={showExportModal}
-                        onOpenChange={setShowExportModal}
-                        onStartExport={() => toast("PNG Image Downloaded")}
-                        fileName={settings.icon}
-                        svgRef={svgRef}
-                      />
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <DownloadSVG
-                        open={showExportModal}
-                        onOpenChange={setShowExportModal}
-                        onStartExport={() => toast("SVG Image Downloaded")}
-                        fileName={settings.icon}
-                        svgRef={svgRef}
-                      />
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <TabsContent value="1">
+                  <ResultDIcon
+                    size={250}
+                    settings={settings}
+                    IconComponent={IconComponent}
+                    ref={svgRef}
+                  />
+                </TabsContent>
+                <TabsContent value="2">
+                  <FillResultDIcon
+                    size={250}
+                    settings={settings}
+                    IconComponent={IconComponent}
+                    ref={svgRef}
+                  />
+                </TabsContent>
+                <TabsContent value="3">
+                  <SharpResultDIcon
+                    size={250}
+                    settings={settings}
+                    IconComponent={IconComponent}
+                    ref={svgRef}
+                  />
+                </TabsContent>
+                <TabsContent value="4">
+                  <FillSharpResultDIcon
+                    size={250}
+                    settings={settings}
+                    IconComponent={IconComponent}
+                    ref={svgRef}
+                  />
+                </TabsContent>
               </div>
             </div>
+            <div className="mt-6 flex justify-center gap-2">
+              <Button variant="ghost" icon="Plus" size="icon"></Button>
+              <DIconsDrawer settings={settings} />
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <div className="inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-accent bg-popover px-4 py-2 hover:bg-accent hover:text-accent-foreground">
+                    Download
+                    <DIcons.Copy className="h-4 w-4" />
+                  </div>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {pngClipboardSupported && (
+                    <DropdownMenuItem
+                      className="flex justify-between"
+                      onSelect={onCopyImageToClipboard}
+                    >
+                      Copy Image <DIcons.Copy className="h-4 w-4" />
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuItem>
+                    <DownloadPNG
+                      open={showExportModal}
+                      onOpenChange={setShowExportModal}
+                      onStartExport={() => toast("PNG Image Downloaded")}
+                      fileName={settings.icon}
+                      svgRef={svgRef}
+                    />
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <DownloadSVG
+                      open={showExportModal}
+                      onOpenChange={setShowExportModal}
+                      onStartExport={() => toast("SVG Image Downloaded")}
+                      fileName={settings.icon}
+                      svgRef={svgRef}
+                    />
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
-          <div className={"mt-6"}>
+          <div className={""}>
             <div className="grid gap-2 px-6 md:px-0">
               <form
                 className="grid gap-2"
@@ -152,32 +191,79 @@ export const SideIcon = ({
               >
                 <div className="mt-10 w-full ">
                   <div className="grid gap-6">
-                    <div>
-                      {!customSvgIsPng && (
-                        <div className="flex items-center justify-between">
-                          <span className="pr-5 text-xs">Color</span>
-                          <ColorInput
-                            value={settings.strokeColor}
-                            name="strokeColor"
-                            onChange={onChangeColorSetting("strokeColor")}
-                            recentColors={recentColors}
-                          />
-                        </div>
-                      )}
-                    </div>
-                    <div>
-                      {settings.iconFill && !customSvgIsPng && (
-                        <div className="flex items-center justify-between">
-                          <span className="pr-5 text-xs">BG Color</span>
-                          <ColorInput
-                            value={settings.iconFill ? "none" : "currentColor"}
-                            onChange={onChangeColorSetting("iconFill")}
-                            recentColors={recentColors}
-                            name={"iconFill"}
-                          />
-                        </div>
-                      )}
-                    </div>
+                    <TabsContent value="1">
+                      <div>
+                        {!customSvgIsPng && (
+                          <div className="flex items-center justify-between">
+                            <span className="pr-5 text-xs">Color</span>
+                            <ColorInput
+                              value={settings.strokeColor}
+                              name={"strokeColor"}
+                              onChange={(newColor) => {
+                                onChangeColorSetting("strokeColor")(newColor);
+                                onChangeColorSetting("iconFill")(newColor); // Update iconFill too
+                              }}
+                              recentColors={recentColors}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </TabsContent>
+                    <TabsContent value="2">
+                      <div>
+                        {!customSvgIsPng && (
+                          <div className="flex items-center justify-between">
+                            <span className="pr-5 text-xs">Color</span>
+                            <ColorInput
+                              value={settings.iconFill}
+                              name={"iconFill"}
+                              onChange={(newColor) => {
+                                onChangeColorSetting("iconFill")(newColor);
+                                onChangeColorSetting("strokeColor")(newColor); // Update strokeColor too
+                              }}
+                              recentColors={recentColors}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </TabsContent>
+                    <TabsContent value="3">
+                      <div>
+                        {!customSvgIsPng && (
+                          <div className="flex items-center justify-between">
+                            <span className="pr-5 text-xs">Color</span>
+                            <ColorInput
+                              value={settings.strokeColor}
+                              name={"strokeColor"}
+                              onChange={(newColor) => {
+                                onChangeColorSetting("strokeColor")(newColor);
+                                onChangeColorSetting("iconFill")(newColor); // Update iconFill too
+                              }}
+                              recentColors={recentColors}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </TabsContent>
+                    <TabsContent value="4">
+                      <div>
+                        {!customSvgIsPng && (
+                          <div className="flex items-center justify-between">
+                            <span className="pr-5 text-xs">Color</span>
+                            <ColorInput
+                              value={settings.iconFill}
+                              name={"iconFill"}
+                              onChange={(newColor) => {
+                                onChangeColorSetting("iconFill")(newColor);
+                                onChangeColorSetting("strokeColor")(newColor); // Update strokeColor too
+                              }}
+                              recentColors={recentColors}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </TabsContent>
+
                     <div className="grid items-center gap-2">
                       <div className="flex items-center justify-between">
                         <span className="pr-5 text-xs">Stroke Width</span>
@@ -188,13 +274,15 @@ export const SideIcon = ({
                           <span className="text-xs"> px</span>
                         </div>
                       </div>
+
                       <div className="">
                         <div className="flex flex-1 justify-end gap-2">
                           <Slider
                             name="strokeWidth"
                             defaultValue={[settings.strokeWidth]}
-                            min={0.1}
+                            min={0}
                             max={3}
+                            step={0.1}
                           />
                         </div>
                       </div>
@@ -220,16 +308,6 @@ export const SideIcon = ({
                           />
                         </div>
                       </div>
-                    </div>
-                    <div className="flex items-center justify-between py-3">
-                      <span className="pr-5 text-xs">Reset</span>
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        onClick={handleReset}
-                      >
-                        <DIcons.Repeat />
-                      </Button>
                     </div>
                   </div>
                 </div>

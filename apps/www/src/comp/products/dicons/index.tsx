@@ -2,18 +2,14 @@
 
 import type { DIconsSettingsType } from "@/src/types/color";
 import type { ColorChangeHandler } from "react-color";
-import { Suspense, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/registry/default/designali/ui/button";
 import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
+import { Tabs } from "@/registry/default/designali/ui/tabs";
 import { toast } from "@/registry/default/designali/ui/toasts";
-import {
-  debounce,
-  randomElement,
-  randomNumberBetween,
-  uniq,
-} from "@/src/lib/dutils";
+import { debounce, randomElement, uniq } from "@/src/lib/dutils";
 import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
@@ -37,11 +33,11 @@ export default function DIconsPage() {
   const formRef = useRef<HTMLFormElement>(null);
   const [settings, setSettings] = useState<DIconsSettingsType>({
     icon: "",
-    iconFill: "none",
+    iconFill: "currentColor",
     strokeColor: "currentColor",
     iconSize: 150,
     linecap: "round",
-    linejoin: "",
+    linejoin: "round",
     strokeWidth: 1.5,
   });
 
@@ -165,60 +161,61 @@ export default function DIconsPage() {
   }, []);
 
   return (
-    <main className={"md:flex"}>
-      <SideIcon
-        settings={settings}
-        svgRef={svgRef}
-        IconComponent={IconComponent}
-        pngClipboardSupported={pngClipboardSupported}
-        onCopyImageToClipboard={onCopyImageToClipboard}
-        showExportModal={showExportModal}
-        setShowExportModal={setShowExportModal}
-        formRef={formRef}
-        onFormChange={onFormChange}
-        customSvgIsPng={customSvgIsPng}
-        recentColors={recentColors}
-        onChangeColorSetting={onChangeColorSetting}
-        iconFill={settings.iconFill}
-      />
-      <div className="w-full">
+    <main>
+      <Tabs className={"md:flex"} defaultValue="1">
+        <SideIcon
+          settings={settings}
+          svgRef={svgRef}
+          IconComponent={IconComponent}
+          pngClipboardSupported={pngClipboardSupported}
+          onCopyImageToClipboard={onCopyImageToClipboard}
+          showExportModal={showExportModal}
+          setShowExportModal={setShowExportModal}
+          formRef={formRef}
+          onFormChange={onFormChange}
+          customSvgIsPng={customSvgIsPng}
+          recentColors={recentColors}
+          onChangeColorSetting={onChangeColorSetting}
+        />
         <div className="w-full">
-          <div className="h-full w-full">
-            <div>
-              <Navigation
-                settings={settings}
-                searchTerm={searchTerm}
-                searchRef={searchRef}
-                onChangeSearchTerm={onChangeSearchTerm}
-                filteredDIcons={filteredDIcons}
-              />
-              <div className="w-full px-6">
-                {filteredDIcons.length === 0 ? (
-                  <div className="mt-20 grid gap-2 text-center">
-                    <p>We couldn’t find an icon for that</p>
-                    <Link className="" href={`mailto:?subject=Request%20Icon`}>
-                      <Button>Request an Icon</Button>
-                    </Link>
-                  </div>
-                ) : (
-                  <div className="my-6 w-full">
-                    <h1 className="pb-3 text-slate-600 dark:text-slate-400">
-                      {searchTerm ? "Results" : "All Icons"}
-                    </h1>
-                    <ScrollArea className="h-screen w-full">
-                      <MainIcons
-                        settings={settings}
-                        filteredDIcons={filteredDIcons}
-                        onChangeIcon={onChangeIcon}
-                      />
-                    </ScrollArea>
-                  </div>
-                )}
+          <div className="w-full">
+            <div className="h-full w-full">
+              <div>
+                <Navigation
+                  settings={settings}
+                  searchTerm={searchTerm}
+                  searchRef={searchRef}
+                  onChangeSearchTerm={onChangeSearchTerm}
+                  filteredDIcons={filteredDIcons}
+                />
+                <div className="w-full px-6">
+                  {filteredDIcons.length === 0 ? (
+                    <div className="mt-10 grid gap-2 ">
+                      <p>We couldn’t find an icon for that</p>
+                      <Link
+                        className=""
+                        href={`mailto:?subject=Request%20Icon`}
+                      >
+                        <Button>Request an Icon</Button>
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className=" w-full">
+                      <ScrollArea className="h-screen w-full">
+                        <MainIcons
+                          settings={settings}
+                          filteredDIcons={filteredDIcons}
+                          onChangeIcon={onChangeIcon}
+                        />
+                      </ScrollArea>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Tabs>
     </main>
   );
 }

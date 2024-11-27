@@ -42,7 +42,7 @@ export const ColorInput = ({
             type="text"
             value={value}
             disabled={disabled}
-            className=""
+            readOnly
           />
           <PopoverTrigger>
             <div
