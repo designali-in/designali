@@ -15,6 +15,8 @@ export const BellElectric = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M18.8 4A6.3 8.7 0 0 1 20 9" />
         <path d="M9 9h.01" />

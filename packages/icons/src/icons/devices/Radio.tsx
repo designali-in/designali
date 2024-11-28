@@ -15,6 +15,8 @@ export const Radio = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
         <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />

@@ -15,6 +15,8 @@ export const Construction = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect x="2" y="6" width="20" height="8" rx="1" />
         <path d="M17 14v7" />

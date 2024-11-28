@@ -15,6 +15,8 @@ export const Soup = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
         <path d="M7 21h10" />

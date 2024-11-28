@@ -15,6 +15,8 @@ export const BluetoothOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m17 17-5 5V12l-5 5" />
         <path d="m2 2 20 20" />

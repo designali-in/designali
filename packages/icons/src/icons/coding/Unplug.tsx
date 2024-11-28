@@ -15,6 +15,8 @@ export const Unplug = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m19 5 3-3" />
         <path d="m2 22 3-3" />

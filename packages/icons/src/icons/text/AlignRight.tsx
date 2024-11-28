@@ -15,6 +15,8 @@ export const AlignRight = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M21 12H9" />
         <path d="M21 18H7" />

@@ -15,6 +15,8 @@ export const Sprout = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M7 20h10" />
         <path d="M10 20c5.5-2.5.8-6.4 3-10" />

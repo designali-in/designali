@@ -15,6 +15,8 @@ export const Dna = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m10 16 1.5 1.5" />
         <path d="m14 8-1.5-1.5" />

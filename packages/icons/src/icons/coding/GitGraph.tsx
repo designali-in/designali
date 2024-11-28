@@ -15,6 +15,8 @@ export const GitGraph = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="5" cy="6" r="3" />
         <path d="M5 9v6" />

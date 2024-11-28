@@ -15,6 +15,8 @@ export const PhilippinePeso = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M20 11H4" />
         <path d="M20 7H4" />

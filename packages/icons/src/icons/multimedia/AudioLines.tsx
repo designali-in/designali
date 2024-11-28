@@ -15,6 +15,8 @@ export const AudioLines = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M2 10v3" />
         <path d="M6 6v11" />

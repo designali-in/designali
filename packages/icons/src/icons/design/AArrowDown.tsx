@@ -15,6 +15,8 @@ export const AArrowDown = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M3.5 13h6" />
         <path d="m2 16 4.5-9 4.5 9" />

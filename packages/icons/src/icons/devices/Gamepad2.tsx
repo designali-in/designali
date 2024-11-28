@@ -15,6 +15,8 @@ export const Gamepad2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="6" x2="10" y1="11" y2="11" />
         <line x1="8" x2="8" y1="9" y2="13" />

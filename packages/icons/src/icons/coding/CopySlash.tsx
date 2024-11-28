@@ -15,6 +15,8 @@ export const CopySlash = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="12" x2="18" y1="18" y2="12" />
         <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />

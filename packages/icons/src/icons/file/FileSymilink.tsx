@@ -15,6 +15,8 @@ export const FileSymilink = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m10 18 3-3-3-3" />
         <path d="M14 2v4a2 2 0 0 0 2 2h4" />

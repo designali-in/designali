@@ -15,6 +15,8 @@ export const MegaphoneOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M9.26 9.26 3 11v3l14.14 3.14" />
         <path d="M21 15.34V6l-7.31 2.03" />

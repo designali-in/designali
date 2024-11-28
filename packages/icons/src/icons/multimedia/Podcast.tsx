@@ -15,6 +15,8 @@ export const Podcast = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M16.85 18.58a9 9 0 1 0-9.7 0" />
         <path d="M8 14a5 5 0 1 1 8 0" />

@@ -15,6 +15,8 @@ export const HandPlater = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 3V2" />
         <path d="M5 10a7.1 7.1 0 0 1 14 0" />

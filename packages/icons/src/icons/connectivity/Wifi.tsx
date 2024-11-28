@@ -15,6 +15,8 @@ export const Wifi = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 20h.01" />
         <path d="M2 8.82a15 15 0 0 1 20 0" />

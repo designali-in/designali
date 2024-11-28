@@ -15,6 +15,8 @@ export const Tally5 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M4 4v16" />
         <path d="M9 4v16" />

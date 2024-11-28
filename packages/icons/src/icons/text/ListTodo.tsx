@@ -15,6 +15,8 @@ export const ListTodo = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect x="3" y="5" width="6" height="6" rx="1" />
         <path d="m3 17 2 2 4-4" />

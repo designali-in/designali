@@ -15,6 +15,8 @@ export const Tent = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M3.5 21 14 3" />
         <path d="M20.5 21 10 3" />

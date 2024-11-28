@@ -15,6 +15,8 @@ export const Languages = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m5 8 6 6" />
         <path d="m4 14 6-6 2-3" />

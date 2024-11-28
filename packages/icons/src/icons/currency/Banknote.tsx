@@ -15,6 +15,8 @@ export const Banknote = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="20" height="12" x="2" y="6" rx="2" />
         <circle cx="12" cy="12" r="2" />

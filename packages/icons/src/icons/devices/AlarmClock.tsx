@@ -15,6 +15,8 @@ export const AlarmClock = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="12" cy="13" r="8" />
         <path d="M12 9v4l2 2" />

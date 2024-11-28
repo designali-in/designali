@@ -15,6 +15,8 @@ export const ListCollapse = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m3 10 2.5-2.5L3 5" />
         <path d="m3 19 2.5-2.5L3 14" />

@@ -15,6 +15,8 @@ export const WineOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M8 22h8" />
         <path d="M7 10h3m7 0h-1.343" />

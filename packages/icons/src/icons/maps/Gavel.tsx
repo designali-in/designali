@@ -15,6 +15,8 @@ export const Gavel = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8" />
         <path d="m16 16 6-6" />

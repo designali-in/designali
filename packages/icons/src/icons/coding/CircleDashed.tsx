@@ -15,6 +15,8 @@ export const CircleDashed = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10.1 2.182a10 10 0 0 1 3.8 0" />
         <path d="M13.9 21.818a10 10 0 0 1-3.8 0" />

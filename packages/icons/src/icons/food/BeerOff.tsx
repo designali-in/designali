@@ -15,6 +15,8 @@ export const BeerOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M13 13v5" />
         <path d="M17 11.47V8" />

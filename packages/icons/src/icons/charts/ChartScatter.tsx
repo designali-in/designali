@@ -15,6 +15,8 @@ export const ChartScatter = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
         <circle cx="18.5" cy="5.5" r=".5" fill="currentColor" />

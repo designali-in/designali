@@ -15,6 +15,8 @@ export const GitMerge = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="18" cy="18" r="3" />
         <circle cx="6" cy="6" r="3" />

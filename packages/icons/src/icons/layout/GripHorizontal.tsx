@@ -15,6 +15,8 @@ export const GripHorizontal = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="12" cy="9" r="1" />
         <circle cx="19" cy="9" r="1" />

@@ -15,6 +15,8 @@ export const QrCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="5" height="5" x="3" y="3" rx="1" />
         <rect width="5" height="5" x="16" y="3" rx="1" />

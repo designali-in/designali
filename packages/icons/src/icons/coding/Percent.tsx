@@ -15,6 +15,8 @@ export const Percent = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="19" x2="5" y1="5" y2="19" />
         <circle cx="6.5" cy="6.5" r="2.5" />

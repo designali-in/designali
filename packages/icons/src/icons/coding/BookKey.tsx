@@ -15,6 +15,8 @@ export const BookKey = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m19 3 1 1" />
         <path d="m20 2-4.5 4.5" />

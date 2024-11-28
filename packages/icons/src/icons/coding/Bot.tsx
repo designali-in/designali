@@ -15,6 +15,8 @@ export const Bot = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 8V4H8" />
         <rect width="16" height="12" x="4" y="8" rx="2" />

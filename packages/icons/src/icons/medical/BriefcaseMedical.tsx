@@ -15,6 +15,8 @@ export const BriefcaseMedical = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 11v4" />
         <path d="M14 13h-4" />

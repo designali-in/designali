@@ -15,6 +15,8 @@ export const LampWallUp = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M11 4h6l3 7H8l3-7Z" />
         <path d="M14 11v5a2 2 0 0 1-2 2H8" />

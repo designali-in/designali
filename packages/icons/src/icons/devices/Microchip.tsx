@@ -15,6 +15,8 @@ export const Microchip = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M18 12h2" />
         <path d="M18 16h2" />

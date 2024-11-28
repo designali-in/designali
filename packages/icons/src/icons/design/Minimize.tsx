@@ -15,6 +15,8 @@ export const Minimize = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M8 3v3a2 2 0 0 1-2 2H3" />
         <path d="M21 8h-3a2 2 0 0 1-2-2V3" />

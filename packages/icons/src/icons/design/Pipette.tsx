@@ -15,6 +15,8 @@ export const Pipette = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m2 22 1-1h3l9-9" />
         <path d="M3 21v-3l9-9" />

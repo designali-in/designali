@@ -15,6 +15,8 @@ export const Syringe = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m18 2 4 4" />
         <path d="m17 7 3-3" />

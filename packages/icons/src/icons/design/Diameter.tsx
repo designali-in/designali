@@ -15,6 +15,8 @@ export const Diameter = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="19" cy="19" r="2" />
         <circle cx="5" cy="5" r="2" />

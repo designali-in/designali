@@ -15,6 +15,8 @@ export const AlarmSmoke = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M11 21c0-2.5 2-2.5 2-5" />
         <path d="M16 21c0-2.5 2-2.5 2-5" />

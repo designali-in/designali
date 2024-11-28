@@ -15,6 +15,8 @@ export const SquareKanban = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="18" height="18" x="3" y="3" rx="2" />
         <path d="M8 7v7" />

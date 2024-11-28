@@ -15,6 +15,8 @@ export const SendToBack = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect x="14" y="14" width="8" height="8" rx="2" />
         <rect x="2" y="2" width="8" height="8" rx="2" />

@@ -15,6 +15,8 @@ export const KeyboardOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M 20 4 A2 2 0 0 1 22 6" />
         <path d="M 22 6 L 22 16.41" />

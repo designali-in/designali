@@ -15,6 +15,8 @@ export const SignalMedium = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M2 20h.01" />
         <path d="M7 20v-4" />

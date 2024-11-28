@@ -15,6 +15,8 @@ export const Binary = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect x="14" y="14" width="4" height="6" rx="2" />
         <rect x="6" y="4" width="4" height="6" rx="2" />

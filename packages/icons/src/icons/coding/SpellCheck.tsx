@@ -15,6 +15,8 @@ export const SpellCheck = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m6 16 6-12 6 12" />
         <path d="M8 12h8" />

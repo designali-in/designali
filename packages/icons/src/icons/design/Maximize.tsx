@@ -15,6 +15,8 @@ export const Maximize = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M8 3H5a2 2 0 0 0-2 2v3" />
         <path d="M21 8V5a2 2 0 0 0-2-2h-3" />

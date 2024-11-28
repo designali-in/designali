@@ -15,6 +15,8 @@ export const FlagTriangleLeft = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M17 22V2L7 7l10 5" />
       </svg>

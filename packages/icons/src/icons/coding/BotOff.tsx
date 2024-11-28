@@ -15,6 +15,8 @@ export const BotOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M13.67 8H18a2 2 0 0 1 2 2v4.33" />
         <path d="M2 14h2" />

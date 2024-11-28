@@ -15,6 +15,8 @@ export const Drama = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 11h.01" />
         <path d="M14 6h.01" />

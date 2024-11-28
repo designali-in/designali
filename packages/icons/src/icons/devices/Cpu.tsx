@@ -15,6 +15,8 @@ export const Cpu = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="16" height="16" x="4" y="4" rx="2" />
         <rect width="6" height="6" x="9" y="9" rx="1" />

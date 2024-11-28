@@ -15,6 +15,8 @@ export const Martini = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M8 22h8" />
         <path d="M12 11v11" />

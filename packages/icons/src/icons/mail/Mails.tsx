@@ -15,6 +15,8 @@ export const Mails = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="16" height="13" x="6" y="4" rx="2" />
         <path d="m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7" />

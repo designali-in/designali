@@ -15,6 +15,8 @@ export const Combine = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="8" height="8" x="2" y="2" rx="2" />
         <path d="M14 2c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2" />

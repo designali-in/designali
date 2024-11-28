@@ -15,6 +15,8 @@ export const Brackets = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M16 3h3v18h-3" />
         <path d="M8 21H5V3h3" />

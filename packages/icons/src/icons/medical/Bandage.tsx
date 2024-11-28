@@ -15,6 +15,8 @@ export const Bandage = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 10.01h.01" />
         <path d="M10 14.01h.01" />

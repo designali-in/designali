@@ -15,6 +15,8 @@ export const MonitorX = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m14.5 12.5-5-5" />
         <path d="m9.5 12.5 5-5" />

@@ -15,6 +15,8 @@ export const TextSearch = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M21 6H3" />
         <path d="M10 12H3" />

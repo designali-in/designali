@@ -15,6 +15,8 @@ export const WasingMachine = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M3 6h3" />
         <path d="M17 6h.01" />

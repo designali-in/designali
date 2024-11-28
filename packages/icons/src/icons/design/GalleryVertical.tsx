@@ -15,6 +15,8 @@ export const GalleryVertical = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M3 2h18" />
         <rect width="18" height="12" x="3" y="6" rx="2" />

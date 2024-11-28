@@ -15,6 +15,8 @@ export const Hammer = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9" />
         <path d="m18 15 4-4" />

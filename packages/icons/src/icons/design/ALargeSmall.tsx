@@ -15,6 +15,8 @@ export const ALargeSmall = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M21 14h-5" />
         <path d="M16 16v-3.5a2.5 2.5 0 0 1 5 0V16" />

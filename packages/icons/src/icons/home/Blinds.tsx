@@ -15,6 +15,8 @@ export const Blinds = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M3 3h18" />
         <path d="M20 7H8" />

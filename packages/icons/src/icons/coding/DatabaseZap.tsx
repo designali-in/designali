@@ -15,6 +15,8 @@ export const DatabaseZap = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <ellipse cx="12" cy="5" rx="9" ry="3" />
         <path d="M3 5V19A9 3 0 0 0 15 21.84" />

@@ -15,6 +15,8 @@ export const Fuel = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="3" x2="15" y1="22" y2="22" />
         <line x1="4" x2="14" y1="9" y2="9" />

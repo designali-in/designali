@@ -15,6 +15,8 @@ export const CodePen = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m18 16 4-4-4-4" />
         <path d="m6 8-4 4 4 4" />

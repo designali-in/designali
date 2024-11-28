@@ -15,6 +15,8 @@ export const Music2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="8" cy="18" r="4" />
         <path d="M12 18V2l7 4" />

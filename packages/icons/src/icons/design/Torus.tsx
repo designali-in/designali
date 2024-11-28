@@ -15,6 +15,8 @@ export const Torus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <ellipse cx="12" cy="11" rx="3" ry="2" />
         <ellipse cx="12" cy="12.5" rx="10" ry="8.5" />

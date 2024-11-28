@@ -15,6 +15,8 @@ export const ParkingMeter = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M9 9a3 3 0 1 1 6 0" />
         <path d="M12 12v3" />

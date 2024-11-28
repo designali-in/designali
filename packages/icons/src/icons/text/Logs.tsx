@@ -15,6 +15,8 @@ export const Logs = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M13 12h8" />
         <path d="M13 18h8" />

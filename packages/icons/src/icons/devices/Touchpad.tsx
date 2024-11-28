@@ -15,6 +15,8 @@ export const Touchpad = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="20" height="16" x="2" y="4" rx="2" />
         <path d="M2 14h20" />

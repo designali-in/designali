@@ -15,6 +15,8 @@ export const Italic = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="19" x2="10" y1="4" y2="4" />
         <line x1="14" x2="5" y1="20" y2="20" />

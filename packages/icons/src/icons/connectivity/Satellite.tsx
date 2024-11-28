@@ -15,6 +15,8 @@ export const Satellite = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M13 7 9 3 5 7l4 4" />
         <path d="m17 11 4 4-4 4-4-4" />

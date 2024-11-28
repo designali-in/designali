@@ -15,6 +15,8 @@ export const SendHorizontal = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m3 3 3 9-3 9 19-9Z" />
         <path d="M6 12h16" />

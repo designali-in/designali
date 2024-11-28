@@ -15,6 +15,8 @@ export const Usb = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="10" cy="7" r="1" />
         <circle cx="4" cy="20" r="1" />

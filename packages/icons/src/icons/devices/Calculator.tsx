@@ -15,6 +15,8 @@ export const Calculator = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="16" height="20" x="4" y="2" rx="2" />
         <line x1="8" x2="16" y1="6" y2="6" />

@@ -15,6 +15,8 @@ export const ChartNoAxesGantt = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M8 6h10" />
         <path d="M6 12h9" />

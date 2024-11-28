@@ -15,6 +15,8 @@ export const PointerOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 4.5V4a2 2 0 0 0-2.41-1.957" />
         <path d="M13.9 8.4a2 2 0 0 0-1.26-1.295" />

@@ -15,6 +15,8 @@ export const Webcam = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="12" cy="10" r="8" />
         <circle cx="12" cy="10" r="3" />

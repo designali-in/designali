@@ -15,6 +15,8 @@ export const CircleSlash = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="12" cy="12" r="10" />
         <line x1="9" x2="15" y1="15" y2="9" />

@@ -15,6 +15,8 @@ export const ReplyAll = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <polyline points="7 17 2 12 7 7" />
         <polyline points="12 17 7 12 12 7" />

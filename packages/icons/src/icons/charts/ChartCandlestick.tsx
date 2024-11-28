@@ -15,6 +15,8 @@ export const ChartCandlestick = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M9 5v4" />
         <rect width="4" height="6" x="7" y="9" rx="1" />

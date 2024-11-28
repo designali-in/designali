@@ -15,6 +15,8 @@ export const SquareScissors = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect width="20" height="20" x="2" y="2" rx="2" />
         <circle cx="8" cy="8" r="2" />

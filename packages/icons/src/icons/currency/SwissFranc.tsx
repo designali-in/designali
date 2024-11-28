@@ -15,6 +15,8 @@ export const SwissFranc = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 21V3h8" />
         <path d="M6 16h9" />

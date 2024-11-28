@@ -15,6 +15,8 @@ export const ShipWheel = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="12" cy="12" r="8" />
         <path d="M12 2v7.5" />

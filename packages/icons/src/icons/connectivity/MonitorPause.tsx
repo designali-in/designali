@@ -15,6 +15,8 @@ export const MonitorPause = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 13V7" />
         <path d="M14 13V7" />

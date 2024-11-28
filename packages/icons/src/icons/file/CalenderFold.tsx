@@ -15,6 +15,8 @@ export const CalenderFold = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M8 2v4" />
         <path d="M16 2v4" />

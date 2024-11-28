@@ -15,6 +15,8 @@ export const Projector = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M5 7 3 5" />
         <path d="M9 6V3" />

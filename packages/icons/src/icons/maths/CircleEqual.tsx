@@ -15,6 +15,8 @@ export const CircleEqual = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M7 10h10" />
         <path d="M7 14h10" />

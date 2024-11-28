@@ -15,6 +15,8 @@ export const ChartColumn = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M3 3v16a2 2 0 0 0 2 2h16" />
         <path d="M18 17V9" />

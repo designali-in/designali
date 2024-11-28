@@ -15,6 +15,8 @@ export const Subscript = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m4 5 8 8" />
         <path d="m12 5-8 8" />

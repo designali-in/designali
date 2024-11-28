@@ -15,6 +15,8 @@ export const Antenna = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M2 12 7 2" />
         <path d="m7 12 5-10" />

@@ -15,6 +15,8 @@ export const Navigation2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <polygon points="12 2 19 21 12 17 5 21 12 2" />
       </svg>

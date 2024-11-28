@@ -15,6 +15,8 @@ export const Tangent = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="17" cy="4" r="2" />
         <path d="M15.59 5.41 5.41 15.59" />

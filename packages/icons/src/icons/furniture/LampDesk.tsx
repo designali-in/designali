@@ -15,6 +15,8 @@ export const LampDesk = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m14 5-3 3 2 7 8-8-7-2Z" />
         <path d="m14 5-3 3-3-3 3-3 3 3Z" />

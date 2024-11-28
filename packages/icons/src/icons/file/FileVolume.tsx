@@ -15,6 +15,8 @@ export const FileVolume = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M11 11a5 5 0 0 1 0 6" />
         <path d="M14 2v4a2 2 0 0 0 2 2h4" />

@@ -15,6 +15,8 @@ export const PoundSterling = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M18 7c0-5.333-8-5.333-8 0" />
         <path d="M10 7v14" />

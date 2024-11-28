@@ -15,6 +15,8 @@ export const DraftingCompass = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m12.99 6.74 1.93 3.44" />
         <path d="M19.136 12a10 10 0 0 1-14.271 0" />

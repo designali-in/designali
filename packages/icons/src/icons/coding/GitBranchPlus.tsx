@@ -15,6 +15,8 @@ export const GitBranchPlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M6 3v12" />
         <path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />

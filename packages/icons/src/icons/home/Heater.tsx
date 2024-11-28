@@ -15,6 +15,8 @@ export const Heater = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M11 8c2-3-2-3 0-6" />
         <path d="M15.5 8c2-3-2-3 0-6" />

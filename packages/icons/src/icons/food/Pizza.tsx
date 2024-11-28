@@ -15,6 +15,8 @@ export const Pizza = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M15 11h.01" />
         <path d="M11 15h.01" />

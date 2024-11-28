@@ -15,6 +15,8 @@ export const Asterisk = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 6v12" />
         <path d="M17.196 9 6.804 15" />

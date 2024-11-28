@@ -15,6 +15,8 @@ export const Divide = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="12" cy="6" r="1" />
         <line x1="5" x2="19" y1="12" y2="12" />

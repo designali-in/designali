@@ -15,6 +15,8 @@ export const ChartNetwork = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m13.11 7.664 1.78 2.672" />
         <path d="m14.162 12.788-3.324 1.424" />

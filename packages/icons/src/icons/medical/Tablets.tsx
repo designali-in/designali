@@ -15,6 +15,8 @@ export const Tablets = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="7" cy="7" r="5" />
         <circle cx="17" cy="17" r="5" />

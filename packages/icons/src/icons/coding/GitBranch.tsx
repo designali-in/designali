@@ -15,6 +15,8 @@ export const GitBranch = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="6" x2="6" y1="3" y2="15" />
         <circle cx="18" cy="6" r="3" />

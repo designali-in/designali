@@ -15,6 +15,8 @@ export const CopyPlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="15" x2="15" y1="12" y2="18" />
         <line x1="12" x2="18" y1="15" y2="15" />

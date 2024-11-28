@@ -15,6 +15,8 @@ export const Wheatoff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m2 22 10-10" />
         <path d="m16 8-1.17 1.17" />

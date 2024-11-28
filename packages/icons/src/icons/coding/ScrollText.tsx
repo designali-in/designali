@@ -15,6 +15,8 @@ export const ScrollText = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M15 12h-5" />
         <path d="M15 8h-5" />

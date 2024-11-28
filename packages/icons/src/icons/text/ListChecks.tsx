@@ -15,6 +15,8 @@ export const ListChecks = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m3 17 2 2 4-4" />
         <path d="m3 7 2 2 4-4" />

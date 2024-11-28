@@ -15,6 +15,8 @@ export const RussianRubie = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M6 11h8a4 4 0 0 0 0-8H9v18" />
         <path d="M6 15h8" />

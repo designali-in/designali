@@ -15,6 +15,8 @@ export const SaveOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M13 13H8a1 1 0 0 0-1 1v7" />
         <path d="M14 8h1" />

@@ -15,6 +15,8 @@ export const TentTree = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="4" cy="4" r="2" />
         <path d="m14 5 3-3 3 3" />

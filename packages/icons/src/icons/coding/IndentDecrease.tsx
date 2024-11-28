@@ -15,6 +15,8 @@ export const IndentDecrease = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <polyline points="7 8 3 12 7 16" />
         <line x1="21" x2="11" y1="12" y2="12" />

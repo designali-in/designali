@@ -15,6 +15,8 @@ export const Pilcrow = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M13 4v16" />
         <path d="M17 4v16" />

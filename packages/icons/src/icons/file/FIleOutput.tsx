@@ -15,6 +15,8 @@ export const FIleOutput = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M14 2v4a2 2 0 0 0 2 2h4" />
         <path d="M4 7V4a2 2 0 0 1 2-2 2 2 0 0 0-2 2" />

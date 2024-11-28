@@ -15,6 +15,8 @@ export const TrendingDown = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <polyline points="22 17 13.5 8.5 8.5 13.5 2 7" />
         <polyline points="16 17 22 17 22 11" />

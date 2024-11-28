@@ -15,6 +15,8 @@ export const CaseLower = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <circle cx="7" cy="12" r="3" />
         <path d="M10 9v6" />

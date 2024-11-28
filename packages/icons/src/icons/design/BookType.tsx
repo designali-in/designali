@@ -15,6 +15,8 @@ export const BookType = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 13h4" />
         <path d="M12 6v7" />

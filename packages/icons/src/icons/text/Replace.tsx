@@ -15,6 +15,8 @@ export const Replace = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M14 4a2 2 0 0 1 2-2" />
         <path d="M16 10a2 2 0 0 1-2-2" />

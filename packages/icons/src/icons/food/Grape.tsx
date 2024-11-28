@@ -15,6 +15,8 @@ export const Grape = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M22 5V2l-5.89 5.89" />
         <circle cx="16.6" cy="15.89" r="3" />

@@ -15,6 +15,8 @@ export const TextCursorInput = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M5 4h1a3 3 0 0 1 3 3 3 3 0 0 1 3-3h1" />
         <path d="M13 20h-1a3 3 0 0 1-3-3 3 3 0 0 1-3 3H5" />

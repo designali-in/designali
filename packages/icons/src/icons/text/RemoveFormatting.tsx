@@ -15,6 +15,8 @@ export const RemoveFormatting = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M4 7V4h16v3" />
         <path d="M5 20h6" />

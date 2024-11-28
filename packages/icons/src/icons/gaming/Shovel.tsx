@@ -15,6 +15,8 @@ export const Shovel = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M2 22v-5l5-5 5 5-5 5z" />
         <path d="M9.5 14.5 16 8" />

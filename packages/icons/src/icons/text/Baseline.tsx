@@ -15,6 +15,8 @@ export const Baseline = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M4 20h16" />
         <path d="m6 16 6-12 6 12" />

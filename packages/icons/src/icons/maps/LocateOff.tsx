@@ -15,6 +15,8 @@ export const LocateOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="2" x2="5" y1="12" y2="12" />
         <line x1="19" x2="22" y1="12" y2="12" />

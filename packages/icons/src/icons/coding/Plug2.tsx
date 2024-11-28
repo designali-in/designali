@@ -15,6 +15,8 @@ export const Plug2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M9 2v6" />
         <path d="M15 2v6" />

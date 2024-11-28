@@ -15,6 +15,8 @@ export const CaptionsOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10.5 5H19a2 2 0 0 1 2 2v8.5" />
         <path d="M17 11h-.5" />

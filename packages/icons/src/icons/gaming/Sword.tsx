@@ -15,6 +15,8 @@ export const Sword = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
         <line x1="13" x2="19" y1="19" y2="13" />

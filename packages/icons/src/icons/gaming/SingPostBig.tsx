@@ -15,6 +15,8 @@ export const SingPostBig = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 9H4L2 7l2-2h6" />
         <path d="M14 5h6l2 2-2 2h-6" />

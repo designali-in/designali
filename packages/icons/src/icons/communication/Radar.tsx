@@ -15,6 +15,8 @@ export const Radar = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" />
         <path d="M4 6h.01" />

@@ -15,6 +15,8 @@ export const ZapOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10.513 4.856 13.12 2.17a.5.5 0 0 1 .86.46l-1.377 4.317" />
         <path d="M15.656 10H20a1 1 0 0 1 .78 1.63l-1.72 1.773" />

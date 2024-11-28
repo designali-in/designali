@@ -15,6 +15,8 @@ export const Notebook = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M2 6h4" />
         <path d="M2 10h4" />

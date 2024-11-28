@@ -15,6 +15,8 @@ export const MonitorSpeaker = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M5.5 20H8" />
         <path d="M17 9h.01" />

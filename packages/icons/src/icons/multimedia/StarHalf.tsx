@@ -15,6 +15,8 @@ export const StarHalf = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 17.8 5.8 21 7 14.1 2 9.3l7-1L12 2" />
       </svg>

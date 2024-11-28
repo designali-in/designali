@@ -15,6 +15,8 @@ export const TablePropertise = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M15 3v18" />
         <rect width="18" height="18" x="3" y="3" rx="2" />

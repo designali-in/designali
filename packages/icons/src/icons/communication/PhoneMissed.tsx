@@ -15,6 +15,8 @@ export const PhoneMissed = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="22" x2="16" y1="2" y2="8" />
         <line x1="16" x2="22" y1="2" y2="8" />

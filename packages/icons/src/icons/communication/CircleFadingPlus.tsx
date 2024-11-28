@@ -15,6 +15,8 @@ export const CircleFadingPlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 2a10 10 0 0 1 7.38 16.75" />
         <path d="M12 8v8" />

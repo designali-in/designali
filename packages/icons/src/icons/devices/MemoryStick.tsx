@@ -15,6 +15,8 @@ export const MemoryStick = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M6 19v-3" />
         <path d="M10 19v-3" />

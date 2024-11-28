@@ -15,6 +15,8 @@ export const Goal = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 13V2l8 4-8 4" />
         <path d="M20.561 10.222a9 9 0 1 1-12.55-5.29" />

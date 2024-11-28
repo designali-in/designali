@@ -15,6 +15,8 @@ export const Frame = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="22" x2="2" y1="6" y2="6" />
         <line x1="22" x2="2" y1="18" y2="18" />

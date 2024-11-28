@@ -15,6 +15,8 @@ export const SquareCode = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 9.5 8 12l2 2.5" />
         <path d="m14 9.5 2 2.5-2 2.5" />

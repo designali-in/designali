@@ -15,6 +15,8 @@ export const Nfc = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M6 8.32a7.43 7.43 0 0 1 0 7.36" />
         <path d="M9.46 6.21a11.76 11.76 0 0 1 0 11.58" />

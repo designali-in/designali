@@ -15,6 +15,8 @@ export const Regex = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M17 3v10" />
         <path d="m12.67 5.5 8.66 5" />

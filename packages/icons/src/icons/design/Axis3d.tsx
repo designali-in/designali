@@ -15,6 +15,8 @@ export const Axis3d = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M4 4v16h16" />
         <path d="m4 20 7-7" />

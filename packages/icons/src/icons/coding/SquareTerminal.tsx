@@ -15,6 +15,8 @@ export const SquareTerminal = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m7 11 2-2-2-2" />
         <path d="M11 13h4" />

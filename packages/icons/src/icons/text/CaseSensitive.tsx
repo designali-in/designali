@@ -15,6 +15,8 @@ export const CaseSensitive = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m3 15 4-8 4 8" />
         <path d="M4 13h6" />

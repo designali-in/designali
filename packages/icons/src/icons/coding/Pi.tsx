@@ -15,6 +15,8 @@ export const Pi = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="9" x2="9" y1="4" y2="20" />
         <path d="M4 7c0-1.7 1.3-3 3-3h13" />

@@ -15,6 +15,8 @@ export const TableRowsSplit = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M14 10h2" />
         <path d="M15 22v-8" />

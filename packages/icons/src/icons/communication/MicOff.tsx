@@ -15,6 +15,8 @@ export const MicOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <line x1="2" x2="22" y1="2" y2="22" />
         <path d="M18.89 13.23A7.12 7.12 0 0 0 19 12v-2" />

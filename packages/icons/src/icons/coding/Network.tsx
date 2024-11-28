@@ -15,6 +15,8 @@ export const Network = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect x="16" y="16" width="6" height="6" rx="1" />
         <rect x="2" y="16" width="6" height="6" rx="1" />

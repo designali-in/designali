@@ -15,6 +15,8 @@ export const ImagePlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M16 5h6" />
         <path d="M19 2v6" />

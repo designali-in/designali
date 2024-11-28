@@ -15,6 +15,8 @@ export const FlipVertical2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m17 3-5 5-5-5h10" />
         <path d="m17 21-5-5-5 5h10" />

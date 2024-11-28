@@ -15,6 +15,8 @@ export const XNum = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M18 6 6 18" />
         <path d="m6 6 12 12" />

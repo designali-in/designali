@@ -15,6 +15,8 @@ export const Drum = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="m2 2 8 8" />
         <path d="m22 2-8 8" />

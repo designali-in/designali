@@ -15,6 +15,8 @@ export const Wand = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M15 4V2" />
         <path d="M15 16v-2" />

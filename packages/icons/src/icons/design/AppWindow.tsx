@@ -15,6 +15,8 @@ export const AppWindow = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <rect x="2" y="4" width="20" height="16" rx="2" />
         <path d="M10 4v4" />

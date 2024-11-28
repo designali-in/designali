@@ -15,6 +15,8 @@ export const BookDashed = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M12 17h2" />
         <path d="M12 22h2" />

@@ -15,6 +15,8 @@ export const FileDiff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M10 12.5 8 15l2 2.5" />
         <path d="m14 12.5 2 2.5-2 2.5" />

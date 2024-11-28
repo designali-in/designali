@@ -15,6 +15,8 @@ export const Heading = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M6 12h12" />
         <path d="M6 20V4" />

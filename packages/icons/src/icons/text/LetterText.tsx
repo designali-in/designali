@@ -15,6 +15,8 @@ export const LetterText = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...props}
+        ref={forwardedRef}
       >
         <path d="M15 12h6" />
         <path d="M15 6h6" />
