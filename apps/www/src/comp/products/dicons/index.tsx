@@ -24,7 +24,6 @@ export default function DIconsPage() {
   const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const router = useRouter();
-  const [scale, setScale] = useState<number>(1);
   const pngClipboardSupported = usePngClipboardSupported();
   const [showExportModal, setShowExportModal] = useState<boolean>(false);
   const [recentColors, setRecentColors] = useState<string[]>([]);
@@ -33,7 +32,7 @@ export default function DIconsPage() {
   const searchRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const [settings, setSettings] = useState<DIconsSettingsType>({
-    icon: "",
+    icon: "Designali",
     iconFill: "currentColor",
     strokeColor: "currentColor",
     iconSize: 150,
@@ -112,6 +111,12 @@ export default function DIconsPage() {
     setRecentColors((colors) => uniq([color, ...colors]).slice(0, 16));
   });
 
+  const onRandomIconClick = () => {
+    pushNewSettings({
+      icon: randomElement(Object.keys(DIcons) as "Designali"[]),
+    });
+  };
+
   const onChangeColorSetting =
     (settingName: string): ColorChangeHandler =>
     (newValue) => {
@@ -122,25 +127,10 @@ export default function DIconsPage() {
       onSaveRecentColor(color);
     };
 
-  useEffect(() => {
-    if (window.innerWidth < 512) {
-      setScale(window.innerWidth / 512 - 0.03125 * 2);
-    }
-    setSettings((currentSettings) => {
-      const randomIcon = randomElement(Object.keys(DIcons) as ""[]);
-      const settingsToSet = {
-        ...currentSettings,
-        icon: randomIcon,
-      };
-
-      return settingsToSet;
-    });
-  }, []);
-
   const onChangeIcon = (value: string) => {
     pushNewSettings({
-      icon: value as "",
-      customSvg: undefined,
+      icon: value as "Designali",
+      customSvg: null,
     });
   };
 
@@ -178,6 +168,7 @@ export default function DIconsPage() {
             customSvgIsPng={customSvgIsPng}
             recentColors={recentColors}
             onChangeColorSetting={onChangeColorSetting}
+            onRandomIconClick={onRandomIconClick}
           />
         </Suspense>
         <div className="w-full">

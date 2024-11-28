@@ -49,6 +49,7 @@ interface SideIconProps {
   onChangeColorSetting;
   formRef;
   onFormChange;
+  onRandomIconClick;
 }
 
 export const SideIcon = ({
@@ -64,6 +65,7 @@ export const SideIcon = ({
   svgRef,
   formRef,
   onFormChange,
+  onRandomIconClick,
 }: SideIconProps) => {
   return (
     <main className={""}>
@@ -142,7 +144,14 @@ export const SideIcon = ({
               </div>
             </div>
             <div className="mt-6 flex justify-center gap-2">
-              <Button variant="ghost" icon="Plus" size="icon"></Button>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={onRandomIconClick}
+                title="Random icon"
+              >
+                <DIcons.Shuffle className="!h-4 !w-4" />
+              </Button>
               <DIconsDrawer settings={settings} />
               <DropdownMenu>
                 <DropdownMenuTrigger>
@@ -180,6 +189,7 @@ export const SideIcon = ({
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+              <Button variant="ghost" icon="Plus" size="icon"></Button>
             </div>
           </div>
           <div className={""}>

@@ -37,7 +37,13 @@ export const ColorInput = ({
     <div>
       <Popover>
         <div className="flex gap-2">
-          <DInput name={name} type="text" value={value} readOnly />
+          <DInput
+            className="hidden"
+            name={name}
+            type="text"
+            value={value}
+            readOnly
+          />
           <PopoverTrigger>
             <div
               color={value}

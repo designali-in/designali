@@ -5,7 +5,7 @@ export interface DIconsSettingsType {
   iconFill: string;
   iconSize: number;
   strokeWidth: number;
-  icon?: "";
+  icon?: "Designali";
   customSvg?: string;
 }
 

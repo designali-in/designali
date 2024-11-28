@@ -1391,7 +1391,7 @@ export type DIcon = DesignaliIcon;
 export type ValidIcon = keyof typeof DIcons;
 
 export const DIcons = {
-  Designali: ({ ...props }: DesignaliProps) => (
+  Designali: ({ color = "currentColor", ...props }: DesignaliProps) => (
     <svg
       aria-hidden="true"
       focusable="false"
