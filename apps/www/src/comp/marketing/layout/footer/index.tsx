@@ -155,7 +155,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.X className="h-5 w-5" />
+            <DIcons.X strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -164,7 +164,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Instagram strokeWidth={1.5} className="h-5 w-5" />
+            <DIcons.Instagram strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -173,7 +173,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Threads strokeWidth={1.5} className="h-5 w-5" />
+            <DIcons.Threads strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -182,7 +182,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.WhatsApp className="h-5 w-5" />
+            <DIcons.WhatsApp strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -191,7 +191,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Behance className="h-5 w-5" />
+            <DIcons.Behance strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -200,7 +200,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Facebook className="h-5 w-5" />
+            <DIcons.Facebook strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -209,7 +209,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.LinkedIn className="h-5 w-5" />
+            <DIcons.LinkedIn strokeWidth={0} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -218,7 +218,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.YouTube className="h-5 w-5" />
+            <DIcons.YouTube strokeWidth={0} className="h-5 w-5" />
           </Link>
         </div>
         <ThemeToogle />
