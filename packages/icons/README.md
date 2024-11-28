@@ -1,1 +1,1 @@
-# Designali - DIcons
+# Designali
