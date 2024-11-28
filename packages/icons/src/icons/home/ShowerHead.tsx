@@ -12,11 +12,9 @@ export const ShowerHead = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="m4 4 2.5 2.5" />
         <path d="M13.5 6.5a4.95 4.95 0 0 0-7 7" />

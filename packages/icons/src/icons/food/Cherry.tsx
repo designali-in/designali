@@ -12,11 +12,9 @@ export const Cherry = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" />
         <path d="M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" />

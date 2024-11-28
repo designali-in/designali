@@ -4,7 +4,8 @@
 
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Button } from "@/registry/default/designali/ui/button";
 import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
@@ -13,25 +14,16 @@ import { Switch } from "@/registry/default/designali/ui/switch";
 import { TabsContent } from "@/registry/default/designali/ui/tabs";
 import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 import GridPattern from "@/src/comp/uis/grid-pattern";
-import { DIcons } from "dicons/src/dicon";
+import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/components/ui/toaster";
 
 import { ColorInput } from "./color-input";
@@ -79,7 +71,11 @@ export const SideIcon = ({
         <div className="p-6">
           <div className="relative">
             <p className="text-ali mb-2 text-center text-lg font-semibold">
-              {settings.icon}
+              <Suspense
+                fallback={<Skeleton className="h-10 w-40 rounded-md" />}
+              >
+                {settings.icon}
+              </Suspense>
             </p>
             <div className="relative aspect-square h-full w-full items-center justify-center border p-3">
               <GridPattern
@@ -108,12 +104,16 @@ export const SideIcon = ({
               />
               <div className="flex h-full w-full items-center justify-center">
                 <TabsContent value="1">
-                  <ResultDIcon
-                    size={250}
-                    settings={settings}
-                    IconComponent={IconComponent}
-                    ref={svgRef}
-                  />
+                  {!settings ? (
+                    <Skeleton className="h-40 w-40 rounded-md" />
+                  ) : (
+                    <ResultDIcon
+                      size={250}
+                      settings={settings}
+                      IconComponent={IconComponent}
+                      ref={svgRef}
+                    />
+                  )}
                 </TabsContent>
                 <TabsContent value="2">
                   <FillResultDIcon

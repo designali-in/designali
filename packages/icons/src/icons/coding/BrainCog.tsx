@@ -12,11 +12,9 @@ export const BrainCog = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M12 5a3 3 0 1 0-5.997.142 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588 4 4 0 0 0 7.636 2.106 3.2 3.2 0 0 0 .164-.546c.028-.13.306-.13.335 0a3.2 3.2 0 0 0 .163.546 4 4 0 0 0 7.636-2.106 4 4 0 0 0 .556-6.588 4 4 0 0 0-2.526-5.77A3 3 0 1 0 12 5" />
         <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />

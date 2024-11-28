@@ -12,11 +12,9 @@ export const Trees = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
         <path d="M7 16v6" />

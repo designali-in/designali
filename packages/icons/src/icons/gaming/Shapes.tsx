@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../../types";
+import type { DesignaliProps } from "../../types";
 
 export const Shapes = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ color = "currentColor", ...props }, forwardedRef) => {
@@ -12,9 +12,9 @@ export const Shapes = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         {...props}
         ref={forwardedRef}
       >

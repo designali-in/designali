@@ -12,11 +12,9 @@ export const Pointer = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M22 14a8 8 0 0 1-8 8" />
         <path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />

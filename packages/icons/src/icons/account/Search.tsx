@@ -15,7 +15,6 @@ export const Search = React.forwardRef<SVGSVGElement, DesignaliProps>(
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
-        color={color}
         {...props}
         ref={forwardedRef}
       >

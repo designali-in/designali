@@ -12,11 +12,9 @@ export const ArchiveRestore = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <rect width="20" height="5" x="2" y="3" rx="1" />
         <path d="M4 8v11a2 2 0 0 0 2 2h2" />

@@ -12,11 +12,9 @@ export const SquarePilcrow = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <rect width="18" height="18" x="3" y="3" rx="2" />
         <path d="M12 12H9.5a2.5 2.5 0 0 1 0-5H17" />

@@ -10,6 +10,10 @@ export const NPM = React.forwardRef<SVGSVGElement, DesignaliProps>(
         width="24"
         height="12.01"
         viewBox="0 0 24 12.01"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         {...props}
         ref={forwardedRef}
       >

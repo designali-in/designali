@@ -10,6 +10,10 @@ export const Nextjs = React.forwardRef<SVGSVGElement, DesignaliProps>(
         width="24"
         height="7.9"
         viewBox="0 0 24 7.9"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         {...props}
         ref={forwardedRef}
       >

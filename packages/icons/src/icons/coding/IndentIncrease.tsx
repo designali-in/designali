@@ -12,11 +12,9 @@ export const IndentIncrease = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <polyline points="3 8 7 12 3 16" />
         <line x1="21" x2="11" y1="12" y2="12" />

@@ -12,11 +12,9 @@ export const CircleParkingOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <circle cx="12" cy="12" r="10" />
         <path d="M9 17V7h4a3 3 0 0 1 0 6H9" />

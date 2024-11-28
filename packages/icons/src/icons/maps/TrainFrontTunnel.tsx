@@ -12,11 +12,9 @@ export const TrainFrontTunnel = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M2 22V12a10 10 0 1 1 20 0v10" />
         <path d="M15 6.8v1.4a3 2.8 0 1 1-6 0V6.8" />

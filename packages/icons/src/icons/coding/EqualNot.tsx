@@ -12,11 +12,9 @@ export const EqualNot = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <line x1="5" x2="19" y1="9" y2="9" />
         <line x1="5" x2="19" y1="15" y2="15" />

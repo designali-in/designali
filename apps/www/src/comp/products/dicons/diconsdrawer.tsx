@@ -5,9 +5,8 @@
 import React from "react";
 import { Button } from "@/registry/default/designali/ui/button";
 import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
-import { DIcons } from "dicons/src/dicon";
+import { DIcons } from "dicons";
 
-import { cn } from "@/lib/utils";
 import {
   Drawer,
   DrawerClose,

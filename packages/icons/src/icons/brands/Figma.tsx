@@ -10,6 +10,10 @@ export const Figma = React.forwardRef<SVGSVGElement, DesignaliProps>(
         width="17.82"
         height="24"
         viewBox="0 0 17.82 24"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         {...props}
         ref={forwardedRef}
       >

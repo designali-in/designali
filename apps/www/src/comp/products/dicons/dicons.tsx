@@ -4,6 +4,7 @@
 "use client";
 
 import { Suspense } from "react";
+import { Skeleton } from "@/registry/default/designali/ui/skeleton";
 import { TabsContent } from "@/registry/default/designali/ui/tabs";
 import { DIcons } from "dicons";
 
@@ -53,7 +54,7 @@ export const MainIcons = ({
                               key={icon}
                               className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900"
                             >
-                              <Suspense>
+                              <Suspense fallback={<Skeleton />}>
                                 <Component
                                   width={30}
                                   height={30}

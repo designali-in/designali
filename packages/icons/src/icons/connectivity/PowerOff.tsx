@@ -12,11 +12,9 @@ export const PowerOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M18.36 6.64A9 9 0 0 1 20.77 15" />
         <path d="M6.16 6.16a9 9 0 1 0 12.68 12.68" />

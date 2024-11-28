@@ -12,11 +12,9 @@ export const RouteOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <circle cx="6" cy="19" r="3" />
         <path d="M9 19h8.5c.4 0 .9-.1 1.3-.2" />

@@ -12,11 +12,9 @@ export const FilterX = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M13.013 3H2l8 9.46V19l4 2v-8.54l.9-1.055" />
         <path d="m22 3-5 5" />

@@ -12,11 +12,9 @@ export const ImageOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <line x1="2" x2="22" y1="2" y2="22" />
         <path d="M10.41 10.41a2 2 0 1 1-2.83-2.83" />

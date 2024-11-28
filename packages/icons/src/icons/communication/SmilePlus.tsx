@@ -12,11 +12,9 @@ export const SmilePlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M22 11v1a10 10 0 1 1-9-10" />
         <path d="M8 14s1.5 2 4 2 4-2 4-2" />

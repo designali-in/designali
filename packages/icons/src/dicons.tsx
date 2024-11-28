@@ -1439,32 +1439,6 @@ export const DIcons = {
   ZoomIn,
   ZoomOut,
 
-  // Buildings
-
-  Anvil,
-  BrickWall,
-  Building,
-  Building2,
-  Castle,
-  Church,
-  Cuboid,
-  Dam,
-  Factory,
-  Fence,
-  GraduationCap,
-  Hospital,
-  Hotel,
-  House,
-  HousePlus,
-  HousePlug,
-  Landmark,
-  School,
-  Store,
-  Theater,
-  University,
-  UtilityPole,
-  Warehouse,
-
   // Accounts & Access
 
   Activity,

@@ -12,11 +12,9 @@ export const RadioTower = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9" />
         <path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5" />

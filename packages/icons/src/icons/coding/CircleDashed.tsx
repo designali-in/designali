@@ -12,11 +12,9 @@ export const CircleDashed = React.forwardRef<SVGSVGElement, DesignaliProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        {...props}
-        ref={forwardedRef}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M10.1 2.182a10 10 0 0 1 3.8 0" />
         <path d="M13.9 21.818a10 10 0 0 1-3.8 0" />

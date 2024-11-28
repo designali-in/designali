@@ -2,17 +2,18 @@
 
 import type { DIconsSettingsType } from "@/src/types/color";
 import type { ColorChangeHandler } from "react-color";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/registry/default/designali/ui/button";
 import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
+import { Skeleton } from "@/registry/default/designali/ui/skeleton";
 import { Tabs } from "@/registry/default/designali/ui/tabs";
 import { toast } from "@/registry/default/designali/ui/toasts";
 import { debounce, randomElement, uniq } from "@/src/lib/dutils";
-import { DIcons } from "dicons";
 import { svgAsPngUri } from "save-svg-as-png";
 
+import { DIcons } from "../../../../../../packages/icons/src/dicons";
 import CustomSvgIcon from "./CustomSvgIcon";
 import { MainIcons } from "./dicons";
 import { Navigation } from "./nav";
@@ -163,20 +164,22 @@ export default function DIconsPage() {
   return (
     <main>
       <Tabs className={"md:flex"} defaultValue="1">
-        <SideIcon
-          settings={settings}
-          svgRef={svgRef}
-          IconComponent={IconComponent}
-          pngClipboardSupported={pngClipboardSupported}
-          onCopyImageToClipboard={onCopyImageToClipboard}
-          showExportModal={showExportModal}
-          setShowExportModal={setShowExportModal}
-          formRef={formRef}
-          onFormChange={onFormChange}
-          customSvgIsPng={customSvgIsPng}
-          recentColors={recentColors}
-          onChangeColorSetting={onChangeColorSetting}
-        />
+        <Suspense fallback={<Skeleton className="h-full w-full" />}>
+          <SideIcon
+            settings={settings}
+            svgRef={svgRef}
+            IconComponent={IconComponent}
+            pngClipboardSupported={pngClipboardSupported}
+            onCopyImageToClipboard={onCopyImageToClipboard}
+            showExportModal={showExportModal}
+            setShowExportModal={setShowExportModal}
+            formRef={formRef}
+            onFormChange={onFormChange}
+            customSvgIsPng={customSvgIsPng}
+            recentColors={recentColors}
+            onChangeColorSetting={onChangeColorSetting}
+          />
+        </Suspense>
         <div className="w-full">
           <div className="w-full">
             <div className="h-full w-full">
