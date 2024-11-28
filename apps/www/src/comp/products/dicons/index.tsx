@@ -3,6 +3,7 @@
 import type { DIconsSettingsType } from "@/src/types/color";
 import type { ColorChangeHandler } from "react-color";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/registry/default/designali/ui/button";
@@ -15,10 +16,44 @@ import { svgAsPngUri } from "save-svg-as-png";
 
 import { DIcons } from "../../../../../../packages/icons/src/dicons";
 import CustomSvgIcon from "./CustomSvgIcon";
-import { MainIcons } from "./dicons";
-import { Navigation } from "./nav";
-import { SideIcon } from "./side-icon";
 import usePngClipboardSupported from "./usePngClipboardSupported";
+
+const SideIcon = dynamic(() => import("./side-icon"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full flex-col gap-6 border-r p-6   sm:flex-row lg:flex-col">
+      <Skeleton className="h-72 w-72" />
+      <div className="flex w-1/2 flex-col justify-end gap-y-4 md:w-full">
+        <div className="flex gap-2">
+          <Skeleton className="h-9 w-1/3" />
+          <Skeleton className="h-9 w-1/3" />
+          <Skeleton className="h-9 w-1/3" />
+        </div>
+        <div className="mt-4 w-full space-y-6">
+          {Array.from({ length: 10 }).map((_, index) => (
+            <Skeleton key={index} className="h-9 w-full" />
+          ))}
+        </div>
+      </div>
+    </div>
+  ),
+});
+
+const MainIcons = dynamic(() => import("./dicons"), {
+  ssr: false,
+  loading: () => (
+    <div className="mt-6 flex flex-wrap items-center gap-2">
+      {Array.from({ length: 200 }).map((_, index) => (
+        <Skeleton key={index} className="h-20 w-20" />
+      ))}
+    </div>
+  ),
+});
+
+const NavigationIcon = dynamic(() => import("./nav"), {
+  ssr: false,
+  loading: () => <Skeleton className="h-14 w-full rounded-none" />,
+});
 
 export default function DIconsPage() {
   const searchParams = useSearchParams();
@@ -153,8 +188,15 @@ export default function DIconsPage() {
 
   return (
     <main>
-      <Tabs className={"md:flex"} defaultValue="1">
-        <Suspense fallback={<Skeleton className="h-full w-full" />}>
+      <Tabs defaultValue="1">
+        <NavigationIcon
+          settings={settings}
+          searchTerm={searchTerm}
+          searchRef={searchRef}
+          onChangeSearchTerm={onChangeSearchTerm}
+          filteredDIcons={filteredDIcons}
+        />
+        <div className={"md:flex"}>
           <SideIcon
             settings={settings}
             svgRef={svgRef}
@@ -170,40 +212,34 @@ export default function DIconsPage() {
             onChangeColorSetting={onChangeColorSetting}
             onRandomIconClick={onRandomIconClick}
           />
-        </Suspense>
-        <div className="w-full">
+
           <div className="w-full">
-            <div className="h-full w-full">
-              <div>
-                <Navigation
-                  settings={settings}
-                  searchTerm={searchTerm}
-                  searchRef={searchRef}
-                  onChangeSearchTerm={onChangeSearchTerm}
-                  filteredDIcons={filteredDIcons}
-                />
-                <div className="w-full px-6">
-                  {filteredDIcons.length === 0 ? (
-                    <div className="mt-10 grid gap-2 ">
-                      <p>We couldn’t find an icon for that</p>
-                      <Link
-                        className=""
-                        href={`mailto:?subject=Request%20Icon`}
-                      >
-                        <Button>Request an Icon</Button>
-                      </Link>
-                    </div>
-                  ) : (
-                    <div className=" w-full">
-                      <ScrollArea className="h-screen w-full">
-                        <MainIcons
-                          settings={settings}
-                          filteredDIcons={filteredDIcons}
-                          onChangeIcon={onChangeIcon}
-                        />
-                      </ScrollArea>
-                    </div>
-                  )}
+            <div className="w-full">
+              <div className="h-full w-full">
+                <div>
+                  <div className="w-full px-6">
+                    {filteredDIcons.length === 0 ? (
+                      <div className="mt-10 grid gap-2 ">
+                        <p>We couldn’t find an icon for that</p>
+                        <Link
+                          className=""
+                          href={`mailto:?subject=Request%20Icon`}
+                        >
+                          <Button>Request an Icon</Button>
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className=" w-full">
+                        <ScrollArea className="h-screen w-full">
+                          <MainIcons
+                            settings={settings}
+                            filteredDIcons={filteredDIcons}
+                            onChangeIcon={onChangeIcon}
+                          />
+                        </ScrollArea>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

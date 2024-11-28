@@ -23,11 +23,7 @@ interface AccessProps {
   filteredDIcons;
 }
 
-export const MainIcons = ({
-  onChangeIcon,
-  settings,
-  filteredDIcons,
-}: AccessProps) => {
+const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
   return (
     <main className={"mb-10"}>
       <div>
@@ -36,43 +32,29 @@ export const MainIcons = ({
             <div className="flex w-full flex-wrap gap-2">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
+                const isActive = icon === settings.icon; // Determine active state
                 return (
                   <div key={icon}>
                     <TooltipProvider delayDuration={0}>
                       <Tooltip>
-                        <RadioGroup className="relative">
-                          <RadioGroupItem
-                            className="absolute -z-10"
-                            value={icon}
-                            checked={icon === settings.icon}
-                            onChange={() => onChangeIcon(icon)}
-                          />
-                        </RadioGroup>
                         <TooltipTrigger>
-                          <Label className="">
-                            <div
-                              key={icon}
-                              className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900"
-                            >
-                              <Suspense fallback={<Skeleton />}>
-                                <Component
-                                  width={30}
-                                  height={30}
-                                  stroke={settings.strokeColor}
-                                  strokeWidth={settings.strokeWidth}
-                                />
-                              </Suspense>
-                              <input
-                                type="radio"
-                                className="hidden"
-                                readOnly
-                                name="icon"
-                                value={icon}
-                                checked={icon === settings.icon}
-                                onChange={() => onChangeIcon(icon)}
+                          <div
+                            onClick={() => onChangeIcon(icon)}
+                            className={`flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-secondary  ${
+                              isActive
+                                ? "border-ali border-2"
+                                : "border-secondary"
+                            }`}
+                          >
+                            <Suspense fallback={<Skeleton />}>
+                              <Component
+                                width={30}
+                                height={30}
+                                stroke={settings.strokeColor}
+                                strokeWidth={settings.strokeWidth}
                               />
-                            </div>
-                          </Label>
+                            </Suspense>
+                          </div>
                         </TooltipTrigger>
                         <TooltipContent className="-mt-2" side="bottom">
                           {icon}
@@ -85,47 +67,33 @@ export const MainIcons = ({
             </div>
           </TabsContent>
           <TabsContent value="2">
-            <div className="flex w-full flex-wrap   gap-2">
+            <div className="flex w-full flex-wrap gap-2">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
+                const isActive = icon === settings.icon; // Determine active state
                 return (
                   <div key={icon}>
                     <TooltipProvider delayDuration={0}>
                       <Tooltip>
-                        <RadioGroup className="relative">
-                          <RadioGroupItem
-                            className="absolute -z-10"
-                            value={icon}
-                            checked={icon === settings.icon}
-                            onChange={() => onChangeIcon(icon)}
-                          />
-                        </RadioGroup>
                         <TooltipTrigger>
-                          <Label className="">
-                            <div
-                              key={icon}
-                              className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900"
-                            >
-                              <Suspense>
-                                <Component
-                                  width={30}
-                                  height={30}
-                                  stroke={settings.strokeColor}
-                                  strokeWidth={settings.strokeWidth}
-                                  fill={settings.iconFill}
-                                />
-                              </Suspense>
-                              <input
-                                type="radio"
-                                className="hidden"
-                                readOnly
-                                name="icon"
-                                value={icon}
-                                checked={icon === settings.icon}
-                                onChange={() => onChangeIcon(icon)}
+                          <div
+                            onClick={() => onChangeIcon(icon)}
+                            className={`flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-secondary  ${
+                              isActive
+                                ? "border-ali border-2"
+                                : "border-secondary"
+                            }`}
+                          >
+                            <Suspense fallback={<Skeleton />}>
+                              <Component
+                                width={30}
+                                height={30}
+                                stroke={settings.strokeColor}
+                                strokeWidth={settings.strokeWidth}
+                                fill={settings.iconFill}
                               />
-                            </div>
-                          </Label>
+                            </Suspense>
+                          </div>
                         </TooltipTrigger>
                         <TooltipContent className="-mt-2" side="bottom">
                           {icon}
@@ -141,44 +109,30 @@ export const MainIcons = ({
             <div className="flex w-full flex-wrap gap-2">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
+                const isActive = icon === settings.icon; // Determine active state
                 return (
                   <div key={icon}>
                     <TooltipProvider delayDuration={0}>
                       <Tooltip>
-                        <RadioGroup className="relative">
-                          <RadioGroupItem
-                            className="absolute -z-10"
-                            value={icon}
-                            checked={icon === settings.icon}
-                            onChange={() => onChangeIcon(icon)}
-                          />
-                        </RadioGroup>
                         <TooltipTrigger>
-                          <Label className="">
-                            <div
-                              key={icon}
-                              className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900"
-                            >
-                              <Suspense>
-                                <Component
-                                  width={30}
-                                  height={30}
-                                  stroke={settings.strokeColor}
-                                  strokeLinecap={"square"}
-                                  strokeWidth={settings.strokeWidth}
-                                />
-                              </Suspense>
-                              <input
-                                type="radio"
-                                className="hidden"
-                                readOnly
-                                name="icon"
-                                value={icon}
-                                checked={icon === settings.icon}
-                                onChange={() => onChangeIcon(icon)}
+                          <div
+                            onClick={() => onChangeIcon(icon)}
+                            className={`flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-secondary  ${
+                              isActive
+                                ? "border-ali border-2"
+                                : "border-secondary"
+                            }`}
+                          >
+                            <Suspense fallback={<Skeleton />}>
+                              <Component
+                                width={30}
+                                height={30}
+                                linecap={settings.strokeColor}
+                                stroke={settings.strokeColor}
+                                strokeWidth={settings.strokeWidth}
                               />
-                            </div>
-                          </Label>
+                            </Suspense>
+                          </div>
                         </TooltipTrigger>
                         <TooltipContent className="-mt-2" side="bottom">
                           {icon}
@@ -194,44 +148,30 @@ export const MainIcons = ({
             <div className="flex w-full flex-wrap gap-2">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
+                const isActive = icon === settings.icon; // Determine active state
                 return (
                   <div key={icon}>
                     <TooltipProvider delayDuration={0}>
                       <Tooltip>
-                        <RadioGroup className="relative">
-                          <RadioGroupItem
-                            className="absolute -z-10"
-                            value={icon}
-                            checked={icon === settings.icon}
-                            onChange={() => onChangeIcon(icon)}
-                          />
-                        </RadioGroup>
                         <TooltipTrigger>
-                          <Label className="">
-                            <div
-                              key={icon}
-                              className="hover:border-ali flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-slate-100 hover:dark:bg-slate-900"
-                            >
-                              <Suspense>
-                                <Component
-                                  width={30}
-                                  height={30}
-                                  stroke={settings.strokeColor}
-                                  strokeWidth={settings.strokeWidth}
-                                  fill={settings.iconFill}
-                                />
-                              </Suspense>
-                              <input
-                                type="radio"
-                                className="hidden"
-                                readOnly
-                                name="icon"
-                                value={icon}
-                                checked={icon === settings.icon}
-                                onChange={() => onChangeIcon(icon)}
+                          <div
+                            onClick={() => onChangeIcon(icon)}
+                            className={`flex h-20 w-20 cursor-pointer items-center justify-center rounded-md border transition hover:bg-secondary  ${
+                              isActive
+                                ? "border-ali border-2"
+                                : "border-secondary"
+                            }`}
+                          >
+                            <Suspense fallback={<Skeleton />}>
+                              <Component
+                                width={30}
+                                height={30}
+                                stroke={settings.strokeColor}
+                                strokeWidth={settings.strokeWidth}
+                                fill={settings.iconFill}
                               />
-                            </div>
-                          </Label>
+                            </Suspense>
+                          </div>
                         </TooltipTrigger>
                         <TooltipContent className="-mt-2" side="bottom">
                           {icon}
@@ -248,3 +188,5 @@ export const MainIcons = ({
     </main>
   );
 };
+
+export default MainIcons;

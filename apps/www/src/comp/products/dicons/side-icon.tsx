@@ -52,7 +52,7 @@ interface SideIconProps {
   onRandomIconClick;
 }
 
-export const SideIcon = ({
+const SideIcon = ({
   settings,
   IconComponent,
   pngClipboardSupported,
@@ -338,3 +338,5 @@ export const SideIcon = ({
     </main>
   );
 };
+
+export default SideIcon;
