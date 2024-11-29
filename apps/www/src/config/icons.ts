@@ -6,8 +6,12 @@ export const diconsConfig: DIconsConfig = {
       title: "",
       items: [
         {
-          href: "/products/dicons/Brands",
+          title: "AI",
+          href: "/products/dicons/Ai",
+        },
+        {
           title: "Brands",
+          href: "/products/dicons/Brands",
         },
       ],
     },
