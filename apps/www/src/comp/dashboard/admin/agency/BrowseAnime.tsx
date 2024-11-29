@@ -140,7 +140,9 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
         </Button>
       </div>
       {isFetching && !isFetchingNextPage ? (
-        ""
+        <div className="mt-3">
+          <AnimeCardSkeleton />
+        </div>
       ) : (
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
           {animes.map((anime, index) => {

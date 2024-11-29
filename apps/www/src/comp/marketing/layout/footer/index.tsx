@@ -84,25 +84,26 @@ const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slat
 export function Footer() {
   return (
     <footer className="border-ali/20 mx-auto w-full border-b border-t bg-white px-2 dark:bg-black sm:px-4">
-      <div className="relative -mt-10 flex flex-wrap justify-center gap-8">
-        <Link aria-label="Logo" href="/">
-          <p className="flex h-20 w-20 items-center justify-center rounded-full bg-white dark:bg-black">
+      <div className="relative mx-auto grid  max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex ">
+        <Link href="/">
+          <p className="flex items-center justify-center rounded-full bg-white dark:bg-black">
             <Logo className="w-8" />
           </p>
         </Link>
+        <p className="bg-transparent text-center text-xs leading-4 text-slate-400 dark:text-slate-600 md:text-left">
+          Welcome to Designali, where creativity meets strategy to bring your
+          vision to life. I am passionate about transforming ideas into
+          compelling visual experiences. I specialize in crafting unique brand
+          identities, immersive digital experiences, and engaging content that
+          resonates with your audience. My mission is to empower businesses and
+          brands to stand out in a crowded market. I believe in the power of
+          design to tell stories, evoke emotions, and drive meaningful
+          connections. I believe in quality, not quantity. Designali is actually
+          an agency of one. This means you'll work directly with me, founder of
+          Designali.
+        </p>
       </div>
 
-      <p className="mx-auto max-w-7xl bg-transparent px-6 text-xs leading-4 text-slate-400 dark:text-slate-600">
-        Welcome to Designali, where creativity meets strategy to bring your
-        vision to life. I am passionate about transforming ideas into compelling
-        visual experiences. I specialize in crafting unique brand identities,
-        immersive digital experiences, and engaging content that resonates with
-        your audience. My mission is to empower businesses and brands to stand
-        out in a crowded market. I believe in the power of design to tell
-        stories, evoke emotions, and drive meaningful connections. I believe in
-        quality, not quantity. Designali is actually an agency of one. This
-        means you'll work directly with me, founder of Designali.
-      </p>
       <div className="mx-auto max-w-7xl px-6 py-10">
         <Separator />
         <div className="py-10">

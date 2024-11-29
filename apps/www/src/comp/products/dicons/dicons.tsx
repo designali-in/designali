@@ -166,6 +166,8 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
                               <Component
                                 width={30}
                                 height={30}
+                                strokeLinecap="square"
+                                strokeLinejoin={"miter"}
                                 stroke={settings.strokeColor}
                                 strokeWidth={settings.strokeWidth}
                                 fill={settings.iconFill}

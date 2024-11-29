@@ -2,7 +2,7 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const Accessibility = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const Accessibility01 = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ ...props }, forwardedRef) => {
     return (
       <svg
@@ -28,4 +28,4 @@ export const Accessibility = React.forwardRef<SVGSVGElement, DesignaliProps>(
   },
 );
 
-export default Accessibility;
+export default Accessibility01;

@@ -72,7 +72,7 @@ export default function DIconsPage({ Categories = {} }: DIconProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const [settings, setSettings] = useState<DIconsSettingsType>({
     icon: "Designali",
-    iconFill: "currentColor",
+    iconFill: "#555555",
     strokeColor: "currentColor",
     iconSize: 150,
     linecap: "round",

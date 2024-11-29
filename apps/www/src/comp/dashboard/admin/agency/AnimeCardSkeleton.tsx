@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const AnimeCardSkeleton = ({ length = 5 }: { length?: number }) => {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
       {Array.from({ length }).map((_, index) => (
         <SingleAnimeCardSkeleton key={index} />
       ))}

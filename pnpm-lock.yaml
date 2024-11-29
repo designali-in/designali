@@ -237,7 +237,7 @@ importers:
         specifier: ^1.11.11
         version: 1.11.13
       dicons:
-        specifier: workspace:*
+        specifier: 1.1.2
         version: link:../../packages/icons
       embla-carousel-autoplay:
         specifier: ^8.1.6

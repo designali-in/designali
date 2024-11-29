@@ -14,8 +14,8 @@ export const diconsConfig: DIconsConfig = {
           title: "Animation",
         },
         {
-          href: "/products/dicons/Angle",
-          title: "Angle",
+          href: "/products/dicons/Account",
+          title: "Account",
         },
         {
           href: "/products/dicons/Animals",

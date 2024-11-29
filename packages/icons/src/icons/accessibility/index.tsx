@@ -1,6 +1,6 @@
 import ZoomIn from "./ZoomIn";
 
-export * from "./Accessibility";
+export * from "./Accessibility01";
 export * from "./Baby";
 export * from "./BadgeHelp";
 export * from "./BadgeInfo";
