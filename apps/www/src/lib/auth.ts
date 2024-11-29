@@ -58,6 +58,7 @@ export const {
           },
         });
       }
+
       return {
         id: dbUser.id,
         name: dbUser.name,

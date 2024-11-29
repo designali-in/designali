@@ -1,73 +1,47 @@
-import * as React from "react";
-import { Button, Hr, Text } from "@react-email/components";
+import { Body, Head, Html, Link, Preview } from "@react-email/components";
 
-import site from "@/config/site";
-
-import { BaseEmail } from "./components/base-email";
-
-interface WelcomeEmailProps {
-  name: string;
-  verificationUrl?: string;
-}
-
-export default function WelcomeEmail({
-  name,
-  verificationUrl,
-}: WelcomeEmailProps) {
+const WelcomeEmail = () => {
   return (
-    <BaseEmail preview={`Welcome to ${site.name}`}>
-      <Text style={paragraph}>Hi {name},</Text>
-      <Text style={paragraph}>
-        Welcome to {site.name}! We&apos;re excited to have you on board.
-      </Text>
-      {verificationUrl && (
-        <>
-          <Text style={paragraph}>
-            Please verify your email address by clicking the button below:
-          </Text>
-          <Button style={button} href={verificationUrl}>
-            Verify Email
-          </Button>
-        </>
-      )}
-      <Hr style={hr} />
-      <Text style={footer}>
-        Best regards,
-        <br />
-        The {site.name} Team
-      </Text>
-    </BaseEmail>
+    <Html>
+      <Head>
+        <title>Welcome to Designali!</title>
+        <Preview>Take the most of your Designali Designs</Preview>
+        <Body>
+          Hi there, 👋
+          <br />
+          <br />
+          I'm Ali, the founder and CEO of{" "}
+          <a href="https://www.designali.in">Designali</a>.
+          <br />
+          <br /> We’re thrilled to have you with us! At Designali, we’re
+          dedicated to providing top-notch digital design services tailored to
+          meet your needs.
+          <br />
+          <br />
+          Here’s what you can do with Designali:
+          <br />
+          Choose from a variety of design{" "}
+          <a href="https://www.designali.in">services</a> to suit your specific
+          requirements.
+          <br />
+          If you have any questions or need assistance, feel free to reach out
+          to me anytime. You can also book a call with me{" "}
+          <a href="https://instagram.com/designali.in/">here</a>.
+          <br />
+          Thank you for choosing Designali. We look forward to working with you!
+          <br />
+          Best regards,
+          <br />
+          Ali Imam
+          <br />
+          ♥️ DM me on <Link href="instagram.com/designali.in">Instagram</Link>
+          <br />
+          🚀 Visit our website{" "}
+          <Link href="https://www.designali.in">Designali</Link>
+        </Body>
+      </Head>
+    </Html>
   );
-}
-
-const paragraph = {
-  color: "#525f7f",
-  fontSize: "16px",
-  lineHeight: "24px",
-  textAlign: "left" as const,
 };
 
-const button = {
-  backgroundColor: "#000000",
-  borderRadius: "5px",
-  color: "#fff",
-  fontSize: "16px",
-  fontWeight: "bold",
-  textDecoration: "none",
-  textAlign: "center" as const,
-  display: "block",
-  width: "100%",
-  marginTop: "25px",
-};
-
-const hr = {
-  borderColor: "#e6ebf1",
-  margin: "20px 0",
-};
-
-const footer = {
-  color: "#8898aa",
-  fontSize: "12px",
-  lineHeight: "16px",
-  marginTop: "25px",
-};
+export { WelcomeEmail };
