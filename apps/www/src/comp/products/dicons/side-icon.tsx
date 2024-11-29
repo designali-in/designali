@@ -150,9 +150,9 @@ const SideIcon = ({
               <DIconsDrawer settings={settings} />
               <DropdownMenu>
                 <DropdownMenuTrigger>
-                  <Button>
+                  <Button variant="outline">
                     Download
-                    <DIcons.Copy className="h-4 w-4" />
+                    <DIcons.Copy className="h-4 w-4  " />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
