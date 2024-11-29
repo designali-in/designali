@@ -9,6 +9,7 @@ export const Nike = React.forwardRef<SVGSVGElement, DesignaliProps>(
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="10.7"
+        fill="currentColor"
         viewBox="0 0 24 10.7"
         {...props}
         ref={forwardedRef}
