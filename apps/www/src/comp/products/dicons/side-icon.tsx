@@ -105,16 +105,12 @@ const SideIcon = ({
               />
               <div className="flex h-full w-full items-center justify-center">
                 <TabsContent value="1">
-                  {!settings ? (
-                    <Skeleton className="h-40 w-40 rounded-md" />
-                  ) : (
-                    <ResultDIcon
-                      size={250}
-                      settings={settings}
-                      IconComponent={IconComponent}
-                      ref={svgRef}
-                    />
-                  )}
+                  <ResultDIcon
+                    size={250}
+                    settings={settings}
+                    IconComponent={IconComponent}
+                    ref={svgRef}
+                  />
                 </TabsContent>
                 <TabsContent value="2">
                   <FillResultDIcon
@@ -206,7 +202,7 @@ const SideIcon = ({
                       <div>
                         {!customSvgIsPng && (
                           <div className="flex items-center justify-between">
-                            <span className="pr-5 text-xs">Color</span>
+                            <span className="pr-5 text-xs">Outline Color</span>
                             <ColorInput
                               value={settings.strokeColor}
                               name={"strokeColor"}
@@ -220,29 +216,47 @@ const SideIcon = ({
                         )}
                       </div>
                     </TabsContent>
-                    <TabsContent value="2">
-                      <div>
-                        {!customSvgIsPng && (
-                          <div className="flex items-center justify-between">
-                            <span className="pr-5 text-xs">Color</span>
-                            <ColorInput
-                              value={settings.iconFill}
-                              name={"iconFill"}
-                              onChange={(newColor) => {
-                                onChangeColorSetting("iconFill")(newColor);
-                                onChangeColorSetting("strokeColor")(newColor); // Update strokeColor too
-                              }}
-                              recentColors={recentColors}
-                            />
-                          </div>
-                        )}
+                    <TabsContent className=" " value="2">
+                      <div className="grid gap-3">
+                        <div>
+                          {!customSvgIsPng && (
+                            <div className="flex items-center justify-between">
+                              <span className="pr-5 text-xs">Fill Color</span>
+                              <ColorInput
+                                value={settings.strokeColor}
+                                name={"strokeColor"}
+                                onChange={(newColor) => {
+                                  onChangeColorSetting("strokeColor")(newColor);
+                                }}
+                                recentColors={recentColors}
+                              />
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          {!customSvgIsPng && (
+                            <div className="flex items-center justify-between">
+                              <span className="pr-5 text-xs">
+                                Outline Color
+                              </span>
+                              <ColorInput
+                                value={settings.iconFill}
+                                name={"iconFill"}
+                                onChange={(newColor) => {
+                                  onChangeColorSetting("iconFill")(newColor);
+                                }}
+                                recentColors={recentColors}
+                              />
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </TabsContent>
                     <TabsContent value="3">
                       <div>
                         {!customSvgIsPng && (
                           <div className="flex items-center justify-between">
-                            <span className="pr-5 text-xs">Color</span>
+                            <span className="pr-5 text-xs"> Outline Color</span>
                             <ColorInput
                               value={settings.strokeColor}
                               name={"strokeColor"}
@@ -257,21 +271,39 @@ const SideIcon = ({
                       </div>
                     </TabsContent>
                     <TabsContent value="4">
-                      <div>
-                        {!customSvgIsPng && (
-                          <div className="flex items-center justify-between">
-                            <span className="pr-5 text-xs">Color</span>
-                            <ColorInput
-                              value={settings.iconFill}
-                              name={"iconFill"}
-                              onChange={(newColor) => {
-                                onChangeColorSetting("iconFill")(newColor);
-                                onChangeColorSetting("strokeColor")(newColor); // Update strokeColor too
-                              }}
-                              recentColors={recentColors}
-                            />
-                          </div>
-                        )}
+                      <div className="grid gap-3">
+                        <div>
+                          {!customSvgIsPng && (
+                            <div className="flex items-center justify-between">
+                              <span className="pr-5 text-xs">Fill Color</span>
+                              <ColorInput
+                                value={settings.strokeColor}
+                                name={"strokeColor"}
+                                onChange={(newColor) => {
+                                  onChangeColorSetting("strokeColor")(newColor);
+                                }}
+                                recentColors={recentColors}
+                              />
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          {!customSvgIsPng && (
+                            <div className="flex items-center justify-between">
+                              <span className="pr-5 text-xs">
+                                Outline Color
+                              </span>
+                              <ColorInput
+                                value={settings.iconFill}
+                                name={"iconFill"}
+                                onChange={(newColor) => {
+                                  onChangeColorSetting("iconFill")(newColor);
+                                }}
+                                recentColors={recentColors}
+                              />
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </TabsContent>
 
@@ -291,7 +323,7 @@ const SideIcon = ({
                           <Slider
                             name="strokeWidth"
                             defaultValue={[settings.strokeWidth]}
-                            min={0}
+                            min={0.1}
                             max={3}
                             step={0.1}
                           />

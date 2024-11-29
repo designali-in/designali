@@ -87,9 +87,9 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
                               <Component
                                 width={30}
                                 height={30}
+                                fill={settings.iconFill}
                                 stroke={settings.strokeColor}
                                 strokeWidth={settings.strokeWidth}
-                                fill={settings.iconFill}
                               />
                             </Suspense>
                           </div>
@@ -126,7 +126,8 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
                               <Component
                                 width={30}
                                 height={30}
-                                linecap={settings.strokeColor}
+                                strokeLinecap="square"
+                                strokeLinejoin={"miter"}
                                 stroke={settings.strokeColor}
                                 strokeWidth={settings.strokeWidth}
                               />

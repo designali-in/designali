@@ -49,7 +49,7 @@ const NavigationIcon = ({
                     Outline
                   </TabsTrigger>
                   <TabsTrigger value="3" className="px-3">
-                    Sharp
+                    Square
                   </TabsTrigger>
                   <TabsTrigger value="2" className="px-3">
                     Fill (round)
