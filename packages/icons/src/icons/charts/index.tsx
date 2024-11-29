@@ -1,3 +1,5 @@
+import TrendingUp from "./TrendingUp";
+
 export * from "./ChartArea";
 export * from "./ChartBar";
 export * from "./ChartBarBig";
@@ -28,3 +30,7 @@ export * from "./SquareDashedKanban";
 export * from "./SquareKanban";
 export * from "./TrendingDown";
 export * from "./TrendingUp";
+
+export const Chartss = {
+  TrendingUp,
+};

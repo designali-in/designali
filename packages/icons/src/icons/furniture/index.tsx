@@ -1,3 +1,5 @@
+import RockingChair from "./RockingChair";
+
 export * from "./Armchair";
 export * from "./Bed";
 export * from "./BedDouble";
@@ -11,3 +13,7 @@ export * from "./LampFloor";
 export * from "./LampWallDown";
 export * from "./LampWallUp";
 export * from "./RockingChair";
+
+export const Furnit = {
+  RockingChair,
+};

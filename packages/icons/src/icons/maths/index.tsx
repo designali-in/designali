@@ -1,3 +1,5 @@
+import XNum from "./XNum";
+
 export * from "./CircleDivide";
 export * from "./CircleEqual";
 export * from "./CircleMinus";
@@ -16,3 +18,7 @@ export * from "./Tangent";
 export * from "./Tangent2";
 export * from "./Weight";
 export * from "./XNum";
+
+export const Maths = {
+  XNum,
+};

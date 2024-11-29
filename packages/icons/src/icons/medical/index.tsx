@@ -1,3 +1,5 @@
+import Tablets from "./Tablets";
+
 export * from "./Ambulance";
 export * from "./Bandage";
 export * from "./Brain";
@@ -15,3 +17,7 @@ export * from "./Siren";
 export * from "./Stethoscope";
 export * from "./Syringe";
 export * from "./Tablets";
+
+export const Medival = {
+  Tablets,
+};

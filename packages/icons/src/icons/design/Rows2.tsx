@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import { DesignaliProps } from "../types";
+import type { DesignaliProps } from "../../types";
 
 export const Rows2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ color = "currentColor", ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"

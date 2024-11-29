@@ -1,3 +1,5 @@
+import TextCursorInput from "./TextCursorInput";
+
 export * from "./AlignCenterHorizontal";
 export * from "./AlignCenterVertical";
 export * from "./AlignEndHorizontal";
@@ -49,3 +51,7 @@ export * from "./SquareSquare";
 export * from "./StretchHorizontal";
 export * from "./StretchVertical";
 export * from "./TextCursorInput";
+
+export const Layoutss = {
+  TextCursorInput,
+};

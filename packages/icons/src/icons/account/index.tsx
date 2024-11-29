@@ -1,3 +1,5 @@
+import Wrench from "./Wrench";
+
 export * from "./Activity";
 export * from "./AtSign";
 export * from "./Award";
@@ -175,3 +177,7 @@ export * from "./Waypoints";
 export * from "./Webhook";
 export * from "./WebhookOff";
 export * from "./Wrench";
+
+export const Account = {
+  Wrench,
+};

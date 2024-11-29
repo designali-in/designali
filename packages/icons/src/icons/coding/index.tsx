@@ -1,3 +1,5 @@
+import WorkFlow from "./WorkFlow";
+
 export * from "./Ampersand";
 export * from "./Ampersands";
 export * from "./Asterisk";
@@ -147,3 +149,7 @@ export * from "./TriangleAlert";
 export * from "./Unplug";
 export * from "./Variable";
 export * from "./WorkFlow";
+
+export const Codingss = {
+  WorkFlow,
+};

@@ -1,3 +1,5 @@
+import SwissFranc from "./SwissFranc";
+
 export * from "./Banknote";
 export * from "./Bitcoin";
 export * from "./CircleDollarSign";
@@ -18,3 +20,7 @@ export * from "./ReceiptRussianRuble";
 export * from "./ReceiptSwissFranc";
 export * from "./RussianRubie";
 export * from "./SwissFranc";
+
+export const Currencyss = {
+  SwissFranc,
+};

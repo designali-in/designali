@@ -1,3 +1,5 @@
+import Waves from "./Waves";
+
 export * from "./Anchor";
 export * from "./BookA";
 export * from "./CircleParking";
@@ -34,3 +36,7 @@ export * from "./TrainFrontTunnel";
 export * from "./TrainTrack";
 export * from "./UtensilsCrossed";
 export * from "./Waves";
+
+export const Mapsss = {
+  Waves,
+};

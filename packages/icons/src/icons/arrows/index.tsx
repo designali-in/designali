@@ -1,3 +1,5 @@
+import WrapText from "./WrapText";
+
 export * from "./ArrowBigDown";
 export * from "./ArrowBigDownDash";
 export * from "./ArrowBigLeft";
@@ -195,3 +197,7 @@ export * from "./UnfoldHorizontal";
 export * from "./UnfoldVertical";
 export * from "./Upload";
 export * from "./WrapText";
+
+export const Arrows = {
+  WrapText,
+};

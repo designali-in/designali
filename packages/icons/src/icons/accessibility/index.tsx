@@ -1,3 +1,5 @@
+import ZoomIn from "./ZoomIn";
+
 export * from "./Accessibility";
 export * from "./Baby";
 export * from "./BadgeHelp";
@@ -25,3 +27,7 @@ export * from "./SunMedium";
 export * from "./SunMoon";
 export * from "./ZoomIn";
 export * from "./ZoomOut";
+
+export const Accessibili = {
+  ZoomIn,
+};

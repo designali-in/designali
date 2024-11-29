@@ -1,3 +1,5 @@
+import WineOff from "./WineOff";
+
 export * from "./Amphora";
 export * from "./Apple";
 export * from "./Banana";
@@ -51,3 +53,7 @@ export * from "./Wheat";
 export * from "./Wheatoff";
 export * from "./Wine";
 export * from "./WineOff";
+
+export const Food = {
+  WineOff,
+};

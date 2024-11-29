@@ -1,3 +1,5 @@
+import VenetianMask from "./VenetianMask";
+
 export * from "./Axe";
 export * from "./Backpake";
 export * from "./Beaker";
@@ -46,3 +48,7 @@ export * from "./Tally5";
 export * from "./Target";
 export * from "./Trophy";
 export * from "./VenetianMask";
+
+export const Gaming = {
+  VenetianMask,
+};

@@ -1,3 +1,5 @@
+import Ungroup from "./Ungroup";
+
 export * from "./Archive";
 export * from "./ArchiveRestore";
 export * from "./ArchiveX";
@@ -95,3 +97,7 @@ export * from "./TableRowsSplit";
 export * from "./Trash";
 export * from "./Trash2";
 export * from "./Ungroup";
+
+export const Folderss = {
+  Ungroup,
+};

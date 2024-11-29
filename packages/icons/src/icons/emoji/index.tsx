@@ -1,3 +1,5 @@
+import Salad from "./Salad";
+
 export * from "./Angry";
 export * from "./Annoyed";
 export * from "./BicepsFlexed";
@@ -11,3 +13,7 @@ export * from "./Meh";
 export * from "./PartyPopper";
 export * from "./Ribbon";
 export * from "./Salad";
+
+export const Emoji = {
+  Salad,
+};

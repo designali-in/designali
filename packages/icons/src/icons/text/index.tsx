@@ -1,3 +1,5 @@
+import Plus from "./Plus";
+
 export * from "./AlignCenter";
 export * from "./AlignJustify";
 export * from "./AlignLeft";
@@ -60,3 +62,7 @@ export * from "./Unlink2";
 export * from "./WholeWord";
 export * from "./Copy";
 export * from "./Plus";
+
+export const Textt = {
+  Plus,
+};

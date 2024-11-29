@@ -155,10 +155,10 @@ const SideIcon = ({
               <DIconsDrawer settings={settings} />
               <DropdownMenu>
                 <DropdownMenuTrigger>
-                  <div className="inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-accent bg-popover px-4 py-2 hover:bg-accent hover:text-accent-foreground">
+                  <Button>
                     Download
                     <DIcons.Copy className="h-4 w-4" />
-                  </div>
+                  </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {pngClipboardSupported && (
@@ -189,7 +189,9 @@ const SideIcon = ({
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Button variant="ghost" icon="Plus" size="icon"></Button>
+              <Button variant="outline" size="icon">
+                <DIcons.RotateCw className="h-4 w-4" />
+              </Button>
             </div>
           </div>
           <div className={""}>

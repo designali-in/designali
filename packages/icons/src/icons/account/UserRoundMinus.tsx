@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const UserRoundMinus = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ color = "currentColor", ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"

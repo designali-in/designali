@@ -1,3 +1,5 @@
+import View from "./View";
+
 export * from "./AArrowDown";
 export * from "./AArrowUp";
 export * from "./ALargeSmall";
@@ -83,3 +85,7 @@ export * from "./SwatchBook";
 export * from "./TableSmartphone";
 export * from "./Torus";
 export * from "./View";
+
+export const Designss = {
+  View,
+};

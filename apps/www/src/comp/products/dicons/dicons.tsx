@@ -6,16 +6,15 @@
 import { Suspense } from "react";
 import { Skeleton } from "@/registry/default/designali/ui/skeleton";
 import { TabsContent } from "@/registry/default/designali/ui/tabs";
-import { DIcons } from "dicons";
 
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
+import { DIcons } from "../../../../../../packages/icons/src/dicons";
 
 interface AccessProps {
   onChangeIcon;
@@ -29,7 +28,7 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
       <div>
         <div className="mt-6">
           <TabsContent value="1">
-            <div className="flex w-full flex-wrap gap-2">
+            <div className="flex w-full flex-wrap justify-center gap-2 md:justify-start">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
                 const isActive = icon === settings.icon; // Determine active state
@@ -67,7 +66,7 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
             </div>
           </TabsContent>
           <TabsContent value="2">
-            <div className="flex w-full flex-wrap gap-2">
+            <div className="flex w-full flex-wrap justify-center gap-2 md:justify-start">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
                 const isActive = icon === settings.icon; // Determine active state
@@ -106,7 +105,7 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
             </div>
           </TabsContent>
           <TabsContent value="3">
-            <div className="flex w-full flex-wrap gap-2">
+            <div className="flex w-full flex-wrap justify-center gap-2 md:justify-start">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
                 const isActive = icon === settings.icon; // Determine active state
@@ -145,7 +144,7 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
             </div>
           </TabsContent>
           <TabsContent value="4">
-            <div className="flex w-full flex-wrap gap-2">
+            <div className="flex w-full flex-wrap justify-center gap-2 md:justify-start">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
                 const isActive = icon === settings.icon; // Determine active state

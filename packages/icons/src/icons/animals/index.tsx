@@ -1,3 +1,5 @@
+import Worm from "./Worm";
+
 export * from "./Bird";
 export * from "./Bone";
 export * from "./Bug";
@@ -18,3 +20,7 @@ export * from "./Snail";
 export * from "./Squirrel";
 export * from "./Turtle";
 export * from "./Worm";
+
+export const Animals = {
+  Worm,
+};

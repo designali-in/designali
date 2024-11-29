@@ -14,9 +14,13 @@ import { toast } from "@/registry/default/designali/ui/toasts";
 import { debounce, randomElement, uniq } from "@/src/lib/dutils";
 import { svgAsPngUri } from "save-svg-as-png";
 
-import { DIcons } from "../../../../../../packages/icons/src/dicons";
+import { DIcons } from "../../../../../../packages/icons/src";
 import CustomSvgIcon from "./CustomSvgIcon";
 import usePngClipboardSupported from "./usePngClipboardSupported";
+
+interface DIconProps {
+  Categories;
+}
 
 const SideIcon = dynamic(() => import("./side-icon"), {
   ssr: false,
@@ -55,7 +59,7 @@ const NavigationIcon = dynamic(() => import("./nav"), {
   loading: () => <Skeleton className="h-14 w-full rounded-none" />,
 });
 
-export default function DIconsPage() {
+export default function DIconsPage({ Categories = {} }: DIconProps) {
   const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const router = useRouter();
@@ -109,7 +113,7 @@ export default function DIconsPage() {
     IconComponent = DIcons[settings.icon];
   }
 
-  const filteredDIcons = Object.keys(DIcons).filter((key) =>
+  const filteredDIcons = Object.keys(Categories).filter((key) =>
     key.toLowerCase().includes(searchTerm.toLowerCase()),
   ) as ""[];
 

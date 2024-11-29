@@ -1,3 +1,5 @@
+import WandSparkles from "./WandSparkles";
+
 export * from "./CirclePlus";
 export * from "./Grab";
 export * from "./Loader";
@@ -15,3 +17,7 @@ export * from "./TextCursor";
 export * from "./TextSelect";
 export * from "./Wand";
 export * from "./WandSparkles";
+
+export const Curs = {
+  WandSparkles,
+};

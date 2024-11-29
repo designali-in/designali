@@ -1,3 +1,5 @@
+import StarOff from "./StarOff";
+
 export * from "./AudioLines";
 export * from "./BookAudio";
 export * from "./BookHeadphones";
@@ -34,3 +36,7 @@ export * from "./Podcast";
 export * from "./Repeat1";
 export * from "./StarHalf";
 export * from "./StarOff";
+
+export const Multimed = {
+  StarOff,
+};

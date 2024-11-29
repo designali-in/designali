@@ -1,3 +1,5 @@
+import Warehouse from "./Warehouse";
+
 export * from "./Anvil";
 export * from "./BrickWall";
 export * from "./Building";
@@ -21,3 +23,7 @@ export * from "./Theater";
 export * from "./University";
 export * from "./UtilityPole";
 export * from "./Warehouse";
+
+export const Buildings = {
+  Warehouse,
+};

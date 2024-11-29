@@ -1,3 +1,5 @@
+import Trees from "./Trees";
+
 export * from "./Cannabis";
 export * from "./Caravan";
 export * from "./FlameKindling";
@@ -10,3 +12,7 @@ export * from "./TreeDecidous";
 export * from "./TreePalm";
 export * from "./TreePine";
 export * from "./Trees";
+
+export const Nature = {
+  Trees,
+};

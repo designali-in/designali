@@ -1,3 +1,5 @@
+import ZapOff from "./ZapOff";
+
 export * from "./Airplay";
 export * from "./Battery";
 export * from "./BatteryCharging";
@@ -50,3 +52,7 @@ export * from "./WifiOff";
 export * from "./WifiZero";
 export * from "./Zap";
 export * from "./ZapOff";
+
+export const Conn = {
+  ZapOff,
+};

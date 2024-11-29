@@ -1,3 +1,5 @@
+import Webcam from "./Webcam";
+
 export * from "./Antenna";
 export * from "./AudioLine";
 export * from "./AudioWaveform";
@@ -41,3 +43,7 @@ export * from "./Volume2";
 export * from "./VolumeX";
 export * from "./VolumeOff";
 export * from "./Webcam";
+
+export const Communi = {
+  Webcam,
+};

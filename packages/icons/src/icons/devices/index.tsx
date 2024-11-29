@@ -1,3 +1,5 @@
+import VoiceMail from "./VoiceMail";
+
 export * from "./AlarmClock";
 export * from "./AlarmClockCheck";
 export * from "./AlarmClockOff";
@@ -42,3 +44,7 @@ export * from "./TvMinimal";
 export * from "./TvMinimalPlay";
 export * from "./Usb";
 export * from "./VoiceMail";
+
+export const Device = {
+  VoiceMail,
+};

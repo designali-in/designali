@@ -5,7 +5,7 @@ import type { DesignaliProps } from "../../types";
 export const GalleryThumbanils = React.forwardRef<
   SVGSVGElement,
   DesignaliProps
->(({ color = "currentColor", ...props }, forwardedRef) => {
+>(({ ...props }, forwardedRef) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
