@@ -5,15 +5,14 @@
 "use client";
 
 import React, { lazy, Suspense, useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Button } from "@/registry/default/designali/ui/button";
 import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
 import { Slider } from "@/registry/default/designali/ui/slider";
-import { Switch } from "@/registry/default/designali/ui/switch";
 import { TabsContent } from "@/registry/default/designali/ui/tabs";
-import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
+import { DiconsSidebarNav } from "@/src/comp/mdx/doc/sidebar-nav";
 import GridPattern from "@/src/comp/uis/grid-pattern";
+import { diconsConfig } from "@/src/config/icons";
 import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
@@ -330,10 +329,9 @@ const SideIcon = ({
             <Link href={"/products/dicons"}>
               <h1 className="text-md mb-2 mt-6">All Icons</h1>
             </Link>
-            <Link href={"/products/dicons/categories"}>
-              <h1 className="text-md mb-2">Categories</h1>
-            </Link>
-            <ScrollArea className="h-[360px]"></ScrollArea>
+            <ScrollArea className="h-[360px]">
+              <DiconsSidebarNav items={diconsConfig.sidebarNav} />
+            </ScrollArea>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import type { DesignaliProps } from "../types";
+import type { DesignaliProps } from "../../types";
 
 export const Pencil = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ ...props }, forwardedRef) => {
