@@ -26,6 +26,21 @@ const GRADS = [
   },
 ];
 
+const Ui = [
+  {
+    id: 0,
+    name: "Ui",
+    src: "/images/products/grad-full.jpg",
+    designation: "Download. Edit. Upload.",
+    content: (
+      <p>
+        +1000 abstract gradient elements and backgrounds for your amazing design
+        projects.
+      </p>
+    ),
+  },
+];
+
 const DICONS = [
   {
     id: 1,
@@ -58,6 +73,9 @@ export function Graaadients() {
         </Link>
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
+        </Link>
+        <Link href="/products/ui" className="rounded-3xl border">
+          <CardStack items={Ui} />
         </Link>
       </div>
     </div>

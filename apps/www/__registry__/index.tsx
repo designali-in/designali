@@ -1963,5 +1963,67 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "sidebar-01": {
+      name: "sidebar-01",
+      type: "registry:block",
+      registryDependencies: ["avatar","button","collapsible","dropdown-menu","drawer","separator","input","popover","sheet","progress","card","use-mobile"],
+      files: ["registry/default/block/sidebar-01/page.tsx","registry/default/block/sidebar-01/components/app-sidebar.tsx","registry/default/block/sidebar-01/components/nav-main.tsx","registry/default/block/sidebar-01/components/nav-projects.tsx","registry/default/block/sidebar-01/components/nav-secondary.tsx","registry/default/block/sidebar-01/components/nav-user.tsx","registry/default/block/sidebar-01/components/storage-card.tsx","registry/default/block/sidebar-01/components/team-switcher.tsx","registry/default/block/sidebar-01/hooks/use-sidebar.tsx","registry/default/block/sidebar-01/ui/sidebar.tsx"],
+      component: React.lazy(() => import("@/registry/default/block/sidebar-01/page.tsx")),
+      source: "__registry__/default/block/sidebar-01/page.tsx",
+      category: "Application",
+      subcategory: "Dashboard",
+      chunks: []
+    },
+    "dashboard-05": {
+      name: "dashboard-05",
+      type: "registry:block",
+      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","pagination","progress","separator","sheet","table","tabs","tooltip"],
+      files: ["registry/default/block/dashboard-05.tsx"],
+      component: React.lazy(() => import("@/registry/default/block/dashboard-05.tsx")),
+      source: "__registry__/default/block/dashboard-05.tsx",
+      category: "Application",
+      subcategory: "Dashboard",
+      chunks: [{
+        name: "dashboard-05-chunk-0",
+        description: "A card for an orders dashboard with a description and a button to create a new order.",
+        component: React.lazy(() => import("@/registry/default/block/dashboard-05-chunk-0")),
+        file: "registry/default/block/dashboard-05-chunk-0.tsx",
+        container: {
+          className: "undefined"
+        }
+      },{
+        name: "dashboard-05-chunk-1",
+        description: "A stats card showing this week's total sales in USD, the percentage difference from last week, and a progress bar.",
+        component: React.lazy(() => import("@/registry/default/block/dashboard-05-chunk-1")),
+        file: "registry/default/block/dashboard-05-chunk-1.tsx",
+        container: {
+          className: "undefined"
+        }
+      },{
+        name: "dashboard-05-chunk-2",
+        description: "A stats card showing this month's total sales in USD, the percentage difference from last month, and a progress bar.",
+        component: React.lazy(() => import("@/registry/default/block/dashboard-05-chunk-2")),
+        file: "registry/default/block/dashboard-05-chunk-2.tsx",
+        container: {
+          className: "undefined"
+        }
+      },{
+        name: "dashboard-05-chunk-3",
+        description: "A table of recent orders showing the following columns: Customer, Type, Status, Date, and Amount.",
+        component: React.lazy(() => import("@/registry/default/block/dashboard-05-chunk-3")),
+        file: "registry/default/block/dashboard-05-chunk-3.tsx",
+        container: {
+          className: "undefined"
+        }
+      },{
+        name: "dashboard-05-chunk-4",
+        description: "An order details card with order details, shipping information, customer information and payment information.",
+        component: React.lazy(() => import("@/registry/default/block/dashboard-05-chunk-4")),
+        file: "registry/default/block/dashboard-05-chunk-4.tsx",
+        container: {
+          className: "undefined"
+        }
+      }]
+    },
   },
 }
