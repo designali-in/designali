@@ -37,6 +37,7 @@ import {
 
 interface SideIconProps {
   settings;
+  setSettings;
   svgRef;
   IconComponent;
   pngClipboardSupported;
@@ -53,6 +54,7 @@ interface SideIconProps {
 
 const SideIcon = ({
   settings,
+  setSettings,
   IconComponent,
   pngClipboardSupported,
   onCopyImageToClipboard,
@@ -184,7 +186,17 @@ const SideIcon = ({
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Button variant="outline" size="icon">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setSettings({
+                    ...settings,
+                    strokeWidth: 1.5,
+                    iconSize: 150,
+                  });
+                }}
+                size="icon"
+              >
                 <DIcons.RotateCw className="h-4 w-4" />
               </Button>
             </div>

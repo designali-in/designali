@@ -200,6 +200,7 @@ export default function DIconsPage({ Categories = {} }: DIconProps) {
           onChangeSearchTerm={onChangeSearchTerm}
           filteredDIcons={filteredDIcons}
         />
+
         <div className={"md:flex"}>
           <SideIcon
             settings={settings}
@@ -215,6 +216,7 @@ export default function DIconsPage({ Categories = {} }: DIconProps) {
             recentColors={recentColors}
             onChangeColorSetting={onChangeColorSetting}
             onRandomIconClick={onRandomIconClick}
+            setSettings={setSettings}
           />
 
           <div className="w-full">

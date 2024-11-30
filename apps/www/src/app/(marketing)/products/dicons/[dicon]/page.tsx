@@ -8,8 +8,8 @@ import DIconsPage from "@/comp/products/dicons";
 
 import {
   Animals,
+  Animations,
   Brands,
-  Chartss,
   Communi,
   Gaming,
   Homing,
@@ -22,7 +22,7 @@ import {
 const categoryMap = {
   Brands,
   Animals,
-  Chartss,
+  Animations,
   Communi,
   Gaming,
   Homing,

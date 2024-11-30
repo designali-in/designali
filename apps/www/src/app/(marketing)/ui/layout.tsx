@@ -27,7 +27,7 @@ export default function MarketingLayout({ children }: RootLayoutProps) {
   const lastSegment = pathname.split("/").pop();
   return (
     <Suspense>
-      <main className="mx-auto my-20 mt-40 max-w-7xl px-6 xl:px-0">
+      <main className="mx-auto my-20 mt-28 max-w-7xl px-6 xl:px-0">
         <PageTitle
           title={lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1)}
           description={` Designali an extensive collection of copy-and-paste components for quickly building app UIs. It's free, open-source, and ready to drop into your projects.`}
