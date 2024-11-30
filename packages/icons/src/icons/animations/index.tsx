@@ -69,6 +69,10 @@ export * from "./transition-right";
 export * from "./transition-top";
 
 export const Animations = {
+  AnimationMoveBottom,
+  AnimationMoveLeft,
+  AnimationMoveRight,
+  AnimationMoveTop,
   BounceLeft,
   BounceRight,
   EaseCurveControlPoints,
@@ -95,12 +99,8 @@ export const Animations = {
   Liner,
   Motion01,
   Motion02,
-  AnimationMoveBottom,
-  AnimationMoveLeft,
-  AnimationMoveRight,
-  AnimationMoveTop,
-  TransitionBottom,
   TransitionLeft,
   TransitionRight,
   TransitionTop,
+  TransitionBottom,
 };

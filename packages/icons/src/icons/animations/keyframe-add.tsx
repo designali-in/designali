@@ -18,17 +18,9 @@ export const KeyframeAdd = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <line x1="22" y1="4.85" x2="16" y2="4.85" />
+        <line x1="22" y1="5" x2="16" y2="5" />
         <line x1="19" y1="8" x2="19" y2="2" />
-        <rect
-          x="3.8"
-          y="9.35"
-          width="10.82"
-          height="10.82"
-          rx="1.08"
-          ry="1.08"
-          transform="translate(-7.74 10.83) rotate(-45)"
-        />
+        <path d="M15.59,14.03l-6.16,7.7c-.29.36-.76.36-1.05,0l-6.16-7.7c-.29-.36-.29-.95,0-1.31l6.16-7.7c.29-.36.76-.36,1.05,0l6.16,7.7c.29.36.29.95,0,1.31Z" />
       </svg>
     );
   },

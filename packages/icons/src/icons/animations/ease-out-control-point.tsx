@@ -20,17 +20,10 @@ export const EaseOutControlPoint = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <line x1="22" y1="20.9" x2="2" y2="20.9" />
-      <line x1="12" y1="20.9" x2="12" y2="16.95" />
-      <rect
-        x="8.97"
-        y="3.85"
-        width="5.8"
-        height="5.8"
-        rx="1.08"
-        ry="1.08"
-        transform="translate(25.04 3.13) rotate(135)"
-      />
+      <path fill="none" d="M4,22S11,4.41,22,4.41" />
+      <circle cx="4.41" cy="4.41" r="2.41" />
+      <line x1="6.81" y1="4.41" x2="8.61" y2="4.41" />
+      <line x1="11.57" y1="4.41" x2="13.09" y2="4.41" />
     </svg>
   );
 });

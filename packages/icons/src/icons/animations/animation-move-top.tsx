@@ -18,9 +18,9 @@ export const AnimationMoveTop = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path fill="none" d="M16,6.04l-4-4-4,4" />
-        <path d="M12,12.6V2.04" />
-        <circle cx="12" cy="19.84" r="2.16" />
+        <path d="M16,6l-4-4-4,4" />
+        <path d="M12,12.56V2" />
+        <circle cx="12" cy="19.59" r="2.41" />
       </svg>
     );
   },

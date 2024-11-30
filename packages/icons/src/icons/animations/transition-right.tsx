@@ -18,12 +18,8 @@ export const TransitionRight = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path fill="none" d="M15.3,15.24l3.24-3.24-3.24-3.24" />
+        <path d="M15.3,15.24l3.24-3.24-3.24-3.24" />
         <path d="M9.99,12h8.55" />
-        <path
-          fill="none"
-          d="M16,22c2.34,0,3.51,0,4.36-.54.45-.28.82-.66,1.1-1.1.54-.85.54-2.02.54-4.36v-8c0-2.34,0-3.51-.54-4.36-.28-.45-.66-.82-1.1-1.1-.85-.54-2.02-.54-4.36-.54"
-        />
         <rect
           x="-3.99"
           y="7.98"
@@ -32,6 +28,10 @@ export const TransitionRight = React.forwardRef<SVGSVGElement, DesignaliProps>(
           rx="1.43"
           ry="1.43"
           transform="translate(-5.98 17.99) rotate(-90)"
+        />
+        <path
+          fill="none"
+          d="M15.41,1.99h5.16c.79,0,1.43.64,1.43,1.43v17.15c0,.79-.64,1.43-1.43,1.43h-5.16"
         />
       </svg>
     );

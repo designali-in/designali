@@ -18,16 +18,8 @@ export const KeyframeRemove = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <line x1="22.01" y1="3.98" x2="14.63" y2="3.98" />
-        <rect
-          x="3.91"
-          y="6.71"
-          width="11.39"
-          height="11.39"
-          rx="1.08"
-          ry="1.08"
-          transform="translate(-5.96 10.43) rotate(-45)"
-        />
+        <line x1="22" y1="2" x2="16" y2="2" />
+        <path d="M15.59,14.03l-6.16,7.7c-.29.36-.76.36-1.05,0l-6.16-7.7c-.29-.36-.29-.95,0-1.31l6.16-7.7c.29-.36.76-.36,1.05,0l6.16,7.7c.29.36.29.95,0,1.31Z" />
       </svg>
     );
   },

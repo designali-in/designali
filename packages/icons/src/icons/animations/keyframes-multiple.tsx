@@ -18,23 +18,9 @@ export const KeyframeMultiple = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path
-          fill="none"
-          d="M13,19l3.51-4.4c.99-1.24,1.49-1.86,1.49-2.6s-.5-1.36-1.49-2.6l-3.51-4.4"
-        />
-        <path
-          fill="none"
-          d="M17,19l3.51-4.4c.99-1.24,1.49-1.86,1.49-2.6s-.5-1.36-1.49-2.6l-3.51-4.4"
-        />
-        <rect
-          x="3.31"
-          y="7.77"
-          width="8.45"
-          height="8.45"
-          rx="1.08"
-          ry="1.08"
-          transform="translate(-6.28 8.84) rotate(-45)"
-        />
+        <path fill="none" d="M12.43,5.9l4.5,5.62c.21.27.21.7,0,.96l-4.5,5.62" />
+        <path fill="none" d="M17.34,5.9l4.5,5.62c.21.27.21.7,0,.96l-4.5,5.62" />
+        <path d="M11.92,12.48l-4.5,5.62c-.21.27-.56.27-.77,0l-4.5-5.62c-.21-.27-.21-.7,0-.96l4.5-5.62c.21-.27.56-.27.77,0l4.5,5.62c.21.27.21.7,0,.96Z" />
       </svg>
     );
   },

@@ -18,7 +18,7 @@ export const EaseOut = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path fill="none" d="M2.03,20.86S9.78,3.14,21.97,3.14" />
+        <path fill="none" d="M2,22S6.31,2,22,2" />
       </svg>
     );
   },

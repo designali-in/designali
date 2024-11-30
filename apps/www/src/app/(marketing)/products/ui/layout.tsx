@@ -40,7 +40,7 @@ export default function MarketingLayout({ children }: RootLayoutProps) {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/ui">Ui</BreadcrumbLink>
+                <BreadcrumbLink href="/products/ui">Ui</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>

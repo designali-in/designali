@@ -20,8 +20,10 @@ export const EaseInControlPoint = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <path fill="none" d="M20,3S13,19,2,19" />
-      <path d="M11,19h2M16,19h2M18,19c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2Z" />
+      <path fill="none" d="M20,2S13,19.59,2,19.59" />
+      <circle cx="19.59" cy="19.59" r="2.41" />
+      <line x1="17.19" y1="19.59" x2="15.39" y2="19.59" />
+      <line x1="12.43" y1="19.59" x2="10.91" y2="19.59" />
     </svg>
   );
 });

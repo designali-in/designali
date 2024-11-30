@@ -1,18 +1,14 @@
 import Link from "next/link";
 import { Button } from "@/registry/default/designali/ui/button";
+import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-import "public/registry/themes.css";
-
-import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 
 export const metadata = {
   title: "UI - Designali",
@@ -34,14 +30,14 @@ export default function HomePage() {
             >{`import { Button } from "@/components/ui/button" `}</CodeBlock>
           </CardContent>
           <CardFooter>
-            <Link href="/ui/buttons">
+            <Link href="/products/ui/buttons">
               <Button icon="ArrowRight">Buttons</Button>
             </Link>
           </CardFooter>
         </Card>
         <Card className="">
           <CardHeader>
-            <CardTitle>Button</CardTitle>
+            <CardTitle>Inputs</CardTitle>
           </CardHeader>
           <CardContent className="w-80 md:w-full">
             Displays a form input field or a component that looks like an input
@@ -51,7 +47,7 @@ export default function HomePage() {
             >{`import { Input } from "@/components/ui/inputs" `}</CodeBlock>
           </CardContent>
           <CardFooter>
-            <Link href="/ui/inputs">
+            <Link href="/products/ui/inputs">
               <Button icon="ArrowRight">Inputs</Button>
             </Link>
           </CardFooter>
@@ -68,7 +64,7 @@ export default function HomePage() {
             >{`import { Input } from "@/components/ui/inputs" `}</CodeBlock>
           </CardContent>
           <CardFooter>
-            <Link href="/ui/mockups">
+            <Link href="/products/ui/mockups">
               <Button icon="ArrowRight">Mockups</Button>
             </Link>
           </CardFooter>
@@ -103,7 +99,7 @@ export default function HomePage() {
             </p>
           </CardContent>
           <CardFooter>
-            <Link href="/ui/easings">
+            <Link href="/products/ui/easings">
               <Button icon="ArrowRight">Easings</Button>
             </Link>
           </CardFooter>

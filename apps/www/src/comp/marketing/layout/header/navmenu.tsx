@@ -89,7 +89,7 @@ export function Menu() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/ui"
+                      href="/products/ui"
                     >
                       <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">

@@ -20,17 +20,9 @@ export const KeyframeAlignVertical = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <rect
-        x="9.1"
-        y="9.1"
-        width="5.8"
-        height="5.8"
-        rx="1.08"
-        ry="1.08"
-        transform="translate(28.97 12) rotate(135)"
-      />
-      <line x1="12" y1="4.97" x2="12" y2="2" />
-      <line x1="12" y1="22" x2="12" y2="19.03" />
+      <line x1="12" y1="19.03" x2="12" y2="22" />
+      <line x1="12" y1="2" x2="12" y2="4.97" />
+      <path d="M14.75,12.27l-2.53,3.17c-.12.15-.31.15-.43,0l-2.53-3.17c-.12-.15-.12-.39,0-.54l2.53-3.17c.12-.15.31-.15.43,0l2.53,3.17c.12.15.12.39,0,.54Z" />
     </svg>
   );
 });

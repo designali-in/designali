@@ -337,7 +337,7 @@ export default function Easings({ easings }: EasingsProps) {
                 value={[tempDuration]}
                 min={0}
                 max={5000}
-                step={1}
+                step={10}
                 onValueChange={handleSliderChange}
                 onValueCommit={handleSliderChangeEnd}
                 className="w-[180px]"

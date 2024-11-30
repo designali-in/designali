@@ -20,9 +20,9 @@ export const AnimationMoveBottom = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <path fill="none" d="M8,18l4,4,4-4" />
+      <path d="M8,18l4,4,4-4" />
       <path d="M12,11.45v10.55" />
-      <circle cx="12" cy="4.16" r="2.16" />
+      <circle cx="12" cy="4.41" r="2.41" />
     </svg>
   );
 });
