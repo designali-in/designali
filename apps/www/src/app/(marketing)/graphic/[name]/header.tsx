@@ -2,10 +2,10 @@
 
 import type { Likes, Views } from "@/types";
 import React from "react";
-import { Separator } from "@/registry/default/designali/ui/separator";
 import useSWR from "swr";
 
 import fetcher from "@/lib/fetcher";
+import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface HeaderProps {

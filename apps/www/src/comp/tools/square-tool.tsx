@@ -4,12 +4,12 @@
 
 import type { ChangeEvent } from "react";
 import React, { useEffect, useState } from "react";
-import { Button } from "@/registry/default/designali/ui/button";
 import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 import { usePlausible } from "next-plausible";
 
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { Button } from "@/components/ui/button";
 
 import { GridPattern } from "../uis/grid-pattern";
 

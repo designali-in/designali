@@ -23,7 +23,7 @@ export function InviteMemberDialog({ teamId }: InviteMemberDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger>
         <Button>
           <UserPlus className="mr-2 h-4 w-4" />
           Invite Member

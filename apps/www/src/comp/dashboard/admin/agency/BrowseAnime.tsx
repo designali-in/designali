@@ -5,7 +5,6 @@ import type { FC } from "react";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { Combobox } from "@/comp/uis/combobox";
 import { catalogs } from "@/data/agency";
-import { Input } from "@/registry/default/designali/ui/input";
 import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
@@ -14,6 +13,7 @@ import { useDebounce } from "use-debounce";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { getYearData } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 import AnimeCard from "./AnimeCard";
 import AnimeCardSkeleton from "./AnimeCardSkeleton";

@@ -6,13 +6,14 @@ import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Button } from "@/registry/default/designali/ui/button";
-import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
-import { Skeleton } from "@/registry/default/designali/ui/skeleton";
-import { Tabs } from "@/registry/default/designali/ui/tabs";
-import { toast } from "@/registry/default/designali/ui/toasts";
 import { debounce, randomElement, uniq } from "@/src/lib/dutils";
 import { svgAsPngUri } from "save-svg-as-png";
+
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Tabs } from "@/components/ui/tabs";
+import { toast } from "@/components/ui/toasts";
 
 import { DIcons } from "../../../../../../packages/icons/src";
 import CustomSvgIcon from "./CustomSvgIcon";
@@ -77,7 +78,7 @@ export default function DIconsPage({ Categories = {} }: DIconProps) {
     iconSize: 150,
     linecap: "round",
     linejoin: "round",
-    strokeWidth: 1.5,
+    strokeWidth: 1,
   });
 
   const onChangeSearchTerm: React.FormEventHandler<HTMLInputElement> = (

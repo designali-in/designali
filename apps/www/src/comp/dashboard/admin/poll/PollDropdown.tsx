@@ -98,7 +98,7 @@ const PollDropdown: FC<PollDropdownProps> = ({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+      <DropdownMenuTrigger>{children}</DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={handleShare} className="cursor-pointer">
           <div className="flex items-center gap-x-2">

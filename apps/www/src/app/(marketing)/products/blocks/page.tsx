@@ -11,8 +11,8 @@ export default async function BlocksPage() {
     <main className="mx-auto mt-10 grid max-w-7xl gap-3 px-0 xl:px-0">
       <div className="gap-3 md:flex md:flex-row-reverse md:items-start">
         <div className="grid flex-1 gap-24 lg:gap-48">
-          {blocks.map((name, index) => (
-            <BlockDisplay key={`${name}-${index}`} name={name} />
+          {blocks.map((name) => (
+            <BlockDisplay key={name} name={name} />
           ))}
         </div>
       </div>

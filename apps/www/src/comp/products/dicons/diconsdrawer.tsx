@@ -3,10 +3,10 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/registry/default/designali/ui/button";
 import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 import { DIcons } from "dicons";
 
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -25,7 +25,7 @@ export const DIconsDrawer = ({ settings }: SideIconProps) => {
       <div className="flex justify-center gap-2">
         <div>
           <Drawer>
-            <DrawerTrigger asChild>
+            <DrawerTrigger>
               <Button variant="outline">Open</Button>
             </DrawerTrigger>
             <DrawerContent>
@@ -48,7 +48,7 @@ export default App;`}</CodeBlock>
                 </div>
 
                 <DrawerFooter className="absolute right-0">
-                  <DrawerClose asChild>
+                  <DrawerClose>
                     <Button size="icon" variant="outline">
                       <DIcons.Close />
                     </Button>

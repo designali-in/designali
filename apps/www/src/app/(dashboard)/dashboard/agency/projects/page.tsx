@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { Button } from "@/registry/default/designali/ui/button";
 import DashboardProjects from "@/src/comp/dashboard/admin/ticket/DashboardProjscts";
 import ProjectSettings from "@/src/comp/dashboard/admin/ticket/projectSettings";
+
+import { Button } from "@/components/ui/button";
 
 export default function AgencyPage() {
   return (

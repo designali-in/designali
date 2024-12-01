@@ -183,7 +183,7 @@ export function AppSidebar({
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="h-12" size="lg" asChild>
+            <SidebarMenuButton className="h-12" size="lg">
               <Link
                 aria-label="Logo"
                 href="/"
@@ -314,7 +314,7 @@ export function AdminAppSidebar({
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="h-12" size="lg" asChild>
+            <SidebarMenuButton className="h-12" size="lg">
               <Link
                 aria-label="Logo"
                 href="/"

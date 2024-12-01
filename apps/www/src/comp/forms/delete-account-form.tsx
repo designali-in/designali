@@ -47,7 +47,7 @@ export function DeleteAccountForm() {
         Once you delete your account, there is no going back. Please be certain.
       </div>
       <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
-        <DialogTrigger asChild>
+        <DialogTrigger>
           <Button className="flex" variant="destructive">
             Delete Account
           </Button>

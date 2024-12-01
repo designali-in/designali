@@ -30,7 +30,7 @@ export function NavUser({ user }: UserAccountNavProps) {
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
-          <DropdownMenuTrigger className="border" asChild>
+          <DropdownMenuTrigger className="border">
             <SidebarMenuButton
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"

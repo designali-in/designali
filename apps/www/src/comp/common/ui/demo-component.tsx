@@ -5,15 +5,11 @@
 
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { cn } from "@/lib/utils";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/default/designali/ui/tabs";
 import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 import { useConfig } from "@/src/hooks/use-config";
+
+import { cn } from "@/lib/utils";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { CopyButton } from "../../uis/copy-button";
 import { ThemeWrapper } from "../theme-wrapper";

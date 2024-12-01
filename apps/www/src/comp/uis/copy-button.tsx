@@ -114,7 +114,7 @@ export function CopyWithClassNames({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger>
         <Button
           size="icon"
           variant="ghost"
@@ -176,7 +176,7 @@ export function CopyNpmCommandButton({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger>
         <Button
           size="icon"
           variant="ghost"

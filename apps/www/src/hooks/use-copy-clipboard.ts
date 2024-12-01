@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { toast } from "@/components/ui/toaster";
+import { toast } from "@/components/ui/toasts";
 
 interface CopyOptions {
   text: string;

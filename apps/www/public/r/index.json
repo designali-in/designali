@@ -1,26 +1,53 @@
 [
   {
-    "name": "Sidebar",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/ui/sidebar.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "accordion",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-accordion"
     ],
     "files": [
       {
-        "path": "designali/ui/accordion.tsx",
+        "path": "ui/accordion.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "keyframes": {
+              "accordion-down": {
+                "from": {
+                  "height": "0"
+                },
+                "to": {
+                  "height": "var(--radix-accordion-content-height)"
+                }
+              },
+              "accordion-up": {
+                "from": {
+                  "height": "var(--radix-accordion-content-height)"
+                },
+                "to": {
+                  "height": "0"
+                }
+              }
+            },
+            "animation": {
+              "accordion-down": "accordion-down 0.2s ease-out",
+              "accordion-up": "accordion-up 0.2s ease-out"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "alert",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/alert.tsx",
         "type": "registry:ui"
       }
     ]
@@ -29,24 +56,14 @@
     "name": "alert-dialog",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-alert-dialog"
+    ],
+    "registryDependencies": [
+      "button"
     ],
     "files": [
       {
-        "path": "designali/ui/alert-dialog.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "alert",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/ui/alert.tsx",
+        "path": "ui/alert-dialog.tsx",
         "type": "registry:ui"
       }
     ]
@@ -55,11 +72,11 @@
     "name": "aspect-ratio",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-aspect-ratio"
     ],
     "files": [
       {
-        "path": "designali/ui/aspect-ratio.tsx",
+        "path": "ui/aspect-ratio.tsx",
         "type": "registry:ui"
       }
     ]
@@ -68,11 +85,11 @@
     "name": "avatar",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-avatar"
     ],
     "files": [
       {
-        "path": "designali/ui/avatar.tsx",
+        "path": "ui/avatar.tsx",
         "type": "registry:ui"
       }
     ]
@@ -80,12 +97,9 @@
   {
     "name": "badge",
     "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
     "files": [
       {
-        "path": "designali/ui/badge.tsx",
+        "path": "ui/badge.tsx",
         "type": "registry:ui"
       }
     ]
@@ -94,11 +108,11 @@
     "name": "breadcrumb",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-slot"
     ],
     "files": [
       {
-        "path": "designali/ui/breadcrumb.tsx",
+        "path": "ui/breadcrumb.tsx",
         "type": "registry:ui"
       }
     ]
@@ -107,11 +121,11 @@
     "name": "button",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-slot"
     ],
     "files": [
       {
-        "path": "designali/ui/button.tsx",
+        "path": "ui/button.tsx",
         "type": "registry:ui"
       }
     ]
@@ -120,11 +134,15 @@
     "name": "calendar",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "react-day-picker@8.10.1",
+      "date-fns"
+    ],
+    "registryDependencies": [
+      "button"
     ],
     "files": [
       {
-        "path": "designali/ui/calendar.tsx",
+        "path": "ui/calendar.tsx",
         "type": "registry:ui"
       }
     ]
@@ -132,12 +150,9 @@
   {
     "name": "card",
     "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
     "files": [
       {
-        "path": "designali/ui/card.tsx",
+        "path": "ui/card.tsx",
         "type": "registry:ui"
       }
     ]
@@ -146,11 +161,31 @@
     "name": "carousel",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "embla-carousel-react"
+    ],
+    "registryDependencies": [
+      "button"
     ],
     "files": [
       {
-        "path": "designali/ui/carousel.tsx",
+        "path": "ui/carousel.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "chart",
+    "type": "registry:ui",
+    "dependencies": [
+      "recharts",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "card"
+    ],
+    "files": [
+      {
+        "path": "ui/chart.tsx",
         "type": "registry:ui"
       }
     ]
@@ -159,24 +194,11 @@
     "name": "checkbox",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-checkbox"
     ],
     "files": [
       {
-        "path": "designali/ui/checkbox.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "combobox",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/ui/combobox.tsx",
+        "path": "ui/checkbox.tsx",
         "type": "registry:ui"
       }
     ]
@@ -185,11 +207,11 @@
     "name": "collapsible",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-collapsible"
     ],
     "files": [
       {
-        "path": "designali/ui/collapsible.tsx",
+        "path": "ui/collapsible.tsx",
         "type": "registry:ui"
       }
     ]
@@ -198,24 +220,27 @@
     "name": "command",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "cmdk@1.0.0"
+    ],
+    "registryDependencies": [
+      "dialog"
     ],
     "files": [
       {
-        "path": "designali/ui/command.tsx",
+        "path": "ui/command.tsx",
         "type": "registry:ui"
       }
     ]
   },
   {
-    "name": "date-picker",
+    "name": "context-menu",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-context-menu"
     ],
     "files": [
       {
-        "path": "designali/ui/date-picker.tsx",
+        "path": "ui/context-menu.tsx",
         "type": "registry:ui"
       }
     ]
@@ -224,11 +249,11 @@
     "name": "dialog",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-dialog"
     ],
     "files": [
       {
-        "path": "designali/ui/dialog.tsx",
+        "path": "ui/dialog.tsx",
         "type": "registry:ui"
       }
     ]
@@ -237,11 +262,12 @@
     "name": "drawer",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "vaul",
+      "@radix-ui/react-dialog"
     ],
     "files": [
       {
-        "path": "designali/ui/drawer.tsx",
+        "path": "ui/drawer.tsx",
         "type": "registry:ui"
       }
     ]
@@ -250,11 +276,11 @@
     "name": "dropdown-menu",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-dropdown-menu"
     ],
     "files": [
       {
-        "path": "designali/ui/dropdown-menu.tsx",
+        "path": "ui/dropdown-menu.tsx",
         "type": "registry:ui"
       }
     ]
@@ -263,11 +289,19 @@
     "name": "form",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-label",
+      "@radix-ui/react-slot",
+      "@hookform/resolvers",
+      "zod",
+      "react-hook-form"
+    ],
+    "registryDependencies": [
+      "button",
+      "label"
     ],
     "files": [
       {
-        "path": "designali/ui/form.tsx",
+        "path": "ui/form.tsx",
         "type": "registry:ui"
       }
     ]
@@ -276,24 +310,60 @@
     "name": "hover-card",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-hover-card"
     ],
     "files": [
       {
-        "path": "designali/ui/hover-card.tsx",
+        "path": "ui/hover-card.tsx",
         "type": "registry:ui"
       }
     ]
   },
   {
-    "name": "mode-toggle",
+    "name": "input",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/input.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "input-otp",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "input-otp"
     ],
     "files": [
       {
-        "path": "designali/ui/mode-toggle.tsx",
+        "path": "ui/input-otp.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "label",
+    "type": "registry:ui",
+    "dependencies": [
+      "@radix-ui/react-label"
+    ],
+    "files": [
+      {
+        "path": "ui/label.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "menubar",
+    "type": "registry:ui",
+    "dependencies": [
+      "@radix-ui/react-menubar"
+    ],
+    "files": [
+      {
+        "path": "ui/menubar.tsx",
         "type": "registry:ui"
       }
     ]
@@ -302,11 +372,11 @@
     "name": "navigation-menu",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-navigation-menu"
     ],
     "files": [
       {
-        "path": "designali/ui/navigation-menu.tsx",
+        "path": "ui/navigation-menu.tsx",
         "type": "registry:ui"
       }
     ]
@@ -314,12 +384,12 @@
   {
     "name": "pagination",
     "type": "registry:ui",
-    "dependencies": [
-      ""
+    "registryDependencies": [
+      "button"
     ],
     "files": [
       {
-        "path": "designali/ui/pagination.tsx",
+        "path": "ui/pagination.tsx",
         "type": "registry:ui"
       }
     ]
@@ -328,11 +398,11 @@
     "name": "popover",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-popover"
     ],
     "files": [
       {
-        "path": "designali/ui/popover.tsx",
+        "path": "ui/popover.tsx",
         "type": "registry:ui"
       }
     ]
@@ -341,11 +411,11 @@
     "name": "progress",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-progress"
     ],
     "files": [
       {
-        "path": "designali/ui/progress.tsx",
+        "path": "ui/progress.tsx",
         "type": "registry:ui"
       }
     ]
@@ -354,11 +424,11 @@
     "name": "radio-group",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-radio-group"
     ],
     "files": [
       {
-        "path": "designali/ui/radio-group.tsx",
+        "path": "ui/radio-group.tsx",
         "type": "registry:ui"
       }
     ]
@@ -367,11 +437,11 @@
     "name": "resizable",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "react-resizable-panels"
     ],
     "files": [
       {
-        "path": "designali/ui/resizable.tsx",
+        "path": "ui/resizable.tsx",
         "type": "registry:ui"
       }
     ]
@@ -380,11 +450,11 @@
     "name": "scroll-area",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-scroll-area"
     ],
     "files": [
       {
-        "path": "designali/ui/scroll-area.tsx",
+        "path": "ui/scroll-area.tsx",
         "type": "registry:ui"
       }
     ]
@@ -393,11 +463,11 @@
     "name": "select",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-select"
     ],
     "files": [
       {
-        "path": "designali/ui/select.tsx",
+        "path": "ui/select.tsx",
         "type": "registry:ui"
       }
     ]
@@ -406,11 +476,11 @@
     "name": "separator",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-separator"
     ],
     "files": [
       {
-        "path": "designali/ui/separator.tsx",
+        "path": "ui/separator.tsx",
         "type": "registry:ui"
       }
     ]
@@ -419,24 +489,87 @@
     "name": "sheet",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-dialog"
     ],
     "files": [
       {
-        "path": "designali/ui/sheet.tsx",
+        "path": "ui/sheet.tsx",
         "type": "registry:ui"
       }
     ]
   },
   {
-    "name": "skeleton",
+    "name": "sidebar",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-slot",
+      "class-variance-authority",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button",
+      "separator",
+      "sheet",
+      "tooltip",
+      "input",
+      "use-mobile",
+      "skeleton"
     ],
     "files": [
       {
-        "path": "designali/ui/skeleton.tsx",
+        "path": "ui/sidebar.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "colors": {
+              "sidebar": {
+                "DEFAULT": "hsl(var(--sidebar-background))",
+                "foreground": "hsl(var(--sidebar-foreground))",
+                "primary": "hsl(var(--sidebar-primary))",
+                "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+                "accent": "hsl(var(--sidebar-accent))",
+                "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+                "border": "hsl(var(--sidebar-border))",
+                "ring": "hsl(var(--sidebar-ring))"
+              }
+            }
+          }
+        }
+      }
+    },
+    "cssVars": {
+      "light": {
+        "sidebar-background": "0 0% 98%",
+        "sidebar-foreground": "240 5.3% 26.1%",
+        "sidebar-primary": "240 5.9% 10%",
+        "sidebar-primary-foreground": "0 0% 98%",
+        "sidebar-accent": "240 4.8% 95.9%",
+        "sidebar-accent-foreground": "240 5.9% 10%",
+        "sidebar-border": "220 13% 91%",
+        "sidebar-ring": "217.2 91.2% 59.8%"
+      },
+      "dark": {
+        "sidebar-background": "240 5.9% 10%",
+        "sidebar-foreground": "240 4.8% 95.9%",
+        "sidebar-primary": "224.3 76.3% 48%",
+        "sidebar-primary-foreground": "0 0% 100%",
+        "sidebar-accent": "240 3.7% 15.9%",
+        "sidebar-accent-foreground": "240 4.8% 95.9%",
+        "sidebar-border": "240 3.7% 15.9%",
+        "sidebar-ring": "217.2 91.2% 59.8%"
+      }
+    }
+  },
+  {
+    "name": "skeleton",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/skeleton.tsx",
         "type": "registry:ui"
       }
     ]
@@ -445,11 +578,11 @@
     "name": "slider",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-slider"
     ],
     "files": [
       {
-        "path": "designali/ui/slider.tsx",
+        "path": "ui/slider.tsx",
         "type": "registry:ui"
       }
     ]
@@ -458,11 +591,12 @@
     "name": "sonner",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "sonner",
+      "next-themes"
     ],
     "files": [
       {
-        "path": "designali/ui/sonner.tsx",
+        "path": "ui/sonner.tsx",
         "type": "registry:ui"
       }
     ]
@@ -471,11 +605,11 @@
     "name": "switch",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-switch"
     ],
     "files": [
       {
-        "path": "designali/ui/switch.tsx",
+        "path": "ui/switch.tsx",
         "type": "registry:ui"
       }
     ]
@@ -483,12 +617,9 @@
   {
     "name": "table",
     "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
     "files": [
       {
-        "path": "designali/ui/table.tsx",
+        "path": "ui/table.tsx",
         "type": "registry:ui"
       }
     ]
@@ -497,11 +628,11 @@
     "name": "tabs",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-tabs"
     ],
     "files": [
       {
-        "path": "designali/ui/tabs.tsx",
+        "path": "ui/tabs.tsx",
         "type": "registry:ui"
       }
     ]
@@ -509,12 +640,9 @@
   {
     "name": "textarea",
     "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
     "files": [
       {
-        "path": "designali/ui/textarea.tsx",
+        "path": "ui/textarea.tsx",
         "type": "registry:ui"
       }
     ]
@@ -523,37 +651,19 @@
     "name": "toast",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-toast"
     ],
     "files": [
       {
-        "path": "designali/ui/toast.tsx",
+        "path": "ui/toast.tsx",
         "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "toasts",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
+      },
       {
-        "path": "designali/ui/toasts.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "toaster",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
+        "path": "hooks/use-toast.ts",
+        "type": "registry:hook"
+      },
       {
-        "path": "designali/ui/toaster.tsx",
+        "path": "ui/toaster.tsx",
         "type": "registry:ui"
       }
     ]
@@ -562,11 +672,11 @@
     "name": "toggle",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-toggle"
     ],
     "files": [
       {
-        "path": "designali/ui/toggle.tsx",
+        "path": "ui/toggle.tsx",
         "type": "registry:ui"
       }
     ]
@@ -575,11 +685,14 @@
     "name": "toggle-group",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-toggle-group"
+    ],
+    "registryDependencies": [
+      "toggle"
     ],
     "files": [
       {
-        "path": "designali/ui/toggle-group.tsx",
+        "path": "ui/toggle-group.tsx",
         "type": "registry:ui"
       }
     ]
@@ -588,89 +701,11 @@
     "name": "tooltip",
     "type": "registry:ui",
     "dependencies": [
-      ""
+      "@radix-ui/react-tooltip"
     ],
     "files": [
       {
-        "path": "designali/ui/tooltip.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "safari",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/mockups/safari.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "ipad-pro",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/mockups/ipad-pro.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "macbook-pro",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/mockups/macbook-pro.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "mac",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/mockups/mac.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "iphone-16",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/mockups/iphone-16.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
-    "name": "iphone-16-pro",
-    "type": "registry:ui",
-    "dependencies": [
-      ""
-    ],
-    "files": [
-      {
-        "path": "designali/mockups/iphone-16-pro.tsx",
+        "path": "ui/tooltip.tsx",
         "type": "registry:ui"
       }
     ]

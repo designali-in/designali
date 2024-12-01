@@ -6,23 +6,23 @@
 
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import Link from "next/link";
-import { Button } from "@/registry/default/designali/ui/button";
-import { ScrollArea } from "@/registry/default/designali/ui/scroll-area";
-import { Slider } from "@/registry/default/designali/ui/slider";
-import { TabsContent } from "@/registry/default/designali/ui/tabs";
 import { DiconsSidebarNav } from "@/src/comp/mdx/doc/sidebar-nav";
 import GridPattern from "@/src/comp/uis/grid-pattern";
 import { diconsConfig } from "@/src/config/icons";
 import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Slider } from "@/components/ui/slider";
+import { TabsContent } from "@/components/ui/tabs";
 import { toast } from "@/components/ui/toaster";
 
 import { ColorInput } from "./color-input";
@@ -191,7 +191,7 @@ const SideIcon = ({
                 onClick={() => {
                   setSettings({
                     ...settings,
-                    strokeWidth: 1.5,
+                    strokeWidth: 1,
                     iconSize: 150,
                   });
                 }}
@@ -233,7 +233,10 @@ const SideIcon = ({
                         <div>
                           {!customSvgIsPng && (
                             <div className="flex items-center justify-between">
-                              <span className="pr-5 text-xs">Fill Color</span>
+                              <span className="pr-5 text-xs">
+                                {" "}
+                                Outline Color
+                              </span>
                               <ColorInput
                                 value={settings.strokeColor}
                                 name={"strokeColor"}
@@ -248,9 +251,7 @@ const SideIcon = ({
                         <div>
                           {!customSvgIsPng && (
                             <div className="flex items-center justify-between">
-                              <span className="pr-5 text-xs">
-                                Outline Color
-                              </span>
+                              <span className="pr-5 text-xs">Fill Color</span>
                               <ColorInput
                                 value={settings.iconFill}
                                 name={"iconFill"}
@@ -287,7 +288,9 @@ const SideIcon = ({
                         <div>
                           {!customSvgIsPng && (
                             <div className="flex items-center justify-between">
-                              <span className="pr-5 text-xs">Fill Color</span>
+                              <span className="pr-5 text-xs">
+                                Outline Color
+                              </span>
                               <ColorInput
                                 value={settings.strokeColor}
                                 name={"strokeColor"}
@@ -302,9 +305,7 @@ const SideIcon = ({
                         <div>
                           {!customSvgIsPng && (
                             <div className="flex items-center justify-between">
-                              <span className="pr-5 text-xs">
-                                Outline Color
-                              </span>
+                              <span className="pr-5 text-xs">Fill Color</span>
                               <ColorInput
                                 value={settings.iconFill}
                                 name={"iconFill"}

@@ -7,8 +7,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*", "./src/*"],
-      "@/components/ui/*": ["./registry/default/designali/ui/*"],
-      "@/components/mockups/*": ["./registry/default/designali/mockups/*"],
+      "@/components/ui/*": ["./registry/default/ui/*"],
+      "@/components/mockups/*": ["./registry/default/mockups/*"],
       "@/components/example/*": ["./registry/default/example/*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
       "~/*": ["./src/*"]

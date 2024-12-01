@@ -23,7 +23,7 @@ export const ProtectedElement: React.FC<ProtectedElementProps> = ({
   if (!isUserLoggedIn) {
     return (
       <Tooltip>
-        <TooltipTrigger asChild>
+        <TooltipTrigger>
           <div className="cursor-not-allowed">{renderElement(true)}</div>
         </TooltipTrigger>
         <TooltipContent>

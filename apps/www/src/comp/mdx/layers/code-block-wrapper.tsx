@@ -44,7 +44,7 @@ export function CodeBlockWrapper({
             isOpened ? "inset-x-0 bottom-0 h-20" : "inset-0",
           )}
         >
-          <CollapsibleTrigger asChild>
+          <CollapsibleTrigger>
             <Button variant="default" className="h-8 text-xs">
               {isOpened ? "Collapse" : expandButtonTitle}
             </Button>

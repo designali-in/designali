@@ -28,7 +28,7 @@ export function Menu() {
             <NavigationMenuContent className="space-y-3">
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/about"
@@ -69,7 +69,7 @@ export function Menu() {
             <NavigationMenuContent>
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dicons"
@@ -86,7 +86,7 @@ export function Menu() {
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/ui"
@@ -103,7 +103,7 @@ export function Menu() {
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dshapes"
@@ -120,7 +120,7 @@ export function Menu() {
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/graaadients"
@@ -138,7 +138,7 @@ export function Menu() {
                 </li>
 
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/colors"
@@ -166,7 +166,7 @@ export function Menu() {
             <NavigationMenuContent className="space-y-3">
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/agency/works"
@@ -226,7 +226,7 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
+      <NavigationMenuLink>
         <a
           ref={ref}
           className={cn(

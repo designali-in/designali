@@ -25,7 +25,7 @@ export default function Page() {
         </div>
 
         <HoverCard>
-          <HoverCardTrigger asChild>
+          <HoverCardTrigger>
             <div className="absolute bottom-3 right-3 hidden md:block">
               <Button variant="outline" size="icon" icon="Info"></Button>
             </div>

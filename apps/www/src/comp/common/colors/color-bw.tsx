@@ -3,7 +3,7 @@
 import { Check, Clipboard } from "lucide-react";
 
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
-import { toast } from "@/components/ui/toaster";
+import { toast } from "@/components/ui/toasts";
 
 export function ColorBW() {
   const black = "#000000";

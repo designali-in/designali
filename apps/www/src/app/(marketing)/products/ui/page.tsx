@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Button } from "@/registry/default/designali/ui/button";
 import { CodeBlock } from "@/src/comp/mdx/layers/code-block";
 
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,

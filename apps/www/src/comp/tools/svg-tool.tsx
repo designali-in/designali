@@ -2,13 +2,13 @@
 
 import type { ChangeEvent } from "react";
 import React, { useMemo, useState } from "react";
-import { Button } from "@/registry/default/designali/ui/button";
-import { Separator } from "@/registry/default/designali/ui/separator";
 import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 import { usePlausible } from "next-plausible";
 
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 import GridPattern from "../uis/grid-pattern";
 

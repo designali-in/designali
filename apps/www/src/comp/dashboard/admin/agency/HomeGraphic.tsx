@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Button } from "@/registry/default/designali/ui/button";
 
 import { prisma } from "@/lib/db";
+import { Button } from "@/components/ui/button";
 
 import AnimeCardClient from "./AnimeCardClient";
 

@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Skeleton } from "@/registry/default/designali/ui/skeleton";
 import axios from "axios";
 import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export const InstagramFeed = () => {
   const [posts, setPosts] = useState([]);

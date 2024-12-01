@@ -71,7 +71,7 @@ export const Combobox: FC<ComboboxProps> = forwardRef<
 
     return (
       <Popover open={open} onOpenChange={setOpen} {...props}>
-        <PopoverTrigger asChild>
+        <PopoverTrigger>
           <Button
             variant="outline"
             role="combobox"

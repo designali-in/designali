@@ -4,9 +4,9 @@
 "use client";
 
 import { Suspense } from "react";
-import { Skeleton } from "@/registry/default/designali/ui/skeleton";
-import { TabsContent } from "@/registry/default/designali/ui/tabs";
 
+import { Skeleton } from "@/components/ui/skeleton";
+import { TabsContent } from "@/components/ui/tabs";
 import {
   Tooltip,
   TooltipContent,

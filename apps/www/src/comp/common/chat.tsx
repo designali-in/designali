@@ -123,7 +123,7 @@ export function Chatbot() {
               </form>
               <TooltipProvider>
                 <Tooltip>
-                  <TooltipTrigger asChild>
+                  <TooltipTrigger>
                     <Button
                       variant="default"
                       size="icon"
@@ -143,7 +143,7 @@ export function Chatbot() {
               <div className="">
                 <TooltipProvider>
                   <Tooltip>
-                    <TooltipTrigger asChild>
+                    <TooltipTrigger>
                       <Button
                         type="submit"
                         variant="default"

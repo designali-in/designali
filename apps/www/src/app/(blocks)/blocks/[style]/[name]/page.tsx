@@ -1,17 +1,22 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import type { Style } from "@/registry/registry-styles";
 import type { Metadata } from "next";
+import * as React from "react";
 import { notFound } from "next/navigation";
-import { BlockChunk } from "@/comp/products/blocks/block-chunk";
-import { BlockWrapper } from "@/comp/products/blocks/block-wrapper";
 import { styles } from "@/registry/registry-styles";
 
 import site from "@/config/site";
-import { getAllBlockIds, getBlock } from "@/lib/blocks";
+import { getAllBlockIds } from "@/lib/blocks";
 import { absoluteUrl, cn } from "@/lib/utils";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 import "@/styles/mdx.css";
+
+import { getRegistryComponent, getRegistryItem } from "@/lib/registry";
+
+const getCachedRegistryItem = React.cache(
+  async (name: string, style: Style["name"]) => {
+    return await getRegistryItem(name, style);
+  },
+);
 
 export async function generateMetadata({
   params,
@@ -22,23 +27,23 @@ export async function generateMetadata({
   };
 }): Promise<Metadata> {
   const { name, style } = params;
-  const block = await getBlock(name, style);
+  const item = await getCachedRegistryItem(name, style);
 
-  if (!block) {
+  if (!item) {
     return {};
   }
 
-  const title = block.name;
-  const description = block.description;
+  const title = item.name;
+  const description = item.description;
 
   return {
-    title: `${block.description} - ${block.name}`,
+    title: `${item.name}${item.description ? ` - ${item.description}` : ""}`,
     description,
     openGraph: {
       title,
       description,
       type: "article",
-      url: absoluteUrl(`/blocks/${block.name}`),
+      url: absoluteUrl(`/blocks/${style}/${item.name}`),
       images: [
         {
           url: site.url,
@@ -79,41 +84,18 @@ export default async function BlockPage({
   };
 }) {
   const { name, style } = params;
-  const block = await getBlock(name, style);
+  const item = await getCachedRegistryItem(name, style);
+  const Component = getRegistryComponent(name, style);
 
-  if (!block) {
+  if (!item || !Component) {
     return notFound();
   }
 
-  const Component = block.component;
-
-  const chunks = block.chunks?.map((chunk) => ({ ...chunk }));
-  delete block.component;
-  block.chunks?.map((chunk) => delete chunk.component);
-
   return (
     <>
-      <TooltipProvider>
-        <div
-          className={cn(
-            "themes-wrapper bg-background",
-            block.container?.className,
-          )}
-        >
-          <BlockWrapper block={block}>
-            <Component />
-            {chunks?.map((chunk, index) => (
-              <BlockChunk
-                key={chunk.name}
-                block={block}
-                chunk={block.chunks?.[index]}
-              >
-                <chunk.component />
-              </BlockChunk>
-            ))}
-          </BlockWrapper>
-        </div>
-      </TooltipProvider>
+      <div className={cn("bg-background", item.meta.containerClassName)}>
+        <Component />
+      </div>
     </>
   );
 }

@@ -1,32 +1,54 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { styles } from "@/registry/registry-styles";
+import type { registryItemFileSchema } from "@/registry/schema";
+import type { z } from "zod";
+import * as React from "react";
 
-import { getBlock } from "@/lib/blocks";
+import { highlightCode } from "@/lib/highlight-code";
+import {
+  createFileTreeForRegistryItemFiles,
+  getRegistryItem,
+} from "@/lib/registry";
 
-import { BlockPreview } from "./block-preview";
+import { BlockViewer } from "./block-viewer";
 
 export async function BlockDisplay({ name }: { name: string }) {
-  const blocks = await Promise.all(
-    styles.map(async (style) => {
-      const block = await getBlock(name, style.name);
-      const hasLiftMode = block?.chunks ? block?.chunks?.length > 0 : false;
+  const item = await getCachedRegistryItem(name);
 
-      // Cannot (and don't need to) pass to the client.
-      delete block?.component;
-      delete block?.chunks;
-
-      return {
-        ...block,
-        hasLiftMode,
-      };
-    }),
-  );
-
-  if (!blocks?.length) {
+  if (!item.files) {
     return null;
   }
 
-  return blocks.map((block) => (
-    <BlockPreview key={`${block.style}-${block.name}`} block={block} />
-  ));
+  const [tree, highlightedFiles] = await Promise.all([
+    // @ts-ignore
+    getCachedFileTree(item.files),
+    getCachedHighlightedFiles(item.files),
+  ]);
+
+  return (
+    <BlockViewer item={item} tree={tree} highlightedFiles={highlightedFiles} />
+  );
 }
+
+const getCachedRegistryItem = React.cache(async (name: string) => {
+  return await getRegistryItem(name);
+});
+
+const getCachedFileTree = React.cache(
+  async (files: { path: string; target?: string }[]) => {
+    if (!files) {
+      return null;
+    }
+
+    return await createFileTreeForRegistryItemFiles(files);
+  },
+);
+
+const getCachedHighlightedFiles = React.cache(
+  async (files: z.infer<typeof registryItemFileSchema>[]) => {
+    return await Promise.all(
+      files.map(async (file) => ({
+        ...file,
+        highlightedContent: await (file.content ?? ""),
+      })),
+    );
+  },
+);

@@ -86,7 +86,7 @@ export function UpdatesToolbar({ posts }) {
                 }),
               )}
             >
-              <DialogTrigger asChild>
+              <DialogTrigger>
                 <Icons.share strokeWidth={1} className="h-5 w-5" />
               </DialogTrigger>
             </TooltipTrigger>
@@ -150,7 +150,6 @@ export function UpdatesToolbarDoc({ posts }) {
           <Tooltip>
             <TooltipTrigger>
               <DialogTrigger
-                asChild
                 className={cn(
                   buttonVariants({
                     variant: "outline",

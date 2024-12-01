@@ -1,10 +1,10 @@
 import Link from "next/link";
 import PollClient from "@/comp/dashboard/admin/poll/PollClient";
-import { Button } from "@/registry/default/designali/ui/button";
 
 import { auth } from "@/lib/auth";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
+import { Button } from "@/components/ui/button";
 
 const PollPage = async () => {
   const session = await auth();

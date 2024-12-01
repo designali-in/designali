@@ -6,15 +6,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { Button } from "@/registry/default/designali/ui/button";
-import {
-  ScrollArea,
-  ScrollBar,
-} from "@/registry/default/designali/ui/scroll-area";
 import { DIcons } from "dicons";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { CopyButton } from "../../uis/copy-button";

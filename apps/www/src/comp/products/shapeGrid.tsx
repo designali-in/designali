@@ -112,7 +112,7 @@ export default function ShapeGrid({ type, size, noise, index }) {
     <div>
       <div className="flex justify-center gap-2">
         <Popover>
-          <PopoverTrigger asChild>
+          <PopoverTrigger>
             <div className="rounded-2xl border p-6">
               <ShapeRenderer
                 type={type}

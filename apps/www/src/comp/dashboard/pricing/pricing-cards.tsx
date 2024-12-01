@@ -5,11 +5,11 @@ import type { UserSubscriptionPlan } from "@/types";
 import { useState } from "react";
 import Link from "next/link";
 import { BillingFormButton } from "@/comp/forms/billing-form-button";
-import { Switch } from "@/registry/default/designali/ui/switch";
 import { useSigninModal } from "@/src/hooks/use-signin-modal";
 
 import { pricingData } from "@/config/subscriptions";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 
 import { Icons } from "../../icons";
 

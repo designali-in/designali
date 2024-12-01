@@ -134,7 +134,7 @@ export function TeamSettingsForm({ team, userRole }: TeamSettingsFormProps) {
             Danger Zone
           </h3>
           <AlertDialog>
-            <AlertDialogTrigger asChild>
+            <AlertDialogTrigger>
               <Button variant="destructive">Delete Team</Button>
             </AlertDialogTrigger>
             <AlertDialogContent>

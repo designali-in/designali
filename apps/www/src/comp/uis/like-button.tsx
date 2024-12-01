@@ -8,7 +8,7 @@ import { useDebouncedCallback } from "use-debounce";
 import fetcher from "@/lib/fetcher";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { toast } from "@/components/ui/toaster";
+import { toast } from "@/components/ui/toasts";
 import {
   Tooltip,
   TooltipContent,

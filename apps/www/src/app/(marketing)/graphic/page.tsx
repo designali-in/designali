@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
-import { Button } from "@/registry/default/designali/ui/button";
-import { Separator } from "@/registry/default/designali/ui/separator";
 import { cn } from "@/src/lib/utils";
 
 import { env } from "@/env";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 import { Avegra } from "../../fonts";
 

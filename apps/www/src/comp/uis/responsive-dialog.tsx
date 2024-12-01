@@ -59,7 +59,7 @@ const ResponsiveDialog = (props: ResponsiveDialogProps) => {
 interface BaseProps {
   children?: React.ReactNode;
   className?: React.ComponentProps<"div">["className"];
-  asChild?: boolean;
+  ?: boolean;
 }
 
 const ResponsiveDialogTrigger = (props: BaseProps) => {

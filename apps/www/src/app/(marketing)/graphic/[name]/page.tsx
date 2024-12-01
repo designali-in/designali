@@ -6,13 +6,13 @@ import { notFound } from "next/navigation";
 import { ImageZoomFive } from "@/comp/common/gallery";
 import MoreLikeThis from "@/comp/dashboard/admin/agency/MoreLikeThis";
 import TopTenAnimeCheck from "@/comp/dashboard/admin/agency/TopTenAnimeCheck";
-import { Separator } from "@/registry/default/designali/ui/separator";
 import { DIcons } from "dicons";
 
 import cloudinary from "@/lib/cloudinary";
 import { prisma } from "@/lib/db";
 import { capitalizeFirstCharacter, cn, formatUrl } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 import Header from "./header";
 

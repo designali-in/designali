@@ -2,7 +2,6 @@
 
 import type { BaseColor } from "@/registry/registry-base-colors";
 import * as React from "react";
-import { Button } from "@/registry/default/designali/ui/button";
 import { baseColors } from "@/registry/registry-base-colors";
 import { copyToClipboardWithMeta } from "@/src/comp/uis/copy-button";
 import {
@@ -17,6 +16,7 @@ import { useTheme } from "next-themes";
 
 import { cn } from "@/lib/utils";
 import { useConfig } from "@/hooks/use-config";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -45,7 +45,7 @@ export function ThemeCustomizer() {
   return (
     <div className="grid items-center gap-2 md:sticky md:top-6 md:z-20">
       <Drawer>
-        <DrawerTrigger className="mt-2" asChild>
+        <DrawerTrigger className="mt-2">
           <Button size="lg" className="mt-10 md:hidden">
             Customize
           </Button>
@@ -248,7 +248,7 @@ function CopyCodeButton({
         </Button>
       )}
       <Dialog>
-        <DialogTrigger asChild>
+        <DialogTrigger>
           <Button className={cn("hidden md:flex", className)} {...props}>
             Copy code
           </Button>

@@ -14,9 +14,9 @@
   "scripts": {
     "build": "turbo run build",
     "build:apps": "turbo build --filter=./apps/*",
-    "build:packages": "turbo build --filter=./packages/*",
+    "build:packages": "turbo build --filter=./packages/*", 
     "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean",
+    "clean:workspaces": "turbo clean  --filter=./apps/*",
     "db:generate": "turbo db:generate",
     "db:migrate": "turbo db:migrate",
     "db:push": "turbo db:push",
