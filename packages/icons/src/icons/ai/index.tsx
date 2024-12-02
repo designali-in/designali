@@ -51,8 +51,38 @@ import AiSearch01 from "./ai-search-01";
 import AiSecurity01 from "./ai-security-01";
 import AiSecurity02 from "./ai-security-02";
 import AiSecurity03 from "./ai-security-03";
+import AiSetting from "./ai-setting";
+import AiSheets from "./ai-sheets";
+import AiSmartWatch from "./ai-smartwatch";
+import AiUser from "./ai-user";
+import AiVedio from "./ai-video";
+import AiView from "./ai-view";
+import AiVisionRecognition from "./ai-vision-recognition";
+import AiVoice from "./ai-voice";
+import AiVoiceGenerator from "./ai-voice-generator";
+import AiWebBrowsing from "./ai-web-browsing";
+import Algorithm from "./algorithm";
+import AppleIntelligence from "./apple-intelligence";
+import ArtificialIntelligence01 from "./artificial-intelligence-01";
+import ArtificialIntelligence02 from "./artificial-intelligence-02";
+import ArtificialIntelligence03 from "./artificial-intelligence-03";
+import ArtificialIntelligence04 from "./artificial-intelligence-04";
+import ArtificialIntelligence05 from "./artificial-intelligence-05";
+import ArtificialIntelligence06 from "./artificial-intelligence-06";
+import ArtificialIntelligence07 from "./artificial-intelligence-07";
+import ChatBot from "./chat-bot";
+import Chip from "./chip";
+import CloudServer from "./cloud-server";
+import Hologram from "./hologram";
+import MachineRobot from "./machine-robot";
+import MagicWand from "./magic-wand";
+import NeuralNetwork from "./neural-network";
+import PerplexityAi from "./perplexity-ai";
+import Robot01 from "./robot-01";
+import Robot02 from "./robot-02";
+import Robotic from "./robotic";
+import SiriNew from "./siri-new";
 
-export * from "./ai-audio";
 export * from "./ai-beautify";
 export * from "./ai-book";
 export * from "./ai-brain-01";
@@ -105,7 +135,37 @@ export * from "./ai-search-01";
 export * from "./ai-security-01";
 export * from "./ai-security-02";
 export * from "./ai-security-03";
-export * from "./";
+export * from "./ai-setting";
+export * from "./ai-sheets";
+export * from "./ai-smartwatch";
+export * from "./ai-user";
+export * from "./ai-video";
+export * from "./ai-voice";
+export * from "./ai-view";
+export * from "./ai-vision-recognition";
+export * from "./ai-voice-generator";
+export * from "./ai-web-browsing";
+export * from "./algorithm";
+export * from "./apple-intelligence";
+export * from "./artificial-intelligence-01";
+export * from "./artificial-intelligence-02";
+export * from "./artificial-intelligence-03";
+export * from "./artificial-intelligence-04";
+export * from "./artificial-intelligence-05";
+export * from "./artificial-intelligence-06";
+export * from "./artificial-intelligence-07";
+export * from "./chat-bot";
+export * from "./chip";
+export * from "./cloud-server";
+export * from "./hologram";
+export * from "./machine-robot";
+export * from "./magic-wand";
+export * from "./neural-network";
+export * from "./perplexity-ai";
+export * from "./robot-01";
+export * from "./robot-02";
+export * from "./robotic";
+export * from "./siri-new";
 
 export const Ai = {
   AiAudio,
@@ -161,4 +221,35 @@ export const Ai = {
   AiSecurity01,
   AiSecurity02,
   AiSecurity03,
+  AiSetting,
+  AiSheets,
+  AiSmartWatch,
+  AiVedio,
+  AiUser,
+  AiView,
+  AiVoice,
+  AiVisionRecognition,
+  AiVoiceGenerator,
+  AiWebBrowsing,
+  Algorithm,
+  AppleIntelligence,
+  ArtificialIntelligence01,
+  ArtificialIntelligence02,
+  ArtificialIntelligence03,
+  ArtificialIntelligence04,
+  ArtificialIntelligence05,
+  ArtificialIntelligence06,
+  ArtificialIntelligence07,
+  ChatBot,
+  Chip,
+  CloudServer,
+  Hologram,
+  MachineRobot,
+  MagicWand,
+  NeuralNetwork,
+  PerplexityAi,
+  Robot01,
+  Robot02,
+  Robotic,
+  SiriNew,
 };

@@ -2,7 +2,7 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const ArtificialIntelligence = React.forwardRef<
+export const ArtificialIntelligence01 = React.forwardRef<
   SVGSVGElement,
   DesignaliProps
 >(({ ...props }, forwardedRef) => {
@@ -20,11 +20,14 @@ export const ArtificialIntelligence = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <path d="M16,22v-.5c0-1.1.93-2,1.92-2.49.96-.48,1.77-1.26,1.87-2.18l.2-1.83,2-1-2.5-3.75c0-4.3-3.3-7.84-7.5-8.22M6.5,17v5M6.5,17c-1.03-.73-1.89-1.69-2.5-2.81M6.5,17c.75.53,1.59.94,2.5,1.19" />
-      <path d="M8,4h-2c-.94,0-1.41,0-1.71.29-.29.29-.29.76-.29,1.71v2c0,.94,0,1.41.29,1.71.29.29.76.29,1.71.29h2c.94,0,1.41,0,1.71-.29.29-.29.29-.76.29-1.71v-2c0-.94,0-1.41-.29-1.71-.29-.29-.76-.29-1.71-.29Z" />
-      <path d="M5.5,10v2M8.5,10v2M5.5,2v2M8.5,2v2M4,5.5h-2M4,8.5h-2M12,5.5h-2M12,8.5h-2" />
+      <path
+        fill="none"
+        d="M16,22v-.5c0-1.1.93-2,1.92-2.49.96-.48,1.77-1.26,1.87-2.18l.2-1.83,2-1-2.5-3.75c0-4.3-3.3-7.84-7.5-8.22M6.5,17v5M6.5,17c-1.03-.73-1.89-1.69-2.5-2.81M6.5,17c.75.53,1.59.94,2.5,1.19"
+      />
+      <path d="M7.4,3.8h-1.8c-.85,0-1.27,0-1.54.26-.26.26-.26.69-.26,1.54v1.8c0,.85,0,1.27.26,1.54.26.26.69.26,1.54.26h1.8c.85,0,1.27,0,1.54-.26.26-.26.26-.69.26-1.54v-1.8c0-.85,0-1.27-.26-1.54-.26-.26-.69-.26-1.54-.26Z" />
+      <path d="M5.15,9.2v1.8M7.85,9.2v1.8M5.15,2v1.8M7.85,2v1.8M3.8,5.15h-1.8M3.8,7.85h-1.8M11,5.15h-1.8M11,7.85h-1.8" />
     </svg>
   );
 });
 
-export default ArtificialIntelligence;
+export default ArtificialIntelligence01;
