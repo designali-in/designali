@@ -58,7 +58,7 @@ export function Chatbot() {
             )}
           </AnimatePresence>
           <div className="z-20 w-full">
-            <ScrollArea className="h-[364px] w-full overflow-auto p-1">
+            <ScrollArea className="h-[360px] w-full overflow-auto p-1">
               <div className="px-6">
                 <div className="relative flex h-full w-full justify-center text-center">
                   <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">
@@ -110,7 +110,8 @@ export function Chatbot() {
                 </div>
               </div>
             </ScrollArea>
-            <div className="relative mt-2 w-full">
+
+            <div className="relative  mt-2 w-full">
               <form onSubmit={handleSubmit}>
                 <div className="">
                   <Input
@@ -121,43 +122,29 @@ export function Chatbot() {
                   />
                 </div>
               </form>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <Button
-                      variant="default"
-                      size="icon"
-                      className="bg-ali absolute left-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full"
-                      onClick={() => {
-                        router.push("/#chat");
-                      }}
-                    >
-                      <Icons.plus className="h-5 w-5 text-white" />
 
-                      <span className="sr-only">New Chat</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>New Chat</TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <div className="">
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger>
-                      <Button
-                        type="submit"
-                        variant="default"
-                        size="icon"
-                        className="bg-ali absolute right-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full"
-                        disabled={input === ""}
-                      >
-                        <Icons.enter className="mx-1 h-4 w-4 text-white" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>Send message</TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </div>
+              <Button
+                variant="default"
+                size="icon"
+                className="bg-ali absolute left-0  top-0"
+                onClick={() => {
+                  router.push("/#chat");
+                }}
+              >
+                <Icons.plus className="h-5 w-5 text-white" />
+
+                <span className="sr-only">New Chat</span>
+              </Button>
+
+              <Button
+                type="submit"
+                variant="default"
+                size="icon"
+                className="bg-ali absolute right-0 top-0"
+                disabled={input === ""}
+              >
+                <Icons.enter className="mx-1 h-4 w-4 text-white" />
+              </Button>
             </div>
           </div>
         </div>

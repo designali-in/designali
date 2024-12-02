@@ -183,14 +183,14 @@ export function AppSidebar({
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="h-12" size="lg">
+            <SidebarMenuButton className="h-10" size="lg">
               <Link
                 aria-label="Logo"
                 href="/"
                 className="flex items-center justify-center lg:flex"
               >
                 <div className=" flex aspect-square size-10 items-center justify-center rounded-lg">
-                  <Logo className="ml-2 h-5" />
+                  <Logo className="  h-5" />
                 </div>
                 <div className="grid flex-1  text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Designali</span>
