@@ -16,6 +16,7 @@ import AiChip from "./ai-chip";
 import AiCloud from "./ai-cloud";
 import AiCloud01 from "./ai-cloud-01";
 import AiCloud02 from "./ai-cloud-02";
+import AiComputer from "./ai-computer";
 import AiContentGenerator01 from "./ai-content-generator-01";
 import AiContentGenerator02 from "./ai-content-generator-02";
 import AiDna from "./ai-dna";
@@ -62,6 +63,7 @@ export * from "./ai-brain-05";
 export * from "./ai-browser";
 export * from "./ai-chat-01";
 export * from "./ai-chat-02";
+export * from "./ai-computer";
 export * from "./ai-chemistry-01";
 export * from "./ai-chemistry-02";
 export * from "./ai-chemistry-03";
@@ -117,6 +119,7 @@ export const Ai = {
   AiBrowser,
   AiChat01,
   AiChat02,
+  AiComputer,
   AiChemistry01,
   AiChemistry02,
   AiChemistry03,

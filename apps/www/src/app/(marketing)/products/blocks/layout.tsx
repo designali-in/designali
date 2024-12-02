@@ -14,6 +14,7 @@ import {
 import "public/registry/themes.css";
 
 import { Suspense } from "react";
+import { Skeleton } from "@/registry/default/ui/skeleton";
 
 export default function BlocksLayout({
   children,
@@ -45,7 +46,9 @@ export default function BlocksLayout({
           </Breadcrumb>
         </div>
         <ThemeWrapper>
-          <ThemeCustomizer />
+          <Suspense fallback={<Skeleton className="h-full w-full" />}>
+            <ThemeCustomizer />
+          </Suspense>
           {children}
         </ThemeWrapper>
       </main>

@@ -75,7 +75,7 @@ export default function DIconsPage({ Categories = {} }: DIconProps) {
     icon: "Designali",
     iconFill: "#555555",
     strokeColor: "currentColor",
-    iconSize: 150,
+    iconSize: 200,
     linecap: "round",
     linejoin: "round",
     strokeWidth: 1,

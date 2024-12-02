@@ -18,7 +18,7 @@ export const TransitionTop = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M15.24,8.68l-3.24-3.24-3.24,3.24" />
+        <path fill="none" d="M15.24,8.68l-3.24-3.24-3.24,3.24" />
         <path d="M12,13.99V5.43" />
         <rect x="2" y="13.99" width="20" height="8.01" rx="1.43" ry="1.43" />
         <path

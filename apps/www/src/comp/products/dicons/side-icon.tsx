@@ -80,7 +80,7 @@ const SideIcon = ({
                 {settings.icon}
               </Suspense>
             </p>
-            <div className="relative aspect-square h-full w-full items-center justify-center border p-3">
+            <div className="relative aspect-square h-full w-full items-center justify-center border p-1">
               <GridPattern
                 width={12}
                 height={12}
@@ -192,7 +192,7 @@ const SideIcon = ({
                   setSettings({
                     ...settings,
                     strokeWidth: 1,
-                    iconSize: 150,
+                    iconSize: 200,
                   });
                 }}
                 size="icon"
@@ -360,7 +360,7 @@ const SideIcon = ({
                             name="iconSize"
                             defaultValue={[settings.iconSize]}
                             min={16}
-                            max={240}
+                            max={250}
                           />
                         </div>
                       </div>

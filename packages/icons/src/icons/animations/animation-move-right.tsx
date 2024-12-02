@@ -20,8 +20,8 @@ export const AnimationMoveRight = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <path d="M18,16l4-4-4-4" />
-      <path d="M11.45,12h10.55" />
+      <path fill="none" d="M18,16l4-4-4-4" />
+      <path fill="none" d="M11.45,12h10.55" />
       <circle cx="4.41" cy="12" r="2.41" />
     </svg>
   );

@@ -20,8 +20,8 @@ export const AnimationMoveLeft = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <path d="M6,8l-4,4,4,4" />
-      <path d="M12.55,12H2" />
+      <path fill="none" d="M6,8l-4,4,4,4" />
+      <path fill="none" d="M12.55,12H2" />
       <circle cx="19.59" cy="12" r="2.41" />
     </svg>
   );
