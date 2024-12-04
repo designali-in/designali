@@ -18,6 +18,10 @@ export const catalogs: ComboBoxItemType[] = [
     label: "Abstract",
   },
   {
+    value: "shapes",
+    label: "Shapes",
+  },
+  {
     value: "icon",
     label: "Icon",
   },

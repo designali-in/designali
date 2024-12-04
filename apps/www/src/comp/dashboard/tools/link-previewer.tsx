@@ -6,7 +6,6 @@ import BlurImage from "@/comp/uis/blur-image";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   Tooltip,
-  TooltipArrow,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
@@ -59,7 +58,6 @@ export function LinkPreviewer({
           align="start"
           className="group flex h-[187px] w-[300px] flex-col items-center justify-center rounded-lg bg-gradient-to-br from-black to-gray-500 p-0 shadow-inner transition-all duration-200"
         >
-          <TooltipArrow className="fill-gray-400" />
           {screenshotInfo.tmp_url ? (
             <BlurImage
               className={

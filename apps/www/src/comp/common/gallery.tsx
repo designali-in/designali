@@ -233,7 +233,7 @@ export function ImageZoomThree({ images }: { images: any }) {
 export function ImageZoomFive({ images }: { images: any }) {
   return (
     <>
-      <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
+      <div className="grid grid-cols-2 items-stretch gap-3 md:grid-cols-5">
         {images.map((image: any) => (
           <ImageZoom>
             <CldImage
