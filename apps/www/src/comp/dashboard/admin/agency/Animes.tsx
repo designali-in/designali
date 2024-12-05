@@ -14,6 +14,7 @@ import { useDebounce } from "@/hooks/use-debounce";
 import { Input } from "@/components/ui/input";
 
 import { AnimeAdminCard } from "./AdminAnime";
+import AnimeCardSkeleton from "./AnimeCardSkeleton";
 
 interface AnimesProps {
   initialAnimes: Graphic[];
@@ -126,8 +127,10 @@ const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
       )}
       {isFetchingNextPage && (
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index}>AXSADF</div>
+          {Array.from({ length: 4 }).map((_, index) => (
+            <div key={index}>
+              <AnimeCardSkeleton />
+            </div>
           ))}
         </div>
       )}

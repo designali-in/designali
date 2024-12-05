@@ -7,8 +7,6 @@ import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
-import ImageZoom from "../common/image-zoom";
-
 export interface Experience {
   post: string;
   comlogo: string;
@@ -105,10 +103,7 @@ export const Service: Experience[] = [
 
 export function PhotoshopGradients() {
   return (
-    <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
-      <h1 className="text-ali py-10 text-center text-3xl">
-        Free Photoshp Gradients
-      </h1>
+    <div className="mx-auto  max-w-7xl px-6 xl:px-0">
       <div className="grid justify-center gap-3 md:grid-cols-3">
         {Service.map((Experience) => (
           <div>
@@ -126,18 +121,16 @@ export function PhotoshopGradients() {
                     <div className="translate-z-0 absolute inset-0 rounded-full bg-slate-100 blur-[80px] dark:bg-slate-800" />
                   </div>
 
-                  <ImageZoom>
-                    <Image
-                      src={Experience.comlogo}
-                      alt={`designali`}
-                      className="h-full w-full object-cover"
-                      width={400}
-                      height={300}
-                    />
-                  </ImageZoom>
+                  <Image
+                    src={Experience.comlogo}
+                    alt={`designali`}
+                    className="h-full w-full object-cover"
+                    width={400}
+                    height={300}
+                  />
 
                   <div className="p-6">
-                    <div className="grid items-center gap-3 md:flex md:justify-between">
+                    <div className="grid items-center gap-3 text-left md:flex md:justify-between">
                       <div>
                         <h1 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
                           <span className="text-2xl md:text-4xl">
@@ -149,8 +142,8 @@ export function PhotoshopGradients() {
                         </p>
                       </div>
                       <Link target="_blank" href={Experience.link}>
-                        <Button>
-                          Download <DIcons.Download className="ml-2 h-4 w-4" />
+                        <Button size="icon" variant="outline">
+                          <DIcons.Download className=" h-4 w-4" />
                         </Button>
                       </Link>
                     </div>
@@ -160,6 +153,13 @@ export function PhotoshopGradients() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center py-6">
+        <Link target="_blank" href={"/graphics/Photoshop-Gradient-D1"}>
+          <Button>
+            Download All <DIcons.Download className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

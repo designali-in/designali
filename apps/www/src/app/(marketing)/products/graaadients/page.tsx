@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PhotoshopGradients } from "@/comp/products/gradients";
 
 import { getCurrentUser } from "@/lib/session";
 import { cn } from "@/lib/utils";
@@ -134,28 +133,34 @@ export default async function AboutAI() {
           </p>
           <div className="mt-10 grid justify-center gap-4">
             {user ? (
-              <Button variant="default" size="lg">
-                <Link
-                  href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
-                  target="_blank"
-                  className=""
-                >
+              <Link
+                href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
+                target="_blank"
+                className=""
+              >
+                <Button variant="default" size="lg">
                   Download Full Pack
                   <span className="sr-only">Buy now</span>
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             ) : (
-              <Button variant="outline" size="lg">
-                <Link href="/login">
-                  Login to Download
-                  <span className="sr-only">Buy now</span>
+              <div className="flex gap-2">
+                <Link href="/graphics/Photoshop-Gradient-D1">
+                  <Button size="lg">
+                    Download from Graphics
+                    <span className="sr-only">Buy now</span>
+                  </Button>
                 </Link>
-              </Button>
+                <Link href="/login">
+                  <Button variant="outline" size="lg">
+                    Login to Download
+                    <span className="sr-only">Buy now</span>
+                  </Button>
+                </Link>
+              </div>
             )}
           </div>
         </div>
-
-        <PhotoshopGradients />
       </div>
     </div>
   );

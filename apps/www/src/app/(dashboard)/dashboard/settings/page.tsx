@@ -11,13 +11,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import { Metadata } from "./_components/metadata";
+
 export default async function SettingsProfile() {
   const session = await auth();
   return (
     <main className="p-6">
       <div className="">
         <h1 className="py-4 text-2xl font-semibold">Settings</h1>
-        <div className="grid gap-4 md:flex">
+        <div className="grid gap-4 md:grid-cols-2 lg:flex">
           <Card className="w-80">
             <CardHeader>
               <CardTitle>Profile</CardTitle>
@@ -39,6 +41,7 @@ export default async function SettingsProfile() {
               <DeleteAccountForm />
             </CardContent>
           </Card>
+          <Metadata />
         </div>
       </div>
     </main>
