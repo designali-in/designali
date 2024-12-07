@@ -6,6 +6,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Skeleton } from "@/registry/default/ui/skeleton";
 import { ArrowUpRight, ChevronsUp, ChevronUp, Minus } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -119,7 +120,7 @@ const TicketsAdmin = () => {
     : [];
 
   return (
-    <div>
+    <div className="p-6">
       <div className="flex w-11/12 gap-2">
         <Select value={filter} onValueChange={handleFilterChange}>
           <SelectTrigger className="w-5/12">
@@ -142,14 +143,17 @@ const TicketsAdmin = () => {
       </p>
       {loading ? (
         <div className="flex h-full items-center justify-center text-7xl">
-          aaa
+          <Skeleton className="h-full w-full" />
         </div>
       ) : (
         <>
           {filteredProjects.length === 0 ? (
-            <div className="h-96">aaa</div>
+            <div className="h-96">
+              {" "}
+              <Skeleton className="h-full w-full" />
+            </div>
           ) : (
-            <Card className="xl:col-span-2">
+            <Card className="mt-6 xl:col-span-2">
               <CardContent>
                 <Table>
                   <TableHeader>

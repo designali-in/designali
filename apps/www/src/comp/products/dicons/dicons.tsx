@@ -66,6 +66,7 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
             </div>
           </TabsContent>
           <TabsContent value="2">
+            <h1 className="text-ali pb-6 font-semibold">Wonking on it 😐</h1>
             <div className="flex w-full flex-wrap justify-center gap-2 md:justify-start">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];
@@ -145,6 +146,7 @@ const MainIcons = ({ onChangeIcon, settings, filteredDIcons }: AccessProps) => {
             </div>
           </TabsContent>
           <TabsContent value="4">
+            <h1 className="text-ali pb-6 font-semibold">Wonking on it 😐</h1>
             <div className="flex w-full flex-wrap justify-center gap-2 md:justify-start">
               {filteredDIcons.map((icon) => {
                 const Component = DIcons[icon];

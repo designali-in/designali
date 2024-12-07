@@ -60,7 +60,7 @@ export default function AnimeCard({
             )}
           </AspectRatio>
         </CardHeader>
-        <CardContent className="flex justify-between p-4">
+        <CardContent className="flex items-center justify-between p-4">
           <CardTitle className="truncate py-[2px]">{anime.name}</CardTitle>
           <CardDescription className="line-clamp-2">
             {anime.freepro}
