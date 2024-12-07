@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import DIconsPage from "@/comp/products/dicons";
 
 import {
+  Account,
   Ai,
   Animals,
   Animations,
@@ -23,6 +24,7 @@ import {
 const categoryMap = {
   Brands,
   Animals,
+  Account,
   Ai,
   Animations,
   Communi,
