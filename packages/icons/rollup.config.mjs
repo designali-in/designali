@@ -4,7 +4,7 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import { dts } from "rollup-plugin-dts";
 
-import pkg from "./package.json";
+import pkg from "./package.json" assert { type: "json" };
 
 const inputFile = "src/index.ts";
 
