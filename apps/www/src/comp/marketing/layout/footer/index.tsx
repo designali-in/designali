@@ -79,7 +79,7 @@ const navigation = {
   ],
 };
 
-const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slate-900 rounded-xl p-2.5 transition-transform text-slate-600 hover:border-slate-200 dark:hover:border-slate-800 hover:text-ali hover:dark:text-ali dark:text-slate-400 `;
+const Underline = `hover:-translate-y-1 border border-secondary rounded-xl p-2.5 transition-transform `;
 
 export function Footer() {
   return (
@@ -156,7 +156,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.X strokeWidth={0} className="h-5 w-5" />
+            <DIcons.X className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -165,7 +165,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Instagram strokeWidth={0} className="h-5 w-5" />
+            <DIcons.Instagram className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -174,7 +174,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Threads strokeWidth={0} className="h-5 w-5" />
+            <DIcons.Threads className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -183,7 +183,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.WhatsApp strokeWidth={0} className="h-5 w-5" />
+            <DIcons.WhatsApp className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -192,7 +192,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Behance strokeWidth={0} className="h-5 w-5" />
+            <DIcons.Behance className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -201,7 +201,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.Facebook strokeWidth={0} className="h-5 w-5" />
+            <DIcons.Facebook className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -210,7 +210,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.LinkedIn strokeWidth={0} className="h-5 w-5" />
+            <DIcons.LinkedIn className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -219,7 +219,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <DIcons.YouTube strokeWidth={0} className="h-5 w-5" />
+            <DIcons.YouTube className="h-5 w-5" />
           </Link>
         </div>
         <ThemeToogle />
