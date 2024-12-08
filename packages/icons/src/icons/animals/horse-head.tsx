@@ -2,7 +2,7 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const PawPrint = React.forwardRef<SVGSVGElement, DesignaliProps>(
+export const HorseHead = React.forwardRef<SVGSVGElement, DesignaliProps>(
   ({ ...props }, forwardedRef) => {
     return (
       <svg
@@ -18,13 +18,10 @@ export const PawPrint = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <circle cx="11" cy="4" r="2" />
-        <circle cx="18" cy="8" r="2" />
-        <circle cx="20" cy="16" r="2" />
-        <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" />
+        <path d="M14.22,22c-5-5.56-1.67-8.89-1.67-8.89,1.03,2.74,4.44,2.22,4.44,2.22l1.97,1.51c.44.28,1.01.17,1.33-.25l1.47-1.78c.33-.44.29-1.06-.08-1.46l-1.42-1.52c-.65-.7-1.09-1.6-1.24-2.57-.18-1.15-.92-2.26-1.61-2.92l-.99-1.01,1.11-3.33s-2.86.03-3.89,2.22c-6.67.56-11.67,5.04-11.67,17.78" />
       </svg>
     );
   },
 );
 
-export default PawPrint;
+export default HorseHead;

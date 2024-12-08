@@ -8,6 +8,7 @@ import { catalogs } from "@/data/agency";
 import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
+import { DIcons } from "dicons";
 import { useDebounce } from "use-debounce";
 
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
@@ -113,7 +114,7 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
 
   return (
     <>
-      <div className="flex flex-col justify-between gap-y-4 sm:flex-row sm:items-center">
+      <div className="flex flex-col  gap-2 sm:flex-row sm:items-center">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
           <Combobox
             data={catalogs}
@@ -135,8 +136,8 @@ const BrowseAnime: FC<BrowseAnimeProps> = ({ initialAnimes }) => {
           }
         </div>
 
-        <Button size="sm" onClick={handleResetFilters} className="w-fit">
-          Reset filters
+        <Button size="icon" variant="outline" onClick={handleResetFilters}>
+          <DIcons.RotateCcw />
         </Button>
       </div>
       {isFetching && !isFetchingNextPage ? (

@@ -42,11 +42,11 @@ export function Menu() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/blogs" title="Blogs">
-                  Blogs
-                </ListItem>
                 <ListItem href="/pricing" title="Pricing">
                   Pricing
+                </ListItem>
+                <ListItem href="/blogs" title="Blogs">
+                  Blogs
                 </ListItem>
                 <ListItem href="/contact" title="Contact">
                   Contact

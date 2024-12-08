@@ -339,10 +339,6 @@ export const blocks: Registry = [
         target: "app/dashboard/page.tsx",
       },
       {
-        path: "block/sidebar-01/components/app-sidebar.tsx",
-        type: "registry:component",
-      },
-      {
         path: "block/sidebar-01/components/search-form.tsx",
         type: "registry:component",
       },

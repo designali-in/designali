@@ -3627,10 +3627,6 @@ export const Index: Record<string, any> = {
         type: "registry:page",
         target: "app/dashboard/page.tsx"
       },{
-        path: "registry/new-york/block/sidebar-01/components/app-sidebar.tsx",
-        type: "registry:component",
-        target: ""
-      },{
         path: "registry/new-york/block/sidebar-01/components/search-form.tsx",
         type: "registry:component",
         target: ""
@@ -8691,10 +8687,6 @@ export const Index: Record<string, any> = {
         path: "registry/default/block/sidebar-01/page.tsx",
         type: "registry:page",
         target: "app/dashboard/page.tsx"
-      },{
-        path: "registry/default/block/sidebar-01/components/app-sidebar.tsx",
-        type: "registry:component",
-        target: ""
       },{
         path: "registry/default/block/sidebar-01/components/search-form.tsx",
         type: "registry:component",

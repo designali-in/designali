@@ -30,7 +30,7 @@ export const SingleAnimeCardSkeleton = () => {
         </AspectRatio>
       </CardHeader>
       <CardContent className="grid gap-2.5 p-4">
-        <Skeleton className="h-4 w-1/2" />
+        <Skeleton className="h-6 w-1/2" />
       </CardContent>
     </Card>
   );

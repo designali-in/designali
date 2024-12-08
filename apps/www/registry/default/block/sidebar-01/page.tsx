@@ -1,4 +1,3 @@
-import { AppSidebar } from "@/registry/default/block/sidebar-01/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,7 +21,6 @@ export const description =
 export default function Page() {
   return (
     <SidebarProvider>
-      <AppSidebar />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />

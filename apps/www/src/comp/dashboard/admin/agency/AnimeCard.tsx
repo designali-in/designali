@@ -61,7 +61,9 @@ export default function AnimeCard({
           </AspectRatio>
         </CardHeader>
         <CardContent className="flex items-center justify-between p-4">
-          <CardTitle className="truncate py-[2px]">{anime.name}</CardTitle>
+          <CardTitle className="text-md truncate py-[2px] md:text-xl">
+            {anime.name}
+          </CardTitle>
           <CardDescription className="line-clamp-2">
             {anime.freepro}
           </CardDescription>

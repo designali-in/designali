@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import { cn } from "@/src/lib/utils";
 
@@ -47,7 +48,9 @@ const BrowsePage = async () => {
           utility, perfect for elevating any project
         </p>
         <div className="my-10 flex flex-wrap items-center justify-center gap-2">
-          <Button size="lg">Get Unlimited Access</Button>
+          <Link href={"/pricing"}>
+            <Button size="lg">Get Unlimited Access</Button>
+          </Link>
           <p className="text-left text-xs">
             Full access <br /> from ₹99/m
           </p>

@@ -18,11 +18,16 @@ export const Snail = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0" />
+        <path d="M2,21h12c4.4,0,8-3.6,8-8v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6" />
+
+        <path d="M18,3l1.1,2.2" />
+        <path d="M22,3l-1.1,2.2" />
+
         <circle cx="10" cy="13" r="8" />
-        <path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6" />
-        <path d="M18 3 19.1 5.2" />
-        <path d="M22 3 20.9 5.2" />
+        <path
+          fill="none"
+          d="M2,13c0,3.31,2.69,6,6,6s6-2.69,6-6c0-2.21-1.79-4-4-4s-4,1.79-4,4c0,1.1.9,2,2,2s2-.9,2-2"
+        />
       </svg>
     );
   },
