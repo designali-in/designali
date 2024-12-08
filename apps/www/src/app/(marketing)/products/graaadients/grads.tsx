@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Halftone } from "./types/halftone";
 import { Noise } from "./types/noise";
+import { Solarize } from "./types/solarize";
 
 export function Grads() {
   return (
@@ -35,7 +36,9 @@ export function Grads() {
       <TabsContent value="2">
         <Halftone />
       </TabsContent>
-      <TabsContent value="3">Coming Soon</TabsContent>
+      <TabsContent value="3">
+        <Solarize />
+      </TabsContent>
       <TabsContent value="4">
         <PhotoshopGradients />
       </TabsContent>

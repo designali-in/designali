@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { getCurrentUser } from "@/lib/session";
 import { cn } from "@/lib/utils";
 import {
   Breadcrumb,
@@ -21,8 +20,7 @@ export const metadata = {
   description: "A design agency with a touch of magic.",
 };
 
-export default async function AboutAI() {
-  const user = await getCurrentUser();
+export default function AboutAI() {
   return (
     <div className="relative">
       <div className="my-40">
@@ -82,25 +80,12 @@ export default async function AboutAI() {
             </Breadcrumb>
           </div>
           <div className="mt-10 grid justify-center gap-4">
-            {user ? (
-              <Button variant="default" size="lg">
-                <Link
-                  href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
-                  target="_blank"
-                  className=""
-                >
-                  Download Full Pack
-                  <span className="sr-only">Buy now</span>
-                </Link>
+            <Link href="/graphic">
+              <Button size="lg">
+                Download from Graphics
+                <span className="sr-only">Buy now</span>
               </Button>
-            ) : (
-              <Button variant="outline" size="lg">
-                <Link href="/login">
-                  Login to Download
-                  <span className="sr-only">Buy now</span>
-                </Link>
-              </Button>
-            )}
+            </Link>
           </div>
           <p className="ml-2 mt-6 text-center font-semibold text-white">
             All gradients are 100% free.
@@ -132,33 +117,12 @@ export default async function AboutAI() {
             design projects.
           </p>
           <div className="mt-10 grid justify-center gap-4">
-            {user ? (
-              <Link
-                href="https://drive.google.com/drive/folders/1UHiqXDEF2AQKATMDX5SgcaqZNXMWr8kf?usp=sharing"
-                target="_blank"
-                className=""
-              >
-                <Button variant="default" size="lg">
-                  Download Full Pack
-                  <span className="sr-only">Buy now</span>
-                </Button>
-              </Link>
-            ) : (
-              <div className="flex gap-2">
-                <Link href="/graphics/Photoshop-Gradient-D1">
-                  <Button size="lg">
-                    Download from Graphics
-                    <span className="sr-only">Buy now</span>
-                  </Button>
-                </Link>
-                <Link href="/login">
-                  <Button variant="outline" size="lg">
-                    Login to Download
-                    <span className="sr-only">Buy now</span>
-                  </Button>
-                </Link>
-              </div>
-            )}
+            <Link href="/graphic">
+              <Button size="lg">
+                Download from Graphics
+                <span className="sr-only">Buy now</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

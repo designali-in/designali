@@ -35,3 +35,26 @@ export const INFINITE_SCROLLING_PAGINATION_ANIME = 3;
 export const INFINITE_SCROLLING_PAGINATION_RESULTS = 5;
 export const INFINITE_SCROLLING_PAGINATION_LEADERBOARD = 10;
 export const INFINITE_SCROLLING_PAGINATION_BROWSE = 10;
+
+export const HTTP_STATUS = {
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  CREATED: 201,
+  OK: 200,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
+  FORBIDDEN: 403,
+  CONFLICT: 409,
+  NOT_ACCEPTABLE: 406,
+};
+
+const HTTP_HEADERS = {
+  "Content-Type": "application/json",
+};
+
+export const RESPONSE = (data: any, status: number) => {
+  return Response.json(data, {
+    headers: HTTP_HEADERS,
+    status: status,
+  });
+};

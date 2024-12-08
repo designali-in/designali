@@ -186,7 +186,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
     const targetX = boundingBox.x ?? 0;
     const targetWidth = boundingBox.width ?? 0;
 
-    const targetCenterX = targetX + targetWidth / 2;
+    const targetCenterX = targetX + targetWidth / 1;
     const confetti = (await import("canvas-confetti")).default;
 
     await confetti({
@@ -248,9 +248,7 @@ export const LikeButtonIcon = (props: LikeButtonProps) => {
                   data.currentUserLikes + cacheCount === 1 &&
                   "  text-ali  ",
               )}
-              type="button"
               onClick={handleLike}
-              aria-label="Like this post"
             >
               <span
                 className={cn(

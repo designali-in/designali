@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { AppSidebar } from "@/comp/dashboard/sidebar/app-sidebar";
 import { DIcons } from "dicons";
 

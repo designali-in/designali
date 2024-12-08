@@ -29,7 +29,6 @@ interface Card {
 export const Items = () => {
   const { data: vData } = useSWR<Views>(`/api/views`, fetcher);
   const { data: lData } = useSWR<Likes>(`/api/likes`, fetcher);
-  const { data: yData } = useSWR<YouTube>("/api/youtube", fetcher);
 
   const ddata: Card[] = [
     {
@@ -54,30 +53,6 @@ export const Items = () => {
       gradient: {
         startColor: "#ff0f7b",
         endColor: "#f945ff",
-      },
-    },
-    {
-      title: "YouTube Subscribers",
-      link: "https://youtube.com/@designali-in",
-      target: "_blank",
-      value: yData?.subscribers,
-      icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
-      linkText: "YouTube",
-      gradient: {
-        startColor: "#ff0000",
-        endColor: "#ca1a1a",
-      },
-    },
-    {
-      title: "YouTube Views",
-      link: "https://youtube.com/@designali-in",
-      target: "_blank",
-      value: yData?.views,
-      icon: <Icons.youtube strokeWidth={1} className="h-5 w-5" />,
-      linkText: "YouTube",
-      gradient: {
-        startColor: "#ff0000",
-        endColor: "#ca1a1a",
       },
     },
   ];

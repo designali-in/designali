@@ -18,9 +18,10 @@ export default function HomePage() {
         <RecentlyAdded />
       </Suspense>
       <Quote />
-      <div className="px-6 xl:px-0">
+      {/* <div className="px-6 xl:px-0">
         <InstagramFeed />
       </div>
+      */}
       <Connect />
     </main>
   );
