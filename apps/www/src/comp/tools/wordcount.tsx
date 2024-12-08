@@ -59,7 +59,7 @@ const WordCounter = () => {
       </div>
 
       <Textarea
-        className="mt-2 h-36"
+        className="mt-2 h-[600px] border border-accent"
         placeholder="Type here ..."
         value={value}
         onChange={(e) => setValue(e.target.value)}

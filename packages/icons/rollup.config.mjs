@@ -1,9 +1,11 @@
+import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
-import commonjs from "@rollup/plugin-commonjs";
 import { dts } from "rollup-plugin-dts";
-import pkg from "./package.json" assert { type: "json" };
+
+import pkg from "./package.json";
+
 const inputFile = "src/index.ts";
 
 // rollup.config.mjs
