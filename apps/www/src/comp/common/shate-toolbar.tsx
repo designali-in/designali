@@ -75,30 +75,12 @@ export function UpdatesToolbar({ posts }) {
 
   return (
     <Dialog>
-      <div className="flex-col items-center justify-center md:flex">
-        <TooltipProvider delayDuration={20}>
-          <Tooltip>
-            <TooltipTrigger
-              className={cn(
-                buttonVariants({
-                  variant: "outline",
-                  size: "icon",
-                }),
-              )}
-            >
-              <DialogTrigger>
-                <Icons.share strokeWidth={1} className="h-5 w-5" />
-              </DialogTrigger>
-            </TooltipTrigger>
-            <TooltipContent
-              className="rounded-sm px-2"
-              sideOffset={5}
-              side="top"
-            >
-              <span className="text-xs">Share</span>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+      <div className="flex-col items-center justify-center   md:flex">
+        <DialogTrigger>
+          <Button variant="ghost" size="icon" className="h-8 w-8">
+            <Icons.share strokeWidth={1} className="h-4 w-4" />
+          </Button>
+        </DialogTrigger>
       </div>
 
       <DialogContent className="sm:max-w-[425px]">

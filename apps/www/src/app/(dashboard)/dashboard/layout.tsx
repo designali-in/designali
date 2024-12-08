@@ -20,7 +20,6 @@ interface ProtectedLayoutProps {
 
 export default function Users({ children }: ProtectedLayoutProps) {
   const pathname = usePathname();
-  const lastSegment = pathname.split("/").pop();
   return (
     <div className="">
       <main className=" ">

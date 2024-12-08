@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import { UpdatesToolbar } from "../../common/shate-toolbar";
 import { CopyButton } from "../../uis/copy-button";
 
 interface NavProps {
@@ -84,6 +85,7 @@ const NavigationIcon = ({
           <div className="flex items-center justify-center gap-1 pb-6 md:pb-0">
             <h1 className="text-ali text-nowrap rounded-md border px-4 py-1 font-mono">{`<${settings.icon} />`}</h1>
             <CopyButton value={`<${settings.icon} />`} />
+            <UpdatesToolbar posts={""} />
           </div>
         </div>
       </nav>
