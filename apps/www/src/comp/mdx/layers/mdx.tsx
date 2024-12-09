@@ -348,7 +348,7 @@ const components = {
                 __yarnCommand__,
                 __bunCommand__,
               }}
-              className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+              className={cn(" ", __withMeta__ && "top-16")}
             />
           )}
       </>

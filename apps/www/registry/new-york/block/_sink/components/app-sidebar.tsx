@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { NavMain } from "@/registry/default/block/sidebar-07/components/nav-main";
-import { NavProjects } from "@/registry/default/block/sidebar-07/components/nav-projects";
-import { NavUser } from "@/registry/default/block/sidebar-07/components/nav-user";
-import { TeamSwitcher } from "@/registry/default/block/sidebar-07/components/team-switcher";
+import { NavMain } from "@/registry/default/block/_sink/components/nav-main";
+import { NavProjects } from "@/registry/default/block/_sink/components/nav-projects";
+import { NavUser } from "@/registry/default/block/_sink/components/nav-user";
+import { TeamSwitcher } from "@/registry/default/block/_sink/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,

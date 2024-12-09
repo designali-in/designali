@@ -57,6 +57,7 @@ export default async function DocPage({ params }: DesignPageProps) {
     <main className="relative grid lg:gap-10 xl:grid-cols-[1fr_260px]">
       <div className="mx-auto w-full min-w-0 py-10">
         <DocsPageHeader heading={doc.title} text={doc.description} />
+        <ScrollProgress className="top-14" />
         {doc.links ? (
           <div className="flex items-center space-x-2 pt-4">
             {doc.links.doc && (
