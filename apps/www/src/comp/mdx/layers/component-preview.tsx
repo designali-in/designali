@@ -3,6 +3,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { Index } from "@/__registry__";
 import { ThemeWrapper } from "@/comp/common/theme-wrapper";
 import { Icons } from "@/comp/icons";
@@ -20,10 +21,12 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: "center" | "start" | "end";
   description?: string;
   hideCode?: boolean;
+  type?: "block" | "component" | "example" | "components";
 }
 
 export function ComponentPreview({
   name,
+  type,
   children,
   className,
   extractClassname,
@@ -57,6 +60,41 @@ export function ComponentPreview({
     return <Component />;
   }, [name, config.style]);
 
+  const codeString = React.useMemo(() => {
+    if (
+      typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
+    ) {
+      const [Button] = React.Children.toArray(
+        Code.props.children,
+      ) as React.ReactElement[];
+      return Button?.props?.value || Button?.props?.__rawString__ || null;
+    }
+  }, [Code]);
+
+  if (type === "block") {
+    return (
+      <div className="relative aspect-[4/2.5] w-full overflow-hidden rounded-md border">
+        <Image
+          src={`/images/blocks/${name}.png`}
+          alt={name}
+          width={1440}
+          height={900}
+          className="absolute left-0 top-0 z-20 w-[970px] max-w-none bg-background dark:hidden sm:w-[1280px] md:hidden md:dark:hidden"
+        />
+        <Image
+          src={`/images/blocks/${name}-dark.png`}
+          alt={name}
+          width={1440}
+          height={900}
+          className="absolute left-0 top-0 z-20 hidden w-[970px] max-w-none bg-background dark:block sm:w-[1280px] md:hidden md:dark:hidden"
+        />
+        <div className="absolute inset-0 hidden w-[1600px] bg-background md:block">
+          <iframe src={`/blocks/new-york/${name}`} className="size-full" />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
@@ -85,7 +123,7 @@ export function ComponentPreview({
           <div className="flex items-center justify-between p-4">
             <div className="flex items-center justify-end gap-2">
               <CopyButton
-                value={name}
+                value={codeString}
                 variant="outline"
                 className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
               />
@@ -120,15 +158,6 @@ export function ComponentPreview({
             <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
               {Code}
             </div>
-          </div>
-        </TabsContent>
-        <TabsContent value="cli" className="relative rounded-md border py-6">
-          <div className="flex items-center justify-between px-4">
-            <CopyButton
-              value={`npx shadcn@latest add "https://designali.in/r/${name}"`}
-              variant="outline"
-              className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
-            />
           </div>
         </TabsContent>
       </Tabs>
