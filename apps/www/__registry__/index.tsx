@@ -3617,28 +3617,24 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
-    "sidebar-01": {
-      name: "sidebar-01",
-      description: "A simple sidebar with navigation grouped by section.",
+    "login-01": {
+      name: "login-01",
+      description: "A simple login form.",
       type: "registry:block",
-      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      registryDependencies: ["button","card","input","label"],
       files: [{
-        path: "registry/new-york/block/sidebar-01/page.tsx",
+        path: "registry/new-york/block/login-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard/page.tsx"
+        target: "app/login/page.tsx"
       },{
-        path: "registry/new-york/block/sidebar-01/components/search-form.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/sidebar-01/components/version-switcher.tsx",
+        path: "registry/new-york/block/login-01/components/login-form.tsx",
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/new-york/block/sidebar-01/page.tsx")),
-      source: "__registry__/new-york/block/sidebar-01/page.tsx",
-      category: "Application",
-      subcategory: "Sidebars",
+      component: React.lazy(() => import("@/registry/new-york/block/login-01/page.tsx")),
+      source: "__registry__/new-york/block/login-01/page.tsx",
+      category: "Authentication",
+      subcategory: "Login",
       chunks: []
     },
     "chart-area-axes": {
@@ -8678,28 +8674,24 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
-    "sidebar-01": {
-      name: "sidebar-01",
-      description: "A simple sidebar with navigation grouped by section.",
+    "login-01": {
+      name: "login-01",
+      description: "A simple login form.",
       type: "registry:block",
-      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      registryDependencies: ["button","card","input","label"],
       files: [{
-        path: "registry/default/block/sidebar-01/page.tsx",
+        path: "registry/default/block/login-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard/page.tsx"
+        target: "app/login/page.tsx"
       },{
-        path: "registry/default/block/sidebar-01/components/search-form.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/sidebar-01/components/version-switcher.tsx",
+        path: "registry/default/block/login-01/components/login-form.tsx",
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-01/page.tsx")),
-      source: "__registry__/default/block/sidebar-01/page.tsx",
-      category: "Application",
-      subcategory: "Sidebars",
+      component: React.lazy(() => import("@/registry/default/block/login-01/page.tsx")),
+      source: "__registry__/default/block/login-01/page.tsx",
+      category: "Authentication",
+      subcategory: "Login",
       chunks: []
     },
     "chart-area-axes": {

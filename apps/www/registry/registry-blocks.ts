@@ -323,31 +323,21 @@ export const blocks: Registry = [
     ],
   },
   {
-    name: "sidebar-01",
+    name: "login-01",
     type: "registry:block",
-    registryDependencies: [
-      "sidebar",
-      "breadcrumb",
-      "separator",
-      "label",
-      "dropdown-menu",
-    ],
+    registryDependencies: ["button", "card", "input", "label"],
     files: [
       {
-        path: "block/sidebar-01/page.tsx",
+        path: "block/login-01/page.tsx",
+        target: "app/login/page.tsx",
         type: "registry:page",
-        target: "app/dashboard/page.tsx",
       },
       {
-        path: "block/sidebar-01/components/search-form.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "block/sidebar-01/components/version-switcher.tsx",
+        path: "block/login-01/components/login-form.tsx",
         type: "registry:component",
       },
     ],
-    category: "Application",
-    subcategory: "Sidebars",
+    category: "Authentication",
+    subcategory: "Login",
   },
 ];
