@@ -10,7 +10,7 @@ import { Solarize } from "./types/solarize";
 
 export function Grads() {
   return (
-    <Tabs defaultValue="1" className="items-center justify-center text-center">
+    <Tabs defaultValue="5" className="items-center justify-center text-center">
       <TabsList className="sticky top-24 z-20 mb-6 w-full items-center justify-center text-center  md:w-auto">
         <ScrollArea className="whitespace-nowrap">
           <div className="space-x-2">
