@@ -154,13 +154,6 @@ export function PhotoshopGradients() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center py-6">
-        <Link target="_blank" href={"/graphics/Photoshop-Gradient-D1"}>
-          <Button>
-            Download All <DIcons.Download className="ml-2 h-4 w-4" />
-          </Button>
-        </Link>
-      </div>
     </div>
   );
 }

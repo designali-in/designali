@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Slider } from "@/registry/default/ui/slider";
 import { Switch } from "@/registry/default/ui/switch";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -226,10 +227,10 @@ export function GradientGenerator() {
                     />
                     <Button
                       variant="outline"
+                      size="icon"
                       onClick={copyToClipboard}
-                      className=" "
                     >
-                      Copy
+                      <DIcons.Copy className="h-4 w-4" />
                     </Button>
                     <Button onClick={downloadJPG} className="">
                       Download JPG

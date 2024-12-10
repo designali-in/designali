@@ -33,7 +33,7 @@ export default function AboutAI() {
             width={700}
             className="absolute -top-28 -z-10  w-full object-cover"
           />
-          <p className="text-center text-lg font-light uppercase tracking-widest text-white lg:text-xl">
+          <p className="px-6 text-center text-lg font-light uppercase tracking-widest text-white lg:text-xl">
             Introducing
           </p>
 
@@ -45,7 +45,7 @@ export default function AboutAI() {
           >
             Graaadients
           </h1>
-          <p className="mx-auto max-w-lg text-center text-sm font-light text-white lg:-mt-4 lg:text-lg">
+          <p className="mx-auto max-w-lg px-6 text-center text-sm font-light text-white lg:-mt-4 lg:text-lg">
             +2000 abstract gradient elements and backgrounds for your amazing
             design projects.
           </p>
@@ -56,21 +56,21 @@ export default function AboutAI() {
               <BreadcrumbItem>
                 <BreadcrumbLink
                   href="/"
-                  className="text-slate-400 hover:text-white"
+                  className="text-slate-200 hover:text-white"
                 >
                   Home
                 </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator className="text-slate-400" />
+              <BreadcrumbSeparator className="text-slate-200" />
               <BreadcrumbItem>
                 <BreadcrumbLink
                   href="/products"
-                  className="text-slate-400 hover:text-white"
+                  className="text-slate-200 hover:text-white"
                 >
                   Products
                 </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator className="text-slate-400" />
+              <BreadcrumbSeparator className="text-slate-200" />
               <BreadcrumbItem>
                 <BreadcrumbPage className="text-white">
                   Graaadients
@@ -80,14 +80,7 @@ export default function AboutAI() {
           </Breadcrumb>
         </div>
         <GradientGenerator />
-        <div className="mt-10 grid justify-center gap-4">
-          <Link href="/graphic">
-            <Button size="lg">
-              Download from Graphics
-              <span className="sr-only">Buy now</span>
-            </Button>
-          </Link>
-        </div>
+
         <p className="ml-2 mt-6 text-center font-semibold text-white">
           All gradients are 100% free.
         </p>
