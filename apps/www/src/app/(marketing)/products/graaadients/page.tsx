@@ -92,7 +92,9 @@ export default function AboutAI() {
           All gradients are 100% free.
         </p>
 
-        <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0"></div>
+        <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
+          <Grads />
+        </div>
         <div className="mx-auto mt-10 flex max-w-5xl justify-center px-4 sm:px-6">
           <video autoPlay muted controls loop className="rounded-3xl">
             <source width={720} height={480} src="/videos/graaadients.mp4" />
