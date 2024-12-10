@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GradientGenerator } from "@/comp/tools/gradient-generator";
 
 import { cn } from "@/lib/utils";
 import {
@@ -23,18 +24,16 @@ export const metadata = {
 export default function AboutAI() {
   return (
     <div className="relative">
-      <div className="my-40">
-        <div className="relative -top-28">
+      <div className=" my-40">
+        <div className="">
           <Image
             src="/images/products/grad.png"
             alt="Your Image"
             height={700}
             width={700}
-            className="absolute top-0 -z-10 min-h-screen w-full object-cover"
+            className="absolute -top-28 -z-10  w-full object-cover"
           />
-        </div>
-        <div className="px-8">
-          <p className="mt-40 text-center text-lg font-light uppercase tracking-widest text-white lg:text-xl">
+          <p className="text-center text-lg font-light uppercase tracking-widest text-white lg:text-xl">
             Introducing
           </p>
 
@@ -50,47 +49,49 @@ export default function AboutAI() {
             +2000 abstract gradient elements and backgrounds for your amazing
             design projects.
           </p>
-          <div className="mt-10 flex justify-center">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    href="/"
-                    className="text-slate-400 hover:text-white"
-                  >
-                    Home
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-slate-400" />
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    href="/products"
-                    className="text-slate-400 hover:text-white"
-                  >
-                    Products
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-slate-400" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-white">
-                    Graaadients
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-          <div className="mt-10 grid justify-center gap-4">
-            <Link href="/graphic">
-              <Button size="lg">
-                Download from Graphics
-                <span className="sr-only">Buy now</span>
-              </Button>
-            </Link>
-          </div>
-          <p className="ml-2 mt-6 text-center font-semibold text-white">
-            All gradients are 100% free.
-          </p>
         </div>
+        <div className="mt-10 flex justify-center">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  href="/"
+                  className="text-slate-400 hover:text-white"
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-slate-400" />
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  href="/products"
+                  className="text-slate-400 hover:text-white"
+                >
+                  Products
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-slate-400" />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-white">
+                  Graaadients
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        <GradientGenerator />
+        <div className="mt-10 grid justify-center gap-4">
+          <Link href="/graphic">
+            <Button size="lg">
+              Download from Graphics
+              <span className="sr-only">Buy now</span>
+            </Button>
+          </Link>
+        </div>
+        <p className="ml-2 mt-6 text-center font-semibold text-white">
+          All gradients are 100% free.
+        </p>
+
         <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
           <Grads />
         </div>
