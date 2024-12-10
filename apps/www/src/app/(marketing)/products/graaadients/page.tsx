@@ -81,7 +81,7 @@ export default function AboutAI() {
         </div>
         <GradientGenerator />
 
-        <p className="ml-2 mt-6 text-center font-semibold text-white">
+        <p className="ml-2 mt-6 text-center font-semibold ">
           All gradients are 100% free.
         </p>
 

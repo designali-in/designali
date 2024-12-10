@@ -4,6 +4,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Halftone } from "./types/halftone";
+import { Neon } from "./types/neon";
 import { Noise } from "./types/noise";
 import { Solarize } from "./types/solarize";
 
@@ -13,6 +14,9 @@ export function Grads() {
       <TabsList className="sticky top-24 z-20 mb-6 w-full items-center justify-center text-center  md:w-auto">
         <ScrollArea className="whitespace-nowrap">
           <div className="space-x-2">
+            <TabsTrigger value="5" className="px-6">
+              Neon
+            </TabsTrigger>
             <TabsTrigger value="1" className="px-6">
               Noise
             </TabsTrigger>
@@ -29,7 +33,9 @@ export function Grads() {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </TabsList>
-
+      <TabsContent value="5">
+        <Neon />
+      </TabsContent>
       <TabsContent value="1">
         <Noise />
       </TabsContent>

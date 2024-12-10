@@ -123,10 +123,6 @@ export function GradientGenerator() {
 
   return (
     <div className="mt-10 flex items-center justify-center p-6 xl:p-0">
-      <div
-        className=" absolute -top-28 -z-20 h-full w-full [mask-image:radial-gradient(800rem_200rem_at_top,white,transparent)]"
-        style={gradientStyle}
-      ></div>
       <div className="mx-auto w-full max-w-7xl space-y-2 rounded-2xl bg-popover/80 p-6">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="relative">
