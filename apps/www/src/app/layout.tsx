@@ -56,7 +56,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <AdSense pId="pub-3647003303744848" />
+        <AdSense pId="ca-pub-3647003303744848" />
       </head>
       <body
         className={cn(
