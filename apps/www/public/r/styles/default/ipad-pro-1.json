@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/mockups/ipad-pro-1.tsx",
-      "content": "import IPadPro from \"@/registry/default/ui/mockups/ipad-pro\";\n\nexport default function iPadProDemo() {\n  return (\n    <div className=\"relative\">\n      <IPadPro className=\"size-full\" />\n    </div>\n  );\n}\n",
+      "content": "import IPadPro from \"@/registry/default/ui/mockups/ipad-pro\";\n\nexport default function iPadProDemo() {\n  return (\n    <div className=\"relative\">\n      <IPadPro\n        src=\"https://res.cloudinary.com/deelfmnhg/image/upload/v1733379172/sfbvfdb_blkkcz.jpg\"\n        className=\"size-full\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

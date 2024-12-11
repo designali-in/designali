@@ -13,12 +13,11 @@ import { BlockViewer } from "./block-viewer";
 export async function BlockDisplay({ name }: { name: string }) {
   const item = await getCachedRegistryItem(name);
 
-  if (!item.files) {
+  if (!item?.files) {
     return null;
   }
 
   const [tree, highlightedFiles] = await Promise.all([
-    // @ts-ignore
     getCachedFileTree(item.files),
     getCachedHighlightedFiles(item.files),
   ]);
@@ -33,7 +32,7 @@ const getCachedRegistryItem = React.cache(async (name: string) => {
 });
 
 const getCachedFileTree = React.cache(
-  async (files: { path: string; target?: string }[]) => {
+  async (files: Array<{ path: string; target?: string }>) => {
     if (!files) {
       return null;
     }

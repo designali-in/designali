@@ -526,7 +526,7 @@ importers:
         specifier: ^5.0.7
         version: 5.0.10
       shiki:
-        specifier: ^1.24.0
+        specifier: ^1.10.1
         version: 1.24.0
       tailwindcss:
         specifier: ^3.4.3

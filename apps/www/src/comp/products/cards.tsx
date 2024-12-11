@@ -15,7 +15,7 @@ const GRADS = [
   {
     id: 0,
     name: "Graaadients",
-    src: "/images/products/grad-full.jpg",
+    src: "https://res.cloudinary.com/deelfmnhg/image/upload/v1733892005/Neon_Graaadients_D1_1_icds31.jpg",
     designation: "Download. Edit. Upload.",
     content: (
       <p>
@@ -26,10 +26,10 @@ const GRADS = [
   },
 ];
 
-const Ui = [
+const EASING = [
   {
     id: 0,
-    name: "Ui",
+    name: "Easing",
     src: "/images/products/grad-full.jpg",
     designation: "Download. Edit. Upload.",
     content: (
@@ -54,7 +54,16 @@ const DICONS = [
 const DSHAPES = [
   {
     id: 1,
-    name: "DShapes",
+    name: "",
+    src: "https://utfs.io/f/dacf5051-c3ab-41f1-852a-98e4f24376c9-12vlav.jpg",
+    designation: " ",
+    content: <p></p>,
+  },
+];
+const COLORS = [
+  {
+    id: 1,
+    name: "Colors",
     src: "/images/products/shapes.jpg",
     designation: "Download. Edit. Upload.",
     content: <p>+100 Beautifully designed shapes.</p>,
@@ -74,8 +83,11 @@ export function Graaadients() {
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
         </Link>
-        <Link href="/products/ui" className="rounded-3xl border">
-          <CardStack items={Ui} />
+        <Link href="/products/colors" className="rounded-3xl border">
+          <CardStack items={COLORS} />
+        </Link>
+        <Link href="/products/easings" className="rounded-3xl border">
+          <CardStack items={EASING} />
         </Link>
       </div>
     </div>

@@ -33,7 +33,7 @@
 }
 
 [data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
-  @apply text-xs text-zinc-50/40;
+  @apply text-xs text-slate-50/40;
   counter-increment: line;
   content: counter(line);
   display: inline-block;
@@ -43,7 +43,7 @@
 }
 
 [data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply bg-zinc-700/50;
+  @apply bg-slate-700/50;
 }
 
 [data-rehype-pretty-code-fragment] .line-highlighted span {
@@ -51,11 +51,11 @@
 }
 
 [data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply rounded-md border-zinc-700/70 bg-zinc-700/50 p-1;
+  @apply rounded-md border-slate-700/70 bg-slate-700/50 p-1;
 }
 
 .dark [data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply bg-zinc-900;
+  @apply bg-slate-900;
 }
 
 [data-rehype-pretty-code-title] {

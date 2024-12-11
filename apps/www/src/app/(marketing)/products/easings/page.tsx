@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import PageTitle from "@/src/comp/mdx/page-title";
+import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 
 import Easings from "./easings";
 
 export const metadata: Metadata = {
-  title: "Tailwind CSS Easing Classes - Origin UI",
+  title: "Easing Classes - Designali",
   description:
     "A collection of easing utility classes to enhance your Tailwind CSS animations and transitions.",
 };
@@ -129,7 +131,12 @@ const easings = [
 
 export default function Page() {
   return (
-    <main>
+    <main className="mx-auto my-20 mt-40 max-w-7xl px-6 xl:px-0">
+      <ScrollProgress className="top-14" />
+      <PageTitle
+        title="Easing"
+        description={` Tailwind CSS colors in HSL, RGB, and HEX formats.`}
+      />
       <div className="px-6 xl:px-0">
         <div className="mx-auto w-full max-w-7xl">
           <Easings easings={easings} />

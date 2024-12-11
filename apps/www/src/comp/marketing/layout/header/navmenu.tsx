@@ -89,15 +89,15 @@ export function Menu() {
                   <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/products/ui"
+                      href="/products/graaadients"
                     >
-                      <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Clover strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        UI
+                        Graaadients
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        +1000 abstract gradient elements and backgrounds for
+                        your amazing design projects.
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -115,23 +115,6 @@ export function Menu() {
                       <p className="text-sm leading-tight text-muted-foreground">
                         +100 abstract shapes elements and backgrounds for your
                         amazing design projects.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li className="row-span-3">
-                  <NavigationMenuLink>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/products/graaadients"
-                    >
-                      <DIcons.Clover strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Graaadients
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        +1000 abstract gradient elements and backgrounds for
-                        your amazing design projects.
                       </p>
                     </a>
                   </NavigationMenuLink>

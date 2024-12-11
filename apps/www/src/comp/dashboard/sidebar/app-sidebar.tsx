@@ -75,10 +75,6 @@ const data = {
       isActive: false,
       items: [
         {
-          title: "Meme Editor",
-          url: "/dashboard/tools/meme",
-        },
-        {
           title: "Image Converter",
           url: "/dashboard/tools/image-converter",
         },

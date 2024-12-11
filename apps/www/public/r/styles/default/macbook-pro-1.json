@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/mockups/macbook-pro-1.tsx",
-      "content": "import MacbookPro from \"@/registry/default/ui/mockups/macbook-pro\";\n\nexport default function MacbookProDemo() {\n  return (\n    <div className=\"relative\">\n      <MacbookPro className=\"size-full\" />\n    </div>\n  );\n}\n",
+      "content": "import MacbookPro from \"@/registry/default/ui/mockups/macbook-pro\";\n\nexport default function MacbookProDemo() {\n  return (\n    <div className=\"relative\">\n      <MacbookPro\n        src=\"https://utfs.io/f/6e654499-f7f4-4d5f-8a96-57255f6775e7-12vlav.jpg\"\n        className=\"size-full\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

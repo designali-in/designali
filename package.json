@@ -7,14 +7,14 @@
     "url": "https://twitter.com/designali"
   },
   "engines": {
-    "node": "v20.14.0"
+    "node": "v22.12.0"
   },
   "packageManager": "pnpm@8.15.5",
   "prettier": "@designali/prettier-config",
   "scripts": {
     "build": "turbo run build",
     "build:apps": "turbo build --filter=./apps/*",
-    "build:packages": "turbo build --filter=./packages/*", 
+    "build:packages": "turbo build --filter=./packages/*",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean  --filter=./apps/*",
     "db:generate": "turbo db:generate",
