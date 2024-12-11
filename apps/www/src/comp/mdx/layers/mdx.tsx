@@ -305,11 +305,11 @@ const components = {
     __withMeta__,
     __src__,
     __event__,
-    // __style__,
+    __style__,
     __name__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & {
-    // __style__?: Style["name"]
+    __style__?: Style["name"];
     __rawString__?: string;
     __npmCommand__?: string;
     __pnpmCommand__?: string;
@@ -324,7 +324,7 @@ const components = {
       <>
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900",
+            "relative my-4 max-h-[650px] overflow-x-auto rounded-lg border bg-slate-950 px-6 py-4 dark:bg-slate-900",
             className,
           )}
           {...props}
@@ -334,7 +334,7 @@ const components = {
             value={__rawString__}
             src={__src__}
             event={__event__}
-            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+            className={cn("absolute right-4 top-4", __withMeta__ && "top-1")}
           />
         )}
         {__npmCommand__ &&
@@ -348,7 +348,10 @@ const components = {
                 __yarnCommand__,
                 __bunCommand__,
               }}
-              className={cn(" ", __withMeta__ && "top-16")}
+              className={cn(
+                "absolute -top-14 right-4 ",
+                __withMeta__ && "top-16",
+              )}
             />
           )}
       </>

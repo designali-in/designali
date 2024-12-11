@@ -175,46 +175,48 @@ export function CopyNpmCommandButton({
   );
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Button
-          size="icon"
-          variant="ghost"
-          className={cn(
-            "relative z-10 h-6 w-6 text-slate-50 hover:bg-slate-700 hover:text-slate-50",
-            className,
-          )}
-        >
-          {hasCopied ? (
-            <CheckIcon className="h-3 w-3" />
-          ) : (
-            <ClipboardIcon className="h-3 w-3" />
-          )}
-          <span className="sr-only">Copy</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__npmCommand__, "npm")}
-        >
-          npm
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__yarnCommand__, "yarn")}
-        >
-          yarn
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__pnpmCommand__, "pnpm")}
-        >
-          pnpm
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__bunCommand__, "bun")}
-        >
-          bun
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="relative">
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <Button
+            size="icon"
+            variant="ghost"
+            className={cn(
+              " z-10 h-6 w-6 text-slate-50 hover:bg-slate-700 hover:text-slate-50",
+              className,
+            )}
+          >
+            {hasCopied ? (
+              <CheckIcon className="h-3 w-3" />
+            ) : (
+              <ClipboardIcon className="h-3 w-3" />
+            )}
+            <span className="sr-only">Copy</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem
+            onClick={() => copyCommand(commands.__npmCommand__, "npm")}
+          >
+            npm
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => copyCommand(commands.__yarnCommand__, "yarn")}
+          >
+            yarn
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => copyCommand(commands.__pnpmCommand__, "pnpm")}
+          >
+            pnpm
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => copyCommand(commands.__bunCommand__, "bun")}
+          >
+            bun
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 }
