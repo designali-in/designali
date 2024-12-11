@@ -223,6 +223,7 @@ export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Page, Designs, Components, Documentation, Guide, BlogPost],
   mdx: {
+    // @ts-ignore
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
       rehypeSlug,

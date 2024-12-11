@@ -1,18 +1,23 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import * as React from "react";
 import Image from "next/image";
 import { Index } from "@/__registry__";
-import { ThemeWrapper } from "@/comp/common/theme-wrapper";
-import { Icons } from "@/comp/icons";
+import { CopyButton } from "@/comp/uis/copy-button";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/new-york/ui/tabs";
 import { styles } from "@/registry/registry-styles";
-import { CopyButton } from "@/src/comp/uis/copy-button";
+import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
 import { useConfig } from "@/hooks/use-config";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import { ThemeWrapper } from "../../common/theme-wrapper";
+import { StyleSwitcher } from "./style-switcher";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -21,7 +26,7 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: "center" | "start" | "end";
   description?: string;
   hideCode?: boolean;
-  type?: "block" | "component" | "example" | "components";
+  type?: "block" | "component" | "example";
 }
 
 export function ComponentPreview({
@@ -103,7 +108,7 @@ export function ComponentPreview({
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         <div className="flex items-center justify-between pb-3">
           {!hideCode && (
-            <TabsList className="w-full justify-start   border-b bg-transparent p-0 dark:bg-transparent">
+            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
               <TabsTrigger
                 value="preview"
                 className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
@@ -121,15 +126,16 @@ export function ComponentPreview({
         </div>
         <TabsContent value="preview" className="relative rounded-md border">
           <div className="flex items-center justify-between p-4">
-            <div className="flex items-center justify-end gap-2">
+            <StyleSwitcher />
+            <div className="flex items-center gap-2">
               <CopyButton
                 value={codeString}
                 variant="outline"
-                className="absolute right-4 top-4 h-10 w-10 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+                className="h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
               />
             </div>
           </div>
-          <ThemeWrapper defaultTheme="slate">
+          <ThemeWrapper defaultTheme="zinc">
             <div
               className={cn(
                 "preview flex min-h-[350px] w-full justify-center p-10",
@@ -143,7 +149,7 @@ export function ComponentPreview({
               <React.Suspense
                 fallback={
                   <div className="flex w-full items-center justify-center text-sm text-muted-foreground">
-                    <Icons.loader className="mr-2 h-4 w-4 animate-spin" />
+                    <DIcons.Loader className="mr-2 h-4 w-4 animate-spin" />
                     Loading...
                   </div>
                 }

@@ -37,6 +37,7 @@ import ItemGrid from "./item-grid";
 import Link from "./link";
 import LinkCard from "./link-card";
 import MdxCard from "./mdx-card";
+import { StyleWrapper } from "./style-wrapper";
 import Table from "./table";
 import Tree from "./tree";
 import Video from "./video";
@@ -299,42 +300,36 @@ const components = {
     className,
     __rawString__,
     __npmCommand__,
-    __pnpmCommand__,
     __yarnCommand__,
+    __pnpmCommand__,
     __bunCommand__,
     __withMeta__,
     __src__,
     __event__,
     __style__,
-    __name__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & {
     __style__?: Style["name"];
     __rawString__?: string;
-    __npmCommand__?: string;
-    __pnpmCommand__?: string;
-    __yarnCommand__?: string;
-    __bunCommand__?: string;
     __withMeta__?: boolean;
     __src__?: string;
     __event__?: Event["name"];
-    __name__?: string;
-  }) => {
+  } & NpmCommands) => {
     return (
-      <>
+      <StyleWrapper styleName={__style__}>
         <pre
           className={cn(
-            "relative my-4 max-h-[650px] overflow-x-auto rounded-lg border bg-slate-950 px-6 py-4 dark:bg-slate-900",
+            "my-4  max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 p-4 dark:bg-zinc-900",
             className,
           )}
           {...props}
         />
-        {__rawString__ && __src__ && __event__ && (
+        {__rawString__ && !__npmCommand__ && (
           <CopyButton
             value={__rawString__}
             src={__src__}
             event={__event__}
-            className={cn("absolute right-4 top-4", __withMeta__ && "top-1")}
+            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
           />
         )}
         {__npmCommand__ &&
@@ -344,17 +339,14 @@ const components = {
             <CopyNpmCommandButton
               commands={{
                 __npmCommand__,
-                __pnpmCommand__,
                 __yarnCommand__,
+                __pnpmCommand__,
                 __bunCommand__,
               }}
-              className={cn(
-                "absolute -top-14 right-4 ",
-                __withMeta__ && "top-16",
-              )}
+              className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
             />
           )}
-      </>
+      </StyleWrapper>
     );
   },
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
