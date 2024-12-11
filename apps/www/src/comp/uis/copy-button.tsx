@@ -8,6 +8,7 @@ import type { Event } from "@/lib/events";
 import type { NpmCommands } from "@/types/unist";
 import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
+import { DIcons } from "dicons";
 import { CheckIcon, ClipboardIcon } from "lucide-react";
 
 import { trackEvent } from "@/lib/events";
@@ -57,7 +58,7 @@ export function CopyButton({
       size="icon"
       variant={variant}
       className={cn(
-        "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:h-3 [&_svg]:w-3",
+        "relative z-10 h-6 w-6 text-slate-50 hover:bg-slate-700 hover:text-slate-50 [&_svg]:h-3 [&_svg]:w-3",
         className,
       )}
       onClick={() => {
@@ -77,7 +78,11 @@ export function CopyButton({
       {...props}
     >
       <span className="sr-only">Copy</span>
-      {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
+      {hasCopied ? (
+        <CheckIcon className="h-3 w-3" />
+      ) : (
+        <DIcons.Copy className="h-3 w-3" />
+      )}
     </Button>
   );
 }
@@ -121,7 +126,7 @@ export function CopyWithClassNames({
           {hasCopied ? (
             <Icons.check className="h-3 w-3" />
           ) : (
-            <Icons.copy className="h-3 w-3" />
+            <DIcons.Copy className="h-3 w-3" />
           )}
           <span className="sr-only">Copy</span>
         </Button>
@@ -176,14 +181,14 @@ export function CopyNpmCommandButton({
           size="icon"
           variant="ghost"
           className={cn(
-            "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
+            "relative z-10 h-6 w-6 text-slate-50 hover:bg-slate-700 hover:text-slate-50",
             className,
           )}
         >
           {hasCopied ? (
             <CheckIcon className="h-3 w-3" />
           ) : (
-            <ClipboardIcon className="h-3 w-3" />
+            <DIcons.Copy className="h-3 w-3" />
           )}
           <span className="sr-only">Copy</span>
         </Button>

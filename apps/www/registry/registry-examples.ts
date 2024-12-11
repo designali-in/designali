@@ -1,6 +1,57 @@
 import { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
+  // Mockups
+  {
+    name: "safari-1",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/mockups/safari-1.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "macbook-pro-1",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/mockups/macbook-pro-1.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "mac-1",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/mockups/mac-1.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "ipad-pro-1",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/mockups/ipad-pro-1.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "iphone-16-pro-1",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/mockups/iphone-16-pro-1.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
   {
     name: "typography-blockquote",
     type: "registry:example",

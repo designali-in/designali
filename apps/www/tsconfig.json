@@ -8,7 +8,7 @@
     "paths": {
       "@/*": ["./*", "./src/*"],
       "@/components/ui/*": ["./registry/default/ui/*"],
-      "@/components/mockups/*": ["./registry/default/mockups/*"],
+      "@/components/mockups/*": ["registry/default/ui/mockups/*"],
       "@/components/example/*": ["./registry/default/example/*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
       "~/*": ["./src/*"]

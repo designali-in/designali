@@ -1,4 +1,4 @@
-import Mac from "@/components/mockups/mac";
+import Mac from "@/registry/default/ui/mockups/mac";
 
 export default function MacDemo() {
   return (

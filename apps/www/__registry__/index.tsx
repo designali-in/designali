@@ -765,6 +765,182 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "ipad-pro": {
+      name: "ipad-pro",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/mockups/ipad-pro.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/ui/mockups/ipad-pro.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "iphone-16-pro": {
+      name: "iphone-16-pro",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/mockups/iphone-16-pro.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/ui/mockups/iphone-16-pro.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "iphone-16": {
+      name: "iphone-16",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/mockups/iphone-16.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/ui/mockups/iphone-16.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mac": {
+      name: "mac",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/mockups/mac.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/ui/mockups/mac.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "macbook-pro": {
+      name: "macbook-pro",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/mockups/macbook-pro.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/ui/mockups/macbook-pro.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "safari": {
+      name: "safari",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/mockups/safari.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/ui/mockups/safari.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "safari-1": {
+      name: "safari-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/mockups/safari-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/example/mockups/safari-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "macbook-pro-1": {
+      name: "macbook-pro-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/mockups/macbook-pro-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/example/mockups/macbook-pro-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mac-1": {
+      name: "mac-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/mockups/mac-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/example/mockups/mac-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "ipad-pro-1": {
+      name: "ipad-pro-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/mockups/ipad-pro-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/example/mockups/ipad-pro-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "iphone-16-pro-1": {
+      name: "iphone-16-pro-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/mockups/iphone-16-pro-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/new-york/example/mockups/iphone-16-pro-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "typography-blockquote": {
       name: "typography-blockquote",
       description: "",
@@ -2981,86 +3157,6 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
-    "safari-1": {
-      name: "safari-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/new-york/components/mockups/safari-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/new-york/components/mockups/safari-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "macbook-pro-1": {
-      name: "macbook-pro-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/new-york/components/mockups/macbook-pro-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/new-york/components/mockups/macbook-pro-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "mac-1": {
-      name: "mac-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/new-york/components/mockups/mac-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/new-york/components/mockups/mac-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "ipad-pro-1": {
-      name: "ipad-pro-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/new-york/components/mockups/ipad-pro-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/new-york/components/mockups/ipad-pro-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "iphone-16-pro-1": {
-      name: "iphone-16-pro-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/new-york/components/mockups/iphone-16-pro-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/new-york/components/mockups/iphone-16-pro-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
     "utils": {
       name: "utils",
       description: "",
@@ -4121,6 +4217,182 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/ui/tooltip.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "ipad-pro": {
+      name: "ipad-pro",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/mockups/ipad-pro.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/mockups/ipad-pro.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "iphone-16-pro": {
+      name: "iphone-16-pro",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/mockups/iphone-16-pro.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/mockups/iphone-16-pro.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "iphone-16": {
+      name: "iphone-16",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/mockups/iphone-16.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/mockups/iphone-16.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mac": {
+      name: "mac",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/mockups/mac.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/mockups/mac.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "macbook-pro": {
+      name: "macbook-pro",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/mockups/macbook-pro.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/mockups/macbook-pro.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "safari": {
+      name: "safari",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/mockups/safari.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/mockups/safari.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "safari-1": {
+      name: "safari-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mockups/safari-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/mockups/safari-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "macbook-pro-1": {
+      name: "macbook-pro-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mockups/macbook-pro-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/mockups/macbook-pro-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mac-1": {
+      name: "mac-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mockups/mac-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/mockups/mac-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "ipad-pro-1": {
+      name: "ipad-pro-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mockups/ipad-pro-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/mockups/ipad-pro-1.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "iphone-16-pro-1": {
+      name: "iphone-16-pro-1",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mockups/iphone-16-pro-1.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/mockups/iphone-16-pro-1.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -6337,86 +6609,6 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/components/inputs/input-51")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "safari-1": {
-      name: "safari-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/components/mockups/safari-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/components/mockups/safari-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "macbook-pro-1": {
-      name: "macbook-pro-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/components/mockups/macbook-pro-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/components/mockups/macbook-pro-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "mac-1": {
-      name: "mac-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/components/mockups/mac-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/components/mockups/mac-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "ipad-pro-1": {
-      name: "ipad-pro-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/components/mockups/ipad-pro-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/components/mockups/ipad-pro-1")),
-      source: "",
-      category: "",
-      subcategory: "",
-      chunks: []
-    },
-    "iphone-16-pro-1": {
-      name: "iphone-16-pro-1",
-      description: "",
-      type: "registry:components",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/components/mockups/iphone-16-pro-1",
-        type: "registry:components",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/components/mockups/iphone-16-pro-1")),
       source: "",
       category: "",
       subcategory: "",

@@ -319,7 +319,7 @@ const components = {
       <StyleWrapper styleName={__style__}>
         <pre
           className={cn(
-            "my-4  max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 p-4 dark:bg-zinc-900",
+            "my-4  max-h-[800px] overflow-x-auto rounded-lg border bg-slate-50 p-4 dark:bg-slate-950",
             className,
           )}
           {...props}

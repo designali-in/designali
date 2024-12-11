@@ -1,0 +1,12 @@
+{
+  "name": "mac-1",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/mockups/mac-1.tsx",
+      "content": "import Mac from \"@/registry/default/ui/mockups/mac\";\n\nexport default function MacDemo() {\n  return (\n    <div className=\"relative\">\n      <Mac className=\"size-full\" />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

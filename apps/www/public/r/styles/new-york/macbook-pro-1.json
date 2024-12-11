@@ -1,0 +1,12 @@
+{
+  "name": "macbook-pro-1",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/mockups/macbook-pro-1.tsx",
+      "content": "import MacbookPro from \"@/registry/default/ui/mockups/macbook-pro\";\n\nexport default function MacbookProDemo() {\n  return (\n    <div className=\"relative\">\n      <MacbookPro className=\"size-full\" />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

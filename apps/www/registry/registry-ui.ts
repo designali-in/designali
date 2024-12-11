@@ -609,4 +609,64 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "ipad-pro",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/mockups/ipad-pro.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "iphone-16-pro",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/mockups/iphone-16-pro.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "iphone-16",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/mockups/iphone-16.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "mac",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/mockups/mac.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "macbook-pro",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/mockups/macbook-pro.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "safari",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/mockups/safari.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ];

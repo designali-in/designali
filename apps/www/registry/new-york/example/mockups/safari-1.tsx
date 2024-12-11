@@ -1,4 +1,4 @@
-import Safari from "@/components/mockups/safari";
+import Safari from "@/registry/default/ui/mockups/safari";
 
 export default function SafariDemo() {
   return (

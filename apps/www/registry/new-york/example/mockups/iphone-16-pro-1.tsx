@@ -1,4 +1,4 @@
-import Iphone16Pro from "@/components/mockups/iphone-16-pro";
+import Iphone16Pro from "@/registry/default/ui/mockups/iphone-16-pro";
 
 export default function iPhone16ProDemo() {
   return (

@@ -1,4 +1,4 @@
-import MacbookPro from "@/components/mockups/macbook-pro";
+import MacbookPro from "@/registry/default/ui/mockups/macbook-pro";
 
 export default function MacbookProDemo() {
   return (

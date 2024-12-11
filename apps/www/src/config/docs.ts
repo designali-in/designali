@@ -40,20 +40,7 @@ export const componentsConfig: ComponentsConfig = {
     },
     {
       title: "Components",
-      items: [
-        {
-          title: "Button",
-          href: "/components/button",
-        },
-        {
-          title: "Accordion",
-          href: "/components/accordion",
-        },
-        {
-          title: "Navigation Menu",
-          href: "/components/navigation-menu",
-        },
-      ],
+      items: [],
     },
     {
       title: "Mockups",
