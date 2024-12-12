@@ -11,6 +11,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 interface AnimeUpdatePageProps {
   params: {
     anime: string;
@@ -20,6 +23,7 @@ interface AnimeUpdatePageProps {
 const AnimeUpdatePage = async ({ params }: AnimeUpdatePageProps) => {
   const { anime: animeId } = params;
   const session = await auth();
+  console.log("Anime ID passed to query:", animeId);
 
   if (!session) {
     redirect("/");
@@ -28,6 +32,7 @@ const AnimeUpdatePage = async ({ params }: AnimeUpdatePageProps) => {
   const anime = await prisma.graphic.findFirst({
     where: {
       id: animeId,
+      name: animeId,
     },
   });
 
@@ -36,11 +41,11 @@ const AnimeUpdatePage = async ({ params }: AnimeUpdatePageProps) => {
   }
 
   return (
-    <div>
+    <div className="p-6">
       <Card>
         <CardHeader className="space-y-1">
           <p>{anime.id}</p>
-          <CardTitle className="text-2xl">Update anime</CardTitle>
+          <CardTitle className="text-2xl">Update {anime.name}</CardTitle>
           <CardDescription>
             Update the content of this anime or delete it.
           </CardDescription>

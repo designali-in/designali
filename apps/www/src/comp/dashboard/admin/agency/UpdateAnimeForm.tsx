@@ -86,7 +86,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     },
     onError: (error) => {
       if (error instanceof AxiosError) {
-        const statusCode = error.response.status;
+        const statusCode = error.response?.status;
         if (statusCode === 401) {
           return loginToast();
         }
@@ -136,7 +136,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     },
     onError: (error) => {
       if (error instanceof AxiosError) {
-        const statusCode = error.response.status;
+        const statusCode = error.response?.status;
         if (statusCode === 401) {
           return loginToast();
         }
@@ -365,7 +365,7 @@ const FileInput = forwardRef<
       placeholder={placeholder}
       disabled={disabled}
       onChange={(e) => {
-        const selectedFile = e.target.files[0];
+        const selectedFile = e.target.files?.[0];
         if (selectedFile) {
           setFile(selectedFile);
         }

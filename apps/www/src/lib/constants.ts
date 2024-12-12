@@ -31,7 +31,7 @@ export const SITE_INSTAGRAM_URL = "https://www.instagram.com/designali.in";
 export const SITE_X_URL = "https://x.com/designali";
 export const SITE_YOUTUBE_URL = "https://www.youtube.com/@designali";
 
-export const INFINITE_SCROLLING_PAGINATION_ANIME = 3;
+export const INFINITE_SCROLLING_PAGINATION_ANIME = 10;
 export const INFINITE_SCROLLING_PAGINATION_RESULTS = 5;
 export const INFINITE_SCROLLING_PAGINATION_LEADERBOARD = 10;
 export const INFINITE_SCROLLING_PAGINATION_BROWSE = 10;

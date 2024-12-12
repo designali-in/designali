@@ -8,7 +8,7 @@ import { prisma } from "@/lib/db";
 
 const UsersPage = async () => {
   const recentFiveUsers = await prisma.user.findMany({
-    take: 5,
+    take: 10,
     orderBy: {
       createdAt: "desc",
     },
