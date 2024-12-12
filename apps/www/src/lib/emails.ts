@@ -1,11 +1,11 @@
 import type * as React from "react";
 import { Resend } from "resend";
 
+import { env } from "../env";
+
 if (!process.env.RESEND_API_KEY) {
   throw new Error("Missing RESEND_API_KEY environment variable");
 }
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export interface Emails {
   react: React.JSX.Element;
@@ -24,3 +24,5 @@ export interface EmailHtml {
 export const sendEmail = async (email: Emails) => {
   await resend.emails.send(email);
 };
+
+export const resend = new Resend(process.env.RESEND_API_KEY);

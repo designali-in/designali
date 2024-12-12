@@ -97,8 +97,7 @@ const Animes: FC<AnimesProps> = ({ initialAnimes }) => {
     <>
       <div className="flex items-center gap-x-2">
         <Input
-          placeholder="Type a anime name here."
-          disabled={isFetching}
+          placeholder="Type a graphic name here."
           autoFocus
           onChange={(e) => setQuery(e.target.value)}
         />

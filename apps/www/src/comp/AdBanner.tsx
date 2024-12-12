@@ -24,9 +24,9 @@ const AdBanner = ({
   }, []);
 
   return (
-    <div className="mx-auto max-w-7xl rounded-xl border px-6 xl:px-0">
+    <div className="rounded-xl border">
       <ins
-        className="adsbygoogle"
+        className="adsbygoogle m-4"
         style={{ display: "block" }}
         data-ad-client="ca-pub-3647003303744848"
         data-ad-slot={dataAdSlot}
