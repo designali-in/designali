@@ -23,7 +23,7 @@ export default function HomePage() {
         <InstagramFeed />
       </div>
       */}
-      <div className="mb-5 bg-black">
+      <div className=" py-10">
         <AdBanner
           dataAdFormat="auto"
           dataFullWidthResponsive={true}
