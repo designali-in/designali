@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 
 import { env } from "process";
 import type { Metadata, Viewport } from "next";
-import AdSense from "@/comp/AdSense";
 import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
 import Providers from "@/comp/Providers";
@@ -56,7 +55,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <AdSense pId="ca-pub-3647003303744848" />
       </head>
       <body
         className={cn(
