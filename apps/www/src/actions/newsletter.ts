@@ -5,15 +5,17 @@ import type {
   NewsletterSignUpFormInput,
 } from "@/lib/validations/newsletter";
 import { WelcomeEmail } from "@/emails/welcome-email";
+import { Resend } from "resend";
 
 import { prisma } from "@/lib/db";
-import { resend } from "@/lib/emails";
 import {
   checkIfSubscribedToNewsletterSchema,
   newsletterSignUpSchema,
 } from "@/lib/validations/newsletter";
 
 import { env } from "../env";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function checkIfSubscribedToNewsletter(
   rawInput: CheckIfSubscribedToNewsletterInput,
@@ -54,7 +56,7 @@ export async function subscribeToNewsletter(
     const emailSent = await resend.emails.send({
       from: env.RESEND_EMAIL_FROM,
       to: validatedInput.data.email,
-      subject: "Welcome to our newsletter!",
+      subject: "Welcome to My Newsletter!",
       react: WelcomeEmail(),
     });
 

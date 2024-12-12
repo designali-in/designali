@@ -13,6 +13,8 @@ import DotPattern from "@/src/comp/uis/dot-pattern";
 
 import { Button } from "@/components/ui/button";
 
+import Container from "../../common/container";
+
 const Hero = () => {
   const talkAbout = [
     "Graphic Design",

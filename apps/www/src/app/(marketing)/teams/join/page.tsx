@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { JoinTeamForm } from "@/comp/forms/join-team-form";
 
 import { auth } from "@/lib/auth";
@@ -39,6 +40,14 @@ export default async function JoinTeamPage({
   searchParams,
 }: JoinTeamPageProps) {
   const session = await auth();
+
+  if (!session?.user) {
+    redirect(`/login?callbackUrl=/teams/join?token=${searchParams.token}`);
+  }
+
+  if (!searchParams.token) {
+    redirect("/dashboard");
+  }
 
   const invitation = await getInvitation(searchParams.token);
 

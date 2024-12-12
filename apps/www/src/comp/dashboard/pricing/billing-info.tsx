@@ -1,10 +1,9 @@
 import type { UserSubscriptionPlan } from "@/types";
-import * as React from "react";
-import Link from "next/link";
 import { CustomerPortalButton } from "@/comp/forms/customer-portal-button";
+import { getUserSubscriptionPlan } from "@/src/lib/subscription";
 
+import { getCurrentUser } from "@/lib/session";
 import { cn, formatDate } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -14,11 +13,21 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import { PricingCards } from "./pricing-cards";
+
 interface BillingInfoProps extends React.HTMLAttributes<HTMLFormElement> {
   userSubscriptionPlan: UserSubscriptionPlan;
 }
 
-export function BillingInfo({ userSubscriptionPlan }: BillingInfoProps) {
+export async function BillingInfo({ userSubscriptionPlan }: BillingInfoProps) {
+  const user = await getCurrentUser();
+
+  let subscriptionPlan;
+
+  if (user && user.id) {
+    subscriptionPlan = await getUserSubscriptionPlan(user.id);
+  }
+
   const {
     title,
     description,
@@ -30,14 +39,14 @@ export function BillingInfo({ userSubscriptionPlan }: BillingInfoProps) {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="text-center">
         <CardTitle>Subscription Plan</CardTitle>
         <CardDescription>
           You are currently on the <strong>{title}</strong> plan.
         </CardDescription>
       </CardHeader>
-      <CardContent>{description}</CardContent>
-      <CardFooter className="flex flex-col items-center space-y-2 border-t py-4 md:flex-row md:justify-between md:space-y-0">
+      <CardContent className="text-center">
+        {description}
         {isPaid ? (
           <p className="text-sm font-medium text-muted-foreground">
             {isCanceled
@@ -50,11 +59,9 @@ export function BillingInfo({ userSubscriptionPlan }: BillingInfoProps) {
         {isPaid && stripeCustomerId ? (
           <CustomerPortalButton userStripeId={stripeCustomerId} />
         ) : (
-          <Link href="/pricing" className={cn(buttonVariants())}>
-            Choose a plan
-          </Link>
+          <PricingCards userId={user?.id} subscriptionPlan={subscriptionPlan} />
         )}
-      </CardFooter>
+      </CardContent>
     </Card>
   );
 }
