@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import AdBanner from "@/comp/AdBanner";
 import { Connect } from "@/comp/common/connect";
 import RecentlyAdded from "@/comp/dashboard/admin/agency/HomeGraphic";
 import Bento from "@/comp/marketing/home/bento";
@@ -23,7 +24,13 @@ export default function HomePage() {
         <InstagramFeed />
       </div>
       */}
-
+      <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
+        <AdBanner
+          dataAdFormat="auto"
+          dataFullWidthResponsive={true}
+          dataAdSlot="5723796123"
+        />
+      </div>
       <NewsletterSection />
       <Connect />
     </main>
