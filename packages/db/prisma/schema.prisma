@@ -48,7 +48,6 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
-  apiKey        String?
   createdAt     DateTime  @default(now()) @map("created_at")
   updatedAt     DateTime  @default(now()) @map("updated_at")
   role          UserRole  @default(USER)
@@ -76,7 +75,6 @@ model User {
   teams              TeamMember[]
   accounts           Account[]
   sessions           Session[]
-  UserUrl            UserUrl[]
 
   @@map("users")
 }
@@ -96,47 +94,6 @@ model Post {
   slug      String   @unique
   likes     Int      @default(0)
   views     Int      @default(0)
-}
-
-model UserUrl {
-  id         String    @id @default(cuid())
-  userId     String
-  userName   String
-  target     String
-  url        String    @unique
-  visible    Int       @default(0)
-  active     Int       @default(1)
-  expiration String    @default("-1")
-  createdAt  DateTime  @default(now()) @map("created_at")
-  updatedAt  DateTime  @default(now()) @map("updated_at")
-  UrlMeta    UrlMeta[]
-  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-  @@map("user_urls")
-}
-
-model UrlMeta {
-  id        String   @id @default(cuid())
-  urlId     String
-  click     Int
-  ip        String   @default("127.0.0.1")
-  city      String?
-  country   String?
-  region    String?
-  latitude  String?
-  longitude String?
-  referer   String?
-  lang      String?
-  device    String?
-  browser   String?
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @default(now()) @map("updated_at")
-  userUrl   UserUrl  @relation(fields: [urlId], references: [id], onDelete: Cascade)
-
-  @@unique([urlId, ip])
-  @@index([urlId])
-  @@map("url_metas")
 }
 
 model Team {
