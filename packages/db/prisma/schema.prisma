@@ -75,6 +75,7 @@ model User {
   teams              TeamMember[]
   accounts           Account[]
   sessions           Session[]
+  urls               Url[]
 
   @@map("users")
 }
@@ -86,6 +87,18 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map("verification_tokens")
+}
+
+model Url {
+  id          String   @id @default(cuid())
+  originalUrl String
+  shortUrl    String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  createdAt   DateTime @default(now())
+
+  @@unique([userId, originalUrl])
+  @@map("urls")
 }
 
 model Post {
