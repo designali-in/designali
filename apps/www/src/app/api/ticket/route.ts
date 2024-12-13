@@ -8,6 +8,7 @@ import {
   getTickets,
   getTicketWithId,
 } from "@/actions/ticket-actions";
+import { getCurrentUser } from "@/src/lib/session";
 
 import { auth } from "@/lib/auth";
 
@@ -47,7 +48,7 @@ export async function POST(req: NextRequest, res: Response) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    const user = await auth();
+    const user = await getCurrentUser();
     if (!user) {
       return new NextResponse("User not exist", { status: 404 });
     }

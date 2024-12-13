@@ -235,28 +235,32 @@ const AdminTicketDetails = () => {
               {projectName ? <p>{projectName}</p> : <Skeleton />}
             </p>
           </div>
-          <div className="scrollbar-hide scrollbar-thin h-[20rem] max-h-[20rem] space-y-3  overflow-auto rounded-2xl border md:h-[35rem] md:max-h-[35rem] ">
+          <div
+            className={`scrollbar-hide scrollbar-thin h-[20rem] max-h-[20rem] space-y-2 overflow-auto rounded-2xl border p-3 md:h-[35rem] md:max-h-[35rem]`}
+          >
             {Array.isArray(messages) ? (
               messages.map((message: Message, index: number) => (
                 <div
                   key={index}
-                  className={`flex w-full flex-col  space-y-2 rounded-t-lg p-4 text-left  focus:outline-none dark:bg-gray-800 ${
-                    message.sender === "admin" ? "bg-gray-300" : "bg-gray-100"
-                  }`}
+                  className={`flex w-full space-y-2 rounded-lg p-4 text-left  focus:outline-none ${message.sender === "ADMIN" ? " bg-green-200  dark:bg-green-800" : "justify-end bg-secondary"}`}
                 >
-                  <div className="flex items-center space-x-2">
-                    <div className="space-y-1">
-                      <p className="text-sm font-medium leading-none">
-                        {message.sender !== "admin" ? "You" : "Admin"}
-                      </p>
-                      <time className="text-xs font-medium text-gray-400">
+                  <div
+                    className={`grid gap-2 ${message.sender === "ADMIN" ? "" : "text-right"}`}
+                  >
+                    <div
+                      className={`flex gap-1 ${message.sender === "ADMIN" ? "" : "justify-end text-right"}`}
+                    >
+                      <div className="space-y-1">
+                        <p className="text-sm leading-none">
+                          {message.sender !== "ADMIN" ? "" : "Designali"}
+                        </p>
+                      </div>
+                      <time className="text-xs text-primary/30">
                         {messages[index]?.createdAt &&
                           timePassedFromNow(messages[index]?.createdAt)}
                       </time>
                     </div>
-                  </div>
-                  <div>
-                    <p className="max-w-[50rem] overflow-hidden font-medium   ">
+                    <p className="max-w-[50rem] overflow-hidden font-medium">
                       <span className="">{message.content}</span>
                     </p>
                   </div>

@@ -227,34 +227,42 @@ const TicketDetails = () => {
               </p>
             </div>
           </div>
-          <div className="scrollbar-hide scrollbar-thin h-[20rem] max-h-[20rem] space-y-3 overflow-auto rounded-2xl border md:h-[35rem] md:max-h-[35rem]">
-            {Array.isArray(messages)
-              ? messages.map((message: Message, index: number) => (
+          <div
+            className={`scrollbar-hide scrollbar-thin h-[20rem] max-h-[20rem] space-y-2 overflow-auto rounded-2xl border p-3 md:h-[35rem] md:max-h-[35rem]`}
+          >
+            {Array.isArray(messages) ? (
+              messages.map((message: Message, index: number) => (
+                <div
+                  key={index}
+                  className={`flex w-full space-y-2 rounded-lg p-4 text-left  focus:outline-none ${message.sender === "ADMIN" ? " bg-green-200  dark:bg-green-800" : "justify-end bg-secondary"}`}
+                >
                   <div
-                    key={index}
-                    className={`flex w-full flex-col space-y-2 rounded-t-lg p-4 text-left  focus:outline-none   ${message.sender === "ADMIN" ? "bg-secondary" : "bg-secondary"}`}
+                    className={`grid gap-2 ${message.sender === "ADMIN" ? "" : "text-right"}`}
                   >
-                    <div className="flex items-center space-x-2">
+                    <div
+                      className={`flex gap-1 ${message.sender === "ADMIN" ? "" : "justify-end text-right"}`}
+                    >
                       <div className="space-y-1">
                         <p className="text-sm leading-none">
-                          {message.sender !== "Admin" ? "You" : "Admin"}
+                          {message.sender !== "ADMIN" ? "" : "Designali"}
                         </p>
-                        <time className="text-xs font-medium text-slate-500">
-                          {messages[index]?.createdAt &&
-                            timePassedFromNow(messages[index]?.createdAt)}
-                        </time>
                       </div>
+                      <time className="text-xs text-primary/30">
+                        {messages[index]?.createdAt &&
+                          timePassedFromNow(messages[index]?.createdAt)}
+                      </time>
                     </div>
-                    <div>
-                      <p className=" ">
-                        <span className="">{message.content}</span>
-                      </p>
-                    </div>
+                    <p className="max-w-[50rem] overflow-hidden font-medium">
+                      <span className="">{message.content}</span>
+                    </p>
                   </div>
-                ))
-              : "sss"}
+                </div>
+              ))
+            ) : (
+              <Skeleton />
+            )}
 
-            {loadingSubmit && "sss"}
+            {loadingSubmit && <Skeleton />}
             <div ref={messagesEndRef}></div>
           </div>
           <div className="">
