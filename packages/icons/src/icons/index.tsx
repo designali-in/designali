@@ -3,6 +3,7 @@ export * from "./ai";
 export * from "./animations";
 export * from "./account";
 export * from "./arrows";
+export * from "./chats";
 export * from "./animals";
 export * from "./brands";
 export * from "./building";

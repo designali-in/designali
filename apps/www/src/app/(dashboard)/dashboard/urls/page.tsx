@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Button } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
+import { Pagination } from "@/registry/default/ui/pagination";
 import { Skeleton } from "@/registry/default/ui/skeleton";
 import { CopyButton } from "@/src/comp/uis/copy-button";
 import { Url } from "@prisma/client";
-import { Close, Delete, Loader, Trash2 } from "dicons";
+import { DIcons } from "dicons";
 import { useSnackbar } from "notistack";
 
 import {
@@ -20,7 +22,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const take = 10;
+const take = 5;
 
 export default function Profile() {
   const [url, setUrl] = useState("");
@@ -145,15 +147,37 @@ export default function Profile() {
   return (
     <div className="p-6">
       <div className="flex w-full flex-col gap-4">
-        <div className="flex w-full items-center justify-between">
-          <p>Total Urls: {totalUrlCount}</p>
-        </div>
-        <div className="relative rounded-md">
-          {isLoading && (
-            <div className=" z-10 m-auto flex h-full w-full items-center justify-center ">
-              <Skeleton />
+        <div>
+          <div className="grid gap-3 md:flex">
+            <h1 className=" w-full text-2xl font-semibold">
+              Total Urls: {totalUrlCount}
+            </h1>
+            <div className="w-full">
+              <form className=" flex gap-2 " onSubmit={addUrl}>
+                <div className="w-full ">
+                  <Input
+                    type="url"
+                    id="url"
+                    name="url"
+                    placeholder="Your Url"
+                    value={url}
+                    onChange={(e) => setUrl(e.target.value)}
+                    className={`w-full text-black ${addUrlInputError ? "border-red-500" : ""}`}
+                    required
+                    autoFocus
+                  />
+                </div>
+                <div className=" ">
+                  <Button type="submit">
+                    {addingUrl ? `Adding` : "Create Url"}
+                  </Button>
+                </div>
+              </form>
             </div>
-          )}
+          </div>
+        </div>
+
+        <div className="relative rounded-md">
           <Table>
             <TableCaption>A list of your recent urls.</TableCaption>
             <TableHeader>
@@ -164,66 +188,76 @@ export default function Profile() {
                 <TableHead className="text-right">Action</TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody className={isLoading ? " " : ""}>
-              {urlList &&
-                urlList.length > 0 &&
-                urlList.slice(skip, skip + take).map((obj, index) => (
-                  <TableRow key={index}>
-                    <TableCell className="">
-                      <div className="flex">
-                        <CopyButton value={""} />
-                        {obj.shortUrl}
-                      </div>
-                    </TableCell>
-                    <TableCell className=" truncate ">
-                      <div className="flex">
-                        <CopyButton value={""} />
-                        {obj.originalUrl}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      {new Date(obj.createdAt.toString()).toDateString()}
-                    </TableCell>
-                    <TableCell>
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        onClick={() => deleteUrl(obj.id, index)}
-                      >
-                        {deletingUrl === index ? "" : <Trash2 />}
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))}
+
+            <TableBody>
+              {isLoading
+                ? Array.from({ length: take }).map((_, index) => (
+                    <TableRow key={index}>
+                      <TableCell>
+                        <Skeleton className="h-6 w-full" />
+                      </TableCell>
+                      <TableCell>
+                        <Skeleton className="h-6 w-full" />
+                      </TableCell>
+                      <TableCell>
+                        <Skeleton className="h-6 w-full" />
+                      </TableCell>
+                      <TableCell>
+                        <Skeleton className="h-9 w-20" />
+                      </TableCell>
+                    </TableRow>
+                  ))
+                : urlList &&
+                  urlList.length > 0 &&
+                  urlList.slice(skip, skip + take).map((obj, index) => (
+                    <TableRow key={index}>
+                      <TableCell className="">
+                        <div className="flex">
+                          <CopyButton value={obj.shortUrl} />
+                          <Link
+                            className="hover:text-blue-500 hover:underline"
+                            target="_blank"
+                            href={obj.shortUrl}
+                          >
+                            {obj.shortUrl}
+                          </Link>
+                        </div>
+                      </TableCell>
+                      <TableCell className="truncate">
+                        <div className="flex">
+                          <CopyButton value={obj.originalUrl} />
+                          <Link
+                            className="hover:text-blue-500 hover:underline"
+                            target="_blank"
+                            href={obj.shortUrl}
+                          >
+                            {obj.originalUrl}
+                          </Link>
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        {new Date(obj.createdAt.toString()).toDateString()}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          onClick={() => deleteUrl(obj.id, index)}
+                        >
+                          {deletingUrl === index ? (
+                            <DIcons.Loader />
+                          ) : (
+                            <DIcons.Trash2 />
+                          )}
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
             </TableBody>
             <TableFooter>
               <TableRow></TableRow>
             </TableFooter>
           </Table>
-        </div>
-      </div>
-      <div>
-        <div>
-          <form className="mt-10 flex gap-3" onSubmit={addUrl}>
-            <div className=" flex w-full items-center justify-center">
-              <Input
-                type="url"
-                id="url"
-                name="url"
-                placeholder="Url"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                className={`text-black ${addUrlInputError ? "border-red-500" : ""}`}
-                required
-                autoFocus
-              />
-            </div>
-            <div className=" ">
-              <Button type="submit">
-                {addingUrl ? "Adding" : "Create Url"}
-              </Button>
-            </div>
-          </form>
         </div>
       </div>
     </div>

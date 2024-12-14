@@ -25,6 +25,10 @@ export const diconsConfig: DIconsConfig = {
           title: "Brands",
           href: "/products/dicons/Brands",
         },
+        {
+          title: "Chats",
+          href: "/products/dicons/Chats",
+        },
       ],
     },
   ],

@@ -5,7 +5,6 @@ export * from "./Forward";
 export * from "./Mailbox";
 export * from "./MailCheck";
 export * from "./MailMinus";
-export * from "./MailOpen";
 export * from "./MailPlus";
 export * from "./MailQuestion";
 export * from "./Mails";
