@@ -31,7 +31,7 @@ export default function AboutAI() {
             alt="Your Image"
             height={700}
             width={700}
-            className="absolute -top-28 -z-10  w-full object-cover"
+            className="absolute -top-28 -z-10 min-h-screen w-full object-cover"
           />
           <p className="px-6 text-center text-lg font-light uppercase tracking-widest text-white lg:text-xl">
             Introducing
@@ -46,7 +46,7 @@ export default function AboutAI() {
             Graaadients
           </h1>
           <p className="mx-auto max-w-lg px-6 text-center text-sm font-light text-white lg:-mt-4 lg:text-lg">
-            +2000 abstract gradient elements and backgrounds for your amazing
+            +5000 abstract gradient elements and backgrounds for your amazing
             design projects.
           </p>
         </div>
@@ -84,7 +84,9 @@ export default function AboutAI() {
         <p className="ml-2 mt-6 text-center font-semibold ">
           All gradients are 100% free.
         </p>
-
+        <h1 className="text-ali -mb-10 flex w-full justify-center  text-center text-9xl font-thin  ">
+          4K
+        </h1>
         <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
           <Grads />
         </div>

@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@aliimam_in",
-    creator: "@aliimam_in",
+    site: "@designali_in",
+    creator: "@designali_in",
   },
 };
 
