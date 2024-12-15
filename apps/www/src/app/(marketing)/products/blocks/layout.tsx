@@ -49,7 +49,10 @@ export default function BlocksLayout({
         <div className="container flex items-center py-4">
           <BlocksNav />
         </div>
-        <ThemeWrapper>{children}</ThemeWrapper>
+        <ThemeWrapper>
+          <ThemeCustomizer />
+          {children}
+        </ThemeWrapper>
       </main>
     </Suspense>
   );

@@ -1,4 +1,4 @@
-import { LoginForm } from "@/registry/default/block/login-01/components/login-form";
+import { LoginForm } from "@/registry/default/blocks/login-01/components/login-form";
 
 export const description = "A simple login form.";
 
