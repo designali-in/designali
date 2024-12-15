@@ -97,7 +97,7 @@ function BlockViewerProvider({
 }) {
   const [view, setView] = React.useState<BlockViewerContext["view"]>("preview");
   const [style, setStyle] =
-    React.useState<BlockViewerContext["style"]>("new-york");
+    React.useState<BlockViewerContext["style"]>("default");
   const [activeFile, setActiveFile] = React.useState<
     BlockViewerContext["activeFile"]
   >(highlightedFiles?.[0].target ?? null);

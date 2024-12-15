@@ -31,7 +31,6 @@ export function LoginForm() {
                 Forgot your password?
               </Link>
             </div>
-            <Input id="password" type="password" required />
           </div>
           <Button type="submit" className="w-full">
             Login

@@ -34,8 +34,6 @@ import { ThemeWrapper } from "../theme-wrapper";
 import "@/styles/mdx.css";
 
 export function ThemeCustomizer() {
-  const [config, setConfig] = useConfig();
-  const { resolvedTheme: mode } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -131,7 +129,7 @@ function Customizer() {
               setConfig({
                 ...config,
                 theme: "violet",
-                radius: 1,
+                radius: 0.8,
               });
             }}
           >
@@ -142,7 +140,7 @@ function Customizer() {
         <div className="flex gap-2">
           <p>Radius</p>
           <Slider
-            defaultValue={[1]}
+            defaultValue={[0.8]}
             max={1.5}
             min={0}
             step={0.1}
