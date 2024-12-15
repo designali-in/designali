@@ -15,6 +15,7 @@ import "public/registry/themes.css";
 
 import { Suspense } from "react";
 import { Skeleton } from "@/registry/default/ui/skeleton";
+import { BlocksNav } from "@/src/comp/products/blocks/blocks-nav";
 
 export default function BlocksLayout({
   children,
@@ -45,12 +46,10 @@ export default function BlocksLayout({
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-        <ThemeWrapper>
-          <Suspense fallback={<Skeleton className="h-full w-full" />}>
-            <ThemeCustomizer />
-          </Suspense>
-          {children}
-        </ThemeWrapper>
+        <div className="container flex items-center py-4">
+          <BlocksNav />
+        </div>
+        <ThemeWrapper>{children}</ThemeWrapper>
       </main>
     </Suspense>
   );

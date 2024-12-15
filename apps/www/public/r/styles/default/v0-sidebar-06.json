@@ -1,7 +1,6 @@
 {
   "name": "v0-sidebar-06",
   "type": "registry:block",
-  "description": "A sidebar with submenus as dropdowns.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

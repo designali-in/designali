@@ -1,7 +1,6 @@
 {
   "name": "v0-sidebar-03",
   "type": "registry:block",
-  "description": "A sidebar with nested navigation.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb"

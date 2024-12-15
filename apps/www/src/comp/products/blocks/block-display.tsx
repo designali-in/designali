@@ -1,6 +1,6 @@
-import type { registryItemFileSchema } from "@/registry/schema";
-import type { z } from "zod";
 import * as React from "react";
+import { registryItemFileSchema } from "@/registry/schema";
+import { z } from "zod";
 
 import { highlightCode } from "@/lib/highlight-code";
 import {

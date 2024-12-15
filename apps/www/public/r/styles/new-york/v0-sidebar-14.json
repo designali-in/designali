@@ -1,7 +1,6 @@
 {
   "name": "v0-sidebar-14",
   "type": "registry:block",
-  "description": "A sidebar on the right.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb"

@@ -1,7 +1,6 @@
 {
   "name": "_sink",
   "type": "registry:block",
-  "description": "",
   "registryDependencies": [
     "accordion",
     "alert",

@@ -1,7 +1,6 @@
 {
   "name": "v0-sidebar-10",
   "type": "registry:block",
-  "description": "A sidebar in a popover.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

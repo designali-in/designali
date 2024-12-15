@@ -1,100 +1,100 @@
-import puppeteer from "puppeteer"
+import { existsSync, promises as fs } from "fs";
+import path from "path";
+import puppeteer from "puppeteer";
 
-const BLOCKS = [
-  "login-01",
-  "sidebar-01",
-  "sidebar-02",
-  "sidebar-03",
-  "sidebar-04",
-  "sidebar-05",
-  "sidebar-06",
-  "sidebar-07",
-  "sidebar-08",
-  "sidebar-09",
-  "sidebar-10",
-  "sidebar-11",
-  "sidebar-12",
-  "sidebar-13",
-  "sidebar-14",
-  "sidebar-15",
-  "demo-sidebar",
-  "demo-sidebar-header",
-  "demo-sidebar-footer",
-  "demo-sidebar-group",
-  "demo-sidebar-group-collapsible",
-  "demo-sidebar-group-action",
-  "demo-sidebar-menu",
-  "demo-sidebar-menu-action",
-  "demo-sidebar-menu-sub",
-  "demo-sidebar-menu-collapsible",
-  "demo-sidebar-menu-badge",
-  "demo-sidebar-rsc",
-  "demo-sidebar-controlled",
-]
+import { getAllBlockIds } from "../src/lib/blocks";
 
-try {
+const REGISTRY_PATH = path.join(process.cwd(), "public/r");
+
+// ----------------------------------------------------------------------------
+// Capture screenshots.
+// ----------------------------------------------------------------------------
+async function captureScreenshots() {
+  const blockIds = await getAllBlockIds();
+  const blocks = blockIds.filter((block) => {
+    // Check if screenshots already exist
+    const lightPath = path.join(
+      REGISTRY_PATH,
+      `styles/new-york/${block}-light.png`,
+    );
+    const darkPath = path.join(
+      REGISTRY_PATH,
+      `styles/new-york/${block}-dark.png`,
+    );
+    return !existsSync(lightPath) || !existsSync(darkPath);
+  });
+
+  if (blocks.length === 0) {
+    console.log("✨ All screenshots exist, nothing to capture");
+    return;
+  }
+
   const browser = await puppeteer.launch({
     defaultViewport: {
       width: 1440,
       height: 900,
       deviceScaleFactor: 2,
     },
-  })
+  });
 
-  console.log("☀️ Capturing screenshots for light theme")
-  for (const block of BLOCKS) {
-    const pageUrl = `http://localhost:3333/blocks/new-york/${block}`
-    console.log(`- ${block}`)
+  for (const block of blocks) {
+    const pageUrl = `http://localhost:3333/view/styles/new-york/${block}`;
 
-    const page = await browser.newPage()
+    const page = await browser.newPage();
     await page.goto(pageUrl, {
       waitUntil: "networkidle2",
-    })
+    });
 
-    // Hide Tailwind indicator
-    await page.evaluate(() => {
-      const indicator = document.querySelector("[data-tailwind-indicator]")
-      if (indicator) {
-        indicator.remove()
+    console.log(`- Capturing ${block}...`);
+
+    for (const theme of ["light", "dark"]) {
+      const screenshotPath = path.join(
+        REGISTRY_PATH,
+        `styles/new-york/${block}${theme === "dark" ? "-dark" : "-light"}.png`,
+      );
+
+      if (existsSync(screenshotPath)) {
+        continue;
       }
-    })
 
-    await page.screenshot({
-      path: `./public/images/blocks/${block}.png`,
-    })
+      // Set theme and reload page
+      await page.evaluate((currentTheme) => {
+        localStorage.setItem("theme", currentTheme);
+      }, theme);
+
+      await page.reload({ waitUntil: "networkidle2" });
+
+      // Wait for animations to complete
+      if (block.startsWith("chart")) {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
+
+      // Hide Tailwind indicator
+      await page.evaluate(() => {
+        const indicator = document.querySelector("[data-tailwind-indicator]");
+        if (indicator) {
+          indicator.remove();
+        }
+      });
+
+      await page.screenshot({
+        path: screenshotPath,
+      });
+    }
+
+    await page.close();
   }
 
-  console.log("🌙 Capturing screenshots for dark theme")
-  for (const block of BLOCKS) {
-    const pageUrl = `http://localhost:3333/blocks/new-york/${block}`
-    console.log(`- ${block}`)
+  await browser.close();
+}
 
-    const page = await browser.newPage()
-    await page.goto(pageUrl, {
-      waitUntil: "networkidle2",
-    })
+try {
+  console.log("🔍 Capturing screenshots...");
 
-    // Hide Tailwind indicator
-    await page.evaluate(() => {
-      const indicator = document.querySelector("[data-tailwind-indicator]")
-      if (indicator) {
-        indicator.remove()
-      }
-    })
+  await captureScreenshots();
 
-    // Set theme to dark
-    await page.evaluate(() => {
-      localStorage.setItem("theme", "dark")
-    })
-
-    await page.screenshot({
-      path: `./public/images/blocks/${block}-dark.png`,
-    })
-  }
-
-  await browser.close()
-  console.log("✅ Done!")
+  console.log("✅ Done!");
 } catch (error) {
-  console.error(error)
-  process.exit(1)
+  console.error(error);
+  process.exit(1);
 }

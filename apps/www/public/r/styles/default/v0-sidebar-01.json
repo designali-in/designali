@@ -1,7 +1,6 @@
 {
   "name": "v0-sidebar-01",
   "type": "registry:block",
-  "description": "A simple sidebar with navigation grouped by section.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

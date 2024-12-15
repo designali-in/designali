@@ -1,7 +1,6 @@
 {
   "name": "v0-sidebar-12",
   "type": "registry:block",
-  "description": "A sidebar with a calendar.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

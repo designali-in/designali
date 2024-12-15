@@ -1,8 +1,7 @@
-import type { Style } from "@/registry/registry-styles";
-import type { Metadata } from "next";
 import * as React from "react";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { styles } from "@/registry/registry-styles";
+import { Style, styles } from "@/registry/registry-styles";
 
 import site from "@/config/site";
 import { getAllBlockIds } from "@/lib/blocks";
@@ -17,6 +16,8 @@ const getCachedRegistryItem = React.cache(
     return await getRegistryItem(name, style);
   },
 );
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -43,7 +44,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: absoluteUrl(`/blocks/${style}/${item.name}`),
+      url: absoluteUrl(`/products/blocks/${style}/${item.name}`),
       images: [
         {
           url: site.url,
@@ -93,7 +94,7 @@ export default async function BlockPage({
 
   return (
     <>
-      <div className={cn("bg-background", item.meta.containerClassName)}>
+      <div className={cn(" ", item.meta?.container)}>
         <Component />
       </div>
     </>

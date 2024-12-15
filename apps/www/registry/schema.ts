@@ -1,22 +1,7 @@
 import { z } from "zod";
 
-export const blockChunkSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-  component: z.any(),
-  file: z.string(),
-  code: z.string().optional(),
-  container: z
-    .object({
-      className: z.string().nullish(),
-    })
-    .optional(),
-});
-
 export const registryItemTypeSchema = z.enum([
-  "registry:style",
   "registry:lib",
-  "registry:example",
   "registry:block",
   "registry:component",
   "registry:components",
@@ -24,6 +9,11 @@ export const registryItemTypeSchema = z.enum([
   "registry:hook",
   "registry:theme",
   "registry:page",
+
+  // Internal use only
+  "registry:example",
+  "registry:style",
+  "registry:internal",
 ]);
 
 export const registryItemFileSchema = z.object({
@@ -58,20 +48,14 @@ export const registryItemSchema = z.object({
   cssVars: registryItemCssVarsSchema.optional(),
   meta: z.record(z.string(), z.any()).optional(),
   docs: z.string().optional(),
+  categories: z.array(z.string()).optional(),
 });
 
-export const registryEntrySchema = registryItemSchema.extend({
-  category: z.string().optional(),
-  subcategory: z.string().optional(),
-});
-
-export const registrySchema = z.array(registryEntrySchema);
-
-export type RegistryEntry = z.infer<typeof registryEntrySchema>;
+export const registrySchema = z.array(registryItemSchema);
 
 export type Registry = z.infer<typeof registrySchema>;
 
-export const blockSchema = registryEntrySchema.extend({
+export const blockSchema = registryItemSchema.extend({
   type: z.literal("registry:block"),
   style: z.enum(["default", "new-york"]),
   component: z.any(),
@@ -84,7 +68,3 @@ export const blockSchema = registryEntrySchema.extend({
   code: z.string(),
   highlightedCode: z.string(),
 });
-
-export type Block = z.infer<typeof blockSchema>;
-
-export type BlockChunk = z.infer<typeof blockChunkSchema>;
