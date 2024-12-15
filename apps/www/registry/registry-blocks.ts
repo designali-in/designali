@@ -18,7 +18,6 @@ export const blocks: Registry = [
         type: "registry:page",
         target: "app/dashboard/page.tsx",
       },
-
       {
         path: "blocks/sidebar-01/components/search-form.tsx",
         type: "registry:component",

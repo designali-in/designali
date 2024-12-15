@@ -6,7 +6,7 @@
     "strict": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*", "./src/*"],
+      "@/*": ["./*", "./src/*", "./registry/*"],
       "@/components/ui/*": ["./registry/default/ui/*"],
       "@/components/mockups/*": ["registry/default/ui/mockups/*"],
       "@/components/example/*": ["./registry/default/example/*"],
@@ -19,6 +19,7 @@
   },
   "include": [
     ".",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
@@ -28,8 +29,8 @@
     "node_modules",
     "packages/**/*",
     "scripts/**/*",
-    "./scripts/build-registry.ts",
-    "scripts/build-registry.ts",
+    "./scripts/build-registry.mts",
+    "scripts/build-registry.mts",
     "__registry__"
   ]
 }

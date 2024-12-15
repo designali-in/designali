@@ -46,11 +46,13 @@ export default function BlocksLayout({
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-        <div className="container flex items-center py-4">
-          <BlocksNav />
-        </div>
         <ThemeWrapper>
           <ThemeCustomizer />
+          <div id="blocks" className="border-grid scroll-mt-24 border-b">
+            <div className="container flex items-center py-4">
+              <BlocksNav />
+            </div>
+          </div>
           {children}
         </ThemeWrapper>
       </main>
