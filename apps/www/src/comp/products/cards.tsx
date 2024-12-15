@@ -51,6 +51,16 @@ const DICONS = [
   },
 ];
 
+const BLOCKS = [
+  {
+    id: 1,
+    name: "Blocks",
+    src: "https://res.cloudinary.com/deelfmnhg/image/upload/v1733892006/Neon_Graaadients_D1_3_ku1kkh.jpg",
+    designation: "Copy. Paste. Edit.",
+    content: <p>Clean, modern building blocks.</p>,
+  },
+];
+
 const DSHAPES = [
   {
     id: 1,
@@ -77,11 +87,15 @@ export function Graaadients() {
         <Link href="/products/dicons" className="rounded-3xl border">
           <CardStack items={DICONS} />
         </Link>
-        <Link href="/products/dshapes" className="rounded-3xl border">
-          <CardStack items={DSHAPES} />
+        <Link href="/products/blocks" className="rounded-3xl border">
+          <CardStack items={BLOCKS} />
         </Link>
+
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
+        </Link>
+        <Link href="/products/dshapes" className="rounded-3xl border">
+          <CardStack items={DSHAPES} />
         </Link>
         <Link href="/products/colors" className="rounded-3xl border">
           <CardStack items={COLORS} />
@@ -113,13 +127,18 @@ export function CarouselGraaadients() {
             </Link>
           </CarouselItem>
           <CarouselItem className=" ">
-            <Link href="/products/dshapes">
-              <CardStack items={DSHAPES} />
+            <Link href="/products/blocks">
+              <CardStack items={BLOCKS} />
             </Link>
           </CarouselItem>
           <CarouselItem className=" ">
             <Link href="/products/graaadients">
               <CardStack items={GRADS} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
+            <Link href="/products/dshapes">
+              <CardStack items={DSHAPES} />
             </Link>
           </CarouselItem>
         </CarouselContent>

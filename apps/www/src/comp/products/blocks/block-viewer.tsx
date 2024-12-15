@@ -220,14 +220,17 @@ function BlockViewerToolbar() {
             className="hidden h-[22px] w-auto gap-1 rounded-sm px-2 md:flex lg:w-auto"
             size="sm"
             onClick={() => {
-              copyToClipboard(`npx shadcn@latest add ${item.name}`);
+              copyToClipboard(
+                `npx shadcn@latest add "https://designali.in/r/${item.name}"`,
+              );
             }}
           >
             {isCopied ? <Check /> : <Terminal />}
-            <span className="hidden lg:inline">npx shadcn add {item.name}</span>
+            <span className="hidden lg:inline">
+              npx designali add {item.name}
+            </span>
           </Button>
         </div>
-        <Separator orientation="vertical" className="mx-1 hidden h-4 xl:flex" />
       </div>
     </div>
   );
@@ -264,7 +267,7 @@ function BlockViewerView() {
             />
             <iframe
               src={`/view/styles/${style}/${item.name}`}
-              height={item.meta?.iframeHeight ?? 930}
+              height={item.meta?.iframeHeight ?? 800}
               className="relative z-20 hidden w-full bg-background md:block"
             />
           </ResizablePanel>
@@ -288,12 +291,12 @@ function BlockViewerCode() {
   }
 
   return (
-    <div className="mr-[14px] flex overflow-hidden rounded-xl bg-zinc-950 text-white group-data-[view=preview]/block-view-wrapper:hidden md:h-[--height]">
+    <div className="mr-[14px] flex overflow-hidden rounded-xl bg-slate-950 text-white group-data-[view=preview]/block-view-wrapper:hidden md:h-[--height]">
       <div className="w-[280px]">
         <BlockViewerFileTree />
       </div>
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex h-12 items-center gap-2 border-b border-zinc-700 bg-zinc-900 px-4 text-sm font-medium">
+        <div className="flex h-12 items-center gap-2 border-b border-slate-700 bg-slate-900 px-4 text-sm font-medium">
           <File className="size-4" />
           {file.target}
           <div className="ml-auto flex items-center gap-2">
@@ -304,7 +307,7 @@ function BlockViewerCode() {
           key={file?.path}
           data-rehype-pretty-code-fragment
           dangerouslySetInnerHTML={{ __html: file?.highlightedContent ?? "" }}
-          className="relative flex-1 overflow-hidden after:absolute after:inset-y-0 after:left-0 after:w-10 after:bg-zinc-950 [&_.line:before]:sticky [&_.line:before]:left-2 [&_.line:before]:z-10 [&_.line:before]:translate-y-[-1px] [&_.line:before]:pr-1 [&_pre]:h-[--height] [&_pre]:overflow-auto [&_pre]:!bg-transparent [&_pre]:pb-20 [&_pre]:pt-4 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:leading-relaxed"
+          className="relative flex-1 overflow-hidden  after:absolute after:inset-y-0 after:left-0 after:w-1 after:bg-slate-950 [&_.line:before]:sticky [&_.line:before]:left-2 [&_.line:before]:z-10 [&_.line:before]:translate-y-[-1px] [&_.line:before]:pr-1 [&_pre]:h-[--height] [&_pre]:overflow-auto [&_pre]:!bg-transparent [&_pre]:pb-20 [&_pre]:pt-4 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:leading-relaxed"
         />
       </div>
     </div>
@@ -322,9 +325,9 @@ export function BlockViewerFileTree() {
     <SidebarProvider className="flex !min-h-full flex-col">
       <Sidebar
         collapsible="none"
-        className="w-full flex-1 border-r border-zinc-700 bg-zinc-900 text-white"
+        className="w-full flex-1 border-r border-slate-700 bg-slate-900 text-white"
       >
-        <SidebarGroupLabel className="h-12 rounded-none border-b border-zinc-700 px-4 text-sm text-white">
+        <SidebarGroupLabel className="h-12 rounded-none border-b border-slate-700 px-4 text-sm text-white">
           Files
         </SidebarGroupLabel>
         <SidebarGroup className="p-0">
@@ -350,7 +353,7 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
         <SidebarMenuButton
           isActive={item.path === activeFile}
           onClick={() => item.path && setActiveFile(item.path)}
-          className="whitespace-nowrap rounded-none pl-[--index] hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white focus-visible:bg-zinc-700 focus-visible:text-white active:bg-zinc-700 active:text-white data-[active=true]:bg-zinc-700 data-[active=true]:text-white"
+          className="whitespace-nowrap rounded-none pl-[--index] hover:bg-slate-700 hover:text-white focus:bg-slate-700 focus:text-white focus-visible:bg-slate-700 focus-visible:text-white active:bg-slate-700 active:text-white data-[active=true]:bg-slate-700 data-[active=true]:text-white"
           data-index={index}
           style={
             {
@@ -374,7 +377,7 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
       >
         <CollapsibleTrigger asChild>
           <SidebarMenuButton
-            className="whitespace-nowrap rounded-none pl-[--index] hover:bg-zinc-700 hover:text-white focus-visible:bg-zinc-700 focus-visible:text-white active:bg-zinc-700 active:text-white data-[active=true]:bg-zinc-700 data-[active=true]:text-white data-[state=open]:hover:bg-zinc-700 data-[state=open]:hover:text-white"
+            className="whitespace-nowrap rounded-none pl-[--index] hover:bg-slate-700 hover:text-white focus-visible:bg-slate-700 focus-visible:text-white active:bg-slate-700 active:text-white data-[active=true]:bg-slate-700 data-[active=true]:text-white data-[state=open]:hover:bg-slate-700 data-[state=open]:hover:text-white"
             style={
               {
                 "--index": `${index * (index === 1 ? 1 : 1.2)}rem`,
@@ -424,7 +427,7 @@ function BlockCopyCodeButton() {
           },
         });
       }}
-      className="h-7 w-7 shrink-0 rounded-lg p-0 hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white focus-visible:bg-zinc-700 focus-visible:text-white active:bg-zinc-700 active:text-white data-[active=true]:bg-zinc-700 data-[active=true]:text-white [&>svg]:size-3"
+      className="h-7 w-7 shrink-0 rounded-lg p-0 hover:bg-slate-700 hover:text-white focus:bg-slate-700 focus:text-white focus-visible:bg-slate-700 focus-visible:text-white active:bg-slate-700 active:text-white data-[active=true]:bg-slate-700 data-[active=true]:text-white [&>svg]:size-3"
       variant="ghost"
     >
       {isCopied ? <Check /> : <Clipboard />}

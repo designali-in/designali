@@ -14,6 +14,8 @@ import {
 import "public/registry/themes.css";
 
 import { Suspense } from "react";
+import Link from "next/link";
+import { Button } from "@/registry/default/ui/button";
 import { Skeleton } from "@/registry/default/ui/skeleton";
 import { BlocksNav } from "@/src/comp/products/blocks/blocks-nav";
 
@@ -29,26 +31,20 @@ export default function BlocksLayout({
           title={"Blocks"}
           description={` Designali an extensive collection of copy-and-paste components for quickly building app UIs. It's free, open-source, and ready to drop into your projects.`}
         />
-        <div className="mt-4 flex justify-center">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/products/blocks">Blocks</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage></BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+
+        <Link
+          className="mt-6 flex justify-center"
+          href={"https://www.instagram.com/designali.in/"}
+          target="_blank"
+        >
+          <Button variant="outline">Request a Block</Button>
+        </Link>
         <ThemeWrapper>
           <ThemeCustomizer />
-          <div id="blocks" className="border-grid scroll-mt-24 border-b">
+          <div
+            id="blocks"
+            className="border-grid mt-6 scroll-mt-24 border-b border-t"
+          >
             <div className="container flex items-center py-4">
               <BlocksNav />
             </div>

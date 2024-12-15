@@ -106,6 +106,23 @@ export function Menu() {
                   <NavigationMenuLink>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/products/blocks"
+                    >
+                      <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Blocks
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Clean, modern building blocks. Copy and paste into your
+                        apps. Works with all React frameworks. Free forever.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dshapes"
                     >
                       <DIcons.Shapes strokeWidth={1} className="h-8 w-8" />

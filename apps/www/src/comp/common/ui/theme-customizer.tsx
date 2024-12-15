@@ -52,7 +52,7 @@ export function ThemeCustomizer() {
           <Customizer />
         </DrawerContent>
       </Drawer>
-      <div className="mt-10 hidden items-center justify-center md:grid">
+      <div className="mt-4 hidden items-center justify-center md:grid">
         <Customizer />
       </div>
     </div>

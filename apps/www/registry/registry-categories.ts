@@ -1,8 +1,13 @@
 export const registryCategories = [
   {
-    name: "Sidebar",
-    slug: "sidebar",
+    name: "Hero",
+    slug: "hero",
     hidden: false,
+  },
+  {
+    name: "sidebar",
+    slug: "Sidebar",
+    hidden: true,
   },
   {
     name: "Dashboard",
@@ -10,8 +15,8 @@ export const registryCategories = [
     hidden: true,
   },
   {
-    name: "Authentication",
-    slug: "authentication",
+    name: "Pricing",
+    slug: "pricing",
     hidden: false,
   },
   {

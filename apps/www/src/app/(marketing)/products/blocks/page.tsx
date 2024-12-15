@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BlockDisplay } from "@/comp/products/blocks/block-display";
 
-const FEATURED_BLOCKS = ["login-01", "sidebar-01"];
+const FEATURED_BLOCKS = ["hero-01"];
 
 export default async function BlocksPage() {
   return (

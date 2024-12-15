@@ -669,4 +669,27 @@ export const ui: Registry = [
       },
     ],
   },
+
+  //  Background
+
+  {
+    name: "stroke-dance",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/stroke-dance.js",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "dot-pattern",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/dot-pattern.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ];

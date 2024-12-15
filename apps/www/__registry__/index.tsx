@@ -808,6 +808,36 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "stroke-dance": {
+      name: "stroke-dance",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/backgrounds/stroke-dance.js",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/stroke-dance.js")),
+      source: "",
+      meta: undefined,
+    },
+    "dot-pattern": {
+      name: "dot-pattern",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/backgrounds/dot-pattern.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/dot-pattern.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "safari-1": {
       name: "safari-1",
       description: "",
@@ -1093,27 +1123,23 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "sidebar-01": {
-      name: "sidebar-01",
-      description: "A simple sidebar with navigation grouped by section.",
+    "hero-01": {
+      name: "hero-01",
+      description: "A simple hero section with react types ",
       type: "registry:block",
-      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      registryDependencies: ["dot-pattern","render"],
       files: [{
-        path: "registry/new-york/blocks/sidebar-01/page.tsx",
+        path: "registry/new-york/blocks/hero-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard/page.tsx"
+        target: "app/hero/page.tsx"
       },{
-        path: "registry/new-york/blocks/sidebar-01/components/search-form.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/blocks/sidebar-01/components/version-switcher.tsx",
+        path: "registry/new-york/blocks/hero-01/components/type-writer.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: ["sidebar","dashboard"],
-      component: React.lazy(() => import("@/registry/new-york/blocks/sidebar-01/page.tsx")),
-      source: "__registry__/new-york/blocks/sidebar-01/page.tsx",
+      categories: ["hero"],
+      component: React.lazy(() => import("@/registry/new-york/blocks/hero-01/page.tsx")),
+      source: "__registry__/new-york/blocks/hero-01/page.tsx",
       meta: undefined,
     },
     "login-01": {
@@ -1130,7 +1156,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      categories: ["authentication","login"],
+      categories: ["login"],
       component: React.lazy(() => import("@/registry/new-york/blocks/login-01/page.tsx")),
       source: "__registry__/new-york/blocks/login-01/page.tsx",
       meta: undefined,
@@ -1984,6 +2010,36 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "stroke-dance": {
+      name: "stroke-dance",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/stroke-dance.js",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/stroke-dance.js")),
+      source: "",
+      meta: undefined,
+    },
+    "dot-pattern": {
+      name: "dot-pattern",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/dot-pattern.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/dot-pattern.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "safari-1": {
       name: "safari-1",
       description: "",
@@ -2269,27 +2325,23 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "sidebar-01": {
-      name: "sidebar-01",
-      description: "A simple sidebar with navigation grouped by section.",
+    "hero-01": {
+      name: "hero-01",
+      description: "A simple hero section with react types ",
       type: "registry:block",
-      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      registryDependencies: ["dot-pattern","render"],
       files: [{
-        path: "registry/default/blocks/sidebar-01/page.tsx",
+        path: "registry/default/blocks/hero-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard/page.tsx"
+        target: "app/hero/page.tsx"
       },{
-        path: "registry/default/blocks/sidebar-01/components/search-form.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/sidebar-01/components/version-switcher.tsx",
+        path: "registry/default/blocks/hero-01/components/type-writer.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: ["sidebar","dashboard"],
-      component: React.lazy(() => import("@/registry/default/blocks/sidebar-01/page.tsx")),
-      source: "__registry__/default/blocks/sidebar-01/page.tsx",
+      categories: ["hero"],
+      component: React.lazy(() => import("@/registry/default/blocks/hero-01/page.tsx")),
+      source: "__registry__/default/blocks/hero-01/page.tsx",
       meta: undefined,
     },
     "login-01": {
@@ -2306,7 +2358,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      categories: ["authentication","login"],
+      categories: ["login"],
       component: React.lazy(() => import("@/registry/default/blocks/login-01/page.tsx")),
       source: "__registry__/default/blocks/login-01/page.tsx",
       meta: undefined,

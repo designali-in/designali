@@ -2,32 +2,22 @@ import type { Registry } from "@/registry/schema";
 
 export const blocks: Registry = [
   {
-    name: "sidebar-01",
+    name: "hero-01",
     type: "registry:block",
-    description: "A simple sidebar with navigation grouped by section.",
-    registryDependencies: [
-      "sidebar",
-      "breadcrumb",
-      "separator",
-      "label",
-      "dropdown-menu",
-    ],
+    description: "A simple hero section with react types ",
+    registryDependencies: ["dot-pattern", "render"],
     files: [
       {
-        path: "blocks/sidebar-01/page.tsx",
+        path: "blocks/hero-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard/page.tsx",
+        target: "app/hero/page.tsx",
       },
       {
-        path: "blocks/sidebar-01/components/search-form.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/sidebar-01/components/version-switcher.tsx",
+        path: "blocks/hero-01/components/type-writer.tsx",
         type: "registry:component",
       },
     ],
-    categories: ["sidebar", "dashboard"],
+    categories: ["hero"],
   },
   {
     name: "login-01",
@@ -45,6 +35,6 @@ export const blocks: Registry = [
         type: "registry:component",
       },
     ],
-    categories: ["authentication", "login"],
+    categories: ["login"],
   },
 ];
