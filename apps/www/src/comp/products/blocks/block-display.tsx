@@ -46,7 +46,7 @@ const getCachedHighlightedFiles = React.cache(
     return await Promise.all(
       files.map(async (file) => ({
         ...file,
-        highlightedContent: await (file.content ?? ""),
+        highlightedContent: await highlightCode(file.content ?? ""),
       })),
     );
   },

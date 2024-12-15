@@ -79,6 +79,9 @@ const config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   experimental: {
+    outputFileTracingIncludes: {
+      "/blocks/*": ["./registry/**/*"],
+    },
     serverComponentsExternalPackages: [
       "@react-email/components",
       "@react-email/render",
@@ -88,75 +91,7 @@ const config = {
   },
 
   async redirects() {
-    return [
-      {
-        source: "/r",
-        destination: "/r/index.json",
-        permanent: true,
-      },
-      {
-        source: "/r/index",
-        destination: "/r/index.json",
-        permanent: true,
-      },
-      {
-        source: "/r/:name((?!index\\.json|styles/).*)",
-        destination: "/r/styles/default/:name.json",
-        permanent: true,
-        missing: [
-          {
-            type: "query",
-            key: "_redirected",
-            value: undefined,
-          },
-        ],
-      },
-      {
-        source: "/s",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/0",
-        destination: "https://designali.in/s/0",
-        permanent: true,
-      },
-      {
-        source: "/9",
-        destination: "https://designali.in/s/9",
-        permanent: true,
-      },
-      {
-        source: "/ai",
-        destination: "https://designali.in/s/ai?ref=wrdo",
-        permanent: true,
-      },
-      {
-        source: "/cps",
-        destination: "https://designali.in/s/cps",
-        permanent: true,
-      },
-      {
-        source: "/x",
-        destination: "https://designali.in/s/x",
-        permanent: true,
-      },
-      {
-        source: "/solo",
-        destination: "https://designali.in/s/solo",
-        permanent: true,
-      },
-      {
-        source: "/rmbg",
-        destination: "https://designali.in/s/rmbg",
-        permanent: true,
-      },
-      {
-        source: "/llk",
-        destination: "https://designali.in/s/llk",
-        permanent: true,
-      },
-    ];
+    return [];
   },
 };
 

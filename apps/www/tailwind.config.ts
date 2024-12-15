@@ -8,6 +8,7 @@ export default {
   content: [
     ...baseConfig.content,
     "./registry/**/*.{ts,tsx}",
+    "registry/**/*.{ts,tsx}",
     "content/**/*.mdx",
   ],
   presets: [baseConfig],
