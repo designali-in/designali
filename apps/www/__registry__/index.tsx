@@ -1093,298 +1093,46 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "_sink": {
-      name: "_sink",
-      description: "",
+    "sidebar-01": {
+      name: "sidebar-01",
+      description: "A simple sidebar with navigation grouped by section.",
       type: "registry:block",
-      registryDependencies: ["accordion","alert","alert-dialog","aspect-ratio","avatar","badge","breadcrumb","button","calendar","card","carousel","chart","checkbox","collapsible","command","context-menu","dialog","drawer","dropdown-menu","hover-card","input","input-otp","label","menubar","navigation-menu","pagination","popover","progress","radio-group","resizable","scroll-area","select","separator","sheet","sidebar","skeleton","slider","sonner","switch","table","tabs","textarea","toast","toggle","toggle-group","tooltip"],
+      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
       files: [{
-        path: "registry/new-york/block/_sink/page.tsx",
+        path: "registry/new-york/blocks/sidebar-01/page.tsx",
         type: "registry:page",
-        target: "app/sink/page.tsx"
+        target: "app/dashboard/page.tsx"
       },{
-        path: "registry/new-york/block/_sink/components/app-sidebar.tsx",
+        path: "registry/new-york/blocks/sidebar-01/components/search-form.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/new-york/block/_sink/components/component-wrapper.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/nav-main.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/nav-projects.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/nav-user.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/team-switcher.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/accordion-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/alert-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/alert-dialog-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/aspect-ratio-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/avatar-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/badge-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/breadcrumb-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/calendar-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/card-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/carousel-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/checkbox-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/collapsible-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/combobox-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/command-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/context-menu-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/date-picker-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/dialog-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/drawer-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/dropdown-menu-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/hover-card-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/input-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/input-otp-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/label-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/menubar-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/navigation-menu-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/pagination-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/popover-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/progress-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/radio-group-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/resizable-handle.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/scroll-area-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/select-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/separator-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/sheet-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/skeleton-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/slider-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/sonner-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/switch-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/table-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/tabs-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/textarea-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/toast-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/toggle-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/toggle-group-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/tooltip-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/badge-destructive.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/badge-outline.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/badge-secondary.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-destructive.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-ghost.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-link.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-loading.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-outline.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-secondary.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/button-with-icon.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/toggle-disabled.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/toggle-outline.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/new-york/block/_sink/components/toggle-with-text.tsx",
+        path: "registry/new-york/blocks/sidebar-01/components/version-switcher.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/block/_sink/page.tsx")),
-      source: "__registry__/new-york/block/_sink/page.tsx",
+      categories: ["sidebar","dashboard"],
+      component: React.lazy(() => import("@/registry/new-york/blocks/sidebar-01/page.tsx")),
+      source: "__registry__/new-york/blocks/sidebar-01/page.tsx",
       meta: undefined,
     },
     "login-01": {
       name: "login-01",
-      description: "",
+      description: "A simple login form.",
       type: "registry:block",
       registryDependencies: ["button","card","input","label"],
       files: [{
-        path: "registry/new-york/block/login-01/page.tsx",
+        path: "registry/new-york/blocks/login-01/page.tsx",
         type: "registry:page",
         target: "app/login/page.tsx"
       },{
-        path: "registry/new-york/block/login-01/components/login-form.tsx",
+        path: "registry/new-york/blocks/login-01/components/login-form.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/block/login-01/page.tsx")),
-      source: "__registry__/new-york/block/login-01/page.tsx",
+      categories: ["authentication","login"],
+      component: React.lazy(() => import("@/registry/new-york/blocks/login-01/page.tsx")),
+      source: "__registry__/new-york/blocks/login-01/page.tsx",
       meta: undefined,
     },
     "utils": {
@@ -2761,298 +2509,46 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "_sink": {
-      name: "_sink",
-      description: "",
+    "sidebar-01": {
+      name: "sidebar-01",
+      description: "A simple sidebar with navigation grouped by section.",
       type: "registry:block",
-      registryDependencies: ["accordion","alert","alert-dialog","aspect-ratio","avatar","badge","breadcrumb","button","calendar","card","carousel","chart","checkbox","collapsible","command","context-menu","dialog","drawer","dropdown-menu","hover-card","input","input-otp","label","menubar","navigation-menu","pagination","popover","progress","radio-group","resizable","scroll-area","select","separator","sheet","sidebar","skeleton","slider","sonner","switch","table","tabs","textarea","toast","toggle","toggle-group","tooltip"],
+      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
       files: [{
-        path: "registry/default/block/_sink/page.tsx",
+        path: "registry/default/blocks/sidebar-01/page.tsx",
         type: "registry:page",
-        target: "app/sink/page.tsx"
+        target: "app/dashboard/page.tsx"
       },{
-        path: "registry/default/block/_sink/components/app-sidebar.tsx",
+        path: "registry/default/blocks/sidebar-01/components/search-form.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/block/_sink/components/component-wrapper.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/nav-main.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/nav-projects.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/nav-user.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/team-switcher.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/accordion-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/alert-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/alert-dialog-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/aspect-ratio-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/avatar-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/badge-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/breadcrumb-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/calendar-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/card-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/carousel-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/checkbox-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/collapsible-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/combobox-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/command-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/context-menu-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/date-picker-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/dialog-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/drawer-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/dropdown-menu-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/hover-card-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/input-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/input-otp-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/label-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/menubar-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/navigation-menu-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/pagination-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/popover-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/progress-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/radio-group-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/resizable-handle.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/scroll-area-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/select-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/separator-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/sheet-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/skeleton-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/slider-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/sonner-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/switch-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/table-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/tabs-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/textarea-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/toast-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/toggle-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/toggle-group-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/tooltip-demo.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/badge-destructive.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/badge-outline.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/badge-secondary.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-destructive.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-ghost.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-link.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-loading.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-outline.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-secondary.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/button-with-icon.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/toggle-disabled.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/toggle-outline.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/block/_sink/components/toggle-with-text.tsx",
+        path: "registry/default/blocks/sidebar-01/components/version-switcher.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: undefined,
-      component: React.lazy(() => import("@/registry/default/block/_sink/page.tsx")),
-      source: "__registry__/default/block/_sink/page.tsx",
+      categories: ["sidebar","dashboard"],
+      component: React.lazy(() => import("@/registry/default/blocks/sidebar-01/page.tsx")),
+      source: "__registry__/default/blocks/sidebar-01/page.tsx",
       meta: undefined,
     },
     "login-01": {
       name: "login-01",
-      description: "",
+      description: "A simple login form.",
       type: "registry:block",
       registryDependencies: ["button","card","input","label"],
       files: [{
-        path: "registry/default/block/login-01/page.tsx",
+        path: "registry/default/blocks/login-01/page.tsx",
         type: "registry:page",
         target: "app/login/page.tsx"
       },{
-        path: "registry/default/block/login-01/components/login-form.tsx",
+        path: "registry/default/blocks/login-01/components/login-form.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: undefined,
-      component: React.lazy(() => import("@/registry/default/block/login-01/page.tsx")),
-      source: "__registry__/default/block/login-01/page.tsx",
+      categories: ["authentication","login"],
+      component: React.lazy(() => import("@/registry/default/blocks/login-01/page.tsx")),
+      source: "__registry__/default/blocks/login-01/page.tsx",
       meta: undefined,
     },
     "utils": {

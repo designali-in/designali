@@ -39,7 +39,7 @@ const PageTitle = (props: PageTitleProps) => {
           initial: animation.hide,
           animate: animation.show,
           transition: {
-            delay: 0.05,
+            delay: 0,
           },
         })}
       >
