@@ -20,11 +20,11 @@ const Highlights = () => {
   return (
     <section
       id="highlights"
-      className="relative h-full w-full overflow-hidden bg-neutral-900 p-10"
+      className="relative h-full w-full overflow-hidden bg-neutral-900 px-10 pt-10"
     >
       <div className="just relative flex flex-col py-10">
         <div className="grid justify-between md:flex">
-          <h1 className="text-md hover:underline sm:text-4xl">
+          <h1 className="text-md text-white hover:underline sm:text-4xl">
             Get the highlights.
           </h1>
           <div className="flex items-end gap-4 text-blue-500">
@@ -32,7 +32,7 @@ const Highlights = () => {
             <DIcons.CirclePlay className="h-6 w-6" />
           </div>
         </div>
-        <div className="py-10">
+        <div className="pt-10">
           <Carousel
             className="w-full "
             onMouseEnter={plugin.current.stop}
@@ -41,25 +41,29 @@ const Highlights = () => {
               align: "start",
             }}
           >
-            <CarouselContent className=" flex">
-              <CarouselItem className="basic-1/2 ">
+            <CarouselContent>
+              <CarouselItem>
+                <p className="absolute left-10 top-6 w-80 p-2 text-2xl">
+                  The first iPhone designed for Apple Intelligence. Personal,
+                  private, powerful.1
+                </p>
                 <Image
                   src={
                     "https://res.cloudinary.com/deelfmnhg/image/upload/v1734288045/highlights_apple_intelligence_endframe__esdley4zqkya_large_2x_nrim45.jpg"
                   }
                   alt={""}
-                  className="h-auto w-full rounded-lg object-cover object-center"
+                  className="h-[700px] w-full rounded-lg object-cover object-center"
                   width={500}
                   height={300}
                 />
               </CarouselItem>
-              <CarouselItem className=" ">
+              <CarouselItem>
                 <Image
                   src={
-                    "https://res.cloudinary.com/deelfmnhg/image/upload/v1734288045/highlights_apple_intelligence_endframe__esdley4zqkya_large_2x_nrim45.jpg"
+                    "https://res.cloudinary.com/deelfmnhg/image/upload/v1734345514/highlights_camera_control_endframe__dnpy5lekpmwm_medium_2x_mkd3jc.jpg"
                   }
                   alt={""}
-                  className="h-auto w-full rounded-lg object-cover object-center"
+                  className="h-[700px] w-full rounded-lg object-cover object-center"
                   width={500}
                   height={300}
                 />
