@@ -1123,6 +1123,33 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "iphone-16-pro": {
+      name: "iphone-16-pro",
+      description: "A simple hero section with react types ",
+      type: "registry:block",
+      registryDependencies: ["dicons"],
+      files: [{
+        path: "registry/new-york/blocks/iphone-16-pro/page.tsx",
+        type: "registry:page",
+        target: "app/hero/page.tsx"
+      },{
+        path: "registry/new-york/blocks/iphone-16-pro/components/hero.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/new-york/blocks/iphone-16-pro/components/closer-look.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/new-york/blocks/iphone-16-pro/components/highlights.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      categories: ["hero","brands"],
+      component: React.lazy(() => import("@/registry/new-york/blocks/iphone-16-pro/page.tsx")),
+      source: "__registry__/new-york/blocks/iphone-16-pro/page.tsx",
+      meta: undefined,
+    },
     "hero-01": {
       name: "hero-01",
       description: "A simple hero section with react types ",
@@ -2323,6 +2350,33 @@ export const Index: Record<string, any> = {
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/typography-table.tsx")),
       source: "",
+      meta: undefined,
+    },
+    "iphone-16-pro": {
+      name: "iphone-16-pro",
+      description: "A simple hero section with react types ",
+      type: "registry:block",
+      registryDependencies: ["dicons"],
+      files: [{
+        path: "registry/default/blocks/iphone-16-pro/page.tsx",
+        type: "registry:page",
+        target: "app/hero/page.tsx"
+      },{
+        path: "registry/default/blocks/iphone-16-pro/components/hero.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/iphone-16-pro/components/closer-look.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/iphone-16-pro/components/highlights.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      categories: ["hero","brands"],
+      component: React.lazy(() => import("@/registry/default/blocks/iphone-16-pro/page.tsx")),
+      source: "__registry__/default/blocks/iphone-16-pro/page.tsx",
       meta: undefined,
     },
     "hero-01": {

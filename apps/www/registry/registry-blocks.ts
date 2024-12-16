@@ -2,6 +2,32 @@ import type { Registry } from "@/registry/schema";
 
 export const blocks: Registry = [
   {
+    name: "iphone-16-pro",
+    type: "registry:block",
+    description: "A simple hero section with react types ",
+    registryDependencies: ["dicons"],
+    files: [
+      {
+        path: "blocks/iphone-16-pro/page.tsx",
+        type: "registry:page",
+        target: "app/hero/page.tsx",
+      },
+      {
+        path: "blocks/iphone-16-pro/components/hero.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/iphone-16-pro/components/closer-look.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/iphone-16-pro/components/highlights.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero", "brands"],
+  },
+  {
     name: "hero-01",
     type: "registry:block",
     description: "A simple hero section with react types ",

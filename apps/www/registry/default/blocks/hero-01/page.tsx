@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 export const description = "A simple Hero section";
 
-export const iframeHeight = "400px";
+export const iframeHeight = "600px";
 
 export const containerClassName = "w-full h-full";
 
@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <section id="home">
-      <div className="animation-delay-8 animate-fadeIn  flex flex-col items-center justify-center px-4 text-center  ">
+      <div className="animation-delay-8 animate-fadeIn mt-10 flex flex-col items-center justify-center px-4 text-center">
         <div className="z-10 mb-6 mt-10 sm:justify-center md:mb-4 md:mt-20">
           <div className="relative flex items-center whitespace-nowrap rounded-full bg-white px-3 py-1 text-xs leading-6 text-slate-600 ring-1 ring-slate-200 dark:bg-black dark:text-slate-400 dark:ring-slate-800">
             <DIcons.Shapes className="h-5 p-1" /> Introducing Dicons.
@@ -97,7 +97,9 @@ const Hero = () => {
           </p>
           <div className="flex justify-center gap-2">
             <Link href={"/dashboard"}>
-              <Button size="lg">Start Project</Button>
+              <Button variant="default" size="lg">
+                Start Project
+              </Button>
             </Link>
             <Link href={"https://cal.com/aliimam/designali"} target="_blank">
               <Button variant="outline" size="lg">

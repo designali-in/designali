@@ -3,12 +3,18 @@
 // this is a client component
 import { useEffect } from "react";
 import Link from "next/link";
+import { TypeWriter } from "@/registry/default/blocks/hero-01/components/type-writer";
 import { StrokeDance } from "@/registry/default/ui/backgrounds/stroke-dance";
-import { TypeWriter } from "@/registry/new-york/blocks/hero-01/components/type-writer";
 import { DIcons } from "dicons";
 
 import DotPattern from "@/components/ui/backgrounds/dot-pattern";
 import { Button } from "@/components/ui/button";
+
+export const description = "A simple Hero section";
+
+export const iframeHeight = "600px";
+
+export const containerClassName = "w-full h-full";
 
 const Hero = () => {
   const talkAbout = [
