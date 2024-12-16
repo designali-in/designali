@@ -267,7 +267,7 @@ function BlockViewerView() {
             />
             <iframe
               src={`/view/styles/${style}/${item.name}`}
-              height={item.meta?.iframeHeight ?? 800}
+              height={item.meta?.iframeHeight ?? 900}
               className="relative z-20 hidden w-full bg-background md:block"
             />
           </ResizablePanel>

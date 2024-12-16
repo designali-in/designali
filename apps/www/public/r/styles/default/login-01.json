@@ -2,12 +2,7 @@
   "name": "login-01",
   "type": "registry:block",
   "description": "A simple login form.",
-  "registryDependencies": [
-    "button",
-    "card",
-    "input",
-    "label"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "blocks/login-01/page.tsx",

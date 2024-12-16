@@ -23,11 +23,11 @@ const Highlights = () => {
       className="relative h-full w-full overflow-hidden bg-neutral-900 p-10"
     >
       <div className="just relative flex flex-col py-10">
-        <div className="grid justify-between gap-4 md:flex">
-          <h1 className="text-xl hover:underline sm:text-4xl">
+        <div className="grid justify-between md:flex">
+          <h1 className="text-md hover:underline sm:text-4xl">
             Get the highlights.
           </h1>
-          <div className="flex items-end gap-2 text-blue-500">
+          <div className="flex items-end gap-4 text-blue-500">
             <p>Watch the film</p>
             <DIcons.CirclePlay className="h-6 w-6" />
           </div>
@@ -41,8 +41,8 @@ const Highlights = () => {
               align: "start",
             }}
           >
-            <CarouselContent>
-              <CarouselItem>
+            <CarouselContent className=" flex">
+              <CarouselItem className="basic-1/2 ">
                 <Image
                   src={
                     "https://res.cloudinary.com/deelfmnhg/image/upload/v1734288045/highlights_apple_intelligence_endframe__esdley4zqkya_large_2x_nrim45.jpg"

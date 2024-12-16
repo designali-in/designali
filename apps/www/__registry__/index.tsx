@@ -808,21 +808,6 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "stroke-dance": {
-      name: "stroke-dance",
-      description: "",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/new-york/ui/backgrounds/stroke-dance.js",
-        type: "registry:ui",
-        target: ""
-      }],
-      categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/stroke-dance.js")),
-      source: "",
-      meta: undefined,
-    },
     "dot-pattern": {
       name: "dot-pattern",
       description: "",
@@ -1123,42 +1108,46 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "iphone-16-pro": {
-      name: "iphone-16-pro",
+    "apple-iphone-16-pro": {
+      name: "apple-iphone-16-pro",
       description: "A simple hero section with react types ",
       type: "registry:block",
-      registryDependencies: ["dicons"],
+      registryDependencies: [],
       files: [{
-        path: "registry/new-york/blocks/iphone-16-pro/page.tsx",
+        path: "registry/new-york/blocks/apple-iphone-16-pro/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx"
       },{
-        path: "registry/new-york/blocks/iphone-16-pro/components/hero.tsx",
+        path: "registry/new-york/blocks/apple-iphone-16-pro/components/hero.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/new-york/blocks/iphone-16-pro/components/closer-look.tsx",
+        path: "registry/new-york/blocks/apple-iphone-16-pro/components/closer-look.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/new-york/blocks/iphone-16-pro/components/highlights.tsx",
+        path: "registry/new-york/blocks/apple-iphone-16-pro/components/highlights.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: ["hero","brands"],
-      component: React.lazy(() => import("@/registry/new-york/blocks/iphone-16-pro/page.tsx")),
-      source: "__registry__/new-york/blocks/iphone-16-pro/page.tsx",
+      categories: [],
+      component: React.lazy(() => import("@/registry/new-york/blocks/apple-iphone-16-pro/page.tsx")),
+      source: "__registry__/new-york/blocks/apple-iphone-16-pro/page.tsx",
       meta: undefined,
     },
     "hero-01": {
       name: "hero-01",
       description: "A simple hero section with react types ",
       type: "registry:block",
-      registryDependencies: ["dot-pattern","render"],
+      registryDependencies: [],
       files: [{
         path: "registry/new-york/blocks/hero-01/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx"
+      },{
+        path: "registry/new-york/blocks/hero-01/components/stroke-dance.js",
+        type: "registry:component",
+        target: ""
       },{
         path: "registry/new-york/blocks/hero-01/components/type-writer.tsx",
         type: "registry:component",
@@ -1173,7 +1162,7 @@ export const Index: Record<string, any> = {
       name: "login-01",
       description: "A simple login form.",
       type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
+      registryDependencies: [],
       files: [{
         path: "registry/new-york/blocks/login-01/page.tsx",
         type: "registry:page",
@@ -2037,21 +2026,6 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "stroke-dance": {
-      name: "stroke-dance",
-      description: "",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/ui/backgrounds/stroke-dance.js",
-        type: "registry:ui",
-        target: ""
-      }],
-      categories: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/backgrounds/stroke-dance.js")),
-      source: "",
-      meta: undefined,
-    },
     "dot-pattern": {
       name: "dot-pattern",
       description: "",
@@ -2352,42 +2326,46 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "iphone-16-pro": {
-      name: "iphone-16-pro",
+    "apple-iphone-16-pro": {
+      name: "apple-iphone-16-pro",
       description: "A simple hero section with react types ",
       type: "registry:block",
-      registryDependencies: ["dicons"],
+      registryDependencies: [],
       files: [{
-        path: "registry/default/blocks/iphone-16-pro/page.tsx",
+        path: "registry/default/blocks/apple-iphone-16-pro/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx"
       },{
-        path: "registry/default/blocks/iphone-16-pro/components/hero.tsx",
+        path: "registry/default/blocks/apple-iphone-16-pro/components/hero.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/iphone-16-pro/components/closer-look.tsx",
+        path: "registry/default/blocks/apple-iphone-16-pro/components/closer-look.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/iphone-16-pro/components/highlights.tsx",
+        path: "registry/default/blocks/apple-iphone-16-pro/components/highlights.tsx",
         type: "registry:component",
         target: ""
       }],
-      categories: ["hero","brands"],
-      component: React.lazy(() => import("@/registry/default/blocks/iphone-16-pro/page.tsx")),
-      source: "__registry__/default/blocks/iphone-16-pro/page.tsx",
+      categories: [],
+      component: React.lazy(() => import("@/registry/default/blocks/apple-iphone-16-pro/page.tsx")),
+      source: "__registry__/default/blocks/apple-iphone-16-pro/page.tsx",
       meta: undefined,
     },
     "hero-01": {
       name: "hero-01",
       description: "A simple hero section with react types ",
       type: "registry:block",
-      registryDependencies: ["dot-pattern","render"],
+      registryDependencies: [],
       files: [{
         path: "registry/default/blocks/hero-01/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx"
+      },{
+        path: "registry/default/blocks/hero-01/components/stroke-dance.js",
+        type: "registry:component",
+        target: ""
       },{
         path: "registry/default/blocks/hero-01/components/type-writer.tsx",
         type: "registry:component",
@@ -2402,7 +2380,7 @@ export const Index: Record<string, any> = {
       name: "login-01",
       description: "A simple login form.",
       type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
+      registryDependencies: [],
       files: [{
         path: "registry/default/blocks/login-01/page.tsx",
         type: "registry:page",

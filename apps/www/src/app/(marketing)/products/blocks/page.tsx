@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BlockDisplay } from "@/comp/products/blocks/block-display";
 
-const FEATURED_BLOCKS = ["iphone-16-pro", "hero-01"];
+const FEATURED_BLOCKS = ["apple-iphone-16-pro", "hero-01"];
 
 export default async function BlocksPage() {
   return (

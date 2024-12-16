@@ -15,6 +15,10 @@ const CloserLook = () => {
           <h1 className="text-md hover:underline sm:text-4xl">
             Take a closer look.
           </h1>
+          <div className="flex items-end gap-4 text-blue-500">
+            <p>Watch the film</p>
+            <DIcons.CirclePlay className="h-6 w-6" />
+          </div>
         </div>
       </div>
     </section>

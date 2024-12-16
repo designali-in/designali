@@ -2,41 +2,45 @@ import type { Registry } from "@/registry/schema";
 
 export const blocks: Registry = [
   {
-    name: "iphone-16-pro",
+    name: "apple-iphone-16-pro",
     type: "registry:block",
     description: "A simple hero section with react types ",
-    registryDependencies: ["dicons"],
+    registryDependencies: [],
     files: [
       {
-        path: "blocks/iphone-16-pro/page.tsx",
+        path: "blocks/apple-iphone-16-pro/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx",
       },
       {
-        path: "blocks/iphone-16-pro/components/hero.tsx",
+        path: "blocks/apple-iphone-16-pro/components/hero.tsx",
         type: "registry:component",
       },
       {
-        path: "blocks/iphone-16-pro/components/closer-look.tsx",
+        path: "blocks/apple-iphone-16-pro/components/closer-look.tsx",
         type: "registry:component",
       },
       {
-        path: "blocks/iphone-16-pro/components/highlights.tsx",
+        path: "blocks/apple-iphone-16-pro/components/highlights.tsx",
         type: "registry:component",
       },
     ],
-    categories: ["hero", "brands"],
+    categories: [],
   },
   {
     name: "hero-01",
     type: "registry:block",
     description: "A simple hero section with react types ",
-    registryDependencies: ["dot-pattern", "render"],
+    registryDependencies: [],
     files: [
       {
         path: "blocks/hero-01/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx",
+      },
+      {
+        path: "blocks/hero-01/components/stroke-dance.js",
+        type: "registry:component",
       },
       {
         path: "blocks/hero-01/components/type-writer.tsx",
@@ -49,7 +53,7 @@ export const blocks: Registry = [
     name: "login-01",
     description: "A simple login form.",
     type: "registry:block",
-    registryDependencies: ["button", "card", "input", "label"],
+    registryDependencies: [],
     files: [
       {
         path: "blocks/login-01/page.tsx",

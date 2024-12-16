@@ -1,8 +1,8 @@
 "use client";
 
-import CloserLook from "@/registry/default/blocks/iphone-16-pro/components//closer-look";
-import Hero from "@/registry/default/blocks/iphone-16-pro/components/hero";
-import Highlights from "@/registry/default/blocks/iphone-16-pro/components/highlights";
+import CloserLook from "@/registry/default/blocks/apple-iphone-16-pro/components//closer-look";
+import Hero from "@/registry/default/blocks/apple-iphone-16-pro/components/hero";
+import Highlights from "@/registry/default/blocks/apple-iphone-16-pro/components/highlights";
 
 export const description = "A simple Hero section";
 

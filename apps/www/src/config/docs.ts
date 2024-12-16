@@ -43,6 +43,15 @@ export const componentsConfig: ComponentsConfig = {
       items: [],
     },
     {
+      title: "Backgrounds",
+      items: [
+        {
+          title: "Dot Pattern",
+          href: "/components/backgrounds/dot-pattern",
+        },
+      ],
+    },
+    {
       title: "Mockups",
       items: [
         {
