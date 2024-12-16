@@ -1,6 +1,7 @@
 export * from "./accessibility";
 export * from "./ai";
 export * from "./animations";
+export * from "./alert";
 export * from "./account";
 export * from "./arrows";
 export * from "./chats";

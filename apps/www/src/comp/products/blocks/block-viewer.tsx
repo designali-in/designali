@@ -221,7 +221,7 @@ function BlockViewerToolbar() {
             size="sm"
             onClick={() => {
               copyToClipboard(
-                `npx shadcn@latest add "https://designali.in/r/${item.name}"`,
+                `pnpm dlx shadcn@latest add "https://designali.in/view/styles/default/${item.name}"`,
               );
             }}
           >

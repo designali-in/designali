@@ -47,7 +47,6 @@ export * from "./FileVideo";
 export * from "./FileVideo2";
 export * from "./FileVolume";
 export * from "./FileVolume2";
-export * from "./FileWarning";
 export * from "./FileX";
 export * from "./FileX2";
 export * from "./Folder";

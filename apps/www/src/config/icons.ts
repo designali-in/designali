@@ -10,6 +10,10 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Ai",
         },
         {
+          title: "Alert",
+          href: "/products/dicons/Alert",
+        },
+        {
           title: "Animations",
           href: "/products/dicons/Animations",
         },

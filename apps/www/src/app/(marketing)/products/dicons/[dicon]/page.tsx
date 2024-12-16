@@ -9,6 +9,7 @@ import DIconsPage from "@/comp/products/dicons";
 import {
   Account,
   Ai,
+  Alert,
   Animals,
   Animations,
   Brands,
@@ -27,6 +28,7 @@ const categoryMap = {
   Animals,
   Account,
   Ai,
+  Alert,
   Animations,
   Chats,
   Communi,
