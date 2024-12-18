@@ -1,6 +1,38 @@
 import { Registry } from "@/registry/schema";
 
 export const examples: Registry = [
+  // Backgrounds
+  {
+    name: "dot-pattern-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/backgrounds/dot-pattern-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "retro-grid-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/backgrounds/retro-grid-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "flickering-grid-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/backgrounds/flickering-grid-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
   // Mockups
   {
     name: "safari-1",

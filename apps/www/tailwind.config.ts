@@ -20,8 +20,15 @@ export default {
       },
       animation: {
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+
+        grid: "grid 15s linear infinite",
       },
       keyframes: {
+
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
         ripple: {
           "0%, 100%": {
             transform: "translate(-50%, -50%) scale(1)",

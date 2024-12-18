@@ -673,6 +673,26 @@ export const ui: Registry = [
   //  Background
 
   {
+    name: "flickering-grid",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/flickering-grid.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "retro-grid",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/retro-grid.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "dot-pattern",
     type: "registry:ui",
     files: [

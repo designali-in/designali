@@ -808,6 +808,36 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "flickering-grid": {
+      name: "flickering-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/backgrounds/flickering-grid.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/flickering-grid.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "retro-grid": {
+      name: "retro-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/backgrounds/retro-grid.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/retro-grid.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "dot-pattern": {
       name: "dot-pattern",
       description: "",
@@ -820,6 +850,51 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/dot-pattern.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dot-pattern-01": {
+      name: "dot-pattern-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/backgrounds/dot-pattern-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/backgrounds/dot-pattern-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "retro-grid-01": {
+      name: "retro-grid-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/backgrounds/retro-grid-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/backgrounds/retro-grid-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "flickering-grid-01": {
+      name: "flickering-grid-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/backgrounds/flickering-grid-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/backgrounds/flickering-grid-01.tsx")),
       source: "",
       meta: undefined,
     },
@@ -2026,6 +2101,36 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "flickering-grid": {
+      name: "flickering-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/flickering-grid.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/flickering-grid.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "retro-grid": {
+      name: "retro-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/retro-grid.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/retro-grid.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "dot-pattern": {
       name: "dot-pattern",
       description: "",
@@ -2038,6 +2143,51 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/backgrounds/dot-pattern.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dot-pattern-01": {
+      name: "dot-pattern-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/backgrounds/dot-pattern-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/backgrounds/dot-pattern-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "retro-grid-01": {
+      name: "retro-grid-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/backgrounds/retro-grid-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/backgrounds/retro-grid-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "flickering-grid-01": {
+      name: "flickering-grid-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/backgrounds/flickering-grid-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/backgrounds/flickering-grid-01.tsx")),
       source: "",
       meta: undefined,
     },

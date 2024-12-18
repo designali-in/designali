@@ -52,6 +52,14 @@ export const componentsConfig: ComponentsConfig = {
           title: "Dot Pattern",
           href: "/components/backgrounds/dot-pattern",
         },
+        {
+          title: "Flickering Grid",
+          href: "/components/backgrounds/flickering-grid",
+        },
+        {
+          title: "Retro Grid",
+          href: "/components/backgrounds/retro-grid",
+        },
       ],
     },
     {
