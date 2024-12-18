@@ -212,7 +212,7 @@ export default function Profile() {
                   urlList.slice(skip, skip + take).map((obj, index) => (
                     <TableRow key={index}>
                       <TableCell className="">
-                        <div className="flex">
+                        <div className="flex w-auto">
                           <CopyButton value={obj.shortUrl} />
                           <Link
                             className="hover:text-blue-500 hover:underline"
@@ -223,8 +223,8 @@ export default function Profile() {
                           </Link>
                         </div>
                       </TableCell>
-                      <TableCell className="truncate">
-                        <div className="flex">
+                      <TableCell className="">
+                        <div className="w-60 overflow-hidden truncate whitespace-nowrap">
                           <CopyButton value={obj.originalUrl} />
                           <Link
                             className="hover:text-blue-500 hover:underline"

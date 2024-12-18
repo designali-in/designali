@@ -1,6 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
+import { componentsConfig } from "@/src/config/docs";
 import { DIcons } from "dicons";
 
 import { useCopyToClipboard } from "@/hooks/use-copy-clipboard";
@@ -25,6 +27,7 @@ type Groups = {
 }[];
 
 const CommandMenu = () => {
+  const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [copy] = useCopyToClipboard();
 
@@ -38,6 +41,11 @@ const CommandMenu = () => {
 
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
+  }, []);
+
+  const runCommand = React.useCallback((command: () => unknown) => {
+    setOpen(false);
+    command();
   }, []);
 
   const openLink = React.useCallback((url: string) => {
@@ -126,6 +134,7 @@ const CommandMenu = () => {
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
+
           {groups.map((group, i) => (
             <React.Fragment key={group.name}>
               <CommandGroup heading={group.name}>
@@ -138,6 +147,39 @@ const CommandMenu = () => {
               </CommandGroup>
               {i !== groups.length - 1 && <CommandSeparator />}
             </React.Fragment>
+          ))}
+          <CommandGroup heading="Links">
+            {componentsConfig.mainNav
+              .filter((navitem) => !navitem.external)
+              .map((navItem) => (
+                <CommandItem
+                  key={navItem.href}
+                  value={navItem.title}
+                  onSelect={() => {
+                    runCommand(() => router.push(navItem.href as string));
+                  }}
+                >
+                  <DIcons.CircleDot className="h-3 w-3 text-accent" />
+                  {navItem.title}
+                </CommandItem>
+              ))}
+          </CommandGroup>
+          {componentsConfig.sidebarNav.map((group) => (
+            <CommandGroup key={group.title} heading={group.title}>
+              {group.items.map((navItem) => (
+                <CommandItem
+                  key={navItem.href}
+                  value={navItem.title}
+                  onSelect={() => {
+                    runCommand(() => router.push(navItem.href as string));
+                  }}
+                >
+                  <DIcons.CircleDot className="h-3 w-3 text-accent" />
+
+                  {navItem.title}
+                </CommandItem>
+              ))}
+            </CommandGroup>
           ))}
         </CommandList>
       </CommandDialog>

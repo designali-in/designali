@@ -1,6 +1,7 @@
 import type { DIcons } from "dicons";
 
 export interface NavItem {
+  external: any;
   title: string;
   href: string;
   disabled?: boolean;

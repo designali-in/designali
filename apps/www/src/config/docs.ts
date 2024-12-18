@@ -10,14 +10,17 @@ export const componentsConfig: ComponentsConfig = {
     {
       title: "Designs",
       href: "/designs",
+      external: undefined,
     },
     {
       title: "Components",
       href: "/components",
+      external: undefined,
     },
     {
       title: "Documentation",
       href: "/documentation",
+      external: undefined,
     },
   ],
   sidebarNav: [
@@ -84,6 +87,7 @@ export const designsConfig: DesignConfig = {
     {
       title: "Designs",
       href: "/designs",
+      external: undefined,
     },
   ],
   sidebarNav: [
@@ -139,14 +143,17 @@ export const guidesConfig: GuidesConfig = {
     {
       title: "Designs",
       href: "/designs",
+      external: undefined,
     },
     {
       title: "Guides",
       href: "/guides",
+      external: undefined,
     },
     {
       title: "Documentation",
       href: "/documentation",
+      external: undefined,
     },
   ],
   sidebarNav: [
@@ -181,14 +188,17 @@ export const documentationConfig: DocumentationConfig = {
     {
       title: "Designs",
       href: "/designs",
+      external: undefined,
     },
     {
       title: "Guides",
       href: "/guides",
+      external: undefined,
     },
     {
       title: "Documentation",
       href: "/documentation",
+      external: undefined,
     },
   ],
   sidebarNav: [
