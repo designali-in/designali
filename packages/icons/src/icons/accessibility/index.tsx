@@ -18,8 +18,6 @@ export * from "./LifeBuoy";
 export * from "./Moon";
 export * from "./MoonStar";
 export * from "./PersonStanding";
-export * from "./ScanEye";
-export * from "./ScanSearch";
 export * from "./Speech";
 export * from "./Sun";
 export * from "./SunDim";

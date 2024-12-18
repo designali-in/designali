@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import DIconsPage from "@/comp/products/dicons";
 
 import {
+  Access,
   Account,
   Ai,
   Alert,
@@ -24,6 +25,7 @@ import {
 } from "../../../../../../../../packages/icons/src/index";
 
 const categoryMap = {
+  Access,
   Brands,
   Animals,
   Account,

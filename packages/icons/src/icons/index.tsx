@@ -1,4 +1,5 @@
 export * from "./accessibility";
+export * from "./access";
 export * from "./ai";
 export * from "./animations";
 export * from "./alert";
