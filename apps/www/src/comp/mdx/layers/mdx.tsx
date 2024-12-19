@@ -4,6 +4,7 @@
 import type { Event } from "@/lib/events";
 import type { NpmCommands } from "@/types/unist";
 import ImageZoom from "@/comp/common/image-zoom";
+import { AspectRatio } from "@/registry/new-york/ui/aspect-ratio";
 import { Style } from "@/registry/registry-styles";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
@@ -327,9 +328,13 @@ const components = {
         {__rawString__ && !__npmCommand__ && (
           <CopyButton
             value={__rawString__}
+            variant="default"
             src={__src__}
             event={__event__}
-            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+            className={cn(
+              "absolute right-4 top-4 z-20",
+              __withMeta__ && "top-16",
+            )}
           />
         )}
         {__npmCommand__ &&
@@ -360,6 +365,7 @@ const components = {
   ),
   ItemGrid,
   FlexGrid,
+  AspectRatio,
   ComponentPreview,
   ComponentSource,
   ComponentExample,

@@ -1,0 +1,12 @@
+{
+  "name": "button-05",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-05.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Trash } from \"lucide-react\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button variant=\"destructive\">\n      <Trash className=\"-ms-1 me-2 opacity-60\" size={16} strokeWidth={2} aria-hidden=\"true\" />\n      Button\n    </Button>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

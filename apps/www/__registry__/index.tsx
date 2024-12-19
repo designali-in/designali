@@ -1048,6 +1048,81 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "button-01": {
+      name: "button-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/buttons/button-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/buttons/button-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-02": {
+      name: "button-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/buttons/button-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/buttons/button-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-03": {
+      name: "button-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/buttons/button-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/buttons/button-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-04": {
+      name: "button-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/buttons/button-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/buttons/button-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-05": {
+      name: "button-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/buttons/button-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/buttons/button-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -2428,6 +2503,81 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/mockups/iphone-16-pro-1.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-01": {
+      name: "button-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/buttons/button-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/buttons/button-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-02": {
+      name: "button-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/buttons/button-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/buttons/button-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-03": {
+      name: "button-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/buttons/button-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/buttons/button-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-04": {
+      name: "button-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/buttons/button-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/buttons/button-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "button-05": {
+      name: "button-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/buttons/button-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/buttons/button-05.tsx")),
       source: "",
       meta: undefined,
     },

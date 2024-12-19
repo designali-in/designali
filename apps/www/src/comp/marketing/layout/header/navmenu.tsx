@@ -208,11 +208,67 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/designs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Designs
-              </NavigationMenuLink>
+            <Link href={"/designs"}>
+              <NavigationMenuTrigger>Designs</NavigationMenuTrigger>
             </Link>
+
+            <NavigationMenuContent className="space-y-3">
+              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/designs"
+                    >
+                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Designs
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/components"
+                    >
+                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Components
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/guides"
+                    >
+                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Guides
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        +10000 icons, alphabet, numbers and shapes for your
+                        amazing design projects.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

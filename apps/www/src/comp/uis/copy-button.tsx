@@ -57,10 +57,7 @@ export function CopyButton({
     <Button
       size="icon"
       variant={variant}
-      className={cn(
-        "&_svg]:h-3 relative z-10 h-6   w-6 [&_svg]:w-3",
-        className,
-      )}
+      className={cn("&_svg]:h-3 relative z-10 h-6 w-6 [&_svg]:w-3", className)}
       onClick={() => {
         copyToClipboardWithMeta(
           value,

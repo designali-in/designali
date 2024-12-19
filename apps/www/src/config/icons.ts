@@ -41,6 +41,46 @@ export const diconsConfig: DIconsConfig = {
           title: "Chats",
           href: "/products/dicons/Chats",
         },
+        {
+          title: "Buildings",
+          href: "",
+        },
+        {
+          title: "Cursors",
+          href: "",
+        },
+        {
+          title: "Design",
+          href: "",
+        },
+        {
+          title: "Coding",
+          href: "",
+        },
+        {
+          title: "Devices",
+          href: "",
+        },
+        {
+          title: "Emoji",
+          href: "",
+        },
+        {
+          title: "File",
+          href: "",
+        },
+        {
+          title: "Finance",
+          href: "",
+        },
+        {
+          title: "Food",
+          href: "",
+        },
+        {
+          title: "Gaming",
+          href: "",
+        },
       ],
     },
   ],

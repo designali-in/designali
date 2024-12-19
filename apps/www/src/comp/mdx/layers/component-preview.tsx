@@ -106,39 +106,39 @@ export function ComponentPreview({
       {...props}
     >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
-        <div className="flex items-center justify-between pb-3">
+        <div className="flex items-center justify-between pb-2">
           {!hideCode && (
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
-              <TabsTrigger
-                value="preview"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                Preview
-              </TabsTrigger>
-              <TabsTrigger
-                value="code"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                Code
-              </TabsTrigger>
+            <TabsList className=" w-full justify-between rounded-none border-b bg-transparent">
+              <div>
+                <TabsTrigger
+                  value="preview"
+                  className="relative h-10 rounded-none border-b-2 border-b-transparent   px-3   font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                >
+                  <DIcons.Eye className="h-4 w-4" />
+                </TabsTrigger>
+                <TabsTrigger
+                  value="code"
+                  className="relative h-10 rounded-none border-b-2 border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                >
+                  <DIcons.Code className="h-4 w-4" />
+                </TabsTrigger>
+              </div>
+              <div className="flex gap-2">
+                <CopyButton
+                  value={codeString}
+                  variant="ghost"
+                  className=" h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+                />
+                <StyleSwitcher />
+              </div>
             </TabsList>
           )}
         </div>
-        <TabsContent value="preview" className="relative rounded-md border">
-          <div className="flex items-center justify-between p-4">
-            <StyleSwitcher />
-            <div className="flex items-center gap-2">
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
-              />
-            </div>
-          </div>
+        <TabsContent value="preview" className="relative rounded-xl border">
           <ThemeWrapper defaultTheme="slate">
             <div
               className={cn(
-                "preview flex min-h-[350px] w-full justify-center p-10",
+                "preview flex min-h-[450px] w-full justify-center p-8",
                 {
                   "items-center": align === "center",
                   "items-start": align === "start",
@@ -160,8 +160,8 @@ export function ComponentPreview({
           </ThemeWrapper>
         </TabsContent>
         <TabsContent value="code">
-          <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[500px] [&_pre]:overflow-auto">
+          <div className="flex flex-col space-y-3">
+            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:overflow-auto">
               {Code}
             </div>
           </div>

@@ -10,6 +10,7 @@ import { getTableOfContents } from "@/lib/toc";
 
 import "@/styles/mdx.css";
 
+import { ScrollArea } from "@/registry/default/ui/scroll-area";
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 import { DIcons } from "dicons";
 
@@ -58,6 +59,7 @@ export default async function DocPage({ params }: DesignPageProps) {
       <div className="mx-auto w-full min-w-0 py-10">
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <ScrollProgress className="top-14" />
+
         {doc.links ? (
           <div className="flex items-center space-x-2 pt-4">
             {doc.links.doc && (
@@ -90,7 +92,9 @@ export default async function DocPage({ params }: DesignPageProps) {
             )}
           </div>
         ) : null}
-        <Mdx code={doc.body.code} />
+        <ScrollArea>
+          <Mdx code={doc.body.code} />
+        </ScrollArea>
         <Separator className="my-8" />
         <DocsPager doc={doc} />
       </div>

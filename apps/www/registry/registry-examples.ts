@@ -108,6 +108,57 @@ export const examples: Registry = [
   // Components
 
   {
+    name: "button-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/buttons/button-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/buttons/button-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/buttons/button-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/buttons/button-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/buttons/button-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
+  {
     name: "bento-grid-01",
     type: "registry:example",
     files: [

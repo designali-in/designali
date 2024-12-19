@@ -45,6 +45,10 @@ export const componentsConfig: ComponentsConfig = {
       title: "Components",
       items: [
         {
+          title: "Button",
+          href: "/components/button",
+        },
+        {
           title: "Bento Grid",
           href: "/components/bento-grid",
         },

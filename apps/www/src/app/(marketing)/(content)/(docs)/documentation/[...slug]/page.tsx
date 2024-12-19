@@ -9,6 +9,7 @@ import { getTableOfContents } from "@/lib/toc";
 
 import "@/styles/mdx.css";
 
+import { ScrollArea } from "@/registry/default/ui/scroll-area";
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 
 import { Button } from "@/components/ui/button";
@@ -49,7 +50,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <div>
         <DocsPageHeader heading={guide.title} text={guide.description} />
         <ScrollProgress className="top-14" />
-        <Mdx code={guide.body.code} />
+        <ScrollArea>
+          <Mdx code={guide.body.code} />
+        </ScrollArea>
         <Separator className="my-8" />
         <div className="flex py-6 lg:py-10">
           <Link href="/documentation" className="">
