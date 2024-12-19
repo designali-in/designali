@@ -13,11 +13,31 @@ export const examples: Registry = [
     ],
   },
   {
+    name: "grid-pattern-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/backgrounds/grid-pattern-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "retro-grid-01",
     type: "registry:example",
     files: [
       {
         path: "example/backgrounds/retro-grid-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "ripple-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/backgrounds/ripple-01.tsx",
         type: "registry:example",
       },
     ],
@@ -84,6 +104,21 @@ export const examples: Registry = [
       },
     ],
   },
+
+  // Components
+
+  {
+    name: "bento-grid-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/bento-grid-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
+  // Typo
   {
     name: "typography-blockquote",
     type: "registry:example",

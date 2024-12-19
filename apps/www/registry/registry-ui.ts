@@ -89,6 +89,16 @@ export const ui: Registry = [
     ],
   },
   {
+    name: "bento-grid",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/bento-grid.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "breadcrumb",
     type: "registry:ui",
     dependencies: ["@radix-ui/react-slot"],
@@ -693,11 +703,31 @@ export const ui: Registry = [
     ],
   },
   {
+    name: "ripple",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/ripple.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "dot-pattern",
     type: "registry:ui",
     files: [
       {
         path: "ui/backgrounds/dot-pattern.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "grid-pattern",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/grid-pattern.tsx",
         type: "registry:ui",
       },
     ],

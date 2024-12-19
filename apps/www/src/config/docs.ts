@@ -43,7 +43,12 @@ export const componentsConfig: ComponentsConfig = {
     },
     {
       title: "Components",
-      items: [],
+      items: [
+        {
+          title: "Bento Grid",
+          href: "/components/bento-grid",
+        },
+      ],
     },
     {
       title: "Backgrounds",
@@ -53,12 +58,20 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/backgrounds/dot-pattern",
         },
         {
+          title: "Grid Pattern",
+          href: "/components/backgrounds/grid-pattern",
+        },
+        {
           title: "Flickering Grid",
           href: "/components/backgrounds/flickering-grid",
         },
         {
           title: "Retro Grid",
           href: "/components/backgrounds/retro-grid",
+        },
+        {
+          title: "Ripple",
+          href: "/components/backgrounds/ripple",
         },
       ],
     },

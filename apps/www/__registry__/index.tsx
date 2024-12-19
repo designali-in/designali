@@ -95,6 +95,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "bento-grid": {
+      name: "bento-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/bento-grid.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/bento-grid.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "breadcrumb": {
       name: "breadcrumb",
       description: "",
@@ -838,6 +853,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "ripple": {
+      name: "ripple",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/backgrounds/ripple.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/ripple.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "dot-pattern": {
       name: "dot-pattern",
       description: "",
@@ -850,6 +880,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/dot-pattern.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "grid-pattern": {
+      name: "grid-pattern",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/backgrounds/grid-pattern.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/backgrounds/grid-pattern.tsx")),
       source: "",
       meta: undefined,
     },
@@ -868,6 +913,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "grid-pattern-01": {
+      name: "grid-pattern-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/backgrounds/grid-pattern-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/backgrounds/grid-pattern-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "retro-grid-01": {
       name: "retro-grid-01",
       description: "",
@@ -880,6 +940,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/new-york/example/backgrounds/retro-grid-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "ripple-01": {
+      name: "ripple-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/backgrounds/ripple-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/backgrounds/ripple-01.tsx")),
       source: "",
       meta: undefined,
     },
@@ -970,6 +1045,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/new-york/example/mockups/iphone-16-pro-1.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "bento-grid-01": {
+      name: "bento-grid-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/bento-grid-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/bento-grid-01.tsx")),
       source: "",
       meta: undefined,
     },
@@ -1385,6 +1475,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/badge.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "bento-grid": {
+      name: "bento-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/bento-grid.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/bento-grid.tsx")),
       source: "",
       meta: undefined,
     },
@@ -2131,6 +2236,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "ripple": {
+      name: "ripple",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/ripple.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/ripple.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "dot-pattern": {
       name: "dot-pattern",
       description: "",
@@ -2143,6 +2263,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/backgrounds/dot-pattern.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "grid-pattern": {
+      name: "grid-pattern",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/grid-pattern.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/grid-pattern.tsx")),
       source: "",
       meta: undefined,
     },
@@ -2161,6 +2296,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "grid-pattern-01": {
+      name: "grid-pattern-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/backgrounds/grid-pattern-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/backgrounds/grid-pattern-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "retro-grid-01": {
       name: "retro-grid-01",
       description: "",
@@ -2173,6 +2323,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/backgrounds/retro-grid-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "ripple-01": {
+      name: "ripple-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/backgrounds/ripple-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/backgrounds/ripple-01.tsx")),
       source: "",
       meta: undefined,
     },
@@ -2263,6 +2428,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/mockups/iphone-16-pro-1.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "bento-grid-01": {
+      name: "bento-grid-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/bento-grid-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/bento-grid-01.tsx")),
       source: "",
       meta: undefined,
     },

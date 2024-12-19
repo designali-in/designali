@@ -1,0 +1,52 @@
+---
+title: Ripple
+description:
+  An animated ripple effect typically used behind elements to emphasize them.
+component: true
+---
+
+<ComponentPreview name="ripple-01" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://designali.in/r/ripple"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ripple" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## iPad Pro
+
+<ComponentPreview name="ripple" />
+
+## Props
+
+| Prop              | Type   | Default | Description                            |
+| ----------------- | ------ | ------- | -------------------------------------- |
+| mainCircleSize    | number | 210     | The size of the main circle in pixels  |
+| mainCircleOpacity | number | 0.24    | The opacity of the main circle         |
+| numCircles        | number | 8       | The number of ripple circles to render |

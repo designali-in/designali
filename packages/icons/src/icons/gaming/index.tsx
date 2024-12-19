@@ -6,7 +6,6 @@ export * from "./Beaker";
 export * from "./Clover";
 export * from "./Club";
 export * from "./Coins";
-export * from "./Crown";
 export * from "./Dice1";
 export * from "./Dice2";
 export * from "./Dice3";

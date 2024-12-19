@@ -1,0 +1,12 @@
+{
+  "name": "bento-grid",
+  "type": "registry:ui",
+  "files": [
+    {
+      "path": "ui/bento-grid.tsx",
+      "content": "import type { ReactNode } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst BentoGrid = ({\n  children,\n  className,\n}: {\n  children: ReactNode;\n  className?: string;\n}) => {\n  return (\n    <div\n      className={cn(\"z-10 mx-auto grid max-w-7xl grid-cols-8 gap-3\", className)}\n    >\n      {children}\n    </div>\n  );\n};\n\nconst BentoCard = ({\n  name,\n  className,\n  background,\n}: {\n  name: string;\n  className: string;\n  background: ReactNode;\n}) => (\n  <div\n    key={name}\n    className={cn(\n      \"group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl group-hover:scale-105 md:rounded-3xl\",\n      // light styles\n      \"border bg-white\",\n      // dark styles\n      \"transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]\",\n      className,\n    )}\n  >\n    <div>{background}</div>\n\n    <div className=\"pointer-events-none absolute inset-0 transform-gpu transition-all duration-300\" />\n  </div>\n);\n\nexport { BentoCard, BentoGrid };\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

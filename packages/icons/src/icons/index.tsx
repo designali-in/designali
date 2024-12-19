@@ -5,6 +5,7 @@ export * from "./animations";
 export * from "./alert";
 export * from "./account";
 export * from "./arrows";
+export * from "./awards";
 export * from "./chats";
 export * from "./animals";
 export * from "./brands";
