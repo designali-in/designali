@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .relative {
   position: relative;
@@ -72,17 +72,20 @@
 
 .from-gradient-1-start {
   --tw-gradient-from: #007cf0;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 124, 240, 0));
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(0, 124, 240, 0));
 }
 
 .from-gradient-2-start {
   --tw-gradient-from: #7928ca;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(121, 40, 202, 0));
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(121, 40, 202, 0));
 }
 
 .from-gradient-3-start {
   --tw-gradient-from: #d97706;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 77, 77, 0));
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(255, 77, 77, 0));
 }
 
 .to-gradient-1-end {
@@ -99,17 +102,20 @@
 
 .from-gradient-1-ai {
   --tw-gradient-from: #fffb00;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 0, 0));
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(255, 255, 0, 0));
 }
 
 .from-gradient-2-ai {
   --tw-gradient-from: #8000ff;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(129, 53, 206, 0));
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(129, 53, 206, 0));
 }
 
 .from-gradient-3-ai {
   --tw-gradient-from: #00ff26;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(121, 40, 202, 0));
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(121, 40, 202, 0));
 }
 
 .to-gradient-1-ai {
@@ -160,32 +166,32 @@
 }
 
 .before\:absolute::before {
-  content: '';
+  content: "";
   position: absolute;
 }
 
 .before\:top-0::before {
-  content: '';
+  content: "";
   top: 0px;
 }
 
 .before\:bottom-0::before {
-  content: '';
+  content: "";
   bottom: 0px;
 }
 
 .before\:left-0::before {
-  content: '';
+  content: "";
   left: 0px;
 }
 
 .before\:z-0::before {
-  content: '';
+  content: "";
   z-index: 0;
 }
 
 .before\:w-full::before {
-  content: '';
+  content: "";
   width: 100%;
 }
 
@@ -203,7 +209,7 @@
 }
 
 .before\:animate-gradient-background-1::before {
-  content: '';
+  content: "";
   animation: gradient-background-1 8s infinite;
 }
 
@@ -225,7 +231,7 @@
 }
 
 .before\:animate-gradient-background-2::before {
-  content: '';
+  content: "";
   animation: gradient-background-2 8s infinite;
 }
 
@@ -244,23 +250,23 @@
 }
 
 .before\:animate-gradient-background-3::before {
-  content: '';
+  content: "";
   animation: gradient-background-3 8s infinite;
 }
 
 .before\:px-2::before {
-  content: '';
+  content: "";
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
 .before\:text-center::before {
-  content: '';
+  content: "";
   text-align: center;
 }
 
 .before\:text-black::before {
-  content: '';
+  content: "";
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }

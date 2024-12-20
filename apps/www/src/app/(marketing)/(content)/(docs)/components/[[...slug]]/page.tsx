@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DocsPageHeader } from "@/comp/mdx/doc/page-header";
-import { DocsPager } from "@/comp/mdx/doc/pager";
+import { DocsPager, DocsPager2 } from "@/comp/mdx/doc/pager";
 import { DashboardTableOfContents } from "@/comp/mdx/doc/toc";
 import Mdx from "@/comp/mdx/layers";
 import { allComponents } from "contentlayer/generated";
@@ -57,6 +57,7 @@ export default async function DocPage({ params }: DesignPageProps) {
   return (
     <main className="relative grid lg:gap-10 xl:grid-cols-[1fr_260px]">
       <div className="mx-auto w-full min-w-0 py-10">
+        <DocsPager2 doc={doc} />
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <ScrollProgress className="top-14" />
 
