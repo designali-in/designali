@@ -49,7 +49,7 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/button",
         },
         {
-          title: "Input",
+          title: "Input & Textarea",
           href: "/components/input",
         },
         {

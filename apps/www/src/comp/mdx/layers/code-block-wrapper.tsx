@@ -27,11 +27,11 @@ export function CodeBlockWrapper({
       <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
-          className={cn("overflow-hidden", !isOpened && "max-h-64")}
+          className={cn(" overflow-hidden", !isOpened && "max-h-64")}
         >
           <div
             className={cn(
-              "[&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:pb-[100px]",
+              "w-full [&_pre]:my-0 [&_pre]:max-h-[450px]  [&_pre]:pb-[100px]",
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]",
             )}
           >
@@ -40,7 +40,7 @@ export function CodeBlockWrapper({
         </CollapsibleContent>
         <div
           className={cn(
-            "absolute flex items-center justify-center bg-gradient-to-b from-slate-100/0 to-white p-2 dark:from-slate-900/0 dark:to-black",
+            "absolute flex w-full items-center justify-center bg-gradient-to-b from-slate-100/0 to-white p-2 dark:from-slate-900/0 dark:to-black",
             isOpened ? "inset-x-0 bottom-0 h-20" : "inset-0",
           )}
         >

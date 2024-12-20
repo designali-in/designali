@@ -216,7 +216,7 @@ const components = {
   }: React.ComponentProps<typeof TabsContent>) => (
     <TabsContent
       className={cn(
-        "relative [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold",
+        "relative w-full [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold",
         className,
       )}
       {...props}
@@ -230,7 +230,7 @@ const components = {
         <ImageZoom>
           <Image
             src={src}
-            className="not-prose bg-aired flex h-full w-full cursor-zoom-in rounded-2xl border border-slate-200 object-cover object-center dark:border-slate-800"
+            className="not-prose bg-ali flex h-full w-full cursor-zoom-in rounded-2xl border border-slate-200 object-cover object-center dark:border-slate-800"
             alt={alt}
             {...rest}
           />
@@ -320,7 +320,7 @@ const components = {
       <StyleWrapper styleName={__style__}>
         <pre
           className={cn(
-            "my-4  max-h-[800px] overflow-x-auto rounded-lg border bg-slate-50 p-4 dark:bg-slate-950",
+            "  my-4 max-h-[800px] w-full  overflow-x-auto rounded-lg border bg-slate-50 p-4 dark:bg-slate-950",
             className,
           )}
           {...props}
@@ -357,7 +357,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative w-full rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className,
       )}
       {...props}
