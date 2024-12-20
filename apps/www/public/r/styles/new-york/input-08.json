@@ -1,0 +1,12 @@
+{
+  "name": "input-08",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/inputs/input-08.tsx",
+      "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-08\">Disabled input</Label>\n      <Input id=\"input-08\" placeholder=\"Email\" type=\"email\" disabled />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

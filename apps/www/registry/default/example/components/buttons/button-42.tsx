@@ -1,11 +1,6 @@
 // Dependencies: pnpm install @remixicon/react
 
-import {
-  RiFacebookFill,
-  RiGithubFill,
-  RiGoogleFill,
-  RiTwitterXFill,
-} from "@remixicon/react";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -13,16 +8,16 @@ export default function ButtonDemo() {
   return (
     <div className="inline-flex flex-wrap gap-2">
       <Button variant="outline" aria-label="Login with Google" size="icon">
-        <RiGoogleFill size={16} aria-hidden="true" />
+        <DIcons.Instagram size={16} aria-hidden="true" />
       </Button>
       <Button variant="outline" aria-label="Login with Facebook" size="icon">
-        <RiFacebookFill size={16} aria-hidden="true" />
+        <DIcons.X size={16} aria-hidden="true" />
       </Button>
       <Button variant="outline" aria-label="Login with X" size="icon">
-        <RiTwitterXFill size={16} aria-hidden="true" />
+        <DIcons.Facebook size={16} aria-hidden="true" />
       </Button>
       <Button variant="outline" aria-label="Login with GitHub" size="icon">
-        <RiGithubFill size={16} aria-hidden="true" />
+        <DIcons.Threads size={16} aria-hidden="true" />
       </Button>
     </div>
   );

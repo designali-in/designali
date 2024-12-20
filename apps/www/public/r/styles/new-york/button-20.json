@@ -1,0 +1,12 @@
+{
+  "name": "button-20",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-20.tsx",
+      "content": "import { Plus } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button\n      className=\"rounded-full\"\n      variant=\"outline\"\n      size=\"icon\"\n      aria-label=\"Add new item\"\n    >\n      <Plus size={16} strokeWidth={2} aria-hidden=\"true\" />\n    </Button>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

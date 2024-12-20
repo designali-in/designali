@@ -1,0 +1,12 @@
+{
+  "name": "button-12",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-12.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <div className=\"inline-flex items-center gap-2\">\n      <Button variant=\"ghost\">Cancel</Button>\n      <Button>Save</Button>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

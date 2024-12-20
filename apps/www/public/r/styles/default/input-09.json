@@ -1,0 +1,12 @@
+{
+  "name": "input-09",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/inputs/input-09.tsx",
+      "content": "import { AtSign } from \"lucide-react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-09\">Input with start icon</Label>\n      <div className=\"relative\">\n        <Input\n          id=\"input-09\"\n          className=\"peer ps-9\"\n          placeholder=\"Email\"\n          type=\"email\"\n        />\n        <div className=\"pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 peer-disabled:opacity-50\">\n          <AtSign size={16} strokeWidth={2} aria-hidden=\"true\" />\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

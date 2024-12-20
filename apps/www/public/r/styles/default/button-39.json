@@ -1,0 +1,12 @@
+{
+  "name": "button-39",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-39.tsx",
+      "content": "import { ChevronRight } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button className=\"relative pe-12\">\n      Next\n      <span className=\"pointer-events-none absolute inset-y-0 end-0 flex w-9 items-center justify-center bg-primary-foreground/15\">\n        <ChevronRight\n          className=\"opacity-60\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n      </span>\n    </Button>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

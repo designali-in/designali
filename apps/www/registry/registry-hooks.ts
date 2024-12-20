@@ -21,4 +21,14 @@ export const hooks: Registry = [
       },
     ],
   },
+  {
+    name: "use-image-upload",
+    type: "registry:hook",
+    files: [
+      {
+        path: "hooks/use-image-upload.ts",
+        type: "registry:hook",
+      },
+    ],
+  },
 ];

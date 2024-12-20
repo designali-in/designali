@@ -1,0 +1,12 @@
+{
+  "name": "input-03",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/inputs/input-03.tsx",
+      "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-03\">Input with helper text</Label>\n      <Input id=\"input-03\" placeholder=\"Email\" type=\"email\" />\n      <p\n        className=\"mt-2 text-xs text-muted-foreground\"\n        role=\"region\"\n        aria-live=\"polite\"\n      >\n        We won&lsquo;t share your email with anyone\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

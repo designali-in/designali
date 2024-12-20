@@ -1,0 +1,12 @@
+{
+  "name": "input-52",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/inputs/input-52.tsx",
+      "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-52\">Read-only input</Label>\n      <Input\n        id=\"input-52\"\n        className=\"read-only:bg-muted\"\n        defaultValue=\"This is a read-only input\"\n        readOnly\n        placeholder=\"Email\"\n        type=\"email\"\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

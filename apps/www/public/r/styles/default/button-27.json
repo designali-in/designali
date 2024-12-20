@@ -1,0 +1,12 @@
+{
+  "name": "button-27",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-27.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Minus, Plus, Volume, Volume1, Volume2, VolumeX } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  const [volume, setVolume] = useState(3); // Initialize volume state (0-9)\n\n  const decreaseVolume = () => setVolume((prev) => Math.max(0, prev - 1));\n  const increaseVolume = () => setVolume((prev) => Math.min(6, prev + 1));\n\n  // Optimized volume icon selection\n  const VolumeIcon =\n    volume === 0\n      ? VolumeX\n      : volume < 3\n        ? Volume\n        : volume < 5\n          ? Volume1\n          : Volume2;\n\n  return (\n    <div\n      className=\"inline-flex items-center\"\n      role=\"group\"\n      aria-labelledby=\"volume-control\"\n    >\n      <span id=\"volume-control\" className=\"sr-only\">\n        Volume Control\n      </span>\n      <Button\n        className=\"rounded-full\"\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Decrease volume\"\n        onClick={decreaseVolume}\n        disabled={volume === 0}\n      >\n        <Minus size={16} strokeWidth={2} aria-hidden=\"true\" />\n      </Button>\n      <div\n        className=\"flex items-center px-3 text-sm font-medium tabular-nums\"\n        aria-live=\"polite\"\n      >\n        <VolumeIcon\n          className=\"opacity-60\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n        <span className=\"ms-2\" aria-label={`Current volume is ${volume}`}>\n          {volume}\n        </span>\n      </div>\n      <Button\n        className=\"rounded-full\"\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Increase volume\"\n        onClick={increaseVolume}\n        disabled={volume === 6}\n      >\n        <Plus size={16} strokeWidth={2} aria-hidden=\"true\" />\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

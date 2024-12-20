@@ -1,0 +1,12 @@
+{
+  "name": "button-28",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-28.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Check, Copy } from \"lucide-react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nexport default function ButtonDemo() {\n  const [copied, setCopied] = useState<boolean>(false);\n\n  const handleCopy = async () => {\n    try {\n      // await navigator.clipboard.writeText(\"string to copy\");\n      setCopied(true);\n      setTimeout(() => setCopied(false), 1500);\n    } catch (err) {\n      console.error(\"Failed to copy text: \", err);\n    }\n  };\n\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button\n            variant=\"outline\"\n            size=\"icon\"\n            className=\"disabled:opacity-100\"\n            onClick={handleCopy}\n            aria-label={copied ? \"Copied\" : \"Copy to clipboard\"}\n            disabled={copied}\n          >\n            <div\n              className={cn(\n                \"transition-all\",\n                copied ? \"scale-100 opacity-100\" : \"scale-0 opacity-0\",\n              )}\n            >\n              <Check\n                className=\"stroke-emerald-500\"\n                size={16}\n                strokeWidth={2}\n                aria-hidden=\"true\"\n              />\n            </div>\n            <div\n              className={cn(\n                \"absolute transition-all\",\n                copied ? \"scale-0 opacity-0\" : \"scale-100 opacity-100\",\n              )}\n            >\n              <Copy size={16} strokeWidth={2} aria-hidden=\"true\" />\n            </div>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className=\"px-2 py-1 text-xs\">\n          Click to copy\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

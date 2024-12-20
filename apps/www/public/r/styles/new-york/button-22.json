@@ -1,0 +1,12 @@
+{
+  "name": "button-22",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-22.tsx",
+      "content": "\"use client\";\n\nimport { Plus } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nexport default function ButtonDemo() {\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\" size=\"icon\" aria-label=\"Add new item\">\n            <Plus size={16} strokeWidth={2} aria-hidden=\"true\" />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className=\"px-2 py-1 text-xs\">Tooltip</TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

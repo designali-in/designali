@@ -1,0 +1,12 @@
+{
+  "name": "button-11",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-11.tsx",
+      "content": "import { ChevronDown } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button>\n      Button\n      <ChevronDown\n        className=\"-me-1 ms-2 opacity-60\"\n        size={16}\n        strokeWidth={2}\n        aria-hidden=\"true\"\n      />\n    </Button>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

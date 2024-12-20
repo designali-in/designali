@@ -1,11 +1,6 @@
 // Dependencies: pnpm install @remixicon/react
 
-import {
-  RiFacebookFill,
-  RiGithubFill,
-  RiGoogleFill,
-  RiTwitterXFill,
-} from "@remixicon/react";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +13,7 @@ export default function ButtonDemo() {
         aria-label="Login with Google"
         size="icon"
       >
-        <RiGoogleFill
+        <DIcons.Behance
           className="text-[#DB4437] dark:text-primary"
           size={16}
           aria-hidden="true"
@@ -30,7 +25,7 @@ export default function ButtonDemo() {
         aria-label="Login with Facebook"
         size="icon"
       >
-        <RiFacebookFill
+        <DIcons.YouTube
           className="text-[#1877f2] dark:text-primary"
           size={16}
           aria-hidden="true"
@@ -42,7 +37,7 @@ export default function ButtonDemo() {
         aria-label="Login with X"
         size="icon"
       >
-        <RiTwitterXFill
+        <DIcons.X
           className="text-[#14171a] dark:text-primary"
           size={16}
           aria-hidden="true"
@@ -54,7 +49,7 @@ export default function ButtonDemo() {
         aria-label="Login with GitHub"
         size="icon"
       >
-        <RiGithubFill
+        <DIcons.Instagram
           className="text-black dark:text-primary"
           size={16}
           aria-hidden="true"

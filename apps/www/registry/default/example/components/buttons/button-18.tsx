@@ -1,7 +1,6 @@
 // Dependencies: pnpm install lucide-react
 
 import Image from "next/image";
-import AvatarImg from "@/public/avatar.jpg";
 import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ export default function ButtonDemo() {
     <Button variant="ghost" className="h-auto p-0 hover:bg-transparent">
       <Image
         className="rounded-full"
-        src={AvatarImg}
+        src={"/ali.jpg"}
         alt="Profile image"
         width={40}
         height={40}

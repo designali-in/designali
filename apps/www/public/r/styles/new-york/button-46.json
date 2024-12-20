@@ -1,0 +1,12 @@
+{
+  "name": "button-46",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/buttons/button-46.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { ChevronDown, ChevronUp } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  const [isExpanded, setIsExpanded] = useState<boolean>(false);\n\n  const toggleExpand = () => {\n    setIsExpanded((prevState) => !prevState);\n  };\n\n  return (\n    <Button\n      variant=\"ghost\"\n      onClick={toggleExpand}\n      aria-expanded={isExpanded}\n      aria-controls=\"expandable-content\" // Use this ID on the element that this button controls\n    >\n      {isExpanded ? \"Show less\" : \"Show more\"}\n      {isExpanded ? (\n        <ChevronUp\n          className=\"-me-1 ms-1\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n      ) : (\n        <ChevronDown\n          className=\"-me-1 ms-1\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n      )}\n    </Button>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
