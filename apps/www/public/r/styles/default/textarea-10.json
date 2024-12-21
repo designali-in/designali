@@ -1,0 +1,12 @@
+{
+  "name": "textarea-10",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/textareas/textarea-10.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"textarea-10\">Textarea with left button</Label>\n      <Textarea id=\"textarea-10\" placeholder=\"Leave a comment\" />\n      <Button variant=\"outline\">Send</Button>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

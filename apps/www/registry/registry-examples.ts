@@ -1230,6 +1230,587 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "textarea-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "textarea-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/textareas/textarea-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
+  {
+    name: "checkbox-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/checkboxes/checkbox-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/radios/radio-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 
   {
     name: "bento-grid-01",

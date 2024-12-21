@@ -1,0 +1,12 @@
+{
+  "name": "textarea-06",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/textareas/textarea-06.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"textarea-06\">Textarea with error</Label>\n      <Textarea\n        id=\"textarea-06\"\n        className=\"border-destructive/80 text-destructive focus-visible:border-destructive/80 focus-visible:ring-destructive/20\"\n        placeholder=\"Leave a comment\"\n        defaultValue=\"Hello!\"\n      />\n      <p\n        className=\"mt-2 text-xs text-destructive\"\n        role=\"alert\"\n        aria-live=\"polite\"\n      >\n        Message should be at least 10 characters\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

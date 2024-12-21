@@ -1,0 +1,12 @@
+{
+  "name": "textarea-09",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/textareas/textarea-09.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"textarea-09\">Disabled textarea</Label>\n      <Textarea id=\"textarea-09\" disabled placeholder=\"Leave a comment\" />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

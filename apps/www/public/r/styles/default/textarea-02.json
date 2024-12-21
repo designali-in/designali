@@ -1,0 +1,12 @@
+{
+  "name": "textarea-02",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/textareas/textarea-02.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"textarea-02\">\n        Required textarea <span className=\"text-destructive\">*</span>\n      </Label>\n      <Textarea id=\"textarea-02\" placeholder=\"Leave a message\" required />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

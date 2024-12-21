@@ -1,0 +1,12 @@
+{
+  "name": "radio-03",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/radios/radio-03.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function RadioDemo() {\n  return (\n    <RadioGroup defaultValue=\"r2\" disabled>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"r1\" id=\"radio-03-r1\" />\n        <Label htmlFor=\"radio-03-r1\">Option 1</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"r2\" id=\"radio-03-r2\" />\n        <Label htmlFor=\"radio-03-r2\">Option 2</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"r3\" id=\"radio-03-r3\" />\n        <Label htmlFor=\"radio-03-r3\">Option 3</Label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

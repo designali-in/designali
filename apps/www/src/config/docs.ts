@@ -8,13 +8,13 @@ import type {
 export const componentsConfig: ComponentsConfig = {
   mainNav: [
     {
-      title: "Designs",
-      href: "/designs",
+      title: "Components",
+      href: "/components",
       external: undefined,
     },
     {
-      title: "Components",
-      href: "/components",
+      title: "Designs",
+      href: "/designs",
       external: undefined,
     },
     {
@@ -49,12 +49,24 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/button",
         },
         {
-          title: "Input & Textarea",
+          title: "Checkbox",
+          href: "/components/checkbox",
+        },
+        {
+          title: "Input",
           href: "/components/input",
         },
         {
           title: "Bento Grid",
           href: "/components/bento-grid",
+        },
+        {
+          title: "Radio",
+          href: "/components/radio",
+        },
+        {
+          title: "Textarea",
+          href: "/components/textarea",
         },
       ],
     },

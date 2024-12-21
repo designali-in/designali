@@ -208,8 +208,8 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href={"/designs"}>
-              <NavigationMenuTrigger>Designs</NavigationMenuTrigger>
+            <Link href={"/components"}>
+              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
             </Link>
 
             <NavigationMenuContent className="space-y-3">

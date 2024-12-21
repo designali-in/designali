@@ -1,0 +1,12 @@
+{
+  "name": "checkbox-17",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/checkboxes/checkbox-17.tsx",
+      "content": "\"use client\";\n\nimport { Fragment } from \"react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { CheckboxTree } from \"@/components/ui/checkbox-tree\";\nimport { Label } from \"@/components/ui/label\";\n\ninterface TreeNode {\n  id: string;\n  label: string;\n  defaultChecked?: boolean;\n  children?: TreeNode[];\n}\n\nconst initialTree: TreeNode = {\n  id: \"natural-wonders\",\n  label: \"Natural Wonders\",\n  children: [\n    { id: \"mountains\", label: \"Mountains\", defaultChecked: true },\n    {\n      id: \"waterfalls\",\n      label: \"Waterfalls\",\n      children: [\n        { id: \"niagara\", label: \"Niagara Falls\" },\n        { id: \"angel-falls\", label: \"Angel Falls\", defaultChecked: true },\n      ],\n    },\n    { id: \"grand-canyon\", label: \"Grand Canyon\" },\n  ],\n};\n\nexport default function CheckboxDemo() {\n  return (\n    <div className=\"space-y-3\">\n      <CheckboxTree\n        tree={initialTree}\n        renderNode={({ node, isChecked, onCheckedChange, children }) => (\n          <Fragment key={node.id}>\n            <div className=\"flex items-center gap-2\">\n              <Checkbox\n                id={node.id}\n                checked={isChecked}\n                onCheckedChange={onCheckedChange}\n              />\n              <Label htmlFor={node.id}>{node.label}</Label>\n            </div>\n            {children && <div className=\"ms-6 space-y-3\">{children}</div>}\n          </Fragment>\n        )}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

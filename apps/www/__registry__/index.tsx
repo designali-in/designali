@@ -215,6 +215,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "checkbox-tree": {
+      name: "checkbox-tree",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/checkbox-tree.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/checkbox-tree.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "collapsible": {
       name: "collapsible",
       description: "",
@@ -2728,6 +2743,876 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "textarea-01": {
+      name: "textarea-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-02": {
+      name: "textarea-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-03": {
+      name: "textarea-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-04": {
+      name: "textarea-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-05": {
+      name: "textarea-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-06": {
+      name: "textarea-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-07": {
+      name: "textarea-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-08": {
+      name: "textarea-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-09": {
+      name: "textarea-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-10": {
+      name: "textarea-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-11": {
+      name: "textarea-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-12": {
+      name: "textarea-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-13": {
+      name: "textarea-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-14": {
+      name: "textarea-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-15": {
+      name: "textarea-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-16": {
+      name: "textarea-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-17": {
+      name: "textarea-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-18": {
+      name: "textarea-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-19": {
+      name: "textarea-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/textareas/textarea-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/textareas/textarea-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-01": {
+      name: "checkbox-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-02": {
+      name: "checkbox-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-03": {
+      name: "checkbox-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-04": {
+      name: "checkbox-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-05": {
+      name: "checkbox-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-06": {
+      name: "checkbox-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-07": {
+      name: "checkbox-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-08": {
+      name: "checkbox-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-09": {
+      name: "checkbox-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-10": {
+      name: "checkbox-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-11": {
+      name: "checkbox-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-12": {
+      name: "checkbox-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-13": {
+      name: "checkbox-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-14": {
+      name: "checkbox-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-15": {
+      name: "checkbox-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-16": {
+      name: "checkbox-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-17": {
+      name: "checkbox-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-18": {
+      name: "checkbox-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-19": {
+      name: "checkbox-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-20": {
+      name: "checkbox-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/checkboxes/checkbox-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/checkboxes/checkbox-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-01": {
+      name: "radio-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-02": {
+      name: "radio-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-03": {
+      name: "radio-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-04": {
+      name: "radio-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-05": {
+      name: "radio-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-06": {
+      name: "radio-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-07": {
+      name: "radio-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-08": {
+      name: "radio-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-09": {
+      name: "radio-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-10": {
+      name: "radio-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-11": {
+      name: "radio-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-12": {
+      name: "radio-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-13": {
+      name: "radio-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-14": {
+      name: "radio-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-15": {
+      name: "radio-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-16": {
+      name: "radio-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-17": {
+      name: "radio-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-18": {
+      name: "radio-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-19": {
+      name: "radio-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/radios/radio-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/radios/radio-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -3290,6 +4175,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/checkbox.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-tree": {
+      name: "checkbox-tree",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/checkbox-tree.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/checkbox-tree.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5803,6 +6703,876 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/components/inputs/input-58.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-01": {
+      name: "textarea-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-02": {
+      name: "textarea-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-03": {
+      name: "textarea-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-04": {
+      name: "textarea-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-05": {
+      name: "textarea-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-06": {
+      name: "textarea-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-07": {
+      name: "textarea-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-08": {
+      name: "textarea-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-09": {
+      name: "textarea-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-10": {
+      name: "textarea-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-11": {
+      name: "textarea-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-12": {
+      name: "textarea-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-13": {
+      name: "textarea-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-14": {
+      name: "textarea-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-15": {
+      name: "textarea-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-16": {
+      name: "textarea-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-17": {
+      name: "textarea-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-18": {
+      name: "textarea-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "textarea-19": {
+      name: "textarea-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/textareas/textarea-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/textareas/textarea-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-01": {
+      name: "checkbox-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-02": {
+      name: "checkbox-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-03": {
+      name: "checkbox-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-04": {
+      name: "checkbox-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-05": {
+      name: "checkbox-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-06": {
+      name: "checkbox-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-07": {
+      name: "checkbox-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-08": {
+      name: "checkbox-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-09": {
+      name: "checkbox-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-10": {
+      name: "checkbox-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-11": {
+      name: "checkbox-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-12": {
+      name: "checkbox-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-13": {
+      name: "checkbox-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-14": {
+      name: "checkbox-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-15": {
+      name: "checkbox-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-16": {
+      name: "checkbox-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-17": {
+      name: "checkbox-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-18": {
+      name: "checkbox-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-19": {
+      name: "checkbox-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "checkbox-20": {
+      name: "checkbox-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/checkboxes/checkbox-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/checkboxes/checkbox-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-01": {
+      name: "radio-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-02": {
+      name: "radio-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-03": {
+      name: "radio-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-04": {
+      name: "radio-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-05": {
+      name: "radio-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-06": {
+      name: "radio-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-07": {
+      name: "radio-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-08": {
+      name: "radio-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-09": {
+      name: "radio-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-10": {
+      name: "radio-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-11": {
+      name: "radio-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-12": {
+      name: "radio-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-13": {
+      name: "radio-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-14": {
+      name: "radio-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-15": {
+      name: "radio-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-16": {
+      name: "radio-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-17": {
+      name: "radio-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-18": {
+      name: "radio-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "radio-19": {
+      name: "radio-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/radios/radio-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/radios/radio-19.tsx")),
       source: "",
       meta: undefined,
     },

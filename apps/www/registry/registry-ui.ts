@@ -178,6 +178,16 @@ export const ui: Registry = [
     ],
   },
   {
+    name: "checkbox-tree",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/checkbox-tree.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "collapsible",
     type: "registry:ui",
     dependencies: ["@radix-ui/react-collapsible"],

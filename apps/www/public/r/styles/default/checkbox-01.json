@@ -1,0 +1,12 @@
+{
+  "name": "checkbox-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/checkboxes/checkbox-01.tsx",
+      "content": "import { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function CheckboxDemo() {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Checkbox id=\"checkbox-01\" />\n      <Label htmlFor=\"checkbox-01\">Simple checkbox</Label>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
