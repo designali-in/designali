@@ -1,0 +1,41 @@
+// Dependencies: pnpm install lucide-react
+
+"use client";
+
+import { useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
+
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+
+export default function SliderDemo() {
+  const [value, setValue] = useState([25]);
+
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between gap-2">
+        <Label className="leading-6">Volume</Label>
+        <output className="text-sm font-medium tabular-nums">{value[0]}</output>
+      </div>
+      <div className="flex items-center gap-2">
+        <VolumeX
+          className="shrink-0 opacity-60"
+          size={16}
+          strokeWidth={2}
+          aria-hidden="true"
+        />
+        <Slider
+          value={value}
+          onValueChange={setValue}
+          aria-label="Volume slider"
+        />
+        <Volume2
+          className="shrink-0 opacity-60"
+          size={16}
+          strokeWidth={2}
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+  );
+}

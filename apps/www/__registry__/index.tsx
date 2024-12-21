@@ -530,6 +530,36 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "select-native": {
+      name: "select-native",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/select-native.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/select-native.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "multiselect": {
+      name: "multiselect",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/multiselect.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/multiselect.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "separator": {
       name: "separator",
       description: "",
@@ -3613,6 +3643,1431 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "switch-01": {
+      name: "switch-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-02": {
+      name: "switch-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-03": {
+      name: "switch-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-04": {
+      name: "switch-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-05": {
+      name: "switch-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-06": {
+      name: "switch-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-07": {
+      name: "switch-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-08": {
+      name: "switch-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-09": {
+      name: "switch-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-10": {
+      name: "switch-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-11": {
+      name: "switch-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-12": {
+      name: "switch-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-13": {
+      name: "switch-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-14": {
+      name: "switch-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-15": {
+      name: "switch-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-16": {
+      name: "switch-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-17": {
+      name: "switch-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/switches/switch-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/switches/switch-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-01": {
+      name: "select-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-02": {
+      name: "select-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-03": {
+      name: "select-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-04": {
+      name: "select-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-05": {
+      name: "select-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-06": {
+      name: "select-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-07": {
+      name: "select-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-08": {
+      name: "select-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-09": {
+      name: "select-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-10": {
+      name: "select-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-11": {
+      name: "select-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-12": {
+      name: "select-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-13": {
+      name: "select-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-14": {
+      name: "select-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-15": {
+      name: "select-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-16": {
+      name: "select-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-17": {
+      name: "select-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-18": {
+      name: "select-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-19": {
+      name: "select-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-20": {
+      name: "select-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-21": {
+      name: "select-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-22": {
+      name: "select-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-23": {
+      name: "select-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-23.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-24": {
+      name: "select-24",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-24.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-24.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-25": {
+      name: "select-25",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-25.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-25.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-26": {
+      name: "select-26",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-26.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-26.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-27": {
+      name: "select-27",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-27.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-27.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-28": {
+      name: "select-28",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-28.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-28.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-29": {
+      name: "select-29",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-29.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-29.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-30": {
+      name: "select-30",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-30.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-30.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-31": {
+      name: "select-31",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-31.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-31.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-32": {
+      name: "select-32",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-32.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-32.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-33": {
+      name: "select-33",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-33.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-33.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-34": {
+      name: "select-34",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-34.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-34.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-35": {
+      name: "select-35",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-35.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-35.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-36": {
+      name: "select-36",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-36.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-36.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-37": {
+      name: "select-37",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-37.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-37.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-38": {
+      name: "select-38",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-38.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-38.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-39": {
+      name: "select-39",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-39.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-39.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-40": {
+      name: "select-40",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-40.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-40.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-41": {
+      name: "select-41",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-41.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-41.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-42": {
+      name: "select-42",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-42.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-42.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-43": {
+      name: "select-43",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-43.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-43.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-44": {
+      name: "select-44",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-44.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-44.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-45": {
+      name: "select-45",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-45.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-45.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-46": {
+      name: "select-46",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-46.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-46.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-47": {
+      name: "select-47",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-47.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-47.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-48": {
+      name: "select-48",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-48.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-48.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-49": {
+      name: "select-49",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-49.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-49.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-50": {
+      name: "select-50",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-50.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-50.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-51": {
+      name: "select-51",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/selects/select-51.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/selects/select-51.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-01": {
+      name: "slider-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-02": {
+      name: "slider-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-03": {
+      name: "slider-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-04": {
+      name: "slider-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-05": {
+      name: "slider-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-06": {
+      name: "slider-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-07": {
+      name: "slider-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-08": {
+      name: "slider-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-09": {
+      name: "slider-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-10": {
+      name: "slider-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-11": {
+      name: "slider-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-12": {
+      name: "slider-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-13": {
+      name: "slider-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-14": {
+      name: "slider-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-15": {
+      name: "slider-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-16": {
+      name: "slider-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-17": {
+      name: "slider-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-18": {
+      name: "slider-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-19": {
+      name: "slider-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-20": {
+      name: "slider-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-21": {
+      name: "slider-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-22": {
+      name: "slider-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-23": {
+      name: "slider-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-23.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-24": {
+      name: "slider-24",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-24.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-24.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-25": {
+      name: "slider-25",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-25.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-25.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-26": {
+      name: "slider-26",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-26.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-26.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-27": {
+      name: "slider-27",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/sliders/slider-27.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/sliders/slider-27.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -3949,6 +5404,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/new-york/hooks/use-toast.ts")),
+      source: "",
+      meta: undefined,
+    },
+    "use-slider-with-input": {
+      name: "use-slider-with-input",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/hooks/use-slider-with-input.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/hooks/use-slider-with-input.ts")),
       source: "",
       meta: undefined,
     },
@@ -4490,6 +5960,36 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/select.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-native": {
+      name: "select-native",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/select-native.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/select-native.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "multiselect": {
+      name: "multiselect",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/multiselect.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/multiselect.tsx")),
       source: "",
       meta: undefined,
     },
@@ -7576,6 +9076,1431 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "switch-01": {
+      name: "switch-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-02": {
+      name: "switch-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-03": {
+      name: "switch-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-04": {
+      name: "switch-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-05": {
+      name: "switch-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-06": {
+      name: "switch-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-07": {
+      name: "switch-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-08": {
+      name: "switch-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-09": {
+      name: "switch-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-10": {
+      name: "switch-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-11": {
+      name: "switch-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-12": {
+      name: "switch-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-13": {
+      name: "switch-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-14": {
+      name: "switch-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-15": {
+      name: "switch-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-16": {
+      name: "switch-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "switch-17": {
+      name: "switch-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/switches/switch-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/switches/switch-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-01": {
+      name: "select-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-02": {
+      name: "select-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-03": {
+      name: "select-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-04": {
+      name: "select-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-05": {
+      name: "select-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-06": {
+      name: "select-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-07": {
+      name: "select-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-08": {
+      name: "select-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-09": {
+      name: "select-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-10": {
+      name: "select-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-11": {
+      name: "select-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-12": {
+      name: "select-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-13": {
+      name: "select-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-14": {
+      name: "select-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-15": {
+      name: "select-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-16": {
+      name: "select-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-17": {
+      name: "select-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-18": {
+      name: "select-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-19": {
+      name: "select-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-20": {
+      name: "select-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-21": {
+      name: "select-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-22": {
+      name: "select-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-23": {
+      name: "select-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-23.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-24": {
+      name: "select-24",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-24.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-24.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-25": {
+      name: "select-25",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-25.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-25.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-26": {
+      name: "select-26",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-26.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-26.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-27": {
+      name: "select-27",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-27.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-27.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-28": {
+      name: "select-28",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-28.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-28.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-29": {
+      name: "select-29",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-29.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-29.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-30": {
+      name: "select-30",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-30.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-30.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-31": {
+      name: "select-31",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-31.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-31.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-32": {
+      name: "select-32",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-32.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-32.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-33": {
+      name: "select-33",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-33.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-33.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-34": {
+      name: "select-34",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-34.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-34.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-35": {
+      name: "select-35",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-35.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-35.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-36": {
+      name: "select-36",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-36.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-36.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-37": {
+      name: "select-37",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-37.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-37.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-38": {
+      name: "select-38",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-38.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-38.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-39": {
+      name: "select-39",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-39.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-39.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-40": {
+      name: "select-40",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-40.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-40.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-41": {
+      name: "select-41",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-41.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-41.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-42": {
+      name: "select-42",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-42.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-42.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-43": {
+      name: "select-43",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-43.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-43.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-44": {
+      name: "select-44",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-44.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-44.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-45": {
+      name: "select-45",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-45.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-45.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-46": {
+      name: "select-46",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-46.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-46.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-47": {
+      name: "select-47",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-47.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-47.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-48": {
+      name: "select-48",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-48.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-48.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-49": {
+      name: "select-49",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-49.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-49.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-50": {
+      name: "select-50",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-50.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-50.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "select-51": {
+      name: "select-51",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/selects/select-51.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/selects/select-51.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-01": {
+      name: "slider-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-02": {
+      name: "slider-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-03": {
+      name: "slider-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-04": {
+      name: "slider-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-05": {
+      name: "slider-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-06": {
+      name: "slider-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-07": {
+      name: "slider-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-08": {
+      name: "slider-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-09": {
+      name: "slider-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-10": {
+      name: "slider-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-11": {
+      name: "slider-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-12": {
+      name: "slider-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-13": {
+      name: "slider-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-14": {
+      name: "slider-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-15": {
+      name: "slider-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-16": {
+      name: "slider-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-17": {
+      name: "slider-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-18": {
+      name: "slider-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-19": {
+      name: "slider-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-20": {
+      name: "slider-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-21": {
+      name: "slider-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-22": {
+      name: "slider-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-23": {
+      name: "slider-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-23.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-24": {
+      name: "slider-24",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-24.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-24.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-25": {
+      name: "slider-25",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-25.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-25.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-26": {
+      name: "slider-26",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-26.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-26.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "slider-27": {
+      name: "slider-27",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/sliders/slider-27.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-27.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -7912,6 +10837,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/hooks/use-toast.ts")),
+      source: "",
+      meta: undefined,
+    },
+    "use-slider-with-input": {
+      name: "use-slider-with-input",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/hooks/use-slider-with-input.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/hooks/use-slider-with-input.ts")),
       source: "",
       meta: undefined,
     },

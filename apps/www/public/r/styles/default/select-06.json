@@ -1,0 +1,12 @@
+{
+  "name": "select-06",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/selects/select-06.tsx",
+      "content": "import { SelectNative } from \"@/registry/default/ui/select-native\";\n\nimport { Label } from \"@/components/ui/label\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2 [&_svg]:text-destructive/80\">\n      <Label htmlFor=\"select-06\">Select with error (native)</Label>\n      <SelectNative\n        id=\"select-06\"\n        className=\"border-destructive/80 text-destructive focus-visible:border-destructive/80 focus-visible:ring-destructive/20\"\n      >\n        <option value=\"s1\">React</option>\n        <option value=\"s2\">Next.js</option>\n        <option value=\"s3\">Astro</option>\n        <option value=\"s4\">Gatsby</option>\n      </SelectNative>\n      <p\n        className=\"mt-2 text-xs text-destructive\"\n        role=\"alert\"\n        aria-live=\"polite\"\n      >\n        Selected option is invalid\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

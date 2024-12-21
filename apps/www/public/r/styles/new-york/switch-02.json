@@ -1,0 +1,12 @@
+{
+  "name": "switch-02",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/switches/switch-02.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function SwitchDemo() {\n  return (\n    <div className=\"inline-flex items-center gap-2\">\n      <Switch\n        id=\"switch-02\"\n        className=\"h-5 w-8 [&_span]:size-4 [&_span]:data-[state=checked]:translate-x-3 rtl:[&_span]:data-[state=checked]:-translate-x-3\"\n      />\n      <Label htmlFor=\"switch-02\" className=\"sr-only\">\n        Small switch\n      </Label>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

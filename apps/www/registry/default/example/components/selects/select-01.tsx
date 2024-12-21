@@ -1,0 +1,17 @@
+import { SelectNative } from "@/registry/default/ui/select-native";
+
+import { Label } from "@/components/ui/label";
+
+export default function SelectDemo() {
+  return (
+    <div className="space-y-2">
+      <Label htmlFor="select-01">Simple select (native)</Label>
+      <SelectNative id="select-01">
+        <option value="s1">React</option>
+        <option value="s2">Next.js</option>
+        <option value="s3">Astro</option>
+        <option value="s4">Gatsby</option>
+      </SelectNative>
+    </div>
+  );
+}

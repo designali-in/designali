@@ -1,0 +1,12 @@
+{
+  "name": "select-24",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/selects/select-24.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-24\">Select with auto-width</Label>\n      <Select defaultValue=\"s1\">\n        {/* Adjust the min-width to fit the longest option */}\n        <SelectTrigger id=\"select-24\" className=\"w-auto min-w-48 max-w-full\">\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value=\"s1\">React</SelectItem>\n          <SelectItem value=\"s2\">Next.js</SelectItem>\n          <SelectItem value=\"s3\">Astro</SelectItem>\n          <SelectItem value=\"s4\">Gatsby</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "select-38",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/selects/select-38.tsx",
+      "content": "import Image from \"next/image\";\nimport Avatar01 from \"@/public/avatars/avatar-20-01.jpg\";\nimport Avatar02 from \"@/public/avatars/avatar-20-02.jpg\";\nimport Avatar03 from \"@/public/avatars/avatar-20-03.jpg\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-38\">Options with avatar</Label>\n      <Select defaultValue=\"s1\">\n        <SelectTrigger\n          id=\"select-38\"\n          className=\"ps-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0\"\n        >\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent className=\"[&_*[role=option]>span]:end-2 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]]:pe-8 [&_*[role=option]]:ps-2\">\n          <SelectGroup>\n            <SelectLabel className=\"ps-2\">Impersonate user</SelectLabel>\n            <SelectItem value=\"s1\">\n              <Image\n                className=\"size-5 rounded\"\n                src={Avatar01}\n                alt=\"Frank Allison\"\n                width={20}\n                height={20}\n              />\n              <span className=\"truncate\">Jenny Hamilton</span>\n            </SelectItem>\n            <SelectItem value=\"s2\">\n              <Image\n                className=\"size-5 rounded\"\n                src={Avatar02}\n                alt=\"Xavier Guerra\"\n                width={20}\n                height={20}\n              />\n              <span className=\"truncate\">Paul Smith</span>\n            </SelectItem>\n            <SelectItem value=\"s3\">\n              <Image\n                className=\"size-5 rounded\"\n                src={Avatar03}\n                alt=\"Anne Kelley\"\n                width={20}\n                height={20}\n              />\n              <span className=\"truncate\">Luna Wyen</span>\n            </SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

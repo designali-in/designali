@@ -22,6 +22,16 @@ export const hooks: Registry = [
     ],
   },
   {
+    name: "use-slider-with-input",
+    type: "registry:hook",
+    files: [
+      {
+        path: "hooks/use-slider-with-input.ts",
+        type: "registry:hook",
+      },
+    ],
+  },
+  {
     name: "use-image-upload",
     type: "registry:hook",
     files: [

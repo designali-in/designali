@@ -1,0 +1,12 @@
+{
+  "name": "select-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/selects/select-01.tsx",
+      "content": "import { SelectNative } from \"@/registry/default/ui/select-native\";\n\nimport { Label } from \"@/components/ui/label\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-01\">Simple select (native)</Label>\n      <SelectNative id=\"select-01\">\n        <option value=\"s1\">React</option>\n        <option value=\"s2\">Next.js</option>\n        <option value=\"s3\">Astro</option>\n        <option value=\"s4\">Gatsby</option>\n      </SelectNative>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

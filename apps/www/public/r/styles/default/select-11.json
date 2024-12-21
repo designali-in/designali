@@ -1,0 +1,12 @@
+{
+  "name": "select-11",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/selects/select-11.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { SelectNative } from \"@/components/ui/select-native\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-11\">Select with option groups (native)</Label>\n      <SelectNative id=\"select-11\">\n        <optgroup label=\"Frontend\">\n          <option value=\"s1\">React</option>\n          <option value=\"s2\">Vue</option>\n          <option value=\"s3\">Angular</option>\n        </optgroup>\n        <optgroup label=\"Backend\">\n          <option value=\"s4\">Node.js</option>\n          <option value=\"s5\">Python</option>\n          <option value=\"s6\">Java</option>\n        </optgroup>\n      </SelectNative>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

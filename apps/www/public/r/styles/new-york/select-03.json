@@ -1,0 +1,12 @@
+{
+  "name": "select-03",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/selects/select-03.tsx",
+      "content": "import { Clock } from \"lucide-react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { SelectNative } from \"@/components/ui/select-native\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-03\">Select with icon (native)</Label>\n      <div className=\"group relative\">\n        <SelectNative id=\"select-03\" className=\"ps-9\">\n          <option value=\"s1\">00:00 AM - 11:59 PM</option>\n          <option value=\"s2\">01:00 AM - 12:59 PM</option>\n          <option value=\"s3\">02:00 AM - 01:59 PM</option>\n          <option value=\"s4\">03:00 AM - 02:59 PM</option>\n        </SelectNative>\n        <div className=\"pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 group-has-[[disabled]]:opacity-50\">\n          <Clock size={16} strokeWidth={2} aria-hidden=\"true\" />\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

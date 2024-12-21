@@ -1,0 +1,12 @@
+{
+  "name": "switch-15",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/switches/switch-15.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function SwitchDemo() {\n  return (\n    <div className=\"relative flex w-full items-start gap-2 rounded-lg border border-input p-4 shadow-sm shadow-black/5 has-[[data-state=checked]]:border-ring\">\n      <Switch\n        id=\"switch-15\"\n        className=\"order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 [&_span]:data-[state=checked]:translate-x-2 rtl:[&_span]:data-[state=checked]:-translate-x-2\"\n        aria-describedby=\"switch-15-description\"\n      />\n      <div className=\"grid grow gap-2\">\n        <Label htmlFor=\"checkbox-13\">\n          Label{\" \"}\n          <span className=\"text-xs font-normal leading-[inherit] text-muted-foreground\">\n            (Sublabel)\n          </span>\n        </Label>\n        <p\n          id=\"checkbox-13-description\"\n          className=\"text-xs text-muted-foreground\"\n        >\n          A short description goes here.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

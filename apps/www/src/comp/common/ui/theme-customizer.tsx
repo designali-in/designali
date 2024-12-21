@@ -75,47 +75,6 @@ function Customizer() {
     >
       <div className="space-y-4 md:space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <Button
-            variant={"outline"}
-            size="sm"
-            onClick={() => setConfig({ ...config, style: "default" })}
-            className={cn(config.style === "default" && "border-ali border")}
-          >
-            Default
-          </Button>
-          <div className=" ">
-            <div className="grid grid-cols-2 gap-2">
-              {mounted ? (
-                <>
-                  <Button
-                    variant={"outline"}
-                    size="sm"
-                    onClick={() => setMode("light")}
-                    className={cn(mode === "light" && "border-ali border")}
-                  >
-                    <SunIcon className="mr-1 -translate-x-1" />
-                    Light
-                  </Button>
-                  <Button
-                    variant={"outline"}
-                    size="sm"
-                    onClick={() => setMode("dark")}
-                    className={cn(mode === "dark" && "border-ali border-2")}
-                  >
-                    <MoonIcon className="mr-1 -translate-x-1" />
-                    Dark
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Skeleton className="h-8 w-full" />
-                  <Skeleton className="h-8 w-full" />
-                </>
-              )}
-            </div>
-          </div>
-          <p className="rounded-lg border px-4 py-1">{config.theme}</p>
-
           <CopyCodeButton
             variant="outline"
             size="sm"

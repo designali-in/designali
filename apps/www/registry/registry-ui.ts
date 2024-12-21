@@ -415,6 +415,26 @@ export const ui: Registry = [
     ],
   },
   {
+    name: "select-native",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/select-native.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "multiselect",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/multiselect.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "separator",
     type: "registry:ui",
     dependencies: ["@radix-ui/react-separator"],

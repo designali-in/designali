@@ -11,6 +11,7 @@ import { getTableOfContents } from "@/lib/toc";
 import "@/styles/mdx.css";
 
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
+import { ThemeCustomizer } from "@/src/comp/common/ui/theme-customizer";
 import { ScrollProgress } from "@/src/comp/uis/scroll-progress";
 import { DIcons } from "dicons";
 
@@ -102,6 +103,7 @@ export default async function DocPage({ params }: DesignPageProps) {
       <div className="hidden text-sm xl:block">
         <div className="sticky top-24 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
           <DashboardTableOfContents toc={toc} />
+          <ThemeCustomizer />
         </div>
       </div>
     </main>

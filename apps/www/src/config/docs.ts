@@ -65,6 +65,18 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/radio",
         },
         {
+          title: "Select",
+          href: "/components/select",
+        },
+        {
+          title: "Slider",
+          href: "/components/slider",
+        },
+        {
+          title: "Switch",
+          href: "/components/switch",
+        },
+        {
           title: "Textarea",
           href: "/components/textarea",
         },

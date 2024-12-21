@@ -1811,6 +1811,956 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "switch-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/switches/switch-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-21",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-21.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-22",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-22.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-23",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-23.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-24",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-24.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-25",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-25.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-26",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-26.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-27",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-27.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-28",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-28.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-29",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-29.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-30",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-30.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-31",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-31.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-32",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-32.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-33",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-33.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-34",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-34.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-35",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-35.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-36",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-36.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-37",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-37.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-38",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-38.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-39",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-39.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-40",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-40.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-41",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-41.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-42",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-42.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-43",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-43.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-44",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-44.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-45",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-45.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-46",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-46.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-47",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-47.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-48",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-48.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-49",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-49.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-50",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-50.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-51",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/selects/select-51.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-21",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-21.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-22",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-22.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-23",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-23.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-24",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-24.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-25",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-25.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-26",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-26.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "slider-27",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/sliders/slider-27.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 
   {
     name: "bento-grid-01",

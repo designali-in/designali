@@ -1,0 +1,12 @@
+{
+  "name": "slider-14",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/sliders/slider-14.tsx",
+      "content": "\"use client\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderDemo() {\n  return (\n    <div className=\"space-y-4\">\n      <Label>Slider with multiple thumbs</Label>\n      <Slider\n        defaultValue={[25, 50, 100]}\n        aria-label=\"Slider with multiple thumbs\"\n        showTooltip\n        tooltipContent={(value) => `${value}%`}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

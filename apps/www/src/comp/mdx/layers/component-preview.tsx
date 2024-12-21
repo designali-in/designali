@@ -105,10 +105,10 @@ export function ComponentPreview({
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
-      <Tabs defaultValue="preview" className="relative mr-auto w-full">
+      <Tabs defaultValue="preview" className="relative  w-full">
         <div className="flex items-center justify-between pb-2">
           {!hideCode && (
-            <TabsList className=" w-full justify-between rounded-none border-b bg-transparent">
+            <TabsList className="w-full justify-between rounded-none border-b bg-transparent">
               <div>
                 <TabsTrigger
                   value="preview"
@@ -135,7 +135,7 @@ export function ComponentPreview({
           )}
         </div>
         <TabsContent value="preview" className="relative rounded-xl border">
-          <ThemeWrapper defaultTheme="slate">
+          <ThemeWrapper>
             <div
               className={cn(
                 "preview flex min-h-[450px] w-full justify-center p-8",
