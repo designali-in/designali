@@ -5068,6 +5068,696 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "alert-01": {
+      name: "alert-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-02": {
+      name: "alert-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-03": {
+      name: "alert-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-04": {
+      name: "alert-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-05": {
+      name: "alert-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-06": {
+      name: "alert-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-07": {
+      name: "alert-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-08": {
+      name: "alert-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-09": {
+      name: "alert-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-10": {
+      name: "alert-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-11": {
+      name: "alert-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-12": {
+      name: "alert-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/alerts/alert-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/alerts/alert-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-01": {
+      name: "banner-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-02": {
+      name: "banner-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-03": {
+      name: "banner-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-04": {
+      name: "banner-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-05": {
+      name: "banner-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-06": {
+      name: "banner-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-07": {
+      name: "banner-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-08": {
+      name: "banner-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-09": {
+      name: "banner-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-10": {
+      name: "banner-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-11": {
+      name: "banner-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/banners/banner-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/banners/banner-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-01": {
+      name: "notification-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-02": {
+      name: "notification-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-03": {
+      name: "notification-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-04": {
+      name: "notification-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-05": {
+      name: "notification-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-06": {
+      name: "notification-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-07": {
+      name: "notification-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-08": {
+      name: "notification-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-09": {
+      name: "notification-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-10": {
+      name: "notification-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-11": {
+      name: "notification-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-12": {
+      name: "notification-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-13": {
+      name: "notification-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-14": {
+      name: "notification-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-15": {
+      name: "notification-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-16": {
+      name: "notification-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-17": {
+      name: "notification-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-18": {
+      name: "notification-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-19": {
+      name: "notification-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-20": {
+      name: "notification-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-21": {
+      name: "notification-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-22": {
+      name: "notification-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-23": {
+      name: "notification-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/notifications/notification-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/notifications/notification-23.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -10498,6 +11188,696 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/components/sliders/slider-27.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-01": {
+      name: "alert-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-02": {
+      name: "alert-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-03": {
+      name: "alert-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-04": {
+      name: "alert-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-05": {
+      name: "alert-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-06": {
+      name: "alert-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-07": {
+      name: "alert-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-08": {
+      name: "alert-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-09": {
+      name: "alert-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-10": {
+      name: "alert-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-11": {
+      name: "alert-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "alert-12": {
+      name: "alert-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/alerts/alert-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/alerts/alert-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-01": {
+      name: "banner-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-02": {
+      name: "banner-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-03": {
+      name: "banner-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-04": {
+      name: "banner-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-05": {
+      name: "banner-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-06": {
+      name: "banner-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-07": {
+      name: "banner-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-08": {
+      name: "banner-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-09": {
+      name: "banner-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-10": {
+      name: "banner-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "banner-11": {
+      name: "banner-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/banners/banner-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/banners/banner-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-01": {
+      name: "notification-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-02": {
+      name: "notification-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-03": {
+      name: "notification-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-04": {
+      name: "notification-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-05": {
+      name: "notification-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-06": {
+      name: "notification-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-07": {
+      name: "notification-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-08": {
+      name: "notification-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-09": {
+      name: "notification-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-10": {
+      name: "notification-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-11": {
+      name: "notification-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-12": {
+      name: "notification-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-13": {
+      name: "notification-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-14": {
+      name: "notification-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-15": {
+      name: "notification-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-16": {
+      name: "notification-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-17": {
+      name: "notification-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-18": {
+      name: "notification-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-19": {
+      name: "notification-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-20": {
+      name: "notification-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-21": {
+      name: "notification-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-22": {
+      name: "notification-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "notification-23": {
+      name: "notification-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/notifications/notification-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/notifications/notification-23.tsx")),
       source: "",
       meta: undefined,
     },

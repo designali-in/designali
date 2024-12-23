@@ -45,6 +45,14 @@ export const componentsConfig: ComponentsConfig = {
       title: "Components",
       items: [
         {
+          title: "Alerts",
+          href: "/components/alert",
+        },
+        {
+          title: "Banners",
+          href: "/components/banner",
+        },
+        {
           title: "Button",
           href: "/components/button",
         },
@@ -63,6 +71,10 @@ export const componentsConfig: ComponentsConfig = {
         {
           title: "Radio",
           href: "/components/radio",
+        },
+        {
+          title: "Notifications",
+          href: "/components/notification",
         },
         {
           title: "Select",

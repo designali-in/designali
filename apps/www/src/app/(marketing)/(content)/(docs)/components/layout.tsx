@@ -20,7 +20,6 @@ export default function DocsLayout({ children }: DesignLayoutProps) {
           <ComponentsSidebarNav items={componentsConfig.sidebarNav} />
         </ScrollArea>
       </div>
-
       {children}
     </div>
   );

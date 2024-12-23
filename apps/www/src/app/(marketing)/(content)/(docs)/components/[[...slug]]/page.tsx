@@ -94,12 +94,13 @@ export default async function DocPage({ params }: DesignPageProps) {
             )}
           </div>
         ) : null}
-        <ScrollArea>
+        <ScrollArea className="h-screen pr-6">
           <Mdx code={doc.body.code} />
         </ScrollArea>
         <Separator className="my-8" />
         <DocsPager doc={doc} />
       </div>
+
       <div className="hidden text-sm xl:block">
         <div className="sticky top-24 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
           <DashboardTableOfContents toc={toc} />

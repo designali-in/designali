@@ -2761,6 +2761,466 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "alert-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/alerts/alert-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/banners/banner-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-21",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-21.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-22",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-22.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "notification-23",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/notifications/notification-23.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 
   {
     name: "bento-grid-01",

@@ -1,0 +1,12 @@
+{
+  "name": "alert-03",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/alerts/alert-03.tsx",
+      "content": "import { CircleAlert } from \"lucide-react\";\n\nexport default function AlertDemo() {\n  return (\n    <div className=\"rounded-lg border border-border px-4 py-3\">\n      <p className=\"text-sm\">\n        <CircleAlert\n          className=\"-mt-0.5 me-3 inline-flex text-red-500\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n        An error occurred!\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
