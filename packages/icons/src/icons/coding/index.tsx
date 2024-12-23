@@ -143,7 +143,6 @@ export * from "./SquareTerminal";
 export * from "./TablePropertise";
 export * from "./Telescope";
 export * from "./Terminal";
-export * from "./ToyBrick";
 export * from "./Trello";
 export * from "./TriangleAlert";
 export * from "./Unplug";

@@ -34,17 +34,26 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Awards",
         },
         {
+          title: "Baby",
+          href: "/products/dicons/Baby",
+        },
+        {
+          title: "Badge",
+          href: "/products/dicons/Badge",
+        },
+        {
           title: "Brands",
           href: "/products/dicons/Brands",
+        },
+        {
+          title: "Buildings",
+          href: "/products/dicons/Buildings",
         },
         {
           title: "Chats",
           href: "/products/dicons/Chats",
         },
-        {
-          title: "Buildings",
-          href: "",
-        },
+
         {
           title: "Cursors",
           href: "",

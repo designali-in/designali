@@ -1,5 +1,3 @@
-import Warehouse from "./Warehouse";
-
 export * from "./Anvil";
 export * from "./BrickWall";
 export * from "./Building";
@@ -13,17 +11,11 @@ export * from "./Fence";
 export * from "./GraduationCap";
 export * from "./Hospital";
 export * from "./Hotel";
-export * from "./House";
-export * from "./HousePlus";
-export * from "./HousePlug";
 export * from "./Landmark";
 export * from "./School";
 export * from "./Store";
 export * from "./Theater";
 export * from "./University";
 export * from "./UtilityPole";
-export * from "./Warehouse";
 
-export const Buildings = {
-  Warehouse,
-};
+export const Buildingsss = {};

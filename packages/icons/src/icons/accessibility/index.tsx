@@ -1,9 +1,6 @@
 import ZoomIn from "./ZoomIn";
 
 export * from "./Accessibility01";
-export * from "./Baby";
-export * from "./BadgeHelp";
-export * from "./BadgeInfo";
 export * from "./CircleHelp";
 export * from "./Contrast";
 export * from "./Ear";
