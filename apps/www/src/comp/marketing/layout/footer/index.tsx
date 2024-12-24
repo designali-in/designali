@@ -83,10 +83,10 @@ const Underline = `hover:-translate-y-1 border border-secondary rounded-xl p-2.5
 
 export function Footer() {
   return (
-    <footer className="border-ali/20 mx-auto w-full border-b border-t bg-white px-2 dark:bg-black sm:px-4">
+    <footer className="border-ali/20 :px-4 mx-auto w-full border-b   border-t  px-2">
       <div className="relative mx-auto grid  max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex ">
         <Link href="/">
-          <p className="flex items-center justify-center rounded-full bg-white dark:bg-black">
+          <p className="flex items-center justify-center rounded-full  ">
             <Logo className="w-8" />
           </p>
         </Link>

@@ -20,6 +20,7 @@
   "dependencies": {
     "@auth/prisma-adapter": "^2.4.1",
     "@emotion/is-prop-valid": "^1.2.2",
+    "@excalidraw/excalidraw": "^0.17.6",
     "@google/generative-ai": "^0.12.0",
     "@headlessui/react": "^2.1.1",
     "@heroicons/react": "^2.0.18",

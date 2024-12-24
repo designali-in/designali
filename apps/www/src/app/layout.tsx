@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { env } from "process";
 import type { Metadata, Viewport } from "next";
+import Image from "next/image";
 import AdSense from "@/comp/AdSense";
 import Analytics from "@/comp/analytics";
 import CookieConsent from "@/comp/common/CookieConsent";
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Providers>
           {children}
+
           <CookieConsent />
           <DToaster />
           <Toaster />

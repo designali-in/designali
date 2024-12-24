@@ -49,6 +49,10 @@ const data = {
           title: "Downloads",
           url: "/dashboard/downloads",
         },
+        {
+          title: "Design Draw",
+          url: "/dashboard/design-draw",
+        },
       ],
     },
     {
