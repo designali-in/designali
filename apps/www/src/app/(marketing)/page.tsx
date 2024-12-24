@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import AdBanner from "@/comp/AdBanner";
 import { Connect } from "@/comp/common/connect";
 import RecentlyAdded from "@/comp/dashboard/admin/agency/HomeGraphic";
@@ -23,7 +24,6 @@ export default function HomePage() {
       <div className="px-6 xl:px-0">
         <InstagramFeed />
       </div>
-
       <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
         <AdBanner
           dataAdFormat="auto"
@@ -33,6 +33,15 @@ export default function HomePage() {
       </div>
       <NewsletterSection />
       <Connect />
+      <Image
+        width={1512}
+        height={550}
+        className="absolute left-1/2 top-0 -z-10 -translate-x-1/2"
+        src="/images/gradient-background-top.png"
+        alt=""
+        role="presentation"
+        priority
+      />
     </main>
   );
 }
