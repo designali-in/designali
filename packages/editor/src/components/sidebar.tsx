@@ -41,6 +41,12 @@ export const Sidebar = ({ activeTool, onChangeActiveTool }: SidebarProps) => {
           onClick={() => onChangeActiveTool("text")}
         />
         <SidebarItem
+          icon={LayoutTemplate}
+          label="Icons"
+          isActive={activeTool === "icons"}
+          onClick={() => onChangeActiveTool("icons")}
+        />
+        <SidebarItem
           icon={Shapes}
           label="Shapes"
           isActive={activeTool === "shapes"}

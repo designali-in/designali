@@ -3223,6 +3223,507 @@ export const examples: Registry = [
   },
 
   {
+    name: "dialog-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dialog-21",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dialogs/dialog-21.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "accordion-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/accordions/accordion-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tooltips/tooltip-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
+  {
     name: "bento-grid-01",
     type: "registry:example",
     files: [
@@ -3239,7 +3740,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-blockquote.tsx",
+        path: "example/typo/typography-blockquote.tsx",
         type: "registry:example",
       },
     ],
@@ -3249,7 +3750,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-demo.tsx",
+        path: "example/typo/typography-demo.tsx",
         type: "registry:example",
       },
     ],
@@ -3259,7 +3760,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-h1.tsx",
+        path: "example/typo/typography-h1.tsx",
         type: "registry:example",
       },
     ],
@@ -3269,7 +3770,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-h2.tsx",
+        path: "example/typo/typography-h2.tsx",
         type: "registry:example",
       },
     ],
@@ -3279,7 +3780,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-h3.tsx",
+        path: "example/typo/typography-h3.tsx",
         type: "registry:example",
       },
     ],
@@ -3289,7 +3790,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-h4.tsx",
+        path: "example/typo/typography-h4.tsx",
         type: "registry:example",
       },
     ],
@@ -3299,7 +3800,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-inline-code.tsx",
+        path: "example/typo/typography-inline-code.tsx",
         type: "registry:example",
       },
     ],
@@ -3309,7 +3810,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-large.tsx",
+        path: "example/typo/typography-large.tsx",
         type: "registry:example",
       },
     ],
@@ -3319,7 +3820,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-lead.tsx",
+        path: "example/typo/typography-lead.tsx",
         type: "registry:example",
       },
     ],
@@ -3329,7 +3830,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-list.tsx",
+        path: "example/typo/typography-list.tsx",
         type: "registry:example",
       },
     ],
@@ -3339,7 +3840,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-muted.tsx",
+        path: "example/typo/typography-muted.tsx",
         type: "registry:example",
       },
     ],
@@ -3349,7 +3850,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-p.tsx",
+        path: "example/typo/typography-p.tsx",
         type: "registry:example",
       },
     ],
@@ -3359,7 +3860,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-small.tsx",
+        path: "example/typo/typography-small.tsx",
         type: "registry:example",
       },
     ],
@@ -3369,7 +3870,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typography-table.tsx",
+        path: "example/typo/typography-table.tsx",
         type: "registry:example",
       },
     ],

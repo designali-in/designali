@@ -5758,6 +5758,756 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "dialog-01": {
+      name: "dialog-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-02": {
+      name: "dialog-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-03": {
+      name: "dialog-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-04": {
+      name: "dialog-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-05": {
+      name: "dialog-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-06": {
+      name: "dialog-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-07": {
+      name: "dialog-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-08": {
+      name: "dialog-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-09": {
+      name: "dialog-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-10": {
+      name: "dialog-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-11": {
+      name: "dialog-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-12": {
+      name: "dialog-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-13": {
+      name: "dialog-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-14": {
+      name: "dialog-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-15": {
+      name: "dialog-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-16": {
+      name: "dialog-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-17": {
+      name: "dialog-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-18": {
+      name: "dialog-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-19": {
+      name: "dialog-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-20": {
+      name: "dialog-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-21": {
+      name: "dialog-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dialogs/dialog-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dialogs/dialog-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-01": {
+      name: "accordion-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-02": {
+      name: "accordion-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-03": {
+      name: "accordion-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-04": {
+      name: "accordion-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-05": {
+      name: "accordion-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-06": {
+      name: "accordion-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-07": {
+      name: "accordion-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-08": {
+      name: "accordion-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-09": {
+      name: "accordion-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-10": {
+      name: "accordion-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-11": {
+      name: "accordion-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-12": {
+      name: "accordion-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-13": {
+      name: "accordion-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-14": {
+      name: "accordion-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-15": {
+      name: "accordion-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-16": {
+      name: "accordion-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-17": {
+      name: "accordion-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-18": {
+      name: "accordion-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-19": {
+      name: "accordion-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-20": {
+      name: "accordion-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/accordions/accordion-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/accordions/accordion-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-01": {
+      name: "tooltip-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-02": {
+      name: "tooltip-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-03": {
+      name: "tooltip-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-04": {
+      name: "tooltip-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-05": {
+      name: "tooltip-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-06": {
+      name: "tooltip-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-07": {
+      name: "tooltip-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-08": {
+      name: "tooltip-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-09": {
+      name: "tooltip-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/tooltips/tooltip-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/tooltips/tooltip-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -5779,12 +6529,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-blockquote.tsx",
+        path: "registry/new-york/example/typo/typography-blockquote.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-blockquote.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-blockquote.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5794,12 +6544,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-demo.tsx",
+        path: "registry/new-york/example/typo/typography-demo.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-demo.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-demo.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5809,12 +6559,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-h1.tsx",
+        path: "registry/new-york/example/typo/typography-h1.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-h1.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-h1.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5824,12 +6574,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-h2.tsx",
+        path: "registry/new-york/example/typo/typography-h2.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-h2.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-h2.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5839,12 +6589,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-h3.tsx",
+        path: "registry/new-york/example/typo/typography-h3.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-h3.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-h3.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5854,12 +6604,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-h4.tsx",
+        path: "registry/new-york/example/typo/typography-h4.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-h4.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-h4.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5869,12 +6619,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-inline-code.tsx",
+        path: "registry/new-york/example/typo/typography-inline-code.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-inline-code.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-inline-code.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5884,12 +6634,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-large.tsx",
+        path: "registry/new-york/example/typo/typography-large.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-large.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-large.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5899,12 +6649,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-lead.tsx",
+        path: "registry/new-york/example/typo/typography-lead.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-lead.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-lead.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5914,12 +6664,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-list.tsx",
+        path: "registry/new-york/example/typo/typography-list.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-list.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-list.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5929,12 +6679,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-muted.tsx",
+        path: "registry/new-york/example/typo/typography-muted.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-muted.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-muted.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5944,12 +6694,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-p.tsx",
+        path: "registry/new-york/example/typo/typography-p.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-p.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-p.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5959,12 +6709,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-small.tsx",
+        path: "registry/new-york/example/typo/typography-small.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-small.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-small.tsx")),
       source: "",
       meta: undefined,
     },
@@ -5974,12 +6724,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/new-york/example/typography-table.tsx",
+        path: "registry/new-york/example/typo/typography-table.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/new-york/example/typography-table.tsx")),
+      component: React.lazy(() => import("@/registry/new-york/example/typo/typography-table.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11881,6 +12631,756 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "dialog-01": {
+      name: "dialog-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-02": {
+      name: "dialog-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-03": {
+      name: "dialog-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-04": {
+      name: "dialog-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-05": {
+      name: "dialog-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-06": {
+      name: "dialog-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-07": {
+      name: "dialog-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-08": {
+      name: "dialog-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-09": {
+      name: "dialog-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-10": {
+      name: "dialog-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-11": {
+      name: "dialog-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-12": {
+      name: "dialog-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-13": {
+      name: "dialog-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-14": {
+      name: "dialog-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-15": {
+      name: "dialog-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-16": {
+      name: "dialog-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-17": {
+      name: "dialog-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-18": {
+      name: "dialog-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-19": {
+      name: "dialog-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-20": {
+      name: "dialog-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dialog-21": {
+      name: "dialog-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dialogs/dialog-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dialogs/dialog-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-01": {
+      name: "accordion-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-02": {
+      name: "accordion-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-03": {
+      name: "accordion-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-04": {
+      name: "accordion-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-05": {
+      name: "accordion-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-06": {
+      name: "accordion-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-07": {
+      name: "accordion-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-08": {
+      name: "accordion-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-09": {
+      name: "accordion-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-10": {
+      name: "accordion-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-11": {
+      name: "accordion-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-12": {
+      name: "accordion-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-13": {
+      name: "accordion-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-14": {
+      name: "accordion-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-15": {
+      name: "accordion-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-16": {
+      name: "accordion-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-17": {
+      name: "accordion-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-18": {
+      name: "accordion-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-19": {
+      name: "accordion-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "accordion-20": {
+      name: "accordion-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/accordions/accordion-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/accordions/accordion-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-01": {
+      name: "tooltip-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-02": {
+      name: "tooltip-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-03": {
+      name: "tooltip-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-04": {
+      name: "tooltip-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-05": {
+      name: "tooltip-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-06": {
+      name: "tooltip-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-07": {
+      name: "tooltip-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-08": {
+      name: "tooltip-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tooltip-09": {
+      name: "tooltip-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tooltips/tooltip-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -11902,12 +13402,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-blockquote.tsx",
+        path: "registry/default/example/typo/typography-blockquote.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-blockquote.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-blockquote.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11917,12 +13417,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-demo.tsx",
+        path: "registry/default/example/typo/typography-demo.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-demo.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-demo.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11932,12 +13432,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-h1.tsx",
+        path: "registry/default/example/typo/typography-h1.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-h1.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-h1.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11947,12 +13447,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-h2.tsx",
+        path: "registry/default/example/typo/typography-h2.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-h2.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-h2.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11962,12 +13462,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-h3.tsx",
+        path: "registry/default/example/typo/typography-h3.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-h3.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-h3.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11977,12 +13477,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-h4.tsx",
+        path: "registry/default/example/typo/typography-h4.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-h4.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-h4.tsx")),
       source: "",
       meta: undefined,
     },
@@ -11992,12 +13492,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-inline-code.tsx",
+        path: "registry/default/example/typo/typography-inline-code.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-inline-code.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-inline-code.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12007,12 +13507,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-large.tsx",
+        path: "registry/default/example/typo/typography-large.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-large.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-large.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12022,12 +13522,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-lead.tsx",
+        path: "registry/default/example/typo/typography-lead.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-lead.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-lead.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12037,12 +13537,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-list.tsx",
+        path: "registry/default/example/typo/typography-list.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-list.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-list.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12052,12 +13552,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-muted.tsx",
+        path: "registry/default/example/typo/typography-muted.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-muted.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-muted.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12067,12 +13567,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-p.tsx",
+        path: "registry/default/example/typo/typography-p.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-p.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-p.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12082,12 +13582,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-small.tsx",
+        path: "registry/default/example/typo/typography-small.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-small.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-small.tsx")),
       source: "",
       meta: undefined,
     },
@@ -12097,12 +13597,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/typography-table.tsx",
+        path: "registry/default/example/typo/typography-table.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/typography-table.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/typo/typography-table.tsx")),
       source: "",
       meta: undefined,
     },

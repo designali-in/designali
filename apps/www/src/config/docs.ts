@@ -41,59 +41,7 @@ export const componentsConfig: ComponentsConfig = {
         },
       ],
     },
-    {
-      title: "Components",
-      items: [
-        {
-          title: "Alerts",
-          href: "/components/alert",
-        },
-        {
-          title: "Banners",
-          href: "/components/banner",
-        },
-        {
-          title: "Button",
-          href: "/components/button",
-        },
-        {
-          title: "Checkbox",
-          href: "/components/checkbox",
-        },
-        {
-          title: "Input",
-          href: "/components/input",
-        },
-        {
-          title: "Bento Grid",
-          href: "/components/bento-grid",
-        },
-        {
-          title: "Radio",
-          href: "/components/radio",
-        },
-        {
-          title: "Notifications",
-          href: "/components/notification",
-        },
-        {
-          title: "Select",
-          href: "/components/select",
-        },
-        {
-          title: "Slider",
-          href: "/components/slider",
-        },
-        {
-          title: "Switch",
-          href: "/components/switch",
-        },
-        {
-          title: "Textarea",
-          href: "/components/textarea",
-        },
-      ],
-    },
+
     {
       title: "Backgrounds",
       items: [
@@ -141,6 +89,71 @@ export const componentsConfig: ComponentsConfig = {
         {
           title: "Safari",
           href: "/components/mockups/safari",
+        },
+      ],
+    },
+    {
+      title: "Components",
+      items: [
+        {
+          title: "Accordion",
+          href: "/components/accordion",
+        },
+        {
+          title: "Alerts",
+          href: "/components/alert",
+        },
+        {
+          title: "Banners",
+          href: "/components/banner",
+        },
+        {
+          title: "Button",
+          href: "/components/button",
+        },
+        {
+          title: "Checkbox",
+          href: "/components/checkbox",
+        },
+        {
+          title: "Dialog",
+          href: "/components/dialog",
+        },
+        {
+          title: "Input",
+          href: "/components/input",
+        },
+        {
+          title: "Bento Grid",
+          href: "/components/bento-grid",
+        },
+        {
+          title: "Radio",
+          href: "/components/radio",
+        },
+        {
+          title: "Notifications",
+          href: "/components/notification",
+        },
+        {
+          title: "Select",
+          href: "/components/select",
+        },
+        {
+          title: "Slider",
+          href: "/components/slider",
+        },
+        {
+          title: "Switch",
+          href: "/components/switch",
+        },
+        {
+          title: "Textarea",
+          href: "/components/textarea",
+        },
+        {
+          title: "Tooltip",
+          href: "/components/tooltip",
         },
       ],
     },

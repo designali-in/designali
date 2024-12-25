@@ -95,6 +95,7 @@ export const colors = [
 export type ActiveTool =
   | "select"
   | "shapes"
+  | "icons"
   | "text"
   | "images"
   | "draw"
@@ -204,6 +205,7 @@ export type BuildEditorProps = {
 };
 
 export interface Editor {
+  addIcon: (icon: string) => void; // New method
   savePng: () => void;
   saveJpg: () => void;
   saveSvg: () => void;

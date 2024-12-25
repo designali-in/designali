@@ -9,6 +9,7 @@ import { DrawSidebar } from "./draw-sidebar";
 import { FillColorSidebar } from "./fill-color-sidebar";
 import { FilterSidebar } from "./filter-sidebar";
 import { FontSidebar } from "./font-sidebar";
+import { IconSidebar } from "./icon-sidebar";
 import { ImageSidebar } from "./image-sidebar";
 import { Navbar } from "./navbar";
 import { OpacitySidebar } from "./opacity-sidebar";
@@ -109,6 +110,11 @@ export const Editor = ({ initialData }: EditorProps) => {
         />
         <div className="relative -mt-1 h-[32rem]">
           <ShapeSidebar
+            editor={editor}
+            activeTool={activeTool}
+            onChangeActiveTool={onChangeActiveTool}
+          />
+          <IconSidebar
             editor={editor}
             activeTool={activeTool}
             onChangeActiveTool={onChangeActiveTool}
