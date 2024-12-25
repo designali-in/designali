@@ -71,8 +71,12 @@ const data = {
       title: "Tools",
       url: "/dashboard/tools",
       icon: DIcons.Settings2,
-      isActive: false,
+      isActive: true,
       items: [
+        {
+          title: "Deditor",
+          url: "/dashboard/deditor",
+        },
         {
           title: "Image Converter",
           url: "/dashboard/tools/image-converter",

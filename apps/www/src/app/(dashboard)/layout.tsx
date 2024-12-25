@@ -18,7 +18,7 @@ export default async function Users({ children }: ProtectedLayoutProps) {
       <div className="">
         <SidebarProvider>
           <AppSidebar user={user} />
-          <main className="relative m-3 w-full rounded-xl border bg-white shadow-sm dark:bg-black md:ml-0 ">
+          <main className="relative m-3 h-auto w-full rounded-xl border bg-white shadow-sm dark:bg-black md:ml-0 ">
             {children}
             <div className=" mt-6">
               <div className="absolute bottom-3 left-0 right-0 flex flex-col justify-between text-center text-xs ">

@@ -85,6 +85,7 @@
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.11",
+    "deditor": "workspace:*",
     "dicons": "workspace:*",
     "embla-carousel-autoplay": "^8.1.6",
     "embla-carousel-react": "^8.1.5",
