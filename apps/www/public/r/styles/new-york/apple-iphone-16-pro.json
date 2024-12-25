@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "blocks/apple-iphone-16-pro/page.tsx",
-      "content": "\"use client\";\n\nimport CloserLook from \"@/registry/default/blocks/apple-iphone-16-pro/components//closer-look\";\nimport Hero from \"@/registry/default/blocks/apple-iphone-16-pro/components/hero\";\nimport Highlights from \"@/registry/default/blocks/apple-iphone-16-pro/components/highlights\";\nconst iPhone16Pro = () => {\n  return (\n    <section id=\"home\">\n      <div className=\"bg-black\">\n        <Hero />\n        <Highlights />\n        <CloserLook />\n      </div>\n    </section>\n  );\n};\n\nexport default iPhone16Pro;\n",
+      "content": "\"use client\";\n\nimport Image from \"next/image\";\nimport CloserLook from \"@/registry/default/blocks/apple-iphone-16-pro/components//closer-look\";\nimport Hero from \"@/registry/default/blocks/apple-iphone-16-pro/components/hero\";\nimport Highlights from \"@/registry/default/blocks/apple-iphone-16-pro/components/highlights\";\nconst iPhone16Pro = () => {\n  return (\n    <section id=\"home\">\n      <div className=\"bg-black\">\n        <Hero />\n        <Highlights />\n        <CloserLook />\n        <div className=\"mb-40 flex justify-center\">\n          <Image\n            src=\"https://res.cloudinary.com/deelfmnhg/image/upload/v1735048891/banner_hello_yqpg3b.jpg\"\n            alt=\"Your Image\"\n            height={500}\n            width={500}\n            className=\" h-full w-96 object-cover\"\n          />\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport default iPhone16Pro;\n",
       "type": "registry:page",
       "target": "app/hero/page.tsx"
     },
