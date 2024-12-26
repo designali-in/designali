@@ -766,7 +766,6 @@ try {
     process.exit(1);
   }
 
-  await syncStyles();
   await buildRegistry(result.data);
   await buildStyles(result.data);
   await buildStylesIndex();

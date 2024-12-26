@@ -4,20 +4,14 @@ import * as React from "react";
 import Image from "next/image";
 import { Index } from "@/__registry__";
 import { CopyButton } from "@/comp/uis/copy-button";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/new-york/ui/tabs";
 import { styles } from "@/registry/registry-styles";
 import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
 import { useConfig } from "@/hooks/use-config";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { ThemeWrapper } from "../../common/theme-wrapper";
-import { StyleSwitcher } from "./style-switcher";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -160,7 +154,7 @@ export function ComponentPreview({
         </TabsContent>
         <TabsContent value="code">
           <div className="flex flex-col space-y-3">
-            <div className=" overflow-auto rounded-xl [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:max-w-xl [&_pre]:overflow-auto">
+            <div className=" overflow-auto rounded-xl [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:overflow-auto">
               {Code}
             </div>
           </div>

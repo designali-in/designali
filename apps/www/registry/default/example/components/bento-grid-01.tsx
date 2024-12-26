@@ -1,5 +1,5 @@
 import React from "react";
-import { BentoGrid, BentoGridItem } from "@/registry/new-york/ui/bento-grid";
+import { BentoGrid, BentoGridItem } from "@/registry/default/ui/bento-grid";
 import { DIcons } from "dicons";
 
 export default function BentoGrid01() {

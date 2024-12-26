@@ -4,7 +4,7 @@
 import type { Event } from "@/lib/events";
 import type { NpmCommands } from "@/types/unist";
 import ImageZoom from "@/comp/common/image-zoom";
-import { AspectRatio } from "@/registry/new-york/ui/aspect-ratio";
+import { AspectRatio } from "@/registry/default/ui/aspect-ratio";
 import { Style } from "@/registry/registry-styles";
 import { useMDXComponent } from "next-contentlayer/hooks";
 

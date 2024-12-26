@@ -1,9 +1,5 @@
 export const styles = [
   {
-    name: "new-york",
-    label: "Designali",
-  },
-  {
     name: "default",
     label: "Default",
   },

@@ -24,14 +24,14 @@ export function CodeBlockWrapper({
 
   return (
     <Collapsible open={isOpened} onOpenChange={setIsOpened}>
-      <div className={cn("relative overflow-auto", className)} {...props}>
+      <div className={cn("relative overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
-          className={cn("overflow-hidden", !isOpened && "max-h-64 max-w-5xl")}
+          className={cn("overflow-hidden", !isOpened && "max-h-64 ")}
         >
           <div
             className={cn(
-              "w-full [&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:max-w-5xl [&_pre]:pb-[100px]",
+              "w-full [&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:pb-[100px]",
               !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto",
             )}
           >

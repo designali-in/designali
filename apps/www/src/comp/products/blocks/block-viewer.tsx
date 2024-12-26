@@ -14,34 +14,12 @@ import type { z } from "zod";
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/registry/new-york/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/new-york/ui/collapsible";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/new-york/ui/resizable";
-import { Separator } from "@/registry/new-york/ui/separator";
-import {
-  Sidebar,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarProvider,
-} from "@/registry/new-york/ui/sidebar";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/new-york/ui/tabs";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/new-york/ui/toggle-group";
+} from "@/registry/default/ui/resizable";
+import { Separator } from "@/registry/default/ui/separator";
 import {
   Check,
   ChevronRight,
@@ -57,6 +35,25 @@ import {
 
 import { trackEvent } from "@/lib/events";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { Button } from "@/components/ui/button";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import {
+  Sidebar,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarProvider,
+} from "@/components/ui/sidebar";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>;
