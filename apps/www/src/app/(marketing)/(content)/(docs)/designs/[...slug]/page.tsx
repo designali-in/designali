@@ -48,19 +48,23 @@ export default async function GuidePage({ params }: GuidePageProps) {
   return (
     <main className="relative py-6 lg:grid lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_260px]">
       <div>
-        <DocsPageHeader heading={guide.title} text={guide.description} />
-        <ScrollProgress className="top-14" />
-        <ScrollArea>
-          <Mdx code={guide.body.code} />
-        </ScrollArea>
-        <Separator className="my-8" />
-        <div className="flex py-6 lg:py-10">
-          <Link href="/documentation" className="">
-            <Button variant="outline" size="lg">
-              See all documentation
-            </Button>
-          </Link>
-        </div>
+        <aside className=" fixed hidden h-[calc(100vh-4rem)] w-full shrink-0 md:sticky md:block">
+          <div className="no-scrollbar h-full overflow-auto ">
+            <DocsPageHeader heading={guide.title} text={guide.description} />
+            <ScrollProgress className="top-14" />
+            <ScrollArea>
+              <Mdx code={guide.body.code} />
+            </ScrollArea>
+            <Separator className="my-8" />
+            <div className="flex py-6 lg:py-10">
+              <Link href="/documentation" className="">
+                <Button variant="outline" size="lg">
+                  See all documentation
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </aside>
       </div>
 
       <div className="hidden text-sm xl:block">

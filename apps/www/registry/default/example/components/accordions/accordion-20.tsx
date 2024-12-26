@@ -26,7 +26,7 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Origin UI different?",
+    title: "What makes Designali different?",
     icon: Command,
     collapsibles: [
       {
@@ -64,7 +64,7 @@ const items = [
   },
   {
     id: "3",
-    title: "Is Origin UI optimized for performance?",
+    title: "Is Designali optimized for performance?",
     icon: Zap,
     collapsibles: [
       {
@@ -107,7 +107,12 @@ export default function AccordionDemo() {
   return (
     <div className="space-y-4">
       <h2 className="text-xl font-bold">Multi-level w/ icon</h2>
-      <Accordion type="single" collapsible className="w-full" defaultValue="3">
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full border-none"
+        defaultValue="3"
+      >
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id}>
             <AccordionTrigger className="justify-start gap-3 text-[15px] leading-6 hover:no-underline [&>svg]:-order-1">

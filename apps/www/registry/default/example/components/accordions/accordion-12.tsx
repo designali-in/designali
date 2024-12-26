@@ -12,9 +12,9 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Origin UI different?",
+    title: "What makes Designali different?",
     content:
-      "Origin UI focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
+      "Designali focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
   },
   {
     id: "2",
@@ -24,7 +24,7 @@ const items = [
   },
   {
     id: "3",
-    title: "Is Origin UI optimized for performance?",
+    title: "Is Designali optimized for performance?",
     content:
       "Yes, with tree-shaking, code splitting, and minimal runtime overhead. Most components are under 5KB gzipped.",
   },
@@ -43,7 +43,7 @@ export default function AccordionDemo() {
       <Accordion
         type="single"
         collapsible
-        className="w-full space-y-2"
+        className="w-full space-y-2 border-none"
         defaultValue="3"
       >
         {items.map((item) => (

@@ -117,12 +117,13 @@ export function ComponentPreview({
                   <DIcons.Code className="h-4 w-4" />
                 </TabsTrigger>
               </div>
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <CopyButton
                   value={codeString}
                   variant="ghost"
                   className=" h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
                 />
+                <p className="text-xs">{name}</p>
               </div>
             </TabsList>
           )}

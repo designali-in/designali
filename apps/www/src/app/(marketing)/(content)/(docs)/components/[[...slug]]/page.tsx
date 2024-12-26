@@ -57,55 +57,60 @@ export default async function DocPage({ params }: DesignPageProps) {
 
   return (
     <main className="relative grid lg:gap-10 xl:grid-cols-[1fr_260px]">
-      <div className="mx-auto w-full min-w-0 py-10">
-        <ScrollArea className="h-screen">
-          <DocsPager2 doc={doc} />
-          <DocsPageHeader heading={doc.title} text={doc.description} />
-          <ScrollProgress className="top-14" />
+      <aside className=" fixed hidden h-[calc(100vh-4rem)] w-full shrink-0 md:sticky md:block">
+        <div className="no-scrollbar h-full overflow-auto ">
+          <div className="mx-auto w-full min-w-0 py-10">
+            <DocsPager2 doc={doc} />
+            <DocsPageHeader heading={doc.title} text={doc.description} />
+            <ScrollProgress className="top-14" />
 
-          {doc.links ? (
-            <div className="flex items-center space-x-2 pt-4">
-              {doc.links.doc && (
-                <Link
-                  href={doc.links.doc}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={cn(
-                    buttonVariants({ size: "sm", variant: "outline" }),
-                    "gap-1",
-                  )}
-                >
-                  Docs
-                  <DIcons.ExternalLink className="h-3 w-3" />
-                </Link>
-              )}
-              {doc.links.api && (
-                <Link
-                  href={doc.links.api}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={cn(
-                    buttonVariants({ size: "sm", variant: "outline" }),
-                    "gap-1",
-                  )}
-                >
-                  API Reference
-                  <DIcons.ExternalLink className="h-3 w-3" />
-                </Link>
-              )}
-            </div>
-          ) : null}
+            {doc.links ? (
+              <div className="flex items-center space-x-2 pt-4">
+                {doc.links.doc && (
+                  <Link
+                    href={doc.links.doc}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={cn(
+                      buttonVariants({ size: "sm", variant: "outline" }),
+                      "gap-1",
+                    )}
+                  >
+                    Docs
+                    <DIcons.ExternalLink className="h-3 w-3" />
+                  </Link>
+                )}
+                {doc.links.api && (
+                  <Link
+                    href={doc.links.api}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={cn(
+                      buttonVariants({ size: "sm", variant: "outline" }),
+                      "gap-1",
+                    )}
+                  >
+                    API Reference
+                    <DIcons.ExternalLink className="h-3 w-3" />
+                  </Link>
+                )}
+              </div>
+            ) : null}
 
-          <Mdx code={doc.body.code} />
-        </ScrollArea>
-        <Separator className="my-8" />
-        <DocsPager doc={doc} />
-      </div>
+            <Mdx code={doc.body.code} />
+
+            <Separator className="my-8" />
+            <DocsPager doc={doc} />
+          </div>
+        </div>
+      </aside>
 
       <div className="hidden text-sm xl:block">
         <div className="sticky top-24 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
-          <DashboardTableOfContents toc={toc} />
-          <ThemeCustomizer />
+          <div className="no-scrollbar h-full overflow-auto pb-10">
+            <DashboardTableOfContents toc={toc} />
+            <ThemeCustomizer />
+          </div>
         </div>
       </div>
     </main>

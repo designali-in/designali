@@ -17,7 +17,7 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Origin UI different?",
+    title: "What makes Designali different?",
     collapsibles: [
       {
         title: "What about performance?",
@@ -49,7 +49,7 @@ const items = [
   },
   {
     id: "3",
-    title: "Is Origin UI optimized for performance?",
+    title: "Is Designali optimized for performance?",
     collapsibles: [
       {
         title: "What's the bundle size impact?",
@@ -89,7 +89,7 @@ export default function AccordionDemo() {
       <Accordion
         type="single"
         collapsible
-        className="w-full -space-y-px"
+        className="w-full -space-y-px border-none"
         defaultValue="3"
       >
         {items.map((item) => (
