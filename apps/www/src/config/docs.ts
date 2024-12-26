@@ -93,6 +93,15 @@ export const componentsConfig: ComponentsConfig = {
       ],
     },
     {
+      title: "Texts",
+      items: [
+        {
+          title: "Morphing Text",
+          href: "/components/texts/morphing-text",
+        },
+      ],
+    },
+    {
       title: "Components",
       items: [
         {
@@ -115,10 +124,13 @@ export const componentsConfig: ComponentsConfig = {
           title: "Banner",
           href: "/components/banner",
         },
-
         {
           title: "Bento Grid",
           href: "/components/bento-grid",
+        },
+        {
+          title: "Breadcrumb",
+          href: "/components/breadcrumb",
         },
         {
           title: "Button",
@@ -145,6 +157,10 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/notification",
         },
         {
+          title: "Pagination",
+          href: "/components/pagination",
+        },
+        {
           title: "Popover",
           href: "/components/popover",
         },
@@ -163,6 +179,10 @@ export const componentsConfig: ComponentsConfig = {
         {
           title: "Switch",
           href: "/components/switch",
+        },
+        {
+          title: "Tab",
+          href: "/components/tab",
         },
         {
           title: "Textarea",

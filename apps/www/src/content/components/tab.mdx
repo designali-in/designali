@@ -1,0 +1,68 @@
+---
+title: Tab
+description: Displays a tab or a component that looks like a tab.
+component: true
+---
+
+<div className="grid gap-3 lg:grid-cols-1 xl:grid-cols-2">
+  <ComponentPreview name="tab-01" />
+  <ComponentPreview name="tab-02" />
+  <ComponentPreview name="tab-03" />
+  <ComponentPreview name="tab-04" />
+  <ComponentPreview name="tab-05" />
+  <ComponentPreview name="tab-06" />
+  <ComponentPreview name="tab-07" />
+  <ComponentPreview name="tab-08" />
+  <ComponentPreview name="tab-09" />
+  <ComponentPreview name="tab-10" />
+  <ComponentPreview name="tab-11" />
+  <ComponentPreview name="tab-12" />
+  <ComponentPreview name="tab-13" />
+  <ComponentPreview name="tab-14" />
+  <ComponentPreview name="tab-15" />
+  <ComponentPreview name="tab-16" />
+  <ComponentPreview name="tab-17" />
+  <ComponentPreview name="tab-18" />
+  <ComponentPreview name="tab-19" />
+  <ComponentPreview name="tab-20" />
+</div>
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://designali.in/r/tab"
+```
+
+</TabsContent>
+
+<TabsContent classname="flex w-full"  value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tabs" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop      | Type   | Description                   | Default |
+| --------- | ------ | ----------------------------- | ------- |
+| variant   | any    | Width of the dot pattern      | 16      |
+| size      | any    | Height of the dot pattern     | 16      |
+| className | string | Class name of the dot pattern | -       |

@@ -1,0 +1,58 @@
+---
+title: Morphing Text
+description:
+  A background dot pattern made with SVGs, fully customizable using Tailwind
+  CSS.
+component: true
+---
+
+<ComponentPreview name="morphing-text-01" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://designali.in/r/morphing-text"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="morphing-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Simple
+
+<ComponentPreview name="morphing-text" />
+
+## Props
+
+| Prop      | Type   | Description                   | Default |
+| --------- | ------ | ----------------------------- | ------- |
+| width     | any    | Width of the dot pattern      | 16      |
+| height    | any    | Height of the dot pattern     | 16      |
+| x         | any    | X position of the dot         | 0       |
+| y         | any    | Y position of the dot         | 0       |
+| cx        | any    | X position of the circle      | 1       |
+| cy        | any    | Y position of the circle      | 1       |
+| cr        | any    | Radius of the circle          | 1       |
+| className | string | Class name of the dot pattern | -       |

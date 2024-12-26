@@ -1,0 +1,12 @@
+{
+  "name": "tab-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/tabs/tab-01.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\nexport default function TabDemo() {\n  return (\n    <Tabs defaultValue=\"tab-1\">\n      <TabsList>\n        <TabsTrigger value=\"tab-1\">Tab 1</TabsTrigger>\n        <TabsTrigger value=\"tab-2\">Tab 2</TabsTrigger>\n        <TabsTrigger value=\"tab-3\">Tab 3</TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"tab-1\">\n        <p className=\"p-4 text-center text-xs text-muted-foreground\">\n          Content for Tab 1\n        </p>\n      </TabsContent>\n      <TabsContent value=\"tab-2\">\n        <p className=\"p-4 text-center text-xs text-muted-foreground\">\n          Content for Tab 2\n        </p>\n      </TabsContent>\n      <TabsContent value=\"tab-3\">\n        <p className=\"p-4 text-center text-xs text-muted-foreground\">\n          Content for Tab 3\n        </p>\n      </TabsContent>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

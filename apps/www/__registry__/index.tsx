@@ -868,6 +868,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "morphing-text": {
+      name: "morphing-text",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/texts/morphing-text.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/texts/morphing-text.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "flickering-grid": {
       name: "flickering-grid",
       description: "",
@@ -7408,6 +7423,606 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "tab-01": {
+      name: "tab-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-02": {
+      name: "tab-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-03": {
+      name: "tab-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-04": {
+      name: "tab-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-05": {
+      name: "tab-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-06": {
+      name: "tab-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-07": {
+      name: "tab-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-08": {
+      name: "tab-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-09": {
+      name: "tab-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-10": {
+      name: "tab-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-11": {
+      name: "tab-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-12": {
+      name: "tab-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-13": {
+      name: "tab-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-14": {
+      name: "tab-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-15": {
+      name: "tab-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-16": {
+      name: "tab-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-17": {
+      name: "tab-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-18": {
+      name: "tab-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-19": {
+      name: "tab-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "tab-20": {
+      name: "tab-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/tabs/tab-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/tabs/tab-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-01": {
+      name: "breadcrumb-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-02": {
+      name: "breadcrumb-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-03": {
+      name: "breadcrumb-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-04": {
+      name: "breadcrumb-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-05": {
+      name: "breadcrumb-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-06": {
+      name: "breadcrumb-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-07": {
+      name: "breadcrumb-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "breadcrumb-08": {
+      name: "breadcrumb-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/breadcrumbs/breadcrumb-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/breadcrumbs/breadcrumb-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-01": {
+      name: "pagination-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-02": {
+      name: "pagination-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-03": {
+      name: "pagination-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-04": {
+      name: "pagination-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-05": {
+      name: "pagination-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-06": {
+      name: "pagination-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-07": {
+      name: "pagination-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-08": {
+      name: "pagination-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-09": {
+      name: "pagination-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-10": {
+      name: "pagination-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-11": {
+      name: "pagination-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "pagination-12": {
+      name: "pagination-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/paginations/pagination-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/paginations/pagination-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -7420,6 +8035,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/components/bento-grid-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "morphing-text-01": {
+      name: "morphing-text-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/texts/morphing-text-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/texts/morphing-text-01.tsx")),
       source: "",
       meta: undefined,
     },
@@ -7744,6 +8374,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/hooks/use-toast.ts")),
+      source: "",
+      meta: undefined,
+    },
+    "use-pagination": {
+      name: "use-pagination",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/hooks/use-pagination.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/hooks/use-pagination.ts")),
       source: "",
       meta: undefined,
     },

@@ -710,6 +710,19 @@ export const ui: Registry = [
     ],
   },
 
+  // Text
+
+  {
+    name: "morphing-text",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/texts/morphing-text.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+
   //  Background
 
   {

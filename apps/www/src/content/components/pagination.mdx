@@ -1,0 +1,60 @@
+---
+title: Pagination
+description: Displays a pagination or a component that looks like a pagination.
+component: true
+---
+
+<div className="grid gap-3 lg:grid-cols-1 xl:grid-cols-2">
+  <ComponentPreview name="pagination-01" />
+  <ComponentPreview name="pagination-02" />
+  <ComponentPreview name="pagination-03" />
+  <ComponentPreview name="pagination-04" />
+  <ComponentPreview name="pagination-05" />
+  <ComponentPreview name="pagination-06" />
+  <ComponentPreview name="pagination-07" />
+  <ComponentPreview name="pagination-08" />
+  <ComponentPreview name="pagination-09" />
+  <ComponentPreview name="pagination-10" />
+  <ComponentPreview name="pagination-11" />
+  <ComponentPreview name="pagination-12" />
+</div>
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://designali.in/r/pagination"
+```
+
+</TabsContent>
+
+<TabsContent classname="flex w-full"  value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pagination" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop      | Type   | Description                   | Default |
+| --------- | ------ | ----------------------------- | ------- |
+| variant   | any    | Width of the dot pattern      | 16      |
+| size      | any    | Height of the dot pattern     | 16      |
+| className | string | Class name of the dot pattern | -       |

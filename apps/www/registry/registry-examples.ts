@@ -4323,6 +4323,406 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "tab-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tab-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/tabs/tab-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumb-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/breadcrumbs/breadcrumb-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/paginations/pagination-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 
   {
     name: "bento-grid-01",
@@ -4330,6 +4730,19 @@ export const examples: Registry = [
     files: [
       {
         path: "example/components/bento-grid-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
+  // Texts
+
+  {
+    name: "morphing-text-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/texts/morphing-text-01.tsx",
         type: "registry:example",
       },
     ],

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/badges/badge-09.tsx",
-      "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return (\n    <Badge variant=\"outline\" className=\"gap-1.5\">\n      <span className=\"size-1.5 rounded-full bg-amber-500\" aria-hidden=\"true\"></span>\n      Badge\n    </Badge>\n  );\n}\n",
+      "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return (\n    <Badge variant=\"outline\" className=\"gap-1.5\">\n      <span\n        className=\"size-1.5 rounded-full bg-amber-500\"\n        aria-hidden=\"true\"\n      ></span>\n      Badge\n    </Badge>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

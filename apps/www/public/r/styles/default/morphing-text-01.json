@@ -1,0 +1,12 @@
+{
+  "name": "morphing-text-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/texts/morphing-text-01.tsx",
+      "content": "import MorphingText from \"@/registry/default/ui/texts/morphing-text\";\n\nconst texts = [\n  \"Hello\",\n  \"Designali\",\n  \"Text\",\n  \"Animation\",\n  \"Design\",\n  \"Component\",\n  \"Smooth\",\n  \"Transition\",\n];\n\nexport default function MorphingTextDemo() {\n  return <MorphingText texts={texts} />;\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

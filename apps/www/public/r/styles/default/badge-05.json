@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/badges/badge-05.tsx",
-      "content": "import { badgeVariants } from \"@/components/ui/badge\";\nimport { cn } from \"@/lib/utils\";\n\nexport default function BadgeDemo() {\n  return (\n    <a href=\"#\" className={cn(badgeVariants({ variant: \"default\" }), \"hover:bg-primary/80\")}>\n      Link\n    </a>\n  );\n}\n",
+      "content": "import { cn } from \"@/lib/utils\";\nimport { badgeVariants } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return (\n    <a\n      href=\"#\"\n      className={cn(\n        badgeVariants({ variant: \"default\" }),\n        \"hover:bg-primary/80\",\n      )}\n    >\n      Link\n    </a>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }
