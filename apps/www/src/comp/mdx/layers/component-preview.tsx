@@ -129,7 +129,6 @@ export function ComponentPreview({
                   variant="ghost"
                   className=" h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
                 />
-                <StyleSwitcher />
               </div>
             </TabsList>
           )}

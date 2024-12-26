@@ -3724,6 +3724,247 @@ export const examples: Registry = [
   },
 
   {
+    name: "dropdown-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/dropdowns/dropdown-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/popovers/popover-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
+  {
     name: "bento-grid-01",
     type: "registry:example",
     files: [

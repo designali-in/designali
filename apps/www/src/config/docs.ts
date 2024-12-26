@@ -108,6 +108,10 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/banner",
         },
         {
+          title: "Bento Grid",
+          href: "/components/bento-grid",
+        },
+        {
           title: "Button",
           href: "/components/button",
         },
@@ -120,20 +124,24 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/dialog",
         },
         {
+          title: "Dropdown",
+          href: "/components/dropdown",
+        },
+        {
           title: "Input",
           href: "/components/input",
         },
         {
-          title: "Bento Grid",
-          href: "/components/bento-grid",
+          title: "Notifications",
+          href: "/components/notification",
+        },
+        {
+          title: "Popover",
+          href: "/components/popover",
         },
         {
           title: "Radio",
           href: "/components/radio",
-        },
-        {
-          title: "Notifications",
-          href: "/components/notification",
         },
         {
           title: "Select",

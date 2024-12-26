@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/tooltips/tooltip-03.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport default function TooltipDemo() {\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\" size=\"sm\">\n            W/ arrow\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className=\"dark px-2 py-1 text-xs\" showArrow={true}>\n          This tooltip has an arrow\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nexport default function TooltipDemo() {\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\" size=\"sm\">\n            W/ arrow\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className=\"dark px-2 py-1 text-xs\" showArrow={true}>\n          This tooltip has an arrow\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

@@ -6508,6 +6508,366 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "dropdown-01": {
+      name: "dropdown-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-02": {
+      name: "dropdown-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-03": {
+      name: "dropdown-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-04": {
+      name: "dropdown-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-05": {
+      name: "dropdown-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-06": {
+      name: "dropdown-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-07": {
+      name: "dropdown-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-08": {
+      name: "dropdown-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-09": {
+      name: "dropdown-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-10": {
+      name: "dropdown-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-11": {
+      name: "dropdown-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-12": {
+      name: "dropdown-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-13": {
+      name: "dropdown-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-14": {
+      name: "dropdown-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-15": {
+      name: "dropdown-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/dropdowns/dropdown-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/dropdowns/dropdown-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-01": {
+      name: "popover-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-02": {
+      name: "popover-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-03": {
+      name: "popover-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-04": {
+      name: "popover-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-05": {
+      name: "popover-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-06": {
+      name: "popover-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-07": {
+      name: "popover-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-08": {
+      name: "popover-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-09": {
+      name: "popover-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/example/components/popovers/popover-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/example/components/popovers/popover-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",
@@ -13378,6 +13738,366 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/components/tooltips/tooltip-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-01": {
+      name: "dropdown-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-02": {
+      name: "dropdown-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-03": {
+      name: "dropdown-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-04": {
+      name: "dropdown-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-05": {
+      name: "dropdown-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-06": {
+      name: "dropdown-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-07": {
+      name: "dropdown-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-08": {
+      name: "dropdown-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-09": {
+      name: "dropdown-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-10": {
+      name: "dropdown-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-11": {
+      name: "dropdown-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-12": {
+      name: "dropdown-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-13": {
+      name: "dropdown-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-14": {
+      name: "dropdown-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "dropdown-15": {
+      name: "dropdown-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/dropdowns/dropdown-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/dropdowns/dropdown-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-01": {
+      name: "popover-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-02": {
+      name: "popover-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-03": {
+      name: "popover-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-04": {
+      name: "popover-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-05": {
+      name: "popover-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-06": {
+      name: "popover-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-07": {
+      name: "popover-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-08": {
+      name: "popover-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "popover-09": {
+      name: "popover-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/popovers/popover-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/popovers/popover-09.tsx")),
       source: "",
       meta: undefined,
     },

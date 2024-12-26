@@ -1,0 +1,57 @@
+---
+title: Popover
+description: Displays a popover or a component that looks like a popover.
+component: true
+---
+
+<div className="grid gap-3 lg:grid-cols-2  xl:grid-cols-3">
+  <ComponentPreview name="popover-01" />
+  <ComponentPreview name="popover-02" />
+  <ComponentPreview name="popover-03" />
+  <ComponentPreview name="popover-04" />
+  <ComponentPreview name="popover-05" />
+  <ComponentPreview name="popover-06" />
+  <ComponentPreview name="popover-07" />
+  <ComponentPreview name="popover-08" />
+  <ComponentPreview name="popover-09" />
+</div>
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://designali.in/r/popover"
+```
+
+</TabsContent>
+
+<TabsContent classname="flex w-full"  value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="popover" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop      | Type   | Description                   | Default |
+| --------- | ------ | ----------------------------- | ------- |
+| variant   | any    | Width of the dot pattern      | 16      |
+| size      | any    | Height of the dot pattern     | 16      |
+| className | string | Class name of the dot pattern | -       |

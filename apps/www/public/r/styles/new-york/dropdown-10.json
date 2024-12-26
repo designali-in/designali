@@ -1,0 +1,12 @@
+{
+  "name": "dropdown-10",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/dropdowns/dropdown-10.tsx",
+      "content": "import { CircleUserRound } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function DropdownDemo() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button size=\"icon\" variant=\"outline\" aria-label=\"Open account menu\">\n          <CircleUserRound size={16} strokeWidth={2} aria-hidden=\"true\" />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"max-w-64\">\n        <DropdownMenuLabel className=\"flex flex-col\">\n          <span>Signed in as</span>\n          <span className=\"text-xs font-normal text-foreground\">\n            k.kennedy@originui.com\n          </span>\n        </DropdownMenuLabel>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem>Option 1</DropdownMenuItem>\n          <DropdownMenuItem>Option 2</DropdownMenuItem>\n          <DropdownMenuItem>Option 3</DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem>Logout</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
