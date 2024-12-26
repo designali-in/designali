@@ -6868,6 +6868,546 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "avatar-01": {
+      name: "avatar-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-02": {
+      name: "avatar-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-03": {
+      name: "avatar-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-04": {
+      name: "avatar-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-05": {
+      name: "avatar-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-06": {
+      name: "avatar-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-07": {
+      name: "avatar-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-08": {
+      name: "avatar-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-09": {
+      name: "avatar-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-10": {
+      name: "avatar-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-11": {
+      name: "avatar-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-12": {
+      name: "avatar-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-13": {
+      name: "avatar-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-14": {
+      name: "avatar-14",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-14.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-14.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-15": {
+      name: "avatar-15",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-15.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-15.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-16": {
+      name: "avatar-16",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-16.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-16.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-17": {
+      name: "avatar-17",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-17.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-17.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-18": {
+      name: "avatar-18",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-18.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-18.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-19": {
+      name: "avatar-19",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-19.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-19.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-20": {
+      name: "avatar-20",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-20.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-20.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-21": {
+      name: "avatar-21",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-21.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-21.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-22": {
+      name: "avatar-22",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-22.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-22.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "avatar-23": {
+      name: "avatar-23",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/avatars/avatar-23.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/avatars/avatar-23.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-01": {
+      name: "badge-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-02": {
+      name: "badge-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-03": {
+      name: "badge-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-04": {
+      name: "badge-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-04.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-05": {
+      name: "badge-05",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-05.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-05.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-06": {
+      name: "badge-06",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-06.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-06.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-07": {
+      name: "badge-07",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-07.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-07.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-08": {
+      name: "badge-08",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-08.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-08.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-09": {
+      name: "badge-09",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-09.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-09.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-10": {
+      name: "badge-10",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-10.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-10.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-11": {
+      name: "badge-11",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-11.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-11.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-12": {
+      name: "badge-12",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-12.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-12.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "badge-13": {
+      name: "badge-13",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/badges/badge-13.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/badges/badge-13.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "bento-grid-01": {
       name: "bento-grid-01",
       description: "",

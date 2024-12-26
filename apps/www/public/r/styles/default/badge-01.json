@@ -1,0 +1,12 @@
+{
+  "name": "badge-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/badges/badge-01.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return <Badge>Badge</Badge>;\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

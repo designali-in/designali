@@ -1,0 +1,12 @@
+{
+  "name": "badge-08",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/badges/badge-08.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return (\n    <Badge variant=\"outline\" className=\"gap-1.5\">\n      <span className=\"size-1.5 rounded-full bg-emerald-500\" aria-hidden=\"true\"></span>\n      Badge\n    </Badge>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

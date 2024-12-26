@@ -100,13 +100,22 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/accordion",
         },
         {
-          title: "Alerts",
+          title: "Alert",
           href: "/components/alert",
         },
         {
-          title: "Banners",
+          title: "Avatar",
+          href: "/components/avatar",
+        },
+        {
+          title: "Badge",
+          href: "/components/badge",
+        },
+        {
+          title: "Banner",
           href: "/components/banner",
         },
+
         {
           title: "Bento Grid",
           href: "/components/bento-grid",

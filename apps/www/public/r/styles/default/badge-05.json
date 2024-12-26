@@ -1,0 +1,12 @@
+{
+  "name": "badge-05",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/badges/badge-05.tsx",
+      "content": "import { badgeVariants } from \"@/components/ui/badge\";\nimport { cn } from \"@/lib/utils\";\n\nexport default function BadgeDemo() {\n  return (\n    <a href=\"#\" className={cn(badgeVariants({ variant: \"default\" }), \"hover:bg-primary/80\")}>\n      Link\n    </a>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

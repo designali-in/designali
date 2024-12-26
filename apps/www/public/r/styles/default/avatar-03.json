@@ -1,0 +1,12 @@
+{
+  "name": "avatar-03",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/components/avatars/avatar-03.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\nimport { UserRound } from \"lucide-react\";\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar>\n      <AvatarFallback>\n        <UserRound size={16} strokeWidth={2} className=\"opacity-60\" aria-hidden=\"true\" />\n      </AvatarFallback>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

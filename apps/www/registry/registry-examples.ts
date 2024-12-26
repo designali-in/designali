@@ -3963,6 +3963,366 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "avatar-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-14",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-14.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-15",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-15.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-16",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-16.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-17",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-17.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-18",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-18.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-19",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-19.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-20",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-20.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-21",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-21.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-22",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-22.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-23",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/avatars/avatar-23.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-04.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-05",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-05.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-06",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-06.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-07",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-07.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-08",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-09",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-10",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-11",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-12",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-13",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/badges/badge-13.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 
   {
     name: "bento-grid-01",
