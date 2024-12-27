@@ -1,0 +1,12 @@
+{
+  "name": "number-counter-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/texts/number-counter-01.tsx",
+      "content": "import NumberCounter from \"@/components/ui/texts/number-counter\";\n\nexport default function NumberTickerDemo() {\n  return (\n    <p className=\"whitespace-pre-wrap text-8xl font-bold tracking-tighter \">\n      <NumberCounter value={100} />\n    </p>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

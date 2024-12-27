@@ -722,6 +722,16 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "number-counter",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/texts/number-counter.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 
   //  Background
 
@@ -731,6 +741,16 @@ export const ui: Registry = [
     files: [
       {
         path: "ui/backgrounds/flickering-grid.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "scroll-progress",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/backgrounds/scroll-progress.tsx",
         type: "registry:ui",
       },
     ],

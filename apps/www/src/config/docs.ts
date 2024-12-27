@@ -65,6 +65,10 @@ export const componentsConfig: ComponentsConfig = {
           title: "Ripple",
           href: "/components/backgrounds/ripple",
         },
+        {
+          title: "Scroll Progress",
+          href: "/components/backgrounds/scroll-progress",
+        },
       ],
     },
     {
@@ -98,6 +102,10 @@ export const componentsConfig: ComponentsConfig = {
         {
           title: "Morphing Text",
           href: "/components/texts/morphing-text",
+        },
+        {
+          title: "Number Counter",
+          href: "/components/texts/number-counter",
         },
       ],
     },

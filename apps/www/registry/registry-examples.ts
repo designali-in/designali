@@ -13,6 +13,16 @@ export const examples: Registry = [
     ],
   },
   {
+    name: "scroll-progress-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/backgrounds/scroll-progress-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "grid-pattern-01",
     type: "registry:example",
     files: [
@@ -4743,6 +4753,26 @@ export const examples: Registry = [
     files: [
       {
         path: "example/texts/morphing-text-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "number-counter-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/texts/number-counter-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "number-counter-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/texts/number-counter-02.tsx",
         type: "registry:example",
       },
     ],

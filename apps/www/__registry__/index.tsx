@@ -883,6 +883,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "number-counter": {
+      name: "number-counter",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/texts/number-counter.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/texts/number-counter.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "flickering-grid": {
       name: "flickering-grid",
       description: "",
@@ -895,6 +910,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/backgrounds/flickering-grid.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "scroll-progress": {
+      name: "scroll-progress",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/backgrounds/scroll-progress.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/backgrounds/scroll-progress.tsx")),
       source: "",
       meta: undefined,
     },
@@ -970,6 +1000,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/backgrounds/dot-pattern-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "scroll-progress-01": {
+      name: "scroll-progress-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/backgrounds/scroll-progress-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/backgrounds/scroll-progress-01.tsx")),
       source: "",
       meta: undefined,
     },
@@ -8050,6 +8095,36 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/texts/morphing-text-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "number-counter-01": {
+      name: "number-counter-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/texts/number-counter-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/texts/number-counter-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "number-counter-02": {
+      name: "number-counter-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/texts/number-counter-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/texts/number-counter-02.tsx")),
       source: "",
       meta: undefined,
     },
