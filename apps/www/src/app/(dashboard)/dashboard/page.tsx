@@ -20,6 +20,7 @@ export default function Page() {
         <div className=" grid gap-4  ">
           <UserId />
         </div>
+
         <div className="mx-auto mt-10 w-full max-w-4xl rounded-3xl border">
           <Chatbot />
         </div>
