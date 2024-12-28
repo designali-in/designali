@@ -157,20 +157,20 @@ export function GradientGenerator() {
   return (
     <div className="mt-10 flex items-center justify-center  p-6 xl:p-0">
       <div className="mx-auto w-full max-w-7xl space-y-2 rounded-2xl border-2 bg-popover/80 p-6">
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           <div className="relative">
             <div
-              className="aspect-square h-full w-80 rounded-md"
+              className="aspect-square h-full w-60 rounded-md md:w-80"
               style={gradientStyle}
             ></div>
             <canvas
               ref={displayCanvasRef}
               width={1000}
               height={1000}
-              className="absolute left-0 top-0 aspect-square h-full w-80 rounded-md mix-blend-overlay"
+              className="absolute left-0 top-0 aspect-square h-full w-60 rounded-md mix-blend-overlay md:w-80"
             />
           </div>
-          <div className="grid w-full gap-2">
+          <div className="grid w-full flex-1 gap-2">
             <div className="flex flex-wrap items-center gap-2">
               {colorStops.map((stop, index) => (
                 <div key={index} className="flex items-center gap-2">
@@ -222,7 +222,6 @@ export function GradientGenerator() {
               )}
             </div>
             <div className="flex items-center gap-2">
-              <Label htmlFor="gradient-type">Gradient Type</Label>
               <div className="flex items-center gap-2">
                 <Label className={!isRadialGradient ? "font-medium" : ""}>
                   Linear
@@ -236,26 +235,27 @@ export function GradientGenerator() {
                   Radial
                 </Label>
               </div>
+              {!isRadialGradient && (
+                <div className="flex w-full items-center gap-2">
+                  <Label className="w-auto" htmlFor="angle">
+                    Angle
+                  </Label>
+                  <Slider
+                    id="angle"
+                    value={[angle]}
+                    defaultValue={[33]}
+                    min={0}
+                    max={360}
+                    className="w-full"
+                    onValueChange={(value) => setAngle(Number(value))}
+                  />
+                  <Label className="w-auto" htmlFor="angle">
+                    {angle}°
+                  </Label>
+                </div>
+              )}
             </div>
-            {!isRadialGradient && (
-              <div className="flex w-full items-center gap-2">
-                <Label className="w-auto" htmlFor="angle">
-                  Angle
-                </Label>
-                <Slider
-                  id="angle"
-                  value={[angle]}
-                  defaultValue={[33]}
-                  min={0}
-                  max={360}
-                  className="w-full"
-                  onValueChange={(value) => setAngle(Number(value))}
-                />
-                <Label className="w-auto" htmlFor="angle">
-                  {angle}°
-                </Label>
-              </div>
-            )}
+
             <div className="flex w-full items-center gap-2">
               <Switch
                 id="apply-noise"
