@@ -73,91 +73,97 @@ function Customizer() {
       defaultTheme="slate"
       className="justify-center space-y-4 rounded-2xl border bg-white p-6 dark:bg-black md:space-y-6"
     >
-      <div className="space-y-4 md:space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <CopyCodeButton
-            variant="outline"
-            size="sm"
-            className="[&_svg]:hidden"
-          />
-          <Button
-            variant="ghost"
-            size="icon"
-            className="ml-auto rounded-[0.5rem]"
-            onClick={() => {
-              setConfig({
-                ...config,
-                theme: "violet",
-                radius: 0.8,
-              });
-            }}
-          >
-            <ResetIcon />
-            <span className="sr-only">Reset</span>
-          </Button>
-        </div>
-        <div className="flex gap-2">
-          <p>Radius</p>
-          <Slider
-            defaultValue={[0.8]}
-            max={1.5}
-            min={0}
-            step={0.1}
-            onValueChange={(value) => {
-              setConfig({
-                ...config,
-                radius: value[0], // Access the first element if value is passed as an array
-              });
-            }}
-            name="value"
-            value={[config.radius]}
-            className="w-full"
-          />
-          {config.radius}
-        </div>
+      <div className="flex items-center gap-4 space-y-4 md:space-y-6">
+        <div className="grid gap-4">
+          <div className="flex flex-wrap items-center gap-2 ">
+            <CopyCodeButton
+              variant="outline"
+              size="sm"
+              className="[&_svg]:hidden"
+            />
+            <Button
+              variant="ghost"
+              size="icon"
+              className=" rounded-[0.5rem]"
+              onClick={() => {
+                setConfig({
+                  ...config,
+                  theme: "violet",
+                  radius: 0.8,
+                });
+              }}
+            >
+              <ResetIcon />
+              <span className="sr-only">Reset</span>
+            </Button>
+            <div className="flex w-full  gap-2">
+              <p>Radius</p>
+              <Slider
+                defaultValue={[0.8]}
+                max={1.5}
+                min={0}
+                step={0.1}
+                onValueChange={(value) => {
+                  setConfig({
+                    ...config,
+                    radius: value[0], // Access the first element if value is passed as an array
+                  });
+                }}
+                name="value"
+                value={[config.radius]}
+                className="w-40 md:w-full"
+              />
+              {config.radius}
+            </div>
+          </div>
 
-        <div className="space-y-1.5">
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {baseColors.map((theme) => {
-              const isActive = config.theme === theme.name;
+          <div className="space-y-1.5">
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {baseColors.map((theme) => {
+                const isActive = config.theme === theme.name;
 
-              return mounted ? (
-                <div>
-                  <Button
-                    variant={"outline"}
-                    size="icon"
-                    key={theme.name}
-                    onClick={() => {
-                      setConfig({
-                        ...config,
-                        theme: theme.name,
-                      });
-                    }}
-                    className={cn(
-                      "rounded-2xl",
-                      isActive && "border-ali rounded-2xl border-2",
-                    )}
-                    style={
-                      {
-                        "--theme-ali": `hsl(${
-                          theme.activeColor[mode === "dark" ? "dark" : "light"]
-                        })`,
-                      } as React.CSSProperties
-                    }
-                  >
-                    <span
+                return mounted ? (
+                  <div>
+                    <Button
+                      variant={"outline"}
+                      size="icon"
+                      key={theme.name}
+                      onClick={() => {
+                        setConfig({
+                          ...config,
+                          theme: theme.name,
+                        });
+                      }}
                       className={cn(
-                        "flex h-6 w-6 items-center justify-center rounded-xl bg-[--theme-ali]",
+                        "rounded-2xl",
+                        isActive && "border-ali rounded-2xl border-2",
                       )}
+                      style={
+                        {
+                          "--theme-ali": `hsl(${
+                            theme.activeColor[
+                              mode === "dark" ? "dark" : "light"
+                            ]
+                          })`,
+                        } as React.CSSProperties
+                      }
                     >
-                      {isActive && <CheckIcon className="h-4 w-4 text-white" />}
-                    </span>
-                  </Button>
-                </div>
-              ) : (
-                <Skeleton className="h-5" key={theme.name} />
-              );
-            })}
+                      <span
+                        className={cn(
+                          "flex h-6 w-6 items-center justify-center rounded-xl bg-[--theme-ali]",
+                        )}
+                      >
+                        {isActive && (
+                          <CheckIcon className="h-4 w-4 text-white" />
+                        )}
+                      </span>
+                    </Button>
+                  </div>
+                ) : (
+                  <Skeleton className="h-5" key={theme.name} />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

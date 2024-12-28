@@ -45,7 +45,7 @@ export default function BlocksLayout({
             id="blocks"
             className="border-grid mt-6 scroll-mt-24 border-b border-t"
           >
-            <div className="container flex items-center py-4">
+            <div className="flex items-center py-4">
               <BlocksNav />
             </div>
           </div>
