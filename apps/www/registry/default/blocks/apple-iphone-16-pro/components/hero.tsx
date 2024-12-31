@@ -6,10 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section
-      id="apple"
-      className="relative min-h-screen w-full overflow-hidden"
-    >
+    <section id="apple" className="relative -mt-20  w-full overflow-hidden">
       <Image
         src="https://res.cloudinary.com/deelfmnhg/image/upload/v1734266403/hero_endframe__b3cjfkquc2s2_medium_2x_cuvooz.jpg"
         alt="iPhone 16 Pro Background"

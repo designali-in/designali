@@ -9,12 +9,6 @@ createJiti(fileURLToPath(import.meta.url))("./src/env");
 const config = {
   reactStrictMode: true,
   swcMinify: true,
-  resolve: {
-    fallback: {
-      https: false,
-      http: false,
-    },
-  },
   webpack(config, { isServer }) {
     if (!isServer) {
       config.resolve.fallback = {
@@ -24,12 +18,10 @@ const config = {
         https: false,
       };
     }
-
+    config.module.exprContextCritical = false;
     return config;
   },
-  /** Enables hot reloading for local packages without a build step */
   transpilePackages: ["@designali/*", "dicons"],
-
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -62,20 +54,23 @@ const config = {
         hostname: "scontent-del2-1.cdninstagram.com",
         port: "",
       },
-    ],
-    domains: [
-      "uploadthing.com",
-      "avatars.githubusercontent.com",
-      "res.cloudinary.com",
-      "lh3.googleusercontent.com",
-      "utfs.io",
-      "scontent-del1-2.cdninstagram.com",
-      "scontent-del1-1.cdninstagram.com",
-      "scontent-del2-1.cdninstagram.com",
+      {
+        protocol: "https",
+        hostname: "uploadthing.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        port: "",
+      },
     ],
   },
-
-  /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   experimental: {

@@ -42,17 +42,17 @@ const Highlights = () => {
             }}
           >
             <CarouselContent>
-              <CarouselItem>
-                <p className="absolute left-10 top-6 w-80 p-2 text-2xl">
+              <CarouselItem className="h-full w-full rounded-lg bg-black">
+                <p className=" w-60 p-6 text-2xl text-white sm:w-80">
                   The first iPhone designed for Apple Intelligence. Personal,
-                  private, powerful.1
+                  private, powerful.
                 </p>
                 <Image
                   src={
                     "https://res.cloudinary.com/deelfmnhg/image/upload/v1734288045/highlights_apple_intelligence_endframe__esdley4zqkya_large_2x_nrim45.jpg"
                   }
-                  alt={""}
-                  className="h-[700px] w-full rounded-lg object-cover object-center"
+                  alt={"designali"}
+                  className=" h-full w-80 object-cover object-center sm:w-full "
                   width={500}
                   height={300}
                 />

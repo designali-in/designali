@@ -15,18 +15,18 @@ const iPhone16Pro = () => {
   return (
     <section id="home">
       <div className="bg-black">
-        <Hero />
-        <Highlights />
-        <CloserLook />
-        <div className="mb-40 flex justify-center">
+        <div className=" flex justify-center px-10">
           <Image
             src="https://res.cloudinary.com/deelfmnhg/image/upload/v1735048891/banner_hello_yqpg3b.jpg"
             alt="Your Image"
             height={500}
             width={500}
-            className=" h-full w-96 object-cover"
+            className="z-20 mt-20 h-full w-96 object-cover  "
           />
         </div>
+        <Hero />
+        <Highlights />
+        <CloserLook />
       </div>
     </section>
   );
