@@ -88,7 +88,7 @@ export function Chatbot() {
                     </span>
                   </h1>
                 </div>
-                <p className="md:text-md lg:text-md mx-auto mt-1 text-center text-xs text-slate-600 dark:text-slate-400 md:max-w-2xl">
+                <p className="md:text-md lg:text-md mx-auto mt-1 text-center text-xs text-primary/60 md:max-w-2xl">
                   How can I help you today?
                 </p>
               </div>
@@ -97,13 +97,11 @@ export function Chatbot() {
                   <div className={cn("pt-4")}>
                     {messages.map((m) => (
                       <div key={m.id} className="space-y-2 overflow-hidden p-2">
-                        <p className="font-bold text-black dark:text-white">
+                        <p className="font-bold text-primary">
                           {" "}
                           {m.role === "user" ? "You: " : "AI: "}
                         </p>
-                        <p className="text-slate-600 dark:text-slate-400">
-                          {m.content}
-                        </p>
+                        <p className="text-primary/60">{m.content}</p>
                       </div>
                     ))}
                   </div>
@@ -126,12 +124,12 @@ export function Chatbot() {
               <Button
                 variant="default"
                 size="icon"
-                className="bg-ali absolute left-0  top-0"
+                className=" absolute left-1 top-1 h-7  rounded-sm"
                 onClick={() => {
                   router.push("/#chat");
                 }}
               >
-                <Icons.plus className="h-5 w-5 text-white" />
+                <Icons.plus className="h-5 w-5 " />
 
                 <span className="sr-only">New Chat</span>
               </Button>
@@ -140,10 +138,10 @@ export function Chatbot() {
                 type="submit"
                 variant="default"
                 size="icon"
-                className="bg-ali absolute right-0 top-0"
+                className=" absolute right-1 top-1 h-7 rounded-sm"
                 disabled={input === ""}
               >
-                <Icons.enter className="mx-1 h-4 w-4 text-white" />
+                <Icons.enter className="mx-1 h-4 w-4 " />
               </Button>
             </div>
           </div>

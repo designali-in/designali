@@ -90,7 +90,7 @@ export function Footer() {
             <Logo className="w-8" />
           </p>
         </Link>
-        <p className="bg-transparent text-center text-xs leading-4 text-slate-400 dark:text-slate-600 md:text-left">
+        <p className="bg-transparent text-center text-xs leading-4 text-primary/60 md:text-left">
           Welcome to Designali, where creativity meets strategy to bring your
           vision to life. I am passionate about transforming ideas into
           compelling visual experiences. I specialize in crafting unique brand

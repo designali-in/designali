@@ -91,7 +91,7 @@ export const Connect: React.FC = () => {
                       id="typescript"
                       className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Video Editing
+                      Web Application
                     </div>
                     <div
                       id="javascript"
@@ -116,7 +116,7 @@ export const Connect: React.FC = () => {
                           d="M12 5.50676L0 0L2.83818 13L6.30623 7.86537L12 5.50676V5.50676Z"
                         />
                       </svg>
-                      <span className="bg-aired relative -top-1 left-3 rounded-3xl px-2 py-1 text-xs text-white">
+                      <span className="bg-ali relative -top-1 left-3 rounded-3xl px-2 py-1 text-xs text-white">
                         Ali
                       </span>
                     </div>
@@ -124,7 +124,7 @@ export const Connect: React.FC = () => {
 
                   <div className="-mt-20 flex h-full flex-col justify-center p-2 md:-mt-4 md:ml-10 md:w-[400px]">
                     <div className="flex flex-col items-center">
-                      <h3 className="mt-6 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 font-bold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
+                      <h3 className="mt-6   pb-1 font-bold ">
                         <span className="text-2xl md:text-4xl">
                           Any questions about Design?
                         </span>

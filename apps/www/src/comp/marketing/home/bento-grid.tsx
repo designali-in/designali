@@ -50,11 +50,11 @@ const features = [
             </Link>
             <Link className="cursor-pointer" href={"/solutions"}>
               <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
-                <p className="text-xs text-lime-400 md:-mb-2">Total</p>
+                <p className="text-xs text-lime-400 md:-mb-2">Free</p>
                 <h1 className="font-mono text-6xl font-bold tracking-tighter text-lime-500 md:text-9xl">
-                  <Counter value={23} />
+                  4K
                 </h1>
-                <p className="text-xs text-lime-500 md:-mt-2">Reviews</p>
+                <p className="text-xs text-lime-500 md:-mt-2">Graaadients</p>
                 <Ripple />
               </div>
             </Link>
@@ -74,19 +74,19 @@ const features = [
             <h3
               className={cn(
                 Avegra.className,
-                "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text text-center text-3xl text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text md:text-4xl",
+                "   text-center text-3xl   md:text-4xl",
               )}
             >
               Make your business shine with unlimited* creativity.
             </h3>
           </div>
-          <p className="lg:text-md px-2 text-center text-xs font-light text-slate-600 dark:text-slate-400">
+          <p className="lg:text-md px-2 text-center text-xs font-light text-primary/60">
             Forget the messy job of hiring and surprise expenses. Enjoy
             top-notch designs whenever you want, all for a monthly price. Its
             really that easy!
           </p>
           <div className="grid justify-center gap-2">
-            <Link href={"/pricing#pricing"}>
+            <Link href={"/pricing"}>
               <Button variant="default" size="lg">
                 See Pricing
               </Button>
