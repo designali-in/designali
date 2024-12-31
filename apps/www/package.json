@@ -153,6 +153,7 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.165.0",
     "ts-morph": "^18.0.0",
+    "tsx": "^4.19.2",
     "ua-parser-js": "^1.0.38",
     "uploadthing": "^5.1.0",
     "use-breakpoint": "^4.0.1",
