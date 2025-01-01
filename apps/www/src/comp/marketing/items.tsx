@@ -33,11 +33,11 @@ export const Items = () => {
   const ddata: Card[] = [
     {
       title: " Total Views",
-      link: "/solutions",
+      link: "/agency",
       target: "",
       value: vData?.views,
       icon: <Icons.eye strokeWidth={1} className="h-5 w-5" />,
-      linkText: "Solutions",
+      linkText: "Agency",
       gradient: {
         startColor: "#fee000",
         endColor: "#ffce63",
@@ -126,7 +126,7 @@ export const HomeItems = () => {
   const ddata: Card[] = [
     {
       title: " Total Views",
-      link: "/solutions",
+      link: "/agency",
       target: "",
       value: vData?.views,
       icon: (
@@ -136,7 +136,7 @@ export const HomeItems = () => {
           className="h-10 w-10 text-white dark:text-black"
         />
       ),
-      linkText: "Solutions",
+      linkText: "Agency",
       gradient: {
         startColor: "#14b8a6",
         endColor: "#14b8a6",

@@ -37,7 +37,7 @@ export const createUrl = async (originalUrl: string, session: Session) => {
   }
 
   let randomString = crypto.randomBytes(4).toString("hex");
-  let shortUrl = getBaseUrl() + "/" + randomString;
+  let shortUrl = `${getBaseUrl()}/url` + "/" + randomString;
 
   while (true) {
     const count = await prisma.url.count({ where: { shortUrl: shortUrl } });
@@ -45,7 +45,7 @@ export const createUrl = async (originalUrl: string, session: Session) => {
       break;
     }
     randomString = crypto.randomBytes(4).toString("hex");
-    shortUrl = getBaseUrl() + "/" + randomString;
+    shortUrl = `${getBaseUrl()}/url` + "/" + randomString;
   }
 
   const url = await prisma.url.create({

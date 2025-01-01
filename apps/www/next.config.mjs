@@ -108,6 +108,17 @@ const config = {
           },
         ],
       },
+      {
+        source: "/marketing/:urlToken",
+        has: [
+          {
+            type: "query",
+            key: "urlToken",
+          },
+        ],
+        destination: "/marketing/[urlToken]",
+        permanent: false, // Use `true` for 308 redirects if permanent
+      },
     ];
   },
 };

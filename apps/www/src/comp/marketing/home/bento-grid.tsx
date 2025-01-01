@@ -48,7 +48,7 @@ const features = [
                 <DotPattern width={5} height={5} />
               </div>
             </Link>
-            <Link className="cursor-pointer" href={"/solutions"}>
+            <Link className="cursor-pointer" href={"/products/graaadients"}>
               <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
                 <p className="text-xs text-lime-400 md:-mb-2">Free</p>
                 <h1 className="font-mono text-6xl font-bold tracking-tighter text-lime-500 md:text-9xl">

@@ -130,7 +130,9 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
                   />
                 )
               ) : (
-                <Button onClick={signInModal.onOpen}>Sign in</Button>
+                <Link href={"/login"}>
+                  <Button className="w-full">Sign in</Button>
+                </Link>
               )}
             </div>
           </div>
