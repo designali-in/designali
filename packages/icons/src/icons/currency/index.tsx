@@ -1,7 +1,6 @@
 import SwissFranc from "./SwissFranc";
 
 export * from "./Banknote";
-export * from "./Bitcoin";
 export * from "./CircleDollarSign";
 export * from "./Currency";
 export * from "./DollarSign";

@@ -42,12 +42,20 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Badge",
         },
         {
+          title: "Bell",
+          href: "/products/dicons/Bell",
+        },
+        {
           title: "Brands",
           href: "/products/dicons/Brands",
         },
         {
           title: "Buildings",
           href: "/products/dicons/Buildings",
+        },
+        {
+          title: "Business",
+          href: "/products/dicons/Business",
         },
         {
           title: "Chats",

@@ -5,7 +5,6 @@ export * from "./AlarmClockCheck";
 export * from "./AlarmClockOff";
 export * from "./AlarmClockPlus";
 export * from "./AlarmSmoke";
-export * from "./BellElectric";
 export * from "./Calculator";
 export * from "./Cpu";
 export * from "./DaimondMinus";

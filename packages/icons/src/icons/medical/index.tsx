@@ -3,7 +3,6 @@ import Tablets from "./Tablets";
 export * from "./Ambulance";
 export * from "./Bandage";
 export * from "./Brain";
-export * from "./BriefcaseMedical";
 export * from "./Cigarette";
 export * from "./CigaretteOff";
 export * from "./ClipboardMinus";

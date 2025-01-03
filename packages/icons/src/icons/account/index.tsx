@@ -48,8 +48,6 @@ import UserUnlock02 from "./user/user-unlock-02";
 export * from "./AtSign";
 export * from "./Award";
 export * from "./Ban";
-export * from "./Bell";
-export * from "./BellDot";
 export * from "./BetweenHorizontalEnd";
 export * from "./BetweenHorizontalStart";
 export * from "./Bolt";

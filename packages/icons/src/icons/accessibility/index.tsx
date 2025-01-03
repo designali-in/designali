@@ -15,7 +15,6 @@ export * from "./LifeBuoy";
 export * from "./Moon";
 export * from "./MoonStar";
 export * from "./PersonStanding";
-export * from "./Speech";
 export * from "./Sun";
 export * from "./SunDim";
 export * from "./SunMedium";
