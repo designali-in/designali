@@ -2,8 +2,8 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const Activity04= React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+export const Activity04 = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,10 @@ export const Activity04= React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       <path  d="M6,11.59h2.5l2-4,3,8,2-4h2.5"/>
-  <path  d="M22,8.54v9.13c0,2.39-1.94,4.33-4.33,4.33H6.33c-2.39,0-4.33-1.94-4.33-4.33V6.33c0-2.39,1.94-4.33,4.33-4.33h9.14"/>
-  <circle  cx="19.89" cy="4.11" r="2.11"/>
-</svg>
+        <path d="M6,11.59h2.5l2-4,3,8,2-4h2.5" />
+        <path d="M22,8.54v9.13c0,2.39-1.94,4.33-4.33,4.33H6.33c-2.39,0-4.33-1.94-4.33-4.33V6.33c0-2.39,1.94-4.33,4.33-4.33h9.14" />
+        <circle cx="19.89" cy="4.11" r="2.11" />
+      </svg>
     );
   },
 );

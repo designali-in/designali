@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const BitcoinCircle = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,9 +18,9 @@ export const BitcoinCircle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path class="cls-1" d="M12.1,16.33c2.95.52,3.67-3.6.73-4.12M12.1,16.33l-3.53-.62M12.1,16.33l-.21,1.18M12.83,12.21c2.95.52,3.67-3.6.73-4.12M12.83,12.21l-2.36-.42M13.55,8.08l-3.54-.62M13.55,8.08l.21-1.18M9.53,17.09l1.87-10.61"/>
-  <circle class="cls-1" cx="12" cy="12" r="10"/>
-</svg>
+        <path d="M12.1,16.33c2.95.52,3.67-3.6.73-4.12M12.1,16.33l-3.53-.62M12.1,16.33l-.21,1.18M12.83,12.21c2.95.52,3.67-3.6.73-4.12M12.83,12.21l-2.36-.42M13.55,8.08l-3.54-.62M13.55,8.08l.21-1.18M9.53,17.09l1.87-10.61" />
+        <circle cx="12" cy="12" r="10" />
+      </svg>
     );
   },
 );
