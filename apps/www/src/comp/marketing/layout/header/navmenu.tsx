@@ -213,65 +213,11 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href={"/components"}>
-              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <Link href="/components" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Components
+              </NavigationMenuLink>
             </Link>
-
-            <NavigationMenuContent className="space-y-3">
-              <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
-                <li className="row-span-3">
-                  <NavigationMenuLink>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/designs"
-                    >
-                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Designs
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Transforming Ideas into Stunning Designs
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-
-                <li className="row-span-3">
-                  <NavigationMenuLink>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/components"
-                    >
-                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Components
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Effortless Design with Our Comprehensive UI Components
-                        Library
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-
-                <li className="row-span-3">
-                  <NavigationMenuLink>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/guides"
-                    >
-                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Guides
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Your Ultimate Guide to Creative Design and Development
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
