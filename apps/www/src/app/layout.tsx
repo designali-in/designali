@@ -50,7 +50,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="apple-touch-icon" sizes="76x76" href="/favicon.svg" />
         <link rel="icon" type="image/png" sizes="32x32" href="/Davicon.svg" />
         <link rel="icon" type="image/png" sizes="16x16" href="/Davicon.svg" />
         <meta name="google-adsense-account" content="ca-pub-8509771369416706" />
