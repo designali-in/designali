@@ -17,6 +17,7 @@ export * from "./building";
 export * from "./buildings";
 export * from "./business";
 export * from "./communication";
+export * from "./communications";
 export * from "./connectivity";
 export * from "./currency";
 export * from "./charts";

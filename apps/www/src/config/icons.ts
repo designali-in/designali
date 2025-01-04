@@ -65,6 +65,10 @@ export const diconsConfig: DIconsConfig = {
           title: "Chats",
           href: "/products/dicons/Chats",
         },
+        {
+          title: "Communications",
+          href: "/products/dicons/Communications",
+        },
 
         {
           title: "Cursors",
