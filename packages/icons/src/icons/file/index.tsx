@@ -2,7 +2,6 @@ import Ungroup from "./Ungroup";
 
 export * from "./ArchiveRestore";
 export * from "./ArchiveX";
-export * from "./BookImage";
 export * from "./CalenderFold";
 export * from "./File";
 export * from "./FileArchive";

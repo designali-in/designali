@@ -1,6 +1,5 @@
 import StarOff from "./StarOff";
 
-export * from "./BookAudio";
 export * from "./BookHeadphones";
 export * from "./BoomBox";
 export * from "./Captions";

@@ -9,7 +9,6 @@ export * from "./Axis3d";
 export * from "./BetweenVerticalEnd";
 export * from "./BetweenVerticalStart";
 export * from "./Blend";
-export * from "./BookType";
 export * from "./BoxSelect";
 export * from "./BringToFront";
 export * from "./Brush";

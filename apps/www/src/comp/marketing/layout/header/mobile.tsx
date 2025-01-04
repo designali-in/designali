@@ -11,11 +11,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const navigation = [
   { name: "About AI", href: "/about", current: true },
-  { name: "Agency", href: "/agency", current: true },
   { name: "Products", href: "/products", current: true },
-  { name: "Works", href: "/works", current: true },
+  { name: "Agency", href: "/agency", current: true },
+  { name: "Works", href: "/agency/works", current: true },
   { name: "Components", href: "/components", current: true },
-  { name: "UI", href: "/ui", current: true },
   { name: "Graaadients", href: "/products/graaadients", current: true },
 ];
 

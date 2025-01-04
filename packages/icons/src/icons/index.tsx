@@ -8,6 +8,7 @@ export * from "./arrows";
 export * from "./awards";
 export * from "./baby";
 export * from "./badge";
+export * from "./bookmark";
 export * from "./chats";
 export * from "./animals";
 export * from "./bell";

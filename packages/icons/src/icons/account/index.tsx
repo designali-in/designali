@@ -52,7 +52,6 @@ export * from "./BetweenHorizontalEnd";
 export * from "./BetweenHorizontalStart";
 export * from "./Bolt";
 export * from "./BookUser";
-export * from "./Bookmark";
 export * from "./BookmarkCheck";
 export * from "./BookmarkMinus";
 export * from "./BookmarkPlus";

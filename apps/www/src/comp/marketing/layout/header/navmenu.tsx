@@ -37,25 +37,27 @@ export function Menu() {
                         About
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Welcome to my creative playground! I'm Ali
+                        Welcome to My Creative Playground! I’m Ali – Your
+                        Vision, My Design.
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/pricing" title="Pricing">
-                  Pricing
+                  Make your business shine with unlimited* creativity.
                 </ListItem>
                 <ListItem href="/blogs" title="Blogs">
-                  Blogs
+                  Creative Chronicles: Insights, Inspiration, and Design Trends
                 </ListItem>
                 <ListItem href="/contact" title="Contact">
-                  Contact
+                  Get in Touch – Let’s Create Something Amazing Together!
                 </ListItem>
                 <ListItem href="/terms" title="Terms">
-                  Terms
+                  Terms and Conditions – Your Guide to Our Services and Policies
                 </ListItem>
                 <ListItem href="/privacy" title="Privacy">
-                  Privacy
+                  Your Privacy Matters – Our Commitment to Protecting Your
+                  Information
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -74,13 +76,13 @@ export function Menu() {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dicons"
                     >
-                      <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Component strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         DIcons
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        Over 10,000 Icons, Alphabets, Numbers, and Shapes to
+                        Elevate Your Design Projects!
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -91,13 +93,13 @@ export function Menu() {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/graaadients"
                     >
-                      <DIcons.Clover strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.SwatchBook strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         Graaadients
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +1000 abstract gradient elements and backgrounds for
-                        your amazing design projects.
+                        Explore 4K Gradients: Stunning Color Transitions for
+                        Your Next Design Masterpiece!
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -113,8 +115,8 @@ export function Menu() {
                         Blocks
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Clean, modern building blocks. Copy and paste into your
-                        apps. Works with all React frameworks. Free forever.
+                        Simply Copy, Paste, and Integrate Into Your Apps.
+                        Compatible with All React Frameworks. Always Free!
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -130,8 +132,8 @@ export function Menu() {
                         DShapes
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +100 abstract shapes elements and backgrounds for your
-                        amazing design projects.
+                        Exploring the Beauty of Abstract Shapes – Where
+                        Creativity Meets Design
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -148,8 +150,8 @@ export function Menu() {
                         Colors
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        Dive Into a World of Colors – Bringing Vibrancy to Your
+                        Designs
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -171,29 +173,32 @@ export function Menu() {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/agency/works"
                     >
-                      <DIcons.Book strokeWidth={1} className="h-8 w-8" />
+                      <DIcons.Briefcase strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         Works
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        My Creative Journey – Explore My Design Portfolio
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/agency/branding" title="Branding">
-                  Brand Identity
+                  Transform Your Brand Identity – Innovative Design for Lasting
+                  Impressions
                 </ListItem>
 
                 <ListItem href="/agency/sm-posts" title="Social Media Posts">
-                  Social Media Marketing
+                  Boost Your Brand with Powerful Social Media Marketing
+                  Strategies
                 </ListItem>
                 <ListItem href="/agency/web-design" title="Website Design">
-                  UI/UX, Landing Page
+                  Elevate Your Digital Presence with Stunning UI/UX and
+                  High-Converting Landing Pages
                 </ListItem>
                 <ListItem href="/agency/web-develop" title="Website Develop">
-                  Build in Next.js & Vercel
+                  Innovative Web Apps and Development – Crafting Seamless
+                  Digital Experiences
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -225,8 +230,7 @@ export function Menu() {
                         Designs
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        Transforming Ideas into Stunning Designs
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -243,8 +247,8 @@ export function Menu() {
                         Components
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        Effortless Design with Our Comprehensive UI Components
+                        Library
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -261,8 +265,7 @@ export function Menu() {
                         Guides
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        +10000 icons, alphabet, numbers and shapes for your
-                        amazing design projects.
+                        Your Ultimate Guide to Creative Design and Development
                       </p>
                     </a>
                   </NavigationMenuLink>

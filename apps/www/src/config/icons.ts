@@ -50,6 +50,10 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Brands",
         },
         {
+          title: "Bookmark",
+          href: "/products/dicons/Bookmark",
+        },
+        {
           title: "Buildings",
           href: "/products/dicons/Buildings",
         },

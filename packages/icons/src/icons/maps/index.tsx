@@ -1,7 +1,6 @@
 import Waves from "./Waves";
 
 export * from "./Anchor";
-export * from "./BookA";
 export * from "./CircleParking";
 export * from "./CircleParkingOff";
 export * from "./Compass";
