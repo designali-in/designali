@@ -33,7 +33,6 @@ export * from "./Grip";
 export * from "./GripHorizontal";
 export * from "./GripVertical";
 export * from "./LayoutTemplate";
-export * from "./LoaderCircle";
 export * from "./PanelBottom";
 export * from "./PanelBottomDashed";
 export * from "./PanelLeft";

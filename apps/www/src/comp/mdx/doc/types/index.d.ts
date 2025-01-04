@@ -5,6 +5,7 @@ export interface NavItem {
   title: string;
   href: string;
   disabled?: boolean;
+  label?: string;
 }
 
 export type MainNavItem = NavItem;
@@ -13,6 +14,7 @@ export type SidebarNavItem = {
   title: string;
   disabled?: boolean;
   external?: boolean;
+  label?: string;
   icon?: keyof typeof DIcons;
 } & (
   | {

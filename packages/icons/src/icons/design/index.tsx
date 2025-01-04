@@ -40,7 +40,6 @@ export * from "./Grid3X3";
 export * from "./Highlighter";
 export * from "./IterationCc";
 export * from "./LandPlot";
-export * from "./Lasso";
 export * from "./Layers";
 export * from "./Layers2";
 export * from "./Layers3";

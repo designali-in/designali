@@ -72,7 +72,7 @@ export const diconsConfig: DIconsConfig = {
 
         {
           title: "Cursors",
-          href: "",
+          href: "/products/dicons/Cursors",
         },
         {
           title: "Design",

@@ -29,7 +29,7 @@ export function Menu() {
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/about"
                     >
@@ -40,7 +40,7 @@ export function Menu() {
                         Welcome to My Creative Playground! I’m Ali – Your
                         Vision, My Design.
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/pricing" title="Pricing">
@@ -72,7 +72,7 @@ export function Menu() {
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dicons"
                     >
@@ -84,12 +84,12 @@ export function Menu() {
                         Over 10,000 Icons, Alphabets, Numbers, and Shapes to
                         Elevate Your Design Projects!
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/graaadients"
                     >
@@ -101,12 +101,12 @@ export function Menu() {
                         Explore 4K Gradients: Stunning Color Transitions for
                         Your Next Design Masterpiece!
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/blocks"
                     >
@@ -118,12 +118,12 @@ export function Menu() {
                         Simply Copy, Paste, and Integrate Into Your Apps.
                         Compatible with All React Frameworks. Always Free!
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/dshapes"
                     >
@@ -135,13 +135,13 @@ export function Menu() {
                         Exploring the Beauty of Abstract Shapes – Where
                         Creativity Meets Design
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
 
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/colors"
                     >
@@ -153,7 +153,7 @@ export function Menu() {
                         Dive Into a World of Colors – Bringing Vibrancy to Your
                         Designs
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
               </ul>
@@ -169,7 +169,7 @@ export function Menu() {
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/agency/works"
                     >
@@ -180,7 +180,7 @@ export function Menu() {
                       <p className="text-sm leading-tight text-muted-foreground">
                         My Creative Journey – Explore My Design Portfolio
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/agency/branding" title="Branding">
@@ -221,7 +221,7 @@ export function Menu() {
               <ul className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-4">
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/designs"
                     >
@@ -232,13 +232,13 @@ export function Menu() {
                       <p className="text-sm leading-tight text-muted-foreground">
                         Transforming Ideas into Stunning Designs
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
 
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/components"
                     >
@@ -250,13 +250,13 @@ export function Menu() {
                         Effortless Design with Our Comprehensive UI Components
                         Library
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
 
                 <li className="row-span-3">
                   <NavigationMenuLink>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/guides"
                     >
@@ -267,7 +267,7 @@ export function Menu() {
                       <p className="text-sm leading-tight text-muted-foreground">
                         Your Ultimate Guide to Creative Design and Development
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
               </ul>

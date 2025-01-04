@@ -2,8 +2,8 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const LoaderCricle = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ ...props }, forwardedRef) => {
+export const Loader = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({  ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,18 @@ export const LoaderCricle = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-      </svg>
+       
+       <path  d="M12,2v4"/>
+  <path  d="M16.2,7.8l2.9-2.9"/>
+  <path  d="M18,12h4"/>
+  <path  d="M16.2,16.2l2.9,2.9"/>
+  <path  d="M12,18v4"/>
+  <path  d="M4.9,19.1l2.9-2.9"/>
+  <path  d="M2,12h4"/>
+  <path  d="M4.9,4.9l2.9,2.9"/>
+</svg>
     );
   },
 );
 
-export default LoaderCricle;
+export default Loader;

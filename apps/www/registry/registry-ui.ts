@@ -566,6 +566,16 @@ export const ui: Registry = [
     ],
   },
   {
+    name: "script-copy-btn",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/script-copy-btn.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "table",
     type: "registry:ui",
     files: [

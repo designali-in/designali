@@ -2,8 +2,8 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const Pencil = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ ...props }, forwardedRef) => {
+export const MousePointer2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({  ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,11 @@ export const Pencil = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
-        <path d="m15 5 4 4" />
-      </svg>
+       
+       <path  d="M2.05,2.81c-.13-.3,0-.64.3-.77.15-.06.32-.06.46,0l18.82,7.65c.3.12.45.47.32.77-.07.17-.22.3-.4.35l-7.2,1.86c-.83.21-1.48.86-1.69,1.69l-1.86,7.21c-.08.31-.4.5-.72.42-.18-.05-.33-.18-.4-.35L2.05,2.81Z"/>
+</svg>
     );
   },
 );
 
-export default Pencil;
+export default MousePointer2;

@@ -4745,6 +4745,17 @@ export const examples: Registry = [
     ],
   },
 
+  {
+    name: "script-copy-btn-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/components/script-copy-btn-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+
   // Texts
 
   {

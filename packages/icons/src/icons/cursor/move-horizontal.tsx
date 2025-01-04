@@ -2,8 +2,8 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const CirclePlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ ...props }, forwardedRef) => {
+export const MoveHorizontal = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({  ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,12 +18,13 @@ export const CirclePlus = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M8 12h8" />
-        <path d="M12 8v8" />
-      </svg>
+       
+       <path  d="M18,8l4,4-4,4"/>
+  <path  d="M2,12h20"/>
+  <path  d="M6,8l-4,4,4,4"/>
+</svg>
     );
   },
 );
 
-export default CirclePlus;
+export default MoveHorizontal;

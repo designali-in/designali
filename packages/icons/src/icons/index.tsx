@@ -21,7 +21,7 @@ export * from "./communications";
 export * from "./connectivity";
 export * from "./currency";
 export * from "./charts";
-export * from "./cursors";
+export * from "./cursor";
 export * from "./coding";
 export * from "./design";
 export * from "./devices";

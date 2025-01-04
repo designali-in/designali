@@ -9,7 +9,6 @@ export * from "./Eclipse";
 export * from "./Eye";
 export * from "./EyeOff";
 export * from "./Glasses";
-export * from "./Hand";
 export * from "./Info";
 export * from "./LifeBuoy";
 export * from "./Moon";

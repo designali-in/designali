@@ -181,6 +181,11 @@ export const componentsConfig: ComponentsConfig = {
           href: "/components/select",
         },
         {
+          title: "Script Copy Button",
+          href: "/components/script-copy-btn",
+          label: "New",
+        },
+        {
           title: "Slider",
           href: "/components/slider",
         },

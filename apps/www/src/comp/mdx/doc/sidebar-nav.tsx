@@ -67,6 +67,11 @@ export function DocumentationSidebarNavItems({
         ) : (
           <span className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60">
             {item.title}
+            {item.label && (
+              <span className="ml-2 rounded-md bg-muted px-1.5 py-0.5 text-xs leading-none text-muted-foreground no-underline group-hover:no-underline">
+                {item.label}
+              </span>
+            )}
           </span>
         ),
       )}
@@ -128,6 +133,11 @@ export function GuidesSidebarNavItems({
         ) : (
           <span className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60">
             {item.title}
+            {item.label && (
+              <span className="ml-2 rounded-md bg-muted px-1.5 py-0.5 text-xs leading-none text-muted-foreground no-underline group-hover:no-underline">
+                {item.label}
+              </span>
+            )}
           </span>
         ),
       )}
@@ -187,8 +197,12 @@ export function ComponentsSidebarNavItems({
             {item.title}
           </Link>
         ) : (
-          <span className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60">
+          <span
+            key={index}
+            className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60"
+          >
             {item.title}
+            {item.label}
           </span>
         ),
       )}
@@ -306,6 +320,7 @@ export function DesignsSidebarNavItems({
         ) : (
           <span className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60">
             {item.title}
+            {item.label}
           </span>
         ),
       )}

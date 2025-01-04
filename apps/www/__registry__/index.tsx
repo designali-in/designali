@@ -665,6 +665,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "script-copy-btn": {
+      name: "script-copy-btn",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/script-copy-btn.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/script-copy-btn.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "table": {
       name: "table",
       description: "",
@@ -8080,6 +8095,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/components/bento-grid-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "script-copy-btn-01": {
+      name: "script-copy-btn-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/components/script-copy-btn-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/components/script-copy-btn-01.tsx")),
       source: "",
       meta: undefined,
     },

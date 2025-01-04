@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const PenTool = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ ...props }, forwardedRef) => {
+  ({  ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,12 @@ export const PenTool = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
-        <path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" />
-        <path d="m2.3 2.3 7.286 7.286" />
-        <circle cx="11" cy="11" r="2" />
-      </svg>
+       
+       <path  d="M16,21.7c-.4.4-1.05.4-1.44,0l-1.62-1.62c-.4-.4-.4-1.05,0-1.44l5.7-5.7c.4-.4,1.05-.4,1.44,0l1.62,1.62c.4.4.4,1.05,0,1.44l-5.7,5.7Z"/>
+  <path  d="M18.34,13.23l-1.4-7.02c-.08-.39-.38-.7-.76-.79L3.26,2.03c-.55-.13-1.1.2-1.23.75-.04.16-.04.32,0,.48l3.39,12.91c.09.39.4.68.79.76l7.02,1.4"/>
+  <path  d="M2.31,2.31l7.44,7.44"/>
+  <circle  cx="11.19" cy="11.19" r="2.04"/>
+</svg>
     );
   },
 );

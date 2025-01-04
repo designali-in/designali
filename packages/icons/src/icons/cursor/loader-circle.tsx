@@ -2,8 +2,8 @@ import * as React from "react";
 
 import type { DesignaliProps } from "../../types";
 
-export const PencilOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ ...props }, forwardedRef) => {
+export const LoaderCircle = React.forwardRef<SVGSVGElement, DesignaliProps>(
+  ({  ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,13 +18,11 @@ export const PencilOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="m10 10-6.157 6.162a2 2 0 0 0-.5.833l-1.322 4.36a.5.5 0 0 0 .622.624l4.358-1.323a2 2 0 0 0 .83-.5L14 13.982" />
-        <path d="m12.829 7.172 4.359-4.346a1 1 0 1 1 3.986 3.986l-4.353 4.353" />
-        <path d="m15 5 4 4" />
-        <path d="m2 2 20 20" />
-      </svg>
+       
+       <path  d="M22,12c0,5.52-4.48,10-10,10-5.52,0-10-4.48-10-10,0-5.52,4.48-10,10-10,1.05,0,2.09.17,3.09.49"/>
+</svg>
     );
   },
 );
 
-export default PencilOff;
+export default LoaderCircle;
