@@ -32,7 +32,9 @@ export default function HomePage() {
         />
       </div>
       <NewsletterSection />
-      <Connect />
+      <div className="px-6 xl:px-0">
+        <Connect />
+      </div>
       <Image
         width={1512}
         height={550}

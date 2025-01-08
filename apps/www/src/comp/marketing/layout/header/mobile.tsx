@@ -29,7 +29,7 @@ export default function Navbar({ user }: UserAccountNavProps) {
         <>
           <header className="">
             <div className="fixed right-2 top-2 flex flex-1 items-center justify-end">
-              <div className="mr-2 flex transition ease-in-out md:px-8 lg:hidden">
+              <div className="mr-2 flex transition ease-in-out md:hidden md:px-8">
                 <DisclosureButton className="items-center justify-center p-2 text-center text-slate-600 dark:text-slate-400">
                   <span className="sr-only">Open main menu</span>
                   {open ? (

@@ -17,7 +17,7 @@ import {
 
 export function Menu() {
   return (
-    <div className="hidden px-4 lg:block">
+    <div className="hidden px-4 md:block">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -152,6 +152,27 @@ export function Menu() {
                       <p className="text-sm leading-tight text-muted-foreground">
                         Dive Into a World of Colors – Bringing Vibrancy to Your
                         Designs
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                    <Link
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/products/easings"
+                    >
+                      <DIcons.AnimationMoveRight
+                        strokeWidth={1}
+                        className="h-8 w-8"
+                      />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Easings
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        A set of easing functions ready to copy and paste into
+                        your Tailwind CSS project.
                       </p>
                     </Link>
                   </NavigationMenuLink>

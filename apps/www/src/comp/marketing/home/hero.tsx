@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <section id="home">
-      <div className="animation-delay-8 animate-fadeIn mt-20 flex flex-col items-center justify-center px-4 text-center md:mt-20">
+      <div className="animation-delay-8 animate-fadeIn mt-20 flex  flex-col items-center justify-center px-4 text-center md:mt-20">
         <div className="z-10 mb-6 mt-10 sm:justify-center md:mb-4 md:mt-20">
           <div className="relative flex items-center whitespace-nowrap rounded-full border bg-popover px-3 py-1 text-xs leading-6  text-primary/60 ">
             <Icons.shapes className="h-5 p-1" /> Introducing Dicons.
@@ -45,25 +45,25 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mb-10 mt-4 md:mt-6">
+        <div className="mb-10 mt-4  md:mt-6">
           <div className="px-2">
-            <div className="border-ali/50 relative mx-auto h-full max-w-6xl border p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)] md:px-6 md:py-12">
-              <h1 className="flex select-none flex-col px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
+            <div className="border-ali relative mx-auto h-full max-w-7xl border p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)] md:px-12 md:py-20">
+              <h1 className="flex  select-none flex-col  px-3 py-2 text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
                 <Icons.plus
                   strokeWidth={4}
-                  className="text-ali absolute -left-4 -top-4 h-8 w-8"
+                  className="text-ali absolute -left-5 -top-5 h-10 w-10"
                 />
                 <Icons.plus
                   strokeWidth={4}
-                  className="text-ali absolute -bottom-4 -left-4 h-8 w-8"
+                  className="text-ali absolute -bottom-5 -left-5 h-10 w-10"
                 />
                 <Icons.plus
                   strokeWidth={4}
-                  className="text-ali absolute -right-4 -top-4 h-8 w-8"
+                  className="text-ali absolute -right-5 -top-5 h-10 w-10"
                 />
                 <Icons.plus
                   strokeWidth={4}
-                  className="text-ali absolute -bottom-4 -right-4 h-8 w-8"
+                  className="text-ali absolute -bottom-5 -right-5 h-10 w-10"
                 />
                 Your complete platform for the Design.
               </h1>
