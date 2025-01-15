@@ -1,8 +1,6 @@
-export * from "./angry";
-export * from "./annoyed";
 export * from "./frown";
 export * from "./cackle";
-export * from "./meh";
+
 export * from "./smile";
 export * from "./smile-plus";
 export * from "./drama";

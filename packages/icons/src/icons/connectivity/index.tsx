@@ -1,21 +1,18 @@
-export * from "./airplay";
-export * from "./battery";
 export * from "./battery-charging";
 export * from "./battery-low";
 export * from "./battery-medium";
 export * from "./battery-warning";
-export * from "./bluetooth";
+
 export * from "./bluetooth-connected";
 export * from "./bluetooth-off";
 export * from "./bluetooth-searching";
-export * from "./cable";
+
 export * from "./circle-power";
 export * from "./cloud-off";
 export * from "./headphone-off";
-export * from "./headphones";
-export * from "./headset";
+
 export * from "./house-wifi";
-export * from "./monitor";
+
 export * from "./monitor-check";
 export * from "./monitor-cog";
 export * from "./monitor-dot";
@@ -28,15 +25,12 @@ export * from "./monitor-up";
 export * from "./monitor-x";
 export * from "./monitor-down";
 export * from "./monitor-off";
-export * from "./cast";
-export * from "./power";
+
 export * from "./power-off";
-export * from "./router";
-export * from "./satellite";
+
 export * from "./satellite-dish";
-export * from "./signal";
+
 export * from "./signal-high";
 export * from "./battery-full";
-export * from "./wifi";
 
 export const Connectivity = {};
