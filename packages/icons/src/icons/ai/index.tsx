@@ -83,6 +83,7 @@ import Robot02 from "./robot-02";
 import Robotic from "./robotic";
 import SiriNew from "./siri-new";
 
+export * from "./ai-audio";
 export * from "./ai-beautify";
 export * from "./ai-book";
 export * from "./ai-brain-01";

@@ -33,6 +33,7 @@ import TransitionLeft from "./transition-left";
 import TransitionRight from "./transition-right";
 import TransitionTop from "./transition-top";
 
+export * from "./animation-move-right";
 export * from "./bounce-left";
 export * from "./bounce-right";
 export * from "./ease-curve-control-points";
