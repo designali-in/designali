@@ -16,14 +16,21 @@ import {
   Awards,
   Baby,
   Badge,
+  Beauty,
   Bell,
   Bookmark,
   Brands,
   Buildings,
   Business,
   Chats,
+  Clocks,
+  Clothings,
   Communications,
+  Connectivity,
   Cursors,
+  Dashboards,
+  Designs,
+  Emojis,
   Gaming,
   Homing,
   Mails,
@@ -42,14 +49,21 @@ const categoryMap = {
   Animations,
   Baby,
   Brands,
+  Beauty,
   Bookmark,
   Bell,
   Badge,
   Buildings,
   Business,
   Chats,
+  Clocks,
+  Clothings,
   Communications,
+  Connectivity,
   Cursors,
+  Dashboards,
+  Designs,
+  Emojis,
   Gaming,
   Homing,
   Mails,
@@ -69,7 +83,7 @@ const DIconsCategory = () => {
   }, [pathname]);
 
   return (
-    <div className="mt-14  border-t">
+    <div className="mt-14 border-t">
       <Suspense fallback={<div className="mt-40">Category not found</div>}>
         <DIconsPage Categories={category} />
       </Suspense>

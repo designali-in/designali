@@ -46,6 +46,10 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Bell",
         },
         {
+          title: "Beauty",
+          href: "/products/dicons/Beauty",
+        },
+        {
           title: "Brands",
           href: "/products/dicons/Brands",
         },
@@ -69,42 +73,29 @@ export const diconsConfig: DIconsConfig = {
           title: "Communications",
           href: "/products/dicons/Communications",
         },
-
+        {
+          title: "Clocks",
+          href: "/products/dicons/Clocks",
+        },
+        {
+          title: "Clothings",
+          href: "/products/dicons/Clothings",
+        },
+        {
+          title: "Connectivity",
+          href: "/products/dicons/Connectivity",
+        },
         {
           title: "Cursors",
           href: "/products/dicons/Cursors",
         },
         {
-          title: "Design",
-          href: "",
+          title: "Dashboards",
+          href: "/products/dicons/Dashboards",
         },
         {
-          title: "Coding",
-          href: "",
-        },
-        {
-          title: "Devices",
-          href: "",
-        },
-        {
-          title: "Emoji",
-          href: "",
-        },
-        {
-          title: "File",
-          href: "",
-        },
-        {
-          title: "Finance",
-          href: "",
-        },
-        {
-          title: "Food",
-          href: "",
-        },
-        {
-          title: "Gaming",
-          href: "",
+          title: "Designs",
+          href: "/products/dicons/Designs",
         },
       ],
     },

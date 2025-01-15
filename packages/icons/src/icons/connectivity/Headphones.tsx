@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const Headphones = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({ ...props }, forwardedRef) => {
+  ({  ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +18,8 @@ export const Headphones = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-        <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
-      </svg>
+       <path  d="M2,14.22h3.33c1.23,0,2.22.99,2.22,2.22v3.33c0,1.23-.99,2.22-2.22,2.22h-1.11c-1.23,0-2.22-.99-2.22-2.22v-7.78C2,6.48,6.48,2,12,2s10,4.48,10,10v7.78c0,1.23-.99,2.22-2.22,2.22h-1.11c-1.23,0-2.22-.99-2.22-2.22v-3.33c0-1.23.99-2.22,2.22-2.22h3.33"/>
+       </svg>
     );
   },
 );

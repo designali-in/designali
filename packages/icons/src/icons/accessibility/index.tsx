@@ -2,10 +2,8 @@ import ZoomIn from "./ZoomIn";
 
 export * from "./Accessibility01";
 export * from "./CircleHelp";
-export * from "./Contrast";
 export * from "./Ear";
 export * from "./EarOff";
-export * from "./Eclipse";
 export * from "./Eye";
 export * from "./EyeOff";
 export * from "./Glasses";

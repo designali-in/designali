@@ -10,7 +10,6 @@ export * from "./CircleStop";
 export * from "./Clapperboard";
 export * from "./DiamondMinus";
 export * from "./DiamondPlus";
-export * from "./Drama";
 export * from "./Film";
 export * from "./Guitar";
 export * from "./Heart";

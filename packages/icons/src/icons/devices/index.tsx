@@ -1,10 +1,5 @@
 import VoiceMail from "./VoiceMail";
 
-export * from "./AlarmClock";
-export * from "./AlarmClockCheck";
-export * from "./AlarmClockOff";
-export * from "./AlarmClockPlus";
-export * from "./AlarmSmoke";
 export * from "./Calculator";
 export * from "./Cpu";
 export * from "./DaimondMinus";
