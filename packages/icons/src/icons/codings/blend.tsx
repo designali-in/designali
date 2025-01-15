@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const Blend = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,9 @@ export const Blend = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <circle  cx="9" cy="9" r="7"/>
-  <circle  cx="15" cy="15" r="7"/>
-</svg>
+        <circle cx="9" cy="9" r="7" />
+        <circle cx="15" cy="15" r="7" />
+      </svg>
     );
   },
 );

@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const ArrowDownToLine = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,10 @@ export const ArrowDownToLine = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M12,17.56V2"/>
-  <path  d="M5.33,10.89l6.67,6.67,6.67-6.67"/>
-  <path  d="M19.78,22H4.22"/>
-</svg>
+        <path d="M12,17.56V2" />
+        <path d="M5.33,10.89l6.67,6.67,6.67-6.67" />
+        <path d="M19.78,22H4.22" />
+      </svg>
     );
   },
 );

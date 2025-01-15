@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const Asterisk = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,10 @@ export const Asterisk = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M12,2.01v19.97"/>
-  <path  d="M20.65,7.01L3.35,16.99"/>
-  <path  d="M3.35,7.01l17.3,9.99"/>
-</svg>
+        <path d="M12,2.01v19.97" />
+        <path d="M20.65,7.01L3.35,16.99" />
+        <path d="M3.35,7.01l17.3,9.99" />
+      </svg>
     );
   },
 );

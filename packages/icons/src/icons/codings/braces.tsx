@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const Braces = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,9 @@ export const Braces = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M7.56,2h-1.11c-1.23,0-2.22.99-2.22,2.22v5.56c0,1.23-.99,2.22-2.22,2.22,1.23,0,2.22.99,2.22,2.22v5.56c0,1.22,1,2.22,2.22,2.22h1.11"/>
-  <path  d="M16.44,22h1.11c1.23,0,2.22-.99,2.22-2.22v-5.56c0-1.22,1-2.22,2.22-2.22-1.23,0-2.22-.99-2.22-2.22v-5.56c0-1.23-.99-2.22-2.22-2.22h-1.11"/>
-</svg>
+        <path d="M7.56,2h-1.11c-1.23,0-2.22.99-2.22,2.22v5.56c0,1.23-.99,2.22-2.22,2.22,1.23,0,2.22.99,2.22,2.22v5.56c0,1.22,1,2.22,2.22,2.22h1.11" />
+        <path d="M16.44,22h1.11c1.23,0,2.22-.99,2.22-2.22v-5.56c0-1.22,1-2.22,2.22-2.22-1.23,0-2.22-.99-2.22-2.22v-5.56c0-1.23-.99-2.22-2.22-2.22h-1.11" />
+      </svg>
     );
   },
 );

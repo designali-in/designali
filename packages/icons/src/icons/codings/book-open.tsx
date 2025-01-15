@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const BookOpen = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,9 @@ export const BookOpen = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M12,7v14"/>
-  <path  d="M3,18c-.55,0-1-.45-1-1V4c0-.55.45-1,1-1h5c2.21,0,4,1.79,4,4,0-2.21,1.79-4,4-4h5c.55,0,1,.45,1,1v13c0,.55-.45,1-1,1h-6c-1.66,0-3,1.34-3,3,0-1.66-1.34-3-3-3H3Z"/>
-</svg>
+        <path d="M12,7v14" />
+        <path d="M3,18c-.55,0-1-.45-1-1V4c0-.55.45-1,1-1h5c2.21,0,4,1.79,4,4,0-2.21,1.79-4,4-4h5c.55,0,1,.45,1,1v13c0,.55-.45,1-1,1h-6c-1.66,0-3,1.34-3,3,0-1.66-1.34-3-3-3H3Z" />
+      </svg>
     );
   },
 );

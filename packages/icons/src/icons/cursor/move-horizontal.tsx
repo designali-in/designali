@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const MoveHorizontal = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,10 @@ export const MoveHorizontal = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M18,8l4,4-4,4"/>
-  <path  d="M2,12h20"/>
-  <path  d="M6,8l-4,4,4,4"/>
-</svg>
+        <path d="M18,8l4,4-4,4" />
+        <path d="M2,12h20" />
+        <path d="M6,8l-4,4,4,4" />
+      </svg>
     );
   },
 );

@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const Brackets = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,9 @@ export const Brackets = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M16.44,2h3.33v20h-3.33"/>
-  <path  d="M7.56,22h-3.33V2h3.33"/>
-</svg>
+        <path d="M16.44,2h3.33v20h-3.33" />
+        <path d="M7.56,22h-3.33V2h3.33" />
+      </svg>
     );
   },
 );

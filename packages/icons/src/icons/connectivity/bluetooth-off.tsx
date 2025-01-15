@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const BluetoothOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,10 @@ export const BluetoothOff = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       <path  d="M17,17l-5,5v-10l-5,5"/>
-  <path  d="M2,2l20,20"/>
-  <path  d="M14.5,9.5l2.5-2.5-5-5v4.5"/>
-</svg>
+        <path d="M17,17l-5,5v-10l-5,5" />
+        <path d="M2,2l20,20" />
+        <path d="M14.5,9.5l2.5-2.5-5-5v4.5" />
+      </svg>
     );
   },
 );

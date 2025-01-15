@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const Antenna = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,14 +18,13 @@ export const Antenna = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M2,12L7,2"/>
-  <path  d="M7,12L12,2"/>
-  <path  d="M12,12l5-10"/>
-  <path  d="M17,12l5-10"/>
-  <path  d="M4.5,7h15"/>
-  <path  d="M12,16v6"/>
-</svg>
+        <path d="M2,12L7,2" />
+        <path d="M7,12L12,2" />
+        <path d="M12,12l5-10" />
+        <path d="M17,12l5-10" />
+        <path d="M4.5,7h15" />
+        <path d="M12,16v6" />
+      </svg>
     );
   },
 );

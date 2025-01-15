@@ -3,7 +3,7 @@ import * as React from "react";
 import type { DesignaliProps } from "../../types";
 
 export const MousePointer2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
-  ({  ...props }, forwardedRef) => {
+  ({ ...props }, forwardedRef) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,9 +18,8 @@ export const MousePointer2 = React.forwardRef<SVGSVGElement, DesignaliProps>(
         {...props}
         ref={forwardedRef}
       >
-       
-       <path  d="M2.05,2.81c-.13-.3,0-.64.3-.77.15-.06.32-.06.46,0l18.82,7.65c.3.12.45.47.32.77-.07.17-.22.3-.4.35l-7.2,1.86c-.83.21-1.48.86-1.69,1.69l-1.86,7.21c-.08.31-.4.5-.72.42-.18-.05-.33-.18-.4-.35L2.05,2.81Z"/>
-</svg>
+        <path d="M2.05,2.81c-.13-.3,0-.64.3-.77.15-.06.32-.06.46,0l18.82,7.65c.3.12.45.47.32.77-.07.17-.22.3-.4.35l-7.2,1.86c-.83.21-1.48.86-1.69,1.69l-1.86,7.21c-.08.31-.4.5-.72.42-.18-.05-.33-.18-.4-.35L2.05,2.81Z" />
+      </svg>
     );
   },
 );
