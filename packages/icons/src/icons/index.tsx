@@ -4,6 +4,7 @@ export * from "./ai";
 export * from "./animations";
 export * from "./alert";
 export * from "./account";
+export * from "./arrow";
 export * from "./arrows";
 export * from "./awards";
 export * from "./baby";

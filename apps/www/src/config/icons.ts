@@ -30,6 +30,10 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Animals",
         },
         {
+          title: "Arrows",
+          href: "/products/dicons/Arrows",
+        },
+        {
           title: "Awards",
           href: "/products/dicons/Awards",
         },

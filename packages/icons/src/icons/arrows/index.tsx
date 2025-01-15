@@ -1,48 +1,5 @@
 import WrapText from "./WrapText";
 
-export * from "./ArrowBigDown";
-export * from "./ArrowBigDownDash";
-export * from "./ArrowBigLeft";
-export * from "./ArrowBigLeftDash";
-export * from "./ArrowBigRight";
-export * from "./ArrowBigRightDash";
-export * from "./ArrowBigUp";
-export * from "./ArrowBigUpDash";
-export * from "./ArrowDown";
-export * from "./ArrowDown01";
-export * from "./ArrowDown10";
-export * from "./ArrowDownAZ";
-export * from "./ArrowDownFromLine";
-export * from "./ArrowDownLeft";
-export * from "./ArrowDownNarrowWide";
-export * from "./ArrowDownRight";
-export * from "./ArrowDownToDot";
-export * from "./ArrowDownToLine";
-export * from "./ArrowDownUp";
-export * from "./ArrowDownWideNarrow";
-export * from "./ArrowDownZA";
-export * from "./ArrowLeft";
-export * from "./ArrowLeftFromLine";
-export * from "./ArrowLeftRight";
-export * from "./ArrowLeftToLine";
-export * from "./ArrowRight";
-export * from "./ArrowRightFromLine";
-export * from "./ArrowRightLeft";
-export * from "./ArrowRightToLine";
-export * from "./ArrowsUpFromLine";
-export * from "./ArrowUp";
-export * from "./ArrowUp01";
-export * from "./ArrowUp10";
-export * from "./ArrowUpAZ";
-export * from "./ArrowUpDown";
-export * from "./ArrowUpFromDot";
-export * from "./ArrowUpFromLine";
-export * from "./ArrowUpLeft";
-export * from "./ArrowUpNarrowWide";
-export * from "./ArrowUpRight";
-export * from "./ArrowUpToLine";
-export * from "./ArrowUpWideNarrow";
-export * from "./ArrowUpZA";
 export * from "./ChevronDown";
 export * from "./ChevronFirst";
 export * from "./ChevronLast";
@@ -181,6 +138,6 @@ export * from "./UnfoldVertical";
 export * from "./Upload";
 export * from "./WrapText";
 
-export const Arrows = {
+export const Arro = {
   WrapText,
 };
