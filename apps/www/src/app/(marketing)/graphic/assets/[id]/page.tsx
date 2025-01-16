@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import DeleteAssetButton from "@/src/comp/dashboard/assets/delete-button";
 import { DownloadButton } from "@/src/comp/dashboard/assets/download-btn";
@@ -35,6 +36,7 @@ export default async function AssetPage({
       likes: true,
       user: {
         select: {
+          username: true,
           name: true,
           image: true, // Assuming 'avatar' is the field for the user's profile picture
         },
@@ -45,7 +47,7 @@ export default async function AssetPage({
   if (!asset) {
     notFound();
   }
-
+  const username = asset.user?.username || "Unknown User";
   const userName = asset.user?.name || "Unknown User";
   const userAvatar = asset.user?.image || "/designali.svg";
 
@@ -94,11 +96,12 @@ export default async function AssetPage({
         <CardHeader>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Avatar className="h-8 w-8">
-                <AvatarImage src={userAvatar} alt={`${userName}'s avatar`} />
-                <AvatarFallback>D</AvatarFallback>
-              </Avatar>
-
+              <Link href={`/profile/${username}`}>
+                <Avatar className="h-8 w-8">
+                  <AvatarImage src={userAvatar} alt={`${userName}'s avatar`} />
+                  <AvatarFallback>D</AvatarFallback>
+                </Avatar>
+              </Link>
               <p className="text-lg">{userName}</p>
             </div>
 
