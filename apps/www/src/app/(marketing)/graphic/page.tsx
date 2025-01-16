@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
+import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
+import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils";
 
 import { env } from "@/env";
@@ -19,6 +21,14 @@ export const metadata: Metadata = {
 };
 
 const BrowsePage = async () => {
+  const session = await auth();
+  const assets = await prisma.asset.findMany({
+    take: 20,
+    orderBy: { createdAt: "desc" },
+    include: {
+      likes: true,
+    },
+  });
   const topTenAnimes = await prisma.graphic.findMany({
     orderBy: [
       {
@@ -34,30 +44,43 @@ const BrowsePage = async () => {
   return (
     <div className="mx-auto my-40 max-w-7xl px-6 xl:px-0">
       <div className="grid items-center justify-center px-8 pb-1 text-center">
-        <h3
-          className={cn(
-            Avegra.className,
-            "z-20 inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-200 dark:via-slate-400 dark:to-slate-200 dark:bg-clip-text md:text-7xl",
-          )}
-        >
-          Download High Quality Graphics
-        </h3>
-        <p className=" text-xs">
+        <div className="flex justify-center">
+          <h3
+            className={cn(
+              Avegra.className,
+              "z-20 inline-flex items-baseline justify-center bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-200 dark:via-slate-400 dark:to-slate-200 dark:bg-clip-text md:text-7xl",
+            )}
+          >
+            Download Free Graphics
+          </h3>
+        </div>
+        <p className=" mx-auto max-w-xl text-xs">
           Discover the essence of creativity in our exquisite collection of
           top-tier abstract design assets. Each piece is a blend of beauty and
           utility, perfect for elevating any project
         </p>
         <div className="my-10 flex flex-wrap items-center justify-center gap-2">
+          {session ? (
+            <Link href="/graphic/upload">
+              <Button size="lg">Upload New Asset</Button>
+            </Link>
+          ) : (
+            <Link href="/login">
+              <Button size="lg">Upload New Asset</Button>
+            </Link>
+          )}
           <Link href={"/pricing"}>
-            <Button size="lg">Get Unlimited Access</Button>
+            <Button variant="outline" size="lg">
+              Get Unlimited Access
+            </Button>
           </Link>
           <p className="text-left text-xs">
-            Full access <br /> from ₹99/m
+            Full access <br /> from ₹250/m
           </p>
         </div>
       </div>{" "}
       <Separator className="mb-10" />
-      <BrowseClient initialAnimes={topTenAnimes} />
+      <AssetGrid assets={assets} />
     </div>
   );
 };

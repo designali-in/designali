@@ -76,6 +76,8 @@ model User {
   accounts           Account[]
   sessions           Session[]
   urls               Url[]
+  Asset              Asset[]
+  likes              AssetLike[]
 
   @@map("users")
 }
@@ -398,4 +400,37 @@ model NewsletterSubscriber {
   createdAt DateTime @default(now()) @map("created_at")
 
   @@map("newsletter_subscribers")
+}
+
+model Asset {
+  id           String      @id @default(cuid())
+  title        String
+  description  String?
+  url          String
+  downloadlink String
+  downloads    Int         @default(0)
+  views        Int         @default(0)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  userId       String
+  user         User        @relation(fields: [userId], references: [id])
+  likes        AssetLike[]
+  tags         Tag[]
+}
+
+model AssetLike {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  userId    String
+  assetId   String
+  user      User     @relation(fields: [userId], references: [id])
+  asset     Asset    @relation(fields: [assetId], references: [id])
+
+  @@unique([userId, assetId])
+}
+
+model Tag {
+  id     String  @id @default(cuid())
+  name   String  @unique
+  assets Asset[]
 }
