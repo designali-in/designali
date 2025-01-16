@@ -81,6 +81,7 @@ const BrowsePage = async () => {
       </div>{" "}
       <Separator className="mb-10" />
       <AssetGrid assets={assets} />
+      <BrowseClient initialAnimes={topTenAnimes} />
     </div>
   );
 };

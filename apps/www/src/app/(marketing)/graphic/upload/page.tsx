@@ -16,6 +16,7 @@ export default function UploadPage() {
   const [downloadlink, setDownloadlink] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const [previews, setPreviews] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false); // Add loading state
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const { data: session } = useSession();
@@ -56,6 +57,8 @@ export default function UploadPage() {
       return;
     }
 
+    setLoading(true); // Set loading to true before starting the upload
+
     const formData = new FormData();
     formData.append("title", title);
     formData.append("downloadlink", downloadlink);
@@ -95,6 +98,14 @@ export default function UploadPage() {
             required
           />
         </div>
+
+        <div className="mb-4">
+          <Textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Asset Description"
+          />
+        </div>
         <div className="mb-4">
           <Input
             type="text"
@@ -102,13 +113,6 @@ export default function UploadPage() {
             onChange={(e) => setDownloadlink(e.target.value)}
             placeholder="Download Link*"
             required
-          />
-        </div>
-        <div className="mb-4">
-          <Textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Asset Description"
           />
         </div>
         <div className="mb-4">
@@ -142,12 +146,15 @@ export default function UploadPage() {
             ))}
           </div>
         )}
-        {error && <div className="mb-4 text-red-500">{error}</div>}
+        {error && <div className="text-ali mb-4">{error}</div>}
         <div className="flex gap-2">
           <Button type="button" onClick={handleCancel} variant="outline">
             Cancel
           </Button>
-          <Button type="submit">Upload Assets</Button>
+          <Button type="submit">
+            {" "}
+            {loading ? "Uploading..." : "Upload Assets"}
+          </Button>
         </div>
       </form>
     </div>

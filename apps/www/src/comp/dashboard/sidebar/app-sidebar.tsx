@@ -339,7 +339,6 @@ export function AdminAppSidebar({
         <div className="px-2">
           <Separator />
         </div>
-        <NavSecondary items={admindata.navSecondary} className="" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={user} />
