@@ -50,16 +50,19 @@ const BrowsePage = async () => {
   });
 
   return (
-    <div className="mx-auto my-24 max-w-7xl px-6 xl:px-0">
+    <div className="mx-auto my-36 max-w-7xl px-6 xl:px-0">
       <div className="grid items-center justify-center px-8 pb-1 text-center">
-        <div className="flex justify-center">
+        <div className="grid justify-center">
+          <p className=" text-ali mb-4  text-center text-xl">
+            Download Free Graphics
+          </p>
           <h3
             className={cn(
               Avegra.className,
-              "z-20 inline-flex items-baseline justify-center bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-200 dark:via-slate-400 dark:to-slate-200 dark:bg-clip-text md:text-7xl",
+              "z-20 inline-flex items-baseline justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl",
             )}
           >
-            Download Free Graphics
+            Open File for Everyone
           </h3>
         </div>
         <p className=" mx-auto max-w-xl text-xs">
