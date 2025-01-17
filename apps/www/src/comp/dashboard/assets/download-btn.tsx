@@ -29,9 +29,9 @@ export function DownloadButton({
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-sm text-gray-500">{downloadCount} downloads</span>
-      <Button onClick={handleDownload}>
+    <div className="flex items-center gap-1">
+      <Button className="flex items-center" onClick={handleDownload}>
+        <span className="text-ali text-lg">{downloadCount}</span>
         <Download className="h-4 w-4" />
         Open File
       </Button>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import { Badge } from "@/registry/default/ui/badge";
 import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
-import { DocsSearch } from "@/src/comp/mdx/doc/search";
 import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils";
 

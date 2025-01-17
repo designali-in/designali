@@ -17,6 +17,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type Asset = {
   id: string;
@@ -33,6 +40,7 @@ type Asset = {
 export default function AssetGrid({ assets }: { assets: Asset[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredAssets, setFilteredAssets] = useState(assets);
+  const [sortBy, setSortBy] = useState("latest");
 
   useEffect(() => {
     const sortedAssets = [...assets].sort(
@@ -46,17 +54,55 @@ export default function AssetGrid({ assets }: { assets: Asset[] }) {
     setFilteredAssets(filtered);
   }, [assets, searchTerm]);
 
+  useEffect(() => {
+    let sortedAssets = [...assets];
+
+    switch (sortBy) {
+      case "mostDownloaded":
+        sortedAssets.sort((a, b) => b.downloads - a.downloads);
+        break;
+      case "mostLiked":
+        sortedAssets.sort((a, b) => b.likes.length - a.likes.length);
+        break;
+      case "mostViewed":
+        sortedAssets.sort((a, b) => b.views - a.views);
+        break;
+      case "latest":
+      default:
+        sortedAssets.sort(
+          (a, b) =>
+            new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime(),
+        );
+    }
+
+    const filtered = sortedAssets.filter((asset) =>
+      asset.title.toLowerCase().includes(searchTerm.toLowerCase()),
+    );
+    setFilteredAssets(filtered);
+  }, [assets, searchTerm, sortBy]);
+
   return (
     <div>
       <div className="mb-4">
-        <div className="mt-3 flex ">
+        <div className="mt-3 flex items-center justify-between gap-3">
           <Input
             type="text"
             placeholder="Search assets by title..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-60"
+            className="h-10 w-60"
           />
+          <Select value={sortBy} onValueChange={setSortBy}>
+            <SelectTrigger className="h-10 w-[180px]">
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="latest">Latest</SelectItem>
+              <SelectItem value="mostDownloaded">Most Downloaded</SelectItem>
+              <SelectItem value="mostLiked">Most Liked</SelectItem>
+              <SelectItem value="mostViewed">Most Viewed</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
       <div className="my-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">

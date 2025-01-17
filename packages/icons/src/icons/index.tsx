@@ -14,6 +14,7 @@ export * from "./bookmark";
 export * from "./chats";
 export * from "./clock";
 export * from "./animals";
+export * from "./bitcoin";
 export * from "./bell";
 export * from "./brands";
 export * from "./building";

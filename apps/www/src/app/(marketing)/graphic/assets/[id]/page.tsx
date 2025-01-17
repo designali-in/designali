@@ -148,13 +148,13 @@ export default async function AssetPage({
             ))}
           </div>
         </CardContent>
-        <CardFooter className="flex items-center justify-between">
+        <CardFooter className="grid items-center gap-3 md:flex md:justify-between">
           <div>
             {asset.description && (
               <p className="text-primary/70">{asset.description}</p>
             )}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="grid items-center gap-3 md:flex md:justify-between">
             <div className="flex flex-wrap gap-2">
               {asset.tags.map((tag) => (
                 <Badge

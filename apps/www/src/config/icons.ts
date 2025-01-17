@@ -54,6 +54,10 @@ export const diconsConfig: DIconsConfig = {
           href: "/products/dicons/Beauty",
         },
         {
+          title: "Bitcoins",
+          href: "/products/dicons/Bitcoins",
+        },
+        {
           title: "Brands",
           href: "/products/dicons/Brands",
         },
