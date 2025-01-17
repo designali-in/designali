@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Badge } from "@/registry/default/ui/badge";
 import DeleteAssetButton from "@/src/comp/dashboard/assets/delete-button";
 import { DownloadButton } from "@/src/comp/dashboard/assets/download-btn";
 import { LikeButton } from "@/src/comp/dashboard/assets/like-btn";
@@ -34,6 +35,7 @@ export default async function AssetPage({
     where: { id: params.id },
     include: {
       likes: true,
+      tags: true,
       user: {
         select: {
           username: true,
@@ -152,9 +154,22 @@ export default async function AssetPage({
               <p className="text-primary/70">{asset.description}</p>
             )}
           </div>
-          <p className="text-sm text-gray-500">
-            Uploaded on {new Date(asset.createdAt).toLocaleDateString()}
-          </p>
+          <div className="flex items-center gap-2">
+            <div className="flex flex-wrap gap-2">
+              {asset.tags.map((tag) => (
+                <Badge
+                  className="px-3 py-1 text-xs"
+                  key={tag.id}
+                  variant="secondary"
+                >
+                  {tag.name}
+                </Badge>
+              ))}
+            </div>
+            <p className="text-sm text-gray-500">
+              Uploaded on {new Date(asset.createdAt).toLocaleDateString()}
+            </p>
+          </div>
         </CardFooter>
       </Card>
     </div>

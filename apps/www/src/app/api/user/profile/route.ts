@@ -8,6 +8,7 @@ const profileSchema = z.object({
   name: z.string().min(3),
   email: z.string().email(),
   username: z.string().min(3),
+  bio: z.string().min(3),
 });
 
 export async function PATCH(req: Request) {
@@ -19,7 +20,7 @@ export async function PATCH(req: Request) {
     }
 
     const body = await req.json();
-    const { name, email, username } = profileSchema.parse(body);
+    const { name, email, username, bio } = profileSchema.parse(body);
 
     // Check if email is already taken by another user
     if (email !== session.user.email) {
@@ -54,6 +55,7 @@ export async function PATCH(req: Request) {
         name,
         email,
         username,
+        bio,
       },
     });
 

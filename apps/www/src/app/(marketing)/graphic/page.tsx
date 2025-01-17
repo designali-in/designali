@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
+import { Badge } from "@/registry/default/ui/badge";
 import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
 import { DocsSearch } from "@/src/comp/mdx/doc/search";
 import { auth } from "@/src/lib/auth";
@@ -24,13 +25,18 @@ export const metadata: Metadata = {
 
 const BrowsePage = async () => {
   const session = await auth();
-  const assets = await prisma.asset.findMany({
-    take: 20,
-    orderBy: { createdAt: "desc" },
-    include: {
-      likes: true,
-    },
-  });
+  const assets = (
+    await prisma.asset.findMany({
+      take: 20,
+      orderBy: { createdAt: "desc" },
+      include: {
+        likes: true,
+      },
+    })
+  ).map((asset) => ({
+    ...asset,
+    uploadedAt: asset.createdAt.toISOString(),
+  }));
   const topTenAnimes = await prisma.graphic.findMany({
     orderBy: [
       {
@@ -44,7 +50,7 @@ const BrowsePage = async () => {
   });
 
   return (
-    <div className="mx-auto my-40 max-w-7xl px-6 xl:px-0">
+    <div className="mx-auto my-24 max-w-7xl px-6 xl:px-0">
       <div className="grid items-center justify-center px-8 pb-1 text-center">
         <div className="flex justify-center">
           <h3
@@ -90,35 +96,40 @@ const BrowsePage = async () => {
               <div>
                 <TabsTrigger value="tab-1">
                   All Graphics{" "}
-                  <span className="text-ali pl-1 font-semibold">
+                  <span className="text-ali px-1 font-semibold">
                     {assets.length}
                   </span>
+                  <Badge size="xs" variant="green">
+                    New
+                  </Badge>
                 </TabsTrigger>
-                <TabsTrigger value="tab-2">Latest</TabsTrigger>
-                <TabsTrigger value="tab-3">Pro</TabsTrigger>
-              </div>
 
-              <div className="hidden md:block">
-                <DocsSearch />
+                <TabsTrigger value="tab-2">
+                  Pro{" "}
+                  <span className="text-ali pl-1 font-semibold">
+                    {topTenAnimes.length}
+                  </span>
+                </TabsTrigger>
+                <TabsTrigger value="tab-3">Top Users</TabsTrigger>
               </div>
             </TabsList>
             <TabsContent value="tab-1">
               <AssetGrid assets={assets} />
             </TabsContent>
+
             <TabsContent value="tab-2">
-              <p className="p-4 text-center text-xs text-muted-foreground">
-                Uploading
-              </p>
-            </TabsContent>
-            <TabsContent value="tab-3">
               <div className="mt-3">
                 <BrowseClient initialAnimes={topTenAnimes} />
               </div>
             </TabsContent>
+            <TabsContent value="tab-3">
+              <p className="p-4 text-center text-xs text-muted-foreground">
+                Coming Soon
+              </p>
+            </TabsContent>
           </Tabs>
         </div>
       </div>
-      <BrowseClient initialAnimes={topTenAnimes} />
     </div>
   );
 };

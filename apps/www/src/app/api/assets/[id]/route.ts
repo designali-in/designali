@@ -141,7 +141,7 @@ export async function PATCH(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { title, description, downloadlink } = await req.json();
+    const { title, description, downloadlink, tags } = await req.json();
 
     const updatedAsset = await prisma.asset.update({
       where: { id: params.id },
@@ -149,6 +149,16 @@ export async function PATCH(
         title,
         description,
         downloadlink,
+        tags: {
+          set: [],
+          connectOrCreate: tags.map((tag: string) => ({
+            where: { name: tag },
+            create: { name: tag },
+          })),
+        },
+      },
+      include: {
+        tags: true,
       },
     });
 

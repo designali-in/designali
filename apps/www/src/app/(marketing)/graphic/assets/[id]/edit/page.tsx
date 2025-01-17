@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { TagInput } from "@/src/comp/dashboard/assets/tags-input";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,12 +14,14 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
 
 export default function EditAssetPage({ params }: { params: { id: string } }) {
   const [asset, setAsset] = useState<any>(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [downloadlink, setDownloadlink] = useState("");
+  const [tags, setTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const router = useRouter();
@@ -33,11 +36,22 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
           setTitle(data.title);
           setDescription(data.description || "");
           setDownloadlink(data.downloadlink || "");
+          setTags(data.tags?.map((tag: { name: string }) => tag.name) || []);
         } else {
           console.error("Failed to fetch asset");
+          toast({
+            title: "Error",
+            description: "Failed to fetch asset details",
+            variant: "destructive",
+          });
         }
       } catch (error) {
         console.error("Error fetching asset:", error);
+        toast({
+          title: "Error",
+          description: "An error occurred while fetching asset details",
+          variant: "destructive",
+        });
       } finally {
         setIsLoading(false);
       }
@@ -56,17 +70,32 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, description, downloadlink }),
+        body: JSON.stringify({ title, description, downloadlink, tags }),
       });
 
       if (response.ok) {
         router.push(`/graphic/assets/${params.id}`);
         router.refresh();
+        toast({
+          title: "Success",
+          description: "Asset updated successfully",
+        });
       } else {
-        console.error("Failed to update asset");
+        const errorData = await response.json();
+        console.error("Failed to update asset:", errorData.error);
+        toast({
+          title: "Error",
+          description: errorData.error || "Failed to update asset",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error("Error updating asset:", error);
+      toast({
+        title: "Error",
+        description: "An error occurred while updating the asset",
+        variant: "destructive",
+      });
     } finally {
       setIsSaving(false);
     }
@@ -131,6 +160,12 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
                 value={downloadlink}
                 onChange={(e) => setDownloadlink(e.target.value)}
               />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Tags
+              </label>
+              <TagInput initialTags={tags} onTagsChange={setTags} />
             </div>
           </CardContent>
           <CardFooter className="flex justify-end space-x-2">

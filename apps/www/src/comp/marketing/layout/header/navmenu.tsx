@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { Badge } from "@/registry/default/ui/badge";
 import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
@@ -229,6 +230,9 @@ export function Menu() {
             <Link href="/graphic" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Graphic
+                <Badge className="ml-1" size="xs" variant="green">
+                  New
+                </Badge>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

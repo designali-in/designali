@@ -20,9 +20,11 @@ async function getUserData(username: string) {
     const user = await prisma.user.findUnique({
       where: { username },
       select: {
+        id: true,
         name: true,
         username: true,
         image: true,
+        bio: true,
         createdAt: true,
         Asset: {
           select: {
@@ -80,15 +82,17 @@ export default async function UserProfilePage({ params }: Props) {
     0,
   );
 
+  const isOwnProfile = session?.user?.id === user.id;
+
   if (!user) {
     notFound(); // Redirect to the 404 page
   }
 
   return (
-    <div className="mx-auto my-40 max-w-7xl px-6 xl:px-0">
-      <div className="flex  items-baseline justify-between gap-3">
-        <div className="flex gap-3">
-          <Avatar className="h-24 w-24 rounded-lg border">
+    <div className="mx-auto my-24 max-w-7xl px-6 xl:px-0">
+      <div className="grid items-baseline justify-between gap-3 md:flex">
+        <div className=" flex items-center gap-3">
+          <Avatar className="h-20 w-20 rounded-lg border md:h-24 md:w-24">
             <AvatarImage
               className="rounded-lg"
               src={user.image}
@@ -96,21 +100,14 @@ export default async function UserProfilePage({ params }: Props) {
             />
             <AvatarFallback className="rounded-md">D</AvatarFallback>
           </Avatar>
-          <div className="space-y-2">
+          <div className="space-y-1">
             <h1 className="text-3xl">{user.name}</h1>
-            <h1 className="text-xl text-primary/70">{user.username}</h1>
-            <div className="flex gap-1">
-              <DIcons.CalenderFold className="h-3 w-3" />
-              <p className="text-xs text-primary/70">
-                {new Intl.DateTimeFormat("en-US", {
-                  dateStyle: "full",
-                }).format(new Date(user.createdAt))}
-              </p>
-            </div>
+            <p className="text-xs text-primary/70 md:text-sm">{user.bio}</p>
+            <h1 className="text-ali text-lg">{user.username}</h1>
           </div>
         </div>
 
-        <div className="flex  items-center  gap-3">
+        <div className="flex items-center justify-end gap-4">
           <div className="flex items-center justify-end gap-2  text-right text-green-500">
             <DIcons.Download className=" h-4  w-4" />
             <h1 className="text-xl font-semibold">{totalDownloads}</h1>
@@ -124,7 +121,7 @@ export default async function UserProfilePage({ params }: Props) {
             <h1 className=" text-xl font-semibold">{totalViews}</h1>
           </div>
           <div>
-            {session ? (
+            {isOwnProfile ? (
               <Link href="/dashboard/settings">
                 <Button>Edit Profile</Button>
               </Link>
@@ -138,6 +135,14 @@ export default async function UserProfilePage({ params }: Props) {
       ) : (
         <p className="mt-10 text-sm text-primary/70">No assets uploaded yet.</p>
       )}
+      <div className="flex gap-1">
+        <DIcons.CalenderFold className="h-3 w-3" />
+        <p className="text-xs text-primary/70">
+          {new Intl.DateTimeFormat("en-US", {
+            dateStyle: "full",
+          }).format(new Date(user.createdAt))}
+        </p>
+      </div>
     </div>
   );
 }

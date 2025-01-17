@@ -38,6 +38,8 @@ export async function POST(req: NextRequest) {
 
     const uploadResponses = await Promise.all(uploadPromises);
 
+    const tagArray = tags ? tags.split(",").map((tag) => tag.trim()) : [];
+
     const asset = await prisma.asset.create({
       data: {
         title,
@@ -45,6 +47,15 @@ export async function POST(req: NextRequest) {
         downloadlink,
         url: uploadResponses.map((response) => response.secure_url).join(","),
         userId: session.user.id,
+        tags: {
+          connectOrCreate: tagArray.map((tag) => ({
+            where: { name: tag },
+            create: { name: tag },
+          })),
+        },
+      },
+      include: {
+        tags: true,
       },
     });
 

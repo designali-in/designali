@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { TagInput } from "@/comp/dashboard/assets/tags-input";
 import { DIcons } from "dicons";
 import { useSession } from "next-auth/react";
 
@@ -18,6 +19,7 @@ export default function UploadPage() {
   const [previews, setPreviews] = useState<string[]>([]);
   const [loading, setLoading] = useState(false); // Add loading state
   const [error, setError] = useState<string | null>(null);
+  const [tags, setTags] = useState<string[]>([]);
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -64,6 +66,7 @@ export default function UploadPage() {
     formData.append("downloadlink", downloadlink);
     formData.append("description", description);
     files.forEach((file) => formData.append("files", file));
+    formData.append("tags", JSON.stringify(tags));
 
     const response = await fetch("/api/assets/upload", {
       method: "POST",
@@ -116,6 +119,9 @@ export default function UploadPage() {
           />
         </div>
         <div className="mb-4">
+          <TagInput onTagsChange={setTags} initialTags={tags} />
+        </div>
+        <div className="mb-4">
           <Input
             type="file"
             onChange={handleFileChange}
@@ -124,6 +130,7 @@ export default function UploadPage() {
             required
           />
         </div>
+
         {previews.length > 0 && (
           <div className="mb-4 grid grid-cols-2 gap-4">
             {previews.map((preview, index) => (

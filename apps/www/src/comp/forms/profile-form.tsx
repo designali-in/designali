@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Textarea } from "@/registry/default/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DIcons } from "dicons";
 import { useForm } from "react-hook-form";
@@ -24,6 +25,7 @@ const profileFormSchema = z.object({
   name: z.string().min(3, "Name must be at least 3 characters."),
   email: z.string().email("Invalid email address."),
   username: z.string().min(3, "Name must be at least 3 characters."),
+  bio: z.string().min(3, "Name must be at least 3 characters."),
 });
 
 type ProfileFormValues = z.infer<typeof profileFormSchema>;
@@ -33,6 +35,7 @@ interface ProfileFormProps {
     name?: string | null;
     email?: string | null;
     username?: string | null;
+    bio?: string | null;
   };
 }
 
@@ -46,6 +49,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
       name: user.name || "",
       email: user.email || "",
       username: user.username || "",
+      bio: user.bio || "",
     },
   });
 
@@ -104,6 +108,22 @@ export function ProfileForm({ user }: ProfileFormProps) {
               </FormControl>
               <FormDescription>
                 This is your public display username.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="bio"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Bio</FormLabel>
+              <FormControl>
+                <Textarea placeholder="Your Bio" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display bio.
               </FormDescription>
               <FormMessage />
             </FormItem>
