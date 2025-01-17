@@ -5,8 +5,9 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 
 const profileSchema = z.object({
-  name: z.string().min(2),
+  name: z.string().min(3),
   email: z.string().email(),
+  username: z.string().min(3),
 });
 
 export async function PATCH(req: Request) {
@@ -18,7 +19,7 @@ export async function PATCH(req: Request) {
     }
 
     const body = await req.json();
-    const { name, email } = profileSchema.parse(body);
+    const { name, email, username } = profileSchema.parse(body);
 
     // Check if email is already taken by another user
     if (email !== session.user.email) {
@@ -33,6 +34,18 @@ export async function PATCH(req: Request) {
       }
     }
 
+    if (username !== session.user.username) {
+      const existingUser = await prisma.user.findUnique({
+        where: {
+          username,
+        },
+      });
+
+      if (existingUser) {
+        return new NextResponse("Username already taken", { status: 400 });
+      }
+    }
+
     await prisma.user.update({
       where: {
         id: session.user.id,
@@ -40,6 +53,7 @@ export async function PATCH(req: Request) {
       data: {
         name,
         email,
+        username,
       },
     });
 

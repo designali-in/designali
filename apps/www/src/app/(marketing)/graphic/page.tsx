@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
+import { DocsSearch } from "@/src/comp/mdx/doc/search";
 import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils";
 
@@ -10,6 +11,7 @@ import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Avegra } from "../../fonts";
 
@@ -59,6 +61,7 @@ const BrowsePage = async () => {
           top-tier abstract design assets. Each piece is a blend of beauty and
           utility, perfect for elevating any project
         </p>
+
         <div className="my-10 flex flex-wrap items-center justify-center gap-2">
           {session ? (
             <Link href="/graphic/upload">
@@ -80,7 +83,41 @@ const BrowsePage = async () => {
         </div>
       </div>{" "}
       <Separator className="mb-10" />
-      <AssetGrid assets={assets} />
+      <div>
+        <div>
+          <Tabs defaultValue="tab-1">
+            <TabsList className="flex w-auto justify-center md:justify-between">
+              <div>
+                <TabsTrigger value="tab-1">
+                  All Graphics{" "}
+                  <span className="text-ali pl-1 font-semibold">
+                    {assets.length}
+                  </span>
+                </TabsTrigger>
+                <TabsTrigger value="tab-2">Latest</TabsTrigger>
+                <TabsTrigger value="tab-3">Pro</TabsTrigger>
+              </div>
+
+              <div className="hidden md:block">
+                <DocsSearch />
+              </div>
+            </TabsList>
+            <TabsContent value="tab-1">
+              <AssetGrid assets={assets} />
+            </TabsContent>
+            <TabsContent value="tab-2">
+              <p className="p-4 text-center text-xs text-muted-foreground">
+                Uploading
+              </p>
+            </TabsContent>
+            <TabsContent value="tab-3">
+              <div className="mt-3">
+                <BrowseClient initialAnimes={topTenAnimes} />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
       <BrowseClient initialAnimes={topTenAnimes} />
     </div>
   );

@@ -97,7 +97,7 @@ export default async function AssetPage({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Link href={`/profile/${username}`}>
-                <Avatar className="h-8 w-8">
+                <Avatar className="h-8 w-8 border">
                   <AvatarImage src={userAvatar} alt={`${userName}'s avatar`} />
                   <AvatarFallback>D</AvatarFallback>
                 </Avatar>

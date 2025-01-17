@@ -1,5 +1,8 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Button } from "@/registry/default/ui/button";
+import { Separator } from "@/registry/default/ui/separator";
 import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
 import { DIcons } from "dicons";
 
@@ -62,6 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Profile Page Component
 export default async function UserProfilePage({ params }: Props) {
+  const session = await auth();
   const user = await getUserData(params.username);
 
   const totalLikes = user.Asset.reduce(
@@ -71,15 +75,20 @@ export default async function UserProfilePage({ params }: Props) {
 
   const totalViews = user.Asset.reduce((sum, asset) => sum + asset.views, 0);
 
+  const totalDownloads = user.Asset.reduce(
+    (sum, asset) => sum + asset.downloads,
+    0,
+  );
+
   if (!user) {
     notFound(); // Redirect to the 404 page
   }
 
   return (
     <div className="mx-auto my-40 max-w-7xl px-6 xl:px-0">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex  items-baseline justify-between gap-3">
         <div className="flex gap-3">
-          <Avatar className="h-24 w-24 rounded-lg">
+          <Avatar className="h-24 w-24 rounded-lg border">
             <AvatarImage
               className="rounded-lg"
               src={user.image}
@@ -100,18 +109,30 @@ export default async function UserProfilePage({ params }: Props) {
             </div>
           </div>
         </div>
-        <div>
-          <div className="flex items-center justify-end  gap-2 text-right text-blue-500">
-            <DIcons.Eye className="h-4  w-4" />
-            <h1 className=" text-xl font-semibold">{totalViews}</h1>
+
+        <div className="flex  items-center  gap-3">
+          <div className="flex items-center justify-end gap-2  text-right text-green-500">
+            <DIcons.Download className=" h-4  w-4" />
+            <h1 className="text-xl font-semibold">{totalDownloads}</h1>
           </div>
           <div className="text-ali flex items-center justify-end  gap-2 text-right">
             <DIcons.Heart className=" h-4  w-4" />
             <h1 className="text-xl font-semibold">{totalLikes}</h1>
           </div>
+          <div className="flex items-center justify-end  gap-2 text-right text-blue-500">
+            <DIcons.Eye className="h-4  w-4" />
+            <h1 className=" text-xl font-semibold">{totalViews}</h1>
+          </div>
+          <div>
+            {session ? (
+              <Link href="/dashboard/settings">
+                <Button>Edit Profile</Button>
+              </Link>
+            ) : null}
+          </div>
         </div>
       </div>
-
+      <Separator className="mt-2" />
       {user.Asset.length > 0 ? (
         <AssetGrid assets={user.Asset} /> // Display assets using a grid component
       ) : (

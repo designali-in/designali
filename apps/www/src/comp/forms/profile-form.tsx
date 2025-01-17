@@ -21,8 +21,9 @@ import {
 import { Input } from "@/components/ui/input";
 
 const profileFormSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
+  name: z.string().min(3, "Name must be at least 3 characters."),
   email: z.string().email("Invalid email address."),
+  username: z.string().min(3, "Name must be at least 3 characters."),
 });
 
 type ProfileFormValues = z.infer<typeof profileFormSchema>;
@@ -31,6 +32,7 @@ interface ProfileFormProps {
   user: {
     name?: string | null;
     email?: string | null;
+    username?: string | null;
   };
 }
 
@@ -43,6 +45,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
     defaultValues: {
       name: user.name || "",
       email: user.email || "",
+      username: user.username || "",
     },
   });
 
@@ -85,6 +88,22 @@ export function ProfileForm({ user }: ProfileFormProps) {
               </FormControl>
               <FormDescription>
                 This is your public display name.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input placeholder="Your username" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display username.
               </FormDescription>
               <FormMessage />
             </FormItem>
