@@ -1,5 +1,6 @@
 {
   "$schema": "https://turborepo.org/schema.json",
+  "ui": "tui",
   "globalDependencies": ["**/.env"],
   "globalEnv": [
     "NEXT_PUBLIC_APP_NAME",

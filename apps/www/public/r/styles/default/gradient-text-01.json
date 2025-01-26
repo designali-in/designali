@@ -1,0 +1,12 @@
+{
+  "name": "gradient-text-01",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/texts/gradient-text-01.tsx",
+      "content": "import { GradientText } from \"@/components/ui/texts/gradient-text\";\n\nexport function AuroraTextDemo() {\n  return (\n    <h1 className=\"text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl\">\n      Design <GradientText>beautiful</GradientText>\n    </h1>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

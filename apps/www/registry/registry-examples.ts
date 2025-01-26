@@ -4759,6 +4759,16 @@ export const examples: Registry = [
   // Texts
 
   {
+    name: "gradient-text-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "example/texts/gradient-text-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "morphing-text-01",
     type: "registry:example",
     files: [
