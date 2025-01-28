@@ -12,7 +12,7 @@ importers:
         specifier: workspace:*
         version: link:tooling/prettier
       '@turbo/gen':
-        specifier: ^2.1.3
+        specifier: ^2.3.3
         version: 2.3.3(@types/node@20.17.9)(typescript@5.7.2)
       '@types/react':
         specifier: ^18.2.77
@@ -17642,6 +17642,7 @@ packages:
 
   /lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
     dev: true
 
   /lodash.isplainobject@4.0.6:
