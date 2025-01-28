@@ -6,7 +6,6 @@ import Link from "next/link";
 import { renderCanvas } from "@/comp/common/render";
 import { TypeWriter } from "@/comp/common/type";
 import { Icons } from "@/comp/icons";
-import GradientText from "@/registry/default/ui/texts/gradient-text";
 import DotPattern from "@/src/comp/uis/dot-pattern";
 
 import { Button } from "@/components/ui/button";
@@ -66,8 +65,7 @@ const Hero = () => {
                   strokeWidth={4}
                   className="text-ali absolute -bottom-5 -right-5 h-10 w-10"
                 />
-                Your complete platform for the
-                <GradientText>Design.</GradientText>
+                Your complete platform for the Design.
               </h1>
               <div className="flex items-center justify-center gap-1">
                 <span className="relative flex h-3 w-3 items-center justify-center">

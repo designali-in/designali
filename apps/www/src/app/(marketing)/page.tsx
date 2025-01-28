@@ -17,9 +17,7 @@ export default function HomePage() {
       <Hero />
       <Bento />
       <DBentoGrid />
-      <Suspense fallback={<AnimeCardSkeleton />}>
-        <RecentlyAdded />
-      </Suspense>
+      <Suspense fallback={<AnimeCardSkeleton />}></Suspense>
       <Quote />
       <div className="px-6 xl:px-0">
         <InstagramFeed />
