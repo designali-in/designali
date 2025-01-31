@@ -13,6 +13,10 @@ interface ProtectedLayoutProps {
 export default async function Users({ children }: ProtectedLayoutProps) {
   const user = await getCurrentUser();
 
+  if (!user) {
+    redirect("/login"); // Redirect to login if no user is found
+  }
+
   if (user || user.role !== "USER")
     return (
       <div className="">
