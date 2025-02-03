@@ -2,8 +2,8 @@ import type { ConfigContext, ExpoConfig } from "expo/config";
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "expo",
-  slug: "expo",
+  name: "Designali",
+  slug: "designali",
   scheme: "expo",
   version: "0.1.0",
   orientation: "portrait",
@@ -19,21 +19,21 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ["**/*"],
   ios: {
-    bundleIdentifier: "your.bundle.identifier",
+    bundleIdentifier: "com.designali.app",
     supportsTablet: true,
   },
   android: {
-    package: "your.bundle.identifier",
+    package: "com.designali.app",
     adaptiveIcon: {
       foregroundImage: "./assets/icon.png",
       backgroundColor: "#1F104A",
     },
   },
-  // extra: {
-  //   eas: {
-  //     projectId: "your-eas-project-id",
-  //   },
-  // },
+  extra: {
+    eas: {
+      projectId: "77f74565-6df8-4809-b841-09a5004b2f97",
+    },
+  },
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true,
