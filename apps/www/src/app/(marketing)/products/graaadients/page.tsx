@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Graaadients } from "@/comp/tools/gradient-generator";
+import { GradientGenerator } from "@/comp/tools/gradient-generator";
 
+import { cn } from "@/lib/utils";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,6 +12,14 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
+import { Avegra } from "@/app/fonts";
+
+import { Grads } from "./grads";
+
+export const metadata = {
+  title: "Graaadients - Designali",
+  description: "A design agency with a touch of magic.",
+};
 
 export default function AboutAI() {
   return (
@@ -28,7 +37,12 @@ export default function AboutAI() {
             Introducing
           </p>
 
-          <h1 className="text-center text-7xl tracking-tighter text-white sm:text-9xl">
+          <h1
+            className={cn(
+              Avegra.className,
+              "text-center text-7xl tracking-tighter text-white sm:text-9xl",
+            )}
+          >
             Graaadients
           </h1>
           <p className="mx-auto max-w-lg px-6 text-center text-sm font-light text-white lg:-mt-4 lg:text-lg">
@@ -65,7 +79,7 @@ export default function AboutAI() {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-        <Graaadients />
+        <GradientGenerator />
 
         <p className="ml-2 mt-6 text-center font-semibold ">
           All gradients are 100% free.
@@ -73,12 +87,25 @@ export default function AboutAI() {
         <h1 className="text-ali -mb-10 flex w-full justify-center  text-center text-9xl font-thin  ">
           4K
         </h1>
+        <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
+          <Grads />
+        </div>
+        <div className="mx-auto mt-10 flex max-w-5xl justify-center px-4 sm:px-6">
+          <video autoPlay muted controls loop className="rounded-3xl">
+            <source width={720} height={480} src="/videos/graaadients.mp4" />
+          </video>
+        </div>
 
         <p className="text-aired mt-10 text-center text-lg lg:text-xl">
           Download. Edit. Upload.
         </p>
         <div className="px-8">
-          <h1 className="py-2 text-center text-3xl sm:text-6xl">
+          <h1
+            className={cn(
+              Avegra.className,
+              "py-2 text-center text-3xl sm:text-6xl",
+            )}
+          >
             The Beauty of Gradients
           </h1>
           <p className="mx-auto max-w-lg text-center text-sm font-light text-slate-600 dark:text-slate-400 lg:text-lg">
