@@ -14,10 +14,13 @@
     "GOOGLE_API_KEY",
     "GOOGLE_CLIENT_ID",
     "GOOGLE_CLIENT_SECRET",
+    "DATABASE_URL",
+    "DATABASE_URL_UNPOOLED",
     "TURSO_DATABASE_URL",
     "TURSO_AUTH_TOKEN",
     "UPLOADTHING_SECRET",
     "UPLOADTHING_APP_ID",
+    "POSTGRES_URL",
     "REGISTRY_URL",
     "RESEND_API_KEY",
     "RESEND_FROM",
@@ -67,8 +70,7 @@
     },
     "dev": {
       "persistent": true,
-      "cache": false,
-      "ui": true
+      "cache": false
     },
     "format": {
       "outputs": ["node_modules/.cache/.prettiercache"],
