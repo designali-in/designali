@@ -1,3 +1,4 @@
+import type React from "react"; // Import React
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { AdminAppSidebar } from "@/comp/dashboard/sidebar/app-sidebar";
@@ -10,17 +11,24 @@ interface ProtectedLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function Admin({ children }: ProtectedLayoutProps) {
+export default async function AdminLayout({ children }: ProtectedLayoutProps) {
   const user = await getCurrentUser();
 
-  if (!user || user.role !== "ADMIN") redirect("/dashboard");
+  if (!user) {
+    redirect("/login"); // Redirect to login if no user is found
+  }
+
+  if (!user || user.role !== "ADMIN") {
+    redirect("/dashboard"); // Redirect to dashboard if no user or if user is not an admin
+  }
+
   return (
     <div className="">
       <SidebarProvider>
         <AdminAppSidebar user={user} />
         <main className="relative m-3 w-full rounded-xl border bg-white shadow-sm dark:bg-black md:ml-0 ">
           {children}
-          <div className=" mt-6">
+          <div className="mt-6">
             <div className="absolute bottom-3 left-0 right-0 flex flex-col justify-between text-center text-xs ">
               <div className="flex flex-row items-center justify-center gap-1 text-slate-600 dark:text-slate-400">
                 <span> © </span>
