@@ -100,6 +100,10 @@ export const componentsConfig: ComponentsConfig = {
       title: "Texts",
       items: [
         {
+          title: "Gradient Text",
+          href: "/components/texts/gradient-text",
+        },
+        {
           title: "Morphing Text",
           href: "/components/texts/morphing-text",
         },

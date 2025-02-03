@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model Account {
@@ -42,23 +42,59 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  username      String?   @unique
-  email         String?   @unique
-  emailVerified DateTime?
-  bio           String?
-  image         String?
-  createdAt     DateTime  @default(now()) @map("created_at")
-  updatedAt     DateTime  @default(now()) @map("updated_at")
-  role          UserRole  @default(USER)
-
+<<<<<<< HEAD
+  id                     String             @id @default(cuid())
+  name                   String?
+  username               String?            @unique
+  email                  String?            @unique
+  emailVerified          DateTime?
+  image                  String?
+  createdAt              DateTime           @default(now()) @map("created_at")
+  updatedAt              DateTime           @default(now()) @map("updated_at")
+  role                   UserRole           @default(USER)
+  stripeCustomerId       String?            @unique @map("stripe_customer_id")
+  stripeSubscriptionId   String?            @unique @map("stripe_subscription_id")
+  stripePriceId          String?            @map("stripe_price_id")
+  stripeCurrentPeriodEnd DateTime?          @map("stripe_current_period_end")
+  bio                    String?
+  Asset                  Asset[]
+  likes                  AssetLike[]
+  comment                Comment[]
+  community              Community[]
+  currentlyWatching      CurrentlyDesign[]
+  designPost             DesignPost[]
+  finishedWatching       FinishedDesign[]
+  graphic                Graphic[]
+  like                   Like[]
+  notStartedWatching     NotStartedDesign[]
+  poll                   Poll[]
+  pollVote               PollVote[]
+  projects               Project[]
+  rating                 Rating[]
+  reviewLikes            ReviewLike[]
+  reviews                Reviews[]
+  teamActivities         TeamActivity[]
+  teams                  TeamMember[]
+  accounts               Account[]
+  sessions               Session[]
+  urls                   Url[]
+=======
+  id                     String    @id @default(cuid())
+  name                   String?
+  username               String?   @unique
+  email                  String?   @unique
+  emailVerified          DateTime?
+  bio                    String?
+  image                  String?
+  createdAt              DateTime  @default(now()) @map("created_at")
+  updatedAt              DateTime  @default(now()) @map("updated_at")
+  role                   String    @default("USER") // Use string with a default value
   stripeCustomerId       String?   @unique @map("stripe_customer_id")
   stripeSubscriptionId   String?   @unique @map("stripe_subscription_id")
   stripePriceId          String?   @map("stripe_price_id")
   stripeCurrentPeriodEnd DateTime? @map("stripe_current_period_end")
 
-  projects           Project[] // A user can have multiple projects
+  projects           Project[]
   comment            Comment[]
   community          Community[]
   currentlyWatching  CurrentlyDesign[]
@@ -79,6 +115,7 @@ model User {
   urls               Url[]
   Asset              Asset[]
   likes              AssetLike[]
+>>>>>>> 3d8cf66624431e03509f50fe4344294196b15f75
 
   @@map("users")
 }
@@ -96,9 +133,9 @@ model Url {
   id          String   @id @default(cuid())
   originalUrl String
   shortUrl    String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId      String
   createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, originalUrl])
   @@map("urls")
@@ -125,7 +162,7 @@ model Team {
 
 model TeamMember {
   id        String   @id @default(cuid())
-  role      Role     @default(MEMBER)
+  role      String   @default("MEMBER") // Use string with a default value
   teamId    String
   userId    String
   createdAt DateTime @default(now())
@@ -139,7 +176,7 @@ model TeamMember {
 model Invitation {
   id        String   @id @default(cuid())
   email     String
-  role      Role     @default(MEMBER)
+  role      String   @default("MEMBER")
   token     String   @unique
   expires   DateTime
   teamId    String
@@ -154,7 +191,7 @@ model TeamActivity {
   teamId    String
   userId    String
   event     String
-  metadata  Json
+  metadata  String
   createdAt DateTime @default(now())
   team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -164,31 +201,44 @@ model TeamActivity {
 }
 
 model Graphic {
-  id   String @id @default(cuid())
-  name String @unique
-
-  genre       String
-  releaseYear String
-
+<<<<<<< HEAD
+  id               String             @id @default(cuid())
+  name             String             @unique
+  genre            String
+  releaseYear      String
+  director         String
+  freepro          String
+  dimention        String
+  features         String             @db.VarChar(500)
+  description      String             @db.VarChar(1500)
+  trailerLink      String
+  downloadLink     String
+  coverImage       String
+  galleryImage     String[]
+  totalRatings     Int                @default(0)
+  creatorId        String
+  createdAt        DateTime           @default(now())
+=======
+  id           String   @id @default(cuid())
+  name         String   @unique
+  genre        String
+  releaseYear  String
   director     String
   freepro      String
   dimention    String
-  features     String @db.VarChar(500)
-  description  String @db.VarChar(1500)
+  features     String
+  description  String
   trailerLink  String
   downloadLink String
-
   coverImage   String
-  galleryImage String[]
+  galleryImage String
+  totalRatings Int      @default(0)
+  creatorId    String
+  createdAt    DateTime @default(now())
 
-  totalRatings Int @default(0)
-
-  creatorId String
-  createdAt DateTime @default(now())
-
-  currentlyDesign CurrentlyDesign[]
-  finishedDesign  FinishedDesign[]
-
+>>>>>>> 3d8cf66624431e03509f50fe4344294196b15f75
+  currentlyDesign  CurrentlyDesign[]
+  finishedDesign   FinishedDesign[]
   creator          User               @relation(fields: [creatorId], references: [id], onDelete: Cascade)
   notStartedDesign NotStartedDesign[]
   rating           Rating[]
@@ -202,8 +252,8 @@ model Reviews {
   id          String       @id @default(cuid())
   userId      String
   graphicId   String
-  title       String       @db.VarChar(50)
-  text        String       @db.VarChar(1500)
+  title       String
+  text        String
   createdAt   DateTime     @default(now())
   reviewLikes ReviewLike[]
   graphic     Graphic      @relation(fields: [graphicId], references: [id], onDelete: Cascade)
@@ -273,7 +323,7 @@ model NotStartedDesign {
 model Community {
   id          String       @id @default(cuid())
   name        String       @unique
-  description String       @db.VarChar(300)
+  description String
   category    String
   creatorId   String
   createdAt   DateTime     @default(now())
@@ -285,8 +335,8 @@ model Community {
 
 model DesignPost {
   id          String    @id @default(cuid())
-  title       String    @db.VarChar(80)
-  message     String    @db.VarChar(600)
+  title       String
+  message     String
   creatorId   String
   communityId String
   createdAt   DateTime  @default(now())
@@ -300,7 +350,7 @@ model DesignPost {
 
 model Comment {
   id        String     @id @default(cuid())
-  text      String     @db.VarChar(300)
+  text      String
   createdAt DateTime   @default(now())
   authorId  String
   postId    String
@@ -319,7 +369,7 @@ model Like {
 
 model Poll {
   id        String       @id @default(cuid())
-  question  String       @db.VarChar(150)
+  question  String
   creatorId String
   expiresAt DateTime
   createdAt DateTime     @default(now())
@@ -329,7 +379,7 @@ model Poll {
 
 model PollOption {
   id        String     @id @default(cuid())
-  option    String     @db.VarChar(80)
+  option    String
   pollId    String
   createdAt DateTime   @default(now())
   poll      Poll       @relation(fields: [pollId], references: [id], onDelete: Cascade)
@@ -345,54 +395,64 @@ model PollVote {
   user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-enum UserRole {
-  ADMIN
-  USER
-}
-
-enum Role {
-  OWNER
-  ADMIN
-  MEMBER
-}
-
 model Project {
   id               String   @id @default(cuid())
   projectName      String
-  projectInfo      String? // Optional project information
+  projectInfo      String?
+<<<<<<< HEAD
   techStack        String[]
-  projectUrl       String? // Optional project URL
-  githubUrl        String? // Optional GitHub URL
-  completedTickets Int? // Number of completed tickets (optional)
-  tickets          Ticket[] // A project can have multiple tickets
+  projectUrl       String?
+  githubUrl        String?
+  completedTickets Int?
+=======
+  techStack        String
+  projectUrl       String?
+  githubUrl        String?
+  completedTickets Int?
+  tickets          Ticket[]
+>>>>>>> 3d8cf66624431e03509f50fe4344294196b15f75
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
-  User             User?    @relation(fields: [userId], references: [id])
   userId           String?
+  User             User?    @relation(fields: [userId], references: [id])
+  tickets          Ticket[]
 }
 
 model Ticket {
   id                  String    @id @default(cuid())
-  title               String? // Optional title for the ticket
-  messages            Message[] // Messages associated with the ticket
-  status              String?   @default("active") // active, inprogress, completed
+  title               String?
+<<<<<<< HEAD
+  status              String?   @default("active")
   category            String[]
-  priority            String? // low, medium, high
-  estimatedFinishTime String? // Estimated time to complete the ticket
+  priority            String?
+  estimatedFinishTime String?
+=======
+  messages            Message[]
+  status              String?   @default("active")
+  category            String
+  priority            String?
+  estimatedFinishTime String?
   project             Project   @relation(fields: [projectId], references: [id])
-  projectId           String // ID of the project this ticket belongs to
+>>>>>>> 3d8cf66624431e03509f50fe4344294196b15f75
+  projectId           String
   createdAt           DateTime  @default(now())
   updatedAt           DateTime  @updatedAt
+  messages            Message[]
+  project             Project   @relation(fields: [projectId], references: [id])
 }
 
 model Message {
   id        String   @id @default(cuid())
-  sender    String // user, admin
-  content   String // Content of the message
+  sender    String
+  content   String
+<<<<<<< HEAD
+=======
   ticket    Ticket   @relation(fields: [ticketId], references: [id])
-  ticketId  String // ID of the ticket this message belongs to
+>>>>>>> 3d8cf66624431e03509f50fe4344294196b15f75
+  ticketId  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
 }
 
 model NewsletterSubscriber {
@@ -408,15 +468,15 @@ model Asset {
   title        String
   description  String?
   url          String
-  downloadlink String
-  downloads    Int         @default(0)
-  views        Int         @default(0)
   createdAt    DateTime    @default(now())
   updatedAt    DateTime    @updatedAt
   userId       String
+  downloadlink String
+  views        Int         @default(0)
+  downloads    Int         @default(0)
   user         User        @relation(fields: [userId], references: [id])
   likes        AssetLike[]
-  tags         Tag[]
+  tags         Tag[]       @relation("AssetToTag")
 }
 
 model AssetLike {
@@ -424,8 +484,8 @@ model AssetLike {
   createdAt DateTime @default(now())
   userId    String
   assetId   String
-  user      User     @relation(fields: [userId], references: [id])
   asset     Asset    @relation(fields: [assetId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
 
   @@unique([userId, assetId])
 }
@@ -433,5 +493,16 @@ model AssetLike {
 model Tag {
   id     String  @id @default(cuid())
   name   String  @unique
-  assets Asset[]
+  assets Asset[] @relation("AssetToTag")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum Role {
+  OWNER
+  ADMIN
+  MEMBER
 }

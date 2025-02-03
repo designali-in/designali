@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@designali/prettier-config": "workspace:*",
-    "@turbo/gen": "^2.1.3",
+    "@turbo/gen": "^2.3.3",
     "@types/react": "^18.2.77",
     "husky": "^8.0.3",
     "prettier": "^3.2.5",

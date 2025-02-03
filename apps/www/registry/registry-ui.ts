@@ -721,7 +721,16 @@ export const ui: Registry = [
   },
 
   // Text
-
+  {
+    name: "gradient-text",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/texts/gradient-text.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
   {
     name: "morphing-text",
     type: "registry:ui",

@@ -883,6 +883,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "gradient-text": {
+      name: "gradient-text",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/texts/gradient-text.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/texts/gradient-text.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "morphing-text": {
       name: "morphing-text",
       description: "",
@@ -8110,6 +8125,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/example/components/script-copy-btn-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "gradient-text-01": {
+      name: "gradient-text-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/texts/gradient-text-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/example/texts/gradient-text-01.tsx")),
       source: "",
       meta: undefined,
     },
