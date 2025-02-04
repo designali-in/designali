@@ -9,6 +9,7 @@ import { AspectRatio } from "@/registry/default/ui/aspect-ratio";
 import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -37,10 +38,14 @@ type Asset = {
   uploadedAt: string;
 };
 
+const INITIAL_LOAD = 12; // Number of assets to load initially
+const LOAD_MORE = 12; // Number of assets to load on each click
+
 export default function AssetGrid({ assets }: { assets: Asset[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredAssets, setFilteredAssets] = useState(assets);
   const [sortBy, setSortBy] = useState("latest");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
 
   useEffect(() => {
     const sortedAssets = [...assets].sort(
@@ -79,11 +84,12 @@ export default function AssetGrid({ assets }: { assets: Asset[] }) {
       asset.title.toLowerCase().includes(searchTerm.toLowerCase()),
     );
     setFilteredAssets(filtered);
+    setVisibleCount(INITIAL_LOAD); // Reset visible count on sort change
   }, [assets, searchTerm, sortBy]);
 
   return (
     <div>
-      <div className="mb-4">
+      <div className="mb-3">
         <div className="mt-3 flex items-center justify-between gap-3">
           <Input
             type="text"
@@ -105,8 +111,9 @@ export default function AssetGrid({ assets }: { assets: Asset[] }) {
           </Select>
         </div>
       </div>
+
       <div className="my-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {filteredAssets.map((asset) => {
+        {filteredAssets.slice(0, visibleCount).map((asset) => {
           const urls = asset.url.split(",");
           return (
             <Card
@@ -179,6 +186,14 @@ export default function AssetGrid({ assets }: { assets: Asset[] }) {
           );
         })}
       </div>
+
+      {visibleCount < filteredAssets.length && (
+        <div className="mt-6 flex justify-center">
+          <Button onClick={() => setVisibleCount(visibleCount + LOAD_MORE)}>
+            Load More
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

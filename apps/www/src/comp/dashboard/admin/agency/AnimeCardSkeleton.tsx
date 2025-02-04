@@ -4,7 +4,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-const AnimeCardSkeleton = ({ length = 5 }: { length?: number }) => {
+const AnimeCardSkeleton = ({ length = 3 }: { length?: number }) => {
   return (
     <div className="mx-auto grid max-w-7xl grid-cols-1 gap-3 md:grid-cols-3">
       {Array.from({ length }).map((_, index) => (

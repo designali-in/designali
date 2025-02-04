@@ -7,6 +7,7 @@ import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
@@ -30,10 +31,14 @@ type User = {
   joinedAt: string;
 };
 
+const INITIAL_LOAD = 48;
+const LOAD_MORE = 48;
+
 export default function UserList({ users }: { users: User[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredUsers, setFilteredUsers] = useState<User[]>(users);
   const [sortBy, setSortBy] = useState("mostDownloaded");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
 
   useEffect(() => {
     let result = users.filter((user) =>
@@ -58,6 +63,7 @@ export default function UserList({ users }: { users: User[] }) {
     }
 
     setFilteredUsers(result);
+    setVisibleCount(INITIAL_LOAD);
   }, [users, searchTerm, sortBy]);
 
   return (
@@ -85,7 +91,7 @@ export default function UserList({ users }: { users: User[] }) {
         </div>
       </div>
       <div className="my-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {filteredUsers.map((user) => (
+        {filteredUsers.slice(0, visibleCount).map((user) => (
           <Card
             key={user.id}
             className={cn(
@@ -121,6 +127,14 @@ export default function UserList({ users }: { users: User[] }) {
           </Card>
         ))}
       </div>
+
+      {visibleCount < filteredUsers.length && (
+        <div className="mt-6 flex justify-center">
+          <Button onClick={() => setVisibleCount(visibleCount + LOAD_MORE)}>
+            Load More
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

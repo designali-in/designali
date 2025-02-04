@@ -59,10 +59,7 @@ const BrowsePage = async () => {
       (sum, asset) => sum + (asset.downloads || 0),
       0,
     ),
-    totalLikes: user.Asset.reduce(
-      (sum, asset) => sum + (asset.likes?.length || 0),
-      0,
-    ),
+    totalLikes: 0,
     joinedAt: user.createdAt.toISOString(),
   }));
 
