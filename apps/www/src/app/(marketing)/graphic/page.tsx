@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { BioRhyme } from "next/font/google";
 import Link from "next/link";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import { Badge } from "@/registry/default/ui/badge";
 import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
+import AssetUsers from "@/src/comp/dashboard/assets/asset-users";
 import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils";
 
@@ -36,6 +38,34 @@ const BrowsePage = async () => {
     ...asset,
     uploadedAt: asset.createdAt.toISOString(),
   }));
+
+  const users = (
+    await prisma.user.findMany({
+      take: 20,
+      orderBy: { createdAt: "desc" },
+      include: {
+        Asset: true,
+      },
+    })
+  ).map((user) => ({
+    id: user.id,
+    name: user.name || "",
+    email: user.email || "",
+    username: user.username,
+    bio: user.bio || "",
+    avatarUrl: user.image || "",
+    totalAssets: user.Asset.length,
+    totalDownloads: user.Asset.reduce(
+      (sum, asset) => sum + (asset.downloads || 0),
+      0,
+    ),
+    totalLikes: user.Asset.reduce(
+      (sum, asset) => sum + (asset.likes?.length || 0),
+      0,
+    ),
+    joinedAt: user.createdAt.toISOString(),
+  }));
+
   const topTenAnimes = await prisma.graphic.findMany({
     orderBy: [
       {
@@ -112,7 +142,12 @@ const BrowsePage = async () => {
                     {topTenAnimes.length}
                   </span>
                 </TabsTrigger>
-                <TabsTrigger value="tab-3">Top Users</TabsTrigger>
+                <TabsTrigger value="tab-3">
+                  Top Designers
+                  <span className="text-ali px-1 font-semibold">
+                    {users.length}
+                  </span>
+                </TabsTrigger>
               </div>
             </TabsList>
             <TabsContent value="tab-1">
@@ -125,9 +160,7 @@ const BrowsePage = async () => {
               </div>
             </TabsContent>
             <TabsContent value="tab-3">
-              <p className="p-4 text-center text-xs text-muted-foreground">
-                Coming Soon
-              </p>
+              <AssetUsers users={users} />
             </TabsContent>
           </Tabs>
         </div>

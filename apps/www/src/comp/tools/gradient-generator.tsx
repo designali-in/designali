@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Slider } from "@/registry/default/ui/slider";
 import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
+import { toast } from "@/components/ui/toaster";
 
 type ColorStop = {
   color: string;
@@ -19,7 +20,7 @@ const defaultColorStops: ColorStop[] = [
   { color: "#0000ff", position: 100 },
 ];
 
-function Graaadients() {
+export function GradientGenerator() {
   const [colorStops, setColorStops] = useState<ColorStop[]>(defaultColorStops);
   const [angle, setAngle] = useState(90);
   const [noiseAmount, setNoiseAmount] = useState(0);
@@ -43,7 +44,9 @@ function Graaadients() {
     : `background: radial-gradient(circle, ${gradientString});`;
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(gradientCSS).then(() => {});
+    navigator.clipboard.writeText(gradientCSS).then(() => {
+      toast("Copied! Gradient CSS copied to clipboard");
+    });
   };
 
   useEffect(() => {
@@ -148,6 +151,7 @@ function Graaadients() {
     setNoiseAmount(0);
     setApplyNoise(false);
     setIsRadialGradient(false);
+    toast("Settings reset to default values");
   };
 
   return (
@@ -320,5 +324,3 @@ function Graaadients() {
     </div>
   );
 }
-
-export { Graaadients };
