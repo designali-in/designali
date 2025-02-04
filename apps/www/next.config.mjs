@@ -8,7 +8,7 @@ createJiti(fileURLToPath(import.meta.url))("./src/env");
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
   webpack(config, { isServer }) {
     if (!isServer) {
       config.resolve.fallback = {

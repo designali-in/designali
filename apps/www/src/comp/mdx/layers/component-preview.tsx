@@ -12,6 +12,7 @@ import { useConfig } from "@/hooks/use-config";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { ThemeWrapper } from "../../common/theme-wrapper";
+import OpenInV0 from "../open-in-v0";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -118,6 +119,9 @@ export function ComponentPreview({
                 </TabsTrigger>
               </div>
               <div className="flex items-center gap-2">
+                <OpenInV0
+                  componentSource={`https://designali.in/r/styles/default/${name}.json`}
+                />
                 <CopyButton
                   value={codeString}
                   variant="ghost"
