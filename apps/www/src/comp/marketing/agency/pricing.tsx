@@ -18,6 +18,12 @@ export default function FUIPricingWithSpecialTwo() {
           />
         </div>
         <div className="mx-auto grid max-w-3xl items-center justify-center px-8 pb-1 text-center">
+          <h1>Why Choose Me?</h1>
+          <p>
+            Get unlimited, high-quality designs with a fast turnaround and
+            unlimited revisions—all for a flat monthly rate. No hiring hassles,
+            no hidden fees—just top-tier creativity on demand. 🚀
+          </p>
           <h3
             className={cn(
               Avegra.className,

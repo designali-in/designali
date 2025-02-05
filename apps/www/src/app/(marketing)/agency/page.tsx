@@ -17,13 +17,13 @@ export default function HomePage() {
     <div className=" ">
       <Hero />
       <Bento />
-      <DesignProcess />
+      <Pricing />
+      <CallToActionSection />
+
       <main className="mx-auto md:max-w-7xl">
         <Services />
         <Related />
       </main>
-      <Pricing />
-      <CallToActionSection />
       <main className="mx-auto px-6 md:max-w-7xl xl:px-0">
         <FAQ />
       </main>
