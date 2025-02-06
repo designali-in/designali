@@ -1,3 +1,4 @@
+import AdBanner from "@/comp/AdBanner";
 import { FAQ } from "@/comp/marketing/home/faq";
 import { Graaadients } from "@/src/comp/products/cards";
 
@@ -33,6 +34,13 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-6 md:max-w-7xl xl:px-0">
           <Graaadients />
           <FAQ />
+        </div>
+        <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
+          <AdBanner
+            dataAdFormat="auto"
+            dataFullWidthResponsive={true}
+            dataAdSlot="2194727573"
+          />
         </div>
       </div>
     </div>

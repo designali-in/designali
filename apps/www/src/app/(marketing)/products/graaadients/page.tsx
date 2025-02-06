@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AdBanner from "@/comp/AdBanner";
 import { GradientGenerator } from "@/comp/tools/gradient-generator";
 
 import { cn } from "@/lib/utils";
@@ -120,6 +121,13 @@ export default function AboutAI() {
               </Button>
             </Link>
           </div>
+        </div>
+        <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
+          <AdBanner
+            dataAdFormat="auto"
+            dataFullWidthResponsive={true}
+            dataAdSlot="2106263519"
+          />
         </div>
       </div>
     </div>

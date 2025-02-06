@@ -20,7 +20,7 @@ export interface Experience {
 export const Service: Experience[] = [
   {
     post: "Branding",
-    link: "/agency/branding",
+    link: "https://cal.com/aliimam/designali",
     comlogo:
       "https://utfs.io/f/cb22130d-5369-4dab-a93a-44464be93e60-jrpk8e.jpg",
     company: "Brand Identity",
@@ -28,7 +28,7 @@ export const Service: Experience[] = [
   },
   {
     post: "SM Posts",
-    link: "/agency/sm-posts",
+    link: "https://cal.com/aliimam/designali",
     comlogo:
       "https://utfs.io/f/813bb6c1-f742-4c1d-b0d3-75cd4d984c05-cmsrrn.jpg",
     company: "Social Media Marketing",
@@ -36,7 +36,7 @@ export const Service: Experience[] = [
   },
   {
     post: "Web Design",
-    link: "/agency/web-design",
+    link: "https://cal.com/aliimam/designali",
     comlogo:
       "https://utfs.io/f/65154be4-d18f-4cea-8dc5-cb9443c623de-rrz747.jpg",
     company: "UI/UX, Landing Page",
@@ -44,7 +44,7 @@ export const Service: Experience[] = [
   },
   {
     post: "Web Develop",
-    link: "/agency/web-develop",
+    link: "https://cal.com/aliimam/designali",
     comlogo:
       "https://utfs.io/f/11b40ec3-5580-422e-9fe2-137da9569e2c-8rjek4.jpg",
     company: "Build in Next.js & Vercel",
@@ -82,7 +82,7 @@ export function Services() {
                         height={500}
                       />
                     </ImageZoom>
-                    <Link href={Experience.link}>
+                    <Link target="_blank" href={Experience.link}>
                       <div className="p-6">
                         <h3 className="inline-flex items-baseline bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-clip-text pb-1 font-semibold text-transparent dark:bg-gradient-to-r dark:from-slate-400 dark:via-slate-200 dark:to-slate-400 dark:bg-clip-text">
                           <span className="text-xl md:text-3xl">

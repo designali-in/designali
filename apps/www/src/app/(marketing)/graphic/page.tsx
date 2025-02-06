@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { BioRhyme } from "next/font/google";
 import Link from "next/link";
+import AdBanner from "@/comp/AdBanner";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import { Badge } from "@/registry/default/ui/badge";
 import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
@@ -161,6 +161,13 @@ const BrowsePage = async () => {
             </TabsContent>
           </Tabs>
         </div>
+      </div>
+      <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
+        <AdBanner
+          dataAdFormat="auto"
+          dataFullWidthResponsive={true}
+          dataAdSlot="5790922307"
+        />
       </div>
     </div>
   );
