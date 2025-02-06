@@ -25,7 +25,7 @@ export async function Halftone() {
             </Link>
             <Button variant="default" size="lg">
               <Link
-                href="https://drive.google.com/drive/folders/1O75nfi9OCFxKBLhchcnpNplr6WxQULZB?usp=sharing"
+                href="https://www.jiocloud.com/l/?u=i2wPvKD253IgrxoRnKJ9gMIZmRX9LLgvub6zaCfyHEM=PrF"
                 target="_blank"
                 className=""
               >

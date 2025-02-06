@@ -25,7 +25,7 @@ export async function Solarize() {
             </Link>
             <Button variant="default" size="lg">
               <Link
-                href="https://drive.google.com/drive/folders/1g4AJXcHmUhNyGaLg7racS1911Dfe-Zyb?usp=sharing"
+                href="https://www.jiocloud.com/l/?u=huds7GZPRM2xIizDjSEP9XZ8OpAbGptSes-qMggXDAM=o8v"
                 target="_blank"
                 className=""
               >

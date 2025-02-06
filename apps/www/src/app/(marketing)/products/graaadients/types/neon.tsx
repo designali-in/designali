@@ -25,7 +25,7 @@ export async function Neon() {
             </Link>
             <Button variant="default" size="lg">
               <Link
-                href="https://drive.google.com/drive/folders/1iqRMfDj1IcozDX90bUDbaUeLAdax-R4U?usp=sharing"
+                href="https://www.jiocloud.com/l/?u=dgpwMdlep8wzIRZNrzSBML-Pfxh4n1KYTxcFKeIMJ04=VaU"
                 target="_blank"
                 className=""
               >

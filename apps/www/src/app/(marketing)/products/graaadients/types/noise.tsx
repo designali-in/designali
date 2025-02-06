@@ -25,7 +25,7 @@ export async function Noise() {
             </Link>
             <Button variant="default" size="lg">
               <Link
-                href="https://drive.google.com/drive/folders/1SUHPfgnY0HjrlfCNQmdsmPArXqsVhh7O?usp=drive_link"
+                href="https://www.jiocloud.com/l/?u=DnlRgCm6FNj2L3HtZpM3Jn2fmdZMJAgRPT5g8kTQPoc=o8v"
                 target="_blank"
                 className=""
               >
