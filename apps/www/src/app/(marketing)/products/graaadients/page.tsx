@@ -122,7 +122,7 @@ export default function AboutAI() {
             </Link>
           </div>
         </div>
-        <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
+        <div className=" mx-auto mt-20 max-w-7xl px-6  xl:px-0">
           <AdBanner
             dataAdFormat="auto"
             dataFullWidthResponsive={true}
