@@ -49,6 +49,11 @@ model User {
   emailVerified DateTime?
   bio           String?
   image         String?
+  coverImage    String?
+  website       String?
+  twitter       String?
+  instagram     String?
+  linkedin      String?
   createdAt     DateTime  @default(now()) @map("created_at")
   updatedAt     DateTime  @default(now()) @map("updated_at")
   role          UserRole  @default(USER)

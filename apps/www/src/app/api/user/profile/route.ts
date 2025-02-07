@@ -1,29 +1,47 @@
 import { NextResponse } from "next/server";
+import { getCurrentUser } from "@/src/lib/session";
 import * as z from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 
 const profileSchema = z.object({
-  name: z.string().min(3),
-  email: z.string().email(),
-  username: z.string().min(3),
-  bio: z.string().min(3),
+  name: z.string().min(3, "Name must be at least 3 characters."),
+  email: z.string().email("Invalid email address."),
+  username: z.string().min(3, "Username must be at least 3 characters."),
+  bio: z.string().min(3, "Bio must be at least 3 characters."),
+  website: z.string().url("Invalid URL").optional().or(z.literal("")),
+  twitter: z.string().optional(),
+  instagram: z.string().optional(),
+  linkedin: z.string().optional(),
+  image: z.string().optional(),
+  coverImage: z.string().optional(),
 });
 
 export async function PATCH(req: Request) {
   try {
-    const session = await auth();
+    const user = await getCurrentUser();
 
-    if (!session.user) {
+    if (!user) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
     const body = await req.json();
-    const { name, email, username, bio } = profileSchema.parse(body);
+    const {
+      name,
+      email,
+      username,
+      bio,
+      website,
+      twitter,
+      instagram,
+      linkedin,
+      image,
+      coverImage,
+    } = profileSchema.parse(body);
 
     // Check if email is already taken by another user
-    if (email !== session.user.email) {
+    if (email !== user.email) {
       const existingUser = await prisma.user.findUnique({
         where: {
           email,
@@ -35,7 +53,7 @@ export async function PATCH(req: Request) {
       }
     }
 
-    if (username !== session.user.username) {
+    if (username !== user.username) {
       const existingUser = await prisma.user.findUnique({
         where: {
           username,
@@ -48,14 +66,18 @@ export async function PATCH(req: Request) {
     }
 
     await prisma.user.update({
-      where: {
-        id: session.user.id,
-      },
+      where: { id: user.id },
       data: {
         name,
         email,
         username,
         bio,
+        website,
+        twitter,
+        instagram,
+        linkedin,
+        image,
+        coverImage,
       },
     });
 

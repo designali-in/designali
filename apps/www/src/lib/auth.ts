@@ -28,6 +28,7 @@ export const {
         session.user.email = token.email;
         session.user.image = token.picture;
         session.user.username = token.username;
+
         session.user.role = token.role;
       }
 
@@ -65,6 +66,11 @@ export const {
         email: dbUser.email,
         picture: dbUser.image,
         username: dbUser.username,
+        bio: dbUser.bio, // ✅ Include bio
+        website: dbUser.website, // ✅ Include website
+        twitter: dbUser.twitter, // ✅ Include Twitter
+        instagram: dbUser.instagram, // ✅ Include Instagram
+        linkedin: dbUser.linkedin, // ✅ Include LinkedIn
         role: dbUser.role,
       };
     },

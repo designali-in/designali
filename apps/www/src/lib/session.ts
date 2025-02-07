@@ -17,7 +17,15 @@ export async function getCurrentUser() {
       name: true,
       email: true,
       role: true,
-      // Add other fields you need
+      username: true,
+      bio: true,
+      website: true,
+      twitter: true,
+      instagram: true,
+      linkedin: true,
+      image: true,
+      coverImage: true,
+      createdAt: true,
     },
   });
 

@@ -25,6 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Asset = {
   id: string;
@@ -41,7 +42,7 @@ type Asset = {
 const INITIAL_LOAD = 12; // Number of assets to load initially
 const LOAD_MORE = 12; // Number of assets to load on each click
 
-export default function AssetGrid({ assets }: { assets: Asset[] }) {
+export function AssetGrid({ assets }: { assets: Asset[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredAssets, setFilteredAssets] = useState(assets);
   const [sortBy, setSortBy] = useState("latest");
@@ -98,6 +99,7 @@ export default function AssetGrid({ assets }: { assets: Asset[] }) {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="h-10 w-60"
           />
+
           <Select value={sortBy} onValueChange={setSortBy}>
             <SelectTrigger className="h-10 w-[180px]">
               <SelectValue placeholder="Sort by" />
@@ -188,6 +190,149 @@ export default function AssetGrid({ assets }: { assets: Asset[] }) {
       </div>
 
       {visibleCount < filteredAssets.length && (
+        <div className="mt-6 flex justify-center">
+          <Button onClick={() => setVisibleCount(visibleCount + LOAD_MORE)}>
+            Load More
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function ProfileAssetGrid({
+  assets,
+  likedAssets,
+}: {
+  assets: Asset[];
+  likedAssets: Asset[];
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredAssets, setFilteredAssets] = useState(assets);
+  const [filteredLikedAssets, setFilteredLikedAssets] = useState(likedAssets);
+  const [sortBy, setSortBy] = useState("latest");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
+
+  useEffect(() => {
+    const sortAndFilterAssets = (assetList: Asset[]) => {
+      const sortedAssets = [...assetList];
+
+      switch (sortBy) {
+        case "mostDownloaded":
+          sortedAssets.sort((a, b) => b.downloads - a.downloads);
+          break;
+        case "mostLiked":
+          sortedAssets.sort((a, b) => b.likes.length - a.likes.length);
+          break;
+        case "mostViewed":
+          sortedAssets.sort((a, b) => b.views - a.views);
+          break;
+        case "latest":
+        default:
+          sortedAssets.sort(
+            (a, b) =>
+              new Date(b.uploadedAt).getTime() -
+              new Date(a.uploadedAt).getTime(),
+          );
+      }
+
+      return sortedAssets.filter((asset) =>
+        asset.title.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
+    };
+
+    setFilteredAssets(sortAndFilterAssets(assets));
+    setFilteredLikedAssets(sortAndFilterAssets(likedAssets));
+    setVisibleCount(INITIAL_LOAD);
+  }, [assets, likedAssets, searchTerm, sortBy]);
+
+  const renderAssetGrid = (assetList: Asset[]) => (
+    <div className="my-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+      {assetList.slice(0, visibleCount).map((asset) => {
+        const urls = asset.url.split(",");
+        return (
+          <Card
+            key={asset.id}
+            className={cn("focused group h-full overflow-hidden rounded-sm")}
+          >
+            <CardHeader className="border-b p-0">
+              <AspectRatio className="overflow-hidden">
+                <Link href={`/graphic/assets/${asset.id}`}>
+                  <Image
+                    src={urls[0] || "/placeholder.svg"}
+                    alt={asset.title}
+                    fill
+                    className="h-full w-full object-cover transition-all group-hover:scale-105"
+                  />
+                </Link>
+              </AspectRatio>
+            </CardHeader>
+            <CardContent className="flex items-center justify-between p-4">
+              <CardTitle className="text-md truncate py-[2px] md:text-xl">
+                {asset.title}
+              </CardTitle>
+              <div className="flex gap-4 text-xs text-primary/70">
+                <div className="flex gap-1">
+                  <DIcons.Eye className="h-4 w-4" />
+                  <p>{asset.views}</p>
+                </div>
+                <div className="flex gap-1">
+                  <DIcons.Heart className="text-ali h-4 w-4" />
+                  <LikeCountNumber initialLikeCount={asset.likes.length} />
+                </div>
+                <div className="flex gap-1">
+                  <DIcons.Download className="h-4 w-4" />
+                  <DownloadNumber initialDownloadCount={asset.downloads} />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  );
+
+  return (
+    <div>
+      <Tabs defaultValue="designed">
+        <div className="mb-3">
+          <div className="mt-3 grid items-center justify-center gap-3 md:flex md:justify-between">
+            <Input
+              type="text"
+              placeholder="Search assets by title..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="h-10 w-60"
+            />
+            <TabsList>
+              <TabsTrigger value="designed">Designed</TabsTrigger>
+              <TabsTrigger value="liked">Liked</TabsTrigger>
+            </TabsList>
+            <Select value={sortBy} onValueChange={setSortBy}>
+              <SelectTrigger className="h-10 w-[180px]">
+                <SelectValue placeholder="Sort by" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="latest">Latest</SelectItem>
+                <SelectItem value="mostDownloaded">Most Downloaded</SelectItem>
+                <SelectItem value="mostLiked">Most Liked</SelectItem>
+                <SelectItem value="mostViewed">Most Viewed</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        <TabsContent value="designed">
+          {renderAssetGrid(filteredAssets)}
+        </TabsContent>
+
+        <TabsContent value="liked">
+          {renderAssetGrid(filteredLikedAssets)}
+        </TabsContent>
+      </Tabs>
+
+      {visibleCount <
+        Math.max(filteredAssets.length, filteredLikedAssets.length) && (
         <div className="mt-6 flex justify-center">
           <Button onClick={() => setVisibleCount(visibleCount + LOAD_MORE)}>
             Load More

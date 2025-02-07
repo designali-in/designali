@@ -1,22 +1,20 @@
 import Image from "next/image";
 import { Icons } from "@/comp/icons";
-import { getUserById } from "@/src/lib/validations/auth";
 
-import { auth } from "@/lib/auth";
+import { getCurrentUser } from "@/lib/session";
 
 export default async function UserId() {
-  const session = await auth();
-  const user = await getUserById(session.user.id);
+  const user = await getCurrentUser();
 
   return (
     <>
       <div className="mt-20 grid items-center justify-center gap-3 text-center">
         <div className="flex justify-center">
           <Image
-            src={user.image}
+            src={user.image ?? "/placeholder.svg"}
             width={60}
             height={60}
-            alt={""}
+            alt={user.name || "User Avatar"}
             className="rounded-full border"
           />
         </div>
@@ -29,9 +27,11 @@ export default async function UserId() {
         <div className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400">
           <Icons.calendar strokeWidth={2} className="h-3 w-3" />
           <p className="text-xs">
-            {new Intl.DateTimeFormat("en-US", {
-              dateStyle: "full",
-            }).format(new Date(user.createdAt))}
+            {user.createdAt
+              ? new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+                  new Date(user.createdAt),
+                )
+              : "N/A"}
           </p>
         </div>
       </div>

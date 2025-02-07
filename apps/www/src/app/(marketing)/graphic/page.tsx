@@ -3,7 +3,7 @@ import Link from "next/link";
 import AdBanner from "@/comp/AdBanner";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import { Badge } from "@/registry/default/ui/badge";
-import AssetGrid from "@/src/comp/dashboard/assets/asset-grid";
+import { AssetGrid } from "@/src/comp/dashboard/assets/asset-grid";
 import AssetUsers from "@/src/comp/dashboard/assets/asset-users";
 import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils";
@@ -140,7 +140,7 @@ const BrowsePage = async () => {
                   </span>
                 </TabsTrigger>
                 <TabsTrigger value="tab-3">
-                  Top Designers
+                  Designers
                   <span className="text-ali px-1 font-semibold">
                     {users.length}
                   </span>
