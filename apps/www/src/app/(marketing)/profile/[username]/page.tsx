@@ -168,26 +168,34 @@ export default async function UserProfilePage({ params }: Props) {
               </div>
             </div>
             <div className="flex items-center justify-center gap-2 md:justify-end">
-              <Link href={user.instagram} target="_blank">
-                <Button variant="ghost" size="icon">
-                  <DIcons.Instagram className="h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href={user.linkedin} target="_blank">
-                <Button variant="ghost" size="icon">
-                  <DIcons.LinkedIn className="h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href={user.twitter} target="_blank">
-                <Button variant="ghost" size="icon">
-                  <DIcons.X className="h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href={user.website} target="_blank">
-                <Button variant="ghost" size="icon">
-                  <DIcons.Link className="h-4 w-4" />
-                </Button>
-              </Link>
+              {user.instagram && (
+                <Link href={user.instagram} target="_blank">
+                  <Button variant="ghost" size="icon">
+                    <DIcons.Instagram className="h-4 w-4" />
+                  </Button>
+                </Link>
+              )}
+              {user.linkedin && (
+                <Link href={user.linkedin} target="_blank">
+                  <Button variant="ghost" size="icon">
+                    <DIcons.LinkedIn className="h-4 w-4" />
+                  </Button>
+                </Link>
+              )}
+              {user.twitter && (
+                <Link href={user.twitter} target="_blank">
+                  <Button variant="ghost" size="icon">
+                    <DIcons.X className="h-4 w-4" />
+                  </Button>
+                </Link>
+              )}
+              {user.website && (
+                <Link href={user.website} target="_blank">
+                  <Button variant="ghost" size="icon">
+                    <DIcons.Link className="h-4 w-4" />
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
