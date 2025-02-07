@@ -1,9 +1,7 @@
 import { DeleteAccountForm } from "@/comp/forms/delete-account-form";
-import { EmailPreferencesForm } from "@/comp/forms/email-preferences-form";
 import { ProfileForm } from "@/comp/forms/profile-form";
 import { getCurrentUser } from "@/src/lib/session";
 
-import { auth } from "@/lib/auth";
 import {
   Card,
   CardContent,
@@ -30,7 +28,7 @@ export default async function SettingsProfile() {
             <ProfileForm user={user} />
           </CardContent>
         </Card>
-        <div className="mt-3 flex gap-4">
+        <div className="mt-3 grid gap-4 md:flex">
           <Card className="w-80">
             <CardHeader>
               <CardTitle>Delete Account</CardTitle>

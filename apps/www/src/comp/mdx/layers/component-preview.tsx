@@ -12,6 +12,7 @@ import { useConfig } from "@/hooks/use-config";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { ThemeWrapper } from "../../common/theme-wrapper";
+import { ScriptCopyBtn } from "../../uis/script-copy-btn";
 import OpenInV0 from "../open-in-v0";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -95,6 +96,13 @@ export function ComponentPreview({
     );
   }
 
+  const customCommandMap = {
+    pnpm: `pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`,
+    npm: `npx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`,
+    yarn: `npx dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`,
+    bun: `bunx --bun shadcn@latest https://www.designali.in/r/styles/default/${name}.json`,
+  };
+
   return (
     <div
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
@@ -116,6 +124,12 @@ export function ComponentPreview({
                   className="relative h-10 rounded-none border-b-2 border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Code className="h-4 w-4" />
+                </TabsTrigger>
+                <TabsTrigger
+                  value="install"
+                  className="relative h-10 rounded-none border-b-2 border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                >
+                  <DIcons.Settings className="h-4 w-4" />
                 </TabsTrigger>
               </div>
               <div className="flex items-center gap-2">
@@ -157,12 +171,18 @@ export function ComponentPreview({
             </div>
           </ThemeWrapper>
         </TabsContent>
-        <TabsContent value="code">
-          <div className="flex flex-col space-y-3">
-            <div className=" overflow-auto rounded-xl [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:max-h-[450px] [&_pre]:overflow-auto">
-              {Code}
-            </div>
+        <TabsContent className="grid" value="code">
+          <div className="grid w-full min-w-0 overflow-auto rounded-xl [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:flex [&_pre]:max-h-[450px] [&_pre]:w-full [&_pre]:overflow-auto">
+            {Code}
           </div>
+        </TabsContent>
+        <TabsContent className="grid" value="install">
+          <ScriptCopyBtn
+            codeLanguage="shell"
+            lightTheme="nord"
+            darkTheme="vitesse-dark"
+            commandMap={customCommandMap}
+          />
         </TabsContent>
       </Tabs>
     </div>

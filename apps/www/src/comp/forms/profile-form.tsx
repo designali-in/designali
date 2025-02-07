@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Label } from "@/registry/default/ui/label";
 import { Textarea } from "@/registry/default/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DIcons } from "dicons";
@@ -11,6 +12,7 @@ import * as z from "zod";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -72,6 +74,7 @@ const uploadImage = async (file: File): Promise<string> => {
 export function ProfileForm({ user }: ProfileFormProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [isUsernameEditable, setIsUsernameEditable] = useState(false);
 
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileFormSchema),
@@ -144,7 +147,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div className="space-y-4">
-          <div className="flex w-full gap-3">
+          <div className="grid w-full gap-3 md:flex">
             <FormField
               disabled
               control={form.control}
@@ -172,7 +175,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
                 </FormItem>
               )}
             />
-            <div className="flex-1">
+            <div className="md:flex-1">
               <FormField
                 control={form.control}
                 name="coverImage"
@@ -213,23 +216,41 @@ export function ProfileForm({ user }: ProfileFormProps) {
             )}
           />
         </div>
-        <div className="flex gap-3">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="Your username" {...field} />
-                </FormControl>
-                <FormDescription>
-                  This is your public display username.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        <div className="grid w-full gap-3 md:flex">
+          <div className="grid gap-3 ">
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Username</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Your username"
+                      {...field}
+                      disabled={!isUsernameEditable}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    This is your public display username.
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="flex items-center gap-2">
+              <Checkbox
+                id="edit-username"
+                checked={isUsernameEditable}
+                onCheckedChange={() =>
+                  setIsUsernameEditable(!isUsernameEditable)
+                }
+              />
+              <Label className="text-sm" htmlFor="edit-username">
+                Edit Username
+              </Label>
+            </div>
+          </div>
           <FormField
             control={form.control}
             name="email"
@@ -269,7 +290,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
             </FormItem>
           )}
         />
-        <div className="flex gap-3">
+        <div className="grid w-full gap-3 md:flex">
           <FormField
             control={form.control}
             name="website"
@@ -277,7 +298,11 @@ export function ProfileForm({ user }: ProfileFormProps) {
               <FormItem>
                 <FormLabel>Website</FormLabel>
                 <FormControl>
-                  <Input placeholder="https://yourwebsite.com" {...field} />
+                  <Input
+                    className="w-full md:w-80"
+                    placeholder="https://designali.in"
+                    {...field}
+                  />
                 </FormControl>
                 <FormDescription>
                   Your personal or professional website.
@@ -294,7 +319,11 @@ export function ProfileForm({ user }: ProfileFormProps) {
               <FormItem>
                 <FormLabel>Twitter</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your Twitter username" {...field} />
+                  <Input
+                    className="w-full md:w-80"
+                    placeholder="Your Twitter username"
+                    {...field}
+                  />
                 </FormControl>
                 <FormDescription>
                   Your Twitter username without the @ symbol.
@@ -304,17 +333,21 @@ export function ProfileForm({ user }: ProfileFormProps) {
             )}
           />
         </div>
-        <div className="flex gap-3">
+        <div className="grid w-full gap-3 md:flex">
           <FormField
             control={form.control}
             name="instagram"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>GitHub</FormLabel>
+                <FormLabel>Instagram</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your Instagram username" {...field} />
+                  <Input
+                    className="w-full md:w-80"
+                    placeholder="Your Instagram username"
+                    {...field}
+                  />
                 </FormControl>
-                <FormDescription>Your GitHub username.</FormDescription>
+                <FormDescription>Your Instagram username.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -327,7 +360,11 @@ export function ProfileForm({ user }: ProfileFormProps) {
               <FormItem>
                 <FormLabel>LinkedIn</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your LinkedIn profile URL" {...field} />
+                  <Input
+                    className="w-full md:w-80"
+                    placeholder="Your LinkedIn profile URL"
+                    {...field}
+                  />
                 </FormControl>
                 <FormDescription>Your LinkedIn profile URL.</FormDescription>
                 <FormMessage />

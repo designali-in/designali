@@ -55,7 +55,7 @@ const data = {
       title: "Agency",
       url: "/dashboard/agency",
       icon: DIcons.SquareTerminal,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: "Projects",
@@ -71,7 +71,7 @@ const data = {
       title: "Tools",
       url: "/dashboard/tools",
       icon: DIcons.Settings2,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: "Deditor",
@@ -103,7 +103,7 @@ const data = {
       title: "Settings",
       url: "/dashboard/settings",
       icon: DIcons.Settings,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: "General",
@@ -152,6 +152,34 @@ const data = {
         {
           title: "Agency",
           url: "/agency",
+        },
+      ],
+    },
+    {
+      title: "Designali",
+      url: "/",
+      icon: DIcons.Designali,
+      isActive: false,
+      items: [
+        {
+          title: "About",
+          url: "/about",
+        },
+        {
+          title: "Graphic",
+          url: "/graphic",
+        },
+        {
+          title: "Agency",
+          url: "/agency",
+        },
+        {
+          title: "Products",
+          url: "/products",
+        },
+        {
+          title: "Components",
+          url: "/components",
         },
       ],
     },
@@ -292,7 +320,7 @@ const admindata = {
     {
       title: "Dashboard",
       url: "/dashboard",
-      icon: DIcons.Monitor,
+      icon: DIcons.Fullscreen,
     },
     {
       title: "Contact",

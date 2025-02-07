@@ -41,7 +41,7 @@ export function ComponentExample({
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
-      <Tabs defaultValue="preview" className="relative mr-auto w-full">
+      <Tabs defaultValue="preview" className="relative  w-full">
         <div className="flex items-center justify-between pb-3">
           <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
             <TabsTrigger
@@ -83,17 +83,15 @@ export function ComponentExample({
             {Example}
           </div>
         </TabsContent>
-        <TabsContent value="code">
-          <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-              {Code}
-            </div>
-            {Children.length ? (
-              <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-                {Children}
-              </div>
-            ) : null}
+        <TabsContent className="grid" value="code">
+          <div className="grid w-full min-w-0 overflow-auto rounded-xl [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:flex [&_pre]:max-h-[450px] [&_pre]:w-full [&_pre]:overflow-auto">
+            {Code}
           </div>
+          {Children.length ? (
+            <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+              {Children}
+            </div>
+          ) : null}
         </TabsContent>
       </Tabs>
     </div>
