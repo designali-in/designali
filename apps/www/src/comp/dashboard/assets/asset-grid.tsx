@@ -22,6 +22,8 @@ import {
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import AboutUser from "./about-user";
+
 type Asset = {
   id: string;
   title: string;
@@ -33,6 +35,19 @@ type Asset = {
   likes: { id: string }[];
   uploadedAt: string;
   tags: string[]; // Add this line to include tags
+};
+
+type User = {
+  id: string;
+  name: string;
+  username: string;
+  bio: string;
+  email: string;
+  avatarUrl: string;
+  totalAssets: number;
+  totalDownloads: number;
+  totalLikes: number;
+  joinedAt: string;
 };
 
 const INITIAL_LOAD = 21;
@@ -101,7 +116,7 @@ export function AssetGrid({
 
             <div className="w-full max-w-5xl overflow-hidden">
               <TabsList className="w-full items-center justify-center bg-transparent text-center">
-                <ScrollArea className="w-full whitespace-nowrap">
+                <ScrollArea className="w-full space-x-4 whitespace-nowrap">
                   <TabsTrigger value="all">All</TabsTrigger>
                   {uniqueTags.length > 0 ? (
                     uniqueTags.map((tag) => (
@@ -232,9 +247,11 @@ export function AssetGrid({
 export function ProfileAssetGrid({
   assets,
   likedAssets,
+  user,
 }: {
   assets: Asset[];
   likedAssets: Asset[];
+  user;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredAssets, setFilteredAssets] = useState(assets);
@@ -336,6 +353,7 @@ export function ProfileAssetGrid({
             <TabsList>
               <TabsTrigger value="designed">Designed</TabsTrigger>
               <TabsTrigger value="liked">Liked</TabsTrigger>
+              <TabsTrigger value="about">About</TabsTrigger>
             </TabsList>
             <Select value={sortBy} onValueChange={setSortBy}>
               <SelectTrigger className="h-10 w-[180px]">
@@ -357,6 +375,9 @@ export function ProfileAssetGrid({
 
         <TabsContent value="liked">
           {renderAssetGrid(filteredLikedAssets)}
+        </TabsContent>
+        <TabsContent value="about">
+          <AboutUser user={user} />
         </TabsContent>
       </Tabs>
 

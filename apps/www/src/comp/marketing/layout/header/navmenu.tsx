@@ -205,20 +205,36 @@ export function Menu() {
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/agency/branding" title="Branding">
+                <ListItem
+                  href={"https://cal.com/aliimam/designali"}
+                  target="_blank"
+                  title="Branding"
+                >
                   Transform Your Brand Identity – Innovative Design for Lasting
                   Impressions
                 </ListItem>
 
-                <ListItem href="/agency/sm-posts" title="Social Media Posts">
+                <ListItem
+                  href={"https://cal.com/aliimam/designali"}
+                  target="_blank"
+                  title="Social Media Posts"
+                >
                   Boost Your Brand with Powerful Social Media Marketing
                   Strategies
                 </ListItem>
-                <ListItem href="/agency/web-design" title="Website Design">
+                <ListItem
+                  href={"https://cal.com/aliimam/designali"}
+                  target="_blank"
+                  title="Website Design"
+                >
                   Elevate Your Digital Presence with Stunning UI/UX and
                   High-Converting Landing Pages
                 </ListItem>
-                <ListItem href="/agency/web-develop" title="Website Develop">
+                <ListItem
+                  href={"https://cal.com/aliimam/designali"}
+                  target="_blank"
+                  title="Website Develop"
+                >
                   Innovative Web Apps and Development – Crafting Seamless
                   Digital Experiences
                 </ListItem>

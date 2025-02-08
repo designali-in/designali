@@ -10,13 +10,6 @@ import { DIcons } from "dicons";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 type Props = {
   params: { username: string };
@@ -127,39 +120,18 @@ export default async function UserProfilePage({ params }: Props) {
 
   return (
     <div className="relative">
-      <div className="mx-auto my-24  max-w-7xl px-6 xl:px-0">
-        <div className="flex items-center justify-between">
-          <div className="mb-6 items-center gap-2 md:flex">
-            <Breadcrumb className="mb-3 md:mb-0">
-              <BreadcrumbList>
-                <BreadcrumbItem className=" ">
-                  <BreadcrumbLink href="/">
-                    <DIcons.Designali fill="#f50537" className="h-5 w-5" />
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/graphic">Graphic</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/profile">Profiles</BreadcrumbLink>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </div>
-        <div className="relative h-40 w-full overflow-hidden rounded-lg">
-          <Image
-            src="/images/products/3dbg.jpg"
-            alt="Cover"
-            width={1000}
-            height={300}
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="mt-3 grid h-full items-center  justify-center gap-3 md:flex md:justify-between">
-          <div className=" flex h-full items-center justify-center gap-3">
+      <div className="h-40 w-full overflow-hidden md:h-[300px] ">
+        <Image
+          src="/images/products/3dbg.jpg"
+          alt="Cover"
+          width={1000}
+          height={300}
+          className="-z-10 mt-12 h-full w-full object-cover"
+        />
+      </div>
+      <div className="mx-auto my-3  max-w-7xl px-6 xl:px-0">
+        <div className="mt-3 grid h-full items-center  justify-start gap-3 md:flex md:justify-between">
+          <div className=" flex h-full items-center justify-start gap-3">
             <Avatar className="h-20 w-20 rounded-lg border md:h-24 md:w-24">
               <AvatarImage
                 className="rounded-lg"
@@ -233,6 +205,7 @@ export default async function UserProfilePage({ params }: Props) {
           <ProfileAssetGrid
             assets={user.Asset}
             likedAssets={user.likedAssets}
+            user={user}
           />
         ) : (
           <p className="my-10 text-sm text-primary/70">
