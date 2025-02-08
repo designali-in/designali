@@ -7,6 +7,7 @@ import { AssetGrid } from "@/src/comp/dashboard/assets/asset-grid";
 import AssetUsers from "@/src/comp/dashboard/assets/asset-users";
 import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils";
+import { DIcons } from "dicons";
 
 import { env } from "@/env";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
@@ -26,28 +27,32 @@ export const metadata: Metadata = {
 
 const BrowsePage = async () => {
   const session = await auth();
-  const assets = (
-    await prisma.asset.findMany({
-      take: 20,
-      orderBy: { createdAt: "desc" },
-      include: {
-        likes: true,
-      },
-    })
-  ).map((asset) => ({
+
+  const assets = await prisma.asset.findMany({
+    orderBy: { createdAt: "desc" },
+    include: {
+      likes: true,
+      tags: true, // Include tags
+    },
+  });
+
+  const formattedAssets = assets.map((asset) => ({
     ...asset,
     uploadedAt: asset.createdAt.toISOString(),
+    tags: asset.tags.map((tag) => tag.name), // Extract tag names
   }));
 
-  const users = (
-    await prisma.user.findMany({
-      take: 20,
-      orderBy: { createdAt: "desc" },
-      include: {
-        Asset: true,
-      },
-    })
-  ).map((user) => ({
+  const tags = await prisma.tag.findMany();
+  const availableTags = tags.map((tag) => tag.name);
+
+  const users = await prisma.user.findMany({
+    orderBy: { createdAt: "desc" },
+    include: {
+      Asset: true,
+    },
+  });
+
+  const formattedUsers = users.map((user) => ({
     id: user.id,
     name: user.name || "",
     email: user.email || "",
@@ -85,10 +90,10 @@ const BrowsePage = async () => {
           <h3
             className={cn(
               Avegra.className,
-              "z-20 inline-flex items-baseline justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl",
+              "z-20  justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl",
             )}
           >
-            Open File for Everyone
+            Open File for <span className="text-ali"> Everyone</span>
           </h3>
         </div>
         <p className=" mx-auto max-w-xl text-xs">
@@ -116,25 +121,21 @@ const BrowsePage = async () => {
             Full access <br /> from ₹250/m
           </p>
         </div>
-      </div>{" "}
-      <Separator className="mb-10" />
+      </div>
       <div>
         <div>
           <Tabs defaultValue="tab-1">
             <TabsList className="flex w-auto justify-center md:justify-between">
               <div>
                 <TabsTrigger value="tab-1">
-                  All Graphics{" "}
+                  Graphics
                   <span className="text-ali px-1 font-semibold">
                     {assets.length}
                   </span>
-                  <Badge size="xs" variant="green">
-                    New
-                  </Badge>
                 </TabsTrigger>
 
                 <TabsTrigger value="tab-2">
-                  Pro{" "}
+                  Pro
                   <span className="text-ali pl-1 font-semibold">
                     {topTenAnimes.length}
                   </span>
@@ -144,11 +145,21 @@ const BrowsePage = async () => {
                   <span className="text-ali px-1 font-semibold">
                     {users.length}
                   </span>
+                  <Badge size="xs" variant="green">
+                    New
+                  </Badge>
+                </TabsTrigger>
+                <TabsTrigger value="tab-4">
+                  <span>AI-Generated</span>
+                  <DIcons.AiBeautify className="ml-1 h-4 w-4" />
                 </TabsTrigger>
               </div>
             </TabsList>
             <TabsContent value="tab-1">
-              <AssetGrid assets={assets} />
+              <AssetGrid
+                assets={formattedAssets}
+                availableTags={availableTags}
+              />
             </TabsContent>
 
             <TabsContent value="tab-2">
@@ -157,7 +168,12 @@ const BrowsePage = async () => {
               </div>
             </TabsContent>
             <TabsContent value="tab-3">
-              <AssetUsers users={users} />
+              <AssetUsers users={formattedUsers} />
+            </TabsContent>
+            <TabsContent value="tab-4">
+              <h1 className="text-ali mt-20 text-center text-2xl font-semibold">
+                Coming Soon
+              </h1>
             </TabsContent>
           </Tabs>
         </div>

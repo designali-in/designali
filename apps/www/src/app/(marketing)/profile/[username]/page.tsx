@@ -5,12 +5,18 @@ import { notFound } from "next/navigation";
 import { Button } from "@/registry/default/ui/button";
 import { Separator } from "@/registry/default/ui/separator";
 import { ProfileAssetGrid } from "@/src/comp/dashboard/assets/asset-grid";
-import { getCurrentUser } from "@/src/lib/session";
 import { DIcons } from "dicons";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 type Props = {
   params: { username: string };
@@ -122,10 +128,33 @@ export default async function UserProfilePage({ params }: Props) {
   return (
     <div className="relative">
       <div className="mx-auto my-24  max-w-7xl px-6 xl:px-0">
+        <div className="flex items-center justify-between">
+          <div className="mb-6 items-center gap-2 md:flex">
+            <Breadcrumb className="mb-3 md:mb-0">
+              <BreadcrumbList>
+                <BreadcrumbItem className=" ">
+                  <BreadcrumbLink href="/">
+                    <DIcons.Designali fill="#f50537" className="h-5 w-5" />
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/graphic">Graphic</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/profile">Profiles</BreadcrumbLink>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </div>
         <div className="relative h-40 w-full overflow-hidden rounded-lg">
-          <img
-            src="/placeholder.svg"
+          <Image
+            src="/images/products/3dbg.jpg"
             alt="Cover"
+            width={1000}
+            height={300}
             className="h-full w-full object-cover"
           />
         </div>

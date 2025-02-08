@@ -73,7 +73,7 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
     <div className="space-y-2">
       <div className="flex space-x-2">
         <Select onValueChange={handleSelectChange}>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-96">
             <SelectValue placeholder="Select a tag" />
           </SelectTrigger>
           <SelectContent>
@@ -84,7 +84,9 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
                 </SelectItem>
               ))
             ) : (
-              <SelectItem disabled>No tags available</SelectItem>
+              <SelectItem disabled value={""}>
+                No tags available
+              </SelectItem>
             )}
           </SelectContent>
         </Select>
