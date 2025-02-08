@@ -114,13 +114,13 @@ export function AssetGrid({
               className="h-10 w-60"
             />
 
-            <div className="w-full max-w-5xl overflow-hidden">
+            <div className="w-full max-w-4xl overflow-hidden">
               <TabsList className="w-full items-center justify-center bg-transparent text-center">
-                <ScrollArea className="w-full space-x-4 whitespace-nowrap">
+                <ScrollArea className="w-full whitespace-nowrap">
                   <TabsTrigger value="all">All</TabsTrigger>
                   {uniqueTags.length > 0 ? (
                     uniqueTags.map((tag) => (
-                      <TabsTrigger className="px-3" key={tag} value={tag}>
+                      <TabsTrigger className="px-4" key={tag} value={tag}>
                         {tag}
                       </TabsTrigger>
                     ))
