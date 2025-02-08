@@ -31,14 +31,6 @@ export const componentsConfig: ComponentsConfig = {
           title: "Introduction",
           href: "/components",
         },
-        {
-          title: "Installation",
-          href: "/components/installation/next",
-        },
-        {
-          title: "Dark Mode",
-          href: "/components/installation/dark-mode",
-        },
       ],
     },
 

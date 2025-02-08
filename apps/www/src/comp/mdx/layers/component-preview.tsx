@@ -9,10 +9,10 @@ import { DIcons } from "dicons";
 
 import { cn } from "@/lib/utils";
 import { useConfig } from "@/hooks/use-config";
+import ScriptCopyBtn from "@/components/ui/script-copy-btn";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { ThemeWrapper } from "../../common/theme-wrapper";
-import { ScriptCopyBtn } from "../../uis/script-copy-btn";
 import OpenInV0 from "../open-in-v0";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {

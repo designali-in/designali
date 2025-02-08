@@ -34,8 +34,8 @@ const items = [
 
 export default function AccordionDemo() {
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-bold">W/ chevron</h2>
+    <div className="w-full space-y-4">
+      <h2 className="text-xl font-bold">Chevron</h2>
       <Accordion type="single" collapsible className="w-full" defaultValue="3">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id} className="py-2">
