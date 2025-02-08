@@ -84,7 +84,7 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
                 </SelectItem>
               ))
             ) : (
-              <SelectItem disabled value={""}>
+              <SelectItem disabled value={null}>
                 No tags available
               </SelectItem>
             )}
