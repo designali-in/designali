@@ -37,19 +37,6 @@ type Asset = {
   tags: string[]; // Add this line to include tags
 };
 
-type User = {
-  id: string;
-  name: string;
-  username: string;
-  bio: string;
-  email: string;
-  avatarUrl: string;
-  totalAssets: number;
-  totalDownloads: number;
-  totalLikes: number;
-  joinedAt: string;
-};
-
 const INITIAL_LOAD = 21;
 const LOAD_MORE = 21;
 
@@ -67,7 +54,9 @@ export function AssetGrid({
   const [selectedTag, setSelectedTag] = useState("all");
 
   // Get unique tags from availableTags
-  const uniqueTags = Array.from(new Set(availableTags));
+  const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
+    a.localeCompare(b),
+  );
 
   useEffect(() => {
     let sortedAssets = [...assets];

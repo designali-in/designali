@@ -1,7 +1,7 @@
 // Dependencies: pnpm install lucide-react
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { Plus } from "lucide-react";
+import { DIcons } from "dicons";
 
 import {
   Accordion,
@@ -12,44 +12,43 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Designali different?",
+    title: "Why Choose Designali?",
     content:
-      "Designali focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
+      "We create clean, modern, and user-friendly designs that enhance brand identity.",
   },
   {
     id: "2",
-    title: "How can I customize the components?",
+    title: "Can I Personalize the Components?",
     content:
-      "Use our CSS variables for global styling, or className and style props for component-specific changes. We support CSS modules, Tailwind, and dark mode out of the box.",
+      "Yes! Easily adjust colors, fonts, layouts, and animations to fit your style.",
   },
   {
     id: "3",
-    title: "Is Designali optimized for performance?",
+    title: "Is Designali Built for Speed?",
     content:
-      "Yes, with tree-shaking, code splitting, and minimal runtime overhead. Most components are under 5KB gzipped.",
+      "Definitely! Our designs are lightweight, optimized, and load quickly for a smooth experience.",
   },
   {
     id: "4",
-    title: "How accessible are the components?",
+    title: "How Accessible Are the Designs?",
     content:
-      "All components follow WAI-ARIA standards, featuring proper ARIA attributes, keyboard navigation, and screen reader support. Regular testing ensures compatibility with NVDA, VoiceOver, and JAWS.",
+      "All designs follow best accessibility practices, ensuring easy navigation and screen reader support.",
   },
 ];
 
 export default function AccordionDemo() {
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-bold">W/ left plus-minus</h2>
+    <div className="w-full space-y-4">
+      <h2 className="text-xl font-bold">Left Plus Minus</h2>
       <Accordion type="single" collapsible className="w-full" defaultValue="3">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id} className="py-2">
             <AccordionPrimitive.Header className="flex">
               <AccordionPrimitive.Trigger className="flex flex-1 items-center gap-3 py-2 text-left text-[15px] font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&>svg]:-order-1 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
                 {item.title}
-                <Plus
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60 transition-transform duration-200"
+                <DIcons.Plus
+                  strokeWidth={1}
+                  className="h-4 w-4 shrink-0 opacity-60 transition-transform duration-200"
                   aria-hidden="true"
                 />
               </AccordionPrimitive.Trigger>

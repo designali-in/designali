@@ -18,6 +18,7 @@
     "with-env": "dotenv -e .env --"
   },
   "dependencies": {
+    "@ai-sdk/deepseek": "^0.1.8",
     "@auth/prisma-adapter": "^2.4.1",
     "@emotion/is-prop-valid": "^1.2.2",
     "@google/generative-ai": "^0.12.0",
