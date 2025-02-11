@@ -57,7 +57,7 @@ export default async function DocPage({ params }: DesignPageProps) {
 
   return (
     <main className="relative grid lg:gap-10 xl:grid-cols-[1fr_260px]">
-      <aside className=" fixed hidden h-[calc(100vh-4rem)] w-full shrink-0 md:sticky md:block">
+      <aside className="sticky h-[calc(100vh-4rem)] w-full shrink-0">
         <div className="no-scrollbar h-full overflow-auto ">
           <div className="mx-auto w-full min-w-0 py-10">
             <DocsPager2 doc={doc} />

@@ -43,7 +43,7 @@ const items = [
 export default function AccordionDemo() {
   return (
     <div className="w-full space-y-4">
-      <h2 className="text-xl font-bold">W/ icon and plus-minus</h2>
+      <h2 className="text-xl font-bold">Icon and Plus Minus</h2>
       <Accordion type="single" collapsible className="w-full" defaultValue="3">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id} className="py-2">
@@ -51,17 +51,15 @@ export default function AccordionDemo() {
               <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-2 text-left text-[15px] font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
                 <span className="flex items-center gap-3">
                   <item.icon
-                    size={16}
-                    strokeWidth={2}
-                    className="shrink-0 opacity-60"
+                    strokeWidth={1}
+                    className="h-5 w-5 shrink-0 opacity-60"
                     aria-hidden="true"
                   />
                   <span>{item.title}</span>
                 </span>
                 <DIcons.Plus
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60 transition-transform duration-200"
+                  strokeWidth={1}
+                  className="h-4 w-4 shrink-0 opacity-60 transition-transform duration-200"
                   aria-hidden="true"
                 />
               </AccordionPrimitive.Trigger>

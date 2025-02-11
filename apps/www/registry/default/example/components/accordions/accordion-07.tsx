@@ -1,7 +1,7 @@
 // Dependencies: pnpm install lucide-react
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "dicons";
 
 import {
   Accordion,
@@ -29,7 +29,7 @@ const items = [
     title: "2-step verification",
     sub: "Add an extra layer of security to your account",
     content:
-      "Protect your account with two-factor authentication. You can use authenticator apps like Google Authenticator or Authy, receive SMS codes, or use security keys like YubiKey. We recommend using an authenticator app for the most secure experience.",
+      "Protect your account with two-factor authentication. You can use authenticator apps like Google Authenticator or Authy, receive SMS codes, or use security keys like Designali. We recommend using an authenticator app for the most secure experience.",
   },
   {
     id: "4",
@@ -42,8 +42,8 @@ const items = [
 
 export default function AccordionDemo() {
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-bold">W/ sub-header and chevron</h2>
+    <div className="w-full space-y-4">
+      <h2 className="text-xl font-bold">Sub-header and Chevron</h2>
       <Accordion type="single" collapsible className="w-full" defaultValue="3">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id} className="py-2">
@@ -56,9 +56,8 @@ export default function AccordionDemo() {
                   )}
                 </span>
                 <ChevronDown
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60 transition-transform duration-200"
+                  strokeWidth={1}
+                  className="h-4 w-4 shrink-0 opacity-60 transition-transform duration-200"
                   aria-hidden="true"
                 />
               </AccordionPrimitive.Trigger>

@@ -105,7 +105,7 @@ const items = [
 
 export default function AccordionDemo() {
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4">
       <h2 className="text-xl font-bold">Multi-level w/ icon</h2>
       <Accordion
         type="single"

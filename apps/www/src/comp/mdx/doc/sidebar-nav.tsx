@@ -153,7 +153,7 @@ export function ComponentsSidebarNav({ items }: ComponentsSidebarNavProps) {
   const pathname = usePathname();
 
   return items.length ? (
-    <div className="mb-10 w-full">
+    <div className="z-20 mb-10 w-full">
       {items.map((item, index) => (
         <div key={index} className={cn("pb-0")}>
           <h4 className="text-md mb-1 mt-10 rounded-xl px-2 py-1 font-medium">
