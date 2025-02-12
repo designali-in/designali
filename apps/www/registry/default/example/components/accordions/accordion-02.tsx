@@ -1,4 +1,4 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { DIcons } from "dicons";

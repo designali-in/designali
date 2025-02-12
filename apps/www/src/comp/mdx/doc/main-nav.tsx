@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
-import { Icons } from "@/comp/icons";
+import { DIcons } from "dicons";
 
 import type { MainNavItem } from "./types";
 
@@ -21,9 +21,9 @@ export function MainNav({ items, children }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   return (
-    <div className="flex gap-6 md:gap-10">
+    <div className="grid gap-6 md:flex md:gap-10">
       {items.length ? (
-        <nav className="hidden gap-6 md:flex">
+        <nav className="grid gap-6 md:flex">
           {items.map((item, index) => (
             <Link
               key={index}
@@ -45,7 +45,11 @@ export function MainNav({ items, children }: MainNavProps) {
         className="flex items-center space-x-2 text-slate-600 dark:text-slate-400 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.menu />}
+        {showMobileMenu ? (
+          <DIcons.Close className="h-5 w-5" />
+        ) : (
+          <DIcons.Menu className="h-5 w-5" />
+        )}
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (

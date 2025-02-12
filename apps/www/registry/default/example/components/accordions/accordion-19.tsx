@@ -1,6 +1,6 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "dicons";
 
 import {
   Accordion,
@@ -17,50 +17,50 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Designali different?",
+    title: "What makes Designali unique?",
     collapsibles: [
       {
-        title: "What about performance?",
+        title: "How does it perform?",
         content:
-          "We optimize every component for maximum performance and minimal bundle size.",
+          "Each component is optimized for efficiency, ensuring minimal bundle size and maximum speed.",
       },
       {
-        title: "How is the documentation?",
+        title: "Is the documentation comprehensive?",
         content:
-          "Our documentation is comprehensive and includes live examples for every component.",
+          "Yes! Our documentation includes detailed explanations, live examples, and best practices for every component.",
       },
     ],
   },
   {
     id: "2",
-    title: "How can I customize the components?",
+    title: "Can I customize the components?",
     collapsibles: [
       {
-        title: "Can I use custom themes?",
+        title: "Does it support custom themes?",
         content:
-          "Yes, our theming system is fully customizable and supports both light and dark modes.",
+          "Absolutely! Our flexible theming system allows full customization, including light and dark mode support.",
       },
       {
-        title: "What about Tailwind support?",
+        title: "Is Tailwind CSS supported?",
         content:
-          "We have first-class support for Tailwind CSS with custom utility classes.",
+          "Yes! We offer seamless integration with Tailwind CSS, enabling custom utility classes for effortless styling.",
       },
     ],
   },
   {
     id: "3",
-    title: "Is Designali optimized for performance?",
+    title: "Is Designali built for performance?",
     collapsibles: [
       {
-        title: "What's the bundle size impact?",
+        title: "What’s the impact on bundle size?",
         content:
-          "Our components are tree-shakeable and typically add minimal overhead to your bundle.",
+          "Our components are tree-shakeable, keeping your bundle lightweight and efficient.",
         open: true,
       },
       {
-        title: "How is code splitting handled?",
+        title: "Does it support code splitting?",
         content:
-          "We support automatic code splitting for optimal loading performance.",
+          "Yes, automatic code splitting ensures optimal loading performance for your application.",
       },
     ],
   },
@@ -71,12 +71,12 @@ const items = [
       {
         title: "Which screen readers are supported?",
         content:
-          "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
+          "We rigorously test with NVDA, VoiceOver, and JAWS to ensure a fully accessible experience.",
       },
       {
-        title: "What about keyboard navigation?",
+        title: "Is keyboard navigation included?",
         content:
-          "Full keyboard navigation support is implemented following WAI-ARIA best practices.",
+          "Yes! All components follow WAI-ARIA best practices for complete keyboard navigation support.",
       },
     ],
   },
@@ -85,7 +85,7 @@ const items = [
 export default function AccordionDemo() {
   return (
     <div className="w-full space-y-4">
-      <h2 className="text-xl font-bold">Multi-level</h2>
+      <h2 className="text-xl font-bold">Multi Level</h2>
       <Accordion
         type="single"
         collapsible
@@ -134,9 +134,8 @@ function CollapsibleDemo({
     >
       <CollapsibleTrigger className="flex gap-2 text-[15px] font-semibold leading-6 [&[data-state=open]>svg]:rotate-180">
         <ChevronDown
-          size={16}
-          strokeWidth={2}
-          className="mt-1 shrink-0 opacity-60 transition-transform duration-200"
+          strokeWidth={1}
+          className="mt-1 h-4 w-4 shrink-0 opacity-60 transition-transform duration-200"
           aria-hidden="true"
         />
         {title}

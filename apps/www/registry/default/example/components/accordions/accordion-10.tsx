@@ -1,7 +1,7 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { Bell, LifeBuoy, Link2, Plus, ShieldCheck } from "lucide-react";
+import { DIcons } from "dicons";
 
 import {
   Accordion,
@@ -12,7 +12,7 @@ import {
 const items = [
   {
     id: "1",
-    icon: Link2,
+    icon: DIcons.Link2,
     title: "Connected accounts",
     sub: "Manage your linked social and work accounts",
     content:
@@ -20,7 +20,7 @@ const items = [
   },
   {
     id: "2",
-    icon: Bell,
+    icon: DIcons.Bell01,
     title: "Notifications",
     sub: "Customize your notification preferences",
     content:
@@ -28,7 +28,7 @@ const items = [
   },
   {
     id: "3",
-    icon: ShieldCheck,
+    icon: DIcons.ShieldCheck,
     title: "2-step verification",
     sub: "Add an extra layer of security to your account",
     content:
@@ -36,7 +36,7 @@ const items = [
   },
   {
     id: "4",
-    icon: LifeBuoy,
+    icon: DIcons.LifeBuoy,
     title: "Contact support",
     sub: "We're here to help 24/7",
     content:
@@ -47,7 +47,7 @@ const items = [
 export default function AccordionDemo() {
   return (
     <div className="w-full space-y-4">
-      <h2 className="text-xl font-bold">W/ icon, sub-header, and plus-minus</h2>
+      <h2 className="text-xl font-bold">Icon Sub-header and Plus Minus</h2>
       <Accordion type="single" collapsible className="w-full" defaultValue="3">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id} className="py-2">
@@ -58,11 +58,7 @@ export default function AccordionDemo() {
                     className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border"
                     aria-hidden="true"
                   >
-                    <item.icon
-                      size={16}
-                      strokeWidth={2}
-                      className="opacity-60"
-                    />
+                    <item.icon strokeWidth={1} className="h-5 w-5 opacity-60" />
                   </span>
                   <span className="flex flex-col space-y-1">
                     <span>{item.title}</span>
@@ -71,10 +67,9 @@ export default function AccordionDemo() {
                     )}
                   </span>
                 </span>
-                <Plus
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60 transition-transform duration-200"
+                <DIcons.Plus
+                  strokeWidth={1}
+                  className="h-4 w-4 shrink-0 opacity-60 transition-transform duration-200"
                   aria-hidden="true"
                 />
               </AccordionPrimitive.Trigger>

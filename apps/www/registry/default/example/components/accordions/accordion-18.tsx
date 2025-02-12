@@ -1,7 +1,7 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { Plus } from "lucide-react";
+import { Plus } from "dicons";
 
 import {
   Accordion,
@@ -12,34 +12,34 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Designali different?",
+    title: "What sets Designali apart?",
     content:
-      "Designali focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
+      "Designali is built with TypeScript for enhanced type safety, optimized for performance, and designed with developers in mind. It adheres to accessibility standards and offers detailed documentation with frequent updates.",
   },
   {
     id: "2",
-    title: "How can I customize the components?",
+    title: "Can I customize the components?",
     content:
-      "Use our CSS variables for global styling, or className and style props for component-specific changes. We support CSS modules, Tailwind, and dark mode out of the box.",
+      "Absolutely! Customize styles using CSS variables for global changes or leverage className and style props for component-specific tweaks. Designali supports CSS modules, Tailwind, and built-in dark mode.",
   },
   {
     id: "3",
-    title: "Is Designali optimized for performance?",
+    title: "Is Designali performance-friendly?",
     content:
-      "Yes, with tree-shaking, code splitting, and minimal runtime overhead. Most components are under 5KB gzipped.",
+      "Yes! With features like tree-shaking, code splitting, and minimal runtime overhead, most components are under 5KB gzipped, ensuring optimal performance.",
   },
   {
     id: "4",
     title: "How accessible are the components?",
     content:
-      "All components follow WAI-ARIA standards, featuring proper ARIA attributes, keyboard navigation, and screen reader support. Regular testing ensures compatibility with NVDA, VoiceOver, and JAWS.",
+      "Every component follows WAI-ARIA standards, ensuring proper ARIA attributes, keyboard navigation, and screen reader compatibility. We continuously test for seamless usability across NVDA, VoiceOver, and JAWS.",
   },
 ];
 
 export default function AccordionDemo() {
   return (
     <div className="w-full space-y-4">
-      <h2 className="text-xl font-bold">Table w/ left plus-minus</h2>
+      <h2 className="text-xl font-bold">Table Left Plus Minus</h2>
       <Accordion
         type="single"
         collapsible
@@ -56,9 +56,8 @@ export default function AccordionDemo() {
               <AccordionPrimitive.Trigger className="flex flex-1 items-center gap-3 py-2 text-left text-[15px] font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&>svg]:-order-1 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
                 {item.title}
                 <Plus
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60 transition-transform duration-200"
+                  strokeWidth={1}
+                  className="h-4 w-4 shrink-0 opacity-60 transition-transform duration-200"
                   aria-hidden="true"
                 />
               </AccordionPrimitive.Trigger>

@@ -1,15 +1,6 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
-import {
-  AtSign,
-  ChevronDown,
-  CircleDashed,
-  Command,
-  Eclipse,
-  Gauge,
-  LucideIcon,
-  Zap,
-} from "lucide-react";
+import { DIcon, DIcons } from "dicons";
 
 import {
   Accordion,
@@ -26,78 +17,78 @@ import {
 const items = [
   {
     id: "1",
-    title: "What makes Designali different?",
-    icon: Command,
+    title: "What makes Designali unique?",
+    icon: DIcons.Command,
     collapsibles: [
       {
-        title: "What about performance?",
+        title: "How does it perform?",
         content:
-          "We optimize every component for maximum performance and minimal bundle size.",
-        icon: Gauge,
+          "Every component is fine-tuned for speed, ensuring minimal bundle size and optimal efficiency.",
+        icon: DIcons.Gauge,
       },
       {
-        title: "How is the documentation?",
+        title: "Is the documentation extensive?",
         content:
-          "Our documentation is comprehensive and includes live examples for every component.",
-        icon: CircleDashed,
+          "Absolutely! Our documentation is detailed, with live examples and best practices for every component.",
+        icon: DIcons.CircleDashed,
       },
     ],
   },
   {
     id: "2",
-    title: "How can I customize the components?",
-    icon: Eclipse,
+    title: "Can I customize the components?",
+    icon: DIcons.Eclipse,
     collapsibles: [
       {
-        title: "Can I use custom themes?",
+        title: "Is custom theming supported?",
         content:
-          "Yes, our theming system is fully customizable and supports both light and dark modes.",
-        icon: Gauge,
+          "Yes! Our theming system is fully flexible, allowing easy customization of both light and dark modes.",
+        icon: DIcons.Gauge,
       },
       {
-        title: "What about Tailwind support?",
+        title: "How well does it work with Tailwind?",
         content:
-          "We have first-class support for Tailwind CSS with custom utility classes.",
-        icon: CircleDashed,
+          "We offer seamless integration with Tailwind CSS, including custom utility classes for enhanced styling.",
+        icon: DIcons.CircleDashed,
       },
     ],
   },
   {
     id: "3",
     title: "Is Designali optimized for performance?",
-    icon: Zap,
+    icon: DIcons.PlugZap,
     collapsibles: [
       {
-        title: "What's the bundle size impact?",
+        title: "What’s the impact on bundle size?",
         content:
-          "Our components are tree-shakeable and typically add minimal overhead to your bundle.",
+          "Our components are tree-shakeable, ensuring they add minimal overhead to your application.",
         open: true,
-        icon: Gauge,
+        icon: DIcons.Gauge,
       },
       {
-        title: "How is code splitting handled?",
+        title: "Does it support code splitting?",
         content:
-          "We support automatic code splitting for optimal loading performance.",
-        icon: CircleDashed,
+          "Yes, automatic code splitting is built-in for improved loading times and efficiency.",
+        icon: DIcons.CircleDashed,
       },
     ],
   },
   {
     id: "4",
     title: "How accessible are the components?",
-    icon: AtSign,
+    icon: DIcons.AtSign,
     collapsibles: [
       {
         title: "Which screen readers are supported?",
         content:
-          "We test with NVDA, VoiceOver, and JAWS to ensure broad compatibility.",
-        icon: Gauge,
+          "We rigorously test with NVDA, VoiceOver, and JAWS to ensure full accessibility compliance.",
+        icon: DIcons.Gauge,
       },
       {
-        title: "What about keyboard navigation?",
+        title: "Does it support keyboard navigation?",
         content:
-          "Full keyboard navigation support is implemented following WAI-ARIA best practices.",
-        icon: CircleDashed,
+          "Yes! Our components follow WAI-ARIA best practices for smooth and intuitive keyboard navigation.",
+        icon: DIcons.CircleDashed,
       },
     ],
   },
@@ -106,7 +97,7 @@ const items = [
 export default function AccordionDemo() {
   return (
     <div className="w-full space-y-4">
-      <h2 className="text-xl font-bold">Multi-level w/ icon</h2>
+      <h2 className="text-xl font-bold">Multi-level Icon</h2>
       <Accordion
         type="single"
         collapsible
@@ -118,9 +109,8 @@ export default function AccordionDemo() {
             <AccordionTrigger className="justify-start gap-3 text-[15px] leading-6 hover:no-underline [&>svg]:-order-1">
               <span className="flex items-center gap-3">
                 <item.icon
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60"
+                  strokeWidth={1}
+                  className="h-5 w-5 shrink-0 opacity-60"
                   aria-hidden="true"
                 />
                 <span>{item.title}</span>
@@ -153,7 +143,7 @@ function CollapsibleDemo({
   title: string;
   content: string;
   open?: boolean;
-  icon: LucideIcon;
+  icon: DIcon;
 }) {
   return (
     <Collapsible
@@ -161,17 +151,15 @@ function CollapsibleDemo({
       defaultOpen={open}
     >
       <CollapsibleTrigger className="flex gap-2 text-[15px] font-semibold leading-6 [&[data-state=open]>svg]:rotate-180">
-        <ChevronDown
-          size={16}
-          strokeWidth={2}
-          className="mt-1 shrink-0 opacity-60 transition-transform duration-200"
+        <DIcons.ChevronDown
+          strokeWidth={1}
+          className="mt-1  shrink-0 opacity-60 transition-transform duration-200"
           aria-hidden="true"
         />
         <span className="flex items-center gap-3">
           <Icon
-            size={16}
             strokeWidth={2}
-            className="shrink-0 opacity-60"
+            className="h-5 w-5 shrink-0 opacity-60"
             aria-hidden="true"
           />
           <span>{title}</span>

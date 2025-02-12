@@ -1,4 +1,4 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
 import { DIcons } from "dicons";
 
