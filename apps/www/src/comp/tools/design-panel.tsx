@@ -1,6 +1,8 @@
 "use client";
 
-import type React from "react";
+import React from "react";
+import { DIcons } from "dicons";
+import * as DIcon from "dicons";
 
 import {
   Accordion,
@@ -14,6 +16,23 @@ import { Label } from "@/components/ui/label";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Slider } from "@/components/ui/slider";
 
+const shapeIcons = {
+  circle: <DIcons.CircleDot size={20} />,
+  square: <DIcons.SquareDot size={20} />,
+  triangle: <DIcons.TriangleAlert size={20} />,
+  hexagon: <DIcons.Hexagon size={20} />,
+  star: <DIcons.Star size={20} />,
+  ...Object.fromEntries(
+    [...Object.keys(DIcons), ...Object.keys(DIcon)]
+      .filter((key, index, arr) => arr.indexOf(key) === index) // Remove duplicates
+      .filter((key) => typeof (DIcons[key] || DIcon[key]) === "function") // Ensure valid components
+      .map((key) => [
+        key,
+        React.createElement(DIcons[key] || DIcon[key], { size: 20 }),
+      ]),
+  ),
+};
+
 interface DesignPanelProps {
   shape: string;
   density: number;
@@ -21,6 +40,8 @@ interface DesignPanelProps {
   foregroundColor: string;
   scale: number;
   rotation: number;
+  resetButton: () => void;
+  onRandomize: () => void;
   onUpdateShape: (
     value: "circle" | "square" | "triangle" | "hexagon" | "star" | "custom",
   ) => void;
@@ -41,6 +62,8 @@ export function DesignPanel({
   foregroundColor,
   scale,
   rotation,
+  resetButton,
+  onRandomize,
   onUpdateShape,
   onUpdateDensity,
   onUpdateBackgroundColor,
@@ -50,15 +73,28 @@ export function DesignPanel({
   onSvgUpload,
   onDownload,
 }: DesignPanelProps) {
+  const DshapeIcons = Object.keys(DIcon).reduce(
+    (acc, iconName) => {
+      acc[iconName] = React.createElement(DIcon[iconName], { size: 20 });
+      return acc;
+    },
+    {} as Record<string, JSX.Element>,
+  );
   return (
-    <div className="h-[600px] w-80 overflow-y-auto rounded-l-lg border-r bg-background p-6 text-foreground">
-      <h2 className="mb-3 text-lg font-semibold text-foreground">
-        Pattern Generator
-      </h2>
+    <div className="h-[800px] w-80 overflow-y-auto rounded-l-lg border-r bg-background p-3 text-foreground">
+      <div className="flex items-center justify-between">
+        <h2 className="mb-3 text-lg font-semibold text-foreground">
+          Pattern Generator
+        </h2>
+
+        <Button onClick={resetButton} variant="ghost" size="icon">
+          <DIcons.RefreshCw />
+        </Button>
+      </div>
       <ScrollArea className="whitespace-nowrap">
         <Accordion
           type="multiple"
-          defaultValue={["shape", "pattern", "appearance"]}
+          defaultValue={["shape", "pattern"]}
           className="h-full"
         >
           <AccordionItem value="shape">
@@ -71,7 +107,8 @@ export function DesignPanel({
                     (s) => (
                       <Button
                         key={s}
-                        variant={shape === s ? "default" : "outline"}
+                        size="icon"
+                        variant={shape === s ? "default" : "ghost"}
                         onClick={() =>
                           onUpdateShape(
                             s as
@@ -83,15 +120,51 @@ export function DesignPanel({
                           )
                         }
                       >
-                        {s}
+                        {shapeIcons[s as keyof typeof DshapeIcons]}
                       </Button>
                     ),
                   )}
                 </div>
+                <div className="flex items-center gap-2">
+                  <Label className="text-foreground ">Select</Label>
+                  <select
+                    className="w-40 rounded-md border bg-background p-2 text-foreground"
+                    onChange={(e) =>
+                      onUpdateShape(
+                        e.target.value as
+                          | "circle"
+                          | "square"
+                          | "triangle"
+                          | "hexagon"
+                          | "star"
+                          | "custom",
+                      )
+                    }
+                    value={shape}
+                  >
+                    {Object.keys(DshapeIcons).map((icon) => (
+                      <option key={icon} value={icon}>
+                        {icon}
+                      </option>
+                    ))}
+                  </select>
+                </div>
                 <div className="mt-4">
                   <Label className="text-foreground">Upload Custom SVG</Label>
-                  <Input type="file" accept=".svg" onChange={onSvgUpload} />
+                  <Input
+                    type="file"
+                    accept=".svg"
+                    className="mt-2"
+                    onChange={onSvgUpload}
+                  />
                 </div>
+                <Button
+                  onClick={onRandomize}
+                  className="mt-3 w-full"
+                  variant="outline"
+                >
+                  Randomize Pattern
+                </Button>
               </div>
             </AccordionContent>
           </AccordionItem>
@@ -188,7 +261,7 @@ export function DesignPanel({
         </Accordion>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
-      <div className="mt-6">
+      <div className="mt-3">
         <Button onClick={onDownload} className="w-full">
           Download Pattern
         </Button>

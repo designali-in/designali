@@ -24,7 +24,7 @@ const PatternGenerator: React.FC = () => {
     isDarkMode: false,
     backgroundColor: "#ffffff",
     foregroundColor: "#000000",
-    scale: 1,
+    scale: 0.2,
     rotation: 0,
     customSvg: null,
   });
@@ -152,11 +152,49 @@ const PatternGenerator: React.FC = () => {
     }
   };
 
+  const defaultDesignParams: DesignParams = {
+    shape: "circle",
+    density: 0.5,
+    isDarkMode: false,
+    backgroundColor: "#ffffff",
+    foregroundColor: "#000000",
+    scale: 0.2,
+    rotation: 0,
+    customSvg: null,
+  };
+
+  const resetSettings = () => {
+    setDesignParams(defaultDesignParams);
+  };
+
+  const randomizePattern = () => {
+    const shapes: DesignParams["shape"][] = [
+      "circle",
+      "square",
+      "triangle",
+      "hexagon",
+      "star",
+    ];
+    setDesignParams({
+      shape: shapes[Math.floor(Math.random() * shapes.length)],
+      density: Math.random(), // Random density between 0 and 1
+      isDarkMode: Math.random() > 0.5, // Random true/false
+      backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`, // Random color
+      foregroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`, // Random color
+      scale: Math.random() * 5, // Random scale between 0 and 5
+      rotation: Math.random() * 360, // Random rotation between 0 and 360 degrees
+      customSvg: null, // Keep null unless a custom SVG is used
+    });
+  };
+
   return (
     <div
-      className={`mx-auto mt-10 flex h-full max-w-7xl overflow-scroll rounded-3xl border p-3`}
+      className={`mx-auto mt-10 flex h-full max-w-7xl overflow-scroll rounded-3xl border bg-background p-3 shadow-xl`}
     >
       <DesignPanel
+        resetButton={resetSettings}
+        onRandomize={randomizePattern} // Pass function
+        {...designParams}
         rotation={0}
         {...designParams}
         onUpdateShape={(shape) =>
@@ -186,7 +224,7 @@ const PatternGenerator: React.FC = () => {
       <main className="flex-1">
         <canvas
           ref={canvasRef}
-          className="h-[600px] w-full rounded-r-lg"
+          className="h-[800px] w-full rounded-r-lg"
           style={{ backgroundColor: designParams.backgroundColor }}
         />
       </main>
