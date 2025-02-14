@@ -80,6 +80,16 @@ const COLORS = [
   },
 ];
 
+const PATTERNS = [
+  {
+    id: 1,
+    name: "Patterns",
+    src: "/images/products/shapes.jpg",
+    designation: "Download. Edit. Upload.",
+    content: <p>+100 Beautifully designed patterns.</p>,
+  },
+];
+
 export function Graaadients() {
   return (
     <div className=" ">
@@ -90,9 +100,11 @@ export function Graaadients() {
         <Link href="/products/blocks" className="rounded-3xl border">
           <CardStack items={BLOCKS} />
         </Link>
-
         <Link href="/products/graaadients" className="rounded-3xl border">
           <CardStack items={GRADS} />
+        </Link>
+        <Link href="/products/patterns" className="rounded-3xl border">
+          <CardStack items={PATTERNS} />
         </Link>
         <Link href="/products/dshapes" className="rounded-3xl border">
           <CardStack items={DSHAPES} />
