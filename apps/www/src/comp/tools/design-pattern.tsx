@@ -1,12 +1,14 @@
 "use client";
 
 import type React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import * as DIcon from "dicons";
+import ReactDOMServer from "react-dom/server";
 
 import { DesignPanel } from "./design-panel";
 
 interface DesignParams {
-  shape: "circle" | "square" | "triangle" | "hexagon" | "star" | "custom";
+  shape: string;
   density: number;
   isDarkMode: boolean;
   backgroundColor: string;
@@ -29,17 +31,19 @@ const PatternGenerator: React.FC = () => {
     customSvg: null,
   });
 
-  useEffect(() => {
-    generatePattern();
-  }, [designParams]); //This line was already correct. No changes needed here.
-
-  const generatePattern = () => {
+  const generatePattern = useCallback(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
 
-    const { shape, backgroundColor, foregroundColor, scale, rotation } =
-      designParams;
+    const {
+      shape,
+      backgroundColor,
+      foregroundColor,
+      scale,
+      rotation,
+      density,
+    } = designParams;
 
     canvas.width = canvas.clientWidth * window.devicePixelRatio;
     canvas.height = canvas.clientHeight * window.devicePixelRatio;
@@ -52,16 +56,24 @@ const PatternGenerator: React.FC = () => {
     const shapeSize = baseSize * scale;
     const spacing = shapeSize * 2;
 
+    // Apply density to the pattern generation
     for (let y = -spacing; y < canvas.height + spacing; y += spacing) {
       for (let x = -spacing; x < canvas.width + spacing; x += spacing) {
-        ctx.save();
-        ctx.translate(x, y);
-        ctx.rotate((rotation * Math.PI) / 180);
-        drawShape(ctx, shape, 0, 0, shapeSize);
-        ctx.restore();
+        if (Math.random() < density) {
+          // Only draw if random number is less than density
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate((rotation * Math.PI) / 180);
+          drawShape(ctx, shape, 0, 0, shapeSize);
+          ctx.restore();
+        }
       }
     }
-  };
+  }, [designParams]);
+
+  useEffect(() => {
+    generatePattern();
+  }, [generatePattern]); //Fixed: Removed unnecessary dependency
 
   const drawShape = (
     ctx: CanvasRenderingContext2D,
@@ -79,6 +91,20 @@ const PatternGenerator: React.FC = () => {
       return;
     }
 
+    const IconComponent = DIcon[shape as keyof typeof DIcon] as
+      | React.ComponentType<{ size?: number }>
+      | undefined;
+    if (IconComponent) {
+      const svgString = renderToSVG(IconComponent, size);
+      const img = new Image();
+      img.onload = () => {
+        ctx.drawImage(img, x - size / 2, y - size / 2, size, size);
+      };
+      img.src = `data:image/svg+xml;base64,${btoa(svgString)}`;
+      return;
+    }
+
+    // Fallback to basic shapes if not a DIcon
     switch (shape) {
       case "circle":
         ctx.beginPath();
@@ -124,12 +150,28 @@ const PatternGenerator: React.FC = () => {
     }
   };
 
+  const renderToSVG = (
+    IconComponent: React.ComponentType<{ size?: number }>,
+    size: number,
+  ): string => {
+    const svgMarkup = ReactDOMServer.renderToStaticMarkup(
+      <IconComponent size={size} />,
+    );
+
+    return `
+      <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="${designParams.foregroundColor}">
+        ${svgMarkup}
+      </svg>
+    `.trim();
+  };
+
   const handleSvgUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file && file.type === "image/svg+xml") {
       const reader = new FileReader();
       reader.onload = (e) => {
         const svg = e.target?.result as string;
+        console.log("Uploaded SVG:", svg);
         setDesignParams((prev) => ({
           ...prev,
           customSvg: svg,
@@ -177,13 +219,13 @@ const PatternGenerator: React.FC = () => {
     ];
     setDesignParams({
       shape: shapes[Math.floor(Math.random() * shapes.length)],
-      density: Math.random(), // Random density between 0 and 1
-      isDarkMode: Math.random() > 0.5, // Random true/false
-      backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`, // Random color
-      foregroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`, // Random color
-      scale: Math.random() * 5, // Random scale between 0 and 5
-      rotation: Math.random() * 360, // Random rotation between 0 and 360 degrees
-      customSvg: null, // Keep null unless a custom SVG is used
+      density: Math.random(),
+      isDarkMode: Math.random() > 0.5,
+      backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+      foregroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+      scale: Math.random() * 5,
+      rotation: Math.random() * 360,
+      customSvg: null,
     });
   };
 
@@ -193,9 +235,7 @@ const PatternGenerator: React.FC = () => {
     >
       <DesignPanel
         resetButton={resetSettings}
-        onRandomize={randomizePattern} // Pass function
-        {...designParams}
-        rotation={0}
+        onRandomize={randomizePattern}
         {...designParams}
         onUpdateShape={(shape) =>
           setDesignParams((prev) => ({ ...prev, shape }))
