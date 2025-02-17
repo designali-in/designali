@@ -55,7 +55,7 @@ const BLOCKS = [
   {
     id: 1,
     name: "Blocks",
-    src: "https://res.cloudinary.com/deelfmnhg/image/upload/v1733892006/Neon_Graaadients_D1_3_ku1kkh.jpg",
+    src: "/images/products/blocks.jpg",
     designation: "Copy. Paste. Edit.",
     content: <p>Clean, modern building blocks.</p>,
   },
@@ -84,7 +84,7 @@ const PATTERNS = [
   {
     id: 1,
     name: "Patterns",
-    src: "/images/products/shapes.jpg",
+    src: "/images/products/pattern.png",
     designation: "Download. Edit. Upload.",
     content: <p>+100 Beautifully designed patterns.</p>,
   },
@@ -141,6 +141,11 @@ export function CarouselGraaadients() {
           <CarouselItem className=" ">
             <Link href="/products/blocks">
               <CardStack items={BLOCKS} />
+            </Link>
+          </CarouselItem>
+          <CarouselItem className=" ">
+            <Link href="/products/patterns">
+              <CardStack items={PATTERNS} />
             </Link>
           </CarouselItem>
           <CarouselItem className=" ">

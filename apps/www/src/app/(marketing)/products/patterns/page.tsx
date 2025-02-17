@@ -4,7 +4,6 @@ import AdBanner from "@/comp/AdBanner";
 import PatternGenerator from "@/comp/tools/design-pattern";
 
 import { cn } from "@/lib/utils";
-import GridPattern from "@/components/ui/backgrounds/grid-pattern";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -16,12 +15,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { Avegra } from "@/app/fonts";
 
+import { Patrns } from "./ptrns";
+
 export const metadata = {
   title: "Patterns - Designali",
   description: "A design agency with a touch of magic.",
 };
 
-export default function AboutAI() {
+export default function Ptrns() {
   return (
     <div className="relative">
       <div className="absolute inset-0 -top-40 -z-10 overflow-hidden">
@@ -94,7 +95,9 @@ export default function AboutAI() {
         <h1 className="text-ali -mb-10 flex w-full justify-center  text-center text-9xl font-thin  ">
           4K
         </h1>
-        <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0"></div>
+        <div className="mx-auto mt-10 max-w-7xl px-6 xl:px-0">
+          <Patrns />
+        </div>
 
         <p className="text-aired mt-10 text-center text-lg lg:text-xl">
           Download. Edit. Upload.

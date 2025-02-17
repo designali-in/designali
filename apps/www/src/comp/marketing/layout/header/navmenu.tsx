@@ -109,6 +109,23 @@ export function Menu() {
                   <NavigationMenuLink>
                     <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
+                      href="/products/patterns"
+                    >
+                      <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        Patterns
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        This is a free product. To download a full version click
+                        on "Download a free version" button.
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink>
+                    <Link
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
                       href="/products/blocks"
                     >
                       <DIcons.Blocks strokeWidth={1} className="h-8 w-8" />
