@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdBanner from "@/comp/AdBanner";
+import { ImagePlayground } from "@/comp/ai/ImagePlayground";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import { Badge } from "@/registry/default/ui/badge";
 import { AssetGrid } from "@/src/comp/dashboard/assets/asset-grid";
@@ -10,6 +11,7 @@ import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
 import { env } from "@/env";
+import { getRandomSuggestions } from "@/lib/ai/suggestions";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
@@ -150,8 +152,11 @@ const BrowsePage = async () => {
                   </Badge>
                 </TabsTrigger>
                 <TabsTrigger value="tab-4">
-                  <span>AI-Generated</span>
-                  <DIcons.AiBeautify className="ml-1 h-4 w-4" />
+                  <span>AI-Magic</span>
+                  <DIcons.AiBeautify className="ml-1 mr-1 h-4 w-4" />
+                  <Badge size="xs" variant="green">
+                    New
+                  </Badge>
                 </TabsTrigger>
               </div>
             </TabsList>
@@ -171,9 +176,7 @@ const BrowsePage = async () => {
               <AssetUsers users={formattedUsers} />
             </TabsContent>
             <TabsContent value="tab-4">
-              <h1 className="text-ali mt-20 text-center text-2xl font-semibold">
-                Coming Soon
-              </h1>
+              <ImagePlayground suggestions={getRandomSuggestions()} />
             </TabsContent>
           </Tabs>
         </div>
