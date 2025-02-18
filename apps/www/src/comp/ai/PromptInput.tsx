@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/registry/default/ui/button";
+import { DIcons } from "dicons";
 import { ArrowUp, ArrowUpRight, RefreshCw } from "lucide-react";
 
-import { getRandomSuggestions, Suggestion } from "@/lib/ai/suggestions";
+import { getRandomDesignSuggestions, Suggestion } from "@/lib/ai/suggestions";
 import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -27,7 +28,7 @@ export function PromptInput({
   const [suggestions, setSuggestions] = useState<Suggestion[]>(initSuggestions);
 
   const updateSuggestions = () => {
-    setSuggestions(getRandomSuggestions());
+    setSuggestions(getRandomDesignSuggestions());
   };
   const handleSuggestionSelect = (prompt: string) => {
     setInput(prompt);
@@ -101,7 +102,11 @@ export function PromptInput({
               disabled={isLoading || !input.trim()}
               className="flex h-8 w-8 items-center justify-center rounded-full  disabled:opacity-50"
             >
-              {isLoading ? <p>Loading...</p> : <ArrowUp className="h-5 w-5" />}
+              {isLoading ? (
+                <DIcons.Loader className="h-5 w-5 animate-spin" />
+              ) : (
+                <ArrowUp className="h-5 w-5" />
+              )}
             </button>
           </div>
         </div>

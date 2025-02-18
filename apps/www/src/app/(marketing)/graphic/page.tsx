@@ -11,7 +11,7 @@ import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
 import { env } from "@/env";
-import { getRandomSuggestions } from "@/lib/ai/suggestions";
+import { getRandomDesignSuggestions } from "@/lib/ai/suggestions";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
@@ -176,7 +176,7 @@ const BrowsePage = async () => {
               <AssetUsers users={formattedUsers} />
             </TabsContent>
             <TabsContent value="tab-4">
-              <ImagePlayground suggestions={getRandomSuggestions()} />
+              <ImagePlayground suggestions={getRandomDesignSuggestions()} />
             </TabsContent>
           </Tabs>
         </div>

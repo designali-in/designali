@@ -3,116 +3,65 @@ export interface Suggestion {
   prompt: string;
 }
 
-const artStyles = ["anime", "art nouveau", "ukiyo-e", "watercolor"];
+const graphicDesignStyles = [
+  "minimalism",
+  "surrealism",
+  "futuristic cyberpunk",
+  "bold typography",
+  "geometric abstraction",
+  "pop art",
+  "retro-futurism",
+  "glitch art",
+];
 
 const basePrompts: { text: string; prompt: string }[] = [
   {
-    text: "Salamander Dusk",
-    prompt: "A salamander at dusk in a forest pond",
-  },
-  {
-    text: "Sultry Chicken",
+    text: "Neon Typography",
     prompt:
-      "A sultry chicken peering around the corner from shadows, clearly up to no good",
+      "A futuristic neon typography design with glowing letters and a cyberpunk aesthetic",
   },
   {
-    text: "Cat Vercel",
-    prompt: "A cat launching its website on Vercel",
-  },
-  {
-    text: "Red Panda",
+    text: "Geometric Poster",
     prompt:
-      "A red panda sipping tea under cherry blossoms at sunset with Mount Fuji in the background",
+      "An abstract poster design with bold geometric shapes and vibrant gradients",
   },
   {
-    text: "Beach Otter",
-    prompt: "A mischievous otter surfing the waves in Bali at golden hour",
-  },
-  {
-    text: "Badger Ramen",
-    prompt: "A pensive honey badger eating a bowl of ramen in Osaka",
-  },
-  {
-    text: "Zen Frog",
+    text: "Surreal Collage",
     prompt:
-      "A frog meditating on a lotus leaf in a tranquil forest pond at dawn, surrounded by fireflies",
+      "A surreal collage combining classical art elements with modern digital textures",
   },
   {
-    text: "Macaw Love",
+    text: "Minimalist Branding",
+    prompt: "A sleek and clean minimalist logo design with subtle typography",
+  },
+  {
+    text: "Futuristic UI",
     prompt:
-      "A colorful macaw delivering a love letter, flying over the Grand Canyon at sunrise",
+      "A high-tech user interface design with glowing elements and smooth animations",
   },
   {
-    text: "Fox Painting",
-    prompt: "A fox walking through a field of lavender with a golden sunset",
-  },
-  {
-    text: "Armadillo Aerospace",
+    text: "Retro Wave",
     prompt:
-      "An armadillo in a rocket at countdown preparing to blast off to Mars",
+      "A retro-futuristic design featuring 80s neon aesthetics and digital grids",
   },
   {
-    text: "Penguin Delight",
-    prompt: "A penguin in pajamas eating ice cream while watching television",
-  },
-  {
-    text: "Echidna Library",
+    text: "Glitch Aesthetic",
     prompt:
-      "An echidna reading a book in a cozy library built into the branches of a eucalyptus tree",
+      "A digital artwork with distorted and glitchy effects inspired by VHS and CRT screens",
   },
   {
-    text: "Capybara Onsen",
+    text: "Nature & Tech Blend",
     prompt:
-      "A capybara relaxing in a hot spring surrounded by snow-covered mountains with a waterfall in the background",
+      "A graphic design composition merging nature with futuristic technology elements",
   },
   {
-    text: "Lion Throne",
+    text: "Kinetic Typography",
+    prompt: "A bold, moving typographic poster that conveys motion and energy",
+  },
+  {
+    text: "Abstract Gradient Flow",
     prompt:
-      "A regal lion wearing a crown, sitting on a throne in a jungle palace, with waterfalls in the distance",
-  },
-  {
-    text: "Dolphin Glow",
-    prompt:
-      "A dolphin leaping through a glowing ring of bioluminescence under a starry sky",
-  },
-  {
-    text: "Owl Detective",
-    prompt:
-      "An owl wearing a monocle and top hat, solving a mystery in a misty forest at midnight",
-  },
-  {
-    text: "Jellyfish Cathedral",
-    prompt:
-      "A jellyfish floating gracefully in an underwater cathedral made of coral and glass",
-  },
-  {
-    text: "Platypus River",
-    prompt: "A platypus foraging in a river with a sunset in the background",
-  },
-  {
-    text: "Chameleon Urban",
-    prompt:
-      "A chameleon blending into a graffiti-covered wall in an urban jungle",
-  },
-  {
-    text: "Tortoise Oasis",
-    prompt:
-      "A giant tortoise slowly meandering its way to an oasis in the desert",
-  },
-  {
-    text: "Hummingbird Morning",
-    prompt:
-      "A hummingbird sipping nectar from a purple bougainvillea at sunrise, captured mid-flight",
-  },
-  {
-    text: "Polar Bear",
-    prompt:
-      "A polar bear clambering onto an iceberg to greet a friendly harbor seal as dusk falls",
-  },
-  {
-    text: "Lemur Sunbathing",
-    prompt:
-      "A ring-tailed lemur sunbathing on a rock in Madagascar in early morning light",
+      "A fluid abstract composition with smooth gradient transitions and organic shapes",
   },
 ];
 
@@ -125,14 +74,12 @@ function shuffle<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export function getRandomSuggestions(count: number = 5): Suggestion[] {
+export function getRandomDesignSuggestions(count: number = 5): Suggestion[] {
   const shuffledPrompts = shuffle(basePrompts);
-  const shuffledStyles = shuffle(artStyles);
+  const shuffledStyles = shuffle(graphicDesignStyles);
 
   return shuffledPrompts.slice(0, count).map((item, index) => ({
     text: item.text,
-    prompt: `${item.prompt}, in the style of ${
-      shuffledStyles[index % shuffledStyles.length]
-    }`,
+    prompt: `${item.prompt}, designed in the style of ${shuffledStyles[index % shuffledStyles.length]}`,
   }));
 }

@@ -11,7 +11,7 @@ import { ProviderKey } from "@/lib/ai/provider-config";
  */
 const TIMEOUT_MILLIS = 55 * 1000;
 
-const DEFAULT_IMAGE_SIZE = "1024x1024";
+const DEFAULT_IMAGE_SIZE = "1080x1080";
 const DEFAULT_ASPECT_RATIO = "1:1";
 
 interface ProviderConfig {
