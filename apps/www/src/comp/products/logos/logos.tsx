@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FilterChips } from "@/comp/products/logos/filter-chips";
-import { LogosList } from "@/comp/products/logos/logos-list";
+
+import { FilterChips } from "./filter-chips";
+import { LogosList } from "./logos-list";
 
 const LogoPage = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>("all");
 
   return (
-    <div className="mt-6">
+    <div className="mt-3">
       <FilterChips
         selectedFilter={selectedFilter}
         onFilterChange={setSelectedFilter}

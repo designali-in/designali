@@ -23,7 +23,6 @@ const navigation = {
             { name: "About", href: "/about" },
             { name: "Works", href: "/agency/works" },
             { name: "Pricing", href: "/pricing" },
-            { name: "Dashboard", href: "/dashboard" },
           ],
         },
         {
@@ -32,15 +31,13 @@ const navigation = {
           items: [
             { name: "Products", href: "/products" },
             { name: "Agency", href: "/agency" },
-            { name: "Branding", href: "/agency/branding" },
-            { name: "Web Develop", href: "/agency/web-develop" },
+            { name: "Dashboard", href: "/dashboard" },
           ],
         },
         {
           id: "products",
           name: "Products",
           items: [
-            { name: "Blocks", href: "/products/blocks" },
             { name: "DIcons", href: "/products/dicons" },
             { name: "DShapes", href: "/products/dshapes" },
             { name: "Graaadients", href: "/products/graaadients" },
@@ -50,7 +47,6 @@ const navigation = {
           id: "designs",
           name: "Designs",
           items: [
-            { name: "Documentation", href: "/documentation" },
             { name: "Design", href: "/designs" },
             { name: "Components", href: "/components" },
             { name: "Blogs", href: "/blogs" },

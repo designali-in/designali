@@ -7,7 +7,6 @@ import { useTheme } from "next-themes";
 import { toast } from "sonner";
 
 import { SVGLogo } from "@/types/global";
-import { cn } from "@/lib/utils";
 
 interface LogoItemProps {
   logo: SVGLogo;
@@ -80,7 +79,7 @@ export function LogoItem({ logo, onCategoryClick }: LogoItemProps) {
   const hasMoreCategories = additionalCategories.length > 0;
 
   return (
-    <div className="group flex flex-col items-center justify-center rounded-md border border-neutral-200 p-4 transition-colors duration-100 hover:bg-neutral-100/80 dark:border-neutral-800 dark:hover:bg-neutral-800/20">
+    <div className="group flex flex-col items-center justify-center rounded-xl border border-slate-200 p-3 transition-colors duration-100 hover:bg-slate-100/80 dark:border-slate-800 dark:hover:bg-slate-800/20">
       <Image
         src={logoUrl}
         alt={logo.title}
@@ -99,14 +98,14 @@ export function LogoItem({ logo, onCategoryClick }: LogoItemProps) {
             <>
               <button
                 onClick={() => onCategoryClick?.(mainCategory.toLowerCase())}
-                className="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-2.5 py-0.5 font-mono text-xs font-medium text-neutral-600 transition-colors duration-100 hover:bg-neutral-200 hover:underline dark:border-neutral-800 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:bg-neutral-700/50"
+                className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 font-mono text-xs font-medium text-slate-600 transition-colors duration-100 hover:bg-slate-200 hover:underline dark:border-slate-800 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-700/50"
               >
                 {mainCategory}
               </button>
               {hasMoreCategories && (
                 <button
                   onClick={() => setShowAllCategories(true)}
-                  className="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-2.5 py-0.5 font-mono text-xs font-medium text-neutral-600 transition-colors duration-100 hover:bg-neutral-200 hover:underline dark:border-neutral-800 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:bg-neutral-700/50"
+                  className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 font-mono text-xs font-medium text-slate-600 transition-colors duration-100 hover:bg-slate-200 hover:underline dark:border-slate-800 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-700/50"
                   title="More Tags"
                 >
                   <MoreHorizontal className="h-[15px] w-[15px]" />
@@ -118,7 +117,7 @@ export function LogoItem({ logo, onCategoryClick }: LogoItemProps) {
               <button
                 key={category}
                 onClick={() => onCategoryClick?.(category.toLowerCase())}
-                className="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-2.5 py-0.5 font-mono text-xs font-medium text-neutral-600 transition-colors duration-100 hover:bg-neutral-200 hover:underline dark:border-neutral-800 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:bg-neutral-700/50"
+                className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 font-mono text-xs font-medium text-slate-600 transition-colors duration-100 hover:bg-slate-200 hover:underline dark:border-slate-800 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-700/50"
               >
                 {category}
               </button>
@@ -130,14 +129,14 @@ export function LogoItem({ logo, onCategoryClick }: LogoItemProps) {
         <button
           onClick={handleCopy}
           title="Copy SVG"
-          className="flex items-center space-x-2 rounded-md p-2 duration-100 hover:bg-neutral-200 dark:hover:bg-neutral-700/40"
+          className="flex items-center space-x-2 rounded-md p-2 duration-100 hover:bg-slate-200 dark:hover:bg-slate-700/40"
         >
           <Copy className="h-4 w-4 stroke-[1.8]" />
         </button>
         <button
           onClick={handleDownload}
           title="Download SVG file"
-          className="flex items-center space-x-2 rounded-md p-2 duration-100 hover:bg-neutral-200 dark:hover:bg-neutral-700/40"
+          className="flex items-center space-x-2 rounded-md p-2 duration-100 hover:bg-slate-200 dark:hover:bg-slate-700/40"
         >
           <Download className="h-4 w-4 stroke-[1.8]" />
         </button>
@@ -146,7 +145,7 @@ export function LogoItem({ logo, onCategoryClick }: LogoItemProps) {
           title="Website"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-2 rounded-md p-2 duration-100 hover:bg-neutral-200 dark:hover:bg-neutral-700/40"
+          className="flex items-center space-x-2 rounded-md p-2 duration-100 hover:bg-slate-200 dark:hover:bg-slate-700/40"
         >
           <Link className="h-4 w-4 stroke-[1.8]" />
         </a>

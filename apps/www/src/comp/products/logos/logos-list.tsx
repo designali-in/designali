@@ -85,7 +85,7 @@ export function LogosList({ category, onCategoryChange }: LogosListProps) {
 
   if (isLoading) {
     return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {[...Array(18)].map((_, i) => (
           <LogoCardSkeleton key={i} />
         ))}
@@ -113,40 +113,12 @@ export function LogosList({ category, onCategoryChange }: LogosListProps) {
               ? `No logos found in the "${category}" category. Try a different category or submit a new logo.`
               : "No logos found. You can submit a new logo or request one."}
         </p>
-        <div className="flex gap-4">
-          <Button
-            variant="outline"
-            onClick={() =>
-              window.open(
-                "https://github.com/pheralb/svgl?tab=readme-ov-file#-getting-started",
-                "_blank",
-              )
-            }
-            className="gap-2"
-          >
-            Submit logo
-            <ArrowUpRight className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="outline"
-            onClick={() =>
-              window.open(
-                "https://github.com/pheralb/svgl/issues/new?assignees=pheralb&labels=request&projects=&template=request-svg-.md&title=%5BRequest%5D%3A",
-                "_blank",
-              )
-            }
-            className="gap-2"
-          >
-            Request logo
-            <ArrowUpRight className="h-4 w-4" />
-          </Button>
-        </div>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
       {filteredLogos.map((logo) => (
         <LogoItem
           key={logo.id || logo.title}

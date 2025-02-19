@@ -67,38 +67,7 @@ const data = {
         },
       ],
     },
-    {
-      title: "Tools",
-      url: "/dashboard/tools",
-      icon: DIcons.Settings2,
-      isActive: false,
-      items: [
-        {
-          title: "Deditor",
-          url: "/dashboard/deditor",
-        },
-        {
-          title: "Image Converter",
-          url: "/dashboard/tools/image-converter",
-        },
-        {
-          title: "SVG to PNG",
-          url: "/dashboard/tools/svg-to-png",
-        },
-        {
-          title: "Round Corner",
-          url: "/dashboard/tools/round-corner",
-        },
-        {
-          title: "Square Image",
-          url: "/dashboard/tools/square-image",
-        },
-        {
-          title: "Word Counter",
-          url: "/dashboard/tools/word-counter",
-        },
-      ],
-    },
+
     {
       title: "Settings",
       url: "/dashboard/settings",
@@ -128,34 +97,6 @@ const data = {
       ],
     },
     {
-      title: "Designs",
-      url: "/designs",
-      icon: DIcons.Shapes,
-      isActive: false,
-      items: [
-        {
-          title: "Components",
-          url: "/components",
-        },
-        {
-          title: "UI",
-          url: "/ui",
-        },
-        {
-          title: "Colors",
-          url: "/colors",
-        },
-        {
-          title: "Tools",
-          url: "/tools",
-        },
-        {
-          title: "Agency",
-          url: "/agency",
-        },
-      ],
-    },
-    {
       title: "Designali",
       url: "/",
       icon: DIcons.Designali,
@@ -178,8 +119,20 @@ const data = {
           url: "/products",
         },
         {
+          title: "DIcons",
+          url: "/products/dicons",
+        },
+        {
+          title: "Graaadients",
+          url: "/products/graaadients",
+        },
+        {
           title: "Components",
           url: "/components",
+        },
+        {
+          title: "Colors",
+          url: "/colors",
         },
       ],
     },

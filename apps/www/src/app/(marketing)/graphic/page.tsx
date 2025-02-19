@@ -3,6 +3,8 @@ import Link from "next/link";
 import AdBanner from "@/comp/AdBanner";
 import { ImagePlayground } from "@/comp/ai/ImagePlayground";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
+import LogoPage from "@/comp/products/logos/logos";
+import ToolsPage from "@/comp/tools/tools";
 import { Badge } from "@/registry/default/ui/badge";
 import { AssetGrid } from "@/src/comp/dashboard/assets/asset-grid";
 import AssetUsers from "@/src/comp/dashboard/assets/asset-users";
@@ -15,11 +17,11 @@ import { getRandomDesignSuggestions } from "@/lib/ai/suggestions";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Avegra } from "../../fonts";
-import LogoPage from "./logos";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -128,45 +130,53 @@ const BrowsePage = async () => {
       <div>
         <div>
           <Tabs defaultValue="tab-1">
-            <TabsList className="flex w-auto justify-center md:justify-between">
-              <div>
-                <TabsTrigger value="tab-1">
-                  Graphics
-                  <span className="text-ali px-1 font-semibold">
-                    {assets.length}
-                  </span>
-                </TabsTrigger>
+            <ScrollArea className="whitespace-nowrap">
+              <div className="flex justify-center space-x-2">
+                <TabsList className="w-auto">
+                  <TabsTrigger value="tab-1">
+                    Graphics
+                    <span className="text-ali px-1 font-semibold">
+                      {assets.length}
+                    </span>
+                  </TabsTrigger>
 
-                <TabsTrigger value="tab-2">
-                  Pro
-                  <span className="text-ali pl-1 font-semibold">
-                    {topTenAnimes.length}
-                  </span>
-                </TabsTrigger>
-                <TabsTrigger value="tab-3">
-                  Designers
-                  <span className="text-ali px-1 font-semibold">
-                    {users.length}
-                  </span>
-                  <Badge size="xs" variant="green">
-                    New
-                  </Badge>
-                </TabsTrigger>
-                <TabsTrigger value="tab-4">
-                  <span>AI-Magic</span>
-                  <DIcons.AiBeautify className="ml-1 mr-1 h-4 w-4" />
-                  <Badge size="xs" variant="green">
-                    New
-                  </Badge>
-                </TabsTrigger>
-                <TabsTrigger value="tab-6">
-                  <span className="mr-1">Logos</span>
-                  <Badge size="xs" variant="green">
-                    New
-                  </Badge>
-                </TabsTrigger>
+                  <TabsTrigger value="tab-2">
+                    Pro
+                    <span className="text-ali pl-1 font-semibold">
+                      {topTenAnimes.length}
+                    </span>
+                  </TabsTrigger>
+                  <TabsTrigger value="tab-3">
+                    Designers
+                    <span className="text-ali px-1 font-semibold">
+                      {users.length}
+                    </span>
+                    <Badge size="xs" variant="green">
+                      New
+                    </Badge>
+                  </TabsTrigger>
+                  <TabsTrigger value="tab-4">
+                    <span>AI-Magic</span>
+                    <DIcons.AiBeautify className="ml-1 mr-1 h-4 w-4" />
+                    <Badge size="xs" variant="green">
+                      New
+                    </Badge>
+                  </TabsTrigger>
+                  <TabsTrigger value="tab-6">
+                    <p>Logos</p>
+                    {""}
+                    <span className="ml-1 font-thin">by svgl</span>
+                    <span className="text-ali px-1 font-semibold">476</span>
+                    <Badge size="xs" variant="green">
+                      New
+                    </Badge>
+                  </TabsTrigger>
+                  <TabsTrigger value="tab-7">
+                    <p>Tools</p>
+                  </TabsTrigger>
+                </TabsList>
               </div>
-            </TabsList>
+            </ScrollArea>
             <TabsContent value="tab-1">
               <AssetGrid
                 assets={formattedAssets}
@@ -187,6 +197,9 @@ const BrowsePage = async () => {
             </TabsContent>
             <TabsContent value="tab-6">
               <LogoPage />
+            </TabsContent>
+            <TabsContent value="tab-7">
+              <ToolsPage />
             </TabsContent>
           </Tabs>
         </div>
