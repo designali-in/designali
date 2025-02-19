@@ -19,6 +19,7 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Avegra } from "../../fonts";
+import LogoPage from "./logos";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -158,6 +159,12 @@ const BrowsePage = async () => {
                     New
                   </Badge>
                 </TabsTrigger>
+                <TabsTrigger value="tab-6">
+                  <span className="mr-1">Logos</span>
+                  <Badge size="xs" variant="green">
+                    New
+                  </Badge>
+                </TabsTrigger>
               </div>
             </TabsList>
             <TabsContent value="tab-1">
@@ -178,9 +185,13 @@ const BrowsePage = async () => {
             <TabsContent value="tab-4">
               <ImagePlayground suggestions={getRandomDesignSuggestions()} />
             </TabsContent>
+            <TabsContent value="tab-6">
+              <LogoPage />
+            </TabsContent>
           </Tabs>
         </div>
       </div>
+
       <div className=" mx-auto mt-20 max-w-7xl px-6 xl:px-0">
         <AdBanner
           dataAdFormat="auto"

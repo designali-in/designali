@@ -99,7 +99,7 @@
     "gsap": "^3.12.5",
     "html-escaper": "^3.0.3",
     "input-otp": "^1.2.4",
-    "jotai": "^2.1.0",
+    "jotai": "2.12.1",
     "lodash.template": "^4.5.0",
     "lucide-react": "^0.397.0",
     "marked": "^12.0.2",
