@@ -44,6 +44,9 @@ export function Menu() {
                     </Link>
                   </NavigationMenuLink>
                 </li>
+                <ListItem href="/profile" title="Profile">
+                  World's Top Designers profile list.
+                </ListItem>
                 <ListItem href="/pricing" title="Pricing">
                   Make your business shine with unlimited* creativity.
                 </ListItem>

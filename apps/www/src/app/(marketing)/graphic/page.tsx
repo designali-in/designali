@@ -129,10 +129,13 @@ const BrowsePage = async () => {
       </div>
       <div>
         <div>
-          <Tabs defaultValue="tab-1">
-            <ScrollArea className="whitespace-nowrap">
-              <div className="flex justify-center space-x-2">
-                <TabsList className="w-auto">
+          <Tabs
+            defaultValue="tab-1"
+            className="items-center justify-center text-center"
+          >
+            <TabsList className="w-full md:w-auto">
+              <ScrollArea className="whitespace-nowrap">
+                <div className="space-x-2">
                   <TabsTrigger value="tab-1">
                     Graphics
                     <span className="text-ali px-1 font-semibold">
@@ -174,9 +177,10 @@ const BrowsePage = async () => {
                   <TabsTrigger value="tab-7">
                     <p>Tools</p>
                   </TabsTrigger>
-                </TabsList>
-              </div>
-            </ScrollArea>
+                </div>
+                <ScrollBar orientation="horizontal" />
+              </ScrollArea>
+            </TabsList>
             <TabsContent value="tab-1">
               <AssetGrid
                 assets={formattedAssets}
@@ -201,6 +205,7 @@ const BrowsePage = async () => {
             <TabsContent value="tab-7">
               <ToolsPage />
             </TabsContent>
+            <TabsContent value="tab-8"></TabsContent>
           </Tabs>
         </div>
       </div>

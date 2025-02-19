@@ -64,7 +64,7 @@ export function PromptInput({
             onKeyDown={handleKeyDown}
             placeholder="Enter your prompt here"
             rows={3}
-            className="h-12 resize-none border-2 border-dotted  p-3 text-base text-primary/50 focus-visible:ring-0 focus-visible:ring-offset-0"
+            className="border-ali/50 h-12 resize-none border border-dotted p-3 text-base text-primary/50 focus-visible:ring-0 focus-visible:ring-offset-0"
           />
           <div className="flex items-center justify-between pt-1">
             <div className="flex items-center justify-between space-x-2">
