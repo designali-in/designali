@@ -43,6 +43,7 @@ const PatternGenerator: React.FC = () => {
       scale,
       rotation,
       density,
+      customSvg,
     } = designParams;
 
     canvas.width = canvas.clientWidth * window.devicePixelRatio;
@@ -56,20 +57,69 @@ const PatternGenerator: React.FC = () => {
     const shapeSize = baseSize * scale;
     const spacing = shapeSize * 2;
 
-    // Apply density to the pattern generation
-    for (let y = -spacing; y < canvas.height + spacing; y += spacing) {
-      for (let x = -spacing; x < canvas.width + spacing; x += spacing) {
-        if (Math.random() < density) {
-          // Only draw if random number is less than density
-          ctx.save();
-          ctx.translate(x, y);
-          ctx.rotate((rotation * Math.PI) / 180);
-          drawShape(ctx, shape, 0, 0, shapeSize);
-          ctx.restore();
+    let pattern: CanvasPattern | null = null;
+    if (shape === "custom" && customSvg) {
+      const img = new Image();
+      img.onload = () => {
+        const patternCanvas = document.createElement("canvas");
+        const patternCtx = patternCanvas.getContext("2d");
+        if (patternCtx) {
+          patternCanvas.width = shapeSize;
+          patternCanvas.height = shapeSize;
+          patternCtx.fillStyle = foregroundColor;
+          patternCtx.fillRect(0, 0, shapeSize, shapeSize);
+          patternCtx.globalCompositeOperation = "destination-in";
+          patternCtx.drawImage(img, 0, 0, shapeSize, shapeSize);
+          pattern = ctx.createPattern(patternCanvas, "repeat");
+          if (pattern) {
+            ctx.fillStyle = pattern;
+            drawPatternWithDensity(
+              ctx,
+              canvas.width,
+              canvas.height,
+              spacing,
+              density,
+              rotation,
+            );
+          }
+        }
+      };
+      img.src = `data:image/svg+xml;base64,${btoa(customSvg)}`;
+    } else {
+      // Apply density to the pattern generation for built-in shapes
+      for (let y = -spacing; y < canvas.height + spacing; y += spacing) {
+        for (let x = -spacing; x < canvas.width + spacing; x += spacing) {
+          if (Math.random() < density) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate((rotation * Math.PI) / 180);
+            drawShape(ctx, shape, 0, 0, shapeSize);
+            ctx.restore();
+          }
         }
       }
     }
   }, [designParams]);
+
+  const drawPatternWithDensity = (
+    ctx: CanvasRenderingContext2D,
+    width: number,
+    height: number,
+    spacing: number,
+    density: number,
+    rotation: number,
+  ) => {
+    ctx.save();
+    ctx.rotate((rotation * Math.PI) / 180);
+    for (let y = -spacing; y < height + spacing; y += spacing) {
+      for (let x = -spacing; x < width + spacing; x += spacing) {
+        if (Math.random() < density) {
+          ctx.fillRect(x, y, spacing, spacing);
+        }
+      }
+    }
+    ctx.restore();
+  };
 
   useEffect(() => {
     generatePattern();

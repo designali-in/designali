@@ -22,6 +22,7 @@ const shapeIcons = {
   triangle: <DIcons.TriangleAlert size={20} />,
   hexagon: <DIcons.Hexagon size={20} />,
   star: <DIcons.Star size={20} />,
+  custom: <DIcons.FileImage size={20} />,
   ...Object.fromEntries(
     [...Object.keys(DIcons), ...Object.keys(DIcon)]
       .filter((key, index, arr) => arr.indexOf(key) === index) // Remove duplicates
@@ -43,7 +44,14 @@ interface DesignPanelProps {
   resetButton: () => void;
   onRandomize: () => void;
   onUpdateShape: (
-    value: "circle" | "square" | "triangle" | "hexagon" | "star" | "custom",
+    value:
+      | "circle"
+      | "square"
+      | "triangle"
+      | "hexagon"
+      | "star"
+      | "custom"
+      | string,
   ) => void;
   onUpdateDensity: (value: number) => void;
   onToggleDarkMode: (value: boolean) => void;
@@ -103,28 +111,21 @@ export function DesignPanel({
               <div className="space-y-2">
                 <Label className="text-foreground">Select Shape</Label>
                 <div className="flex flex-wrap gap-2">
-                  {["circle", "square", "triangle", "hexagon", "star"].map(
-                    (s) => (
-                      <Button
-                        key={s}
-                        size="icon"
-                        variant={shape === s ? "default" : "ghost"}
-                        onClick={() =>
-                          onUpdateShape(
-                            s as
-                              | "circle"
-                              | "square"
-                              | "triangle"
-                              | "hexagon"
-                              | "star",
-                          )
-                        }
-                      >
-                        {shapeIcons[s as keyof typeof DshapeIcons]}
-                      </Button>
-                    ),
-                  )}
+                  {Object.entries(shapeIcons).map(([key, icon]) => (
+                    <Button
+                      key={key}
+                      size="icon"
+                      variant={shape === key ? "default" : "ghost"}
+                      onClick={() => onUpdateShape(key)}
+                    >
+                      {icon}
+                    </Button>
+                  ))}
                 </div>
+              </div>
+            </AccordionContent>
+            <AccordionContent>
+              <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Label className="text-foreground ">Select</Label>
                   <select
