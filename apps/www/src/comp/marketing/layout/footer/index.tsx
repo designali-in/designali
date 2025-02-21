@@ -58,7 +58,7 @@ const navigation = {
           items: [
             { name: "Graphic", href: "/graphic" },
             { name: "3D Icons", href: "/products/3dicons" },
-            { name: "Colors", href: "/products/colors" },
+            { name: "Colors", href: "/products/colors/generate" },
           ],
         },
         {

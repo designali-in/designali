@@ -132,7 +132,7 @@ const data = {
         },
         {
           title: "Colors",
-          url: "/colors",
+          url: "/products/colors/generate",
         },
       ],
     },
