@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useChat } from "ai/react";
+import { useChat } from "@ai-sdk/react";
 
 import "@/styles/text.css";
 
@@ -24,7 +24,8 @@ import { Icons } from "../icons";
 
 export function Chatbot() {
   const router = useRouter();
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+  const { messages, input, handleInputChange, handleSubmit, isLoading } =
+    useChat();
   const [hovered, setHovered] = React.useState(false);
 
   return (

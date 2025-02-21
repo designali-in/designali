@@ -18,6 +18,8 @@
     "with-env": "dotenv -e .env --"
   },
   "dependencies": {
+    "@ai-sdk/google": "^1.1.16",
+    "@ai-sdk/openai": "^1.1.13",
     "@ai-sdk/replicate": "^0.1.0",
     "@auth/prisma-adapter": "^2.4.1",
     "@emotion/is-prop-valid": "^1.2.2",
@@ -73,7 +75,7 @@
     "@vercel/functions": "^1.4.0",
     "@vercel/og": "^0.5.20",
     "@vercel/speed-insights": "^1.0.12",
-    "ai": "^4.1.0",
+    "ai": "^4.1.41",
     "axios": "^1.7.7",
     "bcrypt-ts-edge": "^3.0.1",
     "canvas-confetti": "^1.9.3",
@@ -162,7 +164,7 @@
     "use-debounce": "^10.0.1",
     "use-mask-input": "^3.4.2",
     "vaul": "^0.7.7",
-    "zod": "^3.23.4",
+    "zod": "^3.23.8",
     "zustand": "^4.4.5"
   },
   "devDependencies": {

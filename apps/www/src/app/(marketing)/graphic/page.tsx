@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import AdBanner from "@/comp/AdBanner";
 import { ImagePlayground } from "@/comp/ai/ImagePlayground";
@@ -86,136 +87,138 @@ const BrowsePage = async () => {
   });
 
   return (
-    <div className="mx-auto my-36 max-w-7xl px-6 xl:px-0">
-      <div className="grid items-center justify-center px-8 pb-1 text-center">
-        <div className="grid justify-center">
-          <p className=" text-ali mb-4  text-center text-xl">
-            Download Free Graphics
+    <div className="relative">
+      <div className="mx-auto my-36 max-w-7xl px-6 xl:px-0">
+        <div className="grid items-center justify-center px-8 pb-1 text-center">
+          <div className="grid justify-center">
+            <p className=" text-ali mb-4  text-center text-xl">
+              Download Free Graphics
+            </p>
+            <h3
+              className={cn(
+                Avegra.className,
+                "z-20  justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl",
+              )}
+            >
+              Open File for <span className="text-ali"> Everyone</span>
+            </h3>
+          </div>
+          <p className=" mx-auto max-w-xl text-xs">
+            Discover the essence of creativity in our exquisite collection of
+            top-tier abstract design assets. Each piece is a blend of beauty and
+            utility, perfect for elevating any project
           </p>
-          <h3
-            className={cn(
-              Avegra.className,
-              "z-20  justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl",
+
+          <div className="my-10 flex flex-wrap items-center justify-center gap-2">
+            {session ? (
+              <Link href="/graphic/upload">
+                <Button size="lg">Upload New Asset</Button>
+              </Link>
+            ) : (
+              <Link href="/login">
+                <Button size="lg">Upload New Asset</Button>
+              </Link>
             )}
-          >
-            Open File for <span className="text-ali"> Everyone</span>
-          </h3>
-        </div>
-        <p className=" mx-auto max-w-xl text-xs">
-          Discover the essence of creativity in our exquisite collection of
-          top-tier abstract design assets. Each piece is a blend of beauty and
-          utility, perfect for elevating any project
-        </p>
-
-        <div className="my-10 flex flex-wrap items-center justify-center gap-2">
-          {session ? (
-            <Link href="/graphic/upload">
-              <Button size="lg">Upload New Asset</Button>
+            <Link href={"/pricing"}>
+              <Button variant="outline" size="lg">
+                Get Unlimited Access
+              </Button>
             </Link>
-          ) : (
-            <Link href="/login">
-              <Button size="lg">Upload New Asset</Button>
-            </Link>
-          )}
-          <Link href={"/pricing"}>
-            <Button variant="outline" size="lg">
-              Get Unlimited Access
-            </Button>
-          </Link>
-          <p className="text-left text-xs">
-            Full access <br /> from ₹250/m
-          </p>
+            <p className="text-left text-xs">
+              Full access <br /> from ₹250/m
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
         <div>
-          <Tabs
-            defaultValue="tab-1"
-            className="items-center justify-center text-center"
-          >
-            <TabsList className="w-full md:w-auto">
-              <ScrollArea className="whitespace-nowrap">
-                <div className="space-x-2">
-                  <TabsTrigger value="tab-1">
-                    Graphics
-                    <span className="text-ali px-1 font-semibold">
-                      {assets.length}
-                    </span>
-                  </TabsTrigger>
+          <div>
+            <Tabs
+              defaultValue="tab-1"
+              className="items-center justify-center text-center"
+            >
+              <TabsList className="w-full md:w-auto">
+                <ScrollArea className="whitespace-nowrap">
+                  <div className="space-x-2">
+                    <TabsTrigger value="tab-1">
+                      Graphics
+                      <span className="text-ali px-1 font-semibold">
+                        {assets.length}
+                      </span>
+                    </TabsTrigger>
 
-                  <TabsTrigger value="tab-2">
-                    Pro
-                    <span className="text-ali pl-1 font-semibold">
-                      {topTenAnimes.length}
-                    </span>
-                  </TabsTrigger>
-                  <TabsTrigger value="tab-3">
-                    Designers
-                    <span className="text-ali px-1 font-semibold">
-                      {users.length}
-                    </span>
-                    <Badge size="xs" variant="green">
-                      New
-                    </Badge>
-                  </TabsTrigger>
-                  <TabsTrigger value="tab-4">
-                    <span>AI-Magic</span>
-                    <DIcons.AiBeautify className="ml-1 mr-1 h-4 w-4" />
-                    <Badge size="xs" variant="green">
-                      New
-                    </Badge>
-                  </TabsTrigger>
-                  <TabsTrigger value="tab-6">
-                    <p>Logos</p>
-                    {""}
-                    <span className="ml-1 font-thin">by svgl</span>
-                    <span className="text-ali px-1 font-semibold">476</span>
-                    <Badge size="xs" variant="green">
-                      New
-                    </Badge>
-                  </TabsTrigger>
-                  <TabsTrigger value="tab-7">
-                    <p>Tools</p>
-                  </TabsTrigger>
+                    <TabsTrigger value="tab-2">
+                      Pro
+                      <span className="text-ali pl-1 font-semibold">
+                        {topTenAnimes.length}
+                      </span>
+                    </TabsTrigger>
+                    <TabsTrigger value="tab-3">
+                      Designers
+                      <span className="text-ali px-1 font-semibold">
+                        {users.length}
+                      </span>
+                      <Badge size="xs" variant="green">
+                        New
+                      </Badge>
+                    </TabsTrigger>
+                    <TabsTrigger value="tab-4">
+                      <span>AI-Magic</span>
+                      <DIcons.AiBeautify className="ml-1 mr-1 h-4 w-4" />
+                      <Badge size="xs" variant="green">
+                        New
+                      </Badge>
+                    </TabsTrigger>
+                    <TabsTrigger value="tab-6">
+                      <p>Logos</p>
+                      {""}
+                      <span className="ml-1 font-thin">by svgl</span>
+                      <span className="text-ali px-1 font-semibold">476</span>
+                      <Badge size="xs" variant="green">
+                        New
+                      </Badge>
+                    </TabsTrigger>
+                    <TabsTrigger value="tab-7">
+                      <p>Tools</p>
+                    </TabsTrigger>
+                  </div>
+                  <ScrollBar orientation="horizontal" />
+                </ScrollArea>
+              </TabsList>
+              <TabsContent value="tab-1">
+                <AssetGrid
+                  assets={formattedAssets}
+                  availableTags={availableTags}
+                />
+              </TabsContent>
+
+              <TabsContent value="tab-2">
+                <div className="mt-3">
+                  <BrowseClient initialAnimes={topTenAnimes} />
                 </div>
-                <ScrollBar orientation="horizontal" />
-              </ScrollArea>
-            </TabsList>
-            <TabsContent value="tab-1">
-              <AssetGrid
-                assets={formattedAssets}
-                availableTags={availableTags}
-              />
-            </TabsContent>
-
-            <TabsContent value="tab-2">
-              <div className="mt-3">
-                <BrowseClient initialAnimes={topTenAnimes} />
-              </div>
-            </TabsContent>
-            <TabsContent value="tab-3">
-              <AssetUsers users={formattedUsers} />
-            </TabsContent>
-            <TabsContent value="tab-4">
-              <ImagePlayground suggestions={getRandomDesignSuggestions()} />
-            </TabsContent>
-            <TabsContent value="tab-6">
-              <LogoPage />
-            </TabsContent>
-            <TabsContent value="tab-7">
-              <ToolsPage />
-            </TabsContent>
-            <TabsContent value="tab-8"></TabsContent>
-          </Tabs>
+              </TabsContent>
+              <TabsContent value="tab-3">
+                <AssetUsers users={formattedUsers} />
+              </TabsContent>
+              <TabsContent value="tab-4">
+                <ImagePlayground suggestions={getRandomDesignSuggestions()} />
+              </TabsContent>
+              <TabsContent value="tab-6">
+                <LogoPage />
+              </TabsContent>
+              <TabsContent value="tab-7">
+                <ToolsPage />
+              </TabsContent>
+              <TabsContent value="tab-8"></TabsContent>
+            </Tabs>
+          </div>
         </div>
-      </div>
 
-      <div className=" mx-auto mt-20 max-w-7xl px-6 xl:px-0">
-        <AdBanner
-          dataAdFormat="auto"
-          dataFullWidthResponsive={true}
-          dataAdSlot="5790922307"
-        />
+        <div className=" mx-auto mt-20 max-w-7xl px-6 xl:px-0">
+          <AdBanner
+            dataAdFormat="auto"
+            dataFullWidthResponsive={true}
+            dataAdSlot="5790922307"
+          />
+        </div>
       </div>
     </div>
   );
