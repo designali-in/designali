@@ -16,16 +16,23 @@ export function CardsDemo() {
       >
         Open Source. <span className="text-ali"> Open Code.</span>
       </h3>
+      <p className="mx-auto max-w-3xl text-center text-sm">
+        Beautifully designed components that you can copy and paste into your
+        apps. Accessible. Customizable. Open Source.
+      </p>
       <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         <ComponentPreview name="dot-pattern-01" />
         <ComponentPreview name="macbook-pro-1" />
         <ComponentPreview name="grid-pattern-01" />
         <ComponentPreview name="accordion-01" />
         <ComponentPreview name="tooltip-07" />
-        <ComponentPreview name="dialog-20" />
+        <ComponentPreview name="slider-18" />
+        <ComponentPreview name="ripple-01" />
+        <ComponentPreview name="mac-1" />
+        <ComponentPreview name="retro-grid-01" />
       </div>
       <Link href={"/components"} className="flex justify-center">
-        <Button>View all Code</Button>
+        <Button>View all Components</Button>
       </Link>
     </div>
   );
