@@ -109,7 +109,7 @@ export function Graaadients() {
         <Link href="/products/dshapes" className="rounded-3xl border">
           <CardStack items={DSHAPES} />
         </Link>
-        <Link href="/products/colors" className="rounded-3xl border">
+        <Link href="/products/colors/generate" className="rounded-3xl border">
           <CardStack items={COLORS} />
         </Link>
         <Link href="/products/easings" className="rounded-3xl border">

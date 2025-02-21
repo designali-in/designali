@@ -2,6 +2,8 @@ import crypto from "crypto";
 import type { ComboBoxItemType } from "@/types";
 import type { ClassValue } from "clsx";
 import { clsx } from "clsx";
+import { colord, extend } from "colord";
+import a11yPlugin from "colord/plugins/a11y";
 import { formatDistanceToNowStrict, intervalToDuration } from "date-fns";
 import locale from "date-fns/locale/en-IN";
 import ms from "ms";
@@ -13,6 +15,14 @@ import { env } from "../env";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+extend([a11yPlugin]);
+
+export const handleColorTextClass = (color: string) => {
+  const luminance = colord(color).luminance();
+
+  return luminance < 0.3 ? "white" : "black";
+};
 
 export function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`;
