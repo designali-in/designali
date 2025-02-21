@@ -207,7 +207,6 @@ const BrowsePage = async () => {
               <TabsContent value="tab-7">
                 <ToolsPage />
               </TabsContent>
-              <TabsContent value="tab-8"></TabsContent>
             </Tabs>
           </div>
         </div>

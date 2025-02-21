@@ -369,6 +369,9 @@ importers:
       emblor:
         specifier: ^1.4.7
         version: 1.4.7(@types/react-dom@18.3.2)(@types/react@18.3.14)(postcss@8.4.49)(react-dom@18.2.0)(react@18.2.0)(typescript@5.7.2)
+      extract-colors:
+        specifier: ^4.0.2
+        version: 4.1.1
       fabric:
         specifier: 5.3.0-browser
         version: 5.3.0-browser
@@ -14909,6 +14912,10 @@ packages:
       iconv-lite: 0.4.24
       tmp: 0.0.33
     dev: true
+
+  /extract-colors@4.1.1:
+    resolution: {integrity: sha512-Gi56cSrlCWr1DnX+0hN6c12auiAtQwyq5SI1GXb/jxmKKADGbshOYvfOq8YPCicBi9LdBLJstCUu0r1HzjlNXg==}
+    dev: false
 
   /extract-zip@2.0.1:
     resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}

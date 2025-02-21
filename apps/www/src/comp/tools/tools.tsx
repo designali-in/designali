@@ -7,6 +7,8 @@ import { SVGTool } from "@/src/comp/tools/svg-tool";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import ImageColorPallate from "./color";
+
 const ToolsPage = () => {
   return (
     <div className="mt-3">
@@ -19,6 +21,12 @@ const ToolsPage = () => {
                 className="relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent"
               >
                 Image Converter
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab-6"
+                className="relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent"
+              >
+                Image Color
               </TabsTrigger>
               <TabsTrigger
                 value="tab-2"
@@ -49,6 +57,9 @@ const ToolsPage = () => {
         </ScrollArea>
         <TabsContent value="tab-1">
           <AIConverter />
+        </TabsContent>
+        <TabsContent value="tab-6">
+          <ImageColorPallate />
         </TabsContent>
         <TabsContent value="tab-2">
           <RoundedTool />
