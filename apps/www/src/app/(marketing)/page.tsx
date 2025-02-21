@@ -10,6 +10,7 @@ import { NewsletterSection } from "@/src/comp/common/newsletter-section";
 import AnimeCardSkeleton from "@/src/comp/dashboard/admin/agency/AnimeCardSkeleton";
 import { DBentoGrid } from "@/src/comp/marketing/home/bento-grid";
 import { Quote } from "@/src/comp/marketing/home/quote";
+import { CardsDemo } from "@/src/comp/mdx/component-demos";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
       <div className="px-6 xl:px-0">
         <InstagramFeed />
       </div>
+      <CardsDemo />
       <div className=" mx-auto max-w-7xl  px-6  xl:px-0">
         <AdBanner
           dataAdFormat="auto"
@@ -31,10 +33,11 @@ export default function HomePage() {
           dataAdSlot="5723796123"
         />
       </div>
-      <NewsletterSection />
+
       <div className="px-6 xl:px-0">
         <Connect />
       </div>
+      <NewsletterSection />
       <Image
         width={1512}
         height={550}
