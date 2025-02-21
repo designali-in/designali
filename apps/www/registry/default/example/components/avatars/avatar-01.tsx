@@ -3,8 +3,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function AvatarDemo() {
   return (
     <Avatar>
-      <AvatarImage src="./avatar-80-07.jpg" alt="Kelly King" />
-      <AvatarFallback>KK</AvatarFallback>
+      <AvatarImage src="/avatars/avatar_1.jpg" alt="Ali Imam" />
+      <AvatarFallback>AI</AvatarFallback>
     </Avatar>
   );
 }

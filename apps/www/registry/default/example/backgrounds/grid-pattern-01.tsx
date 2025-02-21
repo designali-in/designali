@@ -11,7 +11,7 @@ export default function GridPattern01() {
         Grid Pattern
       </p>
       <GridPattern
-        strokeDasharray="2"
+        strokeDasharray="1"
         width={100}
         height={10}
         className={cn(

@@ -1,15 +1,14 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
-import { CircleAlert } from "lucide-react";
+import { AlertCircle } from "dicons";
 
 export default function AlertDemo() {
   return (
-    <div className="rounded-lg border border-border px-4 py-3">
+    <div className="rounded-lg border border-dotted border-border px-4 py-3">
       <p className="text-sm">
-        <CircleAlert
-          className="-mt-0.5 me-3 inline-flex text-red-500"
-          size={16}
-          strokeWidth={2}
+        <AlertCircle
+          className="-mt-0.5 me-3 inline-flex h-5 w-5 text-red-500"
+          strokeWidth={1}
           aria-hidden="true"
         />
         An error occurred!

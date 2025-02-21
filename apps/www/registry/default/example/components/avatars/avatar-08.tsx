@@ -4,10 +4,10 @@ export default function AvatarDemo() {
   return (
     <div className="relative">
       <Avatar>
-        <AvatarImage src="./avatar-80-07.jpg" alt="Kelly King" />
-        <AvatarFallback>KK</AvatarFallback>
+        <AvatarImage src="/avatars/avatar_6.jpg" alt="Ali Imam" />
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
-      <span className="absolute -end-1 -top-1">
+      <span className="absolute -end-1.5 -top-1.5">
         <span className="sr-only">Verified</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

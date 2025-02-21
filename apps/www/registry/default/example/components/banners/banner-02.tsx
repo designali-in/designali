@@ -1,18 +1,17 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
-import { Eclipse } from "lucide-react";
+import { DIcons } from "dicons";
 
 export default function BannerDemo() {
   return (
     <div className="dark bg-muted px-4 py-3 text-foreground">
       <p className="text-center text-sm">
-        <Eclipse
-          className="-mt-0.5 me-3 inline-flex opacity-60"
-          size={16}
-          strokeWidth={2}
+        <DIcons.Designali
+          className="-mt-0.5 me-3 inline-flex h-4 w-4 opacity-60"
           aria-hidden="true"
         />
-        Get the most out of your app with real-time updates and analytics{" "}
+        Enhance your design workflow with real-time updates and in-depth
+        analytics. 🚀
         <span className="text-muted-foreground">·</span>{" "}
         <a href="#" className="font-medium underline hover:no-underline">
           Upgrade

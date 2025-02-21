@@ -8,7 +8,7 @@ export default function BannerDemo() {
       <p className="flex justify-center text-sm">
         <a href="#" className="group">
           <span className="me-1 text-base leading-none">✨</span>
-          Introducing transactional and marketing emails
+          Introducing Gradient Collections for Every Mood and Theme
           <ArrowRight
             className="-mt-0.5 ms-2 inline-flex opacity-60 transition-transform group-hover:translate-x-0.5"
             size={16}

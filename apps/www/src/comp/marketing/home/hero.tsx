@@ -65,7 +65,10 @@ const Hero = () => {
                   strokeWidth={4}
                   className="text-ali absolute -bottom-5 -right-5 h-10 w-10"
                 />
-                Your complete platform for the Design.
+                <span>
+                  Your complete platform for the{" "}
+                  <span className="text-ali">Design.</span>
+                </span>
               </h1>
               <div className="flex items-center justify-center gap-1">
                 <span className="relative flex h-3 w-3 items-center justify-center">

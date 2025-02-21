@@ -106,10 +106,9 @@ export default async function DocPage({ params }: DesignPageProps) {
       </aside>
 
       <div className="hidden text-sm xl:block">
-        <div className="sticky top-24 h-full overflow-y-auto border-l border-slate-400 px-8 pt-12 dark:border-slate-600">
+        <div className="sticky top-24 h-full overflow-y-auto border-l border-dotted border-slate-400 px-8 pt-12 dark:border-slate-600">
           <div className="no-scrollbar h-full overflow-auto pb-10">
             <DashboardTableOfContents toc={toc} />
-            <ThemeCustomizer />
           </div>
         </div>
       </div>
