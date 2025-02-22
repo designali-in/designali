@@ -146,7 +146,7 @@ export function AssetGrid({
                     "focused group h-full overflow-hidden rounded-sm",
                   )}
                 >
-                  <CardHeader className="border-b p-0">
+                  <CardHeader className="border-b border-dotted p-0">
                     <AspectRatio className="overflow-hidden">
                       <Link href={`/graphic/assets/${asset.id}`}>
                         {urls.length > 1 ? (

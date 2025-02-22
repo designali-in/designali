@@ -61,7 +61,7 @@ export const Connect: React.FC = () => {
           data-aos="fade-down"
         >
           <HighlighterItem className="rounded-3xl p-6">
-            <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
+            <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-dotted  bg-white  dark:bg-black">
               <Particles
                 className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                 quantity={200}
@@ -77,25 +77,25 @@ export const Connect: React.FC = () => {
                     <Logo className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2" />
                     <div
                       id="next-js"
-                      className="absolute bottom-12 left-14 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute bottom-12 left-14 rounded-3xl border border-dotted bg-slate-200 px-2 py-1.5 text-xs opacity-50  dark:bg-slate-800"
                     >
                       UI-UX
                     </div>
                     <div
                       id="react-js"
-                      className="absolute left-2 top-20 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute left-2 top-20 rounded-3xl border border-dotted bg-slate-200 px-2 py-1.5 text-xs opacity-50  dark:bg-slate-800"
                     >
                       Graphic Design
                     </div>
                     <div
                       id="typescript"
-                      className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute bottom-20 right-1 rounded-3xl border border-dotted bg-slate-200 px-2 py-1.5 text-xs opacity-50  dark:bg-slate-800"
                     >
                       Web Application
                     </div>
                     <div
                       id="javascript"
-                      className="absolute right-12 top-10 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute right-12 top-10 rounded-3xl border border-dotted bg-slate-200 px-2 py-1.5 text-xs opacity-50  dark:bg-slate-800"
                     >
                       Branding
                     </div>

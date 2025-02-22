@@ -24,7 +24,7 @@ const AdBanner = ({
   }, []);
 
   return (
-    <div className="rounded-xl border">
+    <div className="rounded-xl border border-dotted">
       <ins
         className="adsbygoogle m-4"
         style={{ display: "block" }}

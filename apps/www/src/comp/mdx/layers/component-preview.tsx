@@ -74,7 +74,7 @@ export function ComponentPreview({
 
   if (type === "block") {
     return (
-      <div className="relative aspect-[4/2.5] w-full overflow-hidden rounded-md border">
+      <div className="relative aspect-[4/2.5] w-full overflow-hidden rounded-md border border-dotted">
         <Image
           src={`/images/blocks/${name}.png`}
           alt={name}
@@ -111,23 +111,23 @@ export function ComponentPreview({
       <Tabs defaultValue="preview" className="relative  w-full">
         <div className="flex items-center justify-between pb-2">
           {!hideCode && (
-            <TabsList className="w-full justify-between rounded-none border-b bg-transparent">
+            <TabsList className="w-full justify-between rounded-none border-b border-dotted bg-transparent">
               <div>
                 <TabsTrigger
                   value="preview"
-                  className="relative h-10 rounded-none border-b-2 border-b-transparent   px-3   font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="relative h-10 rounded-none  border-b-2 border-dotted border-b-transparent   px-3   font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Eye className="h-4 w-4" />
                 </TabsTrigger>
                 <TabsTrigger
                   value="code"
-                  className="relative h-10 rounded-none border-b-2 border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="relative h-10 rounded-none border-b-2 border-dotted border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Code className="h-4 w-4" />
                 </TabsTrigger>
                 <TabsTrigger
                   value="install"
-                  className="relative h-10 rounded-none border-b-2 border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="relative h-10 rounded-none border-b-2 border-dotted border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Settings className="h-4 w-4" />
                 </TabsTrigger>
@@ -146,7 +146,10 @@ export function ComponentPreview({
             </TabsList>
           )}
         </div>
-        <TabsContent value="preview" className="relative rounded-xl border">
+        <TabsContent
+          value="preview"
+          className="relative rounded-xl border border-dotted"
+        >
           <ThemeWrapper>
             <div
               className={cn(

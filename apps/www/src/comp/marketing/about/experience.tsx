@@ -119,7 +119,7 @@ export function Experience() {
                     data-aos="fade-down"
                   >
                     <HighlighterItem className="rounded-3xl">
-                      <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100/50 dark:border-slate-800 dark:bg-black">
+                      <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-dotted  bg-slate-100/50  dark:bg-black">
                         <Particles
                           className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                           quantity={50}

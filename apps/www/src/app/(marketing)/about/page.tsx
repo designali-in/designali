@@ -2,28 +2,27 @@
 
 import { Suspense } from "react";
 import Image from "next/image";
-import About from "@/comp/marketing/about/about";
-import { Experience } from "@/comp/marketing/about/experience"; 
 import { Connect } from "@/comp/common/connect";
 import ImageZoom from "@/comp/common/image-zoom";
-import Logos from "@/comp/common/logos"; 
+import Logos from "@/comp/common/logos";
+import About from "@/comp/marketing/about/about";
+import { Experience } from "@/comp/marketing/about/experience";
+import { Items } from "@/src/comp/marketing/items";
 import { BackgroundBeams } from "@/src/comp/uis/background-beams";
- 
+import { cn } from "@/src/lib/utils";
+import { Plus } from "lucide-react";
 
 import { Avegra } from "../../fonts";
-import { Plus } from "lucide-react";
-import { cn } from "@/src/lib/utils";
-import { Items } from "@/src/comp/marketing/items";
 
 export default function HomePage() {
   return (
     <Suspense>
       <main className="px-6 xl:px-0">
         <div className="mx-auto mt-28 max-w-3xl md:mt-40 md:max-w-7xl">
-          <p className="text-center tracking-widest text-ali">FOUNDER</p>
+          <p className="text-ali text-center tracking-widest">FOUNDER</p>
 
           <BackgroundBeams>
-            <div className="relative mx-auto mb-20 mt-10 flex h-[336px] max-w-[250px] flex-col items-start border border-slate-100 p-4 dark:border-slate-900 md:h-[28rem] md:max-w-sm">
+            <div className="relative mx-auto mb-20 mt-10 flex h-[336px] max-w-[250px] flex-col items-start border border-dotted p-4 md:h-[28rem] md:max-w-sm">
               <Plus
                 strokeWidth={0.5}
                 className="text-aired absolute -left-4 -top-4 h-8 w-8"
@@ -45,8 +44,8 @@ export default function HomePage() {
                 <Image
                   src="/ali.jpg"
                   alt="Your Image"
-                  height={1000}
-                  width={1000}
+                  height={700}
+                  width={700}
                   className="h-[300px] object-cover md:h-[404px]"
                 />
                 <div className="relative -mt-14 bg-gradient-to-b from-black/0 to-black text-white md:-mt-24">
@@ -64,7 +63,7 @@ export default function HomePage() {
           </BackgroundBeams>
           <div className="mx-auto max-w-3xl md:max-w-7xl">
             <About />
-             
+
             <Experience />
 
             <Items />

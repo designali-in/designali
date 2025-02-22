@@ -83,7 +83,7 @@ export const Items = () => {
               target={target}
               rel="noopener noreferrer"
               href={link}
-              className="group relative overflow-hidden rounded-xl border border-slate-200 p-4 transition-colors duration-150 hover:bg-accent dark:border-slate-800"
+              className="group relative overflow-hidden rounded-xl border border-dotted  p-4 transition-colors duration-150 hover:bg-accent "
             >
               <div className="flex flex-col items-center justify-center gap-2 transition-transform duration-300 group-hover:-translate-y-24 group-focus:-translate-y-24">
                 <div className="flex items-center gap-2 text-3xl font-bold text-foreground">
@@ -175,7 +175,7 @@ export const HomeItems = () => {
               target={target}
               rel="noopener noreferrer"
               href={link}
-              className="w-full rounded-xl border p-6 transition hover:border-slate-300 dark:hover:border-slate-700 md:py-10"
+              className="w-full rounded-xl border border-dotted p-6 transition  md:py-10"
             >
               <div className="grid w-full items-center justify-center gap-2">
                 <div className="grid items-center gap-2">

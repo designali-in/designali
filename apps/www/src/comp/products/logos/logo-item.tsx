@@ -79,7 +79,7 @@ export function LogoItem({ logo, onCategoryClick }: LogoItemProps) {
   const hasMoreCategories = additionalCategories.length > 0;
 
   return (
-    <div className="group flex flex-col items-center justify-center rounded-xl border border-slate-200 p-3 transition-colors duration-100 hover:bg-slate-100/80 dark:border-slate-800 dark:hover:bg-slate-800/20">
+    <div className="group flex flex-col items-center justify-center rounded-xl border border-dotted p-3 transition-colors duration-100 hover:bg-slate-100/80  dark:hover:bg-slate-800/20">
       <Image
         src={logoUrl}
         alt={logo.title}

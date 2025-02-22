@@ -35,12 +35,12 @@ const skills = [
   { skill: "Brand Guidelines" },
 ];
 
-const Underline = `hover:-translate-y-1 border border-slate-100 dark:border-slate-900 rounded-xl p-2.5 transition-transform text-slate-600 hover:border-slate-200 dark:hover:border-slate-800 hover:text-black hover:dark:text-white dark:text-slate-400 `;
+const Underline = `hover:-translate-y-1 border border-dotted  rounded-xl p-2.5 transition-transform text-slate-600  hover:text-black hover:dark:text-white dark:text-slate-400 `;
 
 const About = () => {
   return (
     <section id="about">
-      <div className="relative h-full w-full border border-slate-200 py-8 dark:border-slate-800">
+      <div className="relative h-full w-full border border-dotted">
         <div className="bg-ali absolute -left-1.5 -top-1.5 h-3 w-3 text-white" />
         <div className="bg-ali absolute -bottom-1.5 -left-1.5 h-3 w-3 text-white" />
         <div className="bg-ali absolute -right-1.5 -top-1.5 h-3 w-3 text-white" />
@@ -222,7 +222,7 @@ const About = () => {
                   return (
                     <p
                       key={idx}
-                      className="m-1 rounded border border-slate-200 px-2 py-1 text-xs text-slate-600 dark:border-slate-800 dark:text-slate-400"
+                      className="m-1 rounded border border-dotted  px-2 py-1 text-xs text-slate-600   dark:text-slate-400"
                     >
                       {item.skill}
                     </p>
@@ -244,7 +244,7 @@ const About = () => {
             </div>
             <div className="mt-10">
               <div className="mx-auto max-w-7xl">
-                <dl className="grid grid-cols-1 gap-y-10 text-center lg:grid-cols-3">
+                <dl className="mb-10 grid grid-cols-1 gap-y-10 text-center lg:grid-cols-3">
                   <div className="mx-auto flex max-w-xs flex-col gap-y-2">
                     <dt className="ml-6 text-sm font-semibold uppercase tracking-[.3em] text-slate-400">
                       <p className="">Projects</p>

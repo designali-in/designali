@@ -94,7 +94,7 @@ export function FilterChips({
           ? Array.from({ length: 12 }).map((_, i) => (
               <Skeleton
                 key={i}
-                className={`h-8 rounded-full border border-input ${skeletonWidths[i % skeletonWidths.length]}`}
+                className={`h-8 rounded-full border border-dotted border-input ${skeletonWidths[i % skeletonWidths.length]}`}
               />
             ))
           : logoCategories?.map((category) => (

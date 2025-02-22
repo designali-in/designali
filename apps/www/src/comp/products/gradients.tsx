@@ -17,84 +17,84 @@ export interface Experience {
 export const Service: Experience[] = [
   {
     post: "Gold",
-    link: "https://drive.google.com/file/d/1mG024T473Ue9kqY2gyEmELRGNgaYTUSN/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=9G1ckur8LVQqeuHrBsH4dtOTgSseoXWQd3InhTvXRV8=doB",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGRjjKg57nbEl79Zda8xc3pmMgjCwikuUPFRBv",
     company: "200 Gold Photoshop Gradients",
   },
   {
     post: "Silver",
-    link: "https://drive.google.com/file/d/1_zQs5VU1jg6WIRsg2YekJI-n5Eyabnv0/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=Y2VgeGea6TdMY2Hr64ktLAy784Nk7dkjndNTMGXcbso=MZA",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGsUIozeQRDFlU8LCBxuhMQiVS5K7TydEmZcWs",
     company: "200 Silver Photoshop Gradients",
   },
   {
     post: "Blue",
-    link: "https://drive.google.com/file/d/10Ei6pv3cPP8zEKoNDbeWCpBNDMk7---8/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=WtrufgMORHgLiCPoHMlRd7XLA0iATiRYS73o8mt89VQ=b3F",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGXtk0Bs4VMuID6TNv9xOWHcrdQRwefaFJtK5U",
     company: "200 Blue Photoshop Gradients",
   },
   {
     post: "Red",
-    link: "https://drive.google.com/file/d/1SHqc9bF6sMd2y4AqVEafdjxqDa4kwHkp/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=h814RWghBNeiYn5tqW4bdUxFhOKjtwzCMuk5QFyrufA=o8v",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGrkq5plYaOLol2B6SEZPybCFXivJUNhsgcM35",
     company: "200 Red Photoshop Gradients",
   },
   {
     post: "Green",
-    link: "https://drive.google.com/file/d/1DTItgfa3ns-ydWJR7L8Ws-IReML8dwxO/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=qvyCTtpqtYfK2bWN_akumn6Yb-H66IGs57cqYrhb1Zo=Oe5",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGFRv6f61GEaGcsyQiU8gmfnWudpMk3AORNtCv",
     company: "200 Green Photoshop Gradients",
   },
   {
     post: "Pink",
-    link: "https://drive.google.com/file/d/15YkfWuosI3HC9sMRUJOYmR7CLbWxJEX6/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=Q83RiX69UnOPEo3SqkRNxqvrSVONYL2GK2nAsx8MkXs=hkW",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGfpQZb3ET6nHCtWkPr08Dx1LNXvYasVqFZwcG",
     company: "200 Pink Photoshop Gradients",
   },
   {
     post: "Chrome",
-    link: "https://drive.google.com/file/d/1H17_mXhKZIbyz6ggBwiSsVbAOQhRwriK/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=_cIyWqh5KT7M3Mvg9wgt6KUBzymMSeceGQYDJpRXMa0=b3F",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGEbm1UjcHdzx3c45YS0Msm2RpOeoJLjE9thGC",
     company: "200 Chrome Photoshop Gradients",
   },
   {
     post: "Orange",
-    link: "https://drive.google.com/file/d/1hHnKjXS641p5X8J3thOsZXjvtjKgdRzM/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=btn-r6Z88qMtI9L2Squ2IeM0k8r14Lle3yKmgym5Xn8=8BX",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGzl2wF3Ktf1nW2SsqNgIoCeG7QEiHOwhK5daJ",
     company: "200 Orange Photoshop Gradients",
   },
   {
     post: "Purple",
-    link: "https://drive.google.com/file/d/1K9tH-yIigxCNJRyMKWBs3M8Qcvv9yaj2/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=zQJSNpxScfCj-wupG5LrXAc8Ao7VFxsUUzzAluTKqv4=8BX",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGFZfSO2GEaGcsyQiU8gmfnWudpMk3AORNtCvV",
     company: "200 Purple Photoshop Gradients",
   },
   {
     post: "Holographic",
-    link: "https://drive.google.com/file/d/1AjW0g_sWS1mTGYQGiN-879OtUUfAPvXo/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=IYzHb8WKHgtk1U50HDUqA32lA3n48HqlAKHkyyKnwxc=MZA",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGSmLbHHNwVE9HB021vzYNnCfDSQAKctrdWP3L",
     company: "200 Holographic Photoshop Gradients",
   },
   {
     post: "Yellow",
-    link: "https://drive.google.com/file/d/1_EP8NaYAEAXcbxB5QvoQW6NVzW8bpmJj/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=iI2ZCyCEjtwd1tsMQjv-kvy6sURpUHbDNhXVJ3MYcPc=b3F",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGgvFvTC24FQS2fzYxT6N7alGKJihEI3cuVHLO",
     company: "200 Yellow Photoshop Gradients",
   },
   {
     post: "Brown",
-    link: "https://drive.google.com/file/d/1klDzzxSlKCxruLj7Ko7ln-vfDHMX38_X/view?usp=sharing",
+    link: "https://www.jiocloud.com/l/?u=Vqvx6z5PLzwTZUnS1ABjp24ZGGjZ9ksF_Piy1OMCmLc=b3F",
     comlogo:
       "https://utfs.io/f/9E7Q8MSIBADGI0OLgNpt78a2oTkeXSdpDBFJ9hyv5AWqYNGf",
     company: "200 Brown Photoshop Gradients",
