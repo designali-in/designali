@@ -45,7 +45,8 @@ export function Menu() {
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/profile" title="Profile">
-                  World's Top Designers profile list.
+                  World's Top Designers profile list. Download the Assets from
+                  users.
                 </ListItem>
                 <ListItem href="/pricing" title="Pricing">
                   Make your business shine with unlimited* creativity.
@@ -164,7 +165,7 @@ export function Menu() {
                   <NavigationMenuLink>
                     <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary p-6  no-underline outline-none hover:bg-accent focus:shadow-md"
-                      href="/products/colors"
+                      href="/products/colors/generate"
                     >
                       <DIcons.Flower2 strokeWidth={1} className="h-8 w-8" />
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">

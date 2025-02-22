@@ -14,8 +14,8 @@ const Footer = () => {
   const { setTheme } = useTheme();
 
   return (
-    <div className="flex justify-center">
-      <div className="rounded-full border border-slate-100 p-1 dark:border-slate-900">
+    <div className="flex items-center justify-center">
+      <div className="flex items-center rounded-full border border-dotted">
         <button
           onClick={() => setTheme("light")}
           className="bg-ali mr-3 rounded-full p-2 text-white dark:bg-background dark:text-slate-400"
@@ -25,7 +25,7 @@ const Footer = () => {
         </button>
 
         <button type="button" onClick={handleScrollTop}>
-          <DIcons.ArrowUp className="h-5 w-5" />
+          <DIcons.ArrowUp className="h-3 w-3" />
           <span className="sr-only">Top</span>
         </button>
 

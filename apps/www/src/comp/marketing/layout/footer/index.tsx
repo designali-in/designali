@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Icons } from "@/comp/icons";
-import { Logo } from "@/comp/logo";
 import { DIcons } from "dicons";
 
 import { Separator } from "@/components/ui/separator";
@@ -75,7 +73,7 @@ const navigation = {
   ],
 };
 
-const Underline = `hover:-translate-y-1 border border-secondary rounded-xl p-2.5 transition-transform `;
+const Underline = `hover:-translate-y-1 border border-dotted rounded-xl p-2.5 transition-transform `;
 
 export function Footer() {
   return (
@@ -83,7 +81,7 @@ export function Footer() {
       <div className="relative mx-auto grid  max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex ">
         <Link href="/">
           <p className="flex items-center justify-center rounded-full  ">
-            <Logo className="w-8" />
+            <DIcons.Designali className="w-8" />
           </p>
         </Link>
         <p className="bg-transparent text-center text-xs leading-4 text-primary/60 md:text-left">
@@ -143,7 +141,7 @@ export function Footer() {
             target="_blank"
             className={Underline}
           >
-            <Icons.mail strokeWidth={1.5} className="h-5 w-5" />
+            <DIcons.Mail strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"
@@ -226,7 +224,7 @@ export function Footer() {
           <span> © </span>
           <span>{new Date().getFullYear()}</span>
           <span>Made with</span>
-          <Icons.heart className="text-ali mx-1 h-4 w-4 animate-pulse" />
+          <DIcons.Heart className="text-ali mx-1 h-4 w-4 animate-pulse" />
           <span> by </span>
           <span className="hover:text-ali dark:hover:text-ali cursor-pointer text-black dark:text-white">
             <Link
