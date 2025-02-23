@@ -43,7 +43,7 @@ export default function Page() {
                     <Suspense>
                       <UserAuthForm />
                     </Suspense>
-                    <div className="mt-4 text-center text-sm">
+                    <div className="mt-6 text-center text-sm">
                       Don&apos;t have an account?{" "}
                       <Link
                         href="/register"

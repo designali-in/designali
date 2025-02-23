@@ -5,6 +5,7 @@ import type * as z from "zod";
 import * as React from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import GradientText from "@/registry/default/ui/texts/gradient-text";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DIcons } from "dicons";
 import { signIn } from "next-auth/react";
@@ -56,51 +57,17 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
 
   return (
     <div className={cn(" ", className)} {...props}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid gap-2">
-          <div className="grid gap-1">
-            <p className="sr-only">Email</p>
-            <Input
-              id="email"
-              placeholder="name@example.com"
-              type="email"
-              autoCapitalize="none"
-              autoComplete="email"
-              autoCorrect="off"
-              disabled={isLoading || isGoogleLoading}
-              {...register("email")}
-            />
-            {errors.email && (
-              <p className="px-1 text-xs text-red-600">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
-
-          <Button
-            className="w-full"
-            variant="outline"
-            size={"lg"}
-            disabled={isLoading}
-          >
-            {isLoading && "sdav"}
-            {type === "register" ? "Sign Up with Email" : "Sign In with Email"}
-          </Button>
-        </div>
-      </form>
-      <div className="relative py-10">
-        <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t" />
-        </div>
-        <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">
-            Or continue with
-          </span>
-        </div>
-      </div>
       <div>
+        <div className="grid w-full justify-center gap-3 p-6 text-center">
+          <h1 className="text-3xl font-semibold tracking-tighter md:text-5xl">
+            <GradientText>Designali</GradientText>
+          </h1>
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            Your complete platform for the Design.
+          </p>
+        </div>
         <Button
-          className="w-full"
+          className="bg-ali w-full"
           variant="outline"
           size={"lg"}
           type="button"
@@ -111,9 +78,9 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
           disabled={isLoading || isGoogleLoading}
         >
           {isGoogleLoading ? (
-            <DIcons.Loader className="mr-2 size-4 animate-spin" />
+            <DIcons.Loader className="mr-1 size-4 animate-spin" />
           ) : null}
-          <p className="px-2">Continue with Google </p>
+          <p className="px-1">Continue with Google </p>
           <Image
             src="/icons/google.svg"
             alt="Your Image"
