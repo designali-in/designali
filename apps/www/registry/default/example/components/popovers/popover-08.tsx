@@ -18,7 +18,7 @@ export default function PopoverDemo() {
           <form className="space-y-3">
             <Textarea
               id="feedback"
-              placeholder="How can we improve Origin UI?"
+              placeholder="How can we improve Designali?"
               aria-label="Send feedback"
             />
             <div className="flex flex-col sm:flex-row sm:justify-end">

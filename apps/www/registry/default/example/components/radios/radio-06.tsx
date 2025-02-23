@@ -24,14 +24,14 @@ export default function RadioDemo() {
           className="inline-flex items-center gap-1"
         >
           <span
-            className="inline-flex items-center text-amber-500"
+            className="inline-flex items-center text-blue-500"
             aria-hidden="true"
           >
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
           </span>
           <span className="sr-only">5 stars</span>{" "}
           <span className="text-xs font-normal leading-[inherit] text-muted-foreground">
@@ -46,13 +46,13 @@ export default function RadioDemo() {
           className="inline-flex items-center gap-1"
         >
           <span
-            className="inline-flex items-center text-amber-500"
+            className="inline-flex items-center text-blue-500"
             aria-hidden="true"
           >
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
             <DIcons.Star size={16} className="opacity-30" />
           </span>
           <span className="sr-only">4 stars</span>{" "}
@@ -68,12 +68,12 @@ export default function RadioDemo() {
           className="inline-flex items-center gap-1"
         >
           <span
-            className="inline-flex items-center text-amber-500"
+            className="inline-flex items-center text-blue-500"
             aria-hidden="true"
           >
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
             <DIcons.Star size={16} className="opacity-30" />
             <DIcons.Star size={16} className="opacity-30" />
           </span>
@@ -93,8 +93,8 @@ export default function RadioDemo() {
             className="inline-flex items-center text-amber-500"
             aria-hidden="true"
           >
-            <DIcons.Star size={16} />
-            <DIcons.Star size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
+            <DIcons.Star fill="blue" strokeWidth={0} size={16} />
             <DIcons.Star size={16} className="opacity-30" />
             <DIcons.Star size={16} className="opacity-30" />
             <DIcons.Star size={16} className="opacity-30" />
@@ -115,7 +115,7 @@ export default function RadioDemo() {
             className="inline-flex items-center text-amber-500"
             aria-hidden="true"
           >
-            <DIcons.Star size={16} />
+            <DIcons.Star fill="blue" size={16} strokeWidth={0} />
             <DIcons.Star size={16} className="opacity-30" />
             <DIcons.Star size={16} className="opacity-30" />
             <DIcons.Star size={16} className="opacity-30" />

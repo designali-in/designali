@@ -4,12 +4,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import UserImg01 from "@/public/avatars/avatar-80-01.jpg";
-import UserImg02 from "@/public/avatars/avatar-80-02.jpg";
-import UserImg03 from "@/public/avatars/avatar-80-03.jpg";
-import UserImg04 from "@/public/avatars/avatar-80-04.jpg";
-import UserImg05 from "@/public/avatars/avatar-80-05.jpg";
-import UserImg06 from "@/public/avatars/avatar-80-06.jpg";
+import UserImg01 from "@/public/avatars/avatar_1.jpg";
+import UserImg02 from "@/public/avatars/avatar_2.jpg";
+import UserImg03 from "@/public/avatars/avatar_3.jpg";
+import UserImg04 from "@/public/avatars/avatar_4.jpg";
+import UserImg05 from "@/public/avatars/avatar_5.jpg";
+import UserImg06 from "@/public/avatars/avatar_6.jpg";
 import { Bell } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -25,8 +25,8 @@ const initialNotifications = [
     id: 1,
     image: UserImg01,
     user: "Chris Tompson",
-    action: "requested review on",
-    target: "PR #42: Feature implementation",
+    action: "requested feedback on",
+    target: "Homepage wireframe",
     timestamp: "15 minutes ago",
     unread: true,
   },
@@ -35,7 +35,7 @@ const initialNotifications = [
     image: UserImg02,
     user: "Emma Davis",
     action: "shared",
-    target: "New component library",
+    target: "New design system library",
     timestamp: "45 minutes ago",
     unread: true,
   },
@@ -44,7 +44,7 @@ const initialNotifications = [
     image: UserImg03,
     user: "James Wilson",
     action: "assigned you to",
-    target: "API integration task",
+    target: "UI style guide update",
     timestamp: "4 hours ago",
     unread: false,
   },
@@ -53,7 +53,7 @@ const initialNotifications = [
     image: UserImg04,
     user: "Alex Morgan",
     action: "replied to your comment in",
-    target: "Authentication flow",
+    target: "Onboarding flow mockups",
     timestamp: "12 hours ago",
     unread: false,
   },
@@ -62,7 +62,7 @@ const initialNotifications = [
     image: UserImg05,
     user: "Sarah Chen",
     action: "commented on",
-    target: "Dashboard redesign",
+    target: "Dashboard UI revamp",
     timestamp: "2 days ago",
     unread: false,
   },
@@ -71,7 +71,7 @@ const initialNotifications = [
     image: UserImg06,
     user: "Miky Derya",
     action: "mentioned you in",
-    target: "Origin UI open graph image",
+    target: "Brand identity concept",
     timestamp: "2 weeks ago",
     unread: false,
   },
@@ -127,7 +127,7 @@ export default function PopoverDemo() {
         >
           <Bell size={16} strokeWidth={2} aria-hidden="true" />
           {unreadCount > 0 && (
-            <Badge className="absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1">
+            <Badge className="absolute -top-2 left-full min-w-4 -translate-x-1/2 px-1">
               {unreadCount > 99 ? "99+" : unreadCount}
             </Badge>
           )}

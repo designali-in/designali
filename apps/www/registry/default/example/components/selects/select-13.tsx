@@ -2,7 +2,7 @@ import { SelectNative } from "@/components/ui/select-native";
 
 export default function SelectDemo() {
   return (
-    <div className="group relative">
+    <div className="group relative w-full">
       <label
         htmlFor="select-13"
         className="absolute start-1 top-0 z-10 block -translate-y-1/2 bg-background px-2 text-xs font-medium text-foreground group-has-[select:disabled]:opacity-50"

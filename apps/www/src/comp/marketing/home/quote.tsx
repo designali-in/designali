@@ -21,7 +21,7 @@ export function Quote() {
             <div className="text-2xl tracking-tighter md:text-5xl lg:text-7xl xl:text-8xl">
               <div className="flex gap-1 md:gap-2 lg:gap-3 xl:gap-4">
                 <h1 className="font-semibold">
-                  <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-l from-[#ff0000] via-[#ff00ff] to-[#00ff00] bg-clip-text leading-none tracking-tighter text-transparent drop-shadow-[0_0_30px_#f1f5f9] dark:drop-shadow-[0_0_30px_#0f172a]">
+                  <span className="pointer-events-none z-10 whitespace-pre-wrap leading-none tracking-tighter ">
                     "Design should be easy
                   </span>
                 </h1>
@@ -32,13 +32,13 @@ export function Quote() {
               </div>
               <div className="flex gap-1 md:gap-2 lg:gap-3 xl:gap-4">
                 <h1 className="font-semibold">
-                  <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-l from-[#00ffff] via-[#ff007f] to-[#ffff00] bg-clip-text leading-none tracking-tighter text-transparent drop-shadow-[0_0_30px_#f1f5f9] dark:drop-shadow-[0_0_30px_#0f172a]">
+                  <span className="pointer-events-none z-10 whitespace-pre-wrap leading-none tracking-tighter  ">
                     ideas are quicker to
                   </span>
                 </h1>
               </div>
               <h1 className="font-semibold">
-                <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-l from-[#ffea00] via-[#ff7b00] to-[#ff0000] bg-clip-text leading-none tracking-tighter text-transparent drop-shadow-[0_0_30px_#f1f5f9] dark:drop-shadow-[0_0_30px_#0f172a]">
+                <span className="pointer-events-none z-10 whitespace-pre-wrap   leading-none tracking-tighter  ">
                   grasp..."
                 </span>
               </h1>

@@ -25,10 +25,10 @@ export function CardsDemo() {
         <ComponentPreview name="macbook-pro-1" />
         <ComponentPreview name="grid-pattern-01" />
         <ComponentPreview name="accordion-01" />
-        <ComponentPreview name="tooltip-07" />
+        <ComponentPreview name="gradient-text-01" />
         <ComponentPreview name="slider-18" />
         <ComponentPreview name="ripple-01" />
-        <ComponentPreview name="mac-1" />
+        <ComponentPreview name="tooltip-07" />
         <ComponentPreview name="retro-grid-01" />
       </div>
       <Link href={"/components"} className="flex justify-center">

@@ -2,8 +2,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export default function RadioDemo() {
   return (
-    <>
-      <fieldset className="space-y-4">
+    <div className="grid">
+      <fieldset className="grid space-y-4">
         <legend className="text-sm font-medium leading-none text-foreground">
           How likely are you to recommend us?
         </legend>
@@ -31,6 +31,6 @@ export default function RadioDemo() {
           Very Likely <span className="text-base">😍</span>
         </p>
       </div>
-    </>
+    </div>
   );
 }

@@ -25,8 +25,8 @@ import {
 
 const organizations = [
   {
-    value: "originui",
-    label: "Origin UI",
+    value: "designali",
+    label: "Designali",
   },
   {
     value: "cruip",
@@ -36,7 +36,7 @@ const organizations = [
 
 export default function SelectDemo() {
   const [open, setOpen] = useState<boolean>(false);
-  const [value, setValue] = useState<string>("originui");
+  const [value, setValue] = useState<string>("designali");
 
   return (
     <div className="space-y-2">

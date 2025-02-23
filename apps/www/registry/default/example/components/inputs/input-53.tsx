@@ -36,7 +36,7 @@ export default function InputDemo() {
           id="input-53"
           className="pe-9"
           type="text"
-          defaultValue="pnpm install origin-ui"
+          defaultValue="pnpm install designali"
           readOnly
         />
         <TooltipProvider delayDuration={0}>

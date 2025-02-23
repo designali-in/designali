@@ -105,8 +105,8 @@ export default function PaginationDemo({
         <Input
           id="pagination-input"
           type="text"
-          className="w-14"
-          defaultValue={String(currentPage)}
+          className="w-12 text-center"
+          defaultValue={String(1)}
         />
       </div>
     </div>

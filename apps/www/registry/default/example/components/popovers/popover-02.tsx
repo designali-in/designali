@@ -17,8 +17,8 @@ const initialNotifications = [
   {
     id: 1,
     user: "Chris Tompson",
-    action: "requested review on",
-    target: "PR #42: Feature implementation",
+    action: "requested feedback on",
+    target: "Homepage wireframe",
     timestamp: "15 minutes ago",
     unread: true,
   },
@@ -26,7 +26,7 @@ const initialNotifications = [
     id: 2,
     user: "Emma Davis",
     action: "shared",
-    target: "New component library",
+    target: "New design system library",
     timestamp: "45 minutes ago",
     unread: true,
   },
@@ -34,7 +34,7 @@ const initialNotifications = [
     id: 3,
     user: "James Wilson",
     action: "assigned you to",
-    target: "API integration task",
+    target: "UI style guide update",
     timestamp: "4 hours ago",
     unread: false,
   },
@@ -42,7 +42,7 @@ const initialNotifications = [
     id: 4,
     user: "Alex Morgan",
     action: "replied to your comment in",
-    target: "Authentication flow",
+    target: "Onboarding flow mockups",
     timestamp: "12 hours ago",
     unread: false,
   },
@@ -50,7 +50,7 @@ const initialNotifications = [
     id: 5,
     user: "Sarah Chen",
     action: "commented on",
-    target: "Dashboard redesign",
+    target: "Dashboard UI revamp",
     timestamp: "2 days ago",
     unread: false,
   },
@@ -58,7 +58,7 @@ const initialNotifications = [
     id: 6,
     user: "Miky Derya",
     action: "mentioned you in",
-    target: "Origin UI open graph image",
+    target: "Brand identity concept",
     timestamp: "2 weeks ago",
     unread: false,
   },
@@ -114,7 +114,7 @@ export default function PopoverDemo() {
         >
           <Bell size={16} strokeWidth={2} aria-hidden="true" />
           {unreadCount > 0 && (
-            <Badge className="absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1">
+            <Badge className="absolute -top-2 left-full min-w-4 -translate-x-1/2 px-1">
               {unreadCount > 99 ? "99+" : unreadCount}
             </Badge>
           )}
