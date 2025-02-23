@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/avatars/avatar-04.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar className=\"rounded-lg\">\n      <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n      <AvatarFallback>KK</AvatarFallback>\n    </Avatar>\n  );\n}\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar className=\"rounded-lg\">\n      <AvatarImage src=\"/avatars/avatar_2.jpg\" alt=\"Ali Imam\" />\n      <AvatarFallback>AI</AvatarFallback>\n    </Avatar>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

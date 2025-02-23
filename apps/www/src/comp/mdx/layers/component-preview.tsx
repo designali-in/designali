@@ -115,19 +115,19 @@ export function ComponentPreview({
               <div>
                 <TabsTrigger
                   value="preview"
-                  className="relative h-10 rounded-none  border-b-2 border-dotted border-b-transparent   px-3   font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="relative h-10 rounded-none  border-b-2   border-b-transparent   px-3   font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Eye className="h-4 w-4" />
                 </TabsTrigger>
                 <TabsTrigger
                   value="code"
-                  className="relative h-10 rounded-none border-b-2 border-dotted border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="relative h-10 rounded-none border-b-2  border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Code className="h-4 w-4" />
                 </TabsTrigger>
                 <TabsTrigger
                   value="install"
-                  className="relative h-10 rounded-none border-b-2 border-dotted border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="relative h-10 rounded-none border-b-2  border-b-transparent px-3 font-semibold   text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <DIcons.Settings className="h-4 w-4" />
                 </TabsTrigger>

@@ -9,7 +9,7 @@ export default function ButtonDemo() {
     <div className="flex flex-col gap-2">
       <Button variant="outline">
         <DIcons.Instagram
-          className="me-3 text-[#DB4437] dark:text-white/60"
+          className="text-[#DB4437] dark:text-white/60"
           size={16}
           aria-hidden="true"
         />
@@ -17,7 +17,7 @@ export default function ButtonDemo() {
       </Button>
       <Button variant="outline">
         <DIcons.X
-          className="me-3 text-[#14171a] dark:text-white/60"
+          className="text-[#14171a] dark:text-white/60"
           size={16}
           aria-hidden="true"
         />
@@ -25,7 +25,7 @@ export default function ButtonDemo() {
       </Button>
       <Button variant="outline">
         <DIcons.Facebook
-          className="me-3 text-[#1877f2] dark:text-white/60"
+          className="text-[#1877f2] dark:text-white/60"
           size={16}
           aria-hidden="true"
         />
@@ -33,7 +33,7 @@ export default function ButtonDemo() {
       </Button>
       <Button variant="outline">
         <DIcons.Threads
-          className="me-3 text-[#333333] dark:text-white/60"
+          className="text-[#333333] dark:text-white/60"
           size={16}
           aria-hidden="true"
         />

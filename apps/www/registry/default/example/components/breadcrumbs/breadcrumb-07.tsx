@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import { DIcons } from "dicons";
 
 import {
   Breadcrumb,
@@ -15,7 +15,11 @@ export default function BreadcrumbDemo() {
       <BreadcrumbList className="rounded-lg border border-border bg-background px-3 py-2 shadow-sm shadow-black/5">
         <BreadcrumbItem>
           <BreadcrumbLink href="#">
-            <Home size={16} strokeWidth={2} aria-hidden="true" />
+            <DIcons.Home01
+              className="h-4 w-4"
+              strokeWidth={1}
+              aria-hidden="true"
+            />
             <span className="sr-only">Home</span>
           </BreadcrumbLink>
         </BreadcrumbItem>

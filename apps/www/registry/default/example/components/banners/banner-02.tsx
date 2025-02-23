@@ -13,7 +13,7 @@ export default function BannerDemo() {
         Enhance your design workflow with real-time updates and in-depth
         analytics. 🚀
         <span className="text-muted-foreground">·</span>{" "}
-        <a href="#" className="font-medium underline hover:no-underline">
+        <a href="#" className="ml-2 font-medium underline hover:no-underline">
           Upgrade
         </a>
       </p>

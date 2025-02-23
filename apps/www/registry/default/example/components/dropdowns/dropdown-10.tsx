@@ -25,7 +25,7 @@ export default function DropdownDemo() {
         <DropdownMenuLabel className="flex flex-col">
           <span>Signed in as</span>
           <span className="text-xs font-normal text-foreground">
-            k.kennedy@originui.com
+            ali@designali.in
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />

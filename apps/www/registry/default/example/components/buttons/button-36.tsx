@@ -16,7 +16,7 @@ export default function ButtonDemo() {
       </Button>
       <Button className="rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10">
         <Pin
-          className="-ms-1 me-2 opacity-60"
+          className="opacity-60"
           size={16}
           strokeWidth={2}
           aria-hidden="true"

@@ -1,6 +1,6 @@
-// Dependencies: pnpm install lucide-react
+// Dependencies: pnpm install dicons
 
-import { LoaderCircle } from "lucide-react";
+import { LoaderCircle } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -8,9 +8,8 @@ export default function ButtonDemo() {
   return (
     <Button disabled>
       <LoaderCircle
-        className="-ms-1 me-2 animate-spin"
-        size={16}
-        strokeWidth={2}
+        className="h-4 w-4  animate-spin"
+        strokeWidth={1}
         aria-hidden="true"
       />
       Button

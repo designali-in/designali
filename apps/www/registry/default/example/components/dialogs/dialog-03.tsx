@@ -27,59 +27,53 @@ export default function DialogDemo() {
                 <div className="space-y-4 [&_strong]:font-semibold [&_strong]:text-foreground">
                   <div className="space-y-1">
                     <p>
-                      <strong>Account Management</strong>
+                      <strong>Design Project Management</strong>
                     </p>
                     <p>
-                      Navigate to the registration page, provide required
-                      information, and verify your email address. You can sign
-                      up using your email or through social media platforms.
-                    </p>
-                  </div>
-                  <div className="space-y-1">
-                    <p>
-                      <strong>Password Reset Process</strong>
-                    </p>
-                    <p>
-                      Users can reset their password through the account
-                      settings page. Click &quot;Forgot Password&quot; and
-                      follow the email verification steps to regain account
-                      access quickly and securely.
+                      Start your design journey by filling out the project
+                      brief, sharing your vision, and providing any necessary
+                      assets. Our team will collaborate with you every step of
+                      the way.
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Service Pricing Tiers</strong>
+                      <strong>Revision and Feedback Process</strong>
                     </p>
                     <p>
-                      We offer three primary subscription levels designed to
-                      meet diverse user needs: Basic (free with limited
-                      features), Professional (monthly fee with comprehensive
-                      access), and Enterprise (custom pricing with full platform
-                      capabilities).
+                      Clients can request revisions through the project
+                      dashboard. Submit your feedback, and our designers will
+                      quickly refine the work based on your input.
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Technical Support Channels</strong>
+                      <strong>Design Package Tiers</strong>
                     </p>
                     <p>
-                      Customer support is accessible through multiple
-                      communication methods including email support, live chat
-                      during business hours, an integrated support ticket
-                      system, and phone support specifically for
-                      enterprise-level customers.
+                      We offer three design packages tailored to your needs:
+                      Basic (concept sketches), Professional (fully refined
+                      designs), and Premium (comprehensive branding and visual
+                      identity).
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Data Protection Strategies</strong>
+                      <strong>Communication Channels</strong>
                     </p>
                     <p>
-                      Our platform implements rigorous security measures
-                      including 256-bit SSL encryption, regular comprehensive
-                      security audits, strict data access controls, and
-                      compliance with international privacy protection
-                      standards.
+                      Stay connected with your design team through email, live
+                      chat during business hours, and an integrated project
+                      discussion board.
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <p>
+                      <strong>Design File Security</strong>
+                    </p>
+                    <p>
+                      We ensure your design files remain secure with encrypted
+                      storage, regular data backups, and strict access controls.
                     </p>
                   </div>
                   <div className="space-y-1">
@@ -87,54 +81,48 @@ export default function DialogDemo() {
                       <strong>Platform Compatibility</strong>
                     </p>
                     <p>
-                      The service supports multiple device and operating system
-                      environments, including web browsers like Chrome and
-                      Firefox, mobile applications for iOS and Android, and
-                      desktop applications compatible with Windows and macOS.
+                      Our design platform works seamlessly across web browsers
+                      like Chrome and Firefox and is optimized for mobile and
+                      desktop applications.
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Subscription Management</strong>
+                      <strong>Subscription and Project Plans</strong>
                     </p>
                     <p>
-                      Subscriptions can be cancelled at any time through account
-                      settings, with pro-rated refunds available within 30 days
-                      of payment. Both monthly and annual billing options are
-                      provided, with special discounts offered for annual
-                      commitments.
+                      Choose between per-project pricing or a monthly
+                      subscription for ongoing design support. Discounts are
+                      available for long-term commitments.
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Payment Method Options</strong>
+                      <strong>Payment Methods</strong>
                     </p>
                     <p>
-                      We accept a wide range of payment methods including major
-                      credit cards such as Visa, MasterCard, and American
-                      Express, digital payment platforms like PayPal, and direct
-                      bank transfers. Regional payment options may also be
-                      available depending on user location.
+                      We accept payments through credit cards, PayPal, and bank
+                      transfers, with regional options available depending on
+                      your location.
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Customer Support</strong>
+                      <strong>24/7 Design Support</strong>
                     </p>
                     <p>
-                      Our dedicated customer support team is available 24/7,
-                      providing quick and efficient assistance to address any
-                      inquiries or issues you may have.
+                      Our support team is available around the clock to help
+                      with any design inquiries or technical issues.
                     </p>
                   </div>
                   <div className="space-y-1">
                     <p>
-                      <strong>Privacy Policy</strong>
+                      <strong>Confidentiality and Privacy</strong>
                     </p>
                     <p>
-                      Our privacy policy outlines how we collect, use, and
-                      protect your personal data, ensuring your privacy is
-                      protected at all times.
+                      We respect your privacy and ensure your design projects
+                      and personal data are protected according to industry
+                      standards.
                     </p>
                   </div>
                 </div>

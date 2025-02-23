@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import AvatarImg from "@/public/images/products/grad-full.jpg";
+import AvatarImg from "@/public/ali.jpg";
 import ProfileBgImg from "@/public/images/products/grad-full.jpg";
 import { useImageUpload } from "@/registry/default/hooks/use-image-upload";
 import { Check, ImagePlus, X } from "lucide-react";
@@ -35,7 +35,7 @@ export default function DialogDemo() {
   } = useCharacterLimit({
     maxLength,
     initialValue:
-      "Hey, I am Margaret, a web developer who loves turning ideas into amazing websites!",
+      "Hi, my name is Ali Imam and I am a highly ambitious, self-motivated and driven Graphic Designer | Visualiser | Art Director | Developer based in Bokaro Steel City, India.",
   });
 
   return (
@@ -63,8 +63,8 @@ export default function DialogDemo() {
                   <Label htmlFor="edit-first-name">First name</Label>
                   <Input
                     id="edit-first-name"
-                    placeholder="Matt"
-                    defaultValue="Margaret"
+                    placeholder="First name"
+                    defaultValue="Ali"
                     type="text"
                     required
                   />
@@ -73,8 +73,8 @@ export default function DialogDemo() {
                   <Label htmlFor="edit-last-name">Last name</Label>
                   <Input
                     id="edit-last-name"
-                    placeholder="Welsh"
-                    defaultValue="Villard"
+                    placeholder="Last name"
+                    defaultValue="Imam"
                     type="text"
                     required
                   />
@@ -87,7 +87,7 @@ export default function DialogDemo() {
                     id="edit-username"
                     className="peer pe-9"
                     placeholder="Username"
-                    defaultValue="margaret-villard-69"
+                    defaultValue="aliimam"
                     type="text"
                     required
                   />
@@ -111,7 +111,7 @@ export default function DialogDemo() {
                     id="edit-website"
                     className="-ms-px rounded-s-none shadow-none"
                     placeholder="yourwebsite.com"
-                    defaultValue="www.margaret.com"
+                    defaultValue="www.designali.in"
                     type="text"
                   />
                 </div>

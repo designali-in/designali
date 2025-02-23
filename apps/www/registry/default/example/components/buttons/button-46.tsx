@@ -23,15 +23,10 @@ export default function ButtonDemo() {
     >
       {isExpanded ? "Show less" : "Show more"}
       {isExpanded ? (
-        <ChevronUp
-          className="-me-1 ms-1"
-          size={16}
-          strokeWidth={2}
-          aria-hidden="true"
-        />
+        <ChevronUp className="" size={16} strokeWidth={2} aria-hidden="true" />
       ) : (
         <ChevronDown
-          className="-me-1 ms-1"
+          className=""
           size={16}
           strokeWidth={2}
           aria-hidden="true"

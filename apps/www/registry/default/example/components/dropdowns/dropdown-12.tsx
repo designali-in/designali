@@ -26,13 +26,17 @@ export default function DropdownDemo() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-auto p-0 hover:bg-transparent">
           <Avatar>
-            <AvatarImage src="./avatar.jpg" alt="Profile image" />
-            <AvatarFallback>KK</AvatarFallback>
+            <AvatarImage
+              className="object-cover"
+              src="/ali.jpg"
+              alt="Profile image"
+            />
+            <AvatarFallback>AI</AvatarFallback>
           </Avatar>
           <ChevronDown
             size={16}
             strokeWidth={2}
-            className="ms-2 opacity-60"
+            className="opacity-60"
             aria-hidden="true"
           />
         </Button>
@@ -40,10 +44,10 @@ export default function DropdownDemo() {
       <DropdownMenuContent className="max-w-64">
         <DropdownMenuLabel className="flex min-w-0 flex-col">
           <span className="truncate text-sm font-medium text-foreground">
-            Keith Kennedy
+            Ali Imam
           </span>
           <span className="truncate text-xs font-normal text-muted-foreground">
-            k.kennedy@originui.com
+            ali@designali.in
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />

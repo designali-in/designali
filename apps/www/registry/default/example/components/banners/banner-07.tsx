@@ -1,9 +1,8 @@
-// Dependencies: pnpm install lucide-react
-
 "use client";
 
+// Dependencies: pnpm install dicons
 import { useState } from "react";
-import { Eclipse, X } from "lucide-react";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -16,16 +15,15 @@ export default function BannerDemo() {
     <div className="dark bg-muted px-4 py-3 text-foreground md:py-2">
       <div className="flex gap-2 md:items-center">
         <div className="flex grow gap-3 md:items-center md:justify-center">
-          <Eclipse
-            className="shrink-0 opacity-60 max-md:mt-0.5"
-            size={16}
-            strokeWidth={2}
+          <DIcons.Threads
+            className="h-4 w-4 shrink-0 opacity-60 max-md:mt-0.5"
+            strokeWidth={1}
             aria-hidden="true"
           />
           <div className="flex flex-col justify-between gap-3 md:flex-row md:items-center">
             <p className="text-sm">
-              It&lsquo;s live and ready to use! Start exploring the latest
-              addition to your toolkit.
+              It’s live and ready for you! Dive in and explore the newest
+              addition to your Designali toolkit.
             </p>
             <div className="flex gap-2 max-md:flex-wrap">
               <Button size="sm" className="rounded-full">
@@ -40,10 +38,9 @@ export default function BannerDemo() {
           onClick={() => setIsVisible(false)}
           aria-label="Close banner"
         >
-          <X
-            size={16}
-            strokeWidth={2}
-            className="opacity-60 transition-opacity group-hover:opacity-100"
+          <DIcons.Close
+            strokeWidth={1}
+            className="h-4 w-4 opacity-60 transition-opacity group-hover:opacity-100"
             aria-hidden="true"
           />
         </Button>

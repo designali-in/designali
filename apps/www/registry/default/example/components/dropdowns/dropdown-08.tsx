@@ -24,7 +24,7 @@ export default function DropdownDemo() {
         <Button variant="outline">
           Rich menu
           <ChevronDown
-            className="-me-1 ms-2 opacity-60"
+            className="opacity-60"
             size={16}
             strokeWidth={2}
             aria-hidden="true"

@@ -1,9 +1,8 @@
-// Dependencies: pnpm install lucide-react
-
 "use client";
 
+// Dependencies: pnpm install dicons
 import { useEffect, useState } from "react";
-import { TicketPercent, X } from "lucide-react";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -79,7 +78,7 @@ export default function BannerDemo() {
             className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/15 max-md:mt-0.5"
             aria-hidden="true"
           >
-            <TicketPercent className="opacity-80" size={16} strokeWidth={2} />
+            <DIcons.Ticket className="h-4 w-4 opacity-80" strokeWidth={1} />
           </div>
           <div className="flex grow flex-col justify-between gap-3 md:flex-row md:items-center">
             <div className="space-y-0.5">
@@ -122,10 +121,9 @@ export default function BannerDemo() {
           onClick={() => setIsVisible(false)}
           aria-label="Close banner"
         >
-          <X
-            size={16}
-            strokeWidth={2}
-            className="opacity-60 transition-opacity group-hover:opacity-100"
+          <DIcons.Close
+            strokeWidth={1}
+            className="h-4 w-4 opacity-60 transition-opacity group-hover:opacity-100"
             aria-hidden="true"
           />
         </Button>

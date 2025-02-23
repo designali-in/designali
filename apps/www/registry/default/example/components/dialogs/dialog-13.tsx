@@ -1,3 +1,5 @@
+import { DIcons } from "dicons";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -22,20 +24,11 @@ export default function DialogDemo() {
             className="flex size-11 shrink-0 items-center justify-center rounded-full border border-border"
             aria-hidden="true"
           >
-            <svg
-              className="stroke-zinc-800 dark:stroke-zinc-100"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-            >
-              <circle cx="16" cy="16" r="12" fill="none" strokeWidth="8" />
-            </svg>
+            <DIcons.Designali className="ml-1 h-5 w-5" />
           </div>
           <DialogHeader>
             <DialogTitle className="sm:text-center">
-              Sign up Origin UI
+              Sign up Designali
             </DialogTitle>
             <DialogDescription className="sm:text-center">
               We just need a few details to get you started.
@@ -49,7 +42,7 @@ export default function DialogDemo() {
               <Label htmlFor="signup-name">Full name</Label>
               <Input
                 id="signup-name"
-                placeholder="Matt Welsh"
+                placeholder="Ali Imam"
                 type="text"
                 required
               />
@@ -58,7 +51,7 @@ export default function DialogDemo() {
               <Label htmlFor="signup-email">Email</Label>
               <Input
                 id="signup-email"
-                placeholder="hi@yourcompany.com"
+                placeholder="contact@designali.in"
                 type="email"
                 required
               />

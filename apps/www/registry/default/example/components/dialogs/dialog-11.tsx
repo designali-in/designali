@@ -56,7 +56,7 @@ export default function DialogDemo() {
                 <Label>Why did you give this rating?</Label>
                 <Textarea
                   id="feedback"
-                  placeholder="How can we improve Origin UI?"
+                  placeholder="How can we improve Designali?"
                   aria-label="Send feedback"
                 />
               </div>

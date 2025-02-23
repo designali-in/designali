@@ -1,9 +1,8 @@
-// Dependencies: pnpm install lucide-react
-
 "use client";
 
+// Dependencies: pnpm install dicons
 import { useState } from "react";
-import { ArrowRight, Eclipse, X } from "lucide-react";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -16,23 +15,21 @@ export default function BannerDemo() {
     <div className="dark bg-muted px-4 py-3 text-foreground">
       <div className="flex gap-2">
         <div className="flex grow gap-3">
-          <Eclipse
-            className="mt-0.5 shrink-0 opacity-60"
-            size={16}
-            strokeWidth={2}
+          <DIcons.Palette
+            className="mt-0.5 h-4 w-4 shrink-0 opacity-60"
+            strokeWidth={1}
             aria-hidden="true"
           />
           <div className="flex grow flex-col justify-between gap-2 md:flex-row">
             <p className="text-sm">
-              We just added something awesome to make your experience even
-              better.
+              We’ve just added something amazing to elevate your Designali
+              experience!
             </p>
             <a href="#" className="group whitespace-nowrap text-sm font-medium">
               Learn more
-              <ArrowRight
-                className="-mt-0.5 ms-1 inline-flex opacity-60 transition-transform group-hover:translate-x-0.5"
-                size={16}
-                strokeWidth={2}
+              <DIcons.ArrowRight
+                className="-mt-0.5 ms-1 inline-flex h-4 w-4 opacity-60 transition-transform group-hover:translate-x-0.5"
+                strokeWidth={1}
                 aria-hidden="true"
               />
             </a>
@@ -44,10 +41,9 @@ export default function BannerDemo() {
           onClick={() => setIsVisible(false)}
           aria-label="Close banner"
         >
-          <X
-            size={16}
-            strokeWidth={2}
-            className="opacity-60 transition-opacity group-hover:opacity-100"
+          <DIcons.Close
+            strokeWidth={1}
+            className="h-4 w-4 opacity-60 transition-opacity group-hover:opacity-100"
             aria-hidden="true"
           />
         </Button>

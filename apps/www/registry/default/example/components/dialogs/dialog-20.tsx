@@ -27,22 +27,22 @@ export default function DialogDemo() {
     {
       title: "Welcome to Designali",
       description:
-        "Discover a powerful collection of components designed to enhance your development workflow.",
+        "Explore a curated collection of high-quality design components crafted to elevate your creative workflow.",
     },
     {
-      title: "Customizable Components",
+      title: "Tailor-Made Design Solutions",
       description:
-        "Each component is fully customizable and built with modern web standards in mind.",
+        "Every component is thoughtfully designed, fully customizable, and aligned with modern design principles.",
     },
     {
-      title: "Ready to Start?",
+      title: "Ready to Create?",
       description:
-        "Begin building amazing interfaces with our comprehensive component library.",
+        "Start building stunning, user-centric designs with our versatile and easy-to-use component library.",
     },
     {
-      title: "Get Support",
+      title: "Comprehensive Support",
       description:
-        "Access our extensive documentation and community resources to make the most of Origin UI.",
+        "Gain access to detailed design guidelines and a thriving creative community to help you every step of the way.",
     },
   ];
 

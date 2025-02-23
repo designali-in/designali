@@ -1,4 +1,4 @@
-import { Database } from "lucide-react";
+import { DIcons } from "dicons";
 
 import {
   Breadcrumb,
@@ -31,7 +31,11 @@ export default function BreadcrumbDemo() {
               aria-label="Select database"
             >
               <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 group-has-[[disabled]]:opacity-50">
-                <Database size={16} strokeWidth={2} aria-hidden="true" />
+                <DIcons.DataBase
+                  className="h-4 w-4"
+                  strokeWidth={1}
+                  aria-hidden="true"
+                />
               </div>
               <SelectValue placeholder="Select time" />
             </SelectTrigger>

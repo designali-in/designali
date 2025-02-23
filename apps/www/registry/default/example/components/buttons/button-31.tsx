@@ -12,7 +12,7 @@ export default function ButtonDemo() {
         variant="outline"
       >
         <Files
-          className="-ms-1 me-2 opacity-60"
+          className="opacity-60"
           size={16}
           strokeWidth={2}
           aria-hidden="true"
@@ -24,7 +24,7 @@ export default function ButtonDemo() {
         variant="outline"
       >
         <Film
-          className="-ms-1 me-2 opacity-60"
+          className=" opacity-60"
           size={16}
           strokeWidth={2}
           aria-hidden="true"

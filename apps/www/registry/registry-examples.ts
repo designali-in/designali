@@ -4739,7 +4739,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/bento-grid-01.tsx",
+        path: "example/components/bento-grid/bento-grid-01.tsx",
         type: "registry:example",
       },
     ],

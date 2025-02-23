@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AvatarImg03 from "@/public/avatars/avatar-80-03.jpg";
-import AvatarImg02 from "@/public/avatars/avatar-80-05.jpg";
-import AvatarImg01 from "@/public/avatars/avatar-80-06.jpg";
-import AvatarImg04 from "@/public/avatars/avatar-80-07.jpg";
+import AvatarImg03 from "@/public/avatars/avatar_24.jpg";
+import AvatarImg01 from "@/public/avatars/avatar_25.jpg";
+import AvatarImg04 from "@/public/avatars/avatar_26.jpg";
+import AvatarImg02 from "@/public/avatars/avatar_27.jpg";
 
 export default function AvatarDemo() {
   return (

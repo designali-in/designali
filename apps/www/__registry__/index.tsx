@@ -8104,12 +8104,12 @@ export const Index: Record<string, any> = {
       type: "registry:example",
       registryDependencies: undefined,
       files: [{
-        path: "registry/default/example/components/bento-grid-01.tsx",
+        path: "registry/default/example/components/bento-grid/bento-grid-01.tsx",
         type: "registry:example",
         target: ""
       }],
       categories: undefined,
-      component: React.lazy(() => import("@/registry/default/example/components/bento-grid-01.tsx")),
+      component: React.lazy(() => import("@/registry/default/example/components/bento-grid/bento-grid-01.tsx")),
       source: "",
       meta: undefined,
     },

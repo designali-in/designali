@@ -23,28 +23,28 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "The Essence of Creativity",
+    description: "Heart of innovative and artistic expression.",
     header: <Skeleton />,
-    icon: <DIcons.CopyCheck className="h-4 w-4 text-primary" />,
+    icon: <DIcons.Palette className="h-4 w-4 text-primary" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Designing the Future",
+    description: "See how visionary design shapes tomorrow’s world.",
     header: <Skeleton />,
-    icon: <DIcons.FileImage className="h-4 w-4 text-primary" />,
+    icon: <DIcons.LayoutGrid className="h-4 w-4 text-primary" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "The Art of Visual Storytelling",
+    description: "Craft compelling narratives through striking visuals.",
     header: <Skeleton />,
-    icon: <DIcons.Signpost className="h-4 w-4 text-primary" />,
+    icon: <DIcons.Camera className="h-4 w-4 text-primary" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Mastering User Experience",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "Create seamless, intuitive, and engaging digital experiences.",
     header: <Skeleton />,
-    icon: <DIcons.TableCellsSplit className="h-4 w-4 text-primary" />,
+    icon: <DIcons.Tally5 className="h-4 w-4 text-primary" />,
   },
 ];

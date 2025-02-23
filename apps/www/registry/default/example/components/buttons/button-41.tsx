@@ -8,7 +8,7 @@ export default function ButtonDemo() {
   return (
     <Button>
       <Star
-        className="-ms-1 me-2 opacity-60"
+        className="opacity-60"
         size={16}
         strokeWidth={2}
         aria-hidden="true"

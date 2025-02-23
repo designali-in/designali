@@ -6,15 +6,15 @@ export default function CheckboxDemo() {
     <div className="flex gap-6">
       <div className="flex items-center gap-2">
         <Checkbox id="checkbox-08-a" />
-        <Label htmlFor="checkbox-08-a">React</Label>
+        <Label htmlFor="checkbox-08-a">Photoshop</Label>
       </div>
       <div className="flex items-center gap-2">
         <Checkbox id="checkbox-08-b" />
-        <Label htmlFor="checkbox-08-b">Next.js</Label>
+        <Label htmlFor="checkbox-08-b">Illustrator</Label>
       </div>
       <div className="flex items-center gap-2">
         <Checkbox id="checkbox-08-c" />
-        <Label htmlFor="checkbox-08-c">Astro</Label>
+        <Label htmlFor="checkbox-08-c">Canva</Label>
       </div>
     </div>
   );

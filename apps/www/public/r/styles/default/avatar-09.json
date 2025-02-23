@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/avatars/avatar-09.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function AvatarDemo() {\n  return (\n    <div className=\"relative\">\n      <Avatar>\n        <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n        <AvatarFallback>KK</AvatarFallback>\n      </Avatar>\n      <Badge className=\"absolute -top-1 left-full min-w-5 -translate-x-4 border-background px-1\">\n        6\n      </Badge>\n    </div>\n  );\n}\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function AvatarDemo() {\n  return (\n    <div className=\"relative\">\n      <Avatar>\n        <AvatarImage src=\"/avatars/avatar_7.jpg\" alt=\"Ali Imam\" />\n        <AvatarFallback>AI</AvatarFallback>\n      </Avatar>\n      <Badge className=\"absolute -top-1 left-full min-w-4  -translate-x-4 border-background px-1\">\n        6\n      </Badge>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

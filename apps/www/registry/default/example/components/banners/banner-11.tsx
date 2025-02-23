@@ -1,9 +1,8 @@
-// Dependencies: pnpm install lucide-react
-
 "use client";
 
-import { useState } from "react";
-import { Download, LoaderCircle } from "lucide-react";
+// Dependencies: pnpm install dicons
+import { useEffect, useState } from "react";
+import { DIcons } from "dicons";
 
 import { Button } from "@/components/ui/button";
 
@@ -35,17 +34,19 @@ export default function BannerDemo() {
         >
           {isDownloading ? (
             <>
-              <LoaderCircle
-                className="-ms-0.5 me-2 animate-spin"
-                size={16}
-                strokeWidth={2}
+              <DIcons.LoaderCircle
+                className="-ms-0.5  me-1 h-4 w-4 animate-spin"
+                strokeWidth={1}
                 aria-hidden="true"
               />
               Updating...
             </>
           ) : (
             <>
-              <Download size={16} className="-ms-0.5 me-2" aria-hidden="true" />
+              <DIcons.Download
+                className="-ms-0.5 me-1 h-4 w-4"
+                aria-hidden="true"
+              />
               Update now
             </>
           )}

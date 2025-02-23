@@ -50,103 +50,98 @@ export default function DialogDemo() {
                   <div className="space-y-4">
                     <div className="space-y-1">
                       <p>
-                        <strong>Acceptance of Terms</strong>
+                        <strong>Design Principles</strong>
                       </p>
                       <p>
-                        By accessing and using this website, users agree to
-                        comply with and be bound by these Terms of Service.
-                        Users who do not agree with these terms should
-                        discontinue use of the website immediately.
-                      </p>
-                    </div>
-
-                    <div className="space-y-1">
-                      <p>
-                        <strong>User Account Responsibilities</strong>
-                      </p>
-                      <p>
-                        Users are responsible for maintaining the
-                        confidentiality of their account credentials. Any
-                        activities occurring under a user&lsquo;s account are
-                        the sole responsibility of the account holder. Users
-                        must notify the website administrators immediately of
-                        any unauthorized account access.
+                        Our platform adheres to core design principles of
+                        clarity, simplicity, and consistency, ensuring an
+                        intuitive and engaging user experience.
                       </p>
                     </div>
 
                     <div className="space-y-1">
                       <p>
-                        <strong>Content Usage and Restrictions</strong>
+                        <strong>Visual Identity</strong>
                       </p>
                       <p>
-                        The website and its original content are protected by
-                        intellectual property laws. Users may not reproduce,
-                        distribute, modify, create derivative works, or
-                        commercially exploit any content without explicit
-                        written permission from the website owners.
+                        We maintain a cohesive visual identity through
+                        thoughtful use of color, typography, and imagery,
+                        creating a distinct and recognizable brand presence.
                       </p>
                     </div>
 
                     <div className="space-y-1">
                       <p>
-                        <strong>Limitation of Liability</strong>
+                        <strong>Creative Freedom and Guidelines</strong>
                       </p>
                       <p>
-                        The website provides content &ldquo;as is&ldquo; without
-                        any warranties. The website owners shall not be liable
-                        for direct, indirect, incidental, consequential, or
-                        punitive damages arising from user interactions with the
-                        platform.
+                        While encouraging creative exploration, we provide clear
+                        design guidelines to ensure consistency across projects
+                        without stifling innovation.
                       </p>
                     </div>
 
                     <div className="space-y-1">
                       <p>
-                        <strong>User Conduct Guidelines</strong>
+                        <strong>User-Centered Design</strong>
+                      </p>
+                      <p>
+                        Every design decision is made with the user in mind,
+                        prioritizing accessibility, usability, and an overall
+                        delightful experience.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p>
+                        <strong>Design Standards and Practices</strong>
                       </p>
                       <ul className="list-disc pl-6">
-                        <li>Not upload harmful or malicious content</li>
-                        <li>Respect the rights of other users</li>
                         <li>
-                          Avoid activities that could disrupt website
-                          functionality
+                          Maintain consistency in visual and interactive
+                          elements
+                        </li>
+                        <li>Ensure accessibility for diverse audiences</li>
+                        <li>
+                          Adopt a mobile-first approach for responsive design
                         </li>
                         <li>
-                          Comply with applicable local and international laws
+                          Follow industry best practices for intuitive
+                          navigation
                         </li>
                       </ul>
                     </div>
 
                     <div className="space-y-1">
                       <p>
-                        <strong>Modifications to Terms</strong>
+                        <strong>Iterative Improvement</strong>
                       </p>
                       <p>
-                        The website reserves the right to modify these terms at
-                        any time. Continued use of the website after changes
-                        constitutes acceptance of the new terms.
-                      </p>
-                    </div>
-
-                    <div className="space-y-1">
-                      <p>
-                        <strong>Termination Clause</strong>
-                      </p>
-                      <p>
-                        The website may terminate or suspend user access without
-                        prior notice for violations of these terms or for any
-                        other reason deemed appropriate by the administration.
+                        We believe in continuous refinement, using feedback and
+                        data to evolve our designs and enhance user
+                        satisfaction.
                       </p>
                     </div>
 
                     <div className="space-y-1">
                       <p>
-                        <strong>Governing Law</strong>
+                        <strong>Collaboration and Workflow</strong>
                       </p>
                       <p>
-                        These terms are governed by the laws of the jurisdiction
-                        where the website is primarily operated, without regard
-                        to conflict of law principles.
+                        Effective collaboration between designers, developers,
+                        and stakeholders is key to maintaining a seamless design
+                        process and achieving creative excellence.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p>
+                        <strong>Design Ethics</strong>
+                      </p>
+                      <p>
+                        We are committed to ethical design, promoting
+                        inclusivity, transparency, and respect for user privacy
+                        and data protection.
                       </p>
                     </div>
                   </div>

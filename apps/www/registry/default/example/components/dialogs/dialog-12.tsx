@@ -3,6 +3,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { DIcons } from "dicons";
 import { OTPInput, SlotProps } from "input-otp";
 
 import { cn } from "@/lib/utils";
@@ -56,16 +57,7 @@ export default function DialogDemo() {
             className="flex size-11 shrink-0 items-center justify-center rounded-full border border-border"
             aria-hidden="true"
           >
-            <svg
-              className="stroke-zinc-800 dark:stroke-zinc-100"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-            >
-              <circle cx="16" cy="16" r="12" fill="none" strokeWidth="8" />
-            </svg>
+            <DIcons.Designali className="ml-1 h-5 w-5" />
           </div>
           <DialogHeader>
             <DialogTitle className="sm:text-center">

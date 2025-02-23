@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AdBanner from "@/comp/AdBanner";
-import { ImagePlayground } from "@/comp/ai/ImagePlayground";
 import BrowseClient from "@/comp/dashboard/admin/agency/BrowseClient";
 import LogoPage from "@/comp/products/logos/logos";
 import ToolsPage from "@/comp/tools/tools";
@@ -14,12 +13,10 @@ import { cn } from "@/src/lib/utils";
 import { DIcons } from "dicons";
 
 import { env } from "@/env";
-import { getRandomDesignSuggestions } from "@/lib/ai/suggestions";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Avegra } from "../../fonts";
@@ -160,13 +157,7 @@ const BrowsePage = async () => {
                         New
                       </Badge>
                     </TabsTrigger>
-                    <TabsTrigger value="tab-4">
-                      <span>AI-Magic</span>
-                      <DIcons.AiBeautify className="ml-1 mr-1 h-4 w-4" />
-                      <Badge size="xs" variant="green">
-                        New
-                      </Badge>
-                    </TabsTrigger>
+
                     <TabsTrigger value="tab-6">
                       <p>Logos</p>
                       {""}
@@ -198,9 +189,7 @@ const BrowsePage = async () => {
               <TabsContent value="tab-3">
                 <AssetUsers users={formattedUsers} />
               </TabsContent>
-              <TabsContent value="tab-4">
-                <ImagePlayground suggestions={getRandomDesignSuggestions()} />
-              </TabsContent>
+
               <TabsContent value="tab-6">
                 <LogoPage />
               </TabsContent>

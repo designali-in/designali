@@ -1,7 +1,7 @@
 // Dependencies: pnpm install lucide-react
 
 import Image from "next/image";
-import AvatarImg from "@/public/avatars/avatar.jpg";
+import AvatarImg from "@/public/ali.jpg";
 import {
   Bolt,
   BookOpen,
@@ -38,14 +38,14 @@ export default function DropdownDemo() {
             alt="Avatar"
             width={32}
             height={32}
-            className="shrink-0 rounded-full"
+            className="aspect-square shrink-0 rounded-full object-cover"
           />
           <div className="flex min-w-0 flex-col">
             <span className="truncate text-sm font-medium text-foreground">
-              Keith Kennedy
+              Ali Imam
             </span>
             <span className="truncate text-xs font-normal text-muted-foreground">
-              k.kennedy@originui.com
+              ali@designali.in
             </span>
           </div>
         </DropdownMenuLabel>

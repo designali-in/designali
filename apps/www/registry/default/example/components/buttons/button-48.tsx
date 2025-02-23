@@ -18,7 +18,7 @@ export default function ButtonDemo() {
 
   return (
     <div>
-      <div className="inline-flex items-center gap-2 align-top">
+      <div className="inline-flex items-center gap-1 align-top">
         <div
           className="relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-input"
           aria-label={

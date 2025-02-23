@@ -1,6 +1,6 @@
 export default function BannerDemo() {
   return (
-    <div className="border-b border-border px-4 py-3">
+    <div className="border-b border-dotted border-border px-4 py-3">
       <p className="text-center text-sm">
         <span className="mr-1 text-base leading-none">📫</span> Subscribe to our
         newsletter and get 10% off your first order!{" "}

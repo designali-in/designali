@@ -1,4 +1,4 @@
-import { Folders } from "lucide-react";
+import { DIcons } from "dicons";
 
 import {
   Breadcrumb,
@@ -31,7 +31,7 @@ export default function BreadcrumbDemo() {
                 aria-hidden="true"
                 className="flex size-5 items-center justify-center"
               >
-                <Folders size={16} strokeWidth={2} />
+                <DIcons.Folders className="h-4 w-4" strokeWidth={1} />
               </span>
               <span className="sr-only">Toggle menu</span>
             </DropdownMenuTrigger>

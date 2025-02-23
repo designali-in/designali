@@ -26,8 +26,8 @@ import {
 
 export default function DialogDemo() {
   const [emails, setEmails] = useState([
-    "mark@yourcompany.com",
-    "jane@yourcompany.com",
+    "ali@designali.in",
+    "imam@designali.in",
     "",
   ]);
   const [copied, setCopied] = useState<boolean>(false);
@@ -87,7 +87,7 @@ export default function DialogDemo() {
                   <Input
                     key={index}
                     id={`team-email-${index + 1}`}
-                    placeholder="hi@yourcompany.com"
+                    placeholder="contact@designali.in"
                     type="email"
                     value={email}
                     onChange={(e) => handleEmailChange(index, e.target.value)}
@@ -119,7 +119,7 @@ export default function DialogDemo() {
               id="input-53"
               className="pe-9"
               type="text"
-              defaultValue="https://originui.com/refer/87689"
+              defaultValue="https://www.designali.in/dashboard/teams"
               readOnly
             />
             <TooltipProvider delayDuration={0}>

@@ -19,7 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const PROJECT_NAME = "Origin UI";
+const PROJECT_NAME = "Designali";
 
 export default function DialogDemo() {
   const [inputValue, setInputValue] = useState("");
@@ -39,11 +39,12 @@ export default function DialogDemo() {
           </div>
           <DialogHeader>
             <DialogTitle className="sm:text-center">
-              Final confirmation
+              Final Design Approval
             </DialogTitle>
             <DialogDescription className="sm:text-center">
-              This action cannot be undone. To confirm, please enter the project
-              name <span className="text-foreground">Origin UI</span>.
+              This action will finalize your design. To confirm, please enter
+              the project name{" "}
+              <span className="text-foreground">Designali</span>.
             </DialogDescription>
           </DialogHeader>
         </div>
@@ -54,7 +55,7 @@ export default function DialogDemo() {
             <Input
               id="project-name"
               type="text"
-              placeholder="Type Origin UI to confirm"
+              placeholder="Type Designali to confirm"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
@@ -70,7 +71,7 @@ export default function DialogDemo() {
               className="flex-1"
               disabled={inputValue !== PROJECT_NAME}
             >
-              Delete
+              Approve
             </Button>
           </DialogFooter>
         </form>

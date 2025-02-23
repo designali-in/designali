@@ -8,7 +8,7 @@ export default function ButtonDemo() {
   return (
     <Button variant="link">
       <ChevronLeft
-        className="me-1 opacity-60"
+        className="opacity-60"
         size={16}
         strokeWidth={2}
         aria-hidden="true"

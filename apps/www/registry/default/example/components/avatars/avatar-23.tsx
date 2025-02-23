@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AvatarImg03 from "@/public/avatars/avatar-80-03.jpg";
-import AvatarImg02 from "@/public/avatars/avatar-80-05.jpg";
-import AvatarImg01 from "@/public/avatars/avatar-80-06.jpg";
-import AvatarImg04 from "@/public/avatars/avatar-80-07.jpg";
+import AvatarImg03 from "@/public/avatars/avatar_21.jpg";
+import AvatarImg02 from "@/public/avatars/avatar_22.jpg";
+import AvatarImg01 from "@/public/avatars/avatar_23.jpg";
+import AvatarImg04 from "@/public/avatars/avatar_24.jpg";
 
 export default function AvatarDemo() {
   return (
@@ -38,8 +38,8 @@ export default function AvatarDemo() {
         />
       </div>
       <p className="px-2 text-xs text-muted-foreground">
-        Trusted by <strong className="font-medium text-foreground">60K+</strong>{" "}
-        developers.
+        Trusted by <strong className="font-medium text-foreground">90K+</strong>{" "}
+        designers.
       </p>
     </div>
   );
