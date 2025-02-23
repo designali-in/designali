@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AdBanner from "@/comp/AdBanner";
 import { GradientGenerator } from "@/comp/tools/gradient-generator";
+import GradientText from "@/registry/default/ui/texts/gradient-text";
 
 import { cn } from "@/lib/utils";
 import {
@@ -25,7 +26,7 @@ export const metadata = {
 export default function AboutAI() {
   return (
     <div className="relative">
-      <div className=" my-40">
+      <div className="my-40">
         <div className="">
           <Image
             src="/images/products/grad.png"

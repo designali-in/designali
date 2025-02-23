@@ -16,7 +16,7 @@ export default function GradientText({
   as: Component = "span",
   ...props
 }: GradientTextProps) {
-  const MotionComponent = motion(Component);
+  const MotionComponent = motion.create(Component);
 
   return (
     <MotionComponent
