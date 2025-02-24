@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/buttons/button-09.tsx",
-      "content": "import { ArrowRight } from \"dicons\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button className=\"group\">\n      Button\n      <ArrowRight\n        className=\"h-3 w-3  opacity-60 transition-transform group-hover:translate-x-0.5\"\n        strokeWidth={1}\n        aria-hidden=\"true\"\n      />\n    </Button>\n  );\n}\n",
+      "content": "import { ArrowRight } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button className=\"group\">\n      Button\n      <ArrowRight\n        className=\"-me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5\"\n        size={16}\n        strokeWidth={2}\n        aria-hidden=\"true\"\n      />\n    </Button>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

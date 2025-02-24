@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/components/buttons/button-17.tsx",
-      "content": "import Image from \"next/image\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button className=\"rounded-full py-0 ps-0\">\n      <div className=\"flex aspect-square h-full p-1.5\">\n        <Image\n          className=\"h-auto w-full rounded-full object-cover\"\n          src={\"/ali.jpg\"}\n          alt=\"Profile image\"\n          width={24}\n          height={24}\n          aria-hidden=\"true\"\n        />\n      </div>\n      @aliimam\n    </Button>\n  );\n}\n",
+      "content": "import Image from \"next/image\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <Button className=\"rounded-full py-0 ps-0\">\n      <div className=\"me-0.5 flex aspect-square h-full p-1.5\">\n        <Image\n          className=\"h-auto w-full rounded-full\"\n          src={\"/ali.jpg\"}\n          alt=\"Profile image\"\n          width={24}\n          height={24}\n          aria-hidden=\"true\"\n        />\n      </div>\n      @georgelucas\n    </Button>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }
