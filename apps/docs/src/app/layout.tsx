@@ -12,7 +12,7 @@ import Fathom from "@/components/Fathom";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://designali.in/"),
-  title: "Wedges Docs",
+  title: "UI Docs",
   description: siteConfig.siteDescription,
 };
 

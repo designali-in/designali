@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "example/texts/gradient-text-01.tsx",
-      "content": "import GradientText from \"@/components/ui/texts/gradient-text\";\n\nexport default function GradientTextDemo() {\n  return (\n    <h1 className=\"text-4xl font-bold tracking-tighter  md:text-5xl lg:text-7xl\">\n      Design <GradientText>beautiful</GradientText>\n    </h1>\n  );\n}\n",
+      "content": "import GradientText from \"@/components/ui/texts/gradient-text\";\n\nexport default function GradientTextDemo() {\n  return (\n    <h1 className=\"text-center text-4xl font-bold tracking-tighter  md:text-5xl lg:text-7xl\">\n      Design <GradientText>without</GradientText> Limits\n    </h1>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }
