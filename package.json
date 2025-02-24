@@ -40,6 +40,7 @@
     "husky": "^8.0.3",
     "prettier": "^3.2.5",
     "puppeteer": "^23.6.0",
+    "rimraf": "^6.0.1",
     "tsup": "^8.2.4",
     "turbo": "^2.4.0",
     "typescript": "^5.4.5"

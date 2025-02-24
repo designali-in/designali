@@ -1,0 +1,36 @@
+@import "./docsearch.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    font-feature-settings: "ss04";
+  }
+
+  .hover-effect,
+  .hover-effect .arrow {
+    transition-duration: 280ms !important;
+  }
+
+  .hover-effect:hover .arrow {
+    transform: translateX(0.5rem);
+  }
+}
+
+@layer utilities {
+  .fade-mask {
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
+  }
+
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex h-10 w-10 items-center justify-center rounded-full border border-surface-100 bg-white font-sans text-sm font-medium text-surface-900 ring-4 ring-white;
+    @apply ml-[-52px];
+    content: counter(step);
+  }
+}

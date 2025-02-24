@@ -1,0 +1,104 @@
+[data-rehype-pretty-code-figure] {
+  @apply relative text-gray-400;
+
+  &:has([data-rehype-pretty-code-title]) .wg-copy-button {
+    top: 2.5rem;
+  }
+
+  code {
+    @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-inherit;
+    counter-reset: line;
+    box-decoration-break: clone;
+  }
+
+  &:has(> [data-rehype-pretty-code-caption]) pre {
+    @apply mb-0;
+  }
+
+  [data-line] {
+    @apply inline min-h-[24px] w-full border-l-[3px] border-transparent px-4 py-0;
+  }
+
+  [data-line-numbers] [data-line] {
+    @apply px-2;
+  }
+
+  [data-line-numbers] > [data-line]::before {
+    @apply relative inline-flex items-center justify-end text-xs text-white/40;
+    counter-increment: line;
+    content: counter(line);
+    width: 1.5em;
+    margin-right: 1.25em;
+  }
+
+  [data-highlighted-line] {
+    @apply border-primary-400;
+    background-color: rgba(255, 255, 255, 0.08);
+
+    span {
+      @apply relative;
+    }
+  }
+
+  [data-highlighted-chars] {
+    @apply rounded-sm bg-white/10 px-1;
+  }
+
+  [data-chars-id="s"] {
+    background-color: rgb(252 106 255 / 12%);
+  }
+
+  .diff.remove,
+  .diff.add {
+    &:after {
+      content: "+";
+      position: absolute;
+      left: 3em;
+    }
+  }
+
+  .diff.remove {
+    @apply border-wg-red bg-wg-red/10;
+    opacity: 0.7;
+
+    &:after {
+      @apply text-wg-red;
+      content: "-";
+    }
+
+    & + .diff.add {
+      &:before {
+        counter-increment: line + 0;
+      }
+    }
+  }
+
+  .diff.add {
+    @apply border-wg-green bg-wg-green/10;
+    &:after {
+      @apply text-wg-green;
+      content: "+";
+    }
+  }
+}
+
+[data-rehype-pretty-code-caption] {
+  @apply mt-2 text-center text-[13px] text-surface-500;
+}
+
+[data-rehype-pretty-code-title] {
+  @apply mt-6 px-5 text-[13px] font-medium text-surface-900;
+
+  & + pre {
+    @apply mt-1.5;
+  }
+}
+
+.contains-task-list {
+  list-style-type: none;
+}
+
+.task-list-item input[type="checkbox"] {
+  margin: 0 0.2em 0 -1.4em;
+  vertical-align: middle;
+}

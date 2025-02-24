@@ -1,0 +1,333 @@
+---
+title: Tooltip
+description:
+  A small box that appears when hovering over a UI element, providing additional
+  information.
+links:
+  source: https://github.com/lmsqueezy/wedges/blob/main/packages/wedges/src/components/Tooltip/Tooltip.tsx
+  radix: https://www.radix-ui.com/primitives/docs/components/tooltip
+---
+
+<PreviewComponent name="tooltip/preview" />
+
+### Usage
+
+For a quick usage, use the `Tooltip` component directly.
+
+```tsx
+import { Tooltip } from "@designali/ui";
+```
+
+```tsx showLineNumbers
+<Tooltip content="Tooltip Content" />
+```
+
+For more advanced usage, inner components are exported from the `Tooltip`
+component.
+
+```tsx showLineNumbers
+<Tooltip.Provider>
+  <Tooltip.Root>
+    <Tooltip.Trigger />
+    <Tooltip.Portal>
+      <Tooltip.Content>
+        <Tooltip.Arrow />
+      </Tooltip.Content>
+    </Tooltip.Portal>
+  </Tooltip.Root>
+</Tooltip.Provider>
+```
+
+### API Reference
+
+#### Tooltip
+
+Use this component for a quick usage.
+
+<PropsTable
+  content={[
+    [
+      {
+        value: "defaultOpen",
+        description:
+          "The open state of the tooltip when it is initially rendered. Use when you do not need to control its open state.",
+      },
+      { value: "boolean" },
+      {},
+    ],
+    [
+      {
+        value: "open",
+        description:
+          "The controlled open state of the tooltip. Must be used in conjunction with `onOpenChange`.",
+      },
+      { value: "boolean" },
+      {},
+    ],
+    [
+      {
+        value: "onOpenChange",
+        description:
+          "Event handler called when the open state of the tooltip changes.",
+      },
+      { value: "function", description: "(open: boolean) => void" },
+      {},
+    ],
+    [
+      {
+        value: "delayDuration",
+        description:
+          "Override the duration given to the `Provider` to customise the open delay for a specific tooltip.",
+      },
+      { value: "number" },
+      { value: "200" },
+    ],
+    [
+      {
+        value: "disableHoverableContent",
+        description:
+          "Prevents `Tooltip.Content` from remaining open when hovering. Disabling this has accessibility consequences.",
+      },
+      { value: "boolean" },
+      { value: "false" },
+    ],
+    [
+      {
+        value: "animation",
+        description:
+          "If set to `true`, the tooltip displays with animation effects during its opening and closing actions.",
+      },
+      { value: "boolean" },
+      { value: "true" },
+    ],
+    [
+      {
+        value: "arrow",
+        description:
+          "Whether to show an arrow pointing towards the element the tooltip is associated with.",
+      },
+      { value: "boolean" },
+      { value: "true" },
+    ],
+    [
+      {
+        value: "children",
+        description:
+          "Specify a custom trigger element to replace the default information icon.",
+      },
+      { value: "ReactNode" },
+      {},
+    ],
+    [
+      { value: "color" },
+      { value: '"primary" | "secondary" | "soft"' },
+      { value: '"primary"' },
+    ],
+    [
+      {
+        value: "content",
+        description: "The content to display inside the tooltip.",
+      },
+      { value: "ReactNode" },
+      {},
+    ],
+    [
+      {
+        value: "delayDuration",
+        description:
+          "The duration (in milliseconds) to delay before showing/hiding the tooltip.",
+      },
+      { value: "number" },
+      { default: "200" },
+    ],
+    [
+      {
+        value: "open",
+        description: "If set to `true`, the tooltip will be open on load.",
+      },
+      { value: "boolean" },
+      {},
+    ],
+    [
+      {
+        value: "onOpenChange",
+        description:
+          "Event handler called when the open state of the tooltip changes.",
+      },
+      { value: "function", description: "(open: boolean) => void" },
+      {},
+    ],
+    [{ value: "size" }, { value: '"sm" | "md"' }, { value: '"sm"' }],
+    [
+      {
+        value: "asChild",
+        description:
+          "Change the default rendered element for the one passed as a child, merging their props and behavior. This is passed to `Tooltip.Trigger`.",
+      },
+      { value: "boolean" },
+      { value: "false" },
+    ],
+    [
+      {
+        value: "onEscapeKeyDown",
+        description: "Event handler called when the escape key is down.",
+      },
+      { value: "function", description: "(event: KeyboardEvent) => void" },
+      {},
+    ],
+    [
+      {
+        value: "onPointerDownOutside",
+        description:
+          "Event handler called when a pointer event occurs outside the bounds of the component.",
+      },
+      {
+        value: "function",
+        description: "(event: PointerDownOutsideEvent) => void",
+      },
+      {},
+    ],
+    [
+      {
+        value: "forceMount",
+        description:
+          "Used to force mounting when more control is needed. Useful when controlling animation with React animation libraries.",
+      },
+      { value: "boolean" },
+      {},
+    ],
+    [
+      {
+        value: "side",
+      },
+      { value: '"top" | "right" | "bottom" | "left"' },
+      { value: '"top"' },
+    ],
+    [
+      {
+        value: "sideOffset",
+        description: "The distance in pixels from the trigger.",
+      },
+      { value: "number" },
+      { value: "2" },
+    ],
+    [
+      {
+        value: "align",
+      },
+      { value: '"start" | "center" | "end"' },
+      { value: '"center"' },
+    ],
+    [
+      {
+        value: "alignOffset",
+        description:
+          'An offset in pixels from the "start" or "end" alignment options.',
+      },
+      { value: "number" },
+      { value: "-12" },
+    ],
+    [
+      {
+        value: "avoidCollisions",
+        description:
+          "When set to `true`, this option overrides `side` and `align` preferences to avoid collisions with boundary edges.",
+      },
+      { value: "boolean" },
+      { value: "true" },
+    ],
+    [
+      {
+        value: "collisionBoundary",
+        description:
+          "Specify the element that acts as the collision boundary. Viewport is the default setting, but you can use other elements for collision detection.",
+      },
+      { value: '"Element" | "null" | "Array<Element | null>"' },
+      { value: "[]" },
+    ],
+    [
+      {
+        value: "collisionPadding",
+        description:
+          "The pixel distance for collision detection from boundary edges. Accepts a single number for uniform padding, or an object like `{ top: 20, left: 20 }` for specific sides.",
+      },
+      { value: '"number" | "Partial<Record<Side, number>>"' },
+      { value: "0" },
+    ],
+    [
+      {
+        value: "arrowPadding",
+        description:
+          "The padding between the arrow and the content edges, preventing content with border-radius from overflowing the corners.",
+      },
+      { value: '"number"' },
+      { value: "0" },
+    ],
+    [
+      {
+        value: "sticky",
+        description:
+          'The align axis sticky behavior. "partial" ensures content stays within the boundary if the trigger is even partially within, while "always" maintains content inside the boundary under all circumstances.',
+      },
+      { value: '"partial" | "always"' },
+      { value: '"partial"' },
+    ],
+    [
+      {
+        value: "hideWhenDetached",
+        description:
+          "Whether to conceal the content once the trigger is completely obscured.",
+      },
+      { value: "boolean" },
+      { value: "false" },
+    ],
+  ]}
+/>
+
+#### Tooltip.Provider
+
+Extends the
+<a href="https://www.radix-ui.com/primitives/docs/components/tooltip#provider" target="_blank" rel='nofollow noreferrer'>Radix
+Tooltip Provider</a> primitive with custom configuration.
+
+#### Tooltip.Root
+
+Extends the
+<a href="https://www.radix-ui.com/primitives/docs/components/tooltip#root" target="_blank" rel='nofollow noreferrer'>Radix
+Tooltip Root</a> primitive with custom configuration.
+
+#### Tooltip.Trigger
+
+Extends the
+<a href="https://www.radix-ui.com/primitives/docs/components/tooltip#trigger" target="_blank" rel='nofollow noreferrer'>Radix
+Tooltip Trigger</a> primitive with custom styling.
+
+#### Tooltip.Arrow
+
+Extends the
+<a href="https://www.radix-ui.com/primitives/docs/components/tooltip#arrow" target="_blank" rel='nofollow noreferrer'>Radix
+Tooltip Arrow</a> primitive with custom styling.
+
+#### Tooltip.Content
+
+Extends the
+<a href="https://www.radix-ui.com/primitives/docs/components/tooltip#content" target="_blank" rel='nofollow noreferrer'>Radix
+Tooltip Content</a> primitive with custom styling.
+
+#### Tooltip.Portal
+
+Exports the
+<a href="https://www.radix-ui.com/primitives/docs/components/tooltip#portal" target="_blank" rel='nofollow noreferrer'>Radix
+Tooltip Portal</a> primitive.
+
+### Examples
+
+The example below displays all possible combinations of positions and alignments
+available for the `Tooltip` component.
+
+<PreviewComponent name="tooltip/example-1" />
+
+The example below demonstrates different color and size variations of the
+Tooltip component.
+
+<PreviewComponent name="tooltip/example-2" />
