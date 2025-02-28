@@ -20,7 +20,9 @@
     "dev:next": "turbo watch dev -F @designali/www...",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
+    "typecheck": "turbo run typecheck",
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
