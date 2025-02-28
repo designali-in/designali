@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "examples/components/sliders/slider-10.tsx",
-      "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderDemo() {\n  return (\n    <div className=\"space-y-4\">\n      <Label>Slider with labels and tooltip</Label>\n      <div>\n        <span\n          className=\"mb-3 flex w-full items-center justify-between gap-2 text-xs font-medium text-muted-foreground\"\n          aria-hidden=\"true\"\n        >\n          <span>Low</span>\n          <span>High</span>\n        </span>\n        <Slider\n          defaultValue={[50]}\n          step={10}\n          aria-label=\"Slider with labels and tooltip\"\n        />\n      </div>\n    </div>\n  );\n}\n",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderDemo() {\n  return (\n    <div className=\"space-y-4\">\n      <Label>Slider with labels and tooltip</Label>\n      <div>\n        <span\n          className=\"mb-3 flex w-full items-center justify-between gap-2 text-xs font-medium text-muted-foreground\"\n          aria-hidden=\"true\"\n        >\n          <span>Low</span>\n          <span>High</span>\n        </span>\n        <Slider\n          defaultValue={[50]}\n          step={10}\n          showTooltip={true}\n          aria-label=\"Slider with labels and tooltip\"\n        />\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

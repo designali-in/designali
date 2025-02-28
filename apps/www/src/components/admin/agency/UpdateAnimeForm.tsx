@@ -330,7 +330,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
                 "w-fit ",
                 {
                   "pointer-events-none opacity-50": deleteLoader,
-                }
+                },
               )}
             >
               {deleteLoader && (

@@ -7,28 +7,18 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "build:apps": "turbo build --filter=./apps/*",
-    "build:packages": "turbo build --filter=./packages/*",
-    "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean  --filter=./apps/*",
-    "db:generate": "turbo db:generate",
-    "db:migrate": "turbo db:migrate",
-    "db:push": "turbo db:push",
-    "db:seed": "turbo db:seed",
-    "db:studio": "turbo db:studio",
-    "dev:packages": "turbo dev --filter=./packages/*",
-    "dev:next": "turbo watch dev -F @designali/www...",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "lint:ws": "pnpm dlx sherif@latest",
-    "postinstall": "pnpm lint:ws",
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "dependencies": {
+    "tsx": "^4.1.4"
+    
   },
   "devDependencies": {
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tsx": "^4.1.4",
     "turbo": "^2.4.4"
   },
   "packageManager": "pnpm@8.15.6",
