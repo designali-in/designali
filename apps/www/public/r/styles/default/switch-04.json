@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch-04",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/switches/switch-04.tsx",
+      "path": "examples/components/switches/switch-04.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function SwitchDemo() {\n  return (\n    <div className=\"inline-flex items-center gap-2\">\n      <Switch id=\"switch-04\" disabled />\n      <Label htmlFor=\"switch-04\" className=\"sr-only\">\n        Disabled\n      </Label>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

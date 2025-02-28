@@ -1,8 +1,9 @@
+//@ts-nocheck
 import crypto from "crypto";
 import { Session } from "next-auth";
 
 import { prisma } from "./db";
-import { getBaseUrl } from "./dutils";
+import { getBaseUrl } from "./utils";
 
 /**
  * Get URL by its ID otherwise

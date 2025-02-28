@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-05",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/badges/badge-05.tsx",
+      "path": "examples/components/badges/badge-05.tsx",
       "content": "import { cn } from \"@/lib/utils\";\nimport { badgeVariants } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return (\n    <a\n      href=\"#\"\n      className={cn(\n        badgeVariants({ variant: \"default\" }),\n        \"hover:bg-primary/80\",\n      )}\n    >\n      Link\n    </a>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

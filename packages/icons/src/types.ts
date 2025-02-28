@@ -1,6 +1,5 @@
 import type {
   ForwardRefExoticComponent,
-  ReactSVG,
   RefAttributes,
   SVGProps,
 } from "react";
@@ -13,6 +12,8 @@ export interface DesignaliProps extends ElementAttributes {
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
 type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
+
+import { ReactSVG } from "react-svg";
 
 export type IconNode = [
   elementName: keyof ReactSVG,

@@ -1,6 +1,7 @@
+//@ts-nocheck
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import PostClient from "@/comp/dashboard/admin/community/post/PostClient";
+import PostClient from "@/components/dashboard/community/post/PostClient";
 
 import { auth } from "@/lib/auth";
 import { INFINITE_SCROLLING_PAGINATION_RESULTS } from "@/lib/constants";

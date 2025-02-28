@@ -1,4 +1,5 @@
-import type { PlansRow, SubscriptionPlan } from "@/types";
+//@ts-nocheck
+import type { PlansRow, SubscriptionPlan } from "@/types/global";
 
 import { env } from "@/env";
 

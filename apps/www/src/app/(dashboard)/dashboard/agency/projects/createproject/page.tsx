@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import CreateProject from "@/src/comp/dashboard/admin/ticket/CreateProject";
+import CreateProject from "@/src/components/dashboard/ticket/CreateProject";
 
 export default function AgencyPage() {
   return (

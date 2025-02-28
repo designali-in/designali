@@ -1,47 +1,28 @@
 {
   "name": "designali",
-  "version": "0.1.0",
   "private": true,
   "author": {
     "name": "designali",
     "url": "https://twitter.com/designali"
   },
-  "engines": {
-    "node": "v22.12.0"
-  },
-  "packageManager": "pnpm@8.15.5",
-  "prettier": "@designali/prettier-config",
   "scripts": {
     "build": "turbo run build",
-    "build:apps": "turbo build --filter=./apps/*",
-    "build:packages": "turbo build --filter=./packages/*",
-    "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean  --filter=./apps/*",
-    "db:generate": "turbo db:generate",
-    "db:migrate": "turbo db:migrate",
-    "db:push": "turbo db:push",
-    "db:seed": "turbo db:seed",
-    "db:studio": "turbo db:studio",
-    "dev": "turbo watch dev",
-    "dev:packages": "turbo dev --filter=./packages/*",
-    "dev:next": "turbo watch dev -F @designali/www...",
-    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
-    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:ws": "pnpm dlx sherif@latest",
-    "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo run typecheck",
-    "ui-add": "turbo run ui-add"
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "dependencies": {
+    "tsx": "^4.1.4"
+    
   },
   "devDependencies": {
-    "@designali/prettier-config": "workspace:*",
-    "@turbo/gen": "^2.4.0",
-    "@types/react": "^18.2.77",
-    "husky": "^8.0.3",
-    "prettier": "^3.2.5",
-    "puppeteer": "^23.6.0",
-    "tsup": "^8.2.4",
-    "turbo": "^2.4.0",
-    "typescript": "^5.4.5"
+    "prettier": "^3.5.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.4.4"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
   }
 }

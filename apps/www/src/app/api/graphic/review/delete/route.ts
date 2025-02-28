@@ -1,4 +1,4 @@
-import { AnimeReviewDeleteSchema } from "@/src/lib/validations/graphic";
+import { AnimeReviewDeleteSchema } from "@/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";

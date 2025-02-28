@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-03",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/avatars/avatar-03.tsx",
+      "path": "examples/components/avatars/avatar-03.tsx",
       "content": "import { UserRound } from \"lucide-react\";\n\nimport { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar>\n      <AvatarFallback>\n        <UserRound\n          size={16}\n          strokeWidth={2}\n          className=\"opacity-60\"\n          aria-hidden=\"true\"\n        />\n      </AvatarFallback>\n    </Avatar>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

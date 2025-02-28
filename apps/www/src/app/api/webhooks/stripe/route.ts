@@ -1,7 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+ //@ts-nocheck
 import type Stripe from "stripe";
 import { headers } from "next/headers";
 

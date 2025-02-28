@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CreatePollClient from "@/comp/dashboard/admin/poll/CreatePollClient";
+import CreatePollClient from "@/components/dashboard/poll/CreatePollClient";
 
 import { env } from "@/env";
 import {

@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "retro-grid-01",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/backgrounds/retro-grid-01.tsx",
-      "content": "\"use client\";\n\nimport RetroGrid from \"@/registry/default/ui/backgrounds/retro-grid\";\n\nexport default function RetroGrid01() {\n  return (\n    <div className=\"relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-dotted bg-background\">\n      <span className=\"pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-l from-[#458fff] via-[#b7ff00] to-[#ff0000] bg-clip-text text-center text-5xl font-bold leading-none tracking-tighter text-transparent\">\n        Retro Grid\n      </span>\n      <RetroGrid />\n    </div>\n  );\n}\n",
+      "path": "examples/backgrounds/retro-grid-01.tsx",
+      "content": "\"use client\";\n\nimport RetroGrid from \"@/components/ui/backgrounds/retro-grid\";\n\nexport default function RetroGrid01() {\n  return (\n    <div className=\"relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-dotted bg-background\">\n      <span className=\"pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-l from-[#458fff] via-[#b7ff00] to-[#ff0000] bg-clip-text text-center text-5xl font-bold leading-none tracking-tighter text-transparent\">\n        Retro Grid\n      </span>\n      <RetroGrid />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

@@ -7,7 +7,7 @@ import { StrokeDance } from "@/registry/default/blocks/hero-01/components/stroke
 import { TypeWriter } from "@/registry/default/blocks/hero-01/components/type-writer";
 import { DIcons } from "dicons";
 
-import DotPattern from "@/components/ui/backgrounds/dot-pattern";
+import { DotPattern } from "@/components/ui/backgrounds/dot-pattern";
 import { Button } from "@/components/ui/button";
 
 export const description = "A simple Hero section";

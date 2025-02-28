@@ -43,7 +43,7 @@ export function getColors() {
           colors: color.map((color) => {
             const rgb = color.rgb.replace(
               /^rgb\((\d+),(\d+),(\d+)\)$/,
-              "$1 $2 $3",
+              "$1 $2 $3"
             );
 
             return {
@@ -54,14 +54,14 @@ export function getColors() {
               rgb,
               hsl: color.hsl.replace(
                 /^hsl\(([\d.]+),([\d.]+%),([\d.]+%)\)$/,
-                "$1 $2 $3",
+                "$1 $2 $3"
               ),
               foreground: getForegroundFromBackground(rgb),
             };
           }),
         };
       })
-      .filter(Boolean),
+      .filter(Boolean)
   );
 
   return tailwindColors;
@@ -70,7 +70,7 @@ export function getColors() {
 export type Color = ReturnType<typeof getColors>[number]["colors"][number];
 
 function getForegroundFromBackground(rgb: string) {
-  const [r, g, b] = rgb.split(" ").map(Number);
+  const [r, g, b] = rgb.split(" ").map(Number) as [number, number, number];
 
   function toLinear(number: number): number {
     const base = number / 255;

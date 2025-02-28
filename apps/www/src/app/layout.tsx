@@ -1,76 +1,108 @@
-import "@/styles/globals.css";
-
-import { env } from "process";
-import type { Metadata, Viewport } from "next";
-import Image from "next/image";
-import AdSense from "@/comp/AdSense";
-import Analytics from "@/comp/analytics";
-import CookieConsent from "@/comp/common/CookieConsent";
-import Providers from "@/comp/Providers";
-import { DToaster } from "@/comp/uis/toaster";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import "@/src/styles/globals.css";
+import { Metadata, Viewport } from "next";
+import { META_THEME_COLORS, siteConfig } from "@/src/config/site";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
-
-import { cn } from "@/lib/utils";
-import { Toaster } from "@/components/ui/toasts";
+import { cn } from "@/src/lib/utils";
+import { Toaster } from "@/components/ui/sonner";
+import Providers from "@/components/common/providers";
+import { TailwindIndicator } from "@/components/common/tailwind-indicator";
+import AdSense from "@/components/common/AdSense";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Analytics from "@/components/common/analytics";
+import CookieConsent from "@/components/common/CookieConsent";
+import { Header } from "@/src/components/layout/header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    env.VERCEL_ENV === "production"
-      ? "https://designali.in"
-      : "http://localhost:3000",
-  ),
-  title: "Designali",
-  description: "A design agency with a touch of magic.",
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  metadataBase: new URL(siteConfig.url),
+  description: siteConfig.description,
+  keywords: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Server Components",
+    "Radix UI",
+  ],
+  authors: [
+    {
+      name: "designali",
+      url: "https://designali.in",
+    },
+  ],
+  creator: "designali",
   openGraph: {
-    title: "Designali",
-    description: "A design agency with a touch of magic.",
-    url: "https://designali.in",
-    siteName: "Designali",
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@designali_in",
-    creator: "@designali_in",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: "@shadcn",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  themeColor: META_THEME_COLORS.light,
 };
 
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-}
-export default function RootLayout({ children }: RootLayoutProps) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/Davicon.svg" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/Davicon.svg" />
-        <meta name="google-adsense-account" content="ca-pub-8509771369416706" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
         <AdSense pId="ca-pub-3647003303744848" />
       </head>
       <body
         className={cn(
-          "bg-white font-sans text-foreground dark:bg-black",
+          "min-h-svh bg-background font-sans antialiased",
           GeistSans.variable,
-          GeistMono.variable,
+          GeistMono.variable
         )}
       >
+        <TailwindIndicator />
+        <Toaster />
         <Providers>
+          <Header />
           {children}
-
           <CookieConsent />
-          <DToaster />
-          <Toaster />
           <Analytics />
           <GoogleAnalytics gaId="G-85BCJQ64HE" />
         </Providers>

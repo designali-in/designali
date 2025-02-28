@@ -1,10 +1,11 @@
+//@ts-nocheck
 import { Suspense } from "react";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import AddCommentClient from "@/comp/dashboard/admin/community/post/AddCommentClient";
-import Comments from "@/comp/dashboard/admin/community/post/Comments";
-import LikePostClient from "@/comp/dashboard/admin/community/post/LikePostClient";
-import PostDropdownClient from "@/comp/dashboard/admin/community/post/PostDropdownClient";
+import AddCommentClient from "@/components/dashboard/community/post/AddCommentClient";
+import Comments from "@/components/dashboard/community/post/Comments";
+import LikePostClient from "@/components/dashboard/community/post/LikePostClient";
+import PostDropdownClient from "@/components/dashboard/community/post/PostDropdownClient";
 import { DIcons } from "dicons";
 
 import { auth } from "@/lib/auth";

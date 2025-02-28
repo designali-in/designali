@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-05",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/selects/select-05.tsx",
-      "content": "import { SelectNative } from \"@/registry/default/ui/select-native\";\n\nimport { Label } from \"@/components/ui/label\";\n\nexport default function SelectDemo() {\n  return (\n    <div\n      className=\"space-y-2\"\n      // NOTE: This inline style is to show how to set the --ring variable in your CSS file in order to change the focus ring color.\n      style={{ \"--ring\": \"234 89% 74%\" } as React.CSSProperties}\n    >\n      <Label htmlFor=\"select-05\">Select with colored border (native)</Label>\n      <SelectNative id=\"select-05\">\n        <option value=\"s1\">React</option>\n        <option value=\"s2\">Next.js</option>\n        <option value=\"s3\">Astro</option>\n        <option value=\"s4\">Gatsby</option>\n      </SelectNative>\n    </div>\n  );\n}\n",
+      "path": "examples/components/selects/select-05.tsx",
+      "content": "import { SelectNative } from \"@/components/ui/select-native\";\n\nimport { Label } from \"@/components/ui/label\";\n\nexport default function SelectDemo() {\n  return (\n    <div\n      className=\"space-y-2\"\n      // NOTE: This inline style is to show how to set the --ring variable in your CSS file in order to change the focus ring color.\n      style={{ \"--ring\": \"234 89% 74%\" } as React.CSSProperties}\n    >\n      <Label htmlFor=\"select-05\">Select with colored border (native)</Label>\n      <SelectNative id=\"select-05\">\n        <option value=\"s1\">React</option>\n        <option value=\"s2\">Next.js</option>\n        <option value=\"s3\">Astro</option>\n        <option value=\"s4\">Gatsby</option>\n      </SelectNative>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

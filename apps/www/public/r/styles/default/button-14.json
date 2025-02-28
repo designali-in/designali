@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-14",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/buttons/button-14.tsx",
+      "path": "examples/components/buttons/button-14.tsx",
       "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { LoaderCircle } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  const [isLoading, setIsLoading] = useState<boolean>(false);\n\n  const handleClick = () => {\n    setIsLoading(true);\n    // Simulate an async operation\n    setTimeout(() => {\n      setIsLoading(false);\n    }, 1000); // Reset after 1 second\n  };\n\n  return (\n    <Button\n      onClick={handleClick}\n      disabled={isLoading}\n      data-loading={isLoading}\n      className=\"group relative disabled:opacity-100\"\n    >\n      <span className=\"group-data-[loading=true]:text-transparent\">\n        Click me\n      </span>\n      {isLoading && (\n        <div className=\"absolute inset-0 flex items-center justify-center\">\n          <LoaderCircle\n            className=\"animate-spin\"\n            size={16}\n            strokeWidth={2}\n            aria-hidden=\"true\"\n          />\n        </div>\n      )}\n    </Button>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

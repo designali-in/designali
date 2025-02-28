@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-09",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/checkboxes/checkbox-09.tsx",
+      "path": "examples/components/checkboxes/checkbox-09.tsx",
       "content": "import { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function CheckboxDemo() {\n  return (\n    <div className=\"flex items-center justify-between gap-2\">\n      <Checkbox id=\"checkbox-09\" className=\"order-1\" />\n      <Label htmlFor=\"checkbox-09\">Right aligned checkbox</Label>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

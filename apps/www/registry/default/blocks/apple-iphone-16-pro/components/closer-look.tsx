@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { DIcons } from "dicons";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 

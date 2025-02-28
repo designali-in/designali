@@ -1,6 +1,4 @@
-import { DeleteAccountForm } from "@/comp/forms/delete-account-form";
-import { EmailPreferencesForm } from "@/comp/forms/email-preferences-form";
-import { ProfileForm } from "@/comp/forms/profile-form";
+ 
 
 import { auth } from "@/lib/auth";
 import {
@@ -26,7 +24,7 @@ export default async function SettingsProfile() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <EmailPreferencesForm user={session.user} />
+              Emails Notifications
             </CardContent>
           </Card>
         </div>

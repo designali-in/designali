@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+//@ts-nocheck
 import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 import {prisma} from "@/lib/db";

@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "banner-02",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/banners/banner-02.tsx",
+      "path": "examples/components/banners/banner-02.tsx",
       "content": "import { DIcons } from \"dicons\";\n\nexport default function BannerDemo() {\n  return (\n    <div className=\"dark bg-muted px-4 py-3 text-foreground\">\n      <p className=\"text-center text-sm\">\n        <DIcons.Designali\n          className=\"-mt-0.5 me-3 inline-flex h-4 w-4 opacity-60\"\n          aria-hidden=\"true\"\n        />\n        Enhance your design workflow with real-time updates and in-depth\n        analytics. 🚀\n        <span className=\"text-muted-foreground\">·</span>{\" \"}\n        <a href=\"#\" className=\"ml-2 font-medium underline hover:no-underline\">\n          Upgrade\n        </a>\n      </p>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

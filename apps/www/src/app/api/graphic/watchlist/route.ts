@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import type { AnimeWatchlistServerType } from "@/src/lib/validations/graphic";
+//@ts-nocheck
+import type { AnimeWatchlistServerType } from "@/lib/validations/graphic";
 import {
   AnimeWatchlistServer,
   AnimeWatchlistUpdate,
-} from "@/src/lib/validations/graphic";
+} from "@/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";

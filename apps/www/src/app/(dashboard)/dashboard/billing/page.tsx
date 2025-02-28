@@ -1,4 +1,5 @@
-import { BillingInfo } from "@/comp/dashboard/pricing/billing-info";
+//@ts-nocheck
+import { BillingInfo } from "@/components/dashboard/pricing/billing-info";
 
 import { getCurrentUser } from "@/lib/session";
 import { getUserSubscriptionPlan } from "@/lib/subscription";

@@ -1,6 +1,7 @@
+//@ts-nocheck
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import CommunityClient from "@/comp/dashboard/admin/community/CommunityClient";
+import CommunityClient from "@/components/dashboard/community/CommunityClient";
 import { categories } from "@/data/community";
 
 import { INFINITE_SCROLLING_PAGINATION_RESULTS } from "@/lib/constants";

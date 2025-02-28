@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-07",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/selects/select-07.tsx",
+      "path": "examples/components/selects/select-07.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { SelectNative } from \"@/components/ui/select-native\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-07\">Select with gray background (native)</Label>\n      <SelectNative\n        id=\"select-07\"\n        className=\"border-transparent bg-muted shadow-none\"\n      >\n        <option value=\"s1\">React</option>\n        <option value=\"s2\">Next.js</option>\n        <option value=\"s3\">Astro</option>\n        <option value=\"s4\">Gatsby</option>\n      </SelectNative>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

@@ -1,45 +1,52 @@
-import type { IconDescriptor } from "next/dist/lib/metadata/types/metadata-types";
-
-interface Site {
-  url: string;
-  title: string;
-  name: string;
-  emails: string;
-  keywords: string[];
-  titleTemplate: string;
-  description: string;
-  githubUsername: string;
-  socialBanner: string;
-  favicons: IconDescriptor[];
+export const siteConfig = {
+  name: "Designali",
+  url: "https://designali.in",
+  ogImage: "https://designali.in/og.jpg",
+  description:
+    "Your complete platform for the Design.",
+  links: {
+    twitter: "https://twitter.com/designali-in",
+    github: "https://github.com/designali-in",
+  },
+  emails: {
+    from: {
+      name: "Designali",
+      email: "contact@designali.in", // Must be verified in Resend
+    },
+  },
+  stripe: {
+    plans: [
+      {
+        name: "Starter",
+        description: "Good for small projects",
+        price: {
+          amount: 9,
+          priceIds: {
+            test: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_STARTER,
+            production: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_STARTER,
+          },
+        },
+        features: ["Feature 1", "Feature 2", "Feature 3"],
+      },
+      {
+        name: "Pro",
+        description: "Perfect for growing businesses",
+        price: {
+          amount: 29,
+          priceIds: {
+            test: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO,
+            production: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO,
+          },
+        },
+        features: ["All Starter features", "Feature 4", "Feature 5"],
+      },
+    ],
+  },
 }
 
-const prodBaseURL = "https://designali.in";
-const devBaseURL = "http://localhost:3000";
+export type SiteConfig = typeof siteConfig
 
-const site: Site = {
-  url: process.env.NODE_ENV === "production" ? prodBaseURL : devBaseURL,
-  title: "Ali Imam",
-  name: "Ali Imam",
-  emails: "contact@designali.in",
-  keywords: ["Ali Imam", "Next.js", "React", "TypeScript", "Node.js"],
-  titleTemplate: "Ali Imam",
-  description: "Ali Imam • Art Director",
-  socialBanner: "/ali.jpeg",
-  githubUsername: "aiartstudio",
-  favicons: [
-    {
-      rel: "icon",
-      type: "image/svg",
-      sizes: "16x16",
-      url: "/favicon.svg",
-    },
-    {
-      rel: "icon",
-      type: "image/svg",
-      sizes: "32x32",
-      url: "/favicon.svg",
-    },
-  ],
-};
-
-export default site;
+export const META_THEME_COLORS = {
+  light: "#ffffff",
+  dark: "#000000",
+}

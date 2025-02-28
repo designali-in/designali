@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-07",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/alerts/alert-07.tsx",
+      "path": "examples/components/alerts/alert-07.tsx",
       "content": "import { Info } from \"lucide-react\";\n\nexport default function AlertDemo() {\n  return (\n    <div className=\"rounded-lg border border-dotted border-border px-4 py-3\">\n      <p className=\"text-sm\">\n        <Info\n          className=\"-mt-0.5 me-3 inline-flex text-blue-500\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n        Just a quick note!\n      </p>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

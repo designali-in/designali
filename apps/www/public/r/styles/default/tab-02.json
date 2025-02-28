@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tab-02",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/tabs/tab-02.tsx",
+      "path": "examples/components/tabs/tab-02.tsx",
       "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\nexport default function TabDemo() {\n  return (\n    <Tabs defaultValue=\"tab-1\">\n      <TabsList className=\"bg-transparent\">\n        <TabsTrigger\n          value=\"tab-1\"\n          className=\"data-[state=active]:bg-muted data-[state=active]:shadow-none\"\n        >\n          Tab 1\n        </TabsTrigger>\n        <TabsTrigger\n          value=\"tab-2\"\n          className=\"data-[state=active]:bg-muted data-[state=active]:shadow-none\"\n        >\n          Tab 2\n        </TabsTrigger>\n        <TabsTrigger\n          value=\"tab-3\"\n          className=\"data-[state=active]:bg-muted data-[state=active]:shadow-none\"\n        >\n          Tab 3\n        </TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"tab-1\">\n        <p className=\"p-4 text-center text-xs text-muted-foreground\">\n          Content for Tab 1\n        </p>\n      </TabsContent>\n      <TabsContent value=\"tab-2\">\n        <p className=\"p-4 text-center text-xs text-muted-foreground\">\n          Content for Tab 2\n        </p>\n      </TabsContent>\n      <TabsContent value=\"tab-3\">\n        <p className=\"p-4 text-center text-xs text-muted-foreground\">\n          Content for Tab 3\n        </p>\n      </TabsContent>\n    </Tabs>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

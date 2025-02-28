@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-25",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/buttons/button-25.tsx",
+      "path": "examples/components/buttons/button-25.tsx",
       "content": "import { ChevronDown, ChevronUp } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <div className=\"inline-flex -space-x-px rounded-lg shadow-sm shadow-black/5 rtl:space-x-reverse\">\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10\"\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Upvote\"\n      >\n        <ChevronUp size={16} strokeWidth={2} aria-hidden=\"true\" />\n      </Button>\n      <span className=\"flex items-center border border-input px-3 text-sm font-medium\">\n        235\n      </span>\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10\"\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Downvote\"\n      >\n        <ChevronDown size={16} strokeWidth={2} aria-hidden=\"true\" />\n      </Button>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

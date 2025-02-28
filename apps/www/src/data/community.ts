@@ -1,4 +1,4 @@
-import type { ComboBoxItemType } from "@/types";
+import type { ComboBoxItemType } from "@/types/global";
 
 export const categories: ComboBoxItemType[] = [
   {

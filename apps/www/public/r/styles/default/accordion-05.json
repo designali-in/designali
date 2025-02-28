@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "accordion-05",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/accordions/accordion-05.tsx",
+      "path": "examples/components/accordions/accordion-05.tsx",
       "content": "import { DIcons } from \"dicons\";\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/components/ui/accordion\";\n\nconst items = [\n  {\n    id: \"1\",\n    icon: DIcons.Image,\n    title: \"Why Choose Designali?\",\n    content:\n      \"We create clean, modern, and user-friendly designs that enhance brand identity.\",\n  },\n  {\n    id: \"2\",\n    icon: DIcons.Info,\n    title: \"Can I Personalize the Components?\",\n    content:\n      \"Yes! Easily adjust colors, fonts, layouts, and animations to fit your style.\",\n  },\n  {\n    id: \"3\",\n    icon: DIcons.Speech,\n    title: \"Is Designali Built for Speed?\",\n    content:\n      \"Definitely! Our designs are lightweight, optimized, and load quickly for a smooth experience.\",\n  },\n  {\n    id: \"4\",\n    icon: DIcons.TextQuote,\n    title: \"How Accessible Are the Designs?\",\n    content:\n      \"All designs follow best accessibility practices, ensuring easy navigation and screen reader support.\",\n  },\n];\n\nexport default function AccordionDemo() {\n  return (\n    <div className=\"w-full space-y-4\">\n      <h2 className=\"text-xl font-bold\">Icon and Chevron</h2>\n      <Accordion type=\"single\" collapsible className=\"w-full\" defaultValue=\"3\">\n        {items.map((item) => (\n          <AccordionItem value={item.id} key={item.id} className=\"py-2\">\n            <AccordionTrigger className=\"py-2 text-[15px] leading-6 hover:no-underline\">\n              <span className=\"flex items-center gap-3\">\n                <item.icon\n                  strokeWidth={1}\n                  className=\"h-5 w-5 shrink-0 opacity-60\"\n                  aria-hidden=\"true\"\n                />\n                <span>{item.title}</span>\n              </span>\n            </AccordionTrigger>\n            <AccordionContent className=\"pb-2 ps-7 text-muted-foreground\">\n              {item.content}\n            </AccordionContent>\n          </AccordionItem>\n        ))}\n      </Accordion>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

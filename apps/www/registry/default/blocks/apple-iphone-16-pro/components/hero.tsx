@@ -41,10 +41,7 @@ const Hero = () => {
         />
 
         <div className="mt-auto text-center">
-          <Button
-            variant="blue"
-            className="mb-6 w-auto rounded-full text-white hover:opacity-90"
-          >
+          <Button className="mb-6 w-auto rounded-full text-white hover:opacity-90">
             Buy
           </Button>
           <div className="space-y-2">

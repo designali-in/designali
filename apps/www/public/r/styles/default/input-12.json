@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-12",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-12.tsx",
+      "path": "examples/components/inputs/input-12.tsx",
       "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-12\">Input with end inline add-on</Label>\n      <div className=\"relative\">\n        <Input\n          id=\"input-12\"\n          className=\"peer pe-12\"\n          placeholder=\"google\"\n          type=\"text\"\n        />\n        <span className=\"pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-sm text-muted-foreground peer-disabled:opacity-50\">\n          .com\n        </span>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

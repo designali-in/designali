@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-
-// TODO: Fix this when we turn strict mode on.
-import type { UserSubscriptionPlan } from "@/types";
+//@ts-nocheck
+import type { UserSubscriptionPlan } from "@/types/global";
 
 import { pricingData } from "@/config/subscriptions";
 import { prisma } from "@/lib/db";

@@ -6,7 +6,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Skeleton } from "@/registry/default/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";

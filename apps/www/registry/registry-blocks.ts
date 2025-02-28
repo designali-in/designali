@@ -1,6 +1,6 @@
-import type { Registry } from "@/registry/schema";
+import { type Registry } from "shadcn/registry";
 
-export const blocks: Registry = [
+export const blocks: Registry["items"] = [
   {
     name: "apple-iphone-16-pro",
     type: "registry:block",
@@ -25,7 +25,7 @@ export const blocks: Registry = [
         type: "registry:component",
       },
     ],
-    categories: [],
+    categories: ["login"],
   },
   {
     name: "hero-01",
@@ -47,7 +47,7 @@ export const blocks: Registry = [
         type: "registry:component",
       },
     ],
-    categories: ["hero"],
+    categories: ["login"],
   },
   {
     name: "login-01",

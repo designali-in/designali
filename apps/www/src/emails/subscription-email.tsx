@@ -11,7 +11,7 @@ import {
   Text,
 } from "@react-email/components";
 
-import site from "@/config/site";
+import {siteConfig} from "@/config/site";
 
 interface SubscriptionEmailProps {
   name: string;
@@ -28,9 +28,9 @@ export const SubscriptionEmail = ({ name, type }: SubscriptionEmailProps) => {
   }[type];
 
   const content = {
-    created: `Thanks for subscribing to ${site.name}! We're excited to have you on board.`,
-    updated: `Your subscription to ${site.name} has been updated.`,
-    cancelled: `We're sorry to see you go. Your subscription to ${site.name} has been cancelled.`,
+    created: `Thanks for subscribing to ${siteConfig.name}! We're excited to have you on board.`,
+    updated: `Your subscription to ${siteConfig.name} has been updated.`,
+    cancelled: `We're sorry to see you go. Your subscription to ${siteConfig.name} has been cancelled.`,
   }[type];
 
   return (
@@ -53,7 +53,7 @@ export const SubscriptionEmail = ({ name, type }: SubscriptionEmailProps) => {
             <Text style={footer}>
               Best regards,
               <br />
-              The {site.name} Team
+              The {siteConfig.name} Team
             </Text>
           </Section>
         </Container>

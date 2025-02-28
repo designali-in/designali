@@ -1,29 +1,26 @@
 {
-  "extends": "@designali/tsconfig/base.json",
+  "extends": "@designali/typescript-config/nextjs.json",
   "compilerOptions": {
-    "lib": ["es2022", "dom", "dom.iterable"],
-    "jsx": "preserve",
-    "strict": false,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*", "./src/*", "./registry/*"],
-      "@/components/ui/*": ["./registry/default/ui/*"],
-      "@/components/mockups/*": ["registry/default/ui/mockups/*"],
-      "@/components/example/*": ["./registry/default/example/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"],
-      "~/*": ["./src/*"]
+      "@/components/ui/*": ["./src/components/ui/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "plugins": [{ "name": "next" }],
-    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
-    "module": "esnext"
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    ".",
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.mjs",
+    ".contentlayer/generated",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
+    "./scripts/**/*.ts"
   ],
   "exclude": [
     "node_modules",

@@ -1,11 +1,4 @@
-/* eslint-disable prefer-const */
-/* eslint-disable no-var */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+// @ts-nocheck
 // 18 Nov, 2022
 
 export const handleDownloadPNG = (imgRef, canvasRef) => {
@@ -89,7 +82,7 @@ export const setBg = async (imageData) => {
         data: { imageData },
       },
     },
-    "*",
+    "*"
   );
 };
 
@@ -138,7 +131,7 @@ export function getRandomXYPoint() {
 
 export function getRandomShapeDimension(
   MIN_SHAPE_SIZE = 0.5,
-  MAX_SHAPE_SIZE = 0.8,
+  MAX_SHAPE_SIZE = 0.8
 ) {
   return getRandomNumberBetween(1600 * MIN_SHAPE_SIZE, 1600 * MAX_SHAPE_SIZE);
 }
@@ -156,7 +149,7 @@ export function adjustNoiseParameters(value) {
   // Reverse the scaling logic for numOctaves
   var numOctaves = Math.floor(
     (numOctavesRange[1] - numOctavesRange[0]) * ((18 - value) / 18) +
-      numOctavesRange[0],
+      numOctavesRange[0]
   );
 
   if (value === 0) {

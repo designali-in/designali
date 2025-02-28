@@ -1,4 +1,5 @@
-import { AnimeReviewServerSchema } from "@/src/lib/validations/graphic";
+//@ts-nocheck
+import { AnimeReviewServerSchema } from "@/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";

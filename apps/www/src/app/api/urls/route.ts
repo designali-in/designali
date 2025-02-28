@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { redirect } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";

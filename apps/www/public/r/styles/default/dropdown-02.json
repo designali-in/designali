@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dropdown-02",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/dropdowns/dropdown-02.tsx",
-      "content": "import { ChevronDown } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function DropdownDemo() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">\n          Same width of trigger\n          <ChevronDown\n            className=\"-me-1 ms-2 opacity-60\"\n            size={16}\n            strokeWidth={2}\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"min-w-[--radix-dropdown-menu-trigger-width]\">\n        <DropdownMenuItem>Option 1</DropdownMenuItem>\n        <DropdownMenuItem>Option 2</DropdownMenuItem>\n        <DropdownMenuItem>Option 3</DropdownMenuItem>\n        <DropdownMenuItem>Option 4</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "path": "examples/components/dropdowns/dropdown-02.tsx",
+      "content": "import { ChevronDown } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function DropdownDemo() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">\n          Same width of trigger\n          <ChevronDown\n            className=\"opacity-60\"\n            size={16}\n            strokeWidth={2}\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"min-w-[--radix-dropdown-menu-trigger-width]\">\n        <DropdownMenuItem>Option 1</DropdownMenuItem>\n        <DropdownMenuItem>Option 2</DropdownMenuItem>\n        <DropdownMenuItem>Option 3</DropdownMenuItem>\n        <DropdownMenuItem>Option 4</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

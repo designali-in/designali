@@ -1,5 +1,5 @@
 {
-  "extends": "@designali/tsconfig/internal-package.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"

@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "gradient-text-01",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/texts/gradient-text-01.tsx",
-      "content": "import GradientText from \"@/components/ui/texts/gradient-text\";\n\nexport default function GradientTextDemo() {\n  return (\n    <h1 className=\"text-4xl font-bold tracking-tighter  md:text-5xl lg:text-7xl\">\n      Design <GradientText>beautiful</GradientText>\n    </h1>\n  );\n}\n",
+      "path": "examples/texts/gradient-text-01.tsx",
+      "content": "import GradientText from \"@/components/ui/texts/gradient-text\";\n\nexport default function GradientTextDemo() {\n  return (\n    <h1 className=\"text-center text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl\">\n      Design <GradientText>without</GradientText> Limits\n    </h1>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

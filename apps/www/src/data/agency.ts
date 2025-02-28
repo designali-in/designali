@@ -1,4 +1,4 @@
-import type { ComboBoxItemType, ZodCategoryType } from "@/types";
+import type { ComboBoxItemType, ZodCategoryType } from "@/types/global";
 
 export const catalogs: ComboBoxItemType[] = [
   {

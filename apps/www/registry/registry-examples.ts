@@ -1,13 +1,13 @@
-import { Registry } from "@/registry/schema";
+import { type Registry } from "shadcn/registry";
 
-export const examples: Registry = [
+export const examples: Registry["items"] = [
   // Backgrounds
   {
     name: "dot-pattern-01",
     type: "registry:example",
     files: [
       {
-        path: "example/backgrounds/dot-pattern-01.tsx",
+        path: "examples/backgrounds/dot-pattern-01.tsx",
         type: "registry:example",
       },
     ],
@@ -17,7 +17,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/backgrounds/scroll-progress-01.tsx",
+        path: "examples/backgrounds/scroll-progress-01.tsx",
         type: "registry:example",
       },
     ],
@@ -27,7 +27,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/backgrounds/grid-pattern-01.tsx",
+        path: "examples/backgrounds/grid-pattern-01.tsx",
         type: "registry:example",
       },
     ],
@@ -37,7 +37,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/backgrounds/retro-grid-01.tsx",
+        path: "examples/backgrounds/retro-grid-01.tsx",
         type: "registry:example",
       },
     ],
@@ -47,7 +47,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/backgrounds/ripple-01.tsx",
+        path: "examples/backgrounds/ripple-01.tsx",
         type: "registry:example",
       },
     ],
@@ -57,7 +57,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/backgrounds/flickering-grid-01.tsx",
+        path: "examples/backgrounds/flickering-grid-01.tsx",
         type: "registry:example",
       },
     ],
@@ -69,7 +69,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/mockups/safari-1.tsx",
+        path: "examples/mockups/safari-1.tsx",
         type: "registry:example",
       },
     ],
@@ -79,7 +79,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/mockups/macbook-pro-1.tsx",
+        path: "examples/mockups/macbook-pro-1.tsx",
         type: "registry:example",
       },
     ],
@@ -89,7 +89,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/mockups/mac-1.tsx",
+        path: "examples/mockups/mac-1.tsx",
         type: "registry:example",
       },
     ],
@@ -99,7 +99,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/mockups/ipad-pro-1.tsx",
+        path: "examples/mockups/ipad-pro-1.tsx",
         type: "registry:example",
       },
     ],
@@ -109,20 +109,18 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/mockups/iphone-16-pro-1.tsx",
+        path: "examples/mockups/iphone-16-pro-1.tsx",
         type: "registry:example",
       },
     ],
   },
-
-  // Components
 
   {
     name: "button-01",
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-01.tsx",
+        path: "examples/components/buttons/button-01.tsx",
         type: "registry:example",
       },
     ],
@@ -132,7 +130,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-02.tsx",
+        path: "examples/components/buttons/button-02.tsx",
         type: "registry:example",
       },
     ],
@@ -142,7 +140,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-03.tsx",
+        path: "examples/components/buttons/button-03.tsx",
         type: "registry:example",
       },
     ],
@@ -152,7 +150,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-04.tsx",
+        path: "examples/components/buttons/button-04.tsx",
         type: "registry:example",
       },
     ],
@@ -162,7 +160,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-05.tsx",
+        path: "examples/components/buttons/button-05.tsx",
         type: "registry:example",
       },
     ],
@@ -172,7 +170,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-06.tsx",
+        path: "examples/components/buttons/button-06.tsx",
         type: "registry:example",
       },
     ],
@@ -182,7 +180,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-07.tsx",
+        path: "examples/components/buttons/button-07.tsx",
         type: "registry:example",
       },
     ],
@@ -192,7 +190,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-08.tsx",
+        path: "examples/components/buttons/button-08.tsx",
         type: "registry:example",
       },
     ],
@@ -202,7 +200,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-09.tsx",
+        path: "examples/components/buttons/button-09.tsx",
         type: "registry:example",
       },
     ],
@@ -212,7 +210,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-10.tsx",
+        path: "examples/components/buttons/button-10.tsx",
         type: "registry:example",
       },
     ],
@@ -222,7 +220,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-11.tsx",
+        path: "examples/components/buttons/button-11.tsx",
         type: "registry:example",
       },
     ],
@@ -232,7 +230,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-12.tsx",
+        path: "examples/components/buttons/button-12.tsx",
         type: "registry:example",
       },
     ],
@@ -242,7 +240,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-13.tsx",
+        path: "examples/components/buttons/button-13.tsx",
         type: "registry:example",
       },
     ],
@@ -252,7 +250,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-14.tsx",
+        path: "examples/components/buttons/button-14.tsx",
         type: "registry:example",
       },
     ],
@@ -262,7 +260,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-15.tsx",
+        path: "examples/components/buttons/button-15.tsx",
         type: "registry:example",
       },
     ],
@@ -272,7 +270,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-16.tsx",
+        path: "examples/components/buttons/button-16.tsx",
         type: "registry:example",
       },
     ],
@@ -282,7 +280,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-17.tsx",
+        path: "examples/components/buttons/button-17.tsx",
         type: "registry:example",
       },
     ],
@@ -293,7 +291,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-18.tsx",
+        path: "examples/components/buttons/button-18.tsx",
         type: "registry:example",
       },
     ],
@@ -303,7 +301,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-19.tsx",
+        path: "examples/components/buttons/button-19.tsx",
         type: "registry:example",
       },
     ],
@@ -313,7 +311,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-20.tsx",
+        path: "examples/components/buttons/button-20.tsx",
         type: "registry:example",
       },
     ],
@@ -323,7 +321,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-21.tsx",
+        path: "examples/components/buttons/button-21.tsx",
         type: "registry:example",
       },
     ],
@@ -333,7 +331,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-22.tsx",
+        path: "examples/components/buttons/button-22.tsx",
         type: "registry:example",
       },
     ],
@@ -343,7 +341,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-23.tsx",
+        path: "examples/components/buttons/button-23.tsx",
         type: "registry:example",
       },
     ],
@@ -353,7 +351,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-24.tsx",
+        path: "examples/components/buttons/button-24.tsx",
         type: "registry:example",
       },
     ],
@@ -363,7 +361,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-25.tsx",
+        path: "examples/components/buttons/button-25.tsx",
         type: "registry:example",
       },
     ],
@@ -373,7 +371,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-26.tsx",
+        path: "examples/components/buttons/button-26.tsx",
         type: "registry:example",
       },
     ],
@@ -383,7 +381,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-27.tsx",
+        path: "examples/components/buttons/button-27.tsx",
         type: "registry:example",
       },
     ],
@@ -393,7 +391,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-28.tsx",
+        path: "examples/components/buttons/button-28.tsx",
         type: "registry:example",
       },
     ],
@@ -403,7 +401,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-29.tsx",
+        path: "examples/components/buttons/button-29.tsx",
         type: "registry:example",
       },
     ],
@@ -413,7 +411,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-30.tsx",
+        path: "examples/components/buttons/button-30.tsx",
         type: "registry:example",
       },
     ],
@@ -423,7 +421,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-31.tsx",
+        path: "examples/components/buttons/button-31.tsx",
         type: "registry:example",
       },
     ],
@@ -433,7 +431,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-32.tsx",
+        path: "examples/components/buttons/button-32.tsx",
         type: "registry:example",
       },
     ],
@@ -443,7 +441,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-33.tsx",
+        path: "examples/components/buttons/button-33.tsx",
         type: "registry:example",
       },
     ],
@@ -453,7 +451,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-34.tsx",
+        path: "examples/components/buttons/button-34.tsx",
         type: "registry:example",
       },
     ],
@@ -463,7 +461,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-35.tsx",
+        path: "examples/components/buttons/button-35.tsx",
         type: "registry:example",
       },
     ],
@@ -473,7 +471,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-36.tsx",
+        path: "examples/components/buttons/button-36.tsx",
         type: "registry:example",
       },
     ],
@@ -483,7 +481,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-37.tsx",
+        path: "examples/components/buttons/button-37.tsx",
         type: "registry:example",
       },
     ],
@@ -493,7 +491,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-38.tsx",
+        path: "examples/components/buttons/button-38.tsx",
         type: "registry:example",
       },
     ],
@@ -503,7 +501,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-39.tsx",
+        path: "examples/components/buttons/button-39.tsx",
         type: "registry:example",
       },
     ],
@@ -513,7 +511,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-40.tsx",
+        path: "examples/components/buttons/button-40.tsx",
         type: "registry:example",
       },
     ],
@@ -523,7 +521,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-41.tsx",
+        path: "examples/components/buttons/button-41.tsx",
         type: "registry:example",
       },
     ],
@@ -533,7 +531,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-42.tsx",
+        path: "examples/components/buttons/button-42.tsx",
         type: "registry:example",
       },
     ],
@@ -543,7 +541,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-43.tsx",
+        path: "examples/components/buttons/button-43.tsx",
         type: "registry:example",
       },
     ],
@@ -553,7 +551,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-44.tsx",
+        path: "examples/components/buttons/button-44.tsx",
         type: "registry:example",
       },
     ],
@@ -563,7 +561,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-45.tsx",
+        path: "examples/components/buttons/button-45.tsx",
         type: "registry:example",
       },
     ],
@@ -573,7 +571,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-46.tsx",
+        path: "examples/components/buttons/button-46.tsx",
         type: "registry:example",
       },
     ],
@@ -583,7 +581,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-47.tsx",
+        path: "examples/components/buttons/button-47.tsx",
         type: "registry:example",
       },
     ],
@@ -593,7 +591,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-48.tsx",
+        path: "examples/components/buttons/button-48.tsx",
         type: "registry:example",
       },
     ],
@@ -603,7 +601,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-49.tsx",
+        path: "examples/components/buttons/button-49.tsx",
         type: "registry:example",
       },
     ],
@@ -613,7 +611,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-50.tsx",
+        path: "examples/components/buttons/button-50.tsx",
         type: "registry:example",
       },
     ],
@@ -623,7 +621,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-51.tsx",
+        path: "examples/components/buttons/button-51.tsx",
         type: "registry:example",
       },
     ],
@@ -633,7 +631,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-52.tsx",
+        path: "examples/components/buttons/button-52.tsx",
         type: "registry:example",
       },
     ],
@@ -643,7 +641,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-53.tsx",
+        path: "examples/components/buttons/button-53.tsx",
         type: "registry:example",
       },
     ],
@@ -653,7 +651,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/buttons/button-54.tsx",
+        path: "examples/components/buttons/button-54.tsx",
         type: "registry:example",
       },
     ],
@@ -665,7 +663,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-01.tsx",
+        path: "examples/components/inputs/input-01.tsx",
         type: "registry:example",
       },
     ],
@@ -675,7 +673,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-02.tsx",
+        path: "examples/components/inputs/input-02.tsx",
         type: "registry:example",
       },
     ],
@@ -685,7 +683,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-03.tsx",
+        path: "examples/components/inputs/input-03.tsx",
         type: "registry:example",
       },
     ],
@@ -695,7 +693,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-04.tsx",
+        path: "examples/components/inputs/input-04.tsx",
         type: "registry:example",
       },
     ],
@@ -705,7 +703,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-05.tsx",
+        path: "examples/components/inputs/input-05.tsx",
         type: "registry:example",
       },
     ],
@@ -715,7 +713,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-06.tsx",
+        path: "examples/components/inputs/input-06.tsx",
         type: "registry:example",
       },
     ],
@@ -725,7 +723,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-07.tsx",
+        path: "examples/components/inputs/input-07.tsx",
         type: "registry:example",
       },
     ],
@@ -735,7 +733,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-08.tsx",
+        path: "examples/components/inputs/input-08.tsx",
         type: "registry:example",
       },
     ],
@@ -745,7 +743,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-09.tsx",
+        path: "examples/components/inputs/input-09.tsx",
         type: "registry:example",
       },
     ],
@@ -755,7 +753,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-10.tsx",
+        path: "examples/components/inputs/input-10.tsx",
         type: "registry:example",
       },
     ],
@@ -765,7 +763,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-11.tsx",
+        path: "examples/components/inputs/input-11.tsx",
         type: "registry:example",
       },
     ],
@@ -775,7 +773,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-12.tsx",
+        path: "examples/components/inputs/input-12.tsx",
         type: "registry:example",
       },
     ],
@@ -785,7 +783,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-13.tsx",
+        path: "examples/components/inputs/input-13.tsx",
         type: "registry:example",
       },
     ],
@@ -795,7 +793,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-14.tsx",
+        path: "examples/components/inputs/input-14.tsx",
         type: "registry:example",
       },
     ],
@@ -805,7 +803,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-15.tsx",
+        path: "examples/components/inputs/input-15.tsx",
         type: "registry:example",
       },
     ],
@@ -815,7 +813,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-16.tsx",
+        path: "examples/components/inputs/input-16.tsx",
         type: "registry:example",
       },
     ],
@@ -825,7 +823,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-17.tsx",
+        path: "examples/components/inputs/input-17.tsx",
         type: "registry:example",
       },
     ],
@@ -835,7 +833,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-18.tsx",
+        path: "examples/components/inputs/input-18.tsx",
         type: "registry:example",
       },
     ],
@@ -845,7 +843,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-19.tsx",
+        path: "examples/components/inputs/input-19.tsx",
         type: "registry:example",
       },
     ],
@@ -855,7 +853,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-20.tsx",
+        path: "examples/components/inputs/input-20.tsx",
         type: "registry:example",
       },
     ],
@@ -865,7 +863,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-21.tsx",
+        path: "examples/components/inputs/input-21.tsx",
         type: "registry:example",
       },
     ],
@@ -875,7 +873,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-22.tsx",
+        path: "examples/components/inputs/input-22.tsx",
         type: "registry:example",
       },
     ],
@@ -885,7 +883,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-23.tsx",
+        path: "examples/components/inputs/input-23.tsx",
         type: "registry:example",
       },
     ],
@@ -895,7 +893,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-24.tsx",
+        path: "examples/components/inputs/input-24.tsx",
         type: "registry:example",
       },
     ],
@@ -905,7 +903,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-25.tsx",
+        path: "examples/components/inputs/input-25.tsx",
         type: "registry:example",
       },
     ],
@@ -915,7 +913,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-26.tsx",
+        path: "examples/components/inputs/input-26.tsx",
         type: "registry:example",
       },
     ],
@@ -925,7 +923,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-27.tsx",
+        path: "examples/components/inputs/input-27.tsx",
         type: "registry:example",
       },
     ],
@@ -935,7 +933,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-28.tsx",
+        path: "examples/components/inputs/input-28.tsx",
         type: "registry:example",
       },
     ],
@@ -945,7 +943,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-29.tsx",
+        path: "examples/components/inputs/input-29.tsx",
         type: "registry:example",
       },
     ],
@@ -955,7 +953,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-30.tsx",
+        path: "examples/components/inputs/input-30.tsx",
         type: "registry:example",
       },
     ],
@@ -965,7 +963,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-31.tsx",
+        path: "examples/components/inputs/input-31.tsx",
         type: "registry:example",
       },
     ],
@@ -975,7 +973,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-32.tsx",
+        path: "examples/components/inputs/input-32.tsx",
         type: "registry:example",
       },
     ],
@@ -985,7 +983,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-33.tsx",
+        path: "examples/components/inputs/input-33.tsx",
         type: "registry:example",
       },
     ],
@@ -995,7 +993,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-34.tsx",
+        path: "examples/components/inputs/input-34.tsx",
         type: "registry:example",
       },
     ],
@@ -1005,7 +1003,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-35.tsx",
+        path: "examples/components/inputs/input-35.tsx",
         type: "registry:example",
       },
     ],
@@ -1015,7 +1013,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-36.tsx",
+        path: "examples/components/inputs/input-36.tsx",
         type: "registry:example",
       },
     ],
@@ -1025,7 +1023,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-37.tsx",
+        path: "examples/components/inputs/input-37.tsx",
         type: "registry:example",
       },
     ],
@@ -1035,7 +1033,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-38.tsx",
+        path: "examples/components/inputs/input-38.tsx",
         type: "registry:example",
       },
     ],
@@ -1045,7 +1043,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-39.tsx",
+        path: "examples/components/inputs/input-39.tsx",
         type: "registry:example",
       },
     ],
@@ -1055,7 +1053,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-40.tsx",
+        path: "examples/components/inputs/input-40.tsx",
         type: "registry:example",
       },
     ],
@@ -1065,7 +1063,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-41.tsx",
+        path: "examples/components/inputs/input-41.tsx",
         type: "registry:example",
       },
     ],
@@ -1075,7 +1073,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-42.tsx",
+        path: "examples/components/inputs/input-42.tsx",
         type: "registry:example",
       },
     ],
@@ -1085,7 +1083,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-43.tsx",
+        path: "examples/components/inputs/input-43.tsx",
         type: "registry:example",
       },
     ],
@@ -1095,7 +1093,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-44.tsx",
+        path: "examples/components/inputs/input-44.tsx",
         type: "registry:example",
       },
     ],
@@ -1105,7 +1103,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-45.tsx",
+        path: "examples/components/inputs/input-45.tsx",
         type: "registry:example",
       },
     ],
@@ -1115,7 +1113,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-46.tsx",
+        path: "examples/components/inputs/input-46.tsx",
         type: "registry:example",
       },
     ],
@@ -1125,7 +1123,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-47.tsx",
+        path: "examples/components/inputs/input-47.tsx",
         type: "registry:example",
       },
     ],
@@ -1135,7 +1133,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-48.tsx",
+        path: "examples/components/inputs/input-48.tsx",
         type: "registry:example",
       },
     ],
@@ -1145,7 +1143,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-49.tsx",
+        path: "examples/components/inputs/input-49.tsx",
         type: "registry:example",
       },
     ],
@@ -1155,7 +1153,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-50.tsx",
+        path: "examples/components/inputs/input-50.tsx",
         type: "registry:example",
       },
     ],
@@ -1165,7 +1163,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-51.tsx",
+        path: "examples/components/inputs/input-51.tsx",
         type: "registry:example",
       },
     ],
@@ -1175,7 +1173,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-52.tsx",
+        path: "examples/components/inputs/input-52.tsx",
         type: "registry:example",
       },
     ],
@@ -1185,7 +1183,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-53.tsx",
+        path: "examples/components/inputs/input-53.tsx",
         type: "registry:example",
       },
     ],
@@ -1195,7 +1193,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-54.tsx",
+        path: "examples/components/inputs/input-54.tsx",
         type: "registry:example",
       },
     ],
@@ -1205,7 +1203,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-55.tsx",
+        path: "examples/components/inputs/input-55.tsx",
         type: "registry:example",
       },
     ],
@@ -1215,7 +1213,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-56.tsx",
+        path: "examples/components/inputs/input-56.tsx",
         type: "registry:example",
       },
     ],
@@ -1225,7 +1223,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-57.tsx",
+        path: "examples/components/inputs/input-57.tsx",
         type: "registry:example",
       },
     ],
@@ -1235,7 +1233,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/inputs/input-58.tsx",
+        path: "examples/components/inputs/input-58.tsx",
         type: "registry:example",
       },
     ],
@@ -1245,7 +1243,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-01.tsx",
+        path: "examples/components/textareas/textarea-01.tsx",
         type: "registry:example",
       },
     ],
@@ -1255,7 +1253,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-02.tsx",
+        path: "examples/components/textareas/textarea-02.tsx",
         type: "registry:example",
       },
     ],
@@ -1265,7 +1263,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-03.tsx",
+        path: "examples/components/textareas/textarea-03.tsx",
         type: "registry:example",
       },
     ],
@@ -1275,7 +1273,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-04.tsx",
+        path: "examples/components/textareas/textarea-04.tsx",
         type: "registry:example",
       },
     ],
@@ -1285,7 +1283,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-05.tsx",
+        path: "examples/components/textareas/textarea-05.tsx",
         type: "registry:example",
       },
     ],
@@ -1295,7 +1293,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-06.tsx",
+        path: "examples/components/textareas/textarea-06.tsx",
         type: "registry:example",
       },
     ],
@@ -1305,7 +1303,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-07.tsx",
+        path: "examples/components/textareas/textarea-07.tsx",
         type: "registry:example",
       },
     ],
@@ -1315,7 +1313,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-08.tsx",
+        path: "examples/components/textareas/textarea-08.tsx",
         type: "registry:example",
       },
     ],
@@ -1325,7 +1323,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-09.tsx",
+        path: "examples/components/textareas/textarea-09.tsx",
         type: "registry:example",
       },
     ],
@@ -1335,7 +1333,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-10.tsx",
+        path: "examples/components/textareas/textarea-10.tsx",
         type: "registry:example",
       },
     ],
@@ -1345,7 +1343,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-11.tsx",
+        path: "examples/components/textareas/textarea-11.tsx",
         type: "registry:example",
       },
     ],
@@ -1355,7 +1353,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-12.tsx",
+        path: "examples/components/textareas/textarea-12.tsx",
         type: "registry:example",
       },
     ],
@@ -1365,7 +1363,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-13.tsx",
+        path: "examples/components/textareas/textarea-13.tsx",
         type: "registry:example",
       },
     ],
@@ -1375,7 +1373,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-14.tsx",
+        path: "examples/components/textareas/textarea-14.tsx",
         type: "registry:example",
       },
     ],
@@ -1385,7 +1383,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-15.tsx",
+        path: "examples/components/textareas/textarea-15.tsx",
         type: "registry:example",
       },
     ],
@@ -1395,7 +1393,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-16.tsx",
+        path: "examples/components/textareas/textarea-16.tsx",
         type: "registry:example",
       },
     ],
@@ -1405,7 +1403,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-17.tsx",
+        path: "examples/components/textareas/textarea-17.tsx",
         type: "registry:example",
       },
     ],
@@ -1415,7 +1413,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-18.tsx",
+        path: "examples/components/textareas/textarea-18.tsx",
         type: "registry:example",
       },
     ],
@@ -1425,7 +1423,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/textareas/textarea-19.tsx",
+        path: "examples/components/textareas/textarea-19.tsx",
         type: "registry:example",
       },
     ],
@@ -1436,7 +1434,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-01.tsx",
+        path: "examples/components/checkboxes/checkbox-01.tsx",
         type: "registry:example",
       },
     ],
@@ -1446,7 +1444,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-02.tsx",
+        path: "examples/components/checkboxes/checkbox-02.tsx",
         type: "registry:example",
       },
     ],
@@ -1456,7 +1454,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-03.tsx",
+        path: "examples/components/checkboxes/checkbox-03.tsx",
         type: "registry:example",
       },
     ],
@@ -1466,7 +1464,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-04.tsx",
+        path: "examples/components/checkboxes/checkbox-04.tsx",
         type: "registry:example",
       },
     ],
@@ -1476,7 +1474,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-05.tsx",
+        path: "examples/components/checkboxes/checkbox-05.tsx",
         type: "registry:example",
       },
     ],
@@ -1486,7 +1484,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-06.tsx",
+        path: "examples/components/checkboxes/checkbox-06.tsx",
         type: "registry:example",
       },
     ],
@@ -1496,7 +1494,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-07.tsx",
+        path: "examples/components/checkboxes/checkbox-07.tsx",
         type: "registry:example",
       },
     ],
@@ -1506,7 +1504,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-08.tsx",
+        path: "examples/components/checkboxes/checkbox-08.tsx",
         type: "registry:example",
       },
     ],
@@ -1516,7 +1514,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-09.tsx",
+        path: "examples/components/checkboxes/checkbox-09.tsx",
         type: "registry:example",
       },
     ],
@@ -1526,7 +1524,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-10.tsx",
+        path: "examples/components/checkboxes/checkbox-10.tsx",
         type: "registry:example",
       },
     ],
@@ -1536,7 +1534,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-11.tsx",
+        path: "examples/components/checkboxes/checkbox-11.tsx",
         type: "registry:example",
       },
     ],
@@ -1546,7 +1544,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-12.tsx",
+        path: "examples/components/checkboxes/checkbox-12.tsx",
         type: "registry:example",
       },
     ],
@@ -1556,7 +1554,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-13.tsx",
+        path: "examples/components/checkboxes/checkbox-13.tsx",
         type: "registry:example",
       },
     ],
@@ -1566,7 +1564,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-14.tsx",
+        path: "examples/components/checkboxes/checkbox-14.tsx",
         type: "registry:example",
       },
     ],
@@ -1576,7 +1574,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-15.tsx",
+        path: "examples/components/checkboxes/checkbox-15.tsx",
         type: "registry:example",
       },
     ],
@@ -1586,7 +1584,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-16.tsx",
+        path: "examples/components/checkboxes/checkbox-16.tsx",
         type: "registry:example",
       },
     ],
@@ -1596,7 +1594,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-17.tsx",
+        path: "examples/components/checkboxes/checkbox-17.tsx",
         type: "registry:example",
       },
     ],
@@ -1606,7 +1604,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-18.tsx",
+        path: "examples/components/checkboxes/checkbox-18.tsx",
         type: "registry:example",
       },
     ],
@@ -1616,7 +1614,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-19.tsx",
+        path: "examples/components/checkboxes/checkbox-19.tsx",
         type: "registry:example",
       },
     ],
@@ -1626,7 +1624,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/checkboxes/checkbox-20.tsx",
+        path: "examples/components/checkboxes/checkbox-20.tsx",
         type: "registry:example",
       },
     ],
@@ -1636,7 +1634,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-01.tsx",
+        path: "examples/components/radios/radio-01.tsx",
         type: "registry:example",
       },
     ],
@@ -1646,7 +1644,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-02.tsx",
+        path: "examples/components/radios/radio-02.tsx",
         type: "registry:example",
       },
     ],
@@ -1656,7 +1654,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-03.tsx",
+        path: "examples/components/radios/radio-03.tsx",
         type: "registry:example",
       },
     ],
@@ -1666,7 +1664,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-04.tsx",
+        path: "examples/components/radios/radio-04.tsx",
         type: "registry:example",
       },
     ],
@@ -1676,7 +1674,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-05.tsx",
+        path: "examples/components/radios/radio-05.tsx",
         type: "registry:example",
       },
     ],
@@ -1686,7 +1684,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-06.tsx",
+        path: "examples/components/radios/radio-06.tsx",
         type: "registry:example",
       },
     ],
@@ -1696,7 +1694,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-07.tsx",
+        path: "examples/components/radios/radio-07.tsx",
         type: "registry:example",
       },
     ],
@@ -1706,7 +1704,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-08.tsx",
+        path: "examples/components/radios/radio-08.tsx",
         type: "registry:example",
       },
     ],
@@ -1716,7 +1714,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-09.tsx",
+        path: "examples/components/radios/radio-09.tsx",
         type: "registry:example",
       },
     ],
@@ -1726,7 +1724,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-10.tsx",
+        path: "examples/components/radios/radio-10.tsx",
         type: "registry:example",
       },
     ],
@@ -1736,7 +1734,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-11.tsx",
+        path: "examples/components/radios/radio-11.tsx",
         type: "registry:example",
       },
     ],
@@ -1746,7 +1744,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-12.tsx",
+        path: "examples/components/radios/radio-12.tsx",
         type: "registry:example",
       },
     ],
@@ -1756,7 +1754,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-13.tsx",
+        path: "examples/components/radios/radio-13.tsx",
         type: "registry:example",
       },
     ],
@@ -1766,7 +1764,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-14.tsx",
+        path: "examples/components/radios/radio-14.tsx",
         type: "registry:example",
       },
     ],
@@ -1776,7 +1774,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-15.tsx",
+        path: "examples/components/radios/radio-15.tsx",
         type: "registry:example",
       },
     ],
@@ -1786,7 +1784,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-16.tsx",
+        path: "examples/components/radios/radio-16.tsx",
         type: "registry:example",
       },
     ],
@@ -1796,7 +1794,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-17.tsx",
+        path: "examples/components/radios/radio-17.tsx",
         type: "registry:example",
       },
     ],
@@ -1806,7 +1804,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-18.tsx",
+        path: "examples/components/radios/radio-18.tsx",
         type: "registry:example",
       },
     ],
@@ -1816,7 +1814,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/radios/radio-19.tsx",
+        path: "examples/components/radios/radio-19.tsx",
         type: "registry:example",
       },
     ],
@@ -1826,7 +1824,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-01.tsx",
+        path: "examples/components/switches/switch-01.tsx",
         type: "registry:example",
       },
     ],
@@ -1836,7 +1834,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-02.tsx",
+        path: "examples/components/switches/switch-02.tsx",
         type: "registry:example",
       },
     ],
@@ -1846,7 +1844,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-03.tsx",
+        path: "examples/components/switches/switch-03.tsx",
         type: "registry:example",
       },
     ],
@@ -1856,7 +1854,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-04.tsx",
+        path: "examples/components/switches/switch-04.tsx",
         type: "registry:example",
       },
     ],
@@ -1866,7 +1864,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-05.tsx",
+        path: "examples/components/switches/switch-05.tsx",
         type: "registry:example",
       },
     ],
@@ -1876,7 +1874,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-06.tsx",
+        path: "examples/components/switches/switch-06.tsx",
         type: "registry:example",
       },
     ],
@@ -1886,7 +1884,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-07.tsx",
+        path: "examples/components/switches/switch-07.tsx",
         type: "registry:example",
       },
     ],
@@ -1896,7 +1894,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-08.tsx",
+        path: "examples/components/switches/switch-08.tsx",
         type: "registry:example",
       },
     ],
@@ -1906,7 +1904,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-09.tsx",
+        path: "examples/components/switches/switch-09.tsx",
         type: "registry:example",
       },
     ],
@@ -1916,7 +1914,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-10.tsx",
+        path: "examples/components/switches/switch-10.tsx",
         type: "registry:example",
       },
     ],
@@ -1926,7 +1924,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-11.tsx",
+        path: "examples/components/switches/switch-11.tsx",
         type: "registry:example",
       },
     ],
@@ -1936,7 +1934,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-12.tsx",
+        path: "examples/components/switches/switch-12.tsx",
         type: "registry:example",
       },
     ],
@@ -1946,7 +1944,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-13.tsx",
+        path: "examples/components/switches/switch-13.tsx",
         type: "registry:example",
       },
     ],
@@ -1956,7 +1954,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-14.tsx",
+        path: "examples/components/switches/switch-14.tsx",
         type: "registry:example",
       },
     ],
@@ -1966,7 +1964,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-15.tsx",
+        path: "examples/components/switches/switch-15.tsx",
         type: "registry:example",
       },
     ],
@@ -1976,7 +1974,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-16.tsx",
+        path: "examples/components/switches/switch-16.tsx",
         type: "registry:example",
       },
     ],
@@ -1986,7 +1984,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/switches/switch-17.tsx",
+        path: "examples/components/switches/switch-17.tsx",
         type: "registry:example",
       },
     ],
@@ -1996,7 +1994,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-01.tsx",
+        path: "examples/components/selects/select-01.tsx",
         type: "registry:example",
       },
     ],
@@ -2006,7 +2004,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-02.tsx",
+        path: "examples/components/selects/select-02.tsx",
         type: "registry:example",
       },
     ],
@@ -2016,7 +2014,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-03.tsx",
+        path: "examples/components/selects/select-03.tsx",
         type: "registry:example",
       },
     ],
@@ -2026,7 +2024,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-04.tsx",
+        path: "examples/components/selects/select-04.tsx",
         type: "registry:example",
       },
     ],
@@ -2036,7 +2034,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-05.tsx",
+        path: "examples/components/selects/select-05.tsx",
         type: "registry:example",
       },
     ],
@@ -2046,7 +2044,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-06.tsx",
+        path: "examples/components/selects/select-06.tsx",
         type: "registry:example",
       },
     ],
@@ -2056,7 +2054,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-07.tsx",
+        path: "examples/components/selects/select-07.tsx",
         type: "registry:example",
       },
     ],
@@ -2066,7 +2064,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-08.tsx",
+        path: "examples/components/selects/select-08.tsx",
         type: "registry:example",
       },
     ],
@@ -2076,7 +2074,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-09.tsx",
+        path: "examples/components/selects/select-09.tsx",
         type: "registry:example",
       },
     ],
@@ -2086,7 +2084,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-10.tsx",
+        path: "examples/components/selects/select-10.tsx",
         type: "registry:example",
       },
     ],
@@ -2096,7 +2094,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-11.tsx",
+        path: "examples/components/selects/select-11.tsx",
         type: "registry:example",
       },
     ],
@@ -2106,7 +2104,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-12.tsx",
+        path: "examples/components/selects/select-12.tsx",
         type: "registry:example",
       },
     ],
@@ -2116,7 +2114,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-13.tsx",
+        path: "examples/components/selects/select-13.tsx",
         type: "registry:example",
       },
     ],
@@ -2126,7 +2124,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-14.tsx",
+        path: "examples/components/selects/select-14.tsx",
         type: "registry:example",
       },
     ],
@@ -2136,7 +2134,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-15.tsx",
+        path: "examples/components/selects/select-15.tsx",
         type: "registry:example",
       },
     ],
@@ -2146,7 +2144,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-16.tsx",
+        path: "examples/components/selects/select-16.tsx",
         type: "registry:example",
       },
     ],
@@ -2156,7 +2154,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-17.tsx",
+        path: "examples/components/selects/select-17.tsx",
         type: "registry:example",
       },
     ],
@@ -2166,7 +2164,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-18.tsx",
+        path: "examples/components/selects/select-18.tsx",
         type: "registry:example",
       },
     ],
@@ -2176,7 +2174,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-19.tsx",
+        path: "examples/components/selects/select-19.tsx",
         type: "registry:example",
       },
     ],
@@ -2186,7 +2184,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-20.tsx",
+        path: "examples/components/selects/select-20.tsx",
         type: "registry:example",
       },
     ],
@@ -2196,7 +2194,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-21.tsx",
+        path: "examples/components/selects/select-21.tsx",
         type: "registry:example",
       },
     ],
@@ -2206,7 +2204,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-22.tsx",
+        path: "examples/components/selects/select-22.tsx",
         type: "registry:example",
       },
     ],
@@ -2216,7 +2214,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-23.tsx",
+        path: "examples/components/selects/select-23.tsx",
         type: "registry:example",
       },
     ],
@@ -2226,7 +2224,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-24.tsx",
+        path: "examples/components/selects/select-24.tsx",
         type: "registry:example",
       },
     ],
@@ -2236,7 +2234,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-25.tsx",
+        path: "examples/components/selects/select-25.tsx",
         type: "registry:example",
       },
     ],
@@ -2246,7 +2244,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-26.tsx",
+        path: "examples/components/selects/select-26.tsx",
         type: "registry:example",
       },
     ],
@@ -2256,7 +2254,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-27.tsx",
+        path: "examples/components/selects/select-27.tsx",
         type: "registry:example",
       },
     ],
@@ -2266,7 +2264,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-28.tsx",
+        path: "examples/components/selects/select-28.tsx",
         type: "registry:example",
       },
     ],
@@ -2276,7 +2274,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-29.tsx",
+        path: "examples/components/selects/select-29.tsx",
         type: "registry:example",
       },
     ],
@@ -2286,7 +2284,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-30.tsx",
+        path: "examples/components/selects/select-30.tsx",
         type: "registry:example",
       },
     ],
@@ -2296,7 +2294,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-31.tsx",
+        path: "examples/components/selects/select-31.tsx",
         type: "registry:example",
       },
     ],
@@ -2306,7 +2304,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-32.tsx",
+        path: "examples/components/selects/select-32.tsx",
         type: "registry:example",
       },
     ],
@@ -2316,7 +2314,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-33.tsx",
+        path: "examples/components/selects/select-33.tsx",
         type: "registry:example",
       },
     ],
@@ -2326,7 +2324,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-34.tsx",
+        path: "examples/components/selects/select-34.tsx",
         type: "registry:example",
       },
     ],
@@ -2336,7 +2334,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-35.tsx",
+        path: "examples/components/selects/select-35.tsx",
         type: "registry:example",
       },
     ],
@@ -2346,7 +2344,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-36.tsx",
+        path: "examples/components/selects/select-36.tsx",
         type: "registry:example",
       },
     ],
@@ -2356,7 +2354,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-37.tsx",
+        path: "examples/components/selects/select-37.tsx",
         type: "registry:example",
       },
     ],
@@ -2366,7 +2364,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-38.tsx",
+        path: "examples/components/selects/select-38.tsx",
         type: "registry:example",
       },
     ],
@@ -2376,7 +2374,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-39.tsx",
+        path: "examples/components/selects/select-39.tsx",
         type: "registry:example",
       },
     ],
@@ -2386,7 +2384,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-40.tsx",
+        path: "examples/components/selects/select-40.tsx",
         type: "registry:example",
       },
     ],
@@ -2396,7 +2394,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-41.tsx",
+        path: "examples/components/selects/select-41.tsx",
         type: "registry:example",
       },
     ],
@@ -2406,7 +2404,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-42.tsx",
+        path: "examples/components/selects/select-42.tsx",
         type: "registry:example",
       },
     ],
@@ -2416,7 +2414,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-43.tsx",
+        path: "examples/components/selects/select-43.tsx",
         type: "registry:example",
       },
     ],
@@ -2426,7 +2424,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-44.tsx",
+        path: "examples/components/selects/select-44.tsx",
         type: "registry:example",
       },
     ],
@@ -2436,7 +2434,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-45.tsx",
+        path: "examples/components/selects/select-45.tsx",
         type: "registry:example",
       },
     ],
@@ -2446,7 +2444,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-46.tsx",
+        path: "examples/components/selects/select-46.tsx",
         type: "registry:example",
       },
     ],
@@ -2456,7 +2454,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-47.tsx",
+        path: "examples/components/selects/select-47.tsx",
         type: "registry:example",
       },
     ],
@@ -2466,7 +2464,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-48.tsx",
+        path: "examples/components/selects/select-48.tsx",
         type: "registry:example",
       },
     ],
@@ -2476,7 +2474,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-49.tsx",
+        path: "examples/components/selects/select-49.tsx",
         type: "registry:example",
       },
     ],
@@ -2486,7 +2484,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-50.tsx",
+        path: "examples/components/selects/select-50.tsx",
         type: "registry:example",
       },
     ],
@@ -2496,7 +2494,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/selects/select-51.tsx",
+        path: "examples/components/selects/select-51.tsx",
         type: "registry:example",
       },
     ],
@@ -2506,7 +2504,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-01.tsx",
+        path: "examples/components/sliders/slider-01.tsx",
         type: "registry:example",
       },
     ],
@@ -2516,7 +2514,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-02.tsx",
+        path: "examples/components/sliders/slider-02.tsx",
         type: "registry:example",
       },
     ],
@@ -2526,7 +2524,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-03.tsx",
+        path: "examples/components/sliders/slider-03.tsx",
         type: "registry:example",
       },
     ],
@@ -2536,7 +2534,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-04.tsx",
+        path: "examples/components/sliders/slider-04.tsx",
         type: "registry:example",
       },
     ],
@@ -2546,7 +2544,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-05.tsx",
+        path: "examples/components/sliders/slider-05.tsx",
         type: "registry:example",
       },
     ],
@@ -2556,7 +2554,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-06.tsx",
+        path: "examples/components/sliders/slider-06.tsx",
         type: "registry:example",
       },
     ],
@@ -2566,7 +2564,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-07.tsx",
+        path: "examples/components/sliders/slider-07.tsx",
         type: "registry:example",
       },
     ],
@@ -2576,7 +2574,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-08.tsx",
+        path: "examples/components/sliders/slider-08.tsx",
         type: "registry:example",
       },
     ],
@@ -2586,7 +2584,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-09.tsx",
+        path: "examples/components/sliders/slider-09.tsx",
         type: "registry:example",
       },
     ],
@@ -2596,7 +2594,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-10.tsx",
+        path: "examples/components/sliders/slider-10.tsx",
         type: "registry:example",
       },
     ],
@@ -2606,7 +2604,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-11.tsx",
+        path: "examples/components/sliders/slider-11.tsx",
         type: "registry:example",
       },
     ],
@@ -2616,7 +2614,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-12.tsx",
+        path: "examples/components/sliders/slider-12.tsx",
         type: "registry:example",
       },
     ],
@@ -2626,7 +2624,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-13.tsx",
+        path: "examples/components/sliders/slider-13.tsx",
         type: "registry:example",
       },
     ],
@@ -2636,7 +2634,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-14.tsx",
+        path: "examples/components/sliders/slider-14.tsx",
         type: "registry:example",
       },
     ],
@@ -2646,7 +2644,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-15.tsx",
+        path: "examples/components/sliders/slider-15.tsx",
         type: "registry:example",
       },
     ],
@@ -2656,7 +2654,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-16.tsx",
+        path: "examples/components/sliders/slider-16.tsx",
         type: "registry:example",
       },
     ],
@@ -2666,7 +2664,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-17.tsx",
+        path: "examples/components/sliders/slider-17.tsx",
         type: "registry:example",
       },
     ],
@@ -2676,7 +2674,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-18.tsx",
+        path: "examples/components/sliders/slider-18.tsx",
         type: "registry:example",
       },
     ],
@@ -2686,7 +2684,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-19.tsx",
+        path: "examples/components/sliders/slider-19.tsx",
         type: "registry:example",
       },
     ],
@@ -2696,7 +2694,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-20.tsx",
+        path: "examples/components/sliders/slider-20.tsx",
         type: "registry:example",
       },
     ],
@@ -2706,7 +2704,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-21.tsx",
+        path: "examples/components/sliders/slider-21.tsx",
         type: "registry:example",
       },
     ],
@@ -2716,7 +2714,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-22.tsx",
+        path: "examples/components/sliders/slider-22.tsx",
         type: "registry:example",
       },
     ],
@@ -2726,7 +2724,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-23.tsx",
+        path: "examples/components/sliders/slider-23.tsx",
         type: "registry:example",
       },
     ],
@@ -2736,7 +2734,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-24.tsx",
+        path: "examples/components/sliders/slider-24.tsx",
         type: "registry:example",
       },
     ],
@@ -2746,7 +2744,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-25.tsx",
+        path: "examples/components/sliders/slider-25.tsx",
         type: "registry:example",
       },
     ],
@@ -2756,7 +2754,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-26.tsx",
+        path: "examples/components/sliders/slider-26.tsx",
         type: "registry:example",
       },
     ],
@@ -2766,7 +2764,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/sliders/slider-27.tsx",
+        path: "examples/components/sliders/slider-27.tsx",
         type: "registry:example",
       },
     ],
@@ -2776,7 +2774,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-01.tsx",
+        path: "examples/components/alerts/alert-01.tsx",
         type: "registry:example",
       },
     ],
@@ -2786,7 +2784,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-02.tsx",
+        path: "examples/components/alerts/alert-02.tsx",
         type: "registry:example",
       },
     ],
@@ -2796,7 +2794,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-03.tsx",
+        path: "examples/components/alerts/alert-03.tsx",
         type: "registry:example",
       },
     ],
@@ -2806,7 +2804,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-04.tsx",
+        path: "examples/components/alerts/alert-04.tsx",
         type: "registry:example",
       },
     ],
@@ -2816,7 +2814,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-05.tsx",
+        path: "examples/components/alerts/alert-05.tsx",
         type: "registry:example",
       },
     ],
@@ -2826,7 +2824,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-06.tsx",
+        path: "examples/components/alerts/alert-06.tsx",
         type: "registry:example",
       },
     ],
@@ -2836,7 +2834,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-07.tsx",
+        path: "examples/components/alerts/alert-07.tsx",
         type: "registry:example",
       },
     ],
@@ -2846,7 +2844,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-08.tsx",
+        path: "examples/components/alerts/alert-08.tsx",
         type: "registry:example",
       },
     ],
@@ -2856,7 +2854,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-09.tsx",
+        path: "examples/components/alerts/alert-09.tsx",
         type: "registry:example",
       },
     ],
@@ -2866,7 +2864,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-10.tsx",
+        path: "examples/components/alerts/alert-10.tsx",
         type: "registry:example",
       },
     ],
@@ -2876,7 +2874,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-11.tsx",
+        path: "examples/components/alerts/alert-11.tsx",
         type: "registry:example",
       },
     ],
@@ -2886,7 +2884,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/alerts/alert-12.tsx",
+        path: "examples/components/alerts/alert-12.tsx",
         type: "registry:example",
       },
     ],
@@ -2896,7 +2894,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-01.tsx",
+        path: "examples/components/banners/banner-01.tsx",
         type: "registry:example",
       },
     ],
@@ -2906,7 +2904,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-02.tsx",
+        path: "examples/components/banners/banner-02.tsx",
         type: "registry:example",
       },
     ],
@@ -2916,7 +2914,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-03.tsx",
+        path: "examples/components/banners/banner-03.tsx",
         type: "registry:example",
       },
     ],
@@ -2926,7 +2924,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-04.tsx",
+        path: "examples/components/banners/banner-04.tsx",
         type: "registry:example",
       },
     ],
@@ -2936,7 +2934,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-05.tsx",
+        path: "examples/components/banners/banner-05.tsx",
         type: "registry:example",
       },
     ],
@@ -2946,7 +2944,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-06.tsx",
+        path: "examples/components/banners/banner-06.tsx",
         type: "registry:example",
       },
     ],
@@ -2956,7 +2954,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-07.tsx",
+        path: "examples/components/banners/banner-07.tsx",
         type: "registry:example",
       },
     ],
@@ -2966,7 +2964,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-08.tsx",
+        path: "examples/components/banners/banner-08.tsx",
         type: "registry:example",
       },
     ],
@@ -2976,7 +2974,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-09.tsx",
+        path: "examples/components/banners/banner-09.tsx",
         type: "registry:example",
       },
     ],
@@ -2986,7 +2984,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-10.tsx",
+        path: "examples/components/banners/banner-10.tsx",
         type: "registry:example",
       },
     ],
@@ -2996,7 +2994,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/banners/banner-11.tsx",
+        path: "examples/components/banners/banner-11.tsx",
         type: "registry:example",
       },
     ],
@@ -3006,7 +3004,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-01.tsx",
+        path: "examples/components/notifications/notification-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3016,7 +3014,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-02.tsx",
+        path: "examples/components/notifications/notification-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3026,7 +3024,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-03.tsx",
+        path: "examples/components/notifications/notification-03.tsx",
         type: "registry:example",
       },
     ],
@@ -3036,7 +3034,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-04.tsx",
+        path: "examples/components/notifications/notification-04.tsx",
         type: "registry:example",
       },
     ],
@@ -3046,7 +3044,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-05.tsx",
+        path: "examples/components/notifications/notification-05.tsx",
         type: "registry:example",
       },
     ],
@@ -3056,7 +3054,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-06.tsx",
+        path: "examples/components/notifications/notification-06.tsx",
         type: "registry:example",
       },
     ],
@@ -3066,7 +3064,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-07.tsx",
+        path: "examples/components/notifications/notification-07.tsx",
         type: "registry:example",
       },
     ],
@@ -3076,7 +3074,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-08.tsx",
+        path: "examples/components/notifications/notification-08.tsx",
         type: "registry:example",
       },
     ],
@@ -3086,7 +3084,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-09.tsx",
+        path: "examples/components/notifications/notification-09.tsx",
         type: "registry:example",
       },
     ],
@@ -3096,7 +3094,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-10.tsx",
+        path: "examples/components/notifications/notification-10.tsx",
         type: "registry:example",
       },
     ],
@@ -3106,7 +3104,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-11.tsx",
+        path: "examples/components/notifications/notification-11.tsx",
         type: "registry:example",
       },
     ],
@@ -3116,7 +3114,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-12.tsx",
+        path: "examples/components/notifications/notification-12.tsx",
         type: "registry:example",
       },
     ],
@@ -3126,7 +3124,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-13.tsx",
+        path: "examples/components/notifications/notification-13.tsx",
         type: "registry:example",
       },
     ],
@@ -3136,7 +3134,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-14.tsx",
+        path: "examples/components/notifications/notification-14.tsx",
         type: "registry:example",
       },
     ],
@@ -3146,7 +3144,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-15.tsx",
+        path: "examples/components/notifications/notification-15.tsx",
         type: "registry:example",
       },
     ],
@@ -3156,7 +3154,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-16.tsx",
+        path: "examples/components/notifications/notification-16.tsx",
         type: "registry:example",
       },
     ],
@@ -3166,7 +3164,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-17.tsx",
+        path: "examples/components/notifications/notification-17.tsx",
         type: "registry:example",
       },
     ],
@@ -3176,7 +3174,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-18.tsx",
+        path: "examples/components/notifications/notification-18.tsx",
         type: "registry:example",
       },
     ],
@@ -3186,7 +3184,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-19.tsx",
+        path: "examples/components/notifications/notification-19.tsx",
         type: "registry:example",
       },
     ],
@@ -3196,7 +3194,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-20.tsx",
+        path: "examples/components/notifications/notification-20.tsx",
         type: "registry:example",
       },
     ],
@@ -3206,7 +3204,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-21.tsx",
+        path: "examples/components/notifications/notification-21.tsx",
         type: "registry:example",
       },
     ],
@@ -3216,7 +3214,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-22.tsx",
+        path: "examples/components/notifications/notification-22.tsx",
         type: "registry:example",
       },
     ],
@@ -3226,7 +3224,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/notifications/notification-23.tsx",
+        path: "examples/components/notifications/notification-23.tsx",
         type: "registry:example",
       },
     ],
@@ -3237,7 +3235,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-01.tsx",
+        path: "examples/components/dialogs/dialog-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3247,7 +3245,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-02.tsx",
+        path: "examples/components/dialogs/dialog-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3257,7 +3255,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-03.tsx",
+        path: "examples/components/dialogs/dialog-03.tsx",
         type: "registry:example",
       },
     ],
@@ -3267,7 +3265,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-04.tsx",
+        path: "examples/components/dialogs/dialog-04.tsx",
         type: "registry:example",
       },
     ],
@@ -3277,7 +3275,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-05.tsx",
+        path: "examples/components/dialogs/dialog-05.tsx",
         type: "registry:example",
       },
     ],
@@ -3287,7 +3285,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-06.tsx",
+        path: "examples/components/dialogs/dialog-06.tsx",
         type: "registry:example",
       },
     ],
@@ -3297,7 +3295,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-07.tsx",
+        path: "examples/components/dialogs/dialog-07.tsx",
         type: "registry:example",
       },
     ],
@@ -3307,7 +3305,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-08.tsx",
+        path: "examples/components/dialogs/dialog-08.tsx",
         type: "registry:example",
       },
     ],
@@ -3317,7 +3315,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-09.tsx",
+        path: "examples/components/dialogs/dialog-09.tsx",
         type: "registry:example",
       },
     ],
@@ -3327,7 +3325,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-10.tsx",
+        path: "examples/components/dialogs/dialog-10.tsx",
         type: "registry:example",
       },
     ],
@@ -3337,7 +3335,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-11.tsx",
+        path: "examples/components/dialogs/dialog-11.tsx",
         type: "registry:example",
       },
     ],
@@ -3347,7 +3345,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-12.tsx",
+        path: "examples/components/dialogs/dialog-12.tsx",
         type: "registry:example",
       },
     ],
@@ -3357,7 +3355,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-13.tsx",
+        path: "examples/components/dialogs/dialog-13.tsx",
         type: "registry:example",
       },
     ],
@@ -3367,7 +3365,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-14.tsx",
+        path: "examples/components/dialogs/dialog-14.tsx",
         type: "registry:example",
       },
     ],
@@ -3377,7 +3375,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-15.tsx",
+        path: "examples/components/dialogs/dialog-15.tsx",
         type: "registry:example",
       },
     ],
@@ -3387,7 +3385,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-16.tsx",
+        path: "examples/components/dialogs/dialog-16.tsx",
         type: "registry:example",
       },
     ],
@@ -3397,7 +3395,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-17.tsx",
+        path: "examples/components/dialogs/dialog-17.tsx",
         type: "registry:example",
       },
     ],
@@ -3407,7 +3405,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-18.tsx",
+        path: "examples/components/dialogs/dialog-18.tsx",
         type: "registry:example",
       },
     ],
@@ -3417,7 +3415,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-19.tsx",
+        path: "examples/components/dialogs/dialog-19.tsx",
         type: "registry:example",
       },
     ],
@@ -3427,7 +3425,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-20.tsx",
+        path: "examples/components/dialogs/dialog-20.tsx",
         type: "registry:example",
       },
     ],
@@ -3437,7 +3435,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dialogs/dialog-21.tsx",
+        path: "examples/components/dialogs/dialog-21.tsx",
         type: "registry:example",
       },
     ],
@@ -3447,7 +3445,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-01.tsx",
+        path: "examples/components/accordions/accordion-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3457,7 +3455,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-02.tsx",
+        path: "examples/components/accordions/accordion-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3467,7 +3465,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-03.tsx",
+        path: "examples/components/accordions/accordion-03.tsx",
         type: "registry:example",
       },
     ],
@@ -3477,7 +3475,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-04.tsx",
+        path: "examples/components/accordions/accordion-04.tsx",
         type: "registry:example",
       },
     ],
@@ -3487,7 +3485,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-05.tsx",
+        path: "examples/components/accordions/accordion-05.tsx",
         type: "registry:example",
       },
     ],
@@ -3497,7 +3495,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-06.tsx",
+        path: "examples/components/accordions/accordion-06.tsx",
         type: "registry:example",
       },
     ],
@@ -3507,7 +3505,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-07.tsx",
+        path: "examples/components/accordions/accordion-07.tsx",
         type: "registry:example",
       },
     ],
@@ -3517,7 +3515,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-08.tsx",
+        path: "examples/components/accordions/accordion-08.tsx",
         type: "registry:example",
       },
     ],
@@ -3527,7 +3525,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-09.tsx",
+        path: "examples/components/accordions/accordion-09.tsx",
         type: "registry:example",
       },
     ],
@@ -3537,7 +3535,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-10.tsx",
+        path: "examples/components/accordions/accordion-10.tsx",
         type: "registry:example",
       },
     ],
@@ -3547,7 +3545,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-11.tsx",
+        path: "examples/components/accordions/accordion-11.tsx",
         type: "registry:example",
       },
     ],
@@ -3557,7 +3555,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-12.tsx",
+        path: "examples/components/accordions/accordion-12.tsx",
         type: "registry:example",
       },
     ],
@@ -3567,7 +3565,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-13.tsx",
+        path: "examples/components/accordions/accordion-13.tsx",
         type: "registry:example",
       },
     ],
@@ -3577,7 +3575,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-14.tsx",
+        path: "examples/components/accordions/accordion-14.tsx",
         type: "registry:example",
       },
     ],
@@ -3587,7 +3585,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-15.tsx",
+        path: "examples/components/accordions/accordion-15.tsx",
         type: "registry:example",
       },
     ],
@@ -3597,7 +3595,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-16.tsx",
+        path: "examples/components/accordions/accordion-16.tsx",
         type: "registry:example",
       },
     ],
@@ -3607,7 +3605,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-17.tsx",
+        path: "examples/components/accordions/accordion-17.tsx",
         type: "registry:example",
       },
     ],
@@ -3617,7 +3615,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-18.tsx",
+        path: "examples/components/accordions/accordion-18.tsx",
         type: "registry:example",
       },
     ],
@@ -3627,7 +3625,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-19.tsx",
+        path: "examples/components/accordions/accordion-19.tsx",
         type: "registry:example",
       },
     ],
@@ -3637,7 +3635,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/accordions/accordion-20.tsx",
+        path: "examples/components/accordions/accordion-20.tsx",
         type: "registry:example",
       },
     ],
@@ -3647,7 +3645,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-01.tsx",
+        path: "examples/components/tooltips/tooltip-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3657,7 +3655,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-02.tsx",
+        path: "examples/components/tooltips/tooltip-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3667,7 +3665,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-03.tsx",
+        path: "examples/components/tooltips/tooltip-03.tsx",
         type: "registry:example",
       },
     ],
@@ -3677,7 +3675,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-04.tsx",
+        path: "examples/components/tooltips/tooltip-04.tsx",
         type: "registry:example",
       },
     ],
@@ -3687,7 +3685,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-05.tsx",
+        path: "examples/components/tooltips/tooltip-05.tsx",
         type: "registry:example",
       },
     ],
@@ -3697,7 +3695,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-06.tsx",
+        path: "examples/components/tooltips/tooltip-06.tsx",
         type: "registry:example",
       },
     ],
@@ -3707,7 +3705,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-07.tsx",
+        path: "examples/components/tooltips/tooltip-07.tsx",
         type: "registry:example",
       },
     ],
@@ -3717,7 +3715,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-08.tsx",
+        path: "examples/components/tooltips/tooltip-08.tsx",
         type: "registry:example",
       },
     ],
@@ -3727,7 +3725,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tooltips/tooltip-09.tsx",
+        path: "examples/components/tooltips/tooltip-09.tsx",
         type: "registry:example",
       },
     ],
@@ -3738,7 +3736,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-01.tsx",
+        path: "examples/components/dropdowns/dropdown-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3748,7 +3746,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-02.tsx",
+        path: "examples/components/dropdowns/dropdown-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3758,7 +3756,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-03.tsx",
+        path: "examples/components/dropdowns/dropdown-03.tsx",
         type: "registry:example",
       },
     ],
@@ -3768,7 +3766,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-04.tsx",
+        path: "examples/components/dropdowns/dropdown-04.tsx",
         type: "registry:example",
       },
     ],
@@ -3778,7 +3776,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-05.tsx",
+        path: "examples/components/dropdowns/dropdown-05.tsx",
         type: "registry:example",
       },
     ],
@@ -3788,7 +3786,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-06.tsx",
+        path: "examples/components/dropdowns/dropdown-06.tsx",
         type: "registry:example",
       },
     ],
@@ -3798,7 +3796,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-07.tsx",
+        path: "examples/components/dropdowns/dropdown-07.tsx",
         type: "registry:example",
       },
     ],
@@ -3808,7 +3806,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-08.tsx",
+        path: "examples/components/dropdowns/dropdown-08.tsx",
         type: "registry:example",
       },
     ],
@@ -3818,7 +3816,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-09.tsx",
+        path: "examples/components/dropdowns/dropdown-09.tsx",
         type: "registry:example",
       },
     ],
@@ -3828,7 +3826,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-10.tsx",
+        path: "examples/components/dropdowns/dropdown-10.tsx",
         type: "registry:example",
       },
     ],
@@ -3838,7 +3836,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-11.tsx",
+        path: "examples/components/dropdowns/dropdown-11.tsx",
         type: "registry:example",
       },
     ],
@@ -3848,7 +3846,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-12.tsx",
+        path: "examples/components/dropdowns/dropdown-12.tsx",
         type: "registry:example",
       },
     ],
@@ -3858,7 +3856,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-13.tsx",
+        path: "examples/components/dropdowns/dropdown-13.tsx",
         type: "registry:example",
       },
     ],
@@ -3868,7 +3866,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-14.tsx",
+        path: "examples/components/dropdowns/dropdown-14.tsx",
         type: "registry:example",
       },
     ],
@@ -3878,7 +3876,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/dropdowns/dropdown-15.tsx",
+        path: "examples/components/dropdowns/dropdown-15.tsx",
         type: "registry:example",
       },
     ],
@@ -3888,7 +3886,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-01.tsx",
+        path: "examples/components/popovers/popover-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3898,7 +3896,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-02.tsx",
+        path: "examples/components/popovers/popover-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3908,7 +3906,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-03.tsx",
+        path: "examples/components/popovers/popover-03.tsx",
         type: "registry:example",
       },
     ],
@@ -3918,7 +3916,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-04.tsx",
+        path: "examples/components/popovers/popover-04.tsx",
         type: "registry:example",
       },
     ],
@@ -3928,7 +3926,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-05.tsx",
+        path: "examples/components/popovers/popover-05.tsx",
         type: "registry:example",
       },
     ],
@@ -3938,7 +3936,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-06.tsx",
+        path: "examples/components/popovers/popover-06.tsx",
         type: "registry:example",
       },
     ],
@@ -3948,7 +3946,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-07.tsx",
+        path: "examples/components/popovers/popover-07.tsx",
         type: "registry:example",
       },
     ],
@@ -3958,7 +3956,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-08.tsx",
+        path: "examples/components/popovers/popover-08.tsx",
         type: "registry:example",
       },
     ],
@@ -3968,7 +3966,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/popovers/popover-09.tsx",
+        path: "examples/components/popovers/popover-09.tsx",
         type: "registry:example",
       },
     ],
@@ -3978,7 +3976,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-01.tsx",
+        path: "examples/components/avatars/avatar-01.tsx",
         type: "registry:example",
       },
     ],
@@ -3988,7 +3986,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-02.tsx",
+        path: "examples/components/avatars/avatar-02.tsx",
         type: "registry:example",
       },
     ],
@@ -3998,7 +3996,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-03.tsx",
+        path: "examples/components/avatars/avatar-03.tsx",
         type: "registry:example",
       },
     ],
@@ -4008,7 +4006,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-04.tsx",
+        path: "examples/components/avatars/avatar-04.tsx",
         type: "registry:example",
       },
     ],
@@ -4018,7 +4016,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-05.tsx",
+        path: "examples/components/avatars/avatar-05.tsx",
         type: "registry:example",
       },
     ],
@@ -4028,7 +4026,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-06.tsx",
+        path: "examples/components/avatars/avatar-06.tsx",
         type: "registry:example",
       },
     ],
@@ -4038,7 +4036,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-07.tsx",
+        path: "examples/components/avatars/avatar-07.tsx",
         type: "registry:example",
       },
     ],
@@ -4048,7 +4046,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-08.tsx",
+        path: "examples/components/avatars/avatar-08.tsx",
         type: "registry:example",
       },
     ],
@@ -4058,7 +4056,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-09.tsx",
+        path: "examples/components/avatars/avatar-09.tsx",
         type: "registry:example",
       },
     ],
@@ -4068,7 +4066,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-10.tsx",
+        path: "examples/components/avatars/avatar-10.tsx",
         type: "registry:example",
       },
     ],
@@ -4078,7 +4076,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-11.tsx",
+        path: "examples/components/avatars/avatar-11.tsx",
         type: "registry:example",
       },
     ],
@@ -4088,7 +4086,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-12.tsx",
+        path: "examples/components/avatars/avatar-12.tsx",
         type: "registry:example",
       },
     ],
@@ -4098,7 +4096,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-13.tsx",
+        path: "examples/components/avatars/avatar-13.tsx",
         type: "registry:example",
       },
     ],
@@ -4108,7 +4106,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-14.tsx",
+        path: "examples/components/avatars/avatar-14.tsx",
         type: "registry:example",
       },
     ],
@@ -4118,7 +4116,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-15.tsx",
+        path: "examples/components/avatars/avatar-15.tsx",
         type: "registry:example",
       },
     ],
@@ -4128,7 +4126,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-16.tsx",
+        path: "examples/components/avatars/avatar-16.tsx",
         type: "registry:example",
       },
     ],
@@ -4138,7 +4136,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-17.tsx",
+        path: "examples/components/avatars/avatar-17.tsx",
         type: "registry:example",
       },
     ],
@@ -4148,7 +4146,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-18.tsx",
+        path: "examples/components/avatars/avatar-18.tsx",
         type: "registry:example",
       },
     ],
@@ -4158,7 +4156,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-19.tsx",
+        path: "examples/components/avatars/avatar-19.tsx",
         type: "registry:example",
       },
     ],
@@ -4168,7 +4166,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-20.tsx",
+        path: "examples/components/avatars/avatar-20.tsx",
         type: "registry:example",
       },
     ],
@@ -4178,7 +4176,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-21.tsx",
+        path: "examples/components/avatars/avatar-21.tsx",
         type: "registry:example",
       },
     ],
@@ -4188,7 +4186,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-22.tsx",
+        path: "examples/components/avatars/avatar-22.tsx",
         type: "registry:example",
       },
     ],
@@ -4198,7 +4196,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/avatars/avatar-23.tsx",
+        path: "examples/components/avatars/avatar-23.tsx",
         type: "registry:example",
       },
     ],
@@ -4208,7 +4206,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-01.tsx",
+        path: "examples/components/badges/badge-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4218,7 +4216,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-02.tsx",
+        path: "examples/components/badges/badge-02.tsx",
         type: "registry:example",
       },
     ],
@@ -4228,7 +4226,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-03.tsx",
+        path: "examples/components/badges/badge-03.tsx",
         type: "registry:example",
       },
     ],
@@ -4238,7 +4236,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-04.tsx",
+        path: "examples/components/badges/badge-04.tsx",
         type: "registry:example",
       },
     ],
@@ -4248,7 +4246,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-05.tsx",
+        path: "examples/components/badges/badge-05.tsx",
         type: "registry:example",
       },
     ],
@@ -4258,7 +4256,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-06.tsx",
+        path: "examples/components/badges/badge-06.tsx",
         type: "registry:example",
       },
     ],
@@ -4268,7 +4266,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-07.tsx",
+        path: "examples/components/badges/badge-07.tsx",
         type: "registry:example",
       },
     ],
@@ -4278,7 +4276,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-08.tsx",
+        path: "examples/components/badges/badge-08.tsx",
         type: "registry:example",
       },
     ],
@@ -4288,7 +4286,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-09.tsx",
+        path: "examples/components/badges/badge-09.tsx",
         type: "registry:example",
       },
     ],
@@ -4298,7 +4296,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-10.tsx",
+        path: "examples/components/badges/badge-10.tsx",
         type: "registry:example",
       },
     ],
@@ -4308,7 +4306,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-11.tsx",
+        path: "examples/components/badges/badge-11.tsx",
         type: "registry:example",
       },
     ],
@@ -4318,7 +4316,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-12.tsx",
+        path: "examples/components/badges/badge-12.tsx",
         type: "registry:example",
       },
     ],
@@ -4328,7 +4326,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/badges/badge-13.tsx",
+        path: "examples/components/badges/badge-13.tsx",
         type: "registry:example",
       },
     ],
@@ -4338,7 +4336,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-01.tsx",
+        path: "examples/components/tabs/tab-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4348,7 +4346,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-02.tsx",
+        path: "examples/components/tabs/tab-02.tsx",
         type: "registry:example",
       },
     ],
@@ -4358,7 +4356,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-03.tsx",
+        path: "examples/components/tabs/tab-03.tsx",
         type: "registry:example",
       },
     ],
@@ -4368,7 +4366,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-04.tsx",
+        path: "examples/components/tabs/tab-04.tsx",
         type: "registry:example",
       },
     ],
@@ -4378,7 +4376,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-05.tsx",
+        path: "examples/components/tabs/tab-05.tsx",
         type: "registry:example",
       },
     ],
@@ -4388,7 +4386,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-06.tsx",
+        path: "examples/components/tabs/tab-06.tsx",
         type: "registry:example",
       },
     ],
@@ -4398,7 +4396,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-07.tsx",
+        path: "examples/components/tabs/tab-07.tsx",
         type: "registry:example",
       },
     ],
@@ -4408,7 +4406,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-08.tsx",
+        path: "examples/components/tabs/tab-08.tsx",
         type: "registry:example",
       },
     ],
@@ -4418,7 +4416,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-09.tsx",
+        path: "examples/components/tabs/tab-09.tsx",
         type: "registry:example",
       },
     ],
@@ -4428,7 +4426,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-10.tsx",
+        path: "examples/components/tabs/tab-10.tsx",
         type: "registry:example",
       },
     ],
@@ -4438,7 +4436,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-11.tsx",
+        path: "examples/components/tabs/tab-11.tsx",
         type: "registry:example",
       },
     ],
@@ -4448,7 +4446,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-12.tsx",
+        path: "examples/components/tabs/tab-12.tsx",
         type: "registry:example",
       },
     ],
@@ -4458,7 +4456,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-13.tsx",
+        path: "examples/components/tabs/tab-13.tsx",
         type: "registry:example",
       },
     ],
@@ -4468,7 +4466,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-14.tsx",
+        path: "examples/components/tabs/tab-14.tsx",
         type: "registry:example",
       },
     ],
@@ -4478,7 +4476,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-15.tsx",
+        path: "examples/components/tabs/tab-15.tsx",
         type: "registry:example",
       },
     ],
@@ -4488,7 +4486,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-16.tsx",
+        path: "examples/components/tabs/tab-16.tsx",
         type: "registry:example",
       },
     ],
@@ -4498,7 +4496,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-17.tsx",
+        path: "examples/components/tabs/tab-17.tsx",
         type: "registry:example",
       },
     ],
@@ -4508,7 +4506,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-18.tsx",
+        path: "examples/components/tabs/tab-18.tsx",
         type: "registry:example",
       },
     ],
@@ -4518,7 +4516,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-19.tsx",
+        path: "examples/components/tabs/tab-19.tsx",
         type: "registry:example",
       },
     ],
@@ -4528,7 +4526,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/tabs/tab-20.tsx",
+        path: "examples/components/tabs/tab-20.tsx",
         type: "registry:example",
       },
     ],
@@ -4538,7 +4536,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-01.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4548,7 +4546,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-02.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-02.tsx",
         type: "registry:example",
       },
     ],
@@ -4558,7 +4556,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-03.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-03.tsx",
         type: "registry:example",
       },
     ],
@@ -4568,7 +4566,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-04.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-04.tsx",
         type: "registry:example",
       },
     ],
@@ -4578,7 +4576,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-05.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-05.tsx",
         type: "registry:example",
       },
     ],
@@ -4588,7 +4586,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-06.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-06.tsx",
         type: "registry:example",
       },
     ],
@@ -4598,7 +4596,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-07.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-07.tsx",
         type: "registry:example",
       },
     ],
@@ -4608,7 +4606,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/breadcrumbs/breadcrumb-08.tsx",
+        path: "examples/components/breadcrumbs/breadcrumb-08.tsx",
         type: "registry:example",
       },
     ],
@@ -4618,7 +4616,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-01.tsx",
+        path: "examples/components/paginations/pagination-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4628,7 +4626,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-02.tsx",
+        path: "examples/components/paginations/pagination-02.tsx",
         type: "registry:example",
       },
     ],
@@ -4638,7 +4636,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-03.tsx",
+        path: "examples/components/paginations/pagination-03.tsx",
         type: "registry:example",
       },
     ],
@@ -4648,7 +4646,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-04.tsx",
+        path: "examples/components/paginations/pagination-04.tsx",
         type: "registry:example",
       },
     ],
@@ -4658,7 +4656,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-05.tsx",
+        path: "examples/components/paginations/pagination-05.tsx",
         type: "registry:example",
       },
     ],
@@ -4668,7 +4666,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-06.tsx",
+        path: "examples/components/paginations/pagination-06.tsx",
         type: "registry:example",
       },
     ],
@@ -4678,7 +4676,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-07.tsx",
+        path: "examples/components/paginations/pagination-07.tsx",
         type: "registry:example",
       },
     ],
@@ -4688,7 +4686,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-08.tsx",
+        path: "examples/components/paginations/pagination-08.tsx",
         type: "registry:example",
       },
     ],
@@ -4698,7 +4696,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-09.tsx",
+        path: "examples/components/paginations/pagination-09.tsx",
         type: "registry:example",
       },
     ],
@@ -4708,7 +4706,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-10.tsx",
+        path: "examples/components/paginations/pagination-10.tsx",
         type: "registry:example",
       },
     ],
@@ -4718,7 +4716,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-11.tsx",
+        path: "examples/components/paginations/pagination-11.tsx",
         type: "registry:example",
       },
     ],
@@ -4728,7 +4726,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/paginations/pagination-12.tsx",
+        path: "examples/components/paginations/pagination-12.tsx",
         type: "registry:example",
       },
     ],
@@ -4739,31 +4737,18 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/components/bento-grid/bento-grid-01.tsx",
+        path: "examples/components/bento-grid/bento-grid-01.tsx",
         type: "registry:example",
       },
     ],
   },
-
-  {
-    name: "script-copy-btn-01",
-    type: "registry:example",
-    files: [
-      {
-        path: "example/components/script-copy-btn-01.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-
-  // Texts
 
   {
     name: "gradient-text-01",
     type: "registry:example",
     files: [
       {
-        path: "example/texts/gradient-text-01.tsx",
+        path: "examples/texts/gradient-text-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4773,7 +4758,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/texts/morphing-text-01.tsx",
+        path: "examples/texts/morphing-text-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4783,7 +4768,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/texts/number-counter-01.tsx",
+        path: "examples/texts/number-counter-01.tsx",
         type: "registry:example",
       },
     ],
@@ -4793,19 +4778,18 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/texts/number-counter-02.tsx",
+        path: "examples/texts/number-counter-02.tsx",
         type: "registry:example",
       },
     ],
   },
 
-  // Typo
   {
     name: "typography-blockquote",
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-blockquote.tsx",
+        path: "examples/texts/typography-blockquote.tsx",
         type: "registry:example",
       },
     ],
@@ -4815,7 +4799,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-demo.tsx",
+        path: "examples/texts/typography-demo.tsx",
         type: "registry:example",
       },
     ],
@@ -4825,7 +4809,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-h1.tsx",
+        path: "examples/texts/typography-h1.tsx",
         type: "registry:example",
       },
     ],
@@ -4835,7 +4819,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-h2.tsx",
+        path: "examples/texts/typography-h2.tsx",
         type: "registry:example",
       },
     ],
@@ -4845,7 +4829,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-h3.tsx",
+        path: "examples/texts/typography-h3.tsx",
         type: "registry:example",
       },
     ],
@@ -4855,7 +4839,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-h4.tsx",
+        path: "examples/texts/typography-h4.tsx",
         type: "registry:example",
       },
     ],
@@ -4865,7 +4849,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-inline-code.tsx",
+        path: "examples/texts/typography-inline-code.tsx",
         type: "registry:example",
       },
     ],
@@ -4875,7 +4859,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-large.tsx",
+        path: "examples/texts/typography-large.tsx",
         type: "registry:example",
       },
     ],
@@ -4885,7 +4869,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-lead.tsx",
+        path: "examples/texts/typography-lead.tsx",
         type: "registry:example",
       },
     ],
@@ -4895,7 +4879,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-list.tsx",
+        path: "examples/texts/typography-list.tsx",
         type: "registry:example",
       },
     ],
@@ -4905,7 +4889,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-muted.tsx",
+        path: "examples/texts/typography-muted.tsx",
         type: "registry:example",
       },
     ],
@@ -4915,7 +4899,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-p.tsx",
+        path: "examples/texts/typography-p.tsx",
         type: "registry:example",
       },
     ],
@@ -4925,7 +4909,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-small.tsx",
+        path: "examples/texts/typography-small.tsx",
         type: "registry:example",
       },
     ],
@@ -4935,7 +4919,7 @@ export const examples: Registry = [
     type: "registry:example",
     files: [
       {
-        path: "example/typo/typography-table.tsx",
+        path: "examples/texts/typography-table.tsx",
         type: "registry:example",
       },
     ],

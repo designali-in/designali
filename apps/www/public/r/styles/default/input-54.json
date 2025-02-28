@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-54",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-54.tsx",
+      "path": "examples/components/inputs/input-54.tsx",
       "content": "\"use client\";\n\nimport { withMask } from \"use-mask-input\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-54\">Input with mask</Label>\n      <Input\n        id=\"input-54\"\n        placeholder=\"AB12 CDE\"\n        type=\"text\"\n        ref={withMask(\"AA99 AAA\", {\n          placeholder: \"\",\n          showMaskOnHover: false,\n        })}\n      />\n      <p\n        className=\"mt-2 text-xs text-muted-foreground\"\n        role=\"region\"\n        aria-live=\"polite\"\n      >\n        Built with{\" \"}\n        <a\n          className=\"underline hover:text-foreground\"\n          href=\"https://github.com/eduardoborges/use-mask-input\"\n          target=\"_blank\"\n          rel=\"noopener nofollow\"\n        >\n          use-mask-input\n        </a>\n      </p>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

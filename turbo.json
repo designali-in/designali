@@ -1,7 +1,23 @@
 {
-  "$schema": "https://turborepo.org/schema.json",
+  "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "globalDependencies": ["**/.env"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  },
   "globalEnv": [
     "NEXT_PUBLIC_APP_NAME",
     "NEXT_PUBLIC_APP_URL",
@@ -40,53 +56,5 @@
     "STRIPE_API_KEY",
     "STRIPE_SECRET_KEY",
     "PORT"
-  ],
-  "globalPassThroughEnv": [
-    "CI",
-    "NODE_ENV",
-    "VERCEL",
-    "VERCEL_ENV",
-    "VERCEL_URL",
-    "npm_lifecycle_event"
-  ],
-  "tasks": {
-    "topo": {
-      "dependsOn": ["^topo"]
-    },
-    "db:generate": {
-      "cache": false
-    },
-    "db:push": {
-      "cache": false
-    },
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": [
-        ".next/**",
-        "!.next/cache/**",
-        "next-env.d.ts",
-        ".output/**",
-        ".vercel/output/**"
-      ]
-    },
-    "dev": {
-      "persistent": true,
-      "cache": false
-    },
-    "format": {
-      "outputs": ["node_modules/.cache/.prettiercache"],
-      "outputLogs": "new-only"
-    },
-    "lint": {
-      "dependsOn": ["^topo"],
-      "outputs": ["node_modules/.cache/.eslintcache"]
-    },
-    "typecheck": {
-      "dependsOn": ["^topo"],
-      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
-    },
-    "clean": {
-      "cache": false
-    }
-  }
+  ]
 }

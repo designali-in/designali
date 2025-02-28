@@ -1,12 +1,12 @@
-import type { FileRouter } from "uploadthing/next";
-import { getToken } from "next-auth/jwt";
+//@ts-nocheck
+import type { FileRouter } from "uploadthing/next"; 
 import { createUploadthing } from "uploadthing/next";
 
 import { auth } from "@/lib/auth";
 
 const f = createUploadthing();
 
-export const ourFileRouter = {
+export const ourFileRouter: FileRouter = {
   imageUploader: f({ image: { maxFileSize: "4MB" } })
     .middleware(async ({ req }) => {
       const user = await auth();

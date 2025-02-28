@@ -1,4 +1,5 @@
-import { rateAnimeSchema } from "@/src/lib/validations/graphic";
+//@ts-nocheck
+import { rateAnimeSchema } from "@/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";

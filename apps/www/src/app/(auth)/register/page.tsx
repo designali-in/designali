@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { UserAuthForm } from "@/src/comp/forms/user-auth-form";
+import { UserAuthForm } from "@/components/forms/user-auth-form";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";

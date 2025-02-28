@@ -1,26 +1,20 @@
-import type {
-  ComponentsConfig,
-  DesignConfig,
-  DocumentationConfig,
-  GuidesConfig,
-} from "@/comp/mdx/doc/types";
+import { MainNavItem, SidebarNavItem } from "@/src/types/nav";
 
-export const componentsConfig: ComponentsConfig = {
+export interface DocsConfig {
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
+  chartsNav: SidebarNavItem[];
+}
+
+export const docsConfig: DocsConfig = {
   mainNav: [
     {
-      title: "Components",
-      href: "/components",
-      external: undefined,
-    },
-    {
-      title: "Designs",
-      href: "/designs",
-      external: undefined,
+      title: "Home",
+      href: "/",
     },
     {
       title: "Documentation",
-      href: "/documentation",
-      external: undefined,
+      href: "/docs",
     },
   ],
   sidebarNav: [
@@ -29,37 +23,50 @@ export const componentsConfig: ComponentsConfig = {
       items: [
         {
           title: "Introduction",
-          href: "/components",
+          href: "/docs",
+          items: [],
+        },
+
+        {
+          title: "Typography",
+          href: "/docs/typography",
+          items: [],
         },
       ],
     },
-
     {
       title: "Backgrounds",
       items: [
         {
           title: "Dot Pattern",
-          href: "/components/backgrounds/dot-pattern",
+          label: "New",
+          href: "/docs/components/backgrounds/dot-pattern",
+          items: [],
         },
         {
           title: "Grid Pattern",
-          href: "/components/backgrounds/grid-pattern",
+          href: "/docs/components/backgrounds/grid-pattern",
+          items: [],
         },
         {
           title: "Flickering Grid",
-          href: "/components/backgrounds/flickering-grid",
+          href: "/docs/components/backgrounds/flickering-grid",
+          items: [],
         },
         {
           title: "Retro Grid",
-          href: "/components/backgrounds/retro-grid",
+          href: "/docs/components/backgrounds/retro-grid",
+          items: [],
         },
         {
           title: "Ripple",
-          href: "/components/backgrounds/ripple",
+          href: "/docs/components/backgrounds/ripple",
+          items: [],
         },
         {
           title: "Scroll Progress",
-          href: "/components/backgrounds/scroll-progress",
+          href: "/docs/components/backgrounds/scroll-progress",
+          items: [],
         },
       ],
     },
@@ -68,23 +75,29 @@ export const componentsConfig: ComponentsConfig = {
       items: [
         {
           title: "Macbook",
-          href: "/components/mockups/macbook",
+
+          href: "/docs/components/mockups/macbook",
+          items: [],
         },
         {
           title: "Mac",
-          href: "/components/mockups/mac",
+          href: "/docs/components/mockups/mac",
+          items: [],
         },
         {
           title: "iPhone",
-          href: "/components/mockups/iphone",
+          href: "/docs/components/mockups/iphone",
+          items: [],
         },
         {
           title: "iPad",
-          href: "/components/mockups/ipad",
+          href: "/docs/components/mockups/ipad",
+          items: [],
         },
         {
           title: "Safari",
-          href: "/components/mockups/safari",
+          href: "/docs/components/mockups/safari",
+          items: [],
         },
       ],
     },
@@ -92,16 +105,20 @@ export const componentsConfig: ComponentsConfig = {
       title: "Texts",
       items: [
         {
-          title: "Gradient Text",
-          href: "/components/texts/gradient-text",
-        },
-        {
-          title: "Morphing Text",
-          href: "/components/texts/morphing-text",
+          title: "Morphing-text",
+          href: "/docs/components/texts/morphing-text",
+          items: [],
         },
         {
           title: "Number Counter",
-          href: "/components/texts/number-counter",
+          href: "/docs/components/texts/number-counter",
+          items: [],
+        },
+        {
+          title: "Gradient Text",
+          label: "New",
+          href: "/docs/components/texts/gradient-text",
+          items: [],
         },
       ],
     },
@@ -110,284 +127,371 @@ export const componentsConfig: ComponentsConfig = {
       items: [
         {
           title: "Accordion",
-          href: "/components/accordion",
+          href: "/docs/components/accordion",
+          items: [],
         },
         {
           title: "Alert",
-          href: "/components/alert",
+          href: "/docs/components/alert",
+          items: [],
         },
+
         {
           title: "Avatar",
-          href: "/components/avatar",
+          href: "/docs/components/avatar",
+          items: [],
         },
         {
           title: "Badge",
-          href: "/components/badge",
+          href: "/docs/components/badge",
+          items: [],
         },
         {
           title: "Banner",
-          href: "/components/banner",
-        },
-        {
-          title: "Bento Grid",
-          href: "/components/bento-grid",
+          href: "/docs/components/banner",
+          items: [],
         },
         {
           title: "Breadcrumb",
-          href: "/components/breadcrumb",
+          href: "/docs/components/breadcrumb",
+          items: [],
         },
         {
           title: "Button",
-          href: "/components/button",
+          href: "/docs/components/button",
+          items: [],
         },
         {
           title: "Checkbox",
-          href: "/components/checkbox",
+          href: "/docs/components/checkbox",
+          items: [],
         },
         {
           title: "Dialog",
-          href: "/components/dialog",
+          href: "/docs/components/dialog",
+          items: [],
         },
         {
           title: "Dropdown",
-          href: "/components/dropdown",
+          href: "/docs/components/dropdown",
+          items: [],
         },
         {
           title: "Input",
-          href: "/components/input",
+          href: "/docs/components/input",
+          items: [],
         },
         {
-          title: "Notifications",
-          href: "/components/notification",
+          title: "Notification",
+          href: "/docs/components/notification",
+          items: [],
         },
         {
           title: "Pagination",
-          href: "/components/pagination",
+          href: "/docs/components/pagination",
+          items: [],
         },
         {
           title: "Popover",
-          href: "/components/popover",
+          href: "/docs/components/popover",
+          items: [],
         },
         {
           title: "Radio",
-          href: "/components/radio",
-        },
-        {
-          title: "Select",
-          href: "/components/select",
+          href: "/docs/components/radio",
+          items: [],
         },
         {
           title: "Script Copy Button",
-          href: "/components/script-copy-btn",
-          label: "New",
+          href: "/docs/components/script-copy-button",
+          items: [],
+        },
+        {
+          title: "Select",
+          href: "/docs/components/select",
+          items: [],
         },
         {
           title: "Slider",
-          href: "/components/slider",
+          href: "/docs/components/slider",
+          items: [],
         },
         {
           title: "Switch",
-          href: "/components/switch",
+          href: "/docs/components/switch",
+          items: [],
         },
         {
           title: "Tab",
-          href: "/components/tab",
+          href: "/docs/components/tab",
+          items: [],
         },
         {
           title: "Textarea",
-          href: "/components/textarea",
+          href: "/docs/components/textarea",
+          items: [],
         },
         {
           title: "Tooltip",
-          href: "/components/tooltip",
-        },
-      ],
-    },
-  ],
-};
-
-export const designsConfig: DesignConfig = {
-  mainNav: [
-    {
-      title: "Designs",
-      href: "/designs",
-      external: undefined,
-    },
-  ],
-  sidebarNav: [
-    {
-      title: "Getting Started",
-      items: [
-        {
-          title: "Introduction",
-          href: "/designs",
+          href: "/docs/components/tooltip",
+          items: [],
         },
       ],
     },
     {
-      title: "Design",
+      title: "Legal",
+      label: "",
       items: [
         {
-          title: "Graphic Design",
-          href: "/designs/graphic-design",
+          title: "Terms",
+          href: "/docs/legal/terms",
+          items: [],
         },
         {
-          title: "Typography",
-          href: "/designs/typography",
-        },
-      ],
-    },
-    {
-      title: "Social Media",
-      items: [
-        {
-          title: "LinkedIn",
-          href: "/designs/guides/linkedin",
+          title: "Privacy",
+          href: "/docs/legal/privacy",
+          items: [],
         },
         {
-          title: "Youtube",
-          href: "/designs/guides/youtube",
-        },
-      ],
-    },
-    {
-      title: "Open File",
-      items: [
-        {
-          title: "Portfolio",
-          href: "/designs/openfile/portfolio",
-        },
-      ],
-    },
-  ],
-};
-
-export const guidesConfig: GuidesConfig = {
-  mainNav: [
-    {
-      title: "Designs",
-      href: "/designs",
-      external: undefined,
-    },
-    {
-      title: "Guides",
-      href: "/guides",
-      external: undefined,
-    },
-    {
-      title: "Documentation",
-      href: "/documentation",
-      external: undefined,
-    },
-  ],
-  sidebarNav: [
-    {
-      title: "Getting Started",
-      items: [
-        {
-          title: "Introduction",
-          href: "/guides",
-        },
-      ],
-    },
-
-    {
-      title: "Social Media",
-      items: [
-        {
-          title: "LinkedIn",
-          href: "/guides/linkedin",
-        },
-        {
-          title: "Youtube",
-          href: "/guides/youtube",
-        },
-      ],
-    },
-  ],
-};
-
-export const documentationConfig: DocumentationConfig = {
-  mainNav: [
-    {
-      title: "Designs",
-      href: "/designs",
-      external: undefined,
-    },
-    {
-      title: "Guides",
-      href: "/guides",
-      external: undefined,
-    },
-    {
-      title: "Documentation",
-      href: "/documentation",
-      external: undefined,
-    },
-  ],
-  sidebarNav: [
-    {
-      title: "Getting Started",
-      items: [
-        {
-          title: "Introduction",
-          href: "/documentation",
+          title: "Contact",
+          href: "/docs/legal/contact",
+          items: [],
         },
       ],
     },
     {
       title: "DIcons",
+      label: "",
       items: [
         {
           title: "Installation",
-          href: "/documentation/dicons/installation",
+          href: "/docs/dicons/installation",
+          items: [],
         },
         {
           title: "How to use",
-          href: "/documentation/dicons/how-to-use",
+          href: "/docs/dicons/how-to-use",
+          items: [],
         },
         {
           title: "Color",
-          href: "/documentation/dicons/color",
+          href: "/docs/dicons/color",
+          items: [],
         },
         {
           title: "Sizing",
-          href: "/documentation/dicons/sizing",
+          href: "/docs/dicons/sizing",
+          items: [],
         },
         {
           title: "Stroke Width",
-          href: "/documentation/dicons/stroke-width",
+          href: "/docs/dicons/stroke-width",
+          items: [],
         },
         {
           title: "Fill",
-          href: "/documentation/dicons/fill",
+          href: "/docs/dicons/fill",
+          items: [],
         },
       ],
     },
     {
       title: "DShapes",
+      label: "",
       items: [
         {
           title: "Installation",
-          href: "/documentation/dshapes/installation",
+          href: "/docs/dshapes/installation",
+          items: [],
         },
         {
           title: "How to use",
-          href: "/documentation/dshapes/how-to-use",
+          href: "/docs/dshapes/how-to-use",
+          items: [],
         },
         {
           title: "Noise",
-          href: "/documentation/dshapes/noise",
+          href: "/docs/dshapes/noise",
+          items: [],
         },
         {
           title: "Sizing",
-          href: "/documentation/dshapes/sizing",
+          href: "/docs/dshapes/sizing",
+          items: [],
         },
         {
           title: "Index",
-          href: "/documentation/dshapes/ind",
+          href: "/docs/dshapes/ind",
+          items: [],
+        },
+        
+      ],
+    },
+  ],
+  chartsNav: [
+    {
+      title: "Getting Started",
+      items: [],
+    },
+  ],
+};
+
+
+export const iconsConfig: DocsConfig = {
+  mainNav: [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "Documentation",
+      href: "/docs",
+    },
+  ],
+  sidebarNav: [
+    {
+      title: "All Icons",
+      items: [
+        {
+          title: "AI",
+          label: "New", 
+          href: "/products/dicons/Ai",
+          items: [],
+        }, 
+        {
+          title: "Access",
+          href: "/products/dicons/Access",
+          items: [],
+        },
+        {
+          title: "Alert",
+          href: "/products/dicons/Alert",
+          items: [],
+        },
+        {
+          title: "Animations",
+          href: "/products/dicons/Animations",
+          items: [],
+        },
+        {
+          title: "Accounts",
+          href: "/products/dicons/Accounts",
+          items: [],
+        },
+        {
+          title: "Animals",
+          href: "/products/dicons/Animals",
+          items: [],
+        },
+        {
+          title: "Arrows",
+          href: "/products/dicons/Arrows",
+          items: [],
+        },
+        {
+          title: "Awards",
+          href: "/products/dicons/Awards",
+          items: [],
+        },
+        {
+          title: "Baby",
+          href: "/products/dicons/Baby",
+          items: [],
+        },
+        {
+          title: "Badge",
+          href: "/products/dicons/Badge",
+          items: [],
+        },
+        {
+          title: "Access",
+          href: "/products/dicons/Access",
+          items: [],
+        },
+        {
+          title: "Bell",
+          href: "/products/dicons/Bell",
+          items: [],
+        },
+        {
+          title: "Beauty",
+          href: "/products/dicons/Beauty",
+          items: [],
+        },
+        {
+          title: "Bitcoins",
+          href: "/products/dicons/Bitcoins",
+          items: [],
+        },
+        {
+          title: "Brands",
+          href: "/products/dicons/Brands",
+          items: [],
+        },
+        {
+          title: "Bookmark",
+          href: "/products/dicons/Bookmark",
+          items: [],
+        },
+        {
+          title: "Buildings",
+          href: "/products/dicons/Buildings",
+          items: [],
+        },
+        {
+          title: "Business",
+          href: "/products/dicons/Business",
+          items: [],
+        },
+        {
+          title: "Chats",
+          href: "/products/dicons/Chats",
+          items: [],
+        },
+        {
+          title: "Communications",
+          href: "/products/dicons/Communications",
+          items: [],
+        },
+        {
+          title: "Clocks",
+          href: "/products/dicons/Clocks",
+          items: [],
+        },
+        {
+          title: "Clothings",
+          href: "/products/dicons/Clothings",
+          items: [],
+        },
+        {
+          title: "Connectivity",
+          href: "/products/dicons/Connectivity",
+          items: [],
+        },
+        {
+          title: "Cursors",
+          href: "/products/dicons/Cursors",
+          items: [],
+        },
+        {
+          title: "Dashboards",
+          href: "/products/dicons/Dashboards",
+          items: [],
+        },
+        {
+          title: "Designs",
+          href: "/products/dicons/Designs",
+          items: [],
         },
       ],
+    },
+     
+      
+  ],
+  chartsNav: [
+    {
+      title: "Getting Started",
+      items: [],
     },
   ],
 };

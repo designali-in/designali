@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import UpdateCommunityClient from "@/comp/dashboard/admin/community/post/UpdateCommunityClient";
+import UpdateCommunityClient from "@/components/dashboard/community/post/UpdateCommunityClient";
 
 import { prisma } from "@/lib/db";
 import {

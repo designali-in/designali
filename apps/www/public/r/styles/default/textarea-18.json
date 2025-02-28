@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-18",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/textareas/textarea-18.tsx",
+      "path": "examples/components/textareas/textarea-18.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"textarea-18\">Read-only textarea</Label>\n      <Textarea\n        id=\"textarea-18\"\n        className=\"read-only:bg-muted\"\n        defaultValue=\"This is a read-only textarea\"\n        readOnly\n        placeholder=\"Leave a comment\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

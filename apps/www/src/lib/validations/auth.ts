@@ -41,6 +41,7 @@ export const getUserById = async (id: string) => {
         image: true,
         coverImage: true,
         createdAt: true,
+        role: true,
       },
     });
 

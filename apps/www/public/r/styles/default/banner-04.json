@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "banner-04",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/banners/banner-04.tsx",
+      "path": "examples/components/banners/banner-04.tsx",
       "content": "\"use client\";\n\n// Dependencies: pnpm install dicons\nimport { useState } from \"react\";\nimport { DIcons } from \"dicons\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function BannerDemo() {\n  const [isVisible, setIsVisible] = useState(true);\n\n  if (!isVisible) return null;\n\n  return (\n    <div className=\"dark bg-muted px-4 py-3 text-foreground\">\n      <div className=\"flex gap-2\">\n        <div className=\"flex grow gap-3\">\n          <DIcons.Palette\n            className=\"mt-0.5 h-4 w-4 shrink-0 opacity-60\"\n            strokeWidth={1}\n            aria-hidden=\"true\"\n          />\n          <div className=\"flex grow flex-col justify-between gap-2 md:flex-row\">\n            <p className=\"text-sm\">\n              We’ve just added something amazing to elevate your Designali\n              experience!\n            </p>\n            <a href=\"#\" className=\"group whitespace-nowrap text-sm font-medium\">\n              Learn more\n              <DIcons.ArrowRight\n                className=\"-mt-0.5 ms-1 inline-flex h-4 w-4 opacity-60 transition-transform group-hover:translate-x-0.5\"\n                strokeWidth={1}\n                aria-hidden=\"true\"\n              />\n            </a>\n          </div>\n        </div>\n        <Button\n          variant=\"ghost\"\n          className=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n          onClick={() => setIsVisible(false)}\n          aria-label=\"Close banner\"\n        >\n          <DIcons.Close\n            strokeWidth={1}\n            className=\"h-4 w-4 opacity-60 transition-opacity group-hover:opacity-100\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

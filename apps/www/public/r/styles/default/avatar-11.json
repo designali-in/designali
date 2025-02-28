@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-11",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/avatars/avatar-11.tsx",
+      "path": "examples/components/avatars/avatar-11.tsx",
       "content": "import Image from \"next/image\";\nimport AvatarImg03 from \"@/public/avatars/avatar_9.jpg\";\nimport AvatarImg02 from \"@/public/avatars/avatar_10.jpg\";\nimport AvatarImg01 from \"@/public/avatars/avatar_11.jpg\";\nimport AvatarImg04 from \"@/public/avatars/avatar_12.jpg\";\n\nexport default function AvatarDemo() {\n  return (\n    <div className=\"flex -space-x-1.5\">\n      <Image\n        className=\"rounded-full ring-1 ring-background\"\n        src={AvatarImg01}\n        width={20}\n        height={20}\n        alt=\"Avatar 01\"\n      />\n      <Image\n        className=\"rounded-full ring-1 ring-background\"\n        src={AvatarImg02}\n        width={20}\n        height={20}\n        alt=\"Avatar 02\"\n      />\n      <Image\n        className=\"rounded-full ring-1 ring-background\"\n        src={AvatarImg03}\n        width={20}\n        height={20}\n        alt=\"Avatar 03\"\n      />\n      <Image\n        className=\"rounded-full ring-1 ring-background\"\n        src={AvatarImg04}\n        width={20}\n        height={20}\n        alt=\"Avatar 04\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

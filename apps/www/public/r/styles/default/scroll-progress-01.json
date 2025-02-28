@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "scroll-progress-01",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/backgrounds/scroll-progress-01.tsx",
-      "content": "import { ScrollProgress } from \"@/components/ui/backgrounds/scroll-progress\";\n\nconst ScrollProgressDemo = () => {\n  return (\n    <div className=\"z-10 rounded-lg border border-secondary p-4\">\n      <ScrollProgress className=\"top-[65px]\" />\n      <h2 className=\"pb-4 font-bold\">\n        Note: The scroll progress is shown below the navbar of the page.\n      </h2>\n      <p className=\"pb-4\">\n        Designali is a collection of re-usable components that you can copy and\n        paste into your web apps. It primarily features components, blocks, and\n        templates geared towards creating landing pages and user-facing\n        marketing materials.\n      </p>\n    </div>\n  );\n};\n\nexport default ScrollProgressDemo;\n",
+      "path": "examples/backgrounds/scroll-progress-01.tsx",
+      "content": "import { ScrollProgress } from \"@/components/ui/backgrounds/scroll-progress\";\n\nconst ScrollProgressDemo = () => {\n  return (\n    <div className=\"z-10 rounded-lg border border-secondary p-4\">\n      <ScrollProgress className=\"top-0\" />\n      <h2 className=\"pb-4 font-bold\">\n        Note: The scroll progress is shown below the navbar of the page.\n      </h2>\n      <p className=\"pb-4\">\n        Designali is a collection of re-usable components that you can copy and\n        paste into your web apps. It primarily features components, blocks, and\n        templates geared towards creating landing pages and user-facing\n        marketing materials.\n      </p>\n    </div>\n  );\n};\n\nexport default ScrollProgressDemo;\n",
       "type": "registry:example",
       "target": ""
     }

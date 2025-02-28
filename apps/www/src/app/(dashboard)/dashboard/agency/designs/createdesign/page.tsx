@@ -1,4 +1,4 @@
-import CreateTicket from "@/src/comp/dashboard/admin/ticket/CreateTicket";
+import CreateTicket from "@/src/components/dashboard/ticket/CreateTicket";
 
 export default function AgencyPage() {
   return (

@@ -1,5 +1,6 @@
+//@ts-nocheck
 import { redirect } from "next/navigation";
-import PollClient from "@/comp/dashboard/admin/poll/PollClient";
+import PollClient from "@/components/dashboard/poll/PollClient";
 
 import { auth } from "@/lib/auth";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";

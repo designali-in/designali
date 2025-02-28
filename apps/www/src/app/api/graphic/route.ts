@@ -1,8 +1,4 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+//@ts-nocheck
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";

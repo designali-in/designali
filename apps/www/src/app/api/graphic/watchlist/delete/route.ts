@@ -1,4 +1,4 @@
-import { AnimeWatchlistDelete } from "@/src/lib/validations/graphic";
+import { AnimeWatchlistDelete } from "@/lib/validations/graphic";
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";

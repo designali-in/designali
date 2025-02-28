@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "radio-02",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/radios/radio-02.tsx",
+      "path": "examples/components/radios/radio-02.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function RadioDemo() {\n  return (\n    <RadioGroup\n      defaultValue=\"r1\"\n      style={\n        {\n          \"--primary\": \"238.7 83.5% 66.7%\",\n          \"--ring\": \"238.7 83.5% 66.7%\",\n        } as React.CSSProperties\n      }\n    >\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"r1\" id=\"radio-02-r1\" />\n        <Label htmlFor=\"radio-02-r1\">Option 1</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"r2\" id=\"radio-02-r2\" />\n        <Label htmlFor=\"radio-02-r2\">Option 2</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"r3\" id=\"radio-02-r3\" />\n        <Label htmlFor=\"radio-02-r3\">Option 3</Label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

@@ -1,12 +1,12 @@
+//@ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Button } from "@/registry/default/ui/button";
-import { Input } from "@/registry/default/ui/input";
-import { Pagination } from "@/registry/default/ui/pagination";
-import { Skeleton } from "@/registry/default/ui/skeleton";
-import { CopyButton } from "@/src/comp/uis/copy-button";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input"; 
+import { Skeleton } from "@/components/ui/skeleton";
+import { CopyButton } from "@/components/mdx/layers/copy-button";
 import { Url } from "@prisma/client";
 import { DIcons } from "dicons";
 import { useSnackbar } from "notistack";

@@ -14,7 +14,7 @@
     "placeholder"
   ],
   "scripts": {
-    "build": "pnpm run clean && rollup --config",
+    "build": "tsup --clean",
     "clean": "rm -rf .turbo dist node_modules",
     "format": "prettier --write --check . --ignore-path ./.gitignore",
     "lint": "eslint",
@@ -38,16 +38,29 @@
     "url": "https://github.com/designali-in/designali"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
   "devDependencies": {
-    "@designali/eslint-config": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tsup": "^8.2.4",
-    "typescript": "^5.4.5"
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
   },
-  "prettier": "@designali/prettier-config"
+  "dependencies": {
+    "react-svg": "^16.3.0"
+  }
 }

@@ -11,7 +11,7 @@ import {
   Text,
 } from "@react-email/components";
 
-import site from "@/config/site";
+import {siteConfig} from "@/config/site";
 
 interface MagicLinkEmailProps {
   loginUrl: string;
@@ -22,13 +22,13 @@ export default function MagicLinkEmail({ loginUrl }: MagicLinkEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>Sign in to {site.name}</Preview>
+      <Preview>Sign in to {siteConfig.name}</Preview>
       <Body style={main}>
         <Container style={container}>
           <Section style={box}>
             <Text style={paragraph}>Hi,</Text>
             <Text style={paragraph}>
-              Click the link below to sign in to your account at {site.name}.
+              Click the link below to sign in to your account at {siteConfig.name}.
             </Text>
             <Button style={button} href={loginUrl}>
               Sign In

@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import DashboardProjects from "@/src/comp/dashboard/admin/ticket/DashboardProjscts";
-import ProjectSettings from "@/src/comp/dashboard/admin/ticket/projectSettings";
+import DashboardProjects from "@/src/components/dashboard/ticket/DashboardProjscts"; 
 
 import { Button } from "@/components/ui/button";
 

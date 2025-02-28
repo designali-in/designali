@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-04",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-04.tsx",
+      "path": "examples/components/inputs/input-04.tsx",
       "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"grid\">\n      <div className=\"mb-2 flex w-full items-center justify-between gap-1\">\n        <Label htmlFor=\"input-04\" className=\"leading-6\">\n          Input with hint\n        </Label>\n        <span className=\"text-sm text-muted-foreground\">Optional</span>\n      </div>\n      <Input id=\"input-04\" placeholder=\"Email\" type=\"email\" />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

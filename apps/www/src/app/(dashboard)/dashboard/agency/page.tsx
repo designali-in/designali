@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import DashboardMain from "@/src/comp/dashboard/admin/ticket/DashboardMain";
-import DashboardProgress from "@/src/comp/dashboard/admin/ticket/DashboardProgress";
+import DashboardMain from "@/src/components/dashboard/ticket/DashboardMain";
+import DashboardProgress from "@/src/components/dashboard/ticket/DashboardProgress";
 
 const AgencyPage = () => {
   return (

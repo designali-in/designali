@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-04",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/badges/badge-04.tsx",
+      "path": "examples/components/badges/badge-04.tsx",
       "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeDemo() {\n  return <Badge className=\"min-w-4 px-1\">6</Badge>;\n}\n",
       "type": "registry:example",
       "target": ""

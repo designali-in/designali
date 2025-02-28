@@ -1,20 +1,25 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-/* eslint-disable @typescript-eslint/require-await */
-
+import authConfig from "./auth.config";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { nanoid } from "nanoid";
-import NextAuth from "next-auth";
+import { UserRole } from "@prisma/client";
+import NextAuth, { type DefaultSession } from "next-auth";
 
 import { prisma } from "@/lib/db";
+import { getUserById } from "@/lib/validations/auth";
 
-import authConfig from "./auth.config";
+// More info: https://authjs.dev/getting-started/typescript#module-augmentation
+declare module "next-auth" {
+  interface Session {
+    user: {
+      role: UserRole;
+    } & DefaultSession["user"];
+  }
+}
 
 export const {
   handlers: { GET, POST },
   auth,
 } = NextAuth({
   adapter: PrismaAdapter(prisma),
-  secret: process.env.NEXTAUTH_SECRET, // Ensure this is set
   session: { strategy: "jwt" },
   pages: {
     signIn: "/login",
@@ -22,60 +27,39 @@ export const {
   },
   callbacks: {
     async session({ token, session }) {
-      if (token) {
-        session.user.id = token.id;
-        session.user.name = token.name;
-        session.user.email = token.email;
-        session.user.image = token.picture;
-        session.user.username = token.username;
+      if (session.user) {
+        if (token.sub) {
+          session.user.id = token.sub;
+        }
 
-        session.user.role = token.role;
+        if (token.email) {
+          session.user.email = token.email;
+        }
+
+        if (token.role) {
+          session.user.role = token.role;
+        }
+
+        session.user.name = token.name;
+        session.user.image = token.picture;
       }
 
       return session;
     },
 
-    async jwt({ token, user }) {
+    async jwt({ token }) {
       if (!token.sub) return token;
 
-      const dbUser = await prisma.user.findFirst({
-        where: {
-          email: token.email,
-        },
-      });
+      const dbUser = await getUserById(token.sub);
 
-      if (!dbUser) {
-        token.id = user.id;
-        return token;
-      }
+      if (!dbUser) return token;
 
-      if (!dbUser.username) {
-        await prisma.user.update({
-          where: {
-            id: dbUser.id,
-          },
-          data: {
-            username: nanoid(10),
-          },
-        });
-      }
+      token.name = dbUser.name;
+      token.email = dbUser.email;
+      token.picture = dbUser.image;
+      token.role = dbUser.role;
 
-      return {
-        id: dbUser.id,
-        name: dbUser.name,
-        email: dbUser.email,
-        picture: dbUser.image,
-        username: dbUser.username,
-        bio: dbUser.bio, // ✅ Include bio
-        website: dbUser.website, // ✅ Include website
-        twitter: dbUser.twitter, // ✅ Include Twitter
-        instagram: dbUser.instagram, // ✅ Include Instagram
-        linkedin: dbUser.linkedin, // ✅ Include LinkedIn
-        role: dbUser.role,
-      };
-    },
-    redirect() {
-      return "/";
+      return token;
     },
   },
   ...authConfig,

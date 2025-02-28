@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-36",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/buttons/button-36.tsx",
-      "content": "import { ChevronDown, Pin } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <div className=\"inline-flex -space-x-px divide-x divide-primary-foreground/30 rounded-lg shadow-sm shadow-black/5 rtl:space-x-reverse\">\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10\"\n        size=\"icon\"\n        aria-label=\"Options\"\n      >\n        <ChevronDown size={16} strokeWidth={2} aria-hidden=\"true\" />\n      </Button>\n      <Button className=\"rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10\">\n        <Pin\n          className=\"-ms-1 me-2 opacity-60\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n        Pinned\n      </Button>\n    </div>\n  );\n}\n",
+      "path": "examples/components/buttons/button-36.tsx",
+      "content": "import { ChevronDown, Pin } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return (\n    <div className=\"inline-flex -space-x-px divide-x divide-primary-foreground/30 rounded-lg shadow-sm shadow-black/5 rtl:space-x-reverse\">\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10\"\n        size=\"icon\"\n        aria-label=\"Options\"\n      >\n        <ChevronDown size={16} strokeWidth={2} aria-hidden=\"true\" />\n      </Button>\n      <Button className=\"rounded-none shadow-none first:rounded-s-lg last:rounded-e-lg focus-visible:z-10\">\n        <Pin\n          className=\"opacity-60\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n        Pinned\n      </Button>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

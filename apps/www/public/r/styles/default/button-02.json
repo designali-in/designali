@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-02",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/buttons/button-02.tsx",
+      "path": "examples/components/buttons/button-02.tsx",
       "content": "import { Button } from \"@/components/ui/button\";\n\nexport default function ButtonDemo() {\n  return <Button disabled>Button</Button>;\n}\n",
       "type": "registry:example",
       "target": ""

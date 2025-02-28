@@ -1,7 +1,3 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
 .relative {
   position: relative;
 }
@@ -72,20 +68,20 @@
 
 .from-gradient-1-start {
   --tw-gradient-from: #007cf0;
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgba(0, 124, 240, 0));
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 124, 240, 0));
 }
 
 .from-gradient-2-start {
   --tw-gradient-from: #7928ca;
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgba(121, 40, 202, 0));
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(121, 40, 202, 0));
 }
 
 .from-gradient-3-start {
   --tw-gradient-from: #d97706;
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgba(255, 77, 77, 0));
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 77, 77, 0));
 }
 
 .to-gradient-1-end {
@@ -102,20 +98,20 @@
 
 .from-gradient-1-ai {
   --tw-gradient-from: #fffb00;
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgba(255, 255, 0, 0));
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 0, 0));
 }
 
 .from-gradient-2-ai {
   --tw-gradient-from: #8000ff;
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgba(129, 53, 206, 0));
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(129, 53, 206, 0));
 }
 
 .from-gradient-3-ai {
   --tw-gradient-from: #00ff26;
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgba(121, 40, 202, 0));
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(121, 40, 202, 0));
 }
 
 .to-gradient-1-ai {

@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "ipad-pro-1",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/mockups/ipad-pro-1.tsx",
-      "content": "import IPadPro from \"@/registry/default/ui/mockups/ipad-pro\";\n\nexport default function iPadProDemo() {\n  return (\n    <div className=\"relative\">\n      <IPadPro\n        src=\"https://res.cloudinary.com/deelfmnhg/image/upload/v1733379172/sfbvfdb_blkkcz.jpg\"\n        className=\"size-full\"\n      />\n    </div>\n  );\n}\n",
+      "path": "examples/mockups/ipad-pro-1.tsx",
+      "content": "import IPadPro from \"@/components/ui/mockups/ipad-pro\";\n\nexport default function iPadProDemo() {\n  return (\n    <div className=\"relative\">\n      <IPadPro\n        src=\"https://res.cloudinary.com/deelfmnhg/image/upload/v1733379172/sfbvfdb_blkkcz.jpg\"\n        className=\"size-full\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

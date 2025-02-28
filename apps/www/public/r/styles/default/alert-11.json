@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-11",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/alerts/alert-11.tsx",
+      "path": "examples/components/alerts/alert-11.tsx",
       "content": "import { CircleAlert } from \"lucide-react\";\n\nexport default function AlertDemo() {\n  return (\n    <div className=\"rounded-lg border border-dotted border-border px-4 py-3\">\n      <div className=\"flex gap-3\">\n        <CircleAlert\n          className=\"mt-0.5 shrink-0 text-red-500 opacity-60\"\n          size={16}\n          strokeWidth={2}\n          aria-hidden=\"true\"\n        />\n        <div className=\"grow space-y-1\">\n          <p className=\"text-sm font-medium\">\n            Password does not meet requirements:\n          </p>\n          <ul className=\"list-inside list-disc text-sm text-muted-foreground\">\n            <li>Minimum 8 characters</li>\n            <li>Inlcude a special character</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

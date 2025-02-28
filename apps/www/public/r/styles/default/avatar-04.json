@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-04",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/avatars/avatar-04.tsx",
+      "path": "examples/components/avatars/avatar-04.tsx",
       "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar className=\"rounded-lg\">\n      <AvatarImage src=\"/avatars/avatar_2.jpg\" alt=\"Ali Imam\" />\n      <AvatarFallback>AI</AvatarFallback>\n    </Avatar>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

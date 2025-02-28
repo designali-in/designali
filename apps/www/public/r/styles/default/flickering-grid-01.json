@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "flickering-grid-01",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/backgrounds/flickering-grid-01.tsx",
-      "content": "import FlickeringGrid from \"@/registry/default/ui/backgrounds/flickering-grid\";\n\nexport default function FlickeringGrid01() {\n  return (\n    <div className=\"relative h-[500px] w-full overflow-hidden rounded-lg border bg-background\">\n      <FlickeringGrid\n        className=\"absolute inset-0 -z-0 size-full\"\n        squareSize={2}\n        gridGap={4}\n        color=\"#f50537\"\n        maxOpacity={0.5}\n        flickerChance={0.1}\n        height={800}\n        width={1500}\n      />\n    </div>\n  );\n}\n",
+      "path": "examples/backgrounds/flickering-grid-01.tsx",
+      "content": "import FlickeringGrid from \"@/components/ui/backgrounds/flickering-grid\";\n\nexport default function FlickeringGrid01() {\n  return (\n    <div className=\"relative h-[500px] w-full overflow-hidden rounded-lg border bg-background\">\n      <FlickeringGrid\n        className=\"absolute inset-0 -z-0 size-full\"\n        squareSize={2}\n        gridGap={4}\n        color=\"#f50537\"\n        maxOpacity={0.5}\n        flickerChance={0.1}\n        height={800}\n        width={1500}\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

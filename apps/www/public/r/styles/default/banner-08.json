@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "banner-08",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/banners/banner-08.tsx",
+      "path": "examples/components/banners/banner-08.tsx",
       "content": "\"use client\";\n\n// Dependencies: pnpm install dicons\nimport { useState } from \"react\";\nimport { DIcons } from \"dicons\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function BannerDemo() {\n  const [isVisible, setIsVisible] = useState(true);\n\n  if (!isVisible) return null;\n\n  return (\n    <div className=\"dark bg-muted px-4 py-3 text-foreground\">\n      <div className=\"flex gap-2 md:items-center\">\n        <div className=\"flex grow gap-3 md:items-center\">\n          <div\n            className=\"flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/15 max-md:mt-0.5\"\n            aria-hidden=\"true\"\n          >\n            <DIcons.Rocket className=\"h-4 w-4 opacity-80\" strokeWidth={1} />\n          </div>\n          <div className=\"flex grow flex-col justify-between gap-3 md:flex-row md:items-center\">\n            <div className=\"space-y-0.5\">\n              <p className=\"text-sm font-medium\">\n                Boost your experience with Designali\n              </p>\n              <p className=\"text-sm text-muted-foreground\">\n                The new feature is live! Try it out and let us know what you\n                think.\n              </p>\n            </div>\n            <div className=\"flex gap-2 max-md:flex-wrap\">\n              <Button size=\"sm\" className=\"text-sm\">\n                Try now\n              </Button>\n            </div>\n          </div>\n        </div>\n        <Button\n          variant=\"ghost\"\n          className=\"group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent\"\n          onClick={() => setIsVisible(false)}\n          aria-label=\"Close banner\"\n        >\n          <DIcons.Close\n            strokeWidth={1}\n            className=\"h-4 w-4 opacity-60 transition-opacity group-hover:opacity-100\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

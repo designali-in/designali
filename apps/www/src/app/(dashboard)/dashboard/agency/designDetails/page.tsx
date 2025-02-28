@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import TicketDetails from "@/src/comp/dashboard/admin/ticket/TicketDetails";
+import TicketDetails from "@/src/components/dashboard/ticket/TicketDetails";
 
 const AgencyPage = () => {
   return (

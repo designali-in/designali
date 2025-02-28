@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-47",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-47.tsx",
+      "path": "examples/components/inputs/input-47.tsx",
       "content": "\"use client\";\n\nimport { CreditCard } from \"lucide-react\";\nimport { usePaymentInputs } from \"react-payment-inputs\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  const { getCardNumberProps } = usePaymentInputs();\n\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"cardNumber\">Card Number</Label>\n      <div className=\"relative\">\n        <Input\n          {...getCardNumberProps()}\n          className=\"peer ps-9 [direction:inherit]\"\n        />\n        <div className=\"pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 peer-disabled:opacity-50\">\n          <CreditCard size={16} strokeWidth={2} aria-hidden=\"true\" />\n        </div>\n      </div>\n      <p\n        className=\"mt-2 text-xs text-muted-foreground\"\n        role=\"region\"\n        aria-live=\"polite\"\n      >\n        Built with{\" \"}\n        <a\n          className=\"underline hover:text-foreground\"\n          href=\"https://github.com/medipass/react-payment-inputs\"\n          target=\"_blank\"\n          rel=\"noopener nofollow\"\n        >\n          React Payment Inputs\n        </a>\n      </p>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

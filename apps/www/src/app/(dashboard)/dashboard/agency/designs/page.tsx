@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import DashboardTickets from "@/src/comp/dashboard/admin/ticket/DashboardTickets";
+import DashboardTickets from "@/src/components/dashboard/ticket/DashboardTickets";
 
 const AgencyPage = () => {
   return (

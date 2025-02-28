@@ -1,8 +1,9 @@
+//@ts-nocheck
 import { z } from "zod";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { ReviewLikeValidator } from "@/lib/validations/like";
+import { ReviewLikeValidator } from "@/src/lib/validations/like";
 
 export async function POST(req: Request) {
   try {

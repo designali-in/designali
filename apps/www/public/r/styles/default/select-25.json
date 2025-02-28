@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-25",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/selects/select-25.tsx",
+      "path": "examples/components/selects/select-25.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-25\">Select with options groups</Label>\n      <Select defaultValue=\"s1\">\n        <SelectTrigger id=\"select-25\">\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectLabel>Frontend</SelectLabel>\n            <SelectItem value=\"s1\">React</SelectItem>\n            <SelectItem value=\"s2\">Vue</SelectItem>\n            <SelectItem value=\"s3\">Angular</SelectItem>\n          </SelectGroup>\n          <SelectGroup>\n            <SelectLabel>Backend</SelectLabel>\n            <SelectItem value=\"s4\">Node.js</SelectItem>\n            <SelectItem value=\"s5\">Python</SelectItem>\n            <SelectItem value=\"s6\">Java</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

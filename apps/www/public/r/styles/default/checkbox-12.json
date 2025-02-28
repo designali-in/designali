@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-12",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/checkboxes/checkbox-12.tsx",
+      "path": "examples/components/checkboxes/checkbox-12.tsx",
       "content": "import { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function CheckboxDemo() {\n  return (\n    <div className=\"flex items-start gap-2\">\n      <Checkbox\n        id=\"checkbox-12\"\n        className=\"order-1\"\n        aria-describedby=\"checkbox-12-description\"\n      />\n      <div className=\"grid grow gap-2\">\n        <Label htmlFor=\"checkbox-12\">\n          Label{\" \"}\n          <span className=\"text-xs font-normal leading-[inherit] text-muted-foreground\">\n            (Sublabel)\n          </span>\n        </Label>\n        <p\n          id=\"checkbox-12-description\"\n          className=\"text-xs text-muted-foreground\"\n        >\n          You can use this checkbox with a label and a description.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

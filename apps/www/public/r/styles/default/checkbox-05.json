@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-05",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/checkboxes/checkbox-05.tsx",
+      "path": "examples/components/checkboxes/checkbox-05.tsx",
       "content": "import { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function CheckboxDemo() {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Checkbox id=\"checkbox-05\" defaultChecked />\n      <Label\n        htmlFor=\"checkbox-05\"\n        className=\"peer-data-[state=checked]:line-through\"\n      >\n        Simple todo item\n      </Label>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

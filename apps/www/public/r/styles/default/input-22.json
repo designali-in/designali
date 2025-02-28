@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-22",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-22.tsx",
+      "path": "examples/components/inputs/input-22.tsx",
       "content": "import { Button } from \"@/components/ui/button\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-22\">Input with button</Label>\n      <div className=\"flex gap-2\">\n        <Input\n          id=\"input-22\"\n          className=\"flex-1\"\n          placeholder=\"Email\"\n          type=\"email\"\n        />\n        <Button variant=\"outline\">Send</Button>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

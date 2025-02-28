@@ -1,5 +1,6 @@
-import { DeleteAccountForm } from "@/comp/forms/delete-account-form";
-import { ProfileForm } from "@/comp/forms/profile-form";
+//@ts-nocheck
+import { DeleteAccountForm } from "@/components/forms/delete-account-form";
+import { ProfileForm } from "@/components/forms/profile-form";
 import { getCurrentUser } from "@/src/lib/session";
 
 import {

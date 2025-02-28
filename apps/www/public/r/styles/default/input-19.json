@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-19",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-19.tsx",
+      "path": "examples/components/inputs/input-19.tsx",
       "content": "import { Send } from \"lucide-react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-19\">Input with end inline button</Label>\n      <div className=\"relative\">\n        <Input\n          id=\"input-19\"\n          className=\"pe-9\"\n          placeholder=\"Email\"\n          type=\"email\"\n        />\n        <button\n          className=\"absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg border border-transparent text-muted-foreground/80 outline-offset-2 transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n          aria-label=\"Subscribe\"\n        >\n          <Send size={16} strokeWidth={2} aria-hidden=\"true\" />\n        </button>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

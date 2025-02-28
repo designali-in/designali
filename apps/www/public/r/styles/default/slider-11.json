@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slider-11",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/sliders/slider-11.tsx",
+      "path": "examples/components/sliders/slider-11.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderDemo() {\n  return (\n    <div className=\"space-y-4\">\n      <Label>Dual range slider</Label>\n      <Slider\n        defaultValue={[25, 75]}\n        step={10}\n        aria-label=\"Dual range slider\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

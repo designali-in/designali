@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CommunityClient from "@/comp/dashboard/admin/community/CommunityClient";
+import CommunityClient from "@/components/dashboard/community/CommunityClient";
 
 import { INFINITE_SCROLLING_PAGINATION_RESULTS } from "@/lib/constants";
 import { prisma } from "@/lib/db";

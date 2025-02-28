@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-05",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/textareas/textarea-05.tsx",
+      "path": "examples/components/textareas/textarea-05.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return (\n    <div\n      className=\"space-y-2\"\n      // NOTE: This inline style is to show how to set the --ring variable in your CSS file in order to change the focus ring color.\n      style={{ \"--ring\": \"234 89% 74%\" } as React.CSSProperties}\n    >\n      <Label htmlFor=\"textarea-05\">Textarea with colored border and ring</Label>\n      <Textarea id=\"textarea-05\" placeholder=\"Leave a comment\" />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

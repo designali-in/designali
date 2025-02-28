@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slider-02",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/sliders/slider-02.tsx",
+      "path": "examples/components/sliders/slider-02.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderDemo() {\n  return (\n    <div className=\"space-y-4\">\n      <Label>Disabled slider</Label>\n      <Slider defaultValue={[25]} disabled aria-label=\"Disabled slider\" />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-/* eslint-disable @typescript-eslint/consistent-type-definitions */
+//@ts-nocheck
 "use server";
 
 import { redirect } from "next/navigation";

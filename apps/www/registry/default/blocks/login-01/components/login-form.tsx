@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card";
-import { Input } from "@/registry/default/ui/input";
-import { Label } from "@/registry/default/ui/label";
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
 
 export function LoginForm() {
   return (

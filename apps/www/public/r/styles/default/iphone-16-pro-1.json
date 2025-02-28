@@ -1,10 +1,12 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "iphone-16-pro-1",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/mockups/iphone-16-pro-1.tsx",
-      "content": "import Iphone16Pro from \"@/registry/default/ui/mockups/iphone-16-pro\";\n\nexport default function iPhone16ProDemo() {\n  return (\n    <div className=\"relative\">\n      <Iphone16Pro\n        src=\"https://res.cloudinary.com/deelfmnhg/image/upload/v1733892005/Neon_Graaadients_D1_1_icds31.jpg\"\n        className=\"h-80 w-full\"\n      />\n    </div>\n  );\n}\n",
+      "path": "examples/mockups/iphone-16-pro-1.tsx",
+      "content": "import Iphone16Pro from \"@/components/ui/mockups/iphone-16-pro\";\n\nexport default function iPhone16ProDemo() {\n  return (\n    <div className=\"relative\">\n      <Iphone16Pro\n        src=\"https://res.cloudinary.com/deelfmnhg/image/upload/v1733892005/Neon_Graaadients_D1_1_icds31.jpg\"\n        className=\"h-80 w-full\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""
     }

@@ -1,19 +1,23 @@
-import crypto from "crypto";
-import type { ComboBoxItemType } from "@/types";
-import type { ClassValue } from "clsx";
-import { clsx } from "clsx";
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 import { colord, extend } from "colord";
 import a11yPlugin from "colord/plugins/a11y";
+import { ComboBoxItemType } from "../types/global";
+import { enIN as locale } from "date-fns/locale";
 import { formatDistanceToNowStrict, intervalToDuration } from "date-fns";
-import locale from "date-fns/locale/en-IN";
-import ms from "ms";
-import qs from "query-string";
-import { twMerge } from "tailwind-merge";
 
-import { env } from "../env";
+export function getBaseUrl() {
+  if (process.env.DOMAIN_URL) return process.env.DOMAIN_URL;
+  if (process.env.NEXT_PUBLIC_APP_URL) return process.env.NEXT_PUBLIC_APP_URL;
+}
+
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
+}
+
+export function absoluteUrl(path: string) {
+  return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }
 
 extend([a11yPlugin]);
@@ -24,18 +28,20 @@ export const handleColorTextClass = (color: string) => {
   return luminance < 0.3 ? "white" : "black";
 };
 
-export function absoluteUrl(path: string) {
-  return `${env.NEXT_PUBLIC_APP_URL}${path}`;
-}
-
-export function truncate(str: string, length: number) {
-  return str.length > length ? `${str.substring(0, length)}...` : str;
-}
 
 export function capitalizeFirstCharacter(text: string) {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 // text.charAt(0).toUpperCase() + text.slice(1);
+
+
+export function formatUrl(name: string, reverse?: boolean) {
+  if (reverse) {
+    return decodeURIComponent(name.split("-").join(" "));
+  }
+
+  return name.split(" ").join("-");
+}
 
 export function formatDate(input: string | number): string {
   const date = new Date(input);
@@ -46,128 +52,47 @@ export function formatDate(input: string | number): string {
   });
 }
 
-export function formUrlQuery({
-  params,
-  key,
-  value,
-}: {
-  params: string;
-  key: string;
-  value: string | null;
-}) {
-  const currentUrl = qs.parse(params);
-
-  currentUrl[key] = value;
-
-  return qs.stringifyUrl(
-    {
-      url: window.location.pathname,
-      query: currentUrl,
-    },
-    { skipNull: true },
-  );
+export function randomElement<T>(items: T[]): T {
+  if (items.length === 0) {
+    throw new Error("Cannot select a random element from an empty array");
+  }
+  if (items.length === 0) {
+    throw new Error("Cannot select a random element from an empty array");
+  }
+  return items[Math.floor(Math.random() * items.length)] as T;
 }
 
-export const expirationTime = (
-  expiration: string,
-  updatedAt?: Date,
-  timeOnly?: boolean,
-): string => {
-  if (!expiration || !updatedAt) return "Invalid data";
-  if (expiration === "-1") return "Never";
+export function uniq<T>(arr: T[]): T[] {
+  return arr.filter((value, index, self) => self.indexOf(value) === index);
+}
 
-  const expirationSeconds = parseInt(expiration, 10);
-  if (isNaN(expirationSeconds)) return "Invalid expiration format";
+let debounceTimer: NodeJS.Timeout | null = null;
 
-  const now = Date.now();
-  const updatedAtTimestamp = new Date(updatedAt).getTime();
-  const expirationMilliseconds = expirationSeconds * 1000;
-  const expirationTime = updatedAtTimestamp + expirationMilliseconds;
-  const remainingTime = expirationTime - now;
-  if (remainingTime <= 0) return "Expired";
-
-  const remainingTimeString = ms(remainingTime, { long: true });
-  if (timeOnly) {
-    return remainingTimeString;
-  }
-  return `${remainingTimeString}`;
-};
-
-export async function fetcher<JSON = any>(
-  input: RequestInfo,
-  init?: RequestInit,
-): Promise<JSON> {
-  const res = await fetch(input, init);
-
-  if (!res.ok) {
-    const json = await res.json();
-    if (json.error) {
-      const error = new Error(json.error) as Error & {
-        status: number;
-      };
-      error.status = res.status;
-      throw error;
-    } else {
-      throw new Error("An unexpected error occurred");
+export const debounce =
+  (fn: Function, delay = 300) =>
+  (...args: any[]) => {
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
     }
+    debounceTimer = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
+
+  export function getYearData() {
+    const currentYear = new Date().getFullYear();
+    const years: ComboBoxItemType[] = [];
+  
+    for (let i = currentYear; i >= 1980; i--) {
+      years.push({
+        value: i.toString(),
+        label: i.toString(),
+      });
+    }
+  
+    return years;
   }
 
-  return res.json();
-}
-
-export function removeUrlSuffix(url: string): string {
-  return url.startsWith("http") ? url.split("//")[1] : url;
-}
-
-// Utils from precedent.dev
-export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
-  if (!timestamp) return "never";
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${
-    timeOnly ? "" : " ago"
-  }`;
-};
-
-// eslint-disable-next-line @typescript-eslint/no-inferrable-types
-export function generateUrlSuffix(length: number = 6): string {
-  const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  const charactersLength = characters.length;
-  let result = "";
-
-  const randomValues = new Uint8Array(length);
-  // Use crypto.getRandomValues for browser compatibility
-  if (typeof window !== "undefined" && window.crypto) {
-    window.crypto.getRandomValues(randomValues);
-  } else {
-    // Fallback to Node.js crypto module if in Node environment
-    const crypto = require("crypto");
-    const nodeRandomValues = crypto.randomBytes(length);
-    randomValues.set(nodeRandomValues);
-  }
-
-  for (let i = 0; i < length; i++) {
-    result += characters[randomValues[i] % charactersLength];
-  }
-
-  return result;
-}
-
-export function formatDescription(description: string, trim: number) {
-  if (description.length > trim) {
-    const trimmedDescription = description.slice(0, trim).trimEnd();
-    return trimmedDescription + "...";
-  }
-
-  return description;
-}
-
-export function formatUrl(name: string, reverse?: boolean) {
-  if (reverse) {
-    return decodeURIComponent(name.split("-").join(" "));
-  }
-
-  return name.split(" ").join("-");
-}
 
 const formatDistanceLocale = {
   lessThanXSeconds: "just now",
@@ -188,34 +113,55 @@ const formatDistanceLocale = {
   almostXYears: "{{count}}y",
 };
 
-function formatDistance(token: string, count: number, options?: any): string {
-  options = options || {};
-
-  const result = formatDistanceLocale[
-    token as keyof typeof formatDistanceLocale
-  ].replace("{{count}}", count.toString());
-
-  if (options.addSuffix) {
-    if (options.comparison > 0) {
-      return "in " + result;
-    } else {
-      if (result === "just now") return result;
-      return result + " ago";
+  function formatDistance(token: string, count: number, options?: any): string {
+    options = options || {};
+  
+    const result = formatDistanceLocale[
+      token as keyof typeof formatDistanceLocale
+    ].replace("{{count}}", count.toString());
+  
+    if (options.addSuffix) {
+      if (options.comparison > 0) {
+        return "in " + result;
+      } else {
+        if (result === "just now") return result;
+        return result + " ago";
+      }
     }
+  
+    return result;
   }
 
-  return result;
+  export function formatTimeToNow(date: Date): string {
+    return formatDistanceToNowStrict(date, {
+      addSuffix: true,
+      locale: {
+        ...locale,
+        formatDistance,
+      },
+    });
+  }
+
+  export function formatDescription(description: string, trim: number) {
+    if (description.length > trim) {
+      const trimmedDescription = description.slice(0, trim).trimEnd();
+      return trimmedDescription + "...";
+    }
+  
+    return description;
+  }
+
+
+export function convertToSingleDecimalPlace(
+  number: number,
+  decimalPlaces: number,
+) {
+  const roundedNumber = number.toFixed(decimalPlaces);
+  const singleDecimalPlace = parseFloat(roundedNumber).toFixed(1);
+
+  return parseFloat(singleDecimalPlace);
 }
 
-export function formatTimeToNow(date: Date): string {
-  return formatDistanceToNowStrict(date, {
-    addSuffix: true,
-    locale: {
-      ...locale,
-      formatDistance,
-    },
-  });
-}
 
 export function formatTimeLeft(expiryDate: Date) {
   const currentDate = new Date();
@@ -244,28 +190,4 @@ export function formatTimeLeft(expiryDate: Date) {
   } else {
     return `${seconds} second${seconds > 1 ? "s" : ""}`;
   }
-}
-
-export function convertToSingleDecimalPlace(
-  number: number,
-  decimalPlaces: number,
-) {
-  const roundedNumber = number.toFixed(decimalPlaces);
-  const singleDecimalPlace = parseFloat(roundedNumber).toFixed(1);
-
-  return parseFloat(singleDecimalPlace);
-}
-
-export function getYearData() {
-  const currentYear = new Date().getFullYear();
-  const years: ComboBoxItemType[] = [];
-
-  for (let i = currentYear; i >= 1980; i--) {
-    years.push({
-      value: i.toString(),
-      label: i.toString(),
-    });
-  }
-
-  return years;
 }

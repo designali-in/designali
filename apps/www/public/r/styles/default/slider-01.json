@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slider-01",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/sliders/slider-01.tsx",
+      "path": "examples/components/sliders/slider-01.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderDemo() {\n  return (\n    <div className=\"space-y-4\">\n      <Label>Simple slider</Label>\n      <Slider defaultValue={[25]} aria-label=\"Simple slider\" />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

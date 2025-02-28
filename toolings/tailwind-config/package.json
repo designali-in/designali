@@ -1,0 +1,18 @@
+{
+  "name": "@designali/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./web": "./web.ts"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "0.5.16",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@designali/typescript-config": "workspace:*"
+  }
+}

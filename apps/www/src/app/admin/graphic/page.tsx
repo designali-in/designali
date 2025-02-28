@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import AdminAnimes from "@/comp/dashboard/admin/agency/AdminAnimes";
+import AdminAnimes from "@/components/admin/agency/AdminAnimes";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";

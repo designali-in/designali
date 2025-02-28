@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import UpdateAnimeClient from "@/comp/dashboard/admin/agency/UpdateAnimeClient";
+import UpdateAnimeClient from "@/components/admin/agency/UpdateAnimeClient";
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";

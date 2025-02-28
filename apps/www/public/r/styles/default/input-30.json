@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-30",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/inputs/input-30.tsx",
+      "path": "examples/components/inputs/input-30.tsx",
       "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"input-30\">File input</Label>\n      <Input\n        id=\"input-30\"\n        className=\"p-0 pe-3 file:me-3 file:border-0 file:border-e\"\n        type=\"file\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

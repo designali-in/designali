@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CreateCommunityClient from "@/comp/dashboard/admin/community/CreateCommunityClient";
+import CreateCommunityClient from "@/components/dashboard/community/CreateCommunityClient";
 
 import { env } from "@/env";
 import {

@@ -1,9 +1,11 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-18",
   "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
   "files": [
     {
-      "path": "example/components/selects/select-18.tsx",
+      "path": "examples/components/selects/select-18.tsx",
       "content": "import { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\n\nexport default function SelectDemo() {\n  return (\n    <div className=\"space-y-2\">\n      <Label htmlFor=\"select-18\">Select with helper text</Label>\n      <Select defaultValue=\"s3\">\n        <SelectTrigger id=\"select-18\">\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value=\"s1\">React</SelectItem>\n          <SelectItem value=\"s2\">Next.js</SelectItem>\n          <SelectItem value=\"s3\">Astro</SelectItem>\n          <SelectItem value=\"s4\">Gatsby</SelectItem>\n        </SelectContent>\n      </Select>\n      <p\n        className=\"mt-2 text-xs text-muted-foreground\"\n        role=\"region\"\n        aria-live=\"polite\"\n      >\n        Tell us what&lsquo;s your favorite Select framework\n      </p>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": ""

@@ -1,5 +1,6 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
+import { cookies } from "next/headers";
 
 export async function getCurrentUser() {
   const session = await auth();
@@ -7,7 +8,6 @@ export async function getCurrentUser() {
   if (!session?.user?.email) {
     return null;
   }
-
   const currentUser = await prisma.user.findUnique({
     where: {
       email: session.user.email,
@@ -35,6 +35,6 @@ export async function getCurrentUser() {
 
   return {
     ...currentUser,
-    role: currentUser.role as "USER" | "ADMIN", // Type assertion for role
+    role: currentUser.role as "USER" | "ADMIN",
   };
 }

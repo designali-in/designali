@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import CreatePostClient from "@/comp/dashboard/admin/community/post/CreatePostClient";
+import CreatePostClient from "@/components/dashboard/community/post/CreatePostClient";
 
 import { env } from "@/env";
 import { prisma } from "@/lib/db";

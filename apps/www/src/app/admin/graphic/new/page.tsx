@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import CreateAnimeClient from "@/comp/dashboard/admin/agency/CreateAnimeClient";
+import CreateAnimeClient from "@/components/admin/agency/CreateAnimeClient";
 
 import { env } from "@/env";
 import { auth } from "@/lib/auth";
