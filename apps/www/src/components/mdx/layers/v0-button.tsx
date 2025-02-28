@@ -29,14 +29,14 @@ function V0Tooltip({
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        {style === "new-york" ? (
+        {style === "default" ? (
           <span tabIndex={-1}>{children}</span>
         ) : (
           <>{children}</>
         )}
       </TooltipTrigger>
       <TooltipContent>
-        {style === "new-york" ? (
+        {style === "default" ? (
           <>Not available in New York</>
         ) : (
           <>Open in v0</>
@@ -110,7 +110,7 @@ function Form({
       <Button
         aria-label="Open in v0"
         className={cn(
-          "z-50 h-[calc(theme(spacing.7)_-_1px)] gap-1 rounded-[6px] bg-black px-3 text-xs text-white hover:bg-black hover:text-white dark:bg-white dark:text-black",
+          "z-50 h-[calc(theme(spacing.7)_-_1px)] gap-1 rounded-[6px] bg-black px-2 text-xs text-white hover:bg-black hover:text-white dark:bg-white dark:text-black",
           size === "icon" && "h-7 w-7 p-0",
           className
         )}
@@ -128,7 +128,7 @@ function Form({
         ) : (
           <>
             {pending && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
-            Open in <V0Logo />
+           <V0Logo />
           </>
         )}
       </Button>

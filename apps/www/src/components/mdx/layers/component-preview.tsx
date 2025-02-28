@@ -101,49 +101,50 @@ export function ComponentPreview({
   }
   return (
     <div
-      className={cn("group relative my-4 flex flex-col space-y-2", className)}
+    className={cn("group relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         <div className="flex items-center justify-between pb-3">
           {!hideCode && (
             <div className="flex items-center border-b w-full">
-            <TabsList className="w-full justify-start rounded-none  bg-transparent p-0">
-              <TabsTrigger
-                value="preview"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                <Eye className="w-4 h-4"/>
-              </TabsTrigger>
-              <TabsTrigger
-                value="code"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                <FolderCode className="w-4 h-4"/>
-              </TabsTrigger>
-              <TabsTrigger
-                value="install"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-               <Settings2 className="w-4 h-4"/>
-              </TabsTrigger>
-            </TabsList>
-            <p className="text-primary/60 text-xs hidden md:block text-nowrap">{name}</p>
-            </div >
+              <TabsList className="w-full justify-start rounded-none  bg-transparent p-0">
+                <TabsTrigger
+                  value="preview"
+                  className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                >
+                  <Eye className="w-4 h-4" />
+                </TabsTrigger>
+                <TabsTrigger
+                  value="code"
+                  className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                >
+                  <FolderCode className="w-4 h-4" />
+                </TabsTrigger>
+                <TabsTrigger
+                  value="install"
+                  className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                >
+                  <Settings2 className="w-4 h-4" />
+                </TabsTrigger>
+              </TabsList>
+              <div className="flex gap-2 items-center">
+                
+                {description ? <V0Button name={name} /> : null}
+                <CopyButton
+                  value={codeString}
+                  variant="ghost"
+                  className="h-8 w-8 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+                />
+                <p className="text-primary/60 text-xs hidden md:block text-nowrap">
+                  {name}
+                </p>
+              </div>
+            </div>
           )}
         </div>
         <TabsContent value="preview" className="relative rounded-md border">
-          <div className="flex items-center justify-between p-4">
-            <div className="flex items-center gap-2">
-              {description ? <V0Button name={name} /> : null}
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
-              />
-            </div>
-          </div>
-          <ThemeWrapper defaultTheme="zinc">
+          <ThemeWrapper defaultTheme="stone">
             <div
               className={cn(
                 "preview flex min-h-[400px] w-full justify-center p-10",
@@ -176,12 +177,12 @@ export function ComponentPreview({
         </TabsContent>
         <TabsContent value="install">
           <div className="flex flex-col space-y-4">
-               <CodeBlockInstall
-                __npmCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
-                __yarnCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
-                __pnpmCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
-                __bunCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
-              /> 
+            <CodeBlockInstall
+              __npmCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+              __yarnCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+              __pnpmCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+              __bunCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+            />
           </div>
         </TabsContent>
       </Tabs>

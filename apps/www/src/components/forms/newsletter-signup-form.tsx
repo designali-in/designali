@@ -69,7 +69,7 @@ export function NewsletterSignUpForm(): JSX.Element {
   }
 
   return (
-    <div className="mx-auto mt-6 max-w-md">
+    <div className="mx-auto mt-6 max-w-lg px-6">
     <Form {...form}>
       <form
         className="flex h-10 w-full  items-center justify-center md:h-10"

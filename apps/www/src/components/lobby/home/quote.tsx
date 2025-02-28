@@ -5,7 +5,7 @@ import { DotPattern } from "@/components/ui/backgrounds/dot-pattern";
 export function Quote() {
   return (
     <>
-      <div className=" ">
+      <div className="">
         <div className="relative flex flex-col items-center border-y">
           <DotPattern width={5} height={5} /> 
            

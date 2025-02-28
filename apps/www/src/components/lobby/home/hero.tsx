@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <section id="home">
-      <div className="flex flex-col items-center justify-center px-4 text-center">
+      <div className="flex flex-col items-center justify-center px-6 text-center">
         <div className="mb-6 mt-10 sm:justify-center md:mb-4 md:mt-40">
           <div className="relative flex items-center rounded-full border bg-popover px-3 py-1 text-xs text-primary/60">
             Introducing Dicons.

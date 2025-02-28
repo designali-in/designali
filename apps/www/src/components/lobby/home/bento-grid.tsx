@@ -110,7 +110,7 @@ const features = [
           loop
           className="h-full w-full rounded-md md:rounded-2xl"
         >
-          <source width={450} height={450} src="/videos/designali.mp4" />
+          <source width={400} height={400} src="/videos/designali.mp4" />
         </video>
       </div>
     ),
