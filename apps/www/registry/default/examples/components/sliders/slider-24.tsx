@@ -11,7 +11,6 @@ export default function SliderDemo() {
           max={10}
           orientation="vertical"
           aria-label="Vertical slider"
-          
         />
       </div>
     </div>

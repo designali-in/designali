@@ -1,17 +1,12 @@
-import { createContentlayerPlugin } from "next-contentlayer2"
+import { createContentlayerPlugin } from "next-contentlayer2";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    outputFileTracingIncludes: {
-      "/blocks/*": ["./registry/**/*"],
-    },
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
   reactStrictMode: true,
-  swcMinify: true,
+
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -66,7 +61,7 @@ const nextConfig = {
       },
     ],
   },
-  redirects() {
+  async redirects() {
     return [
       {
         source: "/components",
@@ -78,14 +73,45 @@ const nextConfig = {
         destination: "/docs/components/accordion",
         permanent: true,
       },
-      
-    ]
+      {
+        source: "/r",
+        destination: "/r/index.json",
+        permanent: true,
+      },
+      {
+        source: "/r/index",
+        destination: "/r/index.json",
+        permanent: true,
+      },
+      {
+        source: "/r/:name((?!index\\.json|styles/).*)",
+        destination: "/r/styles/default/:name.json",
+        permanent: true,
+        missing: [
+          {
+            type: "query",
+            key: "_redirected",
+            value: undefined,
+          },
+        ],
+      },
+      {
+        source: "/lobby/:urlToken",
+        has: [
+          {
+            type: "query",
+            key: "urlToken",
+          },
+        ],
+        destination: "/lobby/[urlToken]",
+        permanent: false, // Use `true` for 308 redirects if permanent
+      },
+    ];
   },
 };
 
-
 const withContentlayer = createContentlayerPlugin({
   // Additional Contentlayer config options
-})
+});
 
-export default withContentlayer(nextConfig)
+export default withContentlayer(nextConfig);

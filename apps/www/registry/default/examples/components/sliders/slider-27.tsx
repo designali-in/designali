@@ -15,7 +15,6 @@ export default function SliderDemo() {
             orientation="vertical"
             className="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
             aria-label="60 Hz"
-             
           />
           <Label className="flex w-0 justify-center text-xs text-muted-foreground">
             60
@@ -29,7 +28,6 @@ export default function SliderDemo() {
             orientation="vertical"
             className="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
             aria-label="250 Hz"
-            
           />
           <Label className="flex w-0 justify-center text-xs text-muted-foreground">
             250
@@ -43,7 +41,6 @@ export default function SliderDemo() {
             orientation="vertical"
             className="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
             aria-label="1k"
-            
           />
           <Label className="flex w-0 justify-center text-xs text-muted-foreground">
             1k
@@ -57,7 +54,6 @@ export default function SliderDemo() {
             orientation="vertical"
             className="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
             aria-label="4k"
-             
           />
           <Label className="flex w-0 justify-center text-xs text-muted-foreground">
             4k
@@ -71,7 +67,6 @@ export default function SliderDemo() {
             orientation="vertical"
             className="[&>:last-child>span]:h-6 [&>:last-child>span]:w-4 [&>:last-child>span]:rounded"
             aria-label="16k"
-             
           />
           <Label className="flex w-0 justify-center text-xs text-muted-foreground">
             16K
