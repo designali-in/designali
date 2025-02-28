@@ -1,4 +1,4 @@
-//@ts-nocheck
+
 "use client";
 
 import type {
@@ -167,7 +167,7 @@ const UpdateAnimeForm: FC<UpdateAnimeFormProps> = ({ anime }) => {
     });
 
     return {
-      url: res.fileUrl,
+      url: res?.fileUrl ?? "",
     };
   }
 
