@@ -1,0 +1,23 @@
+{
+  "title": "Contact",
+  "description": "Contact us for any questions or concerns about Designali.",
+  "published": true,
+  "featured": false,
+  "component": false,
+  "toc": true,
+  "body": {
+    "raw": "\nIf you have any questions or concerns about Designali, please contact us using one of the methods below. We will try to respond as soon as possible.\n\nI love using [Next.js](https://nextjs.org/) to create a website. Then use [GitHub](https://github.com) to host my codebase. After that, I use [Vercel](https://vercel.com) to deploy my website.\n\n## About this site\n\n- Framework: [Next.js](https://nextjs.org/) \n\n## Inspiration\n\nHere are some websites that inspired me a lot to build a fantastic website.\n\n- [ui.shadcn.com](https://ui.shadcn.com/) \n\n## Contact Information\n\n- **Email:** [contact@designali.in](mailto:contact@designali.in)\n\n- **Instagram:** [designali.in](https://www.instagram.com/designali.in/)\n",
+    "code": "var Component=(()=>{var u=Object.create;var s=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var b=(i,n)=>()=>(n||i((n={exports:{}}).exports,n),n.exports),x=(i,n)=>{for(var t in n)s(i,t,{get:n[t],enumerable:!0})},r=(i,n,t,o)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let a of p(n))!g.call(i,a)&&a!==t&&s(i,a,{get:()=>n[a],enumerable:!(o=m(n,a))||o.enumerable});return i};var w=(i,n,t)=>(t=i!=null?u(f(i)):{},r(n||!i||!i.__esModule?s(t,\"default\",{value:i,enumerable:!0}):t,i)),j=i=>r(s({},\"__esModule\",{value:!0}),i);var l=b((_,c)=>{c.exports=_jsx_runtime});var N={};x(N,{default:()=>d,frontmatter:()=>y});var e=w(l()),y={title:\"Contact\",description:\"Contact us for any questions or concerns about Designali.\"};function h(i){let n={a:\"a\",h2:\"h2\",li:\"li\",p:\"p\",span:\"span\",strong:\"strong\",ul:\"ul\",...i.components};return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.p,{children:\"If you have any questions or concerns about Designali, please contact us using one of the methods below. We will try to respond as soon as possible.\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"I love using \",(0,e.jsx)(n.a,{href:\"https://nextjs.org/\",children:\"Next.js\"}),\" to create a website. Then use \",(0,e.jsx)(n.a,{href:\"https://github.com\",children:\"GitHub\"}),\" to host my codebase. After that, I use \",(0,e.jsx)(n.a,{href:\"https://vercel.com\",children:\"Vercel\"}),\" to deploy my website.\"]}),`\n`,(0,e.jsxs)(n.h2,{id:\"about-this-site\",children:[(0,e.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#about-this-site\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"About this site\"]}),`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsxs)(n.li,{children:[\"Framework: \",(0,e.jsx)(n.a,{href:\"https://nextjs.org/\",children:\"Next.js\"})]}),`\n`]}),`\n`,(0,e.jsxs)(n.h2,{id:\"inspiration\",children:[(0,e.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#inspiration\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Inspiration\"]}),`\n`,(0,e.jsx)(n.p,{children:\"Here are some websites that inspired me a lot to build a fantastic website.\"}),`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsx)(n.li,{children:(0,e.jsx)(n.a,{href:\"https://ui.shadcn.com/\",children:\"ui.shadcn.com\"})}),`\n`]}),`\n`,(0,e.jsxs)(n.h2,{id:\"contact-information\",children:[(0,e.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#contact-information\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Contact Information\"]}),`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsxs)(n.li,{children:[`\n`,(0,e.jsxs)(n.p,{children:[(0,e.jsx)(n.strong,{children:\"Email:\"}),\" \",(0,e.jsx)(n.a,{href:\"mailto:contact@designali.in\",children:\"contact@designali.in\"})]}),`\n`]}),`\n`,(0,e.jsxs)(n.li,{children:[`\n`,(0,e.jsxs)(n.p,{children:[(0,e.jsx)(n.strong,{children:\"Instagram:\"}),\" \",(0,e.jsx)(n.a,{href:\"https://www.instagram.com/designali.in/\",children:\"designali.in\"})]}),`\n`]}),`\n`]})]})}function d(i={}){let{wrapper:n}=i.components||{};return n?(0,e.jsx)(n,{...i,children:(0,e.jsx)(h,{...i})}):h(i)}return j(N);})();\n;return Component;"
+  },
+  "_id": "docs/legal/contact.mdx",
+  "_raw": {
+    "sourceFilePath": "docs/legal/contact.mdx",
+    "sourceFileName": "contact.mdx",
+    "sourceFileDir": "docs/legal",
+    "contentType": "mdx",
+    "flattenedPath": "docs/legal/contact"
+  },
+  "type": "Doc",
+  "slug": "/docs/legal/contact",
+  "slugAsParams": "legal/contact"
+}
