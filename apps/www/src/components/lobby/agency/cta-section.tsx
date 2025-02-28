@@ -188,8 +188,9 @@ export function CTASection() {
   return (
     <section id="cta" className="relative p-6">
       <ShineBorder
+       borderWidth={3}
         className=" border bg-white/5  shadow-2xl backdrop-blur-md dark:bg-black/5"
-        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+        color={["#FF007F", "#39FF14", "#00FFFF"]}
       >
         <h1 className="my-8 text-2xl md:text-2xl">How it Works?</h1>
         <div className="grid gap-6 md:flex">

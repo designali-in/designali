@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import NumberCounter from "@/components/ui/texts/number-counter";
+import { DIcons } from "dicons";
 
 const skills = [
   { skill: "Graphic Design" },
@@ -119,7 +120,7 @@ const About = () => {
                 )}
               >
                 <span className="flex gap-2 px-1">
-                  <Moon className="w-3" />
+                  <DIcons.WhatsApp className="w-3" />
                   Join Whatsapp
                 </span>
               </Link>

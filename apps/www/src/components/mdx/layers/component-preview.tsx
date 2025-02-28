@@ -11,7 +11,7 @@ import { useConfig } from "@/hooks/use-config";
 import { CopyButton } from "./copy-button";
 import { Icons } from "@/components/icons";
 import { ThemeWrapper } from "./theme-wrapper";
-import { V0Button } from "./v0-button";
+import OpenInV0 from "./open-in-v0";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { styles } from "@/registry/registry-styles";
 import { Eye, FolderCode, Settings2 } from "lucide-react";
@@ -101,14 +101,14 @@ export function ComponentPreview({
   }
   return (
     <div
-    className={cn("group relative my-4 flex flex-col space-y-2", className)}
+      className={cn("group relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         <div className="flex items-center justify-between pb-3">
           {!hideCode && (
             <div className="flex items-center border-b w-full">
-              <TabsList className="w-full justify-start rounded-none  bg-transparent p-0">
+              <TabsList className="w-full justify-start rounded-none bg-transparent p-0">
                 <TabsTrigger
                   value="preview"
                   className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
@@ -129,8 +129,9 @@ export function ComponentPreview({
                 </TabsTrigger>
               </TabsList>
               <div className="flex gap-2 items-center">
-                
-                {description ? <V0Button name={name} /> : null}
+                <OpenInV0
+                  componentSource={`https://designali.in/r/styles/default/${name}.json`}
+                />
                 <CopyButton
                   value={codeString}
                   variant="ghost"
@@ -168,11 +169,9 @@ export function ComponentPreview({
             </div>
           </ThemeWrapper>
         </TabsContent>
-        <TabsContent value="code">
-          <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-              {Code}
-            </div>
+        <TabsContent className="grid" value="code">
+          <div className="grid w-full min-w-0 overflow-x-auto rounded-xl [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:flex [&_pre]:max-h-[400px] [&_pre]:w-full [&_pre]:overflow-auto">
+            {Code}
           </div>
         </TabsContent>
         <TabsContent value="install">

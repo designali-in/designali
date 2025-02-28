@@ -19,6 +19,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Avegra } from "@/lib/fonts/fonts";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
+import ShineBorder from "@/src/components/ui/backgrounds/shine-border";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -107,13 +108,25 @@ const BrowsePage = async () => {
 
           <div className="my-10 flex flex-wrap items-center justify-center gap-2">
             {session ? (
-              <Link href="/graphic/upload">
-                <Button size="lg">Upload New Asset</Button>
-              </Link>
+              <ShineBorder
+              borderWidth={3}
+                className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+                color={["#FF007F", "#39FF14", "#00FFFF"]}
+              >
+                <Link href="/graphic/upload">
+                  <Button size="lg">Upload New Asset</Button>
+                </Link>
+              </ShineBorder>
             ) : (
-              <Link href="/login">
-                <Button size="lg">Upload New Asset</Button>
-              </Link>
+              <ShineBorder
+              borderWidth={3}
+                className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+                color={["#FF007F", "#39FF14", "#00FFFF"]}
+              >
+                <Link href="/login">
+                  <Button size="lg">Upload New Asset/Login</Button>
+                </Link>
+              </ShineBorder>
             )}
             <Link href={"/pricing"}>
               <Button variant="outline" size="lg">

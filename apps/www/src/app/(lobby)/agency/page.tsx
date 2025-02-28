@@ -30,7 +30,7 @@ export default function HomePage() {
       <Pricing />
       <CallToActionSection />
       <div className="container">
-        <div className="relative mt-6 overflow-hidden border-x border-t pb-16">
+        <div className="relative rounded-t-3xl mt-6 overflow-hidden border-x border-t pb-16">
           <CTASection />
           <Quote />
           <Services />

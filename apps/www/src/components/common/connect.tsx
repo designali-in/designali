@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/backgrounds/highlighter";
 import {  Mail, Watch } from "lucide-react";
 import { DesignaliIcon } from "../logo";
+import { DIcons } from "dicons";
 
 export const Connect: React.FC = () => {
   const [scope, animate] = useAnimate();
@@ -168,7 +169,7 @@ export const Connect: React.FC = () => {
                         )}
                       >
                         <span className="flex items-center gap-1">
-                          <Watch
+                          <DIcons.WhatsApp
                             strokeWidth={1}
                             className="h-4 w-4"
                           />

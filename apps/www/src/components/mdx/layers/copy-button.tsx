@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu"
-import { CheckIcon, ClipboardIcon } from "lucide-react"
+import { CheckIcon, ClipboardIcon, Copy } from "lucide-react"
 import { NpmCommands } from "@/types/unist"
 
 import { Event, trackEvent } from "@/lib/events"
@@ -69,7 +69,7 @@ export function CopyButton({
       {...props}
     >
       <span className="sr-only">Copy</span>
-      {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
+      {hasCopied ? <CheckIcon /> : <Copy />}
     </Button>
   )
 }
