@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 
-import { auth } from "@/lib/auth";
+import { auth } from "@/src/lib/auth";
 
-export { auth as middleware } from "@/lib/auth";
+export { auth as middleware } from "@/src/lib/auth";
 
-export default auth(async (req) => {
+import { NextRequest } from "next/server";
+
+export default auth(async (req: NextRequest) => {
   const isAuthenticated = await auth();
 
   const pathname = req.nextUrl.pathname;
