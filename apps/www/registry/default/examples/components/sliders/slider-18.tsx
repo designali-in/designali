@@ -20,7 +20,6 @@ export default function SliderDemo() {
           onValueChange={setValue}
           min={1}
           max={5}
-          
           tooltipContent={(value) => labels[value - 1]}
           aria-label="Rate your experience"
         />

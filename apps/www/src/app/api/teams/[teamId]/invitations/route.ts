@@ -1,4 +1,4 @@
- //@ts-nocheck
+
 import crypto from "crypto";
 import { NextResponse } from "next/server";
 import TeamInviteEmail from "@/emails/team-invite-email";
@@ -96,6 +96,9 @@ export async function POST(
     });
 
     // Log the invitation activity
+    if (!session.user.id) {
+      throw new Error("User ID is undefined");
+    }
     await logTeamActivity(params.teamId, session.user.id, "member.invited", {
       invitedEmail: body.email,
       role: body.role,
