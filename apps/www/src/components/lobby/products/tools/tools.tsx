@@ -4,7 +4,7 @@ import { RoundedTool } from "./rounded-tool";
 import { SquareTool } from "./square-tool";
 import { SVGTool } from "./svg-tool";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import ImageColorPallate from "./color";
@@ -54,6 +54,7 @@ const ToolsPage = () => {
               </TabsTrigger>
             </TabsList>
           </div>
+          <ScrollBar className="hidden" orientation="horizontal" />
         </ScrollArea>
         <TabsContent value="tab-1">
           <AIConverter />

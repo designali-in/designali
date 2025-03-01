@@ -36,7 +36,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-3" align="end">
         <DropdownMenuLabel className="font-normal">
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             <h1 className="truncate text-lg font-semibold leading-none">
               {user.name && <p className="font-medium">{user.name}</p>}
             </h1>

@@ -12,9 +12,9 @@ import { Separator } from "@/components/ui/separator";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: "Profile - Designali",
+  title: "Profiles",
   description:
-    "Discover your favorite anime on our browse page, designed to help you search for anime that suits your preferences. Browse through an extensive collection of anime and easily filter them by genres and release year.",
+    "",
 };
 
 const BrowsePage = async () => {
@@ -52,8 +52,8 @@ const BrowsePage = async () => {
   }));
 
   return (
-    <div className="mx-auto my-36 max-w-7xl px-6 xl:px-0">
-      <div className="grid items-center justify-center px-8 pb-1 text-center">
+    <div className="container-wrapper mt-4 rounded-t-3xl border-t">
+      <div className="grid items-center mt-10 justify-center px-8 pb-1 text-center">
         <div className="grid justify-center">
           <p className=" text-ali mb-4  text-center text-xl">
             Your Dream Designer Awaits
@@ -86,8 +86,10 @@ const BrowsePage = async () => {
         </div>
       </div>{" "}
       <Separator className="" />
+      <div className="px-6 mt-6">
       <AssetUsers users={formattedUsers} />
-      <div className=" mx-auto mt-20 max-w-7xl px-6 xl:px-0">
+      </div>
+      <div className="">
         <AdBanner
           dataAdFormat="auto"
           dataFullWidthResponsive={true}

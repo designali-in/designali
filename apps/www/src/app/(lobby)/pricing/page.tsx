@@ -20,8 +20,8 @@ export default async function PricingPage() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-6 xl:px-0">
-      <div className=" mt-28 ">
+    <div className="container-wrapper mt-4 rounded-t-3xl border-t">
+      <div className="mt-20 px-6">
         <div className="flex items-center justify-center px-8 pb-1 text-center">
           <h3
             className={cn(

@@ -28,7 +28,7 @@ const BentoCard = ({
   <div
     key={name}
     className={cn(
-      "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl group-hover:scale-105 md:rounded-3xl",
+      "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-3xl group-hover:scale-105",
       // light styles
       "border border-dotted bg-white",
       // dark styles

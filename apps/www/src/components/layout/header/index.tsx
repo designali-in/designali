@@ -25,7 +25,7 @@ export async function Header() {
         </div>
         
         <div>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-1 items-center">
             <ThemeToggle/>
             <Header1 user={user} />
             <DashboardButton />

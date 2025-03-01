@@ -84,8 +84,8 @@ const BrowsePage = async () => {
   });
 
   return (
-    <div className="relative">
-      <div className="mx-auto my-36 max-w-7xl px-6 xl:px-0">
+    <div className="relative overflow-hidden">
+      <div className="mt-28">
         <div className="grid items-center justify-center px-8 pb-1 text-center">
           <div className="grid justify-center">
             <p className=" text-ali mb-4  text-center text-xl">
@@ -109,7 +109,7 @@ const BrowsePage = async () => {
           <div className="my-10 flex flex-wrap items-center justify-center gap-2">
             {session ? (
               <ShineBorder
-              borderWidth={3}
+                borderWidth={3}
                 className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
                 color={["#FF007F", "#39FF14", "#00FFFF"]}
               >
@@ -119,7 +119,7 @@ const BrowsePage = async () => {
               </ShineBorder>
             ) : (
               <ShineBorder
-              borderWidth={3}
+                borderWidth={3}
                 className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
                 color={["#FF007F", "#39FF14", "#00FFFF"]}
               >
@@ -144,50 +144,52 @@ const BrowsePage = async () => {
               defaultValue="tab-1"
               className="items-center justify-center text-center"
             >
-              <TabsList className="w-full md:w-auto">
-                <ScrollArea className="whitespace-nowrap">
-                  <div className="space-x-2">
-                    <TabsTrigger value="tab-1">
-                      Graphics
-                      <span className="text-ali px-1 font-semibold">
-                        {assets.length}
-                      </span>
-                    </TabsTrigger>
+              <div className="px-6">
+                <TabsList className="w-full md:w-auto">
+                  <ScrollArea className="whitespace-nowrap">
+                    <div className="space-x-2">
+                      <TabsTrigger value="tab-1">
+                        Graphics
+                        <span className="text-ali px-1 font-semibold">
+                          {assets.length}
+                        </span>
+                      </TabsTrigger>
 
-                    <TabsTrigger value="tab-2">
-                      Pro
-                      <span className="text-ali pl-1 font-semibold">
-                        {topTenAnimes.length}
-                      </span>
-                    </TabsTrigger>
-                    <TabsTrigger value="tab-3">
-                      Designers
-                      <span className="text-ali px-1 font-semibold">
-                        {users.length}
-                      </span>
-                      <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                        New
-                      </span>
-                    </TabsTrigger>
+                      <TabsTrigger value="tab-2">
+                        Pro
+                        <span className="text-ali pl-1 font-semibold">
+                          {topTenAnimes.length}
+                        </span>
+                      </TabsTrigger>
+                      <TabsTrigger value="tab-3">
+                        Designers
+                        <span className="text-ali px-1 font-semibold">
+                          {users.length}
+                        </span>
+                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
+                      </TabsTrigger>
 
-                    <TabsTrigger value="tab-6">
-                      <p>Logos</p>
-                      {""}
-                      <span className="ml-1 font-thin">by svgl</span>
-                      <span className="text-ali px-1 font-semibold">476</span>
-                      <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                        New
-                      </span>
-                    </TabsTrigger>
-                    <TabsTrigger value="tab-7">
-                      <p>Tools</p>
-                    </TabsTrigger>
-                  </div>
-                  <ScrollBar orientation="horizontal" />
-                </ScrollArea>
-              </TabsList>
+                      <TabsTrigger value="tab-6">
+                        <p>Logos</p>
+                        {""}
+                        <span className="ml-1 font-thin">by svgl</span>
+                        <span className="text-ali px-1 font-semibold">476</span>
+                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
+                      </TabsTrigger>
+                      <TabsTrigger value="tab-7">
+                        <p>Tools</p>
+                      </TabsTrigger>
+                    </div>
+                    <ScrollBar className="hidden" orientation="horizontal" />
+                  </ScrollArea>
+                </TabsList>
+              </div>
               <Glow className="top-[400px] -z-20" />
-              <div className="container-wrapper bg-background rounded-3xl mt-6 pt-4 p-6">
+              <div className="container-wrapper bg-background rounded-t-3xl mt-6 pt-4 p-6">
                 <TabsContent className="min-h-screen" value="tab-1">
                   <AssetGrid
                     assets={formattedAssets}
@@ -208,17 +210,16 @@ const BrowsePage = async () => {
                 <TabsContent className="min-h-screen" value="tab-7">
                   <ToolsPage />
                 </TabsContent>
+                <div className="-m-6 mt-6">
+                  <AdBanner
+                    dataAdFormat="auto"
+                    dataFullWidthResponsive={true}
+                    dataAdSlot="5790922307"
+                  />
+                </div>
               </div>
             </Tabs>
           </div>
-        </div>
-
-        <div className=" mx-auto mt-20 max-w-7xl px-6 xl:px-0">
-          <AdBanner
-            dataAdFormat="auto"
-            dataFullWidthResponsive={true}
-            dataAdSlot="5790922307"
-          />
         </div>
       </div>
     </div>

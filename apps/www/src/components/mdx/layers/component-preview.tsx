@@ -144,11 +144,11 @@ export function ComponentPreview({
             </div>
           )}
         </div>
-        <TabsContent value="preview" className="relative rounded-md border">
+        <TabsContent value="preview" className="relative rounded-3xl border">
           <ThemeWrapper defaultTheme="stone">
             <div
               className={cn(
-                "preview flex min-h-[400px] w-full justify-center p-10",
+                "preview flex min-h-[400px] w-full justify-center p-6 md:p-10",
                 {
                   "items-center": align === "center",
                   "items-start": align === "start",

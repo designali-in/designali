@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export default function GridPattern01() {
   return (
     <div className="relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white">
+      <p className="z-10 whitespace-pre-wrap text-center text-3xl md:text-5xl font-medium tracking-tighter text-black dark:text-white">
         Grid Pattern
       </p>
       <GridPattern

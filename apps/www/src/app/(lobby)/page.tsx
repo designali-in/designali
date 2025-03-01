@@ -33,13 +33,15 @@ export default function HomePage() {
       <div className="absolute inset-0 max-md:hidden top-[100px] -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
 
         <Glow variant="top" className="-z-20" />
-        <div className="relative bg-background border-grid rounded-t-3xl rounded-b-3xl border container-wrapper overflow-hidden my-10">
+        <div className="relative bg-background border-grid rounded-t-3xl border-t container-wrapper overflow-hidden mt-10">
           <CardsDemo />
+          <div className="">
           <AdBanner
             dataAdFormat="auto"
             dataFullWidthResponsive={true}
             dataAdSlot="5723796123"
           />
+          </div>
           <NewsletterSignUpForm />
           <Connect />
         </div>

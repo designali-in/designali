@@ -32,7 +32,7 @@ export default function AboutAI() {
         width={700}
         className="absolute inset-x-0 -top-60 -z-10 min-h-screen w-full object-cover"
       />
-      <div className="my-24 container">
+      <div className="mt-24">
         <div className="">
           <p className="px-6 text-center text-lg font-light uppercase tracking-widest text-white lg:text-xl">
             Introducing
@@ -80,7 +80,7 @@ export default function AboutAI() {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-        <div className="relative container-wrapper my-6 border-grid rounded-t-3xl border-y">
+        <div className="relative container-wrapper my-6 border-grid rounded-3xl border-y">
           <GradientGenerator />
 
           <p className="ml-2 mt-6 text-center font-semibold ">
@@ -127,14 +127,15 @@ export default function AboutAI() {
                   </Button>
                 </Link>
               </div>
-              <div className="my-6">
+              
+            </div>
+            <div className="">
                 <AdBanner
                   dataAdFormat="auto"
                   dataFullWidthResponsive={true}
                   dataAdSlot="2106263519"
                 />
               </div>
-            </div>
           </div>
         </div>
       </div>

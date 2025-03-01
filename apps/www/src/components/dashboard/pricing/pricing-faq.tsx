@@ -41,8 +41,8 @@ const pricingFaqData = [
 
 export function PricingFaq() {
   return (
-    <section className="mx-auto -mt-16 mb-20 max-w-5xl">
-      <Accordion type="single" collapsible className="my-12 w-full">
+    <section className="p-6 pt-0">
+      <Accordion type="single" collapsible className="w-full">
         {pricingFaqData.map((faqItem) => (
           <AccordionItem key={faqItem.id} value={faqItem.id}>
             <AccordionTrigger>{faqItem.question}</AccordionTrigger>

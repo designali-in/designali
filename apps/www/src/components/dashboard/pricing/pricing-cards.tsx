@@ -31,7 +31,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
   };
 
   return (
-    <section className=" flex flex-col items-center text-center">
+    <section className="px-6 flex flex-col items-center text-center">
       <div className="mx-auto my-10 flex w-full flex-col gap-5">
         <h1 className="text-ali text-3xl font-semibold tracking-tighter">
           Design at full speed !

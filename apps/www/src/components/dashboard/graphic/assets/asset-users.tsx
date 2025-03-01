@@ -75,7 +75,7 @@ export default function UserList({ users }: { users: User[] }) {
             placeholder="Search users by name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="h-10 w-60"
+            className="h-10 w-40 md:w-60"
           />
           <Select value={sortBy} onValueChange={setSortBy}>
             <SelectTrigger className="h-10 w-[180px]">

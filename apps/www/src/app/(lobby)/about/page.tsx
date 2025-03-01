@@ -13,7 +13,7 @@ import { Glow } from "@/src/components/ui/backgrounds/glow";
 
 export default function HomePage() {
   return (
-    <main className="">
+    <main className="overflow-hidden relative">
       <div className="absolute inset-0 top-80 -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
       <div className="mt-20">
         <p className="text-ali text-center tracking-widest">FOUNDER</p>
@@ -59,8 +59,7 @@ export default function HomePage() {
         </BackgroundBeams>
       </div>
       <Glow className="top-[600px] -z-20"/>
-      <div className="relative border-grid border-x bg-background border-t rounded-t-3xl pb-20 container-wrapper overflow-hidden">
-       
+      <div className="relative border-grid border-x bg-background border-t rounded-t-3xl container-wrapper overflow-hidden">
         <About />
         <Items />
         <Experience />
