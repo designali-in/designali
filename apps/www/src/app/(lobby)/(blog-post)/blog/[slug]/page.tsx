@@ -17,10 +17,9 @@ import {
   getBlurDataURL,
   placeholderBlurhash,
 } from "@/lib/utils";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { DashboardTableOfContents } from "@/components/mdx/blog/toc";
-import BlurImage from "@/src/components/ui/backgrounds/blur-image";
-import { ScrollProgress } from "@/registry/default/ui/backgrounds/scroll-progress";
+import BlurImage from "@/src/components/ui/backgrounds/blur-image"; 
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -75,7 +74,7 @@ export default async function PostPage({
 
   return (
     <div className="mt-4 p-6 border-t rounded-t-3xl container-wrapper">
-      <ScrollProgress />
+      
       <div className="">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-3">

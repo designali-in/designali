@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/sidebar";
 
 import type { User } from "next-auth";
+import Link from "next/link";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
   user: Pick<User, "name" | "image" | "email" | "id">;
@@ -76,21 +77,21 @@ export function NavUser({ user }: UserAccountNavProps) {
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
+                <Link className="flex gap-2 items-center" href={"/dashboard/billing"}> 
                 <Sparkles />
                 Upgrade to Pro
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
+              <Link className="flex gap-2 items-center" href={"/dashboard/settings"}> 
                 <BadgeCheck />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCard />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
+                Account 
+                </Link>
+              </DropdownMenuItem> 
+              <DropdownMenuItem disabled>
                 <Bell />
                 Notifications
               </DropdownMenuItem>

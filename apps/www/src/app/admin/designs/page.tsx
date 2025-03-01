@@ -72,7 +72,7 @@ const TicketsAdmin = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/api/admin/tickets");
+        const response = await fetch("/api/admin/designs");
         const data = await response.json();
         setLoading(false);
         setProjects(data);
@@ -86,7 +86,7 @@ const TicketsAdmin = () => {
 
   const handleButtonClick = (ticketId: string, projectName: string) => {
     router.push(
-      `/admin/tickets/details?ticketId=${ticketId}&projectName=${projectName}`,
+      `/admin/designs/details?ticketId=${ticketId}&projectName=${projectName}`,
     );
   };
 

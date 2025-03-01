@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+//@ts-nocheck
 import type { UserDisplay } from "@/types/global";
 import UserClient from "@/components/dashboard/users/UserClient";
 import { format } from "date-fns";

@@ -1,6 +1,6 @@
 "use client";
 
-import type { AdminDisplay, AnimeRanking, UserDisplay } from "@/types";
+import type { AdminDisplay, AnimeRanking, UserDisplay } from "@/types/global";
 import type { ColumnDef } from "@tanstack/react-table";
 import { DIcons } from "dicons";
 

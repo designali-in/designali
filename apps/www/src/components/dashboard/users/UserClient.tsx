@@ -1,7 +1,7 @@
 "use client";
 
 import type { ExtendedUser } from "@/lib/validations/user";
-import type { UserDisplay } from "@/types";
+import type { UserDisplay } from "@/types/global";
 import dynamic from "next/dynamic";
 
 import { ScrollArea } from "@/components/ui/scroll-area";

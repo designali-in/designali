@@ -3,7 +3,7 @@
 "use client";
 
 import type { ExtendedUser } from "@/lib/validations/user";
-import type { UserDisplay } from "@/types";
+import type { UserDisplay } from "@/types/global";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";

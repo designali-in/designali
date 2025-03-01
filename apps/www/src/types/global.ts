@@ -6,6 +6,23 @@ export type ThemeOptions = {
   light: string;
 };
 
+export interface AnimeRanking {
+  rank: string;
+  graphic: string;
+  director: string;
+  genre: string;
+  stars: number;
+  votes: string;
+}
+
+export interface AdminDisplay {
+  name: string | null;
+  email: string | null;
+  createdAt: string;
+  animeAdded: number;
+}
+
+
 export interface Views {
   views: number;
 }

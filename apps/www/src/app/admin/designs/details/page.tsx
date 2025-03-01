@@ -228,7 +228,7 @@ const AdminTicketDetails = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400">
               {ticket ? <span>Ticket ID: #{ticket.id}</span> : ""}
             </p>
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl mt-2 font-bold">
               {ticket ? <span>{ticket.title}</span> : ""}
             </h2>
             <p className="text-2xl font-bold text-gray-500 dark:text-gray-400">
