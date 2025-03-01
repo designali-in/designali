@@ -38,6 +38,55 @@ const LinksProperties = defineNestedType(() => ({
   },
 }))
 
+
+export const Post = defineDocumentType(() => ({
+  name: "Post",
+  filePathPattern: `blog/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+    image: {
+      type: "string",
+      required: true,
+    },
+    authors: {
+      type: "list",
+      of: { type: "string" },
+      required: true,
+    },
+    categories: {
+      type: "list",
+      of: {
+        type: "enum",
+        options: ["news", "education"],
+        default: "news",
+      },
+      required: true,
+    },
+    related: {
+      type: "list",
+      of: {
+        type: "string",
+      },
+    },
+  },
+  computedFields: computedFields,
+}));
+
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
   filePathPattern: `docs/**/*.mdx`,
@@ -80,7 +129,7 @@ export const Doc = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Doc],
+  documentTypes: [Doc, Post],
   mdx: {
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [

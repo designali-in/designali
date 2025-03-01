@@ -177,10 +177,10 @@ export function ComponentPreview({
         <TabsContent value="install">
           <div className="flex flex-col space-y-4">
             <CodeBlockInstall
-              __npmCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
-              __yarnCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+              __npmCommand__={`npx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+              __yarnCommand__={`npx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
               __pnpmCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
-              __bunCommand__={`pnpm dlx shadcn@latest add https://www.designali.in/r/styles/default/${name}.json`}
+              __bunCommand__={`bunx --bun shadcn@latest add  https://www.designali.in/r/styles/default/${name}.json`}
             />
           </div>
         </TabsContent>

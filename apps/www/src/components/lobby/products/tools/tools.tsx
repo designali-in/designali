@@ -11,7 +11,7 @@ import { ImageCompressor } from "./image-compressor";
 const ToolsPage = () => {
   return (
     <div className="mt-3">
-      <Tabs defaultValue="tab-1">
+      <Tabs defaultValue="tab-7">
         <ScrollArea className="whitespace-nowrap">
           <div className="flex justify-center space-x-6">
             <TabsList className="h-auto gap-2 rounded-none border-b border-border bg-transparent px-0 py-1 text-foreground">

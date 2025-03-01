@@ -44,7 +44,7 @@ export function Menu() {
                 <ListItem href="/pricing" title="Pricing">
                   Make your business shine with unlimited* creativity.
                 </ListItem>
-                <ListItem href="/blogs" title="Blogs">
+                <ListItem href="/blog" title="Blogs">
                   Creative Chronicles: Insights, Inspiration, and Design Trends
                 </ListItem>
                 <ListItem href="/docs/legal/contact" title="Contact">

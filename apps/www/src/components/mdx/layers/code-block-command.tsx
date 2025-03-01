@@ -153,7 +153,7 @@ export function CodeBlockInstall({
   }, [packageManager, tabs])
 
   return (
-    <div className="relative max-h-[650px] overflow-x-auto rounded-xl bg-stone-950 dark:bg-stone-900">
+    <div className="relative w-full min-w-0 [&_pre]:mx-auto [&_pre]:my-0 [&_pre]:flex [&_pre]:max-h-[400px] [&_pre]:w-full [&_pre]:overflow-auto max-h-[650px] overflow-x-auto rounded-xl bg-stone-950 dark:bg-stone-900">
       <Tabs
         value={packageManager}
         onValueChange={(value) => {
@@ -165,7 +165,7 @@ export function CodeBlockInstall({
       >
         <div className="flex items-center justify-between border-b border-stone-800 bg-stone-900 px-3 pt-2.5">
           <TabsList className="h-7 translate-y-[2px] gap-3 bg-transparent p-0 pl-1">
-            {Object.entries(tabs).map(([key, value]) => {
+            {Object.entries(tabs).map(([key]) => {
               return (
                 <TabsTrigger
                   key={key}
