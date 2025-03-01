@@ -166,7 +166,7 @@ export function Menu() {
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Dive Into a World of Colors – Bringing Vibrancy to Your
+                        Color generator - Dive Into a World of Colors – Bringing Vibrancy to Your
                         Designs
                       </p>
                     </div>
@@ -205,7 +205,7 @@ export function Menu() {
                         Agency
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        My Creative Journey – Explore My Design Portfolio
+                      Crafting bold, beautiful, and user-focused designs that tell your story and elevate your brand.
                       </p>
                     </div>
                   </NavigationMenuLink>
@@ -217,7 +217,7 @@ export function Menu() {
                         Works
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        My Creative Journey – Explore My Design Portfolio
+                      A glimpse of the creativity, strategy, and craftsmanship we bring to every project.
                       </p>
                     </div>
                   </NavigationMenuLink>

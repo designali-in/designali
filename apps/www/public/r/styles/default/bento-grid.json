@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bento-grid",
+  "type": "registry:ui",
+  "author": "shadcn (https://ui.shadcn.com)",
+  "files": [
+    {
+      "path": "ui/bento-grid.tsx",
+      "content": "import type { ReactNode } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst BentoGrid = ({\n  children,\n  className,\n}: {\n  children: ReactNode;\n  className?: string;\n}) => {\n  return (\n    <div className={cn(\"z-10 grid grid-cols-8 gap-3\", className)}>\n      {children}\n    </div>\n  );\n};\n\nconst BentoCard = ({\n  name,\n  className,\n  background,\n}: {\n  name: string;\n  className: string;\n  background: ReactNode;\n}) => (\n  <div\n    key={name}\n    className={cn(\n      \"group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-3xl group-hover:scale-105\",\n      // light styles\n      \"border border-dotted bg-white\",\n      // dark styles\n      \"transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]\",\n      className\n    )}\n  >\n    <div>{background}</div>\n\n    <div className=\"pointer-events-none absolute inset-0 transform-gpu transition-all duration-300\" />\n  </div>\n);\n\nexport { BentoCard, BentoGrid, BentoGridItem };\n\nconst BentoGridItem = ({\n  className,\n  title,\n  description,\n  header,\n  icon,\n}: {\n  className?: string;\n  title?: string | React.ReactNode;\n  description?: string | React.ReactNode;\n  header?: React.ReactNode;\n  icon?: React.ReactNode;\n}) => {\n  return (\n    <div\n      className={cn(\n        \"group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-dotted border-accent  p-4 shadow-input transition duration-200 hover:shadow-xl  \",\n        className,\n      )}\n    >\n      {header}\n      <div className=\"transition duration-200 group-hover/bento:translate-x-2\">\n        {icon}\n        <div className=\"mb-2 mt-2 font-sans font-bold text-slate-600 dark:text-slate-200\">\n          {title}\n        </div>\n        <div className=\"font-sans text-xs font-normal text-slate-600 dark:text-slate-300\">\n          {description}\n        </div>\n      </div>\n    </div>\n  );\n};\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

@@ -2,6 +2,12 @@
 
 import docs__indexMdx from './docs__index.mdx.json' assert { type: 'json' }
 import docs__typographyMdx from './docs__typography.mdx.json' assert { type: 'json' }
+import docs__dicons__colorMdx from './docs__dicons__color.mdx.json' assert { type: 'json' }
+import docs__dicons__fillMdx from './docs__dicons__fill.mdx.json' assert { type: 'json' }
+import docs__dicons__howToUseMdx from './docs__dicons__how-to-use.mdx.json' assert { type: 'json' }
+import docs__dicons__installationMdx from './docs__dicons__installation.mdx.json' assert { type: 'json' }
+import docs__dicons__sizingMdx from './docs__dicons__sizing.mdx.json' assert { type: 'json' }
+import docs__dicons__strokeWidthMdx from './docs__dicons__stroke-width.mdx.json' assert { type: 'json' }
 import docs__components__accordionMdx from './docs__components__accordion.mdx.json' assert { type: 'json' }
 import docs__components__alertMdx from './docs__components__alert.mdx.json' assert { type: 'json' }
 import docs__components__avatarMdx from './docs__components__avatar.mdx.json' assert { type: 'json' }
@@ -26,12 +32,6 @@ import docs__components__switchMdx from './docs__components__switch.mdx.json' as
 import docs__components__tabMdx from './docs__components__tab.mdx.json' assert { type: 'json' }
 import docs__components__textareaMdx from './docs__components__textarea.mdx.json' assert { type: 'json' }
 import docs__components__tooltipMdx from './docs__components__tooltip.mdx.json' assert { type: 'json' }
-import docs__dicons__colorMdx from './docs__dicons__color.mdx.json' assert { type: 'json' }
-import docs__dicons__fillMdx from './docs__dicons__fill.mdx.json' assert { type: 'json' }
-import docs__dicons__howToUseMdx from './docs__dicons__how-to-use.mdx.json' assert { type: 'json' }
-import docs__dicons__installationMdx from './docs__dicons__installation.mdx.json' assert { type: 'json' }
-import docs__dicons__sizingMdx from './docs__dicons__sizing.mdx.json' assert { type: 'json' }
-import docs__dicons__strokeWidthMdx from './docs__dicons__stroke-width.mdx.json' assert { type: 'json' }
 import docs__dshapes__howToUseMdx from './docs__dshapes__how-to-use.mdx.json' assert { type: 'json' }
 import docs__dshapes__indMdx from './docs__dshapes__ind.mdx.json' assert { type: 'json' }
 import docs__dshapes__installationMdx from './docs__dshapes__installation.mdx.json' assert { type: 'json' }
@@ -46,13 +46,13 @@ import docs__components__backgrounds__gridPatternMdx from './docs__components__b
 import docs__components__backgrounds__retroGridMdx from './docs__components__backgrounds__retro-grid.mdx.json' assert { type: 'json' }
 import docs__components__backgrounds__rippleMdx from './docs__components__backgrounds__ripple.mdx.json' assert { type: 'json' }
 import docs__components__backgrounds__scrollProgressMdx from './docs__components__backgrounds__scroll-progress.mdx.json' assert { type: 'json' }
+import docs__components__texts__gradientTextMdx from './docs__components__texts__gradient-text.mdx.json' assert { type: 'json' }
+import docs__components__texts__morphingTextMdx from './docs__components__texts__morphing-text.mdx.json' assert { type: 'json' }
+import docs__components__texts__numberCounterMdx from './docs__components__texts__number-counter.mdx.json' assert { type: 'json' }
 import docs__components__mockups__ipadMdx from './docs__components__mockups__ipad.mdx.json' assert { type: 'json' }
 import docs__components__mockups__iphoneMdx from './docs__components__mockups__iphone.mdx.json' assert { type: 'json' }
 import docs__components__mockups__macMdx from './docs__components__mockups__mac.mdx.json' assert { type: 'json' }
 import docs__components__mockups__macbookMdx from './docs__components__mockups__macbook.mdx.json' assert { type: 'json' }
 import docs__components__mockups__safariMdx from './docs__components__mockups__safari.mdx.json' assert { type: 'json' }
-import docs__components__texts__gradientTextMdx from './docs__components__texts__gradient-text.mdx.json' assert { type: 'json' }
-import docs__components__texts__morphingTextMdx from './docs__components__texts__morphing-text.mdx.json' assert { type: 'json' }
-import docs__components__texts__numberCounterMdx from './docs__components__texts__number-counter.mdx.json' assert { type: 'json' }
 
-export const allDocs = [docs__indexMdx, docs__typographyMdx, docs__components__accordionMdx, docs__components__alertMdx, docs__components__avatarMdx, docs__components__badgeMdx, docs__components__bannerMdx, docs__components__bentoGridMdx, docs__components__breadcrumbMdx, docs__components__buttonMdx, docs__components__checkboxMdx, docs__components__dialogMdx, docs__components__dropdownMdx, docs__components__indexMdx, docs__components__inputMdx, docs__components__notificationMdx, docs__components__paginationMdx, docs__components__popoverMdx, docs__components__radioMdx, docs__components__scriptCopyBtnMdx, docs__components__selectMdx, docs__components__sliderMdx, docs__components__switchMdx, docs__components__tabMdx, docs__components__textareaMdx, docs__components__tooltipMdx, docs__dicons__colorMdx, docs__dicons__fillMdx, docs__dicons__howToUseMdx, docs__dicons__installationMdx, docs__dicons__sizingMdx, docs__dicons__strokeWidthMdx, docs__dshapes__howToUseMdx, docs__dshapes__indMdx, docs__dshapes__installationMdx, docs__dshapes__noiseMdx, docs__dshapes__sizingMdx, docs__legal__contactMdx, docs__legal__privacyMdx, docs__legal__termsMdx, docs__components__backgrounds__dotPatternMdx, docs__components__backgrounds__flickeringGridMdx, docs__components__backgrounds__gridPatternMdx, docs__components__backgrounds__retroGridMdx, docs__components__backgrounds__rippleMdx, docs__components__backgrounds__scrollProgressMdx, docs__components__mockups__ipadMdx, docs__components__mockups__iphoneMdx, docs__components__mockups__macMdx, docs__components__mockups__macbookMdx, docs__components__mockups__safariMdx, docs__components__texts__gradientTextMdx, docs__components__texts__morphingTextMdx, docs__components__texts__numberCounterMdx]
+export const allDocs = [docs__indexMdx, docs__typographyMdx, docs__dicons__colorMdx, docs__dicons__fillMdx, docs__dicons__howToUseMdx, docs__dicons__installationMdx, docs__dicons__sizingMdx, docs__dicons__strokeWidthMdx, docs__components__accordionMdx, docs__components__alertMdx, docs__components__avatarMdx, docs__components__badgeMdx, docs__components__bannerMdx, docs__components__bentoGridMdx, docs__components__breadcrumbMdx, docs__components__buttonMdx, docs__components__checkboxMdx, docs__components__dialogMdx, docs__components__dropdownMdx, docs__components__indexMdx, docs__components__inputMdx, docs__components__notificationMdx, docs__components__paginationMdx, docs__components__popoverMdx, docs__components__radioMdx, docs__components__scriptCopyBtnMdx, docs__components__selectMdx, docs__components__sliderMdx, docs__components__switchMdx, docs__components__tabMdx, docs__components__textareaMdx, docs__components__tooltipMdx, docs__dshapes__howToUseMdx, docs__dshapes__indMdx, docs__dshapes__installationMdx, docs__dshapes__noiseMdx, docs__dshapes__sizingMdx, docs__legal__contactMdx, docs__legal__privacyMdx, docs__legal__termsMdx, docs__components__backgrounds__dotPatternMdx, docs__components__backgrounds__flickeringGridMdx, docs__components__backgrounds__gridPatternMdx, docs__components__backgrounds__retroGridMdx, docs__components__backgrounds__rippleMdx, docs__components__backgrounds__scrollProgressMdx, docs__components__texts__gradientTextMdx, docs__components__texts__morphingTextMdx, docs__components__texts__numberCounterMdx, docs__components__mockups__ipadMdx, docs__components__mockups__iphoneMdx, docs__components__mockups__macMdx, docs__components__mockups__macbookMdx, docs__components__mockups__safariMdx]

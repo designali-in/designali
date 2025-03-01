@@ -2,7 +2,7 @@ import { ScrollProgress } from "@/components/ui/backgrounds/scroll-progress";
 
 const ScrollProgressDemo = () => {
   return (
-    <div className="z-10 rounded-lg border border-secondary p-4">
+    <div className="rounded-lg border border-secondary p-4">
       <ScrollProgress className="top-0" />
       <h2 className="pb-4 font-bold">
         Note: The scroll progress is shown below the navbar of the page.
