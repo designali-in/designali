@@ -108,25 +108,25 @@ const BrowsePage = async () => {
 
           <div className="my-10 flex flex-wrap items-center justify-center gap-2">
             {session ? (
-              <ShineBorder
-                borderWidth={3}
-                className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
-                color={["#FF007F", "#39FF14", "#00FFFF"]}
-              >
-                <Link href="/graphic/upload">
+              <Link href="/graphic/upload">
+                <ShineBorder
+                  borderWidth={3}
+                  className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+                  color={["#FF007F", "#39FF14", "#00FFFF"]}
+                >
                   <Button size="lg">Upload New Asset</Button>
-                </Link>
-              </ShineBorder>
+                </ShineBorder>
+              </Link>
             ) : (
-              <ShineBorder
-                borderWidth={3}
-                className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
-                color={["#FF007F", "#39FF14", "#00FFFF"]}
-              >
-                <Link href="/login">
+              <Link href="/login">
+                <ShineBorder
+                  borderWidth={3}
+                  className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+                  color={["#FF007F", "#39FF14", "#00FFFF"]}
+                >
                   <Button size="lg">Upload New Asset/Login</Button>
-                </Link>
-              </ShineBorder>
+                </ShineBorder>
+              </Link>
             )}
             <Link href={"/pricing"}>
               <Button variant="outline" size="lg">
