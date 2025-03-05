@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
         description,
         downloadlink,
         url: uploadResponses.map((response) => response.secure_url).join(","),
-        userId: session.user.id,
+        userId: session.user.id as string,
         tags: {
           connectOrCreate: tagArray.map((tag) => ({
             where: { name: tag },

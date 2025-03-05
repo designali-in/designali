@@ -31,6 +31,10 @@ export async function POST(
       return NextResponse.json({ error: "Already liked" }, { status: 400 });
     }
 
+    if (!session.user.id) {
+      return NextResponse.json({ error: "User ID not found" }, { status: 400 });
+    }
+
     await prisma.assetLike.create({
       data: {
         userId: session.user.id,

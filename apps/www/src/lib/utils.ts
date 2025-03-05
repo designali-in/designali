@@ -13,6 +13,11 @@ export function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_APP_URL) return process.env.NEXT_PUBLIC_APP_URL;
 }
 
+export const titleToNumber = (title: string): number => {
+  const titles = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+  return titles.indexOf(title.toLowerCase()) + 1;
+};
+
 export function constructMetadata({
   title = siteConfig.name,
   description = siteConfig.description,

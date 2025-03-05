@@ -104,6 +104,10 @@ export async function POST(
       return NextResponse.json({ error: "Already liked" }, { status: 400 });
     }
 
+    if (!session.user.id) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     await prisma.assetLike.create({
       data: {
         userId: session.user.id,
