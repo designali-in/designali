@@ -13,7 +13,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/call-to-action/one/page.tsx",
+            "path": "src/app/preview/call-to-action/one/page.tsx",
             "type": "registry:component",
             "target": "components/call-to-action.tsx"
           }
@@ -29,7 +29,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/call-to-action/two/page.tsx",
+            "path": "src/app/preview/call-to-action/two/page.tsx",
             "type": "registry:component",
             "target": "components/call-to-action.tsx"
           }
@@ -45,7 +45,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/call-to-action/three/page.tsx",
+            "path": "src/app/preview/call-to-action/three/page.tsx",
             "type": "registry:component",
             "target": "components/call-to-action.tsx"
           }
@@ -62,7 +62,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/comparator/one/page.tsx",
+            "path": "src/app/preview/comparator/one/page.tsx",
             "type": "registry:component",
             "target": "components/pricing-comparator.tsx"
           }
@@ -76,7 +76,7 @@
         "description": "Shadcn/ui website content block",
         "files": [
           {
-            "path": "app/preview/content/one/page.tsx",
+            "path": "src/app/preview/content/one/page.tsx",
             "type": "registry:component",
             "target": "components/content-1.tsx"
           }
@@ -89,7 +89,7 @@
         "description": "Shadcn/ui website content block",
         "files": [
           {
-            "path": "app/preview/content/two/page.tsx",
+            "path": "src/app/preview/content/two/page.tsx",
             "type": "registry:component",
             "target": "components/content-2.tsx"
           }
@@ -102,7 +102,7 @@
         "description": "Shadcn/ui website content block",
         "files": [
           {
-            "path": "app/preview/content/three/page.tsx",
+            "path": "src/app/preview/content/three/page.tsx",
             "type": "registry:component",
             "target": "components/content-3.tsx"
           }
@@ -118,7 +118,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/content/four/page.tsx",
+            "path": "src/app/preview/content/four/page.tsx",
             "type": "registry:component",
             "target": "components/content-4.tsx"
           }
@@ -131,7 +131,7 @@
         "description": "Shadcn/ui website content block",
         "files": [
           {
-            "path": "app/preview/content/five/page.tsx",
+            "path": "src/app/preview/content/five/page.tsx",
             "type": "registry:component",
             "target": "components/content-5.tsx"
           }
@@ -144,7 +144,7 @@
         "description": "Shadcn/ui website content block",
         "files": [
           {
-            "path": "app/preview/content/six/page.tsx",
+            "path": "src/app/preview/content/six/page.tsx",
             "type": "registry:component",
             "target": "components/content-6.tsx"
           }
@@ -157,7 +157,7 @@
         "description": "Shadcn/ui website content block",
         "files": [
           {
-            "path": "app/preview/content/seven/page.tsx",
+            "path": "src/app/preview/content/seven/page.tsx",
             "type": "registry:component",
             "target": "components/content-7.tsx"
           }
@@ -171,7 +171,7 @@
         "description": "Shadcn/ui Frequently Asqued Questions block",
         "files": [
           {
-            "path": "app/preview/faqs/one/page.tsx",
+            "path": "src/app/preview/faqs/one/page.tsx",
             "type": "registry:component",
             "target": "components/faqs.tsx"
           }
@@ -188,7 +188,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/features/one/page.tsx",
+            "path": "src/app/preview/features/one/page.tsx",
             "type": "registry:component",
             "target": "components/features-1.tsx"
           }
@@ -204,7 +204,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/features/two/page.tsx",
+            "path": "src/app/preview/features/two/page.tsx",
             "type": "registry:component",
             "target": "components/features-2.tsx"
           }
@@ -220,7 +220,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/features/three/page.tsx",
+            "path": "src/app/preview/features/three/page.tsx",
             "type": "registry:component",
             "target": "components/features-3.tsx"
           }
@@ -233,7 +233,7 @@
         "description": "Shadcn/ui website features block",
         "files": [
           {
-            "path": "app/preview/features/four/page.tsx",
+            "path": "src/app/preview/features/four/page.tsx",
             "type": "registry:component",
             "target": "components/features-4.tsx"
           }
@@ -246,7 +246,7 @@
         "description": "Shadcn/ui website features block",
         "files": [
           {
-            "path": "app/preview/features/five/page.tsx",
+            "path": "src/app/preview/features/five/page.tsx",
             "type": "registry:component",
             "target": "components/features-5.tsx"
           }
@@ -259,7 +259,7 @@
         "description": "Shadcn/ui website features block",
         "files": [
           {
-            "path": "app/preview/features/six/page.tsx",
+            "path": "src/app/preview/features/six/page.tsx",
             "type": "registry:component",
             "target": "components/features-6.tsx"
           }
@@ -272,7 +272,7 @@
         "description": "Shadcn/ui website features block",
         "files": [
           {
-            "path": "app/preview/features/seven/page.tsx",
+            "path": "src/app/preview/features/seven/page.tsx",
             "type": "registry:component",
             "target": "components/features-7.tsx"
           }
@@ -288,7 +288,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/features/eight/page.tsx",
+            "path": "src/app/preview/features/eight/page.tsx",
             "type": "registry:component",
             "target": "components/features-8.tsx"
           }
@@ -308,7 +308,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/features/nine/page.tsx",
+            "path": "src/app/preview/features/nine/page.tsx",
             "type": "registry:component",
             "target": "components/features-9.tsx"
           },
@@ -325,7 +325,7 @@
         "description": "Shadcn/ui website footer block",
         "files": [
           {
-            "path": "app/preview/footer/one/page.tsx",
+            "path": "src/app/preview/footer/one/page.tsx",
             "type": "registry:component",
             "target": "components/footer.tsx"
           },
@@ -342,7 +342,7 @@
         "description": "Shadcn/ui website footer block",
         "files": [
           {
-            "path": "app/preview/footer/two/page.tsx",
+            "path": "src/app/preview/footer/two/page.tsx",
             "type": "registry:component",
             "target": "components/footer.tsx"
           },
@@ -364,7 +364,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/footer/three/page.tsx",
+            "path": "src/app/preview/footer/three/page.tsx",
             "type": "registry:component",
             "target": "components/footer.tsx"
           },
@@ -381,7 +381,7 @@
         "description": "Shadcn/ui website footer block",
         "files": [
           {
-            "path": "app/preview/footer/four/page.tsx",
+            "path": "src/app/preview/footer/four/page.tsx",
             "type": "registry:component",
             "target": "components/footer.tsx"
           },
@@ -403,7 +403,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/footer/five/page.tsx",
+            "path": "src/app/preview/footer/five/page.tsx",
             "type": "registry:component",
             "target": "components/footer.tsx"
           },
@@ -423,7 +423,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/hero-section/one/page.tsx",
+            "path": "src/app/preview/hero-section/one/page.tsx",
             "type": "registry:component",
             "target": "components/hero-section.tsx"
           },
@@ -443,7 +443,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/hero-section/two/page.tsx",
+            "path": "src/app/preview/hero-section/two/page.tsx",
             "type": "registry:component",
             "target": "components/hero-section.tsx"
           },
@@ -466,7 +466,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/hero-section/three/page.tsx",
+            "path": "src/app/preview/hero-section/three/page.tsx",
             "type": "registry:component",
             "target": "components/hero-section.tsx"
           },
@@ -486,7 +486,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/hero-section/four/page.tsx",
+            "path": "src/app/preview/hero-section/four/page.tsx",
             "type": "registry:component",
             "target": "components/hero-section.tsx"
           },
@@ -508,7 +508,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/login/one/page.tsx",
+            "path": "src/app/preview/login/one/page.tsx",
             "type": "registry:component",
             "target": "components/login.tsx"
           },
@@ -530,7 +530,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/login/two/page.tsx",
+            "path": "src/app/preview/login/two/page.tsx",
             "type": "registry:component",
             "target": "components/login.tsx"
           },
@@ -552,7 +552,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/login/three/page.tsx",
+            "path": "src/app/preview/login/three/page.tsx",
             "type": "registry:component",
             "target": "components/login.tsx"
           },
@@ -573,7 +573,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/sign-up/one/page.tsx",
+            "path": "src/app/preview/sign-up/one/page.tsx",
             "type": "registry:component",
             "target": "components/sign-up.tsx"
           },
@@ -595,7 +595,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/sign-up/two/page.tsx",
+            "path": "src/app/preview/sign-up/two/page.tsx",
             "type": "registry:component",
             "target": "components/sign-up.tsx"
           },
@@ -617,7 +617,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/sign-up/three/page.tsx",
+            "path": "src/app/preview/sign-up/three/page.tsx",
             "type": "registry:component",
             "target": "components/sign-up.tsx"
           },
@@ -634,7 +634,7 @@
         "description": "Shadcn/ui website stats block",
         "files": [
           {
-            "path": "app/preview/stats/one/page.tsx",
+            "path": "src/app/preview/stats/one/page.tsx",
             "type": "registry:component",
             "target": "components/stats.tsx"
           }
@@ -647,7 +647,7 @@
         "description": "Shadcn/ui website stats block",
         "files": [
           {
-            "path": "app/preview/stats/two/page.tsx",
+            "path": "src/app/preview/stats/two/page.tsx",
             "type": "registry:component",
             "target": "components/stats-2.tsx"
           }
@@ -660,7 +660,7 @@
         "description": "Shadcn/ui website stats block",
         "files": [
           {
-            "path": "app/preview/stats/three/page.tsx",
+            "path": "src/app/preview/stats/three/page.tsx",
             "type": "registry:component",
             "target": "components/stats-3.tsx"
           }
@@ -673,7 +673,7 @@
         "description": "Shadcn/ui website stats block",
         "files": [
           {
-            "path": "app/preview/stats/four/page.tsx",
+            "path": "src/app/preview/stats/four/page.tsx",
             "type": "registry:component",
             "target": "components/stats-4.tsx"
           }
@@ -686,7 +686,7 @@
         "description": "Shadcn/ui website team section",
         "files": [
           {
-            "path": "app/preview/team/one/page.tsx",
+            "path": "src/app/preview/team/one/page.tsx",
             "type": "registry:component",
             "target": "components/team.tsx"
           }
@@ -699,7 +699,7 @@
         "description": "Shadcn/ui website team section",
         "files": [
           {
-            "path": "app/preview/team/two/page.tsx",
+            "path": "src/app/preview/team/two/page.tsx",
             "type": "registry:component",
             "target": "components/team.tsx"
           }
@@ -716,7 +716,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/testimonials/one/page.tsx",
+            "path": "src/app/preview/testimonials/one/page.tsx",
             "type": "registry:component",
             "target": "components/testimonials.tsx"
           }
@@ -733,7 +733,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/testimonials/two/page.tsx",
+            "path": "src/app/preview/testimonials/two/page.tsx",
             "type": "registry:component",
             "target": "components/testimonials.tsx"
           }
@@ -746,7 +746,7 @@
         "description": "Shadcn/ui website testimonials section",
         "files": [
           {
-            "path": "app/preview/testimonials/three/page.tsx",
+            "path": "src/app/preview/testimonials/three/page.tsx",
             "type": "registry:component",
             "target": "components/testimonials.tsx"
           }
@@ -762,7 +762,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/testimonials/four/page.tsx",
+            "path": "src/app/preview/testimonials/four/page.tsx",
             "type": "registry:component",
             "target": "components/testimonials.tsx"
           }
@@ -779,7 +779,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/testimonials/five/page.tsx",
+            "path": "src/app/preview/testimonials/five/page.tsx",
             "type": "registry:component",
             "target": "components/testimonials.tsx"
           }
@@ -796,7 +796,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/testimonials/six/page.tsx",
+            "path": "src/app/preview/testimonials/six/page.tsx",
             "type": "registry:component",
             "target": "components/testimonials.tsx"
           }
@@ -809,7 +809,7 @@
         "description": "Shadcn/ui website logo cloud section",
         "files": [
           {
-            "path": "app/preview/logo-cloud/one/page.tsx",
+            "path": "src/app/preview/logo-cloud/one/page.tsx",
             "type": "registry:component",
             "target": "components/logo-cloud.tsx"
           }
@@ -826,7 +826,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/pricing/one/page.tsx",
+            "path": "src/app/preview/pricing/one/page.tsx",
             "type": "registry:component",
             "target": "components/pricing.tsx"
           }
@@ -843,7 +843,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/pricing/one/page.tsx",
+            "path": "src/app/preview/pricing/one/page.tsx",
             "type": "registry:component",
             "target": "components/pricing.tsx"
           }
@@ -860,7 +860,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/pricing/two/page.tsx",
+            "path": "src/app/preview/pricing/two/page.tsx",
             "type": "registry:component",
             "target": "components/pricing.tsx"
           }
@@ -877,7 +877,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/pricing/three/page.tsx",
+            "path": "src/app/preview/pricing/three/page.tsx",
             "type": "registry:component",
             "target": "components/pricing.tsx"
           }
@@ -893,7 +893,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/pricing/four/page.tsx",
+            "path": "src/app/preview/pricing/four/page.tsx",
             "type": "registry:component",
             "target": "components/pricing.tsx"
           }
@@ -909,7 +909,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/pricing/five/page.tsx",
+            "path": "src/app/preview/pricing/five/page.tsx",
             "type": "registry:component",
             "target": "components/pricing.tsx"
           }
@@ -930,7 +930,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/contact/one/page.tsx",
+            "path": "src/app/preview/contact/one/page.tsx",
             "type": "registry:component",
             "target": "components/contact.tsx"
           }
@@ -951,7 +951,7 @@
         ],
         "files": [
           {
-            "path": "app/preview/contact/two/page.tsx",
+            "path": "src/app/preview/contact/two/page.tsx",
             "type": "registry:component",
             "target": "components/contact.tsx"
           }
