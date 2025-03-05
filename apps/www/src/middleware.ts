@@ -5,6 +5,7 @@ import { auth } from "@/lib/auth";
 export { auth as middleware } from "@/lib/auth";
 
 export default auth(async (req) => {
+  
   const isAuthenticated = await auth();
 
   const pathname = req.nextUrl.pathname;
