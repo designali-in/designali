@@ -66,17 +66,7 @@ const nextConfig = {
       },
     ],
   },
-  generateStaticParams: async () => {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
-    const { categories, blocks } = require('./src/data/blocks')
-    return {
-      staticParams: [
-        { path: ['/'] },
-        ...categories.map((category) => ({ path: [`/${category}`] })),
-        ...blocks.map((block) => ({ path: [`/${block.category}`, block.slug] }))
-      ]
-    }
-  },
+   
   redirects() {
     return [
       {

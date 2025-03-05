@@ -7,6 +7,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/src/components/ui/sidebar";
+import { Header } from "@/src/components/layout/header";
 import { AdminAppSidebar } from "@/src/components/dashboard/sidebar/app-sidebar";
 import {
   Breadcrumb,
@@ -35,6 +36,7 @@ export default async function Users({ children }: ProtectedLayoutProps) {
   
     return (
       <div className=""> 
+       <Header />
        <SidebarProvider>
           <AdminAppSidebar user={user} />
           <SidebarInset style={{ marginTop: '18px' }} className="border rounded-lg shadow-md mb-2 mx-2">

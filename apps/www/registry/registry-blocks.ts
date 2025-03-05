@@ -2,6 +2,48 @@ import { type Registry } from "shadcn/registry";
 
 export const blocks: Registry["items"] = [
   {
+    name: "call-to-action-1",
+    type: "registry:block",
+    description: "A simple hero section with react types",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/call-to-action/one/page.tsx",
+        type: "registry:component",
+        target: "app/page.tsx",
+      },
+    ],
+    categories: ["cta"],
+  },
+  {
+    name: "call-to-action-2",
+    type: "registry:block",
+    description: "A simple hero section with react types",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/call-to-action/two/page.tsx",
+        type: "registry:component",
+        target: "app/page.tsx",
+      },
+    ],
+    categories: ["cta"],
+  },
+  {
+    name: "call-to-action-3",
+    type: "registry:block",
+    description: "A simple hero section with react types",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/call-to-action/three/page.tsx",
+        type: "registry:component",
+        target: "app/page.tsx",
+      },
+    ],
+    categories: ["cta"],
+  },
+  {
     name: "apple-iphone-16-pro",
     type: "registry:block",
     description: "A simple hero section with react types ",

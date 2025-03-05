@@ -1123,6 +1123,51 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "call-to-action-1": {
+      name: "call-to-action-1",
+      description: "A simple hero section with react types",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/call-to-action/one/page.tsx",
+        type: "registry:component",
+        target: "app/page.tsx"
+      }],
+      categories: ["cta"],
+      component: React.lazy(() => import("@/registry/default/blocks/call-to-action/one/page.tsx")),
+      source: "__registry__/default/blocks/call-to-action/one/page.tsx",
+      meta: undefined,
+    },
+    "call-to-action-2": {
+      name: "call-to-action-2",
+      description: "A simple hero section with react types",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/call-to-action/two/page.tsx",
+        type: "registry:component",
+        target: "app/page.tsx"
+      }],
+      categories: ["cta"],
+      component: React.lazy(() => import("@/registry/default/blocks/call-to-action/two/page.tsx")),
+      source: "__registry__/default/blocks/call-to-action/two/page.tsx",
+      meta: undefined,
+    },
+    "call-to-action-3": {
+      name: "call-to-action-3",
+      description: "A simple hero section with react types",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/call-to-action/three/page.tsx",
+        type: "registry:component",
+        target: "app/page.tsx"
+      }],
+      categories: ["cta"],
+      component: React.lazy(() => import("@/registry/default/blocks/call-to-action/three/page.tsx")),
+      source: "__registry__/default/blocks/call-to-action/three/page.tsx",
+      meta: undefined,
+    },
     "apple-iphone-16-pro": {
       name: "apple-iphone-16-pro",
       description: "A simple hero section with react types ",

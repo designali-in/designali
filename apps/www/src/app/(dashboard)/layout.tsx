@@ -18,6 +18,9 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/src/components/ui/separator";
 import { Heart } from "lucide-react";
+import { Header } from "@/src/components/layout/header";
+
+
 interface ProtectedLayoutProps {
   children: React.ReactNode;
 }
@@ -32,6 +35,7 @@ export default async function Users({ children }: ProtectedLayoutProps) {
   if (user && user.role !== "USER")
     return (
       <div className="">
+        <Header />
         <SidebarProvider>
           <AppSidebar user={user} />
           <SidebarInset

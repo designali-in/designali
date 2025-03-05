@@ -1,17 +1,7 @@
 export const registryCategories = [
   {
-    name: "Sidebar",
-    slug: "sidebar",
-    hidden: false,
-  },
-  {
-    name: "Dashboard",
-    slug: "dashboard",
-    hidden: true,
-  },
-  {
-    name: "Authentication",
-    slug: "authentication",
+    name: "CTA",
+    slug: "cta",
     hidden: false,
   },
   {
@@ -20,43 +10,28 @@ export const registryCategories = [
     hidden: false,
   },
   {
-    name: "Charts",
-    slug: "charts",
-    hidden: true,
+    name: "Hero",
+    slug: "hero",
+    hidden: false,
   },
   {
-    name: "Area Charts",
-    slug: "charts-area",
-    hidden: true,
+    name: "Contact",
+    slug: "contact",
+    hidden: false,
   },
   {
-    name: "Bar Charts",
-    slug: "charts-bar",
-    hidden: true,
+    name: "FAQ",
+    slug: "faq",
+    hidden: false,
   },
   {
-    name: "Line Charts",
-    slug: "charts-line",
-    hidden: true,
+    name: "Pricing",
+    slug: "pricing",
+    hidden: false,
   },
   {
-    name: "Pie Charts",
-    slug: "charts-pie",
-    hidden: true,
-  },
-  {
-    name: "Radar Charts",
-    slug: "charts-radar",
-    hidden: true,
-  },
-  {
-    name: "Radial Charts",
-    slug: "charts-radial",
-    hidden: true,
-  },
-  {
-    name: "Charts Tooltip",
-    slug: "charts-tooltip",
-    hidden: true,
+    name: "Testimonials",
+    slug: "testimonials",
+    hidden: false,
   },
 ];

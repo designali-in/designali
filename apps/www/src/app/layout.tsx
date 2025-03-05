@@ -100,7 +100,7 @@ export default function RootLayout({
         <TailwindIndicator />
         <Toaster />
         <Providers>
-          <Header />
+         
           {children}
           <CookieConsent />
           <Analytics />
