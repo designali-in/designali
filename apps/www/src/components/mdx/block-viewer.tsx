@@ -137,7 +137,7 @@ function BlockViewerToolbar() {
         onValueChange={(value) => setView(value as "preview" | "code")}
         className="hidden lg:flex"
       >
-        <TabsList className="h-7 items-center rounded-md p-0 px-[calc(theme(spacing.1)_-_2px)] py-[theme(spacing.1)]">
+        <TabsList className="h-7 items-center rounded-sm p-0 px-[calc(theme(spacing.1)_-_2px)] py-[theme(spacing.1)]">
           <TabsTrigger
             value="preview"
             className="h-[1.45rem] rounded-sm px-2 text-xs"

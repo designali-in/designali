@@ -38,7 +38,7 @@ async function captureScreenshots() {
   })
 
   for (const block of blocks) {
-    const pageUrl = `http://localhost:3333/view/styles/default/${block}`
+    const pageUrl = `http://localhost:3000/view/styles/default/${block}`
 
     const page = await browser.newPage()
     await page.goto(pageUrl, {

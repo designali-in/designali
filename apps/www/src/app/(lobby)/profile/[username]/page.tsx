@@ -121,17 +121,17 @@ export default async function UserProfilePage({ params }: Props) {
 
   return (
     <div className="relative">
-      <div className="h-40 w-full overflow-hidden md:h-[300px] ">
+      <div className="h-40 -mt-20 w-full overflow-hidden md:h-[300px] ">
         <Image
           src="/images/products/3dbg.jpg"
           alt="Cover"
           width={1000}
           height={300}
-          className="-z-10 mt-12 h-full w-full object-cover"
+          className="-z-10 h-full w-full object-cover"
         />
       </div>
-      <div className="mx-auto my-3  max-w-7xl px-6 xl:px-0">
-        <div className="mt-3 grid h-full items-center  justify-start gap-3 md:flex md:justify-between">
+      <div className="p-6 container-wrapper">
+        <div className="grid h-full items-center  justify-start gap-3 md:flex md:justify-between">
           <div className=" flex h-full items-center justify-start gap-3">
             <Avatar className="h-20 w-20 rounded-lg border md:h-24 md:w-24">
               <AvatarImage
