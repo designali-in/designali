@@ -76,6 +76,9 @@ export function Menu() {
                             className="h-4 w-4"
                           />
                           DIcons
+                          <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -95,6 +98,9 @@ export function Menu() {
                             className="h-4 w-4"
                           />
                           Graaadients
+                          <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -114,6 +120,9 @@ export function Menu() {
                             className="h-4 w-4"
                           />
                           Patterns
+                          <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -130,6 +139,9 @@ export function Menu() {
                         <div className="flex gap-2 items-center">
                           <DIcons.Blocks strokeWidth={1} className="h-4 w-4" />
                           Blocks
+                          <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">

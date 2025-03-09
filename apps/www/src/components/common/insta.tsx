@@ -24,7 +24,7 @@ export const InstagramFeed = () => {
     const fetchInstagramPosts = async () => {
       try {
         const token =
-          "IGQWRPTXRPMzZArVGN5Y3FpTFJwT2wtYVpMRU1wV3dMUWdyd0hlSnJaV19QZAHJCZAzNxd090MTVBQS1SeEpEbDNCRjZAwUnJidXZACdV9BYUNpejdfUkk5b2NZAVnYzckZAqQnVUMmY1U2ZAyTTNFTlY2cjRHNTBLSzJLbEUZD";
+          "IGQWRNSU9JVEhpaGF4T2JWS3BobHB4NkxidFpBTHdDOVVERkZAnZAWNJN2ctS0R3NmY3V3cybGFRRnBCR255ejV5a1VhYWQycEc0U2dsWGdqZAkQxYmFyYWJjLVluaUZACSklzOVAtQ19lMDhVVk1Jcmtob1Jfc2hhSGMZD";
         const response = await axios.get(
           `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,permalink&access_token=${token}`
         );

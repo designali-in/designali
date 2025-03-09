@@ -22,7 +22,7 @@ export default function CallToAction() {
               />
 
               <div className="md:pr-1.5 lg:pr-0">
-                <Button aria-label="submit" className="rounded-(--radius)">
+                <Button aria-label="submit" className="rounded-full">
                   <span className="hidden md:block">Get Started</span>
                   <SendHorizonal
                     className="relative mx-auto size-5 md:hidden"

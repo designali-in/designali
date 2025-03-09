@@ -67,7 +67,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["login"],
+    categories: ["brands"],
   },
   {
     name: "hero-01",
@@ -89,7 +89,49 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["login"],
+    categories: ["hero"],
+  },
+  {
+    name: "dashboard-01",
+    type: "registry:block",
+    description: "A simple dashboard",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/dashboard-01/page.tsx",
+        type: "registry:page",
+        target: "app/dashboard-01/page.tsx",
+      },
+      {
+        path: "blocks/dashboard-01/components/date-range-picker.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/dashboard-01/components/main-nav.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/dashboard-01/components/overview.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/dashboard-01/components/recent-sales.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/dashboard-01/components/search.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/dashboard-01/components/theme-switcher.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/dashboard-01/components/user-nav.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["dashboard"],
   },
   {
     name: "login-01",

@@ -1,5 +1,15 @@
 export const registryCategories = [
   {
+    name: "Dashboard",
+    slug: "dashboard",
+    hidden: false,
+  },
+  {
+    name: "Brands",
+    slug: "brands",
+    hidden: false,
+  },
+  {
     name: "CTA",
     slug: "cta",
     hidden: false,

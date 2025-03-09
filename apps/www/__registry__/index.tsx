@@ -1190,7 +1190,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      categories: ["login"],
+      categories: ["brands"],
       component: React.lazy(() => import("@/registry/default/blocks/apple-iphone-16-pro/page.tsx")),
       source: "__registry__/default/blocks/apple-iphone-16-pro/page.tsx",
       meta: undefined,
@@ -1213,9 +1213,52 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      categories: ["login"],
+      categories: ["hero"],
       component: React.lazy(() => import("@/registry/default/blocks/hero-01/page.tsx")),
       source: "__registry__/default/blocks/hero-01/page.tsx",
+      meta: undefined,
+    },
+    "dashboard-01": {
+      name: "dashboard-01",
+      description: "A simple dashboard",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/dashboard-01/page.tsx",
+        type: "registry:page",
+        target: "app/dashboard-01/page.tsx"
+      },{
+        path: "registry/default/blocks/dashboard-01/components/date-range-picker.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard-01/components/main-nav.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard-01/components/overview.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard-01/components/recent-sales.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard-01/components/search.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard-01/components/theme-switcher.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard-01/components/user-nav.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      categories: ["dashboard"],
+      component: React.lazy(() => import("@/registry/default/blocks/dashboard-01/page.tsx")),
+      source: "__registry__/default/blocks/dashboard-01/page.tsx",
       meta: undefined,
     },
     "login-01": {
