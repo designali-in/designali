@@ -20,6 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { DashboardTableOfContents } from "@/components/mdx/blog/toc";
 import BlurImage from "@/src/components/ui/backgrounds/blur-image"; 
+import { Separator } from "@/src/components/ui/separator";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -76,7 +77,7 @@ export default async function PostPage({
     <div className="mt-4 p-6 border-t rounded-t-3xl container-wrapper">
       
       <div className="">
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-5">
           <div className="flex items-center space-x-3">
             <Link href={"/blog"}>
               <Button variant={"outline"} size={"sm"}>
@@ -96,12 +97,16 @@ export default async function PostPage({
               {formatDate(post.date)}
             </time>
           </div>
-          <h1 className="font-heading text-3xl text-foreground sm:text-4xl">
+          <Separator/>
+          <div className="space-y-2 py-3">
+          <h1 className="font-semibold tracking-tighter text-3xl text-foreground sm:text-5xl">
             {post.title}
           </h1>
           <p className="text-base text-muted-foreground md:text-lg">
             {post.description}
           </p>
+          </div>
+          <Separator/>
         </div>
       </div>
 

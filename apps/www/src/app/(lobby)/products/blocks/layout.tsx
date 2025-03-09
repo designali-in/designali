@@ -1,17 +1,8 @@
 import { Metadata } from "next";
+ 
+import { BlocksNav } from "@/components/mdx/blocks-nav"; 
 
-import { Announcement } from "@/components/mdx/announcement";
-import { BlocksNav } from "@/components/mdx/blocks-nav";
-import {
-  PageActions,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/mdx/page-header";
-import { Button } from "@/components/ui/button";
-
-import "@/src/styles/mdx.css";
-import Link from "next/link";
+import "@/src/styles/mdx.css"; 
 import { Avegra } from "@/src/lib/fonts/fonts";
 import { cn } from "@/src/lib/utils";
 

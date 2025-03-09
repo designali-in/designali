@@ -200,12 +200,7 @@ export const docsConfig: DocsConfig = {
           title: "Radio",
           href: "/docs/components/radio",
           items: [],
-        },
-        {
-          title: "Script Copy Button",
-          href: "/docs/components/script-copy-button",
-          items: [],
-        },
+        }, 
         {
           title: "Select",
           href: "/docs/components/select",

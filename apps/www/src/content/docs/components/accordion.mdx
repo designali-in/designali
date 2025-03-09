@@ -27,25 +27,33 @@ component: true
   <ComponentPreview name="accordion-20" />
 </div>
 
-### Installation
 
-<Tabs defaultValue="cli">
+## Installation
+
+<CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add "https://designali.in/r/accordion"
+npx shadcn@latest add accordion
 ```
 
 </TabsContent>
 
-<TabsContent className="flex w-full"  value="manual">
+<TabsContent value="manual">
 
 <Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-accordion
+```
 
 <Step>Copy and paste the following code into your project.</Step>
 
@@ -53,16 +61,58 @@ npx shadcn@latest add "https://designali.in/r/accordion"
 
 <Step>Update the import paths to match your project setup.</Step>
 
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {5-18}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+}
+```
+
 </Steps>
 
 </TabsContent>
 
-</Tabs>
+</CodeTabs>
 
-### Props
+## Usage
 
-| Prop      | Type   | Description                   | Default |
-| --------- | ------ | ----------------------------- | ------- |
-| variant   | any    | Width of the dot pattern      | 16      |
-| size      | any    | Height of the dot pattern     | 16      |
-| className | string | Class name of the dot pattern | -       |
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+```
+
+```tsx
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```

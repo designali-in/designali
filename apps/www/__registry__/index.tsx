@@ -1218,6 +1218,73 @@ export const Index: Record<string, any> = {
       source: "__registry__/default/blocks/hero-01/page.tsx",
       meta: undefined,
     },
+    "tasks-01": {
+      name: "tasks-01",
+      description: "A simple dashboard",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/tasks-01/page.tsx",
+        type: "registry:page",
+        target: "app/tasks/page.tsx"
+      },{
+        path: "registry/default/blocks/tasks-01/components/columns.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table-column-header.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table-faceted-filter.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table-pagination.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table-row-actions.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table-toolbar.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table-view-options.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/data-table.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/components/user-nav.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/data/data.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/data/schema.ts",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/data/tasks.json",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/tasks-01/data/seed.ts",
+        type: "registry:component",
+        target: ""
+      }],
+      categories: ["dashboard"],
+      component: React.lazy(() => import("@/registry/default/blocks/tasks-01/page.tsx")),
+      source: "__registry__/default/blocks/tasks-01/page.tsx",
+      meta: undefined,
+    },
     "dashboard-01": {
       name: "dashboard-01",
       description: "A simple dashboard",
@@ -1226,7 +1293,7 @@ export const Index: Record<string, any> = {
       files: [{
         path: "registry/default/blocks/dashboard-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard-01/page.tsx"
+        target: "app/dashboard/page.tsx"
       },{
         path: "registry/default/blocks/dashboard-01/components/date-range-picker.tsx",
         type: "registry:component",

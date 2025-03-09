@@ -92,6 +92,72 @@ export const blocks: Registry["items"] = [
     categories: ["hero"],
   },
   {
+    name: "tasks-01",
+    type: "registry:block",
+    description: "A simple tasks table",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/tasks-01/page.tsx",
+        type: "registry:page",
+        target: "app/tasks/page.tsx",
+      },
+      {
+        path: "blocks/tasks-01/components/columns.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table-column-header.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table-faceted-filter.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table-pagination.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table-row-actions.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table-toolbar.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table-view-options.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/data-table.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/components/user-nav.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/data/data.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/data/schema.ts",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/data/tasks.json",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/tasks-01/data/seed.ts",
+        type: "registry:component",
+      },
+    ],
+    categories: ["dashboard"],
+  },
+  {
     name: "dashboard-01",
     type: "registry:block",
     description: "A simple dashboard",
@@ -100,7 +166,7 @@ export const blocks: Registry["items"] = [
       {
         path: "blocks/dashboard-01/page.tsx",
         type: "registry:page",
-        target: "app/dashboard-01/page.tsx",
+        target: "app/dashboard/page.tsx",
       },
       {
         path: "blocks/dashboard-01/components/date-range-picker.tsx",
@@ -142,7 +208,7 @@ export const blocks: Registry["items"] = [
       {
         path: "blocks/mail-01/page.tsx",
         type: "registry:page",
-        target: "app/mail-01/page.tsx",
+        target: "app/mail/page.tsx",
       },
       {
         path: "blocks/mail-01/components/account-switchertsx",
@@ -173,7 +239,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["mail"],
+    categories: ["dashboard"],
   },
   {
     name: "login-01",
