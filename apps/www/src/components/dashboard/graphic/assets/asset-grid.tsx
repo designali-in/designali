@@ -103,13 +103,13 @@ export function AssetGrid({
               className="h-10 w-60"
             />
 
-            <div className="w-full max-w-4xl overflow-hidden">
+            <div className="w-full overflow-hidden">
               <TabsList className="w-full items-center justify-center bg-transparent text-center">
-                <ScrollArea className="w-full whitespace-nowrap">
-                  <TabsTrigger value="all">All</TabsTrigger>
+                <ScrollArea className="w-full  whitespace-nowrap">
+                  <TabsTrigger className="rounded-full border data-[state=active]:text-white data-[state=active]:dark:text-black data-[state=active]:bg-black data-[state=active]:dark:bg-white mx-1" value="all">All</TabsTrigger>
                   {uniqueTags.length > 0 ? (
                     uniqueTags.map((tag) => (
-                      <TabsTrigger className="px-4" key={tag} value={tag}>
+                      <TabsTrigger className="px-4 mx-1  data-[state=active]:text-white data-[state=active]:dark:text-black data-[state=active]:bg-black data-[state=active]:dark:bg-white rounded-full border" key={tag} value={tag}>
                         {tag}
                       </TabsTrigger>
                     ))
@@ -240,7 +240,7 @@ export function ProfileAssetGrid({
 }: {
   assets: Asset[];
   likedAssets: Asset[];
-  user;
+  user: any;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredAssets, setFilteredAssets] = useState(assets);

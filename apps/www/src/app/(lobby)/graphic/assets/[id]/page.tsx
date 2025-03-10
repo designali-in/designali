@@ -65,7 +65,7 @@ export default async function AssetPage({
     : false;
 
   return (
-    <div className="mx-auto my-24 max-w-7xl px-6 xl:px-0">
+    <div className="container-wrapper my-4 border-t rounded-3xl p-6">
       <div className="flex items-center justify-between">
         <div className="mb-6 items-center gap-2 md:flex">
           <Breadcrumb className="mb-3 md:mb-0">
@@ -96,7 +96,7 @@ export default async function AssetPage({
       </div>
       <Card>
         <CardHeader>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between">
             <div className="flex items-center gap-2">
               <Link href={`/profile/${username}`}>
                 <Avatar className="h-8 w-8 border">
