@@ -32,7 +32,7 @@ export default async function Users({ children }: ProtectedLayoutProps) {
     redirect("/login"); // Redirect to login if no user is found
   }
 
-  if (user && user.role !== "USER")
+  if (user && user.role === "USER" || "ADMIN")
     return (
       <div className="">
         <Header />
