@@ -158,6 +158,32 @@ export const blocks: Registry["items"] = [
     categories: ["dashboard"],
   },
   {
+    name: "sidebar-01",
+    type: "registry:block",
+    description: "A simple sidebar 01",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sidebar/sidebar-01/page.tsx",
+        type: "registry:page",
+        target: "app/sidebar/page.tsx",
+      },
+      {
+        path: "blocks/sidebar/sidebar-01/components/app-sidebar.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/sidebar/sidebar-01/components/search-form.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/sidebar/sidebar-01/components/version-switcher.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sidebar"],
+  },
+  {
     name: "dashboard-01",
     type: "registry:block",
     description: "A simple dashboard",
@@ -198,49 +224,7 @@ export const blocks: Registry["items"] = [
       },
     ],
     categories: ["dashboard"],
-  },
-  {
-    name: "mail-01",
-    type: "registry:block",
-    description: "A simple mail",
-    registryDependencies: [],
-    files: [
-      {
-        path: "blocks/mail-01/page.tsx",
-        type: "registry:page",
-        target: "app/mail/page.tsx",
-      },
-      {
-        path: "blocks/mail-01/components/account-switchertsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/mail-01/components/mail-display.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/mail-01/components/mail-list.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/mail-01/components/mail.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/mail-01/components/nav.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/mail-01/data.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "blocks/mail-01/use-mail.ts",
-        type: "registry:component",
-      },
-    ],
-    categories: ["dashboard"],
-  },
+  }, 
   {
     name: "login-01",
     description: "A simple login form.",

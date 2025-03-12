@@ -1,29 +1,9 @@
-import { promises as fs } from "fs";
-import path from "path";
-import { z } from "zod";
-
 import { columns } from "./components/columns";
 import { DataTable } from "./components/data-table";
 import { UserNav } from "./components/user-nav";
-import { taskSchema } from "./data/schema";
+import tasks from "@/registry/default/blocks/tasks-01/data/tasks.json";
 
-// Simulate a database read for tasks.
-async function getTasks() {
-  const data = await fs.readFile(
-    path.join(
-      process.cwd(),
-      "registry/default/blocks/tasks-01/data/tasks.json",
-    ),
-  );
-
-  const tasks = JSON.parse(data.toString());
-
-  return z.array(taskSchema).parse(tasks);
-}
-
-export default async function TaskPage() {
-  const tasks = await getTasks();
-
+export default function TaskPage() {
   return (
     <>
       <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">

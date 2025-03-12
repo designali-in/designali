@@ -46,6 +46,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { V0Button } from "./v0-button"
 import {
   ToggleGroup,
   ToggleGroupItem,
@@ -221,7 +222,11 @@ function BlockViewerToolbar() {
           </Button>
         </div>
         <Separator orientation="vertical" className="mx-1 hidden h-4 xl:flex" />
-         
+        <V0Button
+          className="hidden shadow-none sm:flex"
+          id={`v0-button-${item.name}`}
+          name={`${item.name}`}
+        />
       </div>
     </div>
   )

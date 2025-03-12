@@ -3,12 +3,12 @@
   "name": "tasks-01",
   "type": "registry:block",
   "author": "shadcn (https://ui.shadcn.com)",
-  "description": "A simple dashboard",
+  "description": "A simple tasks table",
   "registryDependencies": [],
   "files": [
     {
       "path": "blocks/tasks-01/page.tsx",
-      "content": "import { promises as fs } from \"fs\";\nimport path from \"path\";\nimport { z } from \"zod\";\n\nimport { columns } from \"./components/columns\";\nimport { DataTable } from \"./components/data-table\";\nimport { UserNav } from \"./components/user-nav\";\nimport { taskSchema } from \"./data/schema\";\n\n// Simulate a database read for tasks.\nasync function getTasks() {\n  const data = await fs.readFile(\n    path.join(\n      process.cwd(),\n      \"registry/default/blocks/tasks-01/data/tasks.json\",\n    ),\n  );\n\n  const tasks = JSON.parse(data.toString());\n\n  return z.array(taskSchema).parse(tasks);\n}\n\nexport default async function TaskPage() {\n  const tasks = await getTasks();\n\n  return (\n    <>\n      <div className=\"hidden h-full flex-1 flex-col space-y-8 p-8 md:flex\">\n        <div className=\"flex items-center justify-between space-y-2\">\n          <div>\n            <h2 className=\"text-2xl font-bold tracking-tight\">Welcome back!</h2>\n            <p className=\"text-muted-foreground\">\n              Here&apos;s a list of your tasks for this month!\n            </p>\n          </div>\n          <div className=\"flex items-center space-x-2\">\n            <UserNav />\n          </div>\n        </div>\n        <DataTable data={tasks} columns={columns} />\n      </div>\n    </>\n  );\n}\n",
+      "content": "import { columns } from \"./components/columns\";\nimport { DataTable } from \"./components/data-table\";\nimport { UserNav } from \"./components/user-nav\";\nimport tasks from \"@/registry/default/blocks/tasks-01/data/tasks.json\";\n\nexport default function TaskPage() {\n  return (\n    <>\n      <div className=\"hidden h-full flex-1 flex-col space-y-8 p-8 md:flex\">\n        <div className=\"flex items-center justify-between space-y-2\">\n          <div>\n            <h2 className=\"text-2xl font-bold tracking-tight\">Welcome back!</h2>\n            <p className=\"text-muted-foreground\">\n              Here&apos;s a list of your tasks for this month!\n            </p>\n          </div>\n          <div className=\"flex items-center space-x-2\">\n            <UserNav />\n          </div>\n        </div>\n        <DataTable data={tasks} columns={columns} />\n      </div>\n    </>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/tasks/page.tsx"
     },

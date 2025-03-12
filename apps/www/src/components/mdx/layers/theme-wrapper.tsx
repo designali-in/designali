@@ -23,7 +23,7 @@ export function ThemeWrapper({
       )}
       style={
         {
-          "--radius": `${defaultTheme ? 1 : config.radius}rem`,
+          "--radius": `${defaultTheme ? 0.5 : config.radius}rem`,
         } as React.CSSProperties
       }
     >

@@ -1220,7 +1220,7 @@ export const Index: Record<string, any> = {
     },
     "tasks-01": {
       name: "tasks-01",
-      description: "A simple dashboard",
+      description: "A simple tasks table",
       type: "registry:block",
       registryDependencies: [],
       files: [{
@@ -1283,6 +1283,33 @@ export const Index: Record<string, any> = {
       categories: ["dashboard"],
       component: React.lazy(() => import("@/registry/default/blocks/tasks-01/page.tsx")),
       source: "__registry__/default/blocks/tasks-01/page.tsx",
+      meta: undefined,
+    },
+    "sidebar-01": {
+      name: "sidebar-01",
+      description: "A simple sidebar 01",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/sidebar/sidebar-01/page.tsx",
+        type: "registry:page",
+        target: "app/sidebar/page.tsx"
+      },{
+        path: "registry/default/blocks/sidebar/sidebar-01/components/app-sidebar.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/sidebar/sidebar-01/components/search-form.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/sidebar/sidebar-01/components/version-switcher.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      categories: ["sidebar"],
+      component: React.lazy(() => import("@/registry/default/blocks/sidebar/sidebar-01/page.tsx")),
+      source: "__registry__/default/blocks/sidebar/sidebar-01/page.tsx",
       meta: undefined,
     },
     "dashboard-01": {
