@@ -58,6 +58,7 @@ const features = [
             </Link>
           </div>
           <HomeItems />
+         
         </div>
       </div>
     ),
@@ -67,7 +68,7 @@ const features = [
     className: "col-span-8 md:col-span-4 lg:col-span-2 xl:col-span-2",
     background: (
       <div>
-        <div className="flex flex-col items-center justify-center gap-6 p-6">
+        <div className="flex h-full flex-col items-center justify-center gap-6 p-6">
           <div className="mx-auto mt-6 grid items-center justify-center text-center">
             <h3
               className={cn(

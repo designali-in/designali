@@ -7,6 +7,7 @@ import { DIcons } from "dicons";
  
 
 import ThemeToogle from "./theme";
+import { Github } from "lucide-react";
 
 const navigation = {
   categories: [
@@ -166,6 +167,15 @@ export function Footer() {
             className={Underline}
           >
             <DIcons.Threads className="h-5 w-5" />
+          </Link>
+          <Link
+            aria-label="Logo"
+            href="https://github.com/designali-in"
+            rel="noreferrer"
+            target="_blank"
+            className={Underline}
+          >
+            <Github strokeWidth={1.6} className="h-5 w-5" />
           </Link>
           <Link
             aria-label="Logo"

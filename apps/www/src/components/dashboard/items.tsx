@@ -157,7 +157,7 @@ export const HomeItems = () => {
 
   return (
     <div className="">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid h-full grid-cols-2 gap-4">
         {ddata.map((item) => {
           const {
             icon,
@@ -174,9 +174,9 @@ export const HomeItems = () => {
               target={target}
               rel="noopener noreferrer"
               href={link}
-              className="w-full rounded-xl border border-dotted p-6 transition  md:py-10"
+              className="w-full h-auto rounded-xl border border-dotted p-6 transition  md:py-10"
             >
-              <div className="grid w-full items-center justify-center gap-2">
+              <div className="grid w-full h-auto items-center justify-center gap-2">
                 <div className="grid items-center gap-2">
                   {value ? (
                     <div className="flex flex-col items-center justify-center gap-3">
