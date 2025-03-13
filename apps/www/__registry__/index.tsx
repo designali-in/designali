@@ -1123,76 +1123,31 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
-    "call-to-action-1": {
-      name: "call-to-action-1",
-      description: "A simple hero section with react types",
-      type: "registry:block",
-      registryDependencies: [],
-      files: [{
-        path: "registry/default/blocks/call-to-action/one/page.tsx",
-        type: "registry:component",
-        target: "app/page.tsx"
-      }],
-      categories: ["cta"],
-      component: React.lazy(() => import("@/registry/default/blocks/call-to-action/one/page.tsx")),
-      source: "__registry__/default/blocks/call-to-action/one/page.tsx",
-      meta: undefined,
-    },
-    "call-to-action-2": {
-      name: "call-to-action-2",
-      description: "A simple hero section with react types",
-      type: "registry:block",
-      registryDependencies: [],
-      files: [{
-        path: "registry/default/blocks/call-to-action/two/page.tsx",
-        type: "registry:component",
-        target: "app/page.tsx"
-      }],
-      categories: ["cta"],
-      component: React.lazy(() => import("@/registry/default/blocks/call-to-action/two/page.tsx")),
-      source: "__registry__/default/blocks/call-to-action/two/page.tsx",
-      meta: undefined,
-    },
-    "call-to-action-3": {
-      name: "call-to-action-3",
-      description: "A simple hero section with react types",
-      type: "registry:block",
-      registryDependencies: [],
-      files: [{
-        path: "registry/default/blocks/call-to-action/three/page.tsx",
-        type: "registry:component",
-        target: "app/page.tsx"
-      }],
-      categories: ["cta"],
-      component: React.lazy(() => import("@/registry/default/blocks/call-to-action/three/page.tsx")),
-      source: "__registry__/default/blocks/call-to-action/three/page.tsx",
-      meta: undefined,
-    },
     "apple-iphone-16-pro": {
       name: "apple-iphone-16-pro",
       description: "A simple hero section with react types ",
       type: "registry:block",
       registryDependencies: [],
       files: [{
-        path: "registry/default/blocks/apple-iphone-16-pro/page.tsx",
+        path: "registry/default/blocks/brands/apple-iphone-16-pro/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx"
       },{
-        path: "registry/default/blocks/apple-iphone-16-pro/components/hero.tsx",
+        path: "registry/default/blocks/brands/apple-iphone-16-pro/components/hero.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/apple-iphone-16-pro/components/closer-look.tsx",
+        path: "registry/default/blocks/brands/apple-iphone-16-pro/components/closer-look.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/apple-iphone-16-pro/components/highlights.tsx",
+        path: "registry/default/blocks/brands/apple-iphone-16-pro/components/highlights.tsx",
         type: "registry:component",
         target: ""
       }],
       categories: ["brands"],
-      component: React.lazy(() => import("@/registry/default/blocks/apple-iphone-16-pro/page.tsx")),
-      source: "__registry__/default/blocks/apple-iphone-16-pro/page.tsx",
+      component: React.lazy(() => import("@/registry/default/blocks/brands/apple-iphone-16-pro/page.tsx")),
+      source: "__registry__/default/blocks/brands/apple-iphone-16-pro/page.tsx",
       meta: undefined,
     },
     "hero-01": {
@@ -1201,21 +1156,36 @@ export const Index: Record<string, any> = {
       type: "registry:block",
       registryDependencies: [],
       files: [{
-        path: "registry/default/blocks/hero-01/page.tsx",
+        path: "registry/default/blocks/hero/hero-01/page.tsx",
         type: "registry:page",
         target: "app/hero/page.tsx"
       },{
-        path: "registry/default/blocks/hero-01/components/stroke-dance.js",
+        path: "registry/default/blocks/hero/hero-01/components/stroke-dance.js",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/hero-01/components/type-writer.tsx",
+        path: "registry/default/blocks/hero/hero-01/components/type-writer.tsx",
         type: "registry:component",
         target: ""
       }],
       categories: ["hero"],
-      component: React.lazy(() => import("@/registry/default/blocks/hero-01/page.tsx")),
-      source: "__registry__/default/blocks/hero-01/page.tsx",
+      component: React.lazy(() => import("@/registry/default/blocks/hero/hero-01/page.tsx")),
+      source: "__registry__/default/blocks/hero/hero-01/page.tsx",
+      meta: undefined,
+    },
+    "hero-02": {
+      name: "hero-02",
+      description: "A simple hero section with react types ",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/hero/one/page.tsx",
+        type: "registry:page",
+        target: "app/hero/page.tsx"
+      }],
+      categories: ["hero"],
+      component: React.lazy(() => import("@/registry/default/blocks/hero/one/page.tsx")),
+      source: "__registry__/default/blocks/hero/one/page.tsx",
       meta: undefined,
     },
     "tasks-01": {
@@ -1224,65 +1194,108 @@ export const Index: Record<string, any> = {
       type: "registry:block",
       registryDependencies: [],
       files: [{
-        path: "registry/default/blocks/tasks-01/page.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/page.tsx",
         type: "registry:page",
         target: "app/tasks/page.tsx"
       },{
-        path: "registry/default/blocks/tasks-01/components/columns.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/columns.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table-column-header.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table-column-header.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table-faceted-filter.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table-faceted-filter.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table-pagination.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table-pagination.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table-row-actions.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table-row-actions.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table-toolbar.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table-toolbar.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table-view-options.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table-view-options.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/data-table.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/data-table.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/components/user-nav.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/components/user-nav.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/data/data.tsx",
+        path: "registry/default/blocks/dashboard/tasks-01/data/data.tsx",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/data/schema.ts",
+        path: "registry/default/blocks/dashboard/tasks-01/data/schema.ts",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/data/tasks.json",
+        path: "registry/default/blocks/dashboard/tasks-01/data/tasks.json",
         type: "registry:component",
         target: ""
       },{
-        path: "registry/default/blocks/tasks-01/data/seed.ts",
+        path: "registry/default/blocks/dashboard/tasks-01/data/seed.ts",
         type: "registry:component",
         target: ""
       }],
       categories: ["dashboard"],
-      component: React.lazy(() => import("@/registry/default/blocks/tasks-01/page.tsx")),
-      source: "__registry__/default/blocks/tasks-01/page.tsx",
+      component: React.lazy(() => import("@/registry/default/blocks/dashboard/tasks-01/page.tsx")),
+      source: "__registry__/default/blocks/dashboard/tasks-01/page.tsx",
+      meta: undefined,
+    },
+    "dashboard-01": {
+      name: "dashboard-01",
+      description: "A simple dashboard",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/dashboard/dashboard-01/page.tsx",
+        type: "registry:page",
+        target: "app/dashboard/page.tsx"
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/date-range-picker.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/main-nav.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/overview.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/recent-sales.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/search.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/theme-switcher.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/blocks/dashboard/dashboard-01/components/user-nav.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      categories: ["dashboard"],
+      component: React.lazy(() => import("@/registry/default/blocks/dashboard/dashboard-01/page.tsx")),
+      source: "__registry__/default/blocks/dashboard/dashboard-01/page.tsx",
       meta: undefined,
     },
     "sidebar-01": {
@@ -1312,66 +1325,23 @@ export const Index: Record<string, any> = {
       source: "__registry__/default/blocks/sidebar/sidebar-01/page.tsx",
       meta: undefined,
     },
-    "dashboard-01": {
-      name: "dashboard-01",
-      description: "A simple dashboard",
-      type: "registry:block",
-      registryDependencies: [],
-      files: [{
-        path: "registry/default/blocks/dashboard-01/page.tsx",
-        type: "registry:page",
-        target: "app/dashboard/page.tsx"
-      },{
-        path: "registry/default/blocks/dashboard-01/components/date-range-picker.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/dashboard-01/components/main-nav.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/dashboard-01/components/overview.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/dashboard-01/components/recent-sales.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/dashboard-01/components/search.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/dashboard-01/components/theme-switcher.tsx",
-        type: "registry:component",
-        target: ""
-      },{
-        path: "registry/default/blocks/dashboard-01/components/user-nav.tsx",
-        type: "registry:component",
-        target: ""
-      }],
-      categories: ["dashboard"],
-      component: React.lazy(() => import("@/registry/default/blocks/dashboard-01/page.tsx")),
-      source: "__registry__/default/blocks/dashboard-01/page.tsx",
-      meta: undefined,
-    },
     "login-01": {
       name: "login-01",
       description: "A simple login form.",
       type: "registry:block",
       registryDependencies: [],
       files: [{
-        path: "registry/default/blocks/login-01/page.tsx",
+        path: "registry/default/blocks/login/login-01/page.tsx",
         type: "registry:page",
         target: "app/login/page.tsx"
       },{
-        path: "registry/default/blocks/login-01/components/login-form.tsx",
+        path: "registry/default/blocks/login/login-01/components/login-form.tsx",
         type: "registry:component",
         target: ""
       }],
       categories: ["login"],
-      component: React.lazy(() => import("@/registry/default/blocks/login-01/page.tsx")),
-      source: "__registry__/default/blocks/login-01/page.tsx",
+      component: React.lazy(() => import("@/registry/default/blocks/login/login-01/page.tsx")),
+      source: "__registry__/default/blocks/login/login-01/page.tsx",
       meta: undefined,
     },
     "dot-pattern-01": {

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Image from "next/image"
-import Link from "next/link"
+import * as React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Check,
   ChevronRight,
@@ -14,26 +14,26 @@ import {
   Smartphone,
   Tablet,
   Terminal,
-} from "lucide-react"
-import { ImperativePanelHandle } from "react-resizable-panels"
-import { registryItemFileSchema, registryItemSchema } from "shadcn/registry"
-import { z } from "zod"
+} from "lucide-react";
+import { ImperativePanelHandle } from "react-resizable-panels";
+import { registryItemFileSchema, registryItemSchema } from "shadcn/registry";
+import { z } from "zod";
 
-import { trackEvent } from "@/lib/events"
-import { FileTree, createFileTreeForRegistryItemFiles } from "@/lib/registry"
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard" 
-import { Button } from "@/components/ui/button"
+import { trackEvent } from "@/lib/events";
+import { FileTree, createFileTreeForRegistryItemFiles } from "@/lib/registry";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "@/components/ui/collapsible";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/resizable"
-import { Separator } from "@/components/ui/separator"
+} from "@/components/ui/resizable";
+import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarGroup,
@@ -44,40 +44,39 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarProvider,
-} from "@/components/ui/sidebar"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { V0Button } from "./v0-button"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/components/ui/toggle-group"
-import { Style } from "@/registry/registry-styles"
+} from "@/components/ui/sidebar";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import OpenInV0  from "./open-in-v0";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Style } from "@/registry/registry-styles";
 
 type BlockViewerContext = {
-  item: z.infer<typeof registryItemSchema>
-  view: "code" | "preview"
-  setView: (view: "code" | "preview") => void
-  style?: Style["name"]
-  setStyle: (style: Style["name"]) => void
-  activeFile: string | null
-  setActiveFile: (file: string) => void
-  resizablePanelRef: React.RefObject<ImperativePanelHandle | null>
-  tree: ReturnType<typeof createFileTreeForRegistryItemFiles> | null
+  item: z.infer<typeof registryItemSchema>;
+  view: "code" | "preview";
+  setView: (view: "code" | "preview") => void;
+  style?: Style["name"];
+  setStyle: (style: Style["name"]) => void;
+  activeFile: string | null;
+  setActiveFile: (file: string) => void;
+  resizablePanelRef: React.RefObject<ImperativePanelHandle | null>;
+  tree: ReturnType<typeof createFileTreeForRegistryItemFiles> | null;
   highlightedFiles:
     | (z.infer<typeof registryItemFileSchema> & {
-        highlightedContent: string
+        highlightedContent: string;
       })[]
-    | null
-}
+    | null;
+};
 
-const BlockViewerContext = React.createContext<BlockViewerContext | null>(null)
+const BlockViewerContext = React.createContext<BlockViewerContext | null>(null);
 
 function useBlockViewer() {
-  const context = React.useContext(BlockViewerContext)
+  const context = React.useContext(BlockViewerContext);
   if (!context) {
-    throw new Error("useBlockViewer must be used within a BlockViewerProvider.")
+    throw new Error(
+      "useBlockViewer must be used within a BlockViewerProvider."
+    );
   }
-  return context
+  return context;
 }
 
 function BlockViewerProvider({
@@ -86,15 +85,16 @@ function BlockViewerProvider({
   highlightedFiles,
   children,
 }: Pick<BlockViewerContext, "item" | "tree" | "highlightedFiles"> & {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const [view, setView] = React.useState<BlockViewerContext["view"]>("preview")
+  const [view, setView] = React.useState<BlockViewerContext["view"]>("preview");
   const [style, setStyle] =
-    React.useState<BlockViewerContext["style"]>("default")
+    React.useState<BlockViewerContext["style"]>("default");
   const [activeFile, setActiveFile] = React.useState<
     BlockViewerContext["activeFile"]
-  >(highlightedFiles?.[0]?.target ?? null)
-  const resizablePanelRef = React.useRef<ImperativePanelHandle>(null)
+  >(highlightedFiles?.[0]?.target ?? null);
+  const resizablePanelRef = React.useRef<ImperativePanelHandle>(null);
+  
 
   return (
     <BlockViewerContext.Provider
@@ -124,13 +124,14 @@ function BlockViewerProvider({
         {children}
       </div>
     </BlockViewerContext.Provider>
-  )
+  );
 }
 
 function BlockViewerToolbar() {
-  const { setView, item, resizablePanelRef, style } = useBlockViewer()
-  const { copyToClipboard, isCopied } = useCopyToClipboard()
-
+  const { setView, item, resizablePanelRef, style } = useBlockViewer();
+  const { copyToClipboard, isCopied } = useCopyToClipboard();
+ 
+ 
   return (
     <div className="flex w-full items-center gap-2 md:pr-[14px]">
       <Tabs
@@ -138,17 +139,11 @@ function BlockViewerToolbar() {
         onValueChange={(value) => setView(value as "preview" | "code")}
         className="hidden lg:flex"
       >
-        <TabsList className="h-7 items-center rounded-sm p-0 px-[calc(theme(spacing.1)_-_2px)] py-[theme(spacing.1)]">
-          <TabsTrigger
-            value="preview"
-            className="h-[1.45rem] rounded-sm px-2 text-xs"
-          >
+        <TabsList className="h-8 items-center rounded-sm p-0 px-[calc(theme(spacing.1)_-_2px)] py-[theme(spacing.1)]">
+          <TabsTrigger value="preview" className="px-2 text-xs">
             Preview
           </TabsTrigger>
-          <TabsTrigger
-            value="code"
-            className="h-[1.45rem] rounded-sm px-2 text-xs"
-          >
+          <TabsTrigger value="code" className="text-xs">
             Code
           </TabsTrigger>
         </TabsList>
@@ -161,60 +156,60 @@ function BlockViewerToolbar() {
         {item.description}
       </a>
       <div className="ml-auto hidden items-center gap-2 md:flex">
-        <div className="hidden h-7 items-center gap-1.5 rounded-md border p-[2px] shadow-none lg:flex">
+        <div className="hidden h-8 items-center gap-2 rounded-sm border  p-1 shadow-none lg:flex">
           <ToggleGroup
             type="single"
             defaultValue="100"
             onValueChange={(value) => {
               if (resizablePanelRef?.current) {
-                resizablePanelRef.current.resize(parseInt(value))
+                resizablePanelRef.current.resize(parseInt(value));
               }
             }}
           >
             <ToggleGroupItem
               value="100"
-              className="h-[22px] w-[22px] min-w-0 rounded-sm p-0"
+              className="h-6 w-6 min-w-0   p-0"
               title="Desktop"
             >
-              <Monitor className="h-3.5 w-3.5" />
+              <Monitor className="h-3 w-3" />
             </ToggleGroupItem>
             <ToggleGroupItem
               value="60"
-              className="h-[22px] w-[22px] min-w-0 rounded-sm p-0"
+              className="h-6 w-6 min-w-0  p-0"
               title="Tablet"
             >
-              <Tablet className="h-3.5 w-3.5" />
+              <Tablet className="h-3 w-3" />
             </ToggleGroupItem>
             <ToggleGroupItem
               value="30"
-              className="h-[22px] w-[22px] min-w-0 rounded-sm p-0"
+              className="h-6 w-6 min-w-0   p-0"
               title="Mobile"
             >
-              <Smartphone className="h-3.5 w-3.5" />
+              <Smartphone className="h-3 w-3" />
             </ToggleGroupItem>
             <Separator orientation="vertical" className="h-4" />
             <Button
               size="icon"
               variant="ghost"
-              className="h-[22px] w-[22px] rounded-sm p-0"
+              className="h-6 w-6   p-0"
               asChild
               title="Open in New Tab"
             >
               <Link href={`/view/styles/${style}/${item.name}`} target="_blank">
                 <span className="sr-only">Open in New Tab</span>
-                <Fullscreen className="h-3.5 w-3.5" />
+                <Fullscreen className="h-3 w-3" />
               </Link>
             </Button>
           </ToggleGroup>
         </div>
         <Separator orientation="vertical" className="mx-1 hidden h-4 md:flex" />
-        <div className="flex h-7 items-center gap-1 rounded-md border p-[2px]">
+        <div className="flex h-8 items-center gap-1 rounded-sm border p-[2px]">
           <Button
             variant="ghost"
-            className="hidden h-[22px] w-auto gap-1 rounded-sm px-2 md:flex lg:w-auto"
+            className="hidden h-6 w-auto gap-1 rounded-sm px-2 md:flex lg:w-auto"
             size="sm"
             onClick={() => {
-              copyToClipboard(`npx shadcn@latest add ${item.name}`)
+              copyToClipboard(`npx shadcn@latest add ${item.name}`);
             }}
           >
             {isCopied ? <Check /> : <Terminal />}
@@ -222,18 +217,14 @@ function BlockViewerToolbar() {
           </Button>
         </div>
         <Separator orientation="vertical" className="mx-1 hidden h-4 xl:flex" />
-        <V0Button
-          className="hidden shadow-none sm:flex"
-          id={`v0-button-${item.name}`}
-          name={`${item.name}`}
-        />
+        <OpenInV0 componentSource={`https://designali.in/r/${name}.json`} />
       </div>
     </div>
-  )
+  );
 }
 
 function BlockViewerView() {
-  const { item, style, resizablePanelRef } = useBlockViewer()
+  const { item, style, resizablePanelRef } = useBlockViewer();
 
   return (
     <div className="group-data-[view=code]/block-view-wrapper:hidden md:h-[--height]">
@@ -272,18 +263,18 @@ function BlockViewerView() {
         </ResizablePanelGroup>
       </div>
     </div>
-  )
+  );
 }
 
 function BlockViewerCode() {
-  const { activeFile, highlightedFiles } = useBlockViewer()
+  const { activeFile, highlightedFiles } = useBlockViewer();
 
   const file = React.useMemo(() => {
-    return highlightedFiles?.find((file) => file.target === activeFile)
-  }, [highlightedFiles, activeFile])
+    return highlightedFiles?.find((file) => file.target === activeFile);
+  }, [highlightedFiles, activeFile]);
 
   if (!file) {
-    return null
+    return null;
   }
 
   return (
@@ -307,14 +298,14 @@ function BlockViewerCode() {
         />
       </div>
     </div>
-  )
+  );
 }
 
 export function BlockViewerFileTree() {
-  const { tree } = useBlockViewer()
+  const { tree } = useBlockViewer();
 
   if (!tree) {
-    return null
+    return null;
   }
 
   return (
@@ -337,11 +328,11 @@ export function BlockViewerFileTree() {
         </SidebarGroup>
       </Sidebar>
     </SidebarProvider>
-  )
+  );
 }
 
 function Tree({ item, index }: { item: FileTree; index: number }) {
-  const { activeFile, setActiveFile } = useBlockViewer()
+  const { activeFile, setActiveFile } = useBlockViewer();
 
   if (!item.children) {
     return (
@@ -362,7 +353,7 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
           {item.name}
         </SidebarMenuButton>
       </SidebarMenuItem>
-    )
+    );
   }
 
   return (
@@ -394,41 +385,41 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
         </CollapsibleContent>
       </Collapsible>
     </SidebarMenuItem>
-  )
+  );
 }
 
 function BlockCopyCodeButton() {
-  const { activeFile, item } = useBlockViewer()
-  const { copyToClipboard, isCopied } = useCopyToClipboard()
+  const { activeFile, item } = useBlockViewer();
+  const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   const file = React.useMemo(() => {
-    return item.files?.find((file) => file.target === activeFile)
-  }, [activeFile, item.files])
+    return item.files?.find((file) => file.target === activeFile);
+  }, [activeFile, item.files]);
 
-  const content = file?.content
+  const content = file?.content;
 
   if (!content) {
-    return null
+    return null;
   }
 
   return (
     <Button
       onClick={() => {
-        copyToClipboard(content)
+        copyToClipboard(content);
         trackEvent({
           name: "copy_block_code",
           properties: {
             name: item.name,
             file: file.path,
           },
-        })
+        });
       }}
       className="h-7 w-7 shrink-0 rounded-lg p-0 hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white focus-visible:bg-zinc-700 focus-visible:text-white active:bg-zinc-700 active:text-white data-[active=true]:bg-zinc-700 data-[active=true]:text-white [&>svg]:size-3"
       variant="ghost"
     >
       {isCopied ? <Check /> : <Clipboard />}
     </Button>
-  )
+  );
 }
 
 function BlockViewer({
@@ -448,7 +439,7 @@ function BlockViewer({
       <BlockViewerView />
       <BlockViewerCode />
     </BlockViewerProvider>
-  )
+  );
 }
 
-export { BlockViewer }
+export { BlockViewer };

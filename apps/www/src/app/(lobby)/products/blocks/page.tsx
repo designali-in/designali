@@ -3,7 +3,7 @@ import Link from "next/link"
 import { BlockDisplay } from "@/components/mdx/block-display"
 import { Button } from "@/components/ui/button"
 
-const FEATURED_BLOCKS = ["sidebar-01", "tasks-01",  "dashboard-01", "hero-01"]
+const FEATURED_BLOCKS = [ "hero-01", "sidebar-01", "tasks-01",  "dashboard-01"]
 
 export default async function BlocksPage() {
   return (

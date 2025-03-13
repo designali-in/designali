@@ -9,13 +9,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CalendarDateRangePicker } from "@/registry/default/blocks/dashboard-01/components/date-range-picker";
-import { MainNav } from "@/registry/default/blocks/dashboard-01/components/main-nav";
-import { Overview } from "@/registry/default/blocks/dashboard-01/components/overview";
-import { RecentSales } from "@/registry/default/blocks/dashboard-01/components/recent-sales";
-import { Search } from "@/registry/default/blocks/dashboard-01/components/search";
-import TeamSwitcher from "@/registry/default/blocks/dashboard-01/components/theme-switcher";
-import { UserNav } from "@/registry/default/blocks/dashboard-01/components/user-nav";
+import { CalendarDateRangePicker } from "@/registry/default/blocks/dashboard/dashboard-01/components/date-range-picker";
+import { MainNav } from "@/registry/default/blocks/dashboard/dashboard-01/components/main-nav";
+import { Overview } from "@/registry/default/blocks/dashboard/dashboard-01/components/overview";
+import { RecentSales } from "@/registry/default/blocks/dashboard/dashboard-01/components/recent-sales";
+import { Search } from "@/registry/default/blocks/dashboard/dashboard-01/components/search";
+import TeamSwitcher from "@/registry/default/blocks/dashboard/dashboard-01/components/theme-switcher";
+import { UserNav } from "@/registry/default/blocks/dashboard/dashboard-01/components/user-nav";
 
 export default function DashboardPage() {
   return (

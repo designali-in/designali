@@ -3,8 +3,8 @@
 // this is a client component
 import { useEffect } from "react";
 import Link from "next/link";
-import { StrokeDance } from "@/registry/default/blocks/hero-01/components/stroke-dance";
-import { TypeWriter } from "@/registry/default/blocks/hero-01/components/type-writer";
+import { StrokeDance } from "@/registry/default/blocks/hero/hero-01/components/stroke-dance";
+import { TypeWriter } from "@/registry/default/blocks/hero/hero-01/components/type-writer";
 import { DIcons } from "dicons";
 
 import { DotPattern } from "@/components/ui/backgrounds/dot-pattern";

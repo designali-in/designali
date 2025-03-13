@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -9,6 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Link from "next/link";
 
 const OpenInV0 = ({ componentSource }: { componentSource: string }) => {
   return (
@@ -21,29 +21,30 @@ const OpenInV0 = ({ componentSource }: { componentSource: string }) => {
                 variant: "ghost",
                 size: "icon",
               }),
-              "h-7 w-7",
+              "h-8"
             )}
             href={`https://v0.dev/chat/api/open?url=${encodeURIComponent(componentSource)}`}
             target="_blank"
             aria-label="Open in v0"
           >
             <svg
-              height="16"
+              viewBox="0 0 40 20"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              strokeLinejoin="round"
-              viewBox="0 0 16 16"
-              width="16"
+              className={cn("h-5 w-5 text-current")}
             >
               <path
-                clipRule="evenodd"
-                d="M9.50321 5.5H13.2532C13.3123 5.5 13.3704 5.5041 13.4273 5.51203L9.51242 9.42692C9.50424 9.36912 9.5 9.31006 9.5 9.25L9.5 5.5L8 5.5L8 9.25C8 10.7688 9.23122 12 10.75 12H14.5V10.5L10.75 10.5C10.6899 10.5 10.6309 10.4958 10.5731 10.4876L14.4904 6.57028C14.4988 6.62897 14.5032 6.68897 14.5032 6.75V10.5H16.0032V6.75C16.0032 5.23122 14.772 4 13.2532 4H9.50321V5.5ZM0 5V5.00405L5.12525 11.5307C5.74119 12.3151 7.00106 11.8795 7.00106 10.8822V5H5.50106V9.58056L1.90404 5H0Z"
+                d="M23.3919 0H32.9188C36.7819 0 39.9136 3.13165 39.9136 6.99475V16.0805H36.0006V6.99475C36.0006 6.90167 35.9969 6.80925 35.9898 6.71766L26.4628 16.079C26.4949 16.08 26.5272 16.0805 26.5595 16.0805H36.0006V19.7762H26.5595C22.6964 19.7762 19.4788 16.6139 19.4788 12.7508V3.68923H23.3919V12.7508C23.3919 12.9253 23.4054 13.0977 23.4316 13.2668L33.1682 3.6995C33.0861 3.6927 33.003 3.68923 32.9188 3.68923H23.3919V0Z"
                 fill="currentColor"
-                fillRule="evenodd"
+              ></path>
+              <path
+                d="M13.7688 19.0956L0 3.68759H5.53933L13.6231 12.7337V3.68759H17.7535V17.5746C17.7535 19.6705 15.1654 20.6584 13.7688 19.0956Z"
+                fill="currentColor"
               ></path>
             </svg>
           </Link>
         </TooltipTrigger>
-        <TooltipContent className="px-2 py-1 text-xs text-muted-foreground">
+        <TooltipContent className="text-muted-foreground px-2 py-1 text-xs">
           Open in v0
         </TooltipContent>
       </Tooltip>

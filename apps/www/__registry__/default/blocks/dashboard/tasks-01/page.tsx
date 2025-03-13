@@ -1,7 +1,7 @@
 import { columns } from "./components/columns";
 import { DataTable } from "./components/data-table";
 import { UserNav } from "./components/user-nav";
-import tasks from "@/registry/default/blocks/tasks-01/data/tasks.json";
+import tasks from "@/registry/default/blocks/dashboard/tasks-01/data/tasks.json";
 
 export default function TaskPage() {
   return (

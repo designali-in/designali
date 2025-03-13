@@ -1,4 +1,3 @@
- 
 "use server"
 
 import { track } from "@vercel/analytics/server"
@@ -38,11 +37,11 @@ export async function editInV0({
     const projectName = capitalCase(name.replace(/\d+/g, ""))
     registryItem.description = registryItem.description || projectName
 
-    // Replace `@/registry/new-york/` in files.
+    // Replace `@/registry/default/` in files.
     registryItem.files = registryItem.files?.map((file) => {
-      if (file.content?.includes("@/registry/new-york/ui")) {
+      if (file.content?.includes("@/registry/default/ui")) {
         file.content = file.content?.replaceAll(
-          "@/registry/new-york/ui",
+          "@/registry/default/ui",
           "@/components/ui"
         )
       }
@@ -62,7 +61,7 @@ export async function editInV0({
       },
     }
 
-    const response = await fetch(`${process.env.V0_URL}/chat/api/open-in-v0`, {
+    const response = await fetch(`https://v0.dev/chat/api/open-in-v0`, {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
