@@ -1,6 +1,5 @@
 import { auth } from "@/lib/auth";
-import { prisma } from "@/lib/db";
-import { cookies } from "next/headers";
+import { prisma } from "@/lib/db"; 
 
 export async function getCurrentUser() {
   const session = await auth();

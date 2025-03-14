@@ -22,6 +22,8 @@ const buttonVariants = cva(
         yellow: "bg-yellow-500 hover:bg-yellow-500/90 text-white",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        style1: "from-primary to-primary/85 text-primary-foreground border border-2 border-stone-950/25 bg-gradient-to-t shadow-md shadow-stone-950/20 ring-1 ring-inset ring-white/20 transition-[filter] duration-200 hover:brightness-110 active:brightness-90 dark:border-white/20 dark:ring-transparent",
+        style2: "from-primary to-primary/80 bg-gradient-to-b inset-shadow-black-500 border-double border border-white text-primary-foreground shadow-xl shadow-primary/50",
         none: "",
       },
       size: {

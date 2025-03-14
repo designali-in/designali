@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AdBanner from "@/components/common/AdBanner";
 import LogoPage from "@/components/lobby/products/logos/logos";
-import ToolsPage from "@/components/lobby/products/tools/tools";
-import { Badge } from "@/components/ui/badge";
+import ToolsPage from "@/components/lobby/products/tools/tools"; 
 import { AssetGrid } from "@/src/components/dashboard/graphic/assets/asset-grid";
 import AssetUsers from "@/src/components/dashboard/graphic/assets/asset-users";
 import { auth } from "@/src/lib/auth";
-import { cn } from "@/src/lib/utils";
-import BrowseClient from "@/components/dashboard/agency/BrowseClient";
+import { cn } from "@/src/lib/utils"; 
 
 import { env } from "@/env";
 import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
@@ -70,18 +68,7 @@ const BrowsePage = async () => {
     totalLikes: 0,
     joinedAt: user.createdAt.toISOString(),
   }));
-
-  const topTenAnimes = await prisma.graphic.findMany({
-    orderBy: [
-      {
-        totalRatings: "desc",
-      },
-      {
-        createdAt: "desc",
-      },
-    ],
-    take: INFINITE_SCROLLING_PAGINATION_BROWSE,
-  });
+ 
 
   return (
     <div className="relative overflow-hidden">
@@ -157,9 +144,7 @@ const BrowsePage = async () => {
 
                       <TabsTrigger value="tab-2">
                         Pro
-                        <span className="text-ali pl-1 font-semibold">
-                          {topTenAnimes.length}
-                        </span>
+                        
                       </TabsTrigger>
                       <TabsTrigger value="tab-3">
                         Designers
@@ -176,9 +161,7 @@ const BrowsePage = async () => {
                         {""}
                         <span className="ml-1 font-thin">by svgl</span>
                         <span className="text-ali px-1 font-semibold">476</span>
-                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                          New
-                        </span>
+                         
                       </TabsTrigger>
                       <TabsTrigger value="tab-7">
                         <p>Tools</p>
@@ -197,9 +180,7 @@ const BrowsePage = async () => {
                   />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-2">
-                  <div className="mt-3">
-                    <BrowseClient initialAnimes={topTenAnimes} />
-                  </div>
+                  Coming Soon
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-3">
                   <AssetUsers users={formattedUsers} />

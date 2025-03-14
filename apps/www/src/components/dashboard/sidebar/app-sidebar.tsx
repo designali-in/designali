@@ -2,14 +2,9 @@
 
 import type { User } from "next-auth";
 import * as React from "react";
-import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
+import { 
   Frame,
-  GalleryVerticalEnd,
-  LifeBuoy,
+  GalleryVerticalEnd, 
   Mail,
   Map,
   PieChart,
@@ -40,14 +35,7 @@ const data = {
       icon: SquareTerminal,
       isActive: true,
       items: [
-        {
-          title: "Community",
-          url: "/dashboard/community",
-        },
-        {
-          title: "Poll",
-          url: "/dashboard/poll",
-        },
+         
         {
           title: "Urls",
           url: "/dashboard/urls",
@@ -58,28 +46,13 @@ const data = {
         },
       ],
     },
-    {
-      title: "Agency",
-      url: "/dashboard/agency",
-      icon: SquareTerminal,
-      isActive: false,
-      items: [
-        {
-          title: "Projects",
-          url: "/dashboard/agency/projects",
-        },
-        {
-          title: "Designs",
-          url: "/dashboard/agency/designs",
-        },
-      ],
-    },
+     
 
     {
       title: "Settings",
       url: "/dashboard/settings",
       icon: Settings2,
-      isActive: false,
+      isActive: true,
       items: [
         {
           title: "General",
@@ -168,14 +141,7 @@ const data = {
       icon: SquareTerminal,
       isActive: false,
       items: [
-        {
-          title: "Projects",
-          url: "/admin/projects",
-        },
-        {
-          title: "Designs",
-          url: "/admin/designs",
-        },
+        
       ],
     },
 

@@ -1,19 +1,11 @@
-import type { Community, DesignPost, Like, Poll, PollOption, PollVote, Role, User } from "@prisma/client";
+import type {  Role, User } from "@prisma/client";
 import { plansColumns } from "@/config/subscriptions";
 
 export type ThemeOptions = {
   dark: string;
   light: string;
 };
-
-export interface AnimeRanking {
-  rank: string;
-  graphic: string;
-  director: string;
-  genre: string;
-  stars: number;
-  votes: string;
-}
+ 
 
 export interface AdminDisplay {
   name: string | null;
@@ -134,28 +126,7 @@ export interface Team {
     members: number;
   };
 }
-
-export type ExtendedCommunity = Community & {
-  creator: User;
-  post: DesignPost[];
-};
-
-export type ExtendedPost = DesignPost & {
-  creator: User;
-  comment: Comment[];
-  like: Like[];
-  community: Community;
-};
-
-
-export type ExtendedComment = Comment & {
-  author: User;
-};
-
-export type ExtendedPoll = Poll & {
-  creator: User;
-  option: (PollOption & { vote: PollVote[] })[];
-};
+ 
 
 export interface UserDisplay {
   name: string | null;

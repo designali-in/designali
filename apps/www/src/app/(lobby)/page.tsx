@@ -2,14 +2,11 @@ import AdBanner from "@/src/components/common/AdBanner";
 import Image from "next/image";
 import ClientLogos from "@/src/components/common/client-logos";
 import { Connect } from "@/src/components/common/connect";
-import { InstagramFeed } from "@/src/components/common/insta";
-import AnimeCardSkeleton from "@/src/components/dashboard/agency/AnimeCardSkeleton";
-import RecentlyAdded from "@/src/components/dashboard/agency/HomeGraphic";
+import { InstagramFeed } from "@/src/components/common/insta"; 
 import { NewsletterSignUpForm } from "@/src/components/forms/newsletter-signup-form";
 import { DBentoGrid } from "@/src/components/lobby/home/bento-grid";
 import Hero from "@/src/components/lobby/home/hero";
-import { Quote } from "@/src/components/lobby/home/quote";
-import { Suspense } from "react";
+import { Quote } from "@/src/components/lobby/home/quote"; 
 import { CardsDemo } from "@/src/components/lobby/home/component-demos";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
 
@@ -22,9 +19,7 @@ export default function HomePage() {
       <div className="relative border-grid rounded-t-3xl rounded-b-3xl border container-wrapper overflow-hidden my-10">
         <DBentoGrid />
         <Quote />
-        <Suspense fallback={<AnimeCardSkeleton />}>
-          <RecentlyAdded />
-        </Suspense>
+         
       </div>
       <div className="px-6 xl:px-0">
         <InstagramFeed />
