@@ -18,6 +18,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        hostname: "images.pexels.com",
+      },
+      {
         hostname: "picsum.photos",
       },
       {

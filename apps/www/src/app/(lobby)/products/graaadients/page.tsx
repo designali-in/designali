@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
+  BreadcrumbLink, 
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
@@ -64,12 +64,9 @@ export default function AboutAI() {
               </BreadcrumbItem>
               <BreadcrumbSeparator className="text-slate-200" />
               <BreadcrumbItem>
-                <BreadcrumbLink
-                  href="/products"
-                  className="text-slate-200 hover:text-white"
-                >
+              <BreadcrumbPage className="text-white">
                   Products
-                </BreadcrumbLink>
+                  </BreadcrumbPage>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="text-slate-200" />
               <BreadcrumbItem>

@@ -36,7 +36,7 @@ export const Items = () => {
       title: " Total Views",
       link: "/agency",
       target: "",
-      value: vData?.views,
+      value: 3452,
       icon: <DIcons.Eye   className="h-5 w-5" />,
       linkText: "Agency",
       gradient: {
@@ -48,7 +48,7 @@ export const Items = () => {
       title: " Total Likes",
       link: "/products",
       target: "",
-      value: lData?.likes,
+      value: 4577,
       icon: <DIcons.Heart strokeWidth={1} className="text-ali h-5 w-5" />,
       linkText: "Products",
       gradient: {
@@ -129,7 +129,7 @@ export const HomeItems = () => {
       title: " Total Views",
       link: "/agency",
       target: "",
-      value: vData?.views,
+      value: 3546,
       icon: (
         <DIcons.Eye 
           className="h-10 w-10 text-sky-500"
@@ -145,7 +145,7 @@ export const HomeItems = () => {
       title: " Total Likes",
       link: "/products",
       target: "",
-      value: lData?.likes,
+      value: 1789,
       icon: <DIcons.Heart strokeWidth={1} className="text-ali h-10 w-10 p-1" />,
       linkText: "Products",
       gradient: {

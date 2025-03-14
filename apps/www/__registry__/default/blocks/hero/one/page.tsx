@@ -1,5 +1,5 @@
 "use client";
-import { Logo } from "@/components/logo";
+import { DesignaliIcon } from "@/components/logo";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,7 @@ export default function HeroSection() {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
-                  <Logo />
+                  <DesignaliIcon className="h-6 w-6" />
                 </Link>
 
                 <button
@@ -106,10 +106,10 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="mx-auto -mt-16 max-w-7xl">
-            <div className="perspective-distant -mr-16 pl-16 lg:-mr-56 lg:pl-56">
-              <div className="[transform:rotateX(20deg);]">
-                <div className="lg:h-176 relative skew-x-[.36rad]">
+          <div className="mx-auto px-6 -mt-16 max-w-7xl">
+            <div className="flex justify-center">
+              <div className="">
+                <div className="lg:h-176 relative ">
                   <div
                     aria-hidden
                     className="bg-linear-to-b from-background to-background z-1 absolute -inset-16 via-transparent sm:-inset-32"
@@ -137,18 +137,18 @@ export default function HeroSection() {
                   />
 
                   <Image
-                    className="rounded-(--radius) z-1 relative border dark:hidden"
-                    src="/card.png"
+                    className="rounded-2xl z-1 relative border dark:hidden"
+                    src="/images/graphic.jpg"
                     alt="tailus ui hero section"
-                    width={2880}
-                    height={2074}
+                    width={1080}
+                    height={1000}
                   />
                   <Image
-                    className="rounded-(--radius) z-1 relative hidden border dark:block"
-                    src="/dark-card.webp"
+                    className="rounded-2xl z-1 relative hidden border dark:block"
+                    src="/images/graphic-dark.jpg"
                     alt="tailus ui hero section"
-                    width={2880}
-                    height={2074}
+                    width={1080}
+                    height={1000}
                   />
                 </div>
               </div>

@@ -18,6 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avegra } from "@/lib/fonts/fonts";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
 import ShineBorder from "@/src/components/ui/backgrounds/shine-border";
+import Gallery from "@/src/components/lobby/images/gallery";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -143,8 +144,10 @@ const BrowsePage = async () => {
                       </TabsTrigger>
 
                       <TabsTrigger value="tab-2">
-                        Pro
-                        
+                        Images 
+                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
                       </TabsTrigger>
                       <TabsTrigger value="tab-3">
                         Designers
@@ -180,7 +183,7 @@ const BrowsePage = async () => {
                   />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-2">
-                  Coming Soon
+                <Gallery />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-3">
                   <AssetUsers users={formattedUsers} />
