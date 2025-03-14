@@ -10,6 +10,7 @@ import { useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Connect } from "@/src/components/common/connect";
 
 export default function UploadPage() {
   const [title, setTitle] = useState("");
@@ -87,11 +88,11 @@ export default function UploadPage() {
   }
 
   return (
-    <div className="mx-auto my-40 max-w-7xl px-4 py-8">
+    <div className="mx-auto mt-4 border-t rounded-t-3xl container-wrapper px-4 py-8">
       <h1 className="mb-8 text-center text-3xl font-semibold">
         Upload New Assets
       </h1>
-      <form onSubmit={handleSubmit} className="mx-auto max-w-md">
+      <form onSubmit={handleSubmit} className="mx-auto mb-10 max-w-md">
         <div className="mb-4">
           <Input
             type="text"
@@ -164,6 +165,7 @@ export default function UploadPage() {
           </Button>
         </div>
       </form>
+      <Connect />
     </div>
   );
 }

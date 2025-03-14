@@ -90,7 +90,7 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
             )}
           </SelectContent>
         </Select>
-        <Input
+        {/*<Input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
@@ -99,7 +99,7 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
         />
         <Button type="button" onClick={() => addTag(inputValue)}>
           Add
-        </Button>
+        </Button> */}
       </div>
       <div className="mt-2 flex flex-wrap gap-2">
         {tags.map((tag, index) => (
