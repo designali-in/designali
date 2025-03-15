@@ -23,7 +23,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import AboutUser from "./about-user";
-import { CldImage } from "next-cloudinary";
+import CldImage from "@/components/common/CloudImage";
 
 type Asset = {
   id: string;

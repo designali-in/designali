@@ -8,7 +8,7 @@ import { DownloadButton } from "@/src/components/dashboard/graphic/assets/downlo
 import { LikeButton } from "@/src/components/dashboard/graphic/assets/like-btn";
 import { auth } from "@/src/lib/auth";
 import { DIcons } from "dicons";
-import { CldImage } from "next-cloudinary";
+import CldImage from "@/components/common/CloudImage";
 
 import { prisma } from "@/lib/db";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -48,24 +48,26 @@ export default async function AssetPage({
       },
     },
   });
-  const relatedAssets = asset ? await prisma.asset.findMany({
-    where: {
-      tags: {
-        some: {
-          id: {
-            in: asset.tags.map(tag => tag.id),
+  const relatedAssets = asset
+    ? await prisma.asset.findMany({
+        where: {
+          tags: {
+            some: {
+              id: {
+                in: asset.tags.map((tag) => tag.id),
+              },
+            },
+          },
+          NOT: {
+            id: asset.id, // Exclude the current asset
           },
         },
-      },
-      NOT: {
-        id: asset.id, // Exclude the current asset
-      },
-    },
-    include: {
-      likes: true,
-    tags: true,
-    },
-  }) : [];
+        include: {
+          likes: true,
+          tags: true,
+        },
+      })
+    : [];
 
   if (!asset) {
     notFound();
@@ -194,7 +196,9 @@ export default async function AssetPage({
         </CardFooter>
       </Card>
       <div>
-        <h1 className="py-10 text-center font-semibold text-md md:text-xl">Similar Assets</h1>
+        <h1 className="py-10 text-center font-semibold text-md md:text-xl">
+          Similar Assets
+        </h1>
         <RelatedAssetGrid assets={relatedAssets} />
       </div>
     </div>
