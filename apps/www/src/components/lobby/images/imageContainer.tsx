@@ -22,9 +22,9 @@ const ImageContainer = ({ photo }: Props) => {
           src={photo.src.large}
           alt={photo.alt}
           loading="lazy"
-          width={photo.width}
-          height={photo.height}
-          className="h-full w-full rounded-2xl object-cover"
+          width={300}
+          height={300}
+          className="h-[300px] w-full rounded-2xl object-cover"
         />
       </PhotoView>
     </div>
@@ -55,7 +55,7 @@ const ImageContainer2 = ({ photosWithBlur }: PhotoProps) => {
         }}
       >
         <div className="">
-          <div className="gap-3 grid grid-cols-5">
+          <div className="gap-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {photosWithBlur.map((photo) => (
               <ImageContainer key={photo.id} photo={photo} />
             ))}

@@ -39,6 +39,8 @@ type Asset = {
 
 const INITIAL_LOAD = 21;
 const LOAD_MORE = 21;
+const INITIAL_LOAD3 = 8;
+const LOAD_MORE3 = 8;
 
 export function AssetGrid({
   assets,
@@ -374,6 +376,99 @@ export function ProfileAssetGrid({
         Math.max(filteredAssets.length, filteredLikedAssets.length) && (
         <div className="mt-6 flex justify-center">
           <Button onClick={() => setVisibleCount(visibleCount + LOAD_MORE)}>
+            Load More
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+export function RelatedAssetGrid({
+  assets,
+}: {
+  assets: Asset[];
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredAssets, setFilteredAssets] = useState(assets); 
+  const [sortBy, setSortBy] = useState("latest");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD3);
+
+  useEffect(() => {
+    const sortAndFilterAssets = (assetList: Asset[]) => {
+      const sortedAssets = [...assetList];
+
+      switch (sortBy) {
+         
+        default:
+          sortedAssets.sort(
+            (a, b) =>
+              new Date(b.uploadedAt).getTime() -
+              new Date(a.uploadedAt).getTime(),
+          );
+      }
+
+      return sortedAssets.filter((asset) =>
+        asset.title.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
+    };
+
+    setFilteredAssets(sortAndFilterAssets(assets)); 
+    setVisibleCount(INITIAL_LOAD3);
+  }, [assets, searchTerm, sortBy]);
+
+  const renderAssetGrid = (assetList: Asset[]) => (
+    <div className="mb-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+      {assetList.slice(0, visibleCount).map((asset) => {
+        const urls = asset.url.split(",");
+        return (
+          <Card
+            key={asset.id}
+            className={cn("focused group h-full overflow-hidden rounded-sm")}
+          >
+            <CardHeader className="border-b p-0">
+              <AspectRatio className="overflow-hidden">
+                <Link href={`/graphic/assets/${asset.id}`}>
+                  <Image
+                    src={urls[0] || "/placeholder.svg"}
+                    alt={asset.title}
+                    fill
+                    className="h-full w-full object-cover transition-all group-hover:scale-105"
+                  />
+                </Link>
+              </AspectRatio>
+            </CardHeader>
+            <CardContent className="flex items-center justify-between p-4">
+              <CardTitle className="text-md truncate py-[2px] md:text-xl">
+                {asset.title}
+              </CardTitle>
+              <div className="md:flex hidden gap-4 text-xs text-primary/70">
+                <div className="flex gap-1">
+                  <DIcons.Eye className="h-4 w-4" />
+                  <p>{asset.views}</p>
+                </div> 
+                <div className="flex gap-1">
+                  <DIcons.Download className="h-4 w-4" />
+                  <DownloadNumber initialDownloadCount={asset.downloads} />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  );
+
+  return (
+    <div>
+      <div>
+      {renderAssetGrid(filteredAssets)}
+      </div> 
+      {visibleCount <
+        Math.max(filteredAssets.length) && (
+        <div className="my-6 flex justify-center">
+          <Button onClick={() => setVisibleCount(visibleCount + LOAD_MORE3)}>
             Load More
           </Button>
         </div>

@@ -24,6 +24,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import { RelatedAssetGrid } from "@/src/components/dashboard/graphic/assets/asset-grid";
 
 export default async function AssetPage({
   params,
@@ -45,6 +46,24 @@ export default async function AssetPage({
       },
     },
   });
+  const relatedAssets = asset ? await prisma.asset.findMany({
+    where: {
+      tags: {
+        some: {
+          id: {
+            in: asset.tags.map(tag => tag.id),
+          },
+        },
+      },
+      NOT: {
+        id: asset.id, // Exclude the current asset
+      },
+    },
+    include: {
+      likes: true,
+    tags: true,
+    },
+  }) : [];
 
   if (!asset) {
     notFound();
@@ -65,7 +84,7 @@ export default async function AssetPage({
     : false;
 
   return (
-    <div className="container-wrapper my-4 border-t rounded-3xl p-6">
+    <div className="container-wrapper mt-4 border-t rounded-t-3xl pb-0 p-6">
       <div className="flex items-center justify-between">
         <div className="mb-6 items-center gap-2 md:flex">
           <Breadcrumb className="mb-3 md:mb-0">
@@ -172,6 +191,10 @@ export default async function AssetPage({
           </div>
         </CardFooter>
       </Card>
+      <div>
+        <h1 className="py-10 text-center font-semibold text-md md:text-xl">Similar Assets</h1>
+        <RelatedAssetGrid assets={relatedAssets} />
+      </div>
     </div>
   );
 }
