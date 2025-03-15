@@ -9,6 +9,7 @@ import Hero from "@/src/components/lobby/home/hero";
 import { Quote } from "@/src/components/lobby/home/quote"; 
 import { CardsDemo } from "@/src/components/lobby/home/component-demos";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
+import BrowseAssetsLobby from "@/src/components/lobby/home/asset-grid-lobby";
 
 export default function HomePage() {
   return (
@@ -19,7 +20,7 @@ export default function HomePage() {
       <div className="relative border-grid rounded-t-3xl rounded-b-3xl border container-wrapper overflow-hidden my-10">
         <DBentoGrid />
         <Quote />
-         
+         <BrowseAssetsLobby/>
       </div>
       <div className="px-6 xl:px-0">
         <InstagramFeed />

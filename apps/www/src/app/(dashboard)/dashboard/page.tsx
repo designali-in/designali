@@ -108,7 +108,15 @@ export default async function DashboardPage() {
 
   return (
     <div className="relative">
-       
+      <div className="h-40  w-full overflow-hidden md:h-[300px] ">
+        <Image
+          src={user.coverImage || "/images/products/3dbg.jpg"}
+          alt="Cover"
+          width={1000}
+          height={300}
+          className="-z-10 h-full w-full object-cover"
+        />
+      </div>
       <div className="p-6">
         <div className="grid h-full items-center justify-start gap-3 md:flex md:justify-between">
           <div className="flex h-full items-center justify-start gap-3">

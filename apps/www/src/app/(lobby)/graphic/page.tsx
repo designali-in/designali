@@ -8,8 +8,7 @@ import AssetUsers from "@/src/components/dashboard/graphic/assets/asset-users";
 import { auth } from "@/src/lib/auth";
 import { cn } from "@/src/lib/utils"; 
 
-import { env } from "@/env";
-import { INFINITE_SCROLLING_PAGINATION_BROWSE } from "@/lib/constants";
+import { env } from "@/env"; 
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
@@ -73,7 +72,7 @@ const BrowsePage = async () => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="mt-28">
+      <div className="mt-20">
         <div className="grid items-center justify-center px-8 pb-1 text-center">
           <div className="grid justify-center">
             <p className=" text-ali mb-4  text-center text-xl">

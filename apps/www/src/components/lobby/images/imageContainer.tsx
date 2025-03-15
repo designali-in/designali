@@ -7,7 +7,7 @@ import "react-photo-view/dist/react-photo-view.css";
 
 import { Photo } from "@/types/Images";
 import Image from "next/image";
-import { Button } from "../../ui/button";
+import { Button } from "../../ui/button"; 
 import Link from "next/link";
 
 type Props = {
@@ -18,7 +18,7 @@ const ImageContainer = ({ photo }: Props) => {
   return (
     <div className="cursor-zoom-in">
       <PhotoView src={photo.src.original}>
-        <Image
+        <img
           src={photo.src.large}
           alt={photo.alt}
           loading="lazy"

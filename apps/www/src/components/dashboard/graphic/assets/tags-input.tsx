@@ -23,12 +23,16 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
   useEffect(() => {
+    console.log("Fetched Tags:", suggestions.join("\n"));
+  }, [suggestions]);
+  
+  useEffect(() => {
     const fetchTags = async () => {
       try {
         const response = await fetch("/api/assets/tags");
         if (response.ok) {
           const existingTags = await response.json();
-          setSuggestions(existingTags.map((tag: { name: string }) => tag.name));
+          setSuggestions(existingTags); // Directly store string array
         } else {
           console.error("Failed to fetch tags.");
         }
@@ -39,6 +43,7 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
     fetchTags();
   }, []);
 
+
   useEffect(() => {
     onTagsChange(tags);
   }, [tags, onTagsChange]);
@@ -48,10 +53,9 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
   };
 
   const addTag = (tag: string) => {
-    const trimmedTag = tag.trim();
-    if (trimmedTag && !tags.includes(trimmedTag)) {
-      setTags((prevTags) => [...prevTags, trimmedTag]);
-      setInputValue("");
+    const cleanTag = tag.trim().replace(/[\[\]"]/g, ""); // Remove brackets and quotes
+    if (cleanTag && !tags.includes(cleanTag)) {
+      setTags([...tags, cleanTag]);
     }
   };
 
@@ -66,7 +70,9 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
   };
 
   const handleSelectChange = (value: string) => {
-    addTag(value);
+    if (value && !tags.includes(value)) {
+      setTags((prevTags) => [...prevTags, value]); // Store only the tag name
+    }
   };
 
   return (
@@ -78,19 +84,19 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
           </SelectTrigger>
           <SelectContent>
             {suggestions.length > 0 ? (
-              suggestions.map((suggestion) => (
-                <SelectItem key={suggestion} value={suggestion}>
-                  {suggestion}
+              suggestions.map((tag, index) => (
+                <SelectItem key={index} value={tag}>
+                  {tag}
                 </SelectItem>
               ))
             ) : (
-              <SelectItem disabled value={null}>
+              <SelectItem disabled value="no-tags">
                 No tags available
               </SelectItem>
             )}
           </SelectContent>
         </Select>
-        {/*<Input
+        <Input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
@@ -99,7 +105,7 @@ export function TagInput({ initialTags, onTagsChange }: TagInputProps) {
         />
         <Button type="button" onClick={() => addTag(inputValue)}>
           Add
-        </Button> */}
+        </Button>
       </div>
       <div className="mt-2 flex flex-wrap gap-2">
         {tags.map((tag, index) => (

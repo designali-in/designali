@@ -7,6 +7,7 @@ import { DownloadButton } from "@/src/components/dashboard/graphic/assets/downlo
 import { LikeButton } from "@/src/components/dashboard/graphic/assets/like-btn";
 import { auth } from "@/src/lib/auth";
 import { DIcons } from "dicons";
+import { CldImage } from "next-cloudinary";
 
 import { prisma } from "@/lib/db";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -156,7 +157,7 @@ export default async function AssetPage({
         <CardContent>
           <div className="grid gap-3 md:grid-cols-2">
             {imageUrls.map((url, index) => (
-              <Image
+              <CldImage
                 key={index}
                 src={url || "/placeholder.svg"}
                 alt={`${asset.title} - Image ${index + 1}`}

@@ -119,9 +119,7 @@ export default function UploadPage() {
             required
           />
         </div>
-        <div className="mb-4">
-          <TagInput onTagsChange={setTags} initialTags={tags} />
-        </div>
+        
         <div className="mb-4">
           <Input
             type="file"

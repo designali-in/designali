@@ -23,6 +23,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import AboutUser from "./about-user";
+import { CldImage } from "next-cloudinary";
 
 type Asset = {
   id: string;
@@ -154,10 +155,11 @@ export function AssetGrid({
                         {urls.length > 1 ? (
                           <div className="relative h-full w-full">
                             {urls.slice(0, 1).map((url, index) => (
-                              <Image
+                              <CldImage
                                 key={index}
                                 src={url || "/placeholder.svg"}
                                 alt={`${asset.title} - Image ${index + 1}`}
+                                loading="lazy"
                                 fill
                                 className={cn(
                                   "object-cover transition-all group-hover:scale-105",
@@ -183,9 +185,10 @@ export function AssetGrid({
                             )}
                           </div>
                         ) : (
-                          <Image
+                          <CldImage
                             src={urls[0] || "/placeholder.svg"}
                             alt={asset.title}
+                            loading="lazy"
                             fill
                             className="h-full w-full object-cover transition-all group-hover:scale-105"
                           />
@@ -231,6 +234,147 @@ export function AssetGrid({
           </Button>
         </div>
       )}
+    </div>
+  );
+}
+
+export function AssetGridLobby({
+  assets,
+  availableTags,
+}: {
+  assets: Asset[];
+  availableTags: string[];
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredAssets, setFilteredAssets] = useState(assets);
+  const [sortBy, setSortBy] = useState("latest");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
+  const [selectedTag, setSelectedTag] = useState("all");
+
+  // Get unique tags from availableTags
+  const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
+    a.localeCompare(b),
+  );
+
+  useEffect(() => {
+    let sortedAssets = [...assets];
+
+    sortedAssets = sortedAssets.filter(
+      (asset) =>
+        asset.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        (selectedTag === "all" || asset.tags.includes(selectedTag)),
+    );
+
+    // Then, sort the filtered assets
+    switch (sortBy) {
+      case "mostDownloaded":
+        sortedAssets.sort((a, b) => b.downloads - a.downloads);
+        break;
+      case "mostLiked":
+        sortedAssets.sort((a, b) => b.likes.length - a.likes.length);
+        break;
+      case "mostViewed":
+        sortedAssets.sort((a, b) => b.views - a.views);
+        break;
+      case "latest":
+      default:
+        sortedAssets.sort(
+          (a, b) =>
+            new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime(),
+        );
+    }
+
+    setFilteredAssets(sortedAssets);
+    setVisibleCount(INITIAL_LOAD);
+  }, [assets, searchTerm, sortBy, selectedTag]);
+
+  return (
+    <div>
+       <div className="p-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {filteredAssets.slice(0, 3).map((asset) => {
+              const urls = asset.url.split(",");
+              return (
+                <Card
+                  key={asset.id}
+                  className={cn(
+                    "focused group h-full overflow-hidden rounded-sm",
+                  )}
+                >
+                  <CardHeader className="border-b border-dotted p-0">
+                    <AspectRatio className="overflow-hidden">
+                      <Link href={`/graphic/assets/${asset.id}`}>
+                        {urls.length > 1 ? (
+                          <div className="relative h-full w-full">
+                            {urls.slice(0, 1).map((url, index) => (
+                              <CldImage
+                                key={index}
+                                src={url || "/placeholder.svg"}
+                                alt={`${asset.title} - Image ${index + 1}`}
+                                loading="lazy"
+                                fill
+                                className={cn(
+                                  "object-cover transition-all group-hover:scale-105",
+                                  urls.length === 2 && "w-1/2",
+                                  urls.length === 3 && index === 0
+                                    ? "w-1/2"
+                                    : "w-1/4",
+                                  urls.length === 4 && "h-1/2 w-1/2",
+                                )}
+                                style={{
+                                  top:
+                                    urls.length === 3 && index > 0
+                                      ? "50%"
+                                      : "0",
+                                  left: index % 2 === 1 ? "50%" : "0",
+                                }}
+                              />
+                            ))}
+                            {urls.length > 1 && (
+                              <div className="absolute right-2 top-2 rounded-full bg-black bg-opacity-50 px-2 py-1 text-xs text-white">
+                                +{urls.length - 1}
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <CldImage
+                            src={urls[0] || "/placeholder.svg"}
+                            alt={asset.title}
+                            loading="lazy"
+                            fill
+                            className="h-full w-full object-cover transition-all group-hover:scale-105"
+                          />
+                        )}
+                      </Link>
+                    </AspectRatio>
+                  </CardHeader>
+                  <CardContent className="flex items-center justify-between p-4">
+                    <CardTitle className="text-md truncate py-[2px] md:text-xl">
+                      {asset.title}
+                    </CardTitle>
+
+                    <div className="flex gap-4 text-xs text-primary/70">
+                      <div className="flex gap-1">
+                        <DIcons.Eye className="h-4 w-4" />
+                        <p>{asset.views}</p>
+                      </div>
+                      <div className="flex gap-1">
+                        <DIcons.Heart className="text-ali h-4 w-4" />
+                        <LikeCountNumber
+                          initialLikeCount={asset.likes.length}
+                        />
+                      </div>
+                      <div className="flex gap-1">
+                        <DIcons.Download className="h-4 w-4" />
+                        <DownloadNumber
+                          initialDownloadCount={asset.downloads}
+                        />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
     </div>
   );
 }
@@ -295,9 +439,10 @@ export function ProfileAssetGrid({
             <CardHeader className="border-b p-0">
               <AspectRatio className="overflow-hidden">
                 <Link href={`/graphic/assets/${asset.id}`}>
-                  <Image
+                  <CldImage
                     src={urls[0] || "/placeholder.svg"}
                     alt={asset.title}
+                    loading="lazy"
                     fill
                     className="h-full w-full object-cover transition-all group-hover:scale-105"
                   />
@@ -430,9 +575,10 @@ export function RelatedAssetGrid({
             <CardHeader className="border-b p-0">
               <AspectRatio className="overflow-hidden">
                 <Link href={`/graphic/assets/${asset.id}`}>
-                  <Image
+                  <CldImage
                     src={urls[0] || "/placeholder.svg"}
                     alt={asset.title}
+                    loading="lazy"
                     fill
                     className="h-full w-full object-cover transition-all group-hover:scale-105"
                   />
