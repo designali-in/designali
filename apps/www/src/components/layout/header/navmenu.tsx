@@ -37,7 +37,7 @@ export function Menu() {
                     </div>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/profile" title="Profile">
+                <ListItem href="/graphic/profile" title="Profile">
                   World's Top Designers profile list. Download the Assets from
                   users.
                 </ListItem>

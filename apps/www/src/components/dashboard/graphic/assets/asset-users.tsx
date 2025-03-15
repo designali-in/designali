@@ -100,7 +100,7 @@ export default function UserList({ users }: { users: User[] }) {
           >
             <CardHeader className="w-28 border-b p-0">
               <AspectRatio ratio={1} className="overflow-hidden">
-                <Link href={`/profile/${user.username}`}>
+                <Link href={`/graphic/profile/${user.username}`}>
                   <Image
                     src={user.avatarUrl || "/placeholder.svg"}
                     alt={user.name}

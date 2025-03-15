@@ -29,7 +29,7 @@ const navigation = {
           id: "features",
           name: "Features",
           items: [
-            { name: "Products", href: "/products" },
+            { name: "Profile", href: "/graphic/profile" },
             { name: "Agency", href: "/agency" },
             { name: "Dashboard", href: "/dashboard" },
           ],
@@ -47,9 +47,9 @@ const navigation = {
           id: "designs",
           name: "Designs",
           items: [
-            { name: "Design", href: "/designs" },
-            { name: "Components", href: "/components" },
-            { name: "Blogs", href: "/blogs" },
+            { name: "Docs", href: "/docs" },
+            { name: "Components", href: "/docs/components/accordion" },
+            { name: "Blogs", href: "/blog" },
           ],
         },
         {
@@ -65,9 +65,9 @@ const navigation = {
           id: "company",
           name: "Company",
           items: [
-            { name: "Contact", href: "/contact" },
-            { name: "Terms", href: "/terms" },
-            { name: "Privacy", href: "/privacy" },
+            { name: "Contact", href: "/docs/legal/contact" },
+            { name: "Terms", href: "/docs/legal/terms" },
+            { name: "Privacy", href: "/docs/legal/privacy" },
           ],
         },
       ],
