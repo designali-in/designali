@@ -1,8 +1,4 @@
-import type {
-    DesignPost,
-    Graphic,
-    PollVote,
-    Rating,
+import type { 
     User,
   } from "@prisma/client";
   import * as z from "zod";
@@ -28,8 +24,5 @@ import type {
   }
   
   export type ExtendedUser = User & {
-    graphic: Graphic[];
-    pollVote: PollVote[];
-    post: DesignPost[];
-    rating: Rating[];
+    
   };

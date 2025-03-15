@@ -51,7 +51,7 @@ export function TeamList({ teams }: TeamListProps) {
             </div>
           </div>
 
-          <Link href={`/dashboard/teams/${team.slug}`}>
+          <Link href={`/dashboard/settings/teams/${team.slug}`}>
             <Button> View Team</Button>
           </Link>
         </div>
