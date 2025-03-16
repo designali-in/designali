@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"; 
+import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CopyButton } from "@/components/mdx/layers/copy-button";
 import { Url } from "@prisma/client";
@@ -150,34 +150,37 @@ export default function Profile() {
         <div>
           <div className="grid gap-3 md:flex">
             <h1 className=" w-full text-2xl font-semibold">
-              Total Urls: {totalUrlCount}
+              Total Urls: <span className="text-ali">{totalUrlCount}</span>
             </h1>
-            <div className="w-full">
-              <form className=" flex gap-2 " onSubmit={addUrl}>
-                <div className="w-full ">
-                  <Input
-                    type="url"
-                    id="url"
-                    name="url"
-                    placeholder="Your Url"
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                    className={`w-full text-black ${addUrlInputError ? "border-red-500" : ""}`}
-                    required
-                    autoFocus
-                  />
-                </div>
-                <div className=" ">
-                  <Button type="submit">
-                    {addingUrl ? `Adding` : "Create Url"}
-                  </Button>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
+        <div className="overflow-hidden">
+          <form className="flex flex-wrap gap-2 items-center" onSubmit={addUrl}>
+            {/* Input Container */}
+            <div className="flex-1">
+              <Input
+                type="url"
+                id="url"
+                name="url"
+                placeholder="Your URL"
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                className={`w-full text-black ${addUrlInputError ? "border-red-500" : ""}`}
+                required
+                autoFocus
+              />
+            </div>
 
-        <div className="relative rounded-md">
+            {/* Button Container */}
+            <div className="shrink-0">
+              <Button type="submit" className="whitespace-nowrap">
+                {addingUrl ? "Adding..." : "Create URL"}
+              </Button>
+            </div>
+          </form>
+        </div>
+
+        <div className="relative rounded-md overflow-hidden">
           <Table>
             <TableCaption>A list of your recent urls.</TableCaption>
             <TableHeader>

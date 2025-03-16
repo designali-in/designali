@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import { DashboardStats } from "@/src/components/dashboard/users/stats";
-import { AssetsList } from "@/components/dashboard/users/assets-list";
+import { DashboardStats } from "@/src/components/dashboard/users/stats"; 
 import { DashboardUser } from "@/src/components/dashboard/graphic/assets/about-user";
 import { getCurrentUser } from "@/src/lib/session";
 import Image from "next/image";
@@ -21,10 +20,7 @@ export default async function DashboardPage() {
       <DashboardUser user={user} />
       <Suspense fallback={""}>
         <DashboardStats />
-      </Suspense>
-      <Suspense fallback={""}>
-        <AssetsList />
-      </Suspense>
+      </Suspense> 
     </div>
   );
 }

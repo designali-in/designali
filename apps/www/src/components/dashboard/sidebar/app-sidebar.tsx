@@ -35,7 +35,10 @@ const data = {
       icon: SquareTerminal,
       isActive: true,
       items: [
-         
+        {
+          title: "Assets",
+          url: "/dashboard/assets",
+        },
         {
           title: "Urls",
           url: "/dashboard/urls",
