@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import ImageColorPallate from "./color";
 import { ImageCompressor } from "./image-compressor";
+import { QRCodeGenerator } from "./qr-code";
 
 const ToolsPage = () => {
   return (
@@ -20,6 +21,15 @@ const ToolsPage = () => {
                 className="relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent"
               >
                 Image Compressor
+                <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                  New
+                </span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab-1"
+                className="relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent"
+              >
+                QR Code Generator
                 <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
                   New
                 </span>
@@ -58,10 +68,12 @@ const ToolsPage = () => {
         <TabsContent value="tab-6">
           <ImageColorPallate />
         </TabsContent>
+        <TabsContent value="tab-1">
+          <QRCodeGenerator />
+        </TabsContent>
         <TabsContent value="tab-2">
           <RoundedTool />
-        </TabsContent>
-
+        </TabsContent> 
         <TabsContent value="tab-4">
           <SVGTool />
         </TabsContent>

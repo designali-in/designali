@@ -35,15 +35,6 @@ export function QRCodeGenerator() {
     setQRCode(url);
   };
 
-  const resetForm = () => {
-    setUrl("https://designali.in");
-    setQRCode("https://designali.in");
-    setColor("#000000");
-    setBackgroundColor("#ffffff");
-    setSize(200);
-    setErrorCorrection("M");
-  };
-
   const downloadSVG = () => {
     const svgElement = qrRef.current?.querySelector("svg");
     if (svgElement) {
@@ -61,30 +52,21 @@ export function QRCodeGenerator() {
   };
 
   const downloadPNG = () => {
-    const svgElement = qrRef.current?.querySelector("svg");
-    if (!svgElement) return;
-    
     const canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
-    
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    
+
+    canvas.width = size;
+    canvas.height = size;
     const img = new Image();
-    const svgData = new XMLSerializer().serializeToString(svgElement);
-    const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
-    const url = URL.createObjectURL(svgBlob);
-    
+    img.src = `data:image/svg+xml,${encodeURIComponent(qrRef.current?.innerHTML || "")}`;
     img.onload = () => {
-      ctx.drawImage(img, 0, 0, size, size);
-      URL.revokeObjectURL(url);
+      ctx.drawImage(img, 0, 0);
       const link = document.createElement("a");
       link.href = canvas.toDataURL("image/png");
       link.download = "qrcode.png";
       link.click();
     };
-    img.src = url;
   };
 
   return (
@@ -92,7 +74,7 @@ export function QRCodeGenerator() {
       <Card className="w-full max-w-2xl">
         <CardContent className="mt-6">
           <form onSubmit={generateQRCode} className="space-y-4">
-            <div>
+            <div> 
               <Input
                 id="url"
                 type="url"
@@ -103,7 +85,7 @@ export function QRCodeGenerator() {
                 className="w-full"
               />
             </div>
-            <div className="flex w-full flex-wrap justify-between gap-4">
+            <div className="flex w-full flex-wrap  justify-between gap-4">
               <div className="relative flex w-full max-w-[40px] items-center gap-3">
                 <label className="text-lg font-bold">
                   <div
@@ -134,40 +116,60 @@ export function QRCodeGenerator() {
                   onChange={(e) => setBackgroundColor(e.target.value)}
                 />
               </div>
+
               <div>
-                <Label htmlFor="size">Size: {size}x{size}</Label>
+                <Label htmlFor="size">
+                  Size: {size}x{size}
+                </Label>
                 <Slider
                   id="size"
                   min={100}
                   max={800}
                   step={10}
                   value={[size]}
-                  onValueChange={(value) => setSize(value[0] || 200)}
+                  onValueChange={(value) => {
+                    if (value[0] !== undefined) {
+                      setSize(value[0]);
+                    }
+                  }}
                   className="w-60 md:w-80"
                 />
               </div>
-              <div>
-                <Select value={errorCorrection} onValueChange={setErrorCorrection}>
-                  <SelectTrigger id="errorCorrection">
-                    <SelectValue placeholder="Select error correction level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="L">Low (7%)</SelectItem>
-                    <SelectItem value="M">Medium (15%)</SelectItem>
-                    <SelectItem value="Q">Quartile (25%)</SelectItem>
-                    <SelectItem value="H">High (30%)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+              <div> 
+              <Select
+                value={errorCorrection}
+                onValueChange={setErrorCorrection}
+              >
+                <SelectTrigger id="errorCorrection">
+                  <SelectValue placeholder="Select error correction level" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="L">Low (7%)</SelectItem>
+                  <SelectItem value="M">Medium (15%)</SelectItem>
+                  <SelectItem value="Q">Quartile (25%)</SelectItem>
+                  <SelectItem value="H">High (30%)</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
-            <Button type="submit" className="w-full">Generate QR Code</Button>
-            <Button type="button" onClick={resetForm} className="w-full">Reset</Button>
+            </div>
+
+            
+            <Button type="submit" className="w-full">
+              Generate QR Code
+            </Button>
           </form>
         </CardContent>
         <CardFooter className="flex flex-col items-center space-y-4">
           {qrCode && (
             <div className="mt-4" ref={qrRef}>
-              <QRCodeSVG value={qrCode} size={size} fgColor={color} bgColor={backgroundColor} level={errorCorrection as "L" | "M" | "Q" | "H"} includeMargin={true} />
+              <QRCodeSVG
+                value={qrCode}
+                size={size}
+                fgColor={color}
+                bgColor={backgroundColor}
+                level={errorCorrection as "L" | "M" | "Q" | "H"}
+                includeMargin={true}
+              />
             </div>
           )}
           <div className="flex space-x-4">

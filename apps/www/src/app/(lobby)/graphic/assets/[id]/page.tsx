@@ -121,7 +121,7 @@ export default async function AssetPage({
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between">
             <div className="flex items-center gap-2">
-              <Link href={`/graphic/profile/${username}`}>
+              <Link href={`/${username}`}>
                 <Avatar className="h-8 w-8 border">
                   <AvatarImage src={userAvatar} alt={`${userName}'s avatar`} />
                   <AvatarFallback>D</AvatarFallback>

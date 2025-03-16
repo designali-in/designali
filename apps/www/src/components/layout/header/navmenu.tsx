@@ -169,7 +169,7 @@ export function Menu() {
                 </li>
 
                 <li className="row-span-3">
-                  <NavigationMenuLink href="/products/colors/generate">
+                  <NavigationMenuLink href="/products/colors">
                     <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         <div className="flex gap-2 items-center">
