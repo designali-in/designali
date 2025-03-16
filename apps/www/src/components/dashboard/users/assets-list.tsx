@@ -169,7 +169,7 @@ export function AssetsList() {
         <div className="rounded-md border p-8 text-center">
           <h3 className="text-lg font-medium">No assets found</h3>
           <p className="text-muted-foreground mt-2">
-            You haven't created any assets yet. Click the "Create Asset" button
+            You haven't created any assets yet. Click the "Upload New Asset" button
             to get started.
           </p>
         </div>

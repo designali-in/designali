@@ -27,6 +27,7 @@ export function UsersTable() {
   const [userToDelete, setUserToDelete] = useState(null)
   const [isDeleting, setIsDeleting] = useState(false)
   const [dialogOpen, setDialogOpen] = useState(false)
+  const [visibleCount, setVisibleCount] = useState(5) // Initially show 5 users
   const { toast } = useToast()
 
   useEffect(() => {
@@ -95,6 +96,7 @@ export function UsersTable() {
 
   return (
     <div className="space-y-4 overflow-hidden">
+      <h1 className="text-3xl font-bold mb-6">Users <span className="text-ali">{users.length}</span></h1>
       <div className="flex items-center gap-2">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -127,7 +129,7 @@ export function UsersTable() {
                 </TableCell>
               </TableRow>
             ) : (
-              filteredUsers.map((user) => (
+              filteredUsers.slice(0, visibleCount).map((user) => (
                 <TableRow key={user.id}>
                   <TableCell className="font-medium">{user.name || "—"}</TableCell>
                   <TableCell>{user.email || "—"}</TableCell>
@@ -155,6 +157,13 @@ export function UsersTable() {
           </TableBody>
         </Table>
       </div>
+
+      {/* Load More Button */}
+      {visibleCount < filteredUsers.length && (
+        <div className="flex justify-center mt-4">
+          <Button onClick={() => setVisibleCount(visibleCount + 5)}>Load More</Button>
+        </div>
+      )}
 
       <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <AlertDialogContent>
@@ -195,4 +204,3 @@ export function UsersTable() {
     </div>
   )
 }
-

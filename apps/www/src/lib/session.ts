@@ -18,6 +18,7 @@ export async function getCurrentUser() {
       role: true,
       username: true,
       bio: true,
+      summary: true,
       website: true,
       twitter: true,
       instagram: true,

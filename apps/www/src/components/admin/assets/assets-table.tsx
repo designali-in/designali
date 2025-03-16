@@ -27,6 +27,7 @@ export function AssetsTable() {
   const [assetToDelete, setAssetToDelete] = useState(null)
   const [isDeleting, setIsDeleting] = useState(false)
   const [dialogOpen, setDialogOpen] = useState(false)
+  const [visibleCount, setVisibleCount] = useState(5) // Initially show 5 assets
   const { toast } = useToast()
 
   useEffect(() => {
@@ -94,6 +95,7 @@ export function AssetsTable() {
 
   return (
     <div className="space-y-4">
+       <h1 className="text-3xl font-bold mb-6">Assets <span className="text-ali">{assets.length}</span></h1>
       <div className="flex items-center gap-2">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -126,7 +128,7 @@ export function AssetsTable() {
                 </TableCell>
               </TableRow>
             ) : (
-              filteredAssets.map((asset) => (
+              filteredAssets.slice(0, visibleCount).map((asset) => (
                 <TableRow key={asset.id}>
                   <TableCell className="font-medium">
                     <div className="max-w-[200px] truncate" title={asset.title}>
@@ -183,6 +185,13 @@ export function AssetsTable() {
         </Table>
       </div>
 
+      {/* Load More Button */}
+      {visibleCount < filteredAssets.length && (
+        <div className="flex justify-center mt-4">
+          <Button onClick={() => setVisibleCount(visibleCount + 5)}>Load More</Button>
+        </div>
+      )}
+
       <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -220,4 +229,3 @@ export function AssetsTable() {
     </div>
   )
 }
-

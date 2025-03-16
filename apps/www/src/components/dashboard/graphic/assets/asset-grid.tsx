@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import AboutUser from "./about-user";
+import {ProfileUser} from "./about-user";
 import CldImage from "@/components/common/CloudImage";
 
 type Asset = {
@@ -125,7 +125,7 @@ export function AssetGrid({
             </div>
 
             <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="h-10 w-[180px]">
+              <SelectTrigger className="h-10 w-60">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>
@@ -492,7 +492,7 @@ export function ProfileAssetGrid({
               <TabsTrigger value="about">About</TabsTrigger>
             </TabsList>
             <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="h-10 w-[180px]">
+              <SelectTrigger className="h-10 w-60">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>
@@ -513,7 +513,7 @@ export function ProfileAssetGrid({
           {renderAssetGrid(filteredLikedAssets)}
         </TabsContent>
         <TabsContent value="about">
-          <AboutUser user={user} />
+          <ProfileUser user={user} />
         </TabsContent>
       </Tabs>
 

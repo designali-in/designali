@@ -43,6 +43,7 @@ export function NewsletterTable() {
 
   return (
     <div className="space-y-4">
+      <h1 className="text-3xl font-bold mb-6">Newsletter <span className="text-ali">{subscribers.length}</span></h1>
       <div className="flex items-center gap-2">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />

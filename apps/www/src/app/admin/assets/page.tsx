@@ -5,9 +5,7 @@ import { AssetsTable } from "@/components/admin/assets/assets-table";
 export default function AdminDashboardPage() { 
 
   return (
-    <div className="container py-10 overflow-hidden">
-      <h1 className="text-3xl font-bold mb-6">Assets Dashboard</h1>
-
+    <div className="p-3 md:p-6 overflow-hidden"> 
       <AssetsTable />
     </div>
   );

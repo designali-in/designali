@@ -48,6 +48,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   bio           String?
+  summary       String?
   image         String?
   coverImage    String?
   website       String?

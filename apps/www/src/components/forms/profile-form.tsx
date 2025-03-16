@@ -30,6 +30,7 @@ const profileFormSchema = z.object({
   email: z.string().email("Invalid email address."),
   username: z.string().min(3, "Username must be at least 3 characters."),
   bio: z.string().min(3, "Bio must be at least 3 characters."),
+  summary: z.string().min(3, "Summary must be at least 10 characters."),
   website: z.string().url("Invalid URL").optional().or(z.literal("")),
   twitter: z.string().optional(),
   instagram: z.string().optional(),
@@ -46,6 +47,7 @@ interface ProfileFormProps {
     email?: string | null;
     username?: string | null;
     bio?: string | null;
+    summary?: string | null;
     website?: string | null;
     twitter?: string | null;
     instagram?: string | null;
@@ -84,6 +86,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
       email: user.email || "",
       username: user.username || "",
       bio: user.bio || "",
+      summary: user.summary || "",
       website: user.website || "",
       twitter: user.twitter || "",
       instagram: user.instagram || "",
@@ -100,6 +103,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
       email: user.email || "",
       username: user.username || "",
       bio: user.bio || "",
+      summary: user.summary || "",
       website: user.website || "",
       twitter: user.twitter || "",
       instagram: user.instagram || "",
@@ -186,7 +190,7 @@ export function ProfileForm({ user }: ProfileFormProps) {
                     <FormControl>
                       <div className="relative h-40 w-full overflow-hidden rounded-lg">
                         <img
-                          src="/placeholder.svg"
+                          src="/images/products/3dbg.jpg"
                           alt="Cover"
                           className="h-full w-full object-cover"
                         />
@@ -273,19 +277,36 @@ export function ProfileForm({ user }: ProfileFormProps) {
               </FormItem>
             )}
           />
-        </div>
-
-        <FormField
+          <FormField
           control={form.control}
           name="bio"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Bio</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your Bio" {...field} />
+                <Textarea className="field-sizing-content max-w-60 max-h-10 min-h-10 resize-none py-2" placeholder="Your Bio" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display bio.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        </div>
+
+        
+        <FormField
+          control={form.control}
+          name="summary"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Summary</FormLabel>
+              <FormControl>
+                <Textarea className="h-40" placeholder="Your summary" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display summary.
               </FormDescription>
               <FormMessage />
             </FormItem>

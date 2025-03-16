@@ -32,6 +32,7 @@ async function getUserData(username: string) {
         website: true,
         twitter: true,
         bio: true,
+        summary: true,
         createdAt: true,
         Asset: {
           select: {
