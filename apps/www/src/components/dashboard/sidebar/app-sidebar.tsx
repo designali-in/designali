@@ -125,12 +125,24 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "Graphic",
-          url: "/admin/graphic",
+          title: "Assets",
+          url: "/admin/assets",
+        },
+        {
+          title: "Tags",
+          url: "/admin/tags",
         },
         {
           title: "Users",
           url: "/admin/users",
+        },
+        {
+          title: "Teams",
+          url: "/admin/teams",
+        },
+        {
+          title: "Newsletter",
+          url: "/admin/newsletter",
         },
          
       ],
