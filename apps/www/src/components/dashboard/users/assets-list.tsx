@@ -210,8 +210,8 @@ export function AssetsList() {
               <TableCell>
                 <div className="flex flex-col">
                   <CldImage
-                    src={asset.url || "/placeholder.svg"}
-                    alt={asset.title}
+                   src={(asset.url.includes(",") ? asset.url.split(",")[0] : asset.url) || "/placeholder.svg"}
+                   alt={asset.title}
                     height={40}
                     width={40}
                     className="h-20 w-20 rounded-sm object-cover"
@@ -245,8 +245,7 @@ export function AssetsList() {
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem asChild>
                       <a
-                        href={`/graphic/assets/${asset.id}`}
-                        target="_blank"
+                        href={`/graphic/assets/${asset.id}`} 
                         rel="noopener noreferrer"
                       >
                         View
