@@ -1,181 +1,326 @@
+//@ts-nocheck
 "use client";
 
-import { useState, useRef } from "react";
-import { QRCodeSVG } from "qrcode.react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { useEffect, useRef, useState } from "react";
 import { Slider } from "@/components/ui/slider";
+import { Copy, Minus, Plus, RotateCw } from "lucide-react";
 
-export function QRCodeGenerator() {
-  const [url, setUrl] = useState("https://designali.in");
-  const [qrCode, setQRCode] = useState("https://designali.in");
-  const [color, setColor] = useState("#000000");
-  const [backgroundColor, setBackgroundColor] = useState("#ffffff");
-  const [size, setSize] = useState(200);
-  const [errorCorrection, setErrorCorrection] = useState("M");
-  const qrRef = useRef<HTMLDivElement>(null);
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch"; 
 
-  const generateQRCode = (e: React.FormEvent) => {
-    e.preventDefault();
-    setQRCode(url);
+type ColorStop = {
+  color: string;
+  position: number;
+};
+
+const defaultColorStops: ColorStop[] = [
+  { color: "#00e1ff", position: 0 },
+  { color: "#0000ff", position: 100 },
+];
+
+export function GradientGenerator() {
+  const [colorStops, setColorStops] = useState<ColorStop[]>(defaultColorStops);
+  const [angle, setAngle] = useState(90);
+  const [noiseAmount, setNoiseAmount] = useState(0);
+  const [applyNoise, setApplyNoise] = useState(false);
+  const [isRadialGradient, setIsRadialGradient] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const displayCanvasRef = useRef<HTMLCanvasElement>(null);
+
+  const gradientString = colorStops
+    .map((stop) => `${stop.color} ${stop.position}%`)
+    .join(", ");
+
+  const gradientStyle = {
+    background: !isRadialGradient
+      ? `linear-gradient(${angle}deg, ${gradientString})`
+      : `radial-gradient(circle, ${gradientString})`,
   };
 
-  const resetForm = () => {
-    setUrl("https://designali.in");
-    setQRCode("https://designali.in");
-    setColor("#000000");
-    setBackgroundColor("#ffffff");
-    setSize(200);
-    setErrorCorrection("M");
+  const gradientCSS = !isRadialGradient
+    ? `background: linear-gradient(${angle}deg, ${gradientString});`
+    : `background: radial-gradient(circle, ${gradientString});`;
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(gradientCSS).then(() => {
+       
+    });
   };
 
-  const downloadSVG = () => {
-    const svgElement = qrRef.current?.querySelector("svg");
-    if (svgElement) {
-      const serializer = new XMLSerializer();
-      const svgBlob = new Blob([serializer.serializeToString(svgElement)], {
-        type: "image/svg+xml",
-      });
-      const url = URL.createObjectURL(svgBlob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "qrcode.svg";
-      link.click();
-      URL.revokeObjectURL(url);
+  useEffect(() => {
+    updateCanvas();
+  }, [colorStops, angle, noiseAmount, applyNoise, isRadialGradient]);
+
+  const updateCanvas = () => {
+    const canvas = canvasRef.current;
+    const displayCanvas = displayCanvasRef.current;
+    if (canvas && displayCanvas) {
+      const ctx = canvas.getContext("2d");
+      const displayCtx = displayCanvas.getContext("2d");
+      if (ctx && displayCtx) {
+        let gradient;
+        if (!isRadialGradient) {
+          gradient = ctx.createLinearGradient(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+          );
+        } else {
+          gradient = ctx.createRadialGradient(
+            canvas.width / 2,
+            canvas.height / 2,
+            0,
+            canvas.width / 2,
+            canvas.height / 2,
+            canvas.width / 2
+          );
+        }
+
+        colorStops.forEach((stop) => {
+          gradient.addColorStop(stop.position / 100, stop.color);
+        });
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        if (applyNoise) {
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const data = imageData.data;
+          for (let i = 0; i < data.length; i += 4) {
+            const noise = (Math.random() - 0.5) * noiseAmount;
+            data[i] = Math.min(255, Math.max(0, data[i] + noise));
+            data[i + 1] = Math.min(255, Math.max(0, data[i + 1] + noise));
+            data[i + 2] = Math.min(255, Math.max(0, data[i + 2] + noise));
+          }
+          ctx.putImageData(imageData, 0, 0);
+        }
+
+        displayCtx.drawImage(
+          canvas,
+          0,
+          0,
+          displayCanvas.width,
+          displayCanvas.height
+        );
+      }
     }
   };
 
-  const downloadPNG = () => {
-    const svgElement = qrRef.current?.querySelector("svg");
-    if (!svgElement) return;
-    
-    const canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
-    
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    
-    const img = new Image();
-    const svgData = new XMLSerializer().serializeToString(svgElement);
-    const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
-    const url = URL.createObjectURL(svgBlob);
-    
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, size, size);
-      URL.revokeObjectURL(url);
+  const downloadJPG = () => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const dataURL = canvas.toDataURL("image/jpeg");
       const link = document.createElement("a");
-      link.href = canvas.toDataURL("image/png");
-      link.download = "qrcode.png";
+      link.download = "gradient_with_noise.jpg";
+      link.href = dataURL;
       link.click();
-    };
-    img.src = url;
+    }
+  };
+
+  const addColorStop = () => {
+    if (colorStops.length < 5) {
+      const newPosition = Math.round(
+        (colorStops[colorStops.length - 1].position + colorStops[0].position) /
+          2
+      );
+      setColorStops([
+        ...colorStops,
+        { color: "#ffffff", position: newPosition },
+      ]);
+    }
+  };
+
+  const removeColorStop = (index: number) => {
+    if (colorStops.length > 2) {
+      setColorStops(colorStops.filter((_, i) => i !== index));
+    }
+  };
+
+  const updateColorStop = (index: number, color: string, position: number) => {
+    const newColorStops = [...colorStops];
+    newColorStops[index] = { color, position };
+    setColorStops(newColorStops.sort((a, b) => a.position - b.position));
+  };
+
+  const resetSettings = () => {
+    setColorStops(defaultColorStops);
+    setAngle(90);
+    setNoiseAmount(0);
+    setApplyNoise(false);
+    setIsRadialGradient(false);
+    toast("Settings reset to default values");
   };
 
   return (
-    <div className="flex items-center justify-center p-4">
-      <Card className="w-full max-w-2xl">
-        <CardContent className="mt-6">
-          <form onSubmit={generateQRCode} className="space-y-4">
-            <div>
-              <Input
-                id="url"
-                type="url"
-                placeholder="Enter a URL"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                required
-                className="w-full"
-              />
-            </div>
-            <div className="flex w-full flex-wrap justify-between gap-4">
-              <div className="relative flex w-full max-w-[40px] items-center gap-3">
-                <label className="text-lg font-bold">
-                  <div
-                    className="border-ali size-10 cursor-pointer rounded-full border-2"
-                    style={{ backgroundColor: color }}
-                  />
-                </label>
-                <Input
-                  className="absolute left-0 top-3 opacity-0"
-                  type="color"
-                  id="color"
-                  value={color}
-                  onChange={(e) => setColor(e.target.value)}
-                />
-              </div>
-              <div className="relative flex w-full max-w-[40px] items-center gap-3">
-                <label className="text-lg font-bold">
-                  <div
-                    className="border-ali size-10 cursor-pointer rounded-full border-2"
-                    style={{ backgroundColor: backgroundColor }}
-                  />
-                </label>
-                <Input
-                  className="absolute left-0 top-3 opacity-0"
-                  type="color"
-                  id="backgroundColor"
-                  value={backgroundColor}
-                  onChange={(e) => setBackgroundColor(e.target.value)}
-                />
-              </div>
-              <div>
-                <Label htmlFor="size">Size: {size}x{size}</Label>
-                <Slider
-                  id="size"
-                  min={100}
-                  max={800}
-                  step={10}
-                  value={[size]}
-                  onValueChange={(value) => setSize(value[0] || 200)}
-                  className="w-60 md:w-80"
-                />
-              </div>
-              <div>
-                <Select value={errorCorrection} onValueChange={setErrorCorrection}>
-                  <SelectTrigger id="errorCorrection">
-                    <SelectValue placeholder="Select error correction level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="L">Low (7%)</SelectItem>
-                    <SelectItem value="M">Medium (15%)</SelectItem>
-                    <SelectItem value="Q">Quartile (25%)</SelectItem>
-                    <SelectItem value="H">High (30%)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-            <Button type="submit" className="w-full">Generate QR Code</Button>
-            <Button type="button" onClick={resetForm} className="w-full">Reset</Button>
-          </form>
-        </CardContent>
-        <CardFooter className="flex flex-col items-center space-y-4">
-          {qrCode && (
-            <div className="mt-4" ref={qrRef}>
-              <QRCodeSVG value={qrCode} size={size} fgColor={color} bgColor={backgroundColor} level={errorCorrection as "L" | "M" | "Q" | "H"} includeMargin={true} />
-            </div>
-          )}
-          <div className="flex space-x-4">
-            <Button onClick={downloadPNG}>Download PNG</Button>
-            <Button onClick={downloadSVG}>Download SVG</Button>
+    <div className="flex items-center justify-center p-6">
+      <div className="w-full space-y-2 rounded-2xl border-2 bg-popover/80 p-6">
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="relative">
+            <div
+              className="aspect-square h-full w-60 rounded-md md:w-80"
+              style={gradientStyle}
+            ></div>
+            <canvas
+              ref={displayCanvasRef}
+              width={1000}
+              height={1000}
+              className="absolute left-0 top-0 aspect-square h-full w-60 rounded-md mix-blend-overlay md:w-80"
+            />
           </div>
-        </CardFooter>
-      </Card>
+          <div className="grid w-full flex-1 gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              {colorStops.map((stop, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div className="relative flex w-full max-w-[40px] items-center gap-3">
+                    <label
+                      htmlFor={`color-${index}`}
+                      className="text-lg font-bold"
+                    >
+                      <div
+                        className="border-ali size-10 cursor-pointer rounded-full border-2"
+                        style={{ backgroundColor: stop.color }}
+                      />
+                    </label>
+                    <Input
+                      className="absolute left-0 top-3 opacity-0"
+                      type="color"
+                      id={`color-${index}`}
+                      value={stop.color}
+                      onChange={(e) =>
+                        updateColorStop(index, e.target.value, stop.position)
+                      }
+                    />
+                  </div>
+                  <Input
+                    type="number"
+                    min={0}
+                    max={100}
+                    value={stop.position}
+                    onChange={(e) =>
+                      updateColorStop(index, stop.color, Number(e.target.value))
+                    }
+                    className="w-16"
+                  />
+                  {colorStops.length > 2 && (
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => removeColorStop(index)}
+                    >
+                      <Minus className="h-4 w-4" />
+                    </Button>
+                  )}
+                </div>
+              ))}
+              {colorStops.length < 5 && (
+                <Button variant="outline" size="icon" onClick={addColorStop}>
+                  <Plus className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
+                <Label className={!isRadialGradient ? "font-medium" : ""}>
+                  Linear
+                </Label>
+                <Switch
+                  id="gradient-type"
+                  checked={isRadialGradient}
+                  onCheckedChange={(checked) => setIsRadialGradient(checked)}
+                />
+                <Label className={isRadialGradient ? "font-medium" : ""}>
+                  Radial
+                </Label>
+              </div>
+              {!isRadialGradient && (
+                <div className="flex w-full items-center gap-2">
+                  <Label className="w-auto" htmlFor="angle">
+                    Angle
+                  </Label>
+                  <Slider
+                    id="angle"
+                    value={[angle]}
+                    defaultValue={[33]}
+                    min={0}
+                    max={360}
+                    className="w-full"
+                    onValueChange={(value) => setAngle(Number(value))}
+                  />
+                  <Label className="w-auto" htmlFor="angle">
+                    {angle}°
+                  </Label>
+                </div>
+              )}
+            </div>
+
+            <div className="flex w-full items-center gap-2">
+              <Switch
+                id="apply-noise"
+                checked={applyNoise}
+                onCheckedChange={setApplyNoise}
+              />
+              <Label className="w-auto" htmlFor="apply-noise">
+                Noise
+              </Label>
+              {applyNoise && (
+                <div className="flex w-full gap-2">
+                  <Slider
+                    id="noise"
+                    defaultValue={[33]}
+                    min={0}
+                    max={200}
+                    value={[noiseAmount]}
+                    className="w-full"
+                    onValueChange={(value) => setNoiseAmount(Number(value))}
+                  />
+                  <Label className="w-auto" htmlFor="noise">
+                    {noiseAmount}
+                  </Label>
+                </div>
+              )}
+            </div>
+            <div className="grid gap-2">
+              <div>
+                <div className="mt-1 flex flex-wrap items-center gap-2">
+                  <Label htmlFor="css">CSS Code</Label>
+                  <Input
+                    id="css"
+                    value={gradientCSS}
+                    readOnly
+                    className="w-auto flex-grow"
+                  />
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={copyToClipboard}
+                  >
+                    <Copy className="h-4 w-4" />
+                  </Button>
+                  <Button onClick={downloadJPG} className="">
+                    Download JPG
+                  </Button>
+                  <Button
+                    size="icon"
+                    onClick={resetSettings}
+                    variant="secondary"
+                  >
+                    <RotateCw />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <canvas
+        ref={canvasRef}
+        width="1000"
+        height="1000"
+        style={{ display: "none" }}
+      />
     </div>
   );
 }
