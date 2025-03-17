@@ -132,6 +132,10 @@ const data = {
           url: "/admin/assets",
         },
         {
+          title: "Inspiration",
+          url: "/admin/inspiration",
+        },
+        {
           title: "Tags",
           url: "/admin/tags",
         },
@@ -150,16 +154,7 @@ const data = {
          
       ],
     },
-    {
-      title: "Agency",
-      url: "/admin/agency",
-      icon: SquareTerminal,
-      isActive: false,
-      items: [
-        
-      ],
-    },
-
+     
     {
       title: "Settings",
       url: "/admin/settings",

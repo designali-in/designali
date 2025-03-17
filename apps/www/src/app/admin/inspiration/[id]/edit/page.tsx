@@ -20,7 +20,7 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
   const [asset, setAsset] = useState<any>(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [downloadlink, setDownloadlink] = useState("");
+  const [websitelink, setDownloadlink] = useState("");
   const [tags, setTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -35,7 +35,7 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
           setAsset(data);
           setTitle(data.title);
           setDescription(data.description || "");
-          setDownloadlink(data.downloadlink || "");
+          setDownloadlink(data.websitelink || "");
           setTags(data.tags?.map((tag: { name: string }) => tag.name) || []);
         } else {
           console.error("Failed to fetch asset");
@@ -70,11 +70,11 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, description, downloadlink, tags }),
+        body: JSON.stringify({ title, description, websitelink, tags }),
       });
 
       if (response.ok) {
-        router.push(`/admin/inspiration/${params.id}`);
+        router.push(`/admin/inspiration`);
         router.refresh();
         toast({
           title: "Success",
@@ -149,15 +149,15 @@ export default function EditAssetPage({ params }: { params: { id: string } }) {
             </div>
             <div>
               <label
-                htmlFor="downloadlink"
+                htmlFor="websitelink"
                 className="block text-sm font-medium text-gray-700"
               >
-                Download Link
+                Website Link
               </label>
               <Input
-                id="downloadlink"
+                id="websitelink"
                 type="text"
-                value={downloadlink}
+                value={websitelink}
                 onChange={(e) => setDownloadlink(e.target.value)}
               />
             </div>

@@ -90,7 +90,62 @@ export async function deleteAsset(id: string) {
       where: { id },
     })
 
-    revalidatePath("/admin/dashboard")
+    revalidatePath("/admin/assets")
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to delete asset:", error)
+    return { error: "Failed to delete asset" }
+  }
+}
+
+// Asset actions
+export async function getInspiration() {
+  try {
+    const inspirations = await prisma.inspiration.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            username: true,
+          },
+        },
+        tags: true,
+        _count: {
+          select: {
+            likes: true,
+          },
+        },
+      },
+    })
+
+    return inspirations
+  } catch (error) {
+    console.error("Failed to fetch assets:", error)
+    return []
+  }
+}
+
+export async function deleteInspiration(id: string) {
+  try {
+    // Check if asset exists
+    const inspiration = await prisma.inspiration.findUnique({
+      where: { id },
+    })
+
+    if (!inspiration) {
+      return { error: "Asset not found" }
+    }
+
+    // Delete asset (cascades to related records)
+    await prisma.inspiration.delete({
+      where: { id },
+    })
+
+    revalidatePath("/admin/inspiration")
     return { success: true }
   } catch (error) {
     console.error("Failed to delete asset:", error)
