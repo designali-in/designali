@@ -181,7 +181,7 @@ model Asset {
   updatedAt    DateTime    @updatedAt
   userId       String
   user         User        @relation(fields: [userId], references: [id])
-  likes        AssetLike[]
+  likes        AssetLike[] @relation("AssetToLikes")
   tags         Tag[]
 }
 
@@ -191,7 +191,7 @@ model AssetLike {
   userId    String
   assetId   String
   user      User     @relation(fields: [userId], references: [id])
-  asset     Asset    @relation(fields: [assetId], references: [id])
+  asset     Asset    @relation("AssetToLikes", fields: [assetId], references: [id], onDelete: Cascade)
 
   @@unique([userId, assetId])
 }
@@ -201,3 +201,5 @@ model Tag {
   name   String  @unique
   assets Asset[]
 }
+
+

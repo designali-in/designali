@@ -205,38 +205,7 @@ export function Menu() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Enterprise</NavigationMenuTrigger>
-
-            <NavigationMenuContent className="space-y-3">
-              <ul className="grid gap-3 p-4 md:w-[600px] lg:w-[900px] lg:grid-cols-[1fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink href="/agency">
-                    <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Agency
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                      Crafting bold, beautiful, and user-focused designs that tell your story and elevate your brand.
-                      </p>
-                    </div>
-                  </NavigationMenuLink>
-                </li>
-                <li className="row-span-3">
-                  <NavigationMenuLink href="/agency/works">
-                    <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
-                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
-                        Works
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                      A glimpse of the creativity, strategy, and craftsmanship we bring to every project.
-                      </p>
-                    </div>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+          
 
           <NavigationMenuItem>
             <NavigationMenuLink
