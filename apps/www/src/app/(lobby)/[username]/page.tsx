@@ -137,7 +137,7 @@ export default async function UserProfilePage({ params }: Props) {
             <Avatar className="h-20 w-20 rounded-lg border md:h-24 md:w-24">
               <AvatarImage
                 className="rounded-lg"
-                src={user.image}
+                src={user.image || "/placeholder.svg"}
                 alt={`${user.name}'s avatar`}
               />
               <AvatarFallback className="rounded-md">D</AvatarFallback>

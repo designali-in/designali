@@ -110,7 +110,7 @@ export function InspirationTable() {
   }
 
   if (loading) {
-    return <div className="flex justify-center p-4">Loading assets...</div>;
+    return <div className="flex justify-center p-4">Loading inspirations...</div>;
   }
 
   return (
@@ -199,7 +199,7 @@ export function InspirationTable() {
                   </TableCell>
                   <TableCell className="text-right">
                     <DropdownMenu>
-                      <DropdownMenuTrigger><Menu className/></DropdownMenuTrigger>
+                      <DropdownMenuTrigger>...</DropdownMenuTrigger>
                       <DropdownMenuContent>
                       <DropdownMenuItem> 
                           <Link href={`/admin/inspiration/${asset.id}/edit`}>

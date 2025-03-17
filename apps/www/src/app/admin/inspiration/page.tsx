@@ -74,7 +74,7 @@ export default function UploadPage() {
     if (response.ok) {
       const asset = await response.json();
       console.log("Uploaded asset:", asset);
-      router.push("/admin/inspiration");
+      router.push("/admin/inspiration/");
     } else {
       console.error("Upload failed:", await response.text());
     }
@@ -83,9 +83,9 @@ export default function UploadPage() {
   return (
     <div className="p-6">
       <h1 className="mb-8 text-center text-3xl font-semibold">
-        Upload New Assets
+        Upload New
       </h1>
-      <form onSubmit={handleSubmit} className="flex gap-3 flex-wrap">
+      <form onSubmit={handleSubmit} className="flex mb-6 gap-3 flex-wrap">
         <div className="mb-4">
           <Input
             type="text"
@@ -108,7 +108,7 @@ export default function UploadPage() {
             type="text"
             value={websitelink}
             onChange={(e) => setWebsitelink(e.target.value)}
-            placeholder="Download Link*"
+            placeholder="Website Link*"
             required
           />
         </div>
