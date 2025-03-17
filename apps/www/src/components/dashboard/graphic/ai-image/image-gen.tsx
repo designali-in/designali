@@ -103,11 +103,11 @@ export function AIImage() {
 
   return (
     <main className="flex items-center justify-center bg-background p-6">
-      <Card className="w-full max-w-4xl border-0 bg-card shadow-none">
+      <Card className="w-full  border-0">
         <CardHeader className="flex flex-col items-center justify-center space-y-2">
           <CardTitle className="flex items-center gap-2 text-foreground">
            
-            Image Creation & Editing
+            Unlimited Image Creation & Editing
           </CardTitle>
          
         </CardHeader>
@@ -133,9 +133,9 @@ export function AIImage() {
           ) : loading ? (
             <div
               role="status"
-              className="flex items-center mx-auto justify-center h-56 max-w-sm bg-gray-300 rounded-lg animate-pulse dark:bg-secondary"
+              className="flex items-center mx-auto justify-center h-56 max-w-sm bg-stone-300 rounded-lg animate-pulse dark:bg-secondary"
             >
-              <ImageIcon className="w-10 h-10 text-gray-200 dark:text-muted-foreground" />
+              <ImageIcon className="w-10 h-10 text-stone-200 dark:text-muted-foreground" />
               <span className="pl-4 font-mono font-xs text-muted-foreground">
                 Processing...
               </span>

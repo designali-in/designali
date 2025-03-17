@@ -70,11 +70,11 @@ export function ImageUpload({ onImageSelect, currentImage }: ImageUploadProps) {
   };
 
   return (
-    <div className="w-full">
+    <div className="flex justify-center">
       {!currentImage ? (
         <div
           {...getRootProps()}
-          className={`min-h-[150px] p-4 rounded-lg
+          className={`min-h-[150px] w-[400px] border p-4 rounded-lg
           ${isDragActive ? "bg-secondary/50" : "bg-secondary"}
           transition-colors duration-200 ease-in-out hover:bg-secondary/50
           border-2 border-dashed border-secondary
@@ -82,13 +82,13 @@ export function ImageUpload({ onImageSelect, currentImage }: ImageUploadProps) {
         `}
         >
           <input {...getInputProps()} />
-          <div className="flex flex-row items-center">
+          <div className="flex flex-col gap-3 justify-center items-center">
             <UploadIcon className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
             <div className="">
               <p className="text-sm font-medium text-foreground">
                 Drop your image here or click to browse
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs mt-2 text-muted-foreground">
                 Maximum file size: 10MB
               </p>
             </div>
