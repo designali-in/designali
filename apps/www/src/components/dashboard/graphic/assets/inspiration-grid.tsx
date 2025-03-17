@@ -155,7 +155,7 @@ export function InspirationGrid({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="latest">Latest</SelectItem>
-                <SelectItem value="mostDownloaded">Most Downloaded</SelectItem>
+                <SelectItem value="mostDownloaded">Most Visited</SelectItem>
                 <SelectItem value="mostLiked">Most Liked</SelectItem>
                 <SelectItem value="mostViewed">Most Viewed</SelectItem>
               </SelectContent>

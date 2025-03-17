@@ -1,11 +1,30 @@
 //@ts-nocheck
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { getInspiration, deleteInspiration } from "@/actions/admin/admin-action"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { useState, useEffect } from "react";
+import {
+  getInspiration,
+  deleteInspiration,
+} from "@/actions/admin/admin-action";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -15,88 +34,90 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog"
-import { Trash2, Search, FileX, Eye, Download } from "lucide-react"
-import { useToast } from "@/components/ui/use-toast"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
+} from "@/components/ui/alert-dialog";
+import { Trash2, Search, FileX, Eye, Download } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export function InspirationTable() {
-  const [assets, setAssets] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [searchTerm, setSearchTerm] = useState("")
-  const [assetToDelete, setAssetToDelete] = useState(null)
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [dialogOpen, setDialogOpen] = useState(false)
-  const [visibleCount, setVisibleCount] = useState(5) // Initially show 5 assets
-  const { toast } = useToast()
+  const [assets, setAssets] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [assetToDelete, setAssetToDelete] = useState(null);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(5); // Initially show 5 assets
+  const { toast } = useToast();
 
   useEffect(() => {
     async function loadAssets() {
       try {
-        const data = await getInspiration()
-        setAssets(data)
+        const data = await getInspiration();
+        setAssets(data);
       } catch (error) {
         toast({
           title: "Error",
           description: "Failed to load assets",
           variant: "destructive",
-        })
+        });
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
 
-    loadAssets()
-  }, [toast])
+    loadAssets();
+  }, [toast]);
 
   const filteredAssets = assets.filter(
     (asset) =>
       asset.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      asset.description?.toLowerCase().includes(searchTerm.toLowerCase()),
-  )
+      asset.description?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   async function handleDeleteAsset() {
-    if (!assetToDelete) return
+    if (!assetToDelete) return;
 
-    setIsDeleting(true)
+    setIsDeleting(true);
 
     try {
-      const result = await deleteInspiration(assetToDelete.id)
+      const result = await deleteInspiration(assetToDelete.id);
 
       if (result.error) {
         toast({
           title: "Error",
           description: result.error,
           variant: "destructive",
-        })
+        });
       } else {
         toast({
           title: "Success",
           description: "Asset deleted successfully",
-        })
-        setAssets(assets.filter((asset) => asset.id !== assetToDelete.id))
+        });
+        setAssets(assets.filter((asset) => asset.id !== assetToDelete.id));
       }
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to delete asset",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsDeleting(false)
-      setDialogOpen(false)
-      setAssetToDelete(null)
+      setIsDeleting(false);
+      setDialogOpen(false);
+      setAssetToDelete(null);
     }
   }
 
   if (loading) {
-    return <div className="flex justify-center p-4">Loading assets...</div>
+    return <div className="flex justify-center p-4">Loading assets...</div>;
   }
 
   return (
     <div className="space-y-4">
-       <h1 className="text-3xl font-bold mb-6">Assets <span className="text-ali">{assets.length}</span></h1>
+      <h1 className="text-3xl font-bold mb-6">
+        Assets <span className="text-ali">{assets.length}</span>
+      </h1>
       <div className="flex items-center gap-2">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -114,12 +135,9 @@ export function InspirationTable() {
           <TableHeader>
             <TableRow>
               <TableHead>Title</TableHead>
-              <TableHead>Owner</TableHead>
               <TableHead>Stats</TableHead>
               <TableHead>Created</TableHead>
               <TableHead>Tags</TableHead>
-              <TableHead>Edit</TableHead>
-              <TableHead>View</TableHead>
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -138,12 +156,15 @@ export function InspirationTable() {
                       {asset.title}
                     </div>
                     {asset.description && (
-                      <div className="text-xs text-muted-foreground max-w-[200px] truncate" title={asset.description}>
+                      <div
+                        className="text-xs text-muted-foreground max-w-[200px] truncate"
+                        title={asset.description}
+                      >
                         {asset.description}
                       </div>
                     )}
                   </TableCell>
-                  <TableCell>{asset.user?.name || asset.user?.username || "Unknown"}</TableCell>
+
                   <TableCell>
                     <div className="flex space-x-2">
                       <span className="flex items-center text-xs">
@@ -154,46 +175,51 @@ export function InspirationTable() {
                       </span>
                     </div>
                   </TableCell>
-                  <TableCell>{new Date(asset.createdAt).toLocaleDateString()}</TableCell>
+                  <TableCell>
+                    {new Date(asset.createdAt).toLocaleDateString()}
+                  </TableCell>
                   <TableCell>
                     <div className="flex flex-wrap gap-1">
                       {asset.tags?.length > 0 ? (
                         asset.tags.map((tag) => (
-                          <Badge key={tag.id} variant="outline" className="text-xs">
+                          <Badge
+                            key={tag.id}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             {tag.name}
                           </Badge>
                         ))
                       ) : (
-                        <span className="text-xs text-muted-foreground">No tags</span>
+                        <span className="text-xs text-muted-foreground">
+                          No tags
+                        </span>
                       )}
                     </div>
                   </TableCell>
-                  <TableCell>
-                    <Link href={`/admin/inspiration/${asset.id}/edit`}>
-                    <Button>
-                      Edit
-                    </Button>
-                    </Link>
-                  </TableCell>
-                  <TableCell>
-                    <Link href={`/graphic`}>
-                    <Button>
-                      View
-                    </Button>
-                    </Link>
-                  </TableCell>
                   <TableCell className="text-right">
-                    <Button
-                      variant="destructive"
-                      size="sm"
-                      onClick={() => {
-                        setAssetToDelete(asset)
-                        setDialogOpen(true)
-                      }}
-                    >
-                      <Trash2 className="h-4 w-4 mr-1" />
-                      Delete
-                    </Button>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger><Menu className/></DropdownMenuTrigger>
+                      <DropdownMenuContent>
+                      <DropdownMenuItem> 
+                          <Link href={`/admin/inspiration/${asset.id}/edit`}>
+                            Edit
+                          </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                          <Link href={`/graphic`}>View</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => {
+                            setAssetToDelete(asset);
+                            setDialogOpen(true);
+                          }}
+                        >
+                          <Trash2 className="h-4 w-4 mr-1" />
+                          Delete
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                   </TableCell>
                 </TableRow>
               ))
@@ -205,7 +231,9 @@ export function InspirationTable() {
       {/* Load More Button */}
       {visibleCount < filteredAssets.length && (
         <div className="flex justify-center mt-4">
-          <Button onClick={() => setVisibleCount(visibleCount + 5)}>Load More</Button>
+          <Button onClick={() => setVisibleCount(visibleCount + 5)}>
+            Load More
+          </Button>
         </div>
       )}
 
@@ -244,5 +272,5 @@ export function InspirationTable() {
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  )
+  );
 }

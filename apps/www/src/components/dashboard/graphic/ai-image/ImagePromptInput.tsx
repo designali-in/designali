@@ -12,7 +12,7 @@ interface ImagePromptInputProps {
 }
 
 const predefinedPrompts = [
-  "Create a futuristic UI/UX dashboard with a sleek, glassmorphic design",
+  "Create a UI/UX dashboard with a sleek, glassmorphic design",
   "Create a bold, modern typography poster with dynamic compositions",
   "Create a neon cyberpunk-style logo with glitch effects",
   "Create a visually striking isometric illustration of a futuristic city", 
@@ -43,6 +43,18 @@ export function ImagePromptInput({
         </p>
       </div>
 
+      <Input
+        id="prompt"
+        className="border-2 h-12 resize-none"
+        placeholder={
+          isEditing
+            ? "Example: Make the background blue and add a rainbow..."
+            : "Example: Create a futuristic, dreamy composition inspired by the moon and space illusions."
+        }
+        value={prompt}
+        onChange={(e) => setPrompt(e.target.value)}
+      />
+
       <div className="flex justify-center flex-wrap truncate gap-2">
         {predefinedPrompts.map((p, index) => (
           <Button
@@ -57,17 +69,7 @@ export function ImagePromptInput({
         ))}
       </div>
 
-      <Input
-        id="prompt"
-        className="border-2 h-12 resize-none"
-        placeholder={
-          isEditing
-            ? "Example: Make the background blue and add a rainbow..."
-            : "Example: Create a futuristic, dreamy composition inspired by the moon and space illusions."
-        }
-        value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
-      />
+      
 
       <Button type="submit" disabled={!prompt.trim() || isLoading}>
         <Wand2 className="w-4 h-4" />

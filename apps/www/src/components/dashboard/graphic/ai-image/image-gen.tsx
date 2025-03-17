@@ -120,15 +120,16 @@ export function AIImage() {
 
           {!displayImage && !loading ? (
             <>
-              <ImageUpload
-                onImageSelect={handleImageSelect}
-                currentImage={currentImage}
-              />
-              <ImagePromptInput
+            <ImagePromptInput
                 onSubmit={handlePromptSubmit}
                 isEditing={isEditing}
                 isLoading={loading}
               />
+              <ImageUpload
+                onImageSelect={handleImageSelect}
+                currentImage={currentImage}
+              />
+              
             </>
           ) : loading ? (
             <div

@@ -110,7 +110,7 @@ const BrowsePage = async () => {
                 "z-20  justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl"
               )}
             >
-              Open File for <span className="text-ali"> Everyone</span>
+              Open Design for <span className="text-ali"> Everyone</span>
             </h3>
           </div>
           <p className=" mx-auto max-w-xl text-xs">
@@ -172,19 +172,19 @@ const BrowsePage = async () => {
                         <span className="text-ali px-1 font-semibold">
                           {inspirations.length}
                         </span>
+                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
                       </TabsTrigger>
                       <TabsTrigger value="tab-4">
-                        <Wand2 className="w-4 mr-1 h-4" />
+                        <Wand2 className="w-3 mr-1 h-3" />
                         AI Image Gen
                         <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
                           New
                         </span>
                       </TabsTrigger>
                       <TabsTrigger value="tab-2">
-                        Stock Images
-                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                          New
-                        </span>
+                        Stock Images 
                       </TabsTrigger>
                       <TabsTrigger value="tab-3">
                         Designers

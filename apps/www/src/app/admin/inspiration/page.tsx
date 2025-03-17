@@ -8,8 +8,7 @@ import { useSession } from "next-auth/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Connect } from "@/src/components/common/connect";
+import { Textarea } from "@/components/ui/textarea"; 
 import { InspirationTable } from "@/src/components/admin/assets/inspiration-table";
 
 export default function UploadPage() {
@@ -47,7 +46,7 @@ export default function UploadPage() {
   };
 
   const handleCancel = () => {
-    router.push("/graphic");
+    router.push("/admin/inspiration");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -75,7 +74,7 @@ export default function UploadPage() {
     if (response.ok) {
       const asset = await response.json();
       console.log("Uploaded asset:", asset);
-      router.push("/graphic");
+      router.push("/admin/inspiration");
     } else {
       console.error("Upload failed:", await response.text());
     }
@@ -132,7 +131,7 @@ export default function UploadPage() {
                   alt={`Preview ${index + 1}`}
                   width={200}
                   height={200}
-                  className="aspect-square h-full w-full rounded-md border object-cover"
+                  className=" h-[200px] w-[200px] rounded-md border object-cover"
                 />
                 <Button
                   type="button"
@@ -152,7 +151,7 @@ export default function UploadPage() {
           </Button>
           <Button type="submit">
             {" "}
-            {loading ? "Uploading..." : "Upload Assets"}
+            {loading ? "Uploading..." : "Upload Inspiration"}
           </Button>
         </div>
       </form>
