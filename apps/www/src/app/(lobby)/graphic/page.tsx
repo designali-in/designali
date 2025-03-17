@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AdBanner from "@/components/common/AdBanner";
 import LogoPage from "@/components/lobby/products/logos/logos";
-import ToolsPage from "@/components/lobby/products/tools/tools"; 
+import ToolsPage from "@/components/lobby/products/tools/tools";
 import { AssetGrid } from "@/src/components/dashboard/graphic/assets/asset-grid";
 import AssetUsers from "@/src/components/dashboard/graphic/assets/asset-users";
 import { auth } from "@/src/lib/auth";
-import { cn } from "@/src/lib/utils"; 
+import { cn } from "@/src/lib/utils";
 
-import { env } from "@/env"; 
+import { env } from "@/env";
 import { prisma } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
@@ -20,6 +20,7 @@ import ShineBorder from "@/src/components/ui/backgrounds/shine-border";
 import Gallery from "@/src/components/lobby/images/gallery";
 import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
 import { Wand2 } from "lucide-react";
+import { InspirationGrid } from "@/src/components/dashboard/graphic/assets/inspiration-grid";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -45,8 +46,32 @@ const BrowsePage = async () => {
     tags: asset.tags.map((tag) => tag.name), // Extract tag names
   }));
 
+  const inspirations = await prisma.inspiration.findMany({
+    orderBy: { createdAt: "desc" },
+    include: {
+      likes: true,
+      tags: true, // Include tags
+    },
+  });
+
+  const isLiked = session
+    ? inspirations.some((inspiration) =>
+        inspiration.likes.some((like) => like.userId === session.user.id)
+      )
+    : false;
+
+
+  const formattedInspirations = inspirations.map((inspiration) => ({
+    ...inspiration,
+    uploadedAt: inspiration.createdAt.toISOString(),
+    tags: inspiration.tags.map((tag) => tag.name), // Extract tag names
+  }));
+
   const tags = await prisma.tag.findMany();
   const availableTags = tags.map((tag) => tag.name);
+
+  const inspirationtags = await prisma.inspirationTag.findMany();
+  const inspirationTags = inspirationtags.map((tag) => tag.name);
 
   const users = await prisma.user.findMany({
     orderBy: { createdAt: "desc" },
@@ -70,7 +95,6 @@ const BrowsePage = async () => {
     totalLikes: 0,
     joinedAt: user.createdAt.toISOString(),
   }));
- 
 
   return (
     <div className="relative overflow-hidden">
@@ -143,15 +167,21 @@ const BrowsePage = async () => {
                           {assets.length}
                         </span>
                       </TabsTrigger>
+                      <TabsTrigger value="tab-5">
+                        Inspirations
+                        <span className="text-ali px-1 font-semibold">
+                          {inspirations.length}
+                        </span>
+                      </TabsTrigger>
                       <TabsTrigger value="tab-4">
-                      <Wand2 className="w-4 mr-1 h-4" />
-                       AI Image Gen
+                        <Wand2 className="w-4 mr-1 h-4" />
+                        AI Image Gen
                         <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
                           New
                         </span>
                       </TabsTrigger>
                       <TabsTrigger value="tab-2">
-                        Stock Images 
+                        Stock Images
                         <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
                           New
                         </span>
@@ -171,7 +201,6 @@ const BrowsePage = async () => {
                         {""}
                         <span className="ml-1 font-thin">by svgl</span>
                         <span className="text-ali px-1 font-semibold">476</span>
-                         
                       </TabsTrigger>
                       <TabsTrigger value="tab-7">
                         <p>Tools</p>
@@ -190,10 +219,17 @@ const BrowsePage = async () => {
                   />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-4">
-                <AIImage />
+                  <AIImage />
+                </TabsContent>
+                <TabsContent className="min-h-screen" value="tab-5">
+                  <InspirationGrid
+                  isLiked={isLiked}
+                    inspirations={formattedInspirations}
+                    availableTags={inspirationTags}
+                  />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-2">
-                <Gallery />
+                  <Gallery />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-3">
                   <AssetUsers users={formattedUsers} />

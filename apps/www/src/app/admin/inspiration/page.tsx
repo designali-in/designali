@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";  
 import { DIcons } from "dicons";
 import { useSession } from "next-auth/react";
 
@@ -14,16 +14,15 @@ import { Connect } from "@/src/components/common/connect";
 export default function UploadPage() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [downloadlink, setDownloadlink] = useState("");
+  const [websitelink, setWebsitelink] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const [previews, setPreviews] = useState<string[]>([]);
   const [loading, setLoading] = useState(false); // Add loading state
-  const [error, setError] = useState<string | null>(null);
-  const [tags, setTags] = useState<string[]>([]);
+  const [error, setError] = useState<string | null>(null); 
   const router = useRouter();
   const { data: session } = useSession();
 
-  const MAX_IMAGES = 4; // Maximum allowed images
+  const MAX_IMAGES = 1; // Maximum allowed images
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = Array.from(e.target.files || []);
@@ -63,12 +62,11 @@ export default function UploadPage() {
 
     const formData = new FormData();
     formData.append("title", title);
-    formData.append("downloadlink", downloadlink);
+    formData.append("websitelink", websitelink);
     formData.append("description", description);
-    files.forEach((file) => formData.append("files", file));
-    formData.append("tags", JSON.stringify(tags));
+    files.forEach((file) => formData.append("files", file)); 
 
-    const response = await fetch("/api/assets/upload", {
+    const response = await fetch("/api/admin/inspiration/upload", {
       method: "POST",
       body: formData,
     });
@@ -81,10 +79,6 @@ export default function UploadPage() {
       console.error("Upload failed:", await response.text());
     }
   };
-
-  if (!session) {
-    return <div>Please sign in to upload assets.</div>;
-  }
 
   return (
     <div className="mx-auto mt-4 border-t rounded-t-3xl container-wrapper px-4 py-8">
@@ -112,8 +106,8 @@ export default function UploadPage() {
         <div className="mb-4">
           <Input
             type="text"
-            value={downloadlink}
-            onChange={(e) => setDownloadlink(e.target.value)}
+            value={websitelink}
+            onChange={(e) => setWebsitelink(e.target.value)}
             placeholder="Download Link*"
             required
           />
@@ -123,8 +117,7 @@ export default function UploadPage() {
           <Input
             type="file"
             onChange={handleFileChange}
-            accept="image/*"
-            multiple
+            accept="image/*" 
             required
           />
         </div>
@@ -162,7 +155,7 @@ export default function UploadPage() {
           </Button>
         </div>
       </form>
-      <Connect />
+      
     </div>
   );
 }

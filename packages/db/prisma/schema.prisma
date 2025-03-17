@@ -63,14 +63,16 @@ model User {
   stripeSubscriptionId   String?   @unique @map("stripe_subscription_id")
   stripePriceId          String?   @map("stripe_price_id")
   stripeCurrentPeriodEnd DateTime? @map("stripe_current_period_end")
- 
-  teamActivities     TeamActivity[]
-  teams              TeamMember[]
-  accounts           Account[]
-  sessions           Session[]
-  urls               Url[]
-  Asset              Asset[]
-  likes              AssetLike[]
+
+  teamActivities   TeamActivity[]
+  teams            TeamMember[]
+  accounts         Account[]
+  sessions         Session[]
+  urls             Url[]
+  Asset            Asset[]
+  likes            AssetLike[]
+  inspiration      Inspiration[]
+  inspirationlikes InspirationLike[]
 
   @@map("users")
 }
@@ -95,7 +97,6 @@ model Url {
   @@unique([userId, originalUrl])
   @@map("urls")
 }
- 
 
 model Team {
   id          String         @id @default(cuid())
@@ -147,8 +148,7 @@ model TeamActivity {
   @@index([teamId])
   @@index([userId])
 }
-  
- 
+
 enum UserRole {
   ADMIN
   USER
@@ -159,8 +159,7 @@ enum Role {
   ADMIN
   MEMBER
 }
- 
-  
+
 model NewsletterSubscriber {
   id        String   @id @default(cuid())
   email     String   @unique
@@ -202,4 +201,35 @@ model Tag {
   assets Asset[]
 }
 
+model InspirationTag {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  inspiration Inspiration[]
+}
 
+model Inspiration {
+  id          String            @id @default(cuid())
+  title       String
+  description String?
+  url         String
+  websitelink String
+  visits      Int               @default(0)
+  views       Int               @default(0)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  userId      String
+  user        User              @relation(fields: [userId], references: [id])
+  likes       InspirationLike[] @relation("InspirationToLikes")
+  tags        InspirationTag[]
+}
+
+model InspirationLike {
+  id            String      @id @default(cuid())
+  createdAt     DateTime    @default(now())
+  userId        String
+  inspirationId String
+  user          User        @relation(fields: [userId], references: [id])
+  inspiration   Inspiration @relation("InspirationToLikes", fields: [inspirationId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, inspirationId])
+}
