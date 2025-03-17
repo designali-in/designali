@@ -21,7 +21,9 @@ import {
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 
-export function QRCodeGenerator() {
+export { QRCodeGenerator }
+
+function QRCodeGenerator() {
   const [url, setUrl] = useState("https://designali.in");
   const [qrCode, setQRCode] = useState("https://designali.in");
   const [color, setColor] = useState("#000000");

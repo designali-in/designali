@@ -18,6 +18,8 @@ import { Avegra } from "@/lib/fonts/fonts";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
 import ShineBorder from "@/src/components/ui/backgrounds/shine-border";
 import Gallery from "@/src/components/lobby/images/gallery";
+import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
+import { Wand2 } from "lucide-react";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -141,9 +143,15 @@ const BrowsePage = async () => {
                           {assets.length}
                         </span>
                       </TabsTrigger>
-
+                      <TabsTrigger value="tab-4">
+                      <Wand2 className="w-4 mr-1 h-4" />
+                       AI Image Gen
+                        <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                          New
+                        </span>
+                      </TabsTrigger>
                       <TabsTrigger value="tab-2">
-                        Images 
+                        Stock Images 
                         <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
                           New
                         </span>
@@ -180,6 +188,9 @@ const BrowsePage = async () => {
                     assets={formattedAssets}
                     availableTags={availableTags}
                   />
+                </TabsContent>
+                <TabsContent className="min-h-screen" value="tab-4">
+                <AIImage />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-2">
                 <Gallery />
