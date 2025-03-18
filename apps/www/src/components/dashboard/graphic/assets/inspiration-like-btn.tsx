@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { DIcons } from "dicons";
- 
+
 import { Button } from "@/components/ui/button";
 
 interface LikeButtonProps {
@@ -21,9 +21,12 @@ export function InspirationLikeButton({
 
   const handleLike = async () => {
     try {
-      const response = await fetch(`/api/admin/inspiration/${inspirationId}/like`, {
-        method: isLiked ? "DELETE" : "POST",
-      });
+      const response = await fetch(
+        `/api/admin/inspiration/${inspirationId}/like`,
+        {
+          method: isLiked ? "DELETE" : "POST",
+        }
+      );
 
       if (response.ok) {
         setIsLiked(!isLiked);
@@ -37,12 +40,11 @@ export function InspirationLikeButton({
   return (
     <div className="flex items-center gap-2">
       <Button variant="outline" onClick={handleLike}>
-      <span>{likeCount}</span>
-        <DIcons.Heart
+        <span>{likeCount}</span>
+        <DIcons.Bookmark01
           className={`h-4 w-4 ${isLiked ? "text-ali fill-current" : ""}`}
         />
       </Button>
-      
     </div>
   );
 }

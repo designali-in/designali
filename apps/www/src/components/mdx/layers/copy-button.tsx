@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu"
-import { CheckIcon, ClipboardIcon, Copy } from "lucide-react"
+import { CheckIcon, ClipboardIcon, Copy, Share2 } from "lucide-react"
 import { NpmCommands } from "@/types/unist"
 
 import { Event, trackEvent } from "@/lib/events"
@@ -13,7 +13,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu" 
 
 interface CopyButtonProps extends ButtonProps {
   value: string
@@ -74,6 +74,52 @@ export function CopyButton({
   )
 }
 
+export function ShareButton({
+  value,
+  className,
+  src,
+  variant = "ghost",
+  event,
+  ...props
+}: CopyButtonProps) {
+  const [hasCopied, setHasCopied] = React.useState(false)
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setHasCopied(false)
+    }, 2000)
+  }, [hasCopied])
+
+  return (
+    <Button
+      size="icon"
+      variant={variant}
+      className={cn(
+        "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:h-3 [&_svg]:w-3",
+        className
+      )}
+      onClick={() => {
+        copyToClipboardWithMeta(
+          value,
+          event
+            ? {
+                name: event,
+                properties: {
+                  code: value,
+                },
+              }
+            : undefined
+        )
+        setHasCopied(true)
+      }}
+      {...props}
+    >
+      <span className="sr-only">Copy</span>
+      {hasCopied ? <CheckIcon /> : <Share2 />}
+    </Button>
+  )
+}
+
 interface CopyWithClassNamesProps extends DropdownMenuTriggerProps {
   value: string
   classNames: string
@@ -97,6 +143,7 @@ export function CopyWithClassNames({
   const copyToClipboard = React.useCallback((value: string) => {
     copyToClipboardWithMeta(value)
     setHasCopied(true)
+    
   }, [])
 
   return (

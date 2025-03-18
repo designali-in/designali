@@ -46,8 +46,10 @@ const LOAD_MORE3 = 8;
 export function AssetGrid({
   assets,
   availableTags,
+  isLiked,
 }: {
   assets: Asset[];
+  isLiked: boolean;
   availableTags: string[];
 }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -207,7 +209,7 @@ export function AssetGrid({
                         <p>{asset.views}</p>
                       </div>
                       <div className="flex gap-1">
-                        <DIcons.Heart className="text-ali h-4 w-4" />
+                        <DIcons.Bookmark01 className={`h-4 w-4 ${isLiked ? "text-ali fill-current" : ""}`}/>
                         <LikeCountNumber
                           initialLikeCount={asset.likes.length}
                         />

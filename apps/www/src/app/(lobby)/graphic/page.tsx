@@ -17,7 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avegra } from "@/lib/fonts/fonts";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
 import ShineBorder from "@/src/components/ui/backgrounds/shine-border";
-import {Gallery} from "@/src/components/lobby/images/gallery";
+import { Gallery } from "@/src/components/lobby/images/gallery";
 import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
 import { Wand2 } from "lucide-react";
 import { InspirationGrid } from "@/src/components/dashboard/graphic/assets/inspiration-grid";
@@ -56,14 +56,19 @@ const BrowsePage = async () => {
 
   const isLiked = session
     ? inspirations.some((inspiration) =>
-        inspiration.likes.some((like) => like.userId === session.user.id)
+        inspiration.likes.some((inspirationlikes) => inspirationlikes.userId === session.user.id)
       )
     : false;
 
+    const isLikedAsset = session
+    ? inspirations.some((inspiration) =>
+        inspiration.likes.some((likes) => likes.userId === session.user.id)
+      )
+    : false;
 
   const formattedInspirations = inspirations.map((inspiration) => ({
     ...inspiration,
-    uploadedAt: inspiration.createdAt.toISOString(),
+    uploadedAt: inspiration.createdAt.toISOString(), 
     tags: inspiration.tags.map((tag) => tag.name), // Extract tag names
   }));
 
@@ -183,9 +188,7 @@ const BrowsePage = async () => {
                           New
                         </span>
                       </TabsTrigger>
-                      <TabsTrigger value="tab-2">
-                        Stock Images 
-                      </TabsTrigger>
+                      <TabsTrigger value="tab-2">Stock Images</TabsTrigger>
                       <TabsTrigger value="tab-3">
                         Designers
                         <span className="text-ali px-1 font-semibold">
@@ -216,6 +219,7 @@ const BrowsePage = async () => {
                   <AssetGrid
                     assets={formattedAssets}
                     availableTags={availableTags}
+                    isLiked={isLikedAsset}
                   />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-4">
@@ -223,7 +227,7 @@ const BrowsePage = async () => {
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-5">
                   <InspirationGrid
-                  isLiked={isLiked}
+                    isLiked={isLiked}
                     inspirations={formattedInspirations}
                     availableTags={inspirationTags}
                   />

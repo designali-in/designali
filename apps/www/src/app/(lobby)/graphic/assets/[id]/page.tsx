@@ -83,6 +83,7 @@ export default async function AssetPage({
   });
 
   const imageUrls = asset.url.split(",");
+  
   const isLiked = session
     ? asset.likes.some((like) => like.userId === session.user.id)
     : false;

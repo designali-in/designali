@@ -33,7 +33,7 @@ export function OpenWebsiteButton({
     <div className="flex items-center gap-1">
       <Button variant={"outline"} className="flex items-center" onClick={handleDownload}> 
         <span>{downloadCount}</span>
-        Open Preview
+        Open
          <DIcons.ChevronRight className="h-4 w-4" />
       </Button>
     </div>
