@@ -15,14 +15,11 @@ const BrowseInspirationLobby = async () => {
     uploadedAt: asset.createdAt.toISOString(),
     tags: asset.tags.map((tag) => tag.name), // Extract tag names
   }));
-
-  const tags = await prisma.tag.findMany();
-  const availableTags = tags.map((tag) => tag.name);
+ 
 
   return (
     <div className="">
-      <InspirationGridLobby
-        availableTags={availableTags}
+      <InspirationGridLobby 
         inspirations={formattedAssets}
         isLiked={false}
       />

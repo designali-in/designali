@@ -362,12 +362,10 @@ export function InspirationGrid({
 
 export function InspirationGridLobby({
   inspirations,
-  isLiked,
-  availableTags,
+  isLiked, 
 }: {
   inspirations: Inspiration[];
-  isLiked: boolean;
-  availableTags: string[];
+  isLiked: boolean; 
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredInspirations, setFilteredInspirations] =
@@ -377,10 +375,8 @@ export function InspirationGridLobby({
   const [selectedTag, setSelectedTag] = useState("all");
   const [loading, setLoading] = useState(true);
 
-  // Get unique tags from availableTags
-  const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
-    a.localeCompare(b)
-  );
+  const isMobile = useIsMobile();
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     let sortedInspirations = [...inspirations];
@@ -416,118 +412,177 @@ export function InspirationGridLobby({
 
   return (
     <div>
-      <div className="px-3 mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {filteredInspirations.slice(0, 6).map((inspiration) => {
-          const urls = inspiration.url.split(",");
-          return (
-            // eslint-disable-next-line react/jsx-key
-            <Dialog>
-              <DialogTrigger>
-                <Card
-                  key={inspiration.id}
-                  className={cn(
-                    "focused group h-full overflow-hidden rounded-sm"
-                  )}
-                >
-                  <CardHeader className="border-b border-dotted p-0">
-                    <AspectRatio ratio={16 / 9} className="overflow-hidden">
-                      <div>
-                        {urls.length > 1 ? (
-                          <div className="relative h-full w-full">
-                            {urls.slice(0, 1).map((url, index) => (
+      <div className="p-3 pt-0 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {filteredInspirations.slice(0, 6).map((inspiration) => {
+              const urls = inspiration.url.split(",");
+              return (
+                // eslint-disable-next-line react/jsx-key
+                <Dialog>
+                  <DialogTrigger>
+                    <Card
+                      key={inspiration.id}
+                      className={cn(
+                        "focused group h-full overflow-hidden rounded-sm"
+                      )}
+                    >
+                      <CardHeader className="border-b border-dotted p-0">
+                        <AspectRatio ratio={16 / 9} className="overflow-hidden">
+                          <div>
+                            {urls.length > 1 ? (
+                              <div className="relative h-full w-full">
+                                {urls.slice(0, 1).map((url, index) => (
+                                  <CldImage
+                                    key={index}
+                                    src={url || "/placeholder.svg"}
+                                    alt={`${inspiration.title} - Image ${index + 1}`}
+                                    loading="lazy"
+                                    fill
+                                    className={cn(
+                                      "object-cover transition-all group-hover:scale-105"
+                                    )}
+                                  />
+                                ))}
+                              </div>
+                            ) : (
                               <CldImage
-                                key={index}
-                                src={url || "/placeholder.svg"}
-                                alt={`${inspiration.title} - Image ${index + 1}`}
+                                src={urls[0] || "/placeholder.svg"}
+                                alt={inspiration.title}
                                 loading="lazy"
                                 fill
-                                className={cn(
-                                  "object-cover transition-all group-hover:scale-105"
-                                )}
+                                className="h-full w-full object-cover transition-all group-hover:scale-105"
                               />
-                            ))}
+                            )}
                           </div>
-                        ) : (
-                          <CldImage
-                            src={urls[0] || "/placeholder.svg"}
-                            alt={inspiration.title}
-                            loading="lazy"
-                            fill
-                            className="h-full w-full object-cover transition-all group-hover:scale-105"
+                        </AspectRatio>
+                      </CardHeader>
+                      <CardContent className="flex items-center justify-between p-4">
+                        <CardTitle className="text-md truncate py-[2px] md:text-xl">
+                          {inspiration.title}
+                        </CardTitle>
+                        <div className="flex gap-4 text-xs text-primary/70">
+                          <div className="flex gap-1">
+                            <DIcons.Eye className="h-4 w-4" />
+                            <p>{inspiration.views}</p>
+                          </div>
+                          <div className="flex gap-1">
+                            <DIcons.Bookmark01
+                              className={`h-4 w-4 ${isLiked ? "text-ali fill-current" : ""}`}
+                            />
+                            <LikeCountNumber
+                              initialLikeCount={inspiration.likes.length}
+                            />
+                          </div>
+                          <div className="flex gap-1">
+                            <DIcons.ChevronRight className="h-4 w-4" />
+                            <DownloadNumber
+                              initialDownloadCount={inspiration.visits}
+                            />
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </DialogTrigger>
+                  <DialogContent
+                    className={cn(
+                      "flex flex-col p-0 gap-0 overflow-hidden bg-background transition-all duration-200",
+                      isMobile
+                        ? "w-screen h-screen max-w-none m-0"
+                        : isFullscreen
+                          ? "w-screen h-screen max-w-none m-0"
+                          : "w-[90vw] h-[90vh] max-w-[1400px]"
+                    )}
+                  >
+                    {!isMobile && (
+                      
+                      <DialogHeader className="h-14 px-4 flex pb-2 flex-row items-center justify-between border-b text-sm">
+                        <div className="flex items-center gap-4">
+                          <DialogTitle className="text-xl font-medium">
+                            {inspiration.title}
+                          </DialogTitle>
+                          <DialogDescription className="w-60 truncate">  
+                          {inspiration.description}
+                                
+                          </DialogDescription>
+                        </div>
+                        <div>
+                          <p className="border hidden lg:flex items-center gap-2 bg-secondary text-primary/70 rounded-full p-1 px-3">
+                          <CopyButton
+                            value={inspiration.websitelink}
+                            variant="ghost"
+                            className="h-4  w-4 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
                           />
-                        )}
-                      </div>
-                    </AspectRatio>
-                  </CardHeader>
-                  <CardContent className="flex items-center justify-between p-4">
-                    <CardTitle className="text-md truncate py-[2px] md:text-xl">
-                      {inspiration.title}
-                    </CardTitle>
-                    <div className="flex gap-4 text-xs text-primary/70">
-                      <div className="flex gap-1">
-                        <DIcons.Eye className="h-4 w-4" />
-                        <p>{inspiration.views}</p>
-                      </div>
-                      <div className="flex gap-1">
-                        <DIcons.Heart className="text-ali h-4 w-4" />
-                        <LikeCountNumber
-                          initialLikeCount={inspiration.likes.length}
-                        />
-                      </div>
-                      <div className="flex gap-1">
-                        <DIcons.ChevronRight className="h-4 w-4" />
-                        <DownloadNumber
-                          initialDownloadCount={inspiration.visits}
+                          {inspiration.websitelink} 
+                          </p>
+
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <ShareButton
+                            value={inspiration.websitelink}
+                            variant="ghost"
+                            className="h-8 w-8 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+                          />
+                          <InspirationLikeButton
+                            inspirationId={inspiration.id}
+                            initialLikeCount={inspiration.likes.length}
+                            initialIsLiked={isLiked}
+                          />
+                          <OpenWebsiteButton
+                            inspirationId={inspiration.id}
+                            websiteLink={inspiration.websitelink}
+                            initialDownloadCount={inspiration.visits}
+                          />
+                          <DialogClose>
+                            <Button size={"icon"} variant="outline">
+                              <DIcons.Close size={16} />
+                            </Button>
+                          </DialogClose>
+                        </div>
+                      </DialogHeader>
+                    )}
+                    <div className="flex-1 h-[calc(80vh-3.5rem)] overflow-hidden relative">
+                      {loading && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-white">
+                          <Loader2 className="w-10 h-10 animate-spin text-gray-500" />
+                        </div>
+                      )}
+                      <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
+                        <iframe
+                          src={inspiration.websitelink}
+                          className="w-full h-full border-0"
+                          onLoad={() => setLoading(false)}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
                         />
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-              </DialogTrigger>
-              <DialogContent className="w-[80vw] max-w-[80vw] h-[80vh] p-0 gap-0 overflow-hidden">
-                <DialogHeader className="h-14 px-6 flex flex-row items-center justify-between border-b text-sm">
-                  <div className="flex items-center gap-4">
-                    <DialogTitle className="text-xl font-medium">
-                      {inspiration.title}
-                    </DialogTitle>
-                    <DialogDescription className="w-60 truncate">
-                      {inspiration.description}
-                    </DialogDescription>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <InspirationLikeButton
-                      inspirationId={inspiration.id}
-                      initialLikeCount={inspiration.likes.length}
-                      initialIsLiked={isLiked}
-                    />
-                    <OpenWebsiteButton
-                      inspirationId={inspiration.id}
-                      websiteLink={inspiration.websitelink}
-                      initialDownloadCount={inspiration.visits}
-                    />
-                  </div>
-                </DialogHeader>
-                <div className="flex-1 h-[calc(80vh-3.5rem)] overflow-hidden relative">
-                  {loading && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-white">
-                      <Loader2 className="w-10 h-10 animate-spin text-gray-500" />
-                    </div>
-                  )}
-                  <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
-                    <iframe
-                      src={inspiration.websitelink}
-                      className="w-full h-full border-0"
-                      onLoad={() => setLoading(false)}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
-          );
-        })}
-      </div>
+                    {isMobile && (
+                      <div className="h-16 flex flex-row items-center justify-between border-t text-sm px-4 space-y-0 flex-shrink-0">
+                        <div className="flex items-center gap-3">
+                          <div className="flex flex-col min-w-0">
+                            <DialogTitle className="text-xl font-medium">
+                              {inspiration.title}
+                            </DialogTitle>
+                          </div>
+                        </div>
+                        <div className="flex gap-2">
+                          <InspirationLikeButton
+                            inspirationId={inspiration.id}
+                            initialLikeCount={inspiration.likes.length}
+                            initialIsLiked={isLiked}
+                          />
+                          <DialogClose>
+                            <Button size={"icon"}>
+                              <ArrowLeft size={16} />
+                            </Button>
+                          </DialogClose>
+                        </div>
+                      </div>
+                    )}
+                  </DialogContent>
+                </Dialog>
+              );
+            })}
+          </div>
     </div>
   );
 }
