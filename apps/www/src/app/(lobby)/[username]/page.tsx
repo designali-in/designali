@@ -1,4 +1,4 @@
-//@ts-nocheck
+ //@ts-nocheck
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,6 +34,19 @@ async function getUserData(username: string) {
         bio: true,
         summary: true,
         createdAt: true,
+        inspiration: {
+          select: {
+            id: true,
+            title: true,
+            likes: true,
+            views: true,
+            createdAt: true,
+            websitelink: true,
+            visits: true,
+            description: true,
+            url: true,
+          },
+        },
         Asset: {
           select: {
             id: true,
@@ -64,6 +77,24 @@ async function getUserData(username: string) {
             },
           },
         },
+        inspirationlikes: {
+          select: {
+            inspiration: {
+              select: {
+                id: true,
+                title: true,
+                likes: true,
+                views: true,
+                createdAt: true,
+                websitelink: true,
+                visits: true,
+                description: true,
+                url: true,
+              },
+            },
+          },
+        },
+        
       },
     });
 
@@ -72,15 +103,20 @@ async function getUserData(username: string) {
     // Transform the likes data to match the Asset structure
     const likedAssets = user.likes.map((like) => like.asset);
 
+    const likedInspirations = user.inspirationlikes.map((like) => like.inspiration);
+
     return {
       ...user,
       likedAssets,
+      likedInspirations,
     };
   } catch (error) {
     console.error("Error fetching user data:", error);
     return null;
   }
 }
+
+
 
 // Metadata generation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -101,6 +137,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function UserProfilePage({ params }: Props) {
   const session = await auth();
   const user = await getUserData(params.username);
+
+  const inspirations = await prisma.inspiration.findMany({
+    orderBy: { createdAt: "desc" },
+    include: {
+      likes: true,
+      tags: true, // Include tags
+    },
+  });
+
+  const isLikedInspiration = session
+    ? inspirations.some((inspiration) =>
+        inspiration.likes.some((likes) => likes.userId === session.user.id)
+      )
+    : false;
 
   const totalLikes = user.Asset.reduce(
     (sum, asset) => sum + asset.likes.length,
@@ -207,6 +257,8 @@ export default async function UserProfilePage({ params }: Props) {
           <ProfileAssetGrid
             assets={user.Asset}
             likedAssets={user.likedAssets}
+            likedInspiration={user.likedInspirations}
+            isLiked={isLikedInspiration}
             user={user}
           />
         ) : (
