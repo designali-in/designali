@@ -23,13 +23,7 @@ export function CardsDemo() {
       <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         <ComponentPreview name="dot-pattern-01" />
         <ComponentPreview name="macbook-pro-1" />
-        <ComponentPreview name="grid-pattern-01" />
-        <ComponentPreview name="accordion-01" />
-        <ComponentPreview name="gradient-text-01" />
-        <ComponentPreview name="slider-18" />
-        <ComponentPreview name="ripple-01" />
-        <ComponentPreview name="tooltip-07" />
-        <ComponentPreview name="retro-grid-01" />
+        <ComponentPreview name="grid-pattern-01" />  
       </div>
       <Link href={"/docs"} className="flex justify-center">
         <Button>View all Components</Button>

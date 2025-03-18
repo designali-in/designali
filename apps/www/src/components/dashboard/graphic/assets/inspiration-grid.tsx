@@ -290,6 +290,179 @@ export function InspirationGrid({
   );
 }
 
+export function InspirationGridLobby({
+  inspirations,
+  isLiked,
+  availableTags,
+}: {
+  inspirations: Inspiration[];
+  isLiked: boolean;
+  availableTags: string[];
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredInspirations, setFilteredInspirations] =
+    useState(inspirations);
+  const [sortBy, setSortBy] = useState("latest");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
+  const [selectedTag, setSelectedTag] = useState("all");
+  const [loading, setLoading] = useState(true);
+  
+
+  // Get unique tags from availableTags
+  const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
+    a.localeCompare(b)
+  );
+
+  useEffect(() => {
+    let sortedInspirations = [...inspirations];
+
+    sortedInspirations = sortedInspirations.filter(
+      (asset) =>
+        asset.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        (selectedTag === "all" || asset.tags.includes(selectedTag))
+    );
+
+    // Then, sort the filtered assets
+    switch (sortBy) {
+      case "mostDownloaded":
+        sortedInspirations.sort((a, b) => b.visits - a.visits);
+        break;
+      case "mostLiked":
+        sortedInspirations.sort((a, b) => b.likes.length - a.likes.length);
+        break;
+      case "mostViewed":
+        sortedInspirations.sort((a, b) => b.views - a.views);
+        break;
+      case "latest":
+      default:
+        sortedInspirations.sort(
+          (a, b) =>
+            new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime()
+        );
+    }
+
+    setFilteredInspirations(sortedInspirations);
+    setVisibleCount(INITIAL_LOAD);
+  }, [inspirations, searchTerm, sortBy, selectedTag]);
+ 
+  return (
+    <div>
+      <div className="px-3 mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+            {filteredInspirations.slice(0, 6).map((inspiration) => {
+              const urls = inspiration.url.split(",");
+              return (
+                // eslint-disable-next-line react/jsx-key
+                <Dialog>
+                  <DialogTrigger>
+                    <Card
+                      key={inspiration.id}
+                      className={cn(
+                        "focused group h-full overflow-hidden rounded-sm"
+                      )}
+                    >
+                      <CardHeader className="border-b border-dotted p-0">
+                        <AspectRatio ratio={16 / 9} className="overflow-hidden">
+                          <div>
+                            {urls.length > 1 ? (
+                              <div className="relative h-full w-full">
+                                {urls.slice(0, 1).map((url, index) => (
+                                  <CldImage
+                                    key={index}
+                                    src={url || "/placeholder.svg"}
+                                    alt={`${inspiration.title} - Image ${index + 1}`}
+                                    loading="lazy"
+                                    fill
+                                    className={cn(
+                                      "object-cover transition-all group-hover:scale-105"
+                                    )}
+                                  />
+                                ))}
+                              </div>
+                            ) : (
+                              <CldImage
+                                src={urls[0] || "/placeholder.svg"}
+                                alt={inspiration.title}
+                                loading="lazy"
+                                fill
+                                className="h-full w-full object-cover transition-all group-hover:scale-105"
+                              />
+                            )}
+                          </div>
+                        </AspectRatio>
+                      </CardHeader>
+                      <CardContent className="flex items-center justify-between p-4">
+                        <CardTitle className="text-md truncate py-[2px] md:text-xl">
+                          {inspiration.title}
+                        </CardTitle>
+                        <div className="flex gap-4 text-xs text-primary/70">
+                          <div className="flex gap-1">
+                            <DIcons.Eye className="h-4 w-4" />
+                            <p>{inspiration.views}</p>
+                          </div>
+                          <div className="flex gap-1">
+                            <DIcons.Heart className="text-ali h-4 w-4" />
+                            <LikeCountNumber
+                              initialLikeCount={inspiration.likes.length}
+                            />
+                          </div>
+                          <div className="flex gap-1">
+                            <DIcons.ChevronRight className="h-4 w-4" />
+                            <DownloadNumber
+                              initialDownloadCount={inspiration.visits}
+                            />
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </DialogTrigger>
+                  <DialogContent className="w-[80vw] max-w-[80vw] h-[80vh] p-0 gap-0 overflow-hidden">
+                    <DialogHeader className="h-14 px-6 flex flex-row items-center justify-between border-b text-sm">
+                      <div className="flex items-center gap-4">
+                        <DialogTitle className="text-xl font-medium">
+                          {inspiration.title}
+                        </DialogTitle>
+                        <DialogDescription className="w-60 truncate">
+                          {inspiration.description}
+                        </DialogDescription>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <InspirationLikeButton
+                          inspirationId={inspiration.id}
+                          initialLikeCount={inspiration.likes.length}
+                          initialIsLiked={isLiked}
+                        />
+                        <OpenWebsiteButton
+                          inspirationId={inspiration.id}
+                          websiteLink={inspiration.websitelink}
+                          initialDownloadCount={inspiration.visits}
+                        />
+                      </div>
+                    </DialogHeader>
+                    <div className="flex-1 h-[calc(80vh-3.5rem)] overflow-hidden relative">
+                      {loading && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-white">
+                          <Loader2 className="w-10 h-10 animate-spin text-gray-500" />
+                        </div>
+                      )}
+                      <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
+                        <iframe
+                          src={inspiration.websitelink}
+                          className="w-full h-full border-0"
+                          onLoad={() => setLoading(false)}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              );
+            })}
+          </div>
+    </div>
+  );
+}
+
 export function RelatedAssetGrid({
   inspirations,
 }: {

@@ -17,7 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avegra } from "@/lib/fonts/fonts";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
 import ShineBorder from "@/src/components/ui/backgrounds/shine-border";
-import Gallery from "@/src/components/lobby/images/gallery";
+import {Gallery} from "@/src/components/lobby/images/gallery";
 import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
 import { Wand2 } from "lucide-react";
 import { InspirationGrid } from "@/src/components/dashboard/graphic/assets/inspiration-grid";

@@ -65,6 +65,38 @@ const ImageContainer2 = ({ photosWithBlur }: PhotoProps) => {
     </div>
   );
 };
+
+
+const ImageContainer3 = ({ photosWithBlur }: PhotoProps) => {
+  return (
+    <div className=" ">
+      <PhotoProvider
+        toolbarRender={({ images, index }) => {
+          const currentPhoto = images[index];
+          const downloadUrl = currentPhoto?.src || "#"; // Fallback URL if undefined
+
+          return (
+            <>
+              <Link href={downloadUrl} download={true} target="_blank">
+                <Button className="h-8" disabled={downloadUrl === "#"}>
+                  Download Full HD
+                </Button>
+              </Link>
+            </>
+          );
+        }}
+      >
+        <div className="p-6">
+          <div className="gap-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {photosWithBlur.slice(0, 12).map((photo) => (
+              <ImageContainer key={photo.id} photo={photo} />
+            ))}
+          </div>
+        </div>
+      </PhotoProvider>
+    </div>
+  );
+};
  
 
-export { ImageContainer, ImageContainer2 };
+export { ImageContainer, ImageContainer2, ImageContainer3 };
