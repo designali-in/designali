@@ -1,4 +1,4 @@
-import Gallery from "@/src/components/lobby/images/gallery";
+import { Gallery } from "@/src/components/lobby/images/gallery";
 import {
   Breadcrumb,
   BreadcrumbItem,

@@ -98,6 +98,31 @@ export async function deleteAsset(id: string) {
   }
 }
 
+export async function getAssetLikes() {
+  try {
+    const totalLikes = await prisma.assetLike.count(); // No `where` filter
+    return totalLikes;
+  } catch (error) {
+    console.error("Failed to fetch total likes:", error);
+    return 0;
+  }
+}
+
+export async function getAssetViews() {
+  try {
+    const totalViews = await prisma.asset.aggregate({
+      _sum: {
+        views: true,
+      },
+    });
+
+    return totalViews._sum.views || 0; // Ensure it returns 0 if no views exist
+  } catch (error) {
+    console.error("Failed to fetch total views:", error);
+    return 0;
+  }
+}
+
 // Asset actions
 export async function getInspiration() {
   try {

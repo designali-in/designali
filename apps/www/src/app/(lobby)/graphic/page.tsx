@@ -55,8 +55,8 @@ const BrowsePage = async () => {
   });
 
   const isLiked = session
-    ? inspirations.some((inspiration) =>
-        inspiration.likes.some((inspirationlikes) => inspirationlikes.userId === session.user.id)
+    ? inspirations.some((asset) =>
+      asset.likes.some((likes) => likes.userId === session.user.id)
       )
     : false;
 

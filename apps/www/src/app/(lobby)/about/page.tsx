@@ -4,12 +4,12 @@ import { cn } from "@/src/lib/utils";
 import { Plus } from "lucide-react";
 import { BackgroundBeams } from "@/src/components/ui/backgrounds/background-beams";
 import ImageZoom from "@/src/components/common/image-zoom";
-import About from "@/src/components/lobby/about/about";
-import { Items } from "@/src/components/dashboard/items";
+import About from "@/src/components/lobby/about/about"; 
 import Logos from "@/src/components/common/logos";
 import { Connect } from "@/src/components/common/connect";
 import { Experience } from "@/src/components/lobby/about/experience";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
+import { AboutStats } from "@/src/components/lobby/home/stats";
 
 export default function HomePage() {
   return (
@@ -61,7 +61,7 @@ export default function HomePage() {
       <Glow className="top-[600px] -z-20"/>
       <div className="relative border-grid border-x bg-background border-t rounded-t-3xl container-wrapper overflow-hidden">
         <About />
-        <Items />
+        <AboutStats />
         <Experience />
         <h1 className="my-6 mt-12 text-center text-xs font-semibold uppercase tracking-[.3em] text-slate-400">
           Worked with Brands Like
