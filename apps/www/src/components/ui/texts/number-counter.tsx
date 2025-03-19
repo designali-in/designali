@@ -46,5 +46,5 @@ export default function NumberCounter({
     [springValue, decimalPlaces]
   );
 
-  return <span className={cn("text-ali inline-block", className)} ref={ref} />;
+  return <span className={cn("inline-block", className)} ref={ref} />;
 }

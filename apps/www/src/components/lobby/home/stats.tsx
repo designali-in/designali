@@ -51,11 +51,11 @@ export function Stats() {
 
       <Link className="cursor-pointer" href={"/about"}>
         <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
-          <p className="text-xs text-indigo-400 md:-mb-2">Experience</p>
+          <p className="text-xs text-indigo-500 md:-mb-2">Experience</p>
           <h1 className="font-mono text-6xl font-bold tracking-tighter text-indigo-500 md:text-9xl">
-            <NumberCounter value={8} />
+            <NumberCounter className="text-indigo-500" value={8} />
           </h1>
-          <p className="text-xs text-slate-600 dark:text-indigo-400 md:-mt-2">
+          <p className="text-xs text-indigo-500 md:-mt-2">
             Years
           </p>
           <DotPattern width={5} height={5} />
@@ -135,7 +135,7 @@ function StatCard({
           <Suspense>
             <NumberCounter
               value={count ?? "..."}
-              className="px-2 flex justify-center text-5xl font-bold tracking-tighter"
+              className="px-2 text-ali flex justify-center text-5xl font-bold tracking-tighter"
             />
           </Suspense>
           <div className="text-center text-xs text-primary/70 md:text-sm">
