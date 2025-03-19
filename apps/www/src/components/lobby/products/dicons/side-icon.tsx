@@ -139,11 +139,11 @@ const SideIcon = ({
               </Button>
               <DIconsDrawer settings={settings} />
               <DropdownMenu>
-                <DropdownMenuTrigger>
-                  <Button variant="outline">
+                <DropdownMenuTrigger className="border flex gap-1 items-center px-4 rounded-2xl py-1.5">
+                  
                     Download
                     <DIcons.Copy className="h-4 w-4  " />
-                  </Button>
+                  
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {pngClipboardSupported && (

@@ -78,26 +78,24 @@ export function Grid4({ images }: { images: any }) {
   );
 }
 
-export function Grid5({ images }: { images: any }) {
+export function Grid5({ images }: { images: any[] }) {
   return (
-    <>
-      <PhotoProvider>
-        <div key={images.id} className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
-          {images.map((image: any) => (
-            <PhotoView src={image.secure_url}>
-              <CldImage
-                src={image.secure_url || image.id}
-                alt={image.secure_url}
-                loading="lazy"
-                width={300}
-                height={300}
-                className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
-              />
-            </PhotoView>
-          ))}
-        </div>
-      </PhotoProvider>
-    </>
+    <PhotoProvider>
+      <div className="grid grid-cols-2 items-stretch gap-2 md:grid-cols-5">
+        {images?.map((image, index) => (
+          <PhotoView key={image.id || index} src={image.secure_url}>
+            <CldImage
+              src={image.secure_url || image.id}
+              alt={image.secure_url || "Image"}
+              loading="lazy"
+              width={300}
+              height={300}
+              className="rounded-xl object-cover hover:cursor-zoom-in hover:saturate-0"
+            />
+          </PhotoView>
+        ))}
+      </div>
+    </PhotoProvider>
   );
 }
 

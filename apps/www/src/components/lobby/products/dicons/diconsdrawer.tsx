@@ -1,4 +1,4 @@
-// @ts-nocheck
+ 
 
 "use client";
 
@@ -10,12 +10,15 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
 interface SideIconProps {
-  settings;
+  settings: any;
 }
 
 export const DIconsDrawer = ({ settings }: SideIconProps) => {
@@ -24,25 +27,23 @@ export const DIconsDrawer = ({ settings }: SideIconProps) => {
       <div className="flex justify-center gap-2">
         <div>
           <Drawer>
-            <DrawerTrigger>
-              <Button variant="outline">Open</Button>
+            <DrawerTrigger className="border px-4 rounded-2xl py-1.5">
+              Open
             </DrawerTrigger>
             <DrawerContent>
-              <div className="relative mx-auto my-6 mb-40 flex h-full w-full max-w-7xl flex-wrap justify-center">
-                <div className="mt-6 p-6 ">
-                  <div className="flex items-center justify-center space-x-2"></div>
-                </div>
-
-                <DrawerFooter className="absolute right-0">
-                  <DrawerClose>
-                    <Button size="icon" variant="outline">
-                      <DIcons.Close />
-                    </Button>
-                  </DrawerClose>
-                </DrawerFooter>
-              </div>
+              <DrawerHeader>
+                <DrawerTitle>Coming Soon</DrawerTitle>
+                <DrawerDescription>
+                 Loading...
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter> 
+               
+                <DrawerClose>
+                Cancel
+                </DrawerClose>
+              </DrawerFooter>
             </DrawerContent>
-            <div></div>
           </Drawer>
         </div>
       </div>
