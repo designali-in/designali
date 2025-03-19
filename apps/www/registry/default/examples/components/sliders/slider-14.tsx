@@ -10,7 +10,7 @@ export default function SliderDemo() {
       <Slider
         defaultValue={[25, 50, 100]}
         aria-label="Slider with multiple thumbs"
-        tooltipContent={(value) => `${value}%`}
+        // Tooltip functionality can be implemented externally if needed
       />
     </div>
   );

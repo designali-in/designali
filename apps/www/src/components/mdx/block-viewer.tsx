@@ -217,7 +217,7 @@ function BlockViewerToolbar() {
           </Button>
         </div>
         <Separator orientation="vertical" className="mx-1 hidden h-4 xl:flex" />
-        <OpenInV0 componentSource={`https://designali.in/r/${name}.json`} />
+        <OpenInV0 componentSource={`https://designali.in/r/${item.name}.json`} />
       </div>
     </div>
   );
