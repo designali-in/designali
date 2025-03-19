@@ -411,7 +411,7 @@ export function InspirationGridLobby({
           const urls = inspiration.url.split(",");
           return (
             // eslint-disable-next-line react/jsx-key
-            <Dialog>
+            <Dialog key={inspiration.id}>
               <DialogTrigger>
                 <Card
                   key={inspiration.id}
@@ -522,10 +522,8 @@ export function InspirationGridLobby({
                         websiteLink={inspiration.websitelink}
                         initialDownloadCount={inspiration.visits}
                       />
-                      <DialogClose>
-                        <Button size={"icon"} variant="outline">
-                          <DIcons.Close size={16} />
-                        </Button>
+                      <DialogClose> 
+                          <DIcons.Close className="h-4 w-4" /> 
                       </DialogClose>
                     </div>
                   </DialogHeader>

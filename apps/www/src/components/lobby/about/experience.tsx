@@ -110,9 +110,8 @@ export function Experience() {
           }}
         >
           <CarouselContent>
-            {Experiences.map((Experience) => (
-              // eslint-disable-next-line react/jsx-key
-              <CarouselItem className="md:basis-1/2 xl:basis-1/3">
+            {Experiences.map((Experience, index) => ( 
+              <CarouselItem key={`${Experience.post}-${Experience.company}-${index}`} className="md:basis-1/2 xl:basis-1/3">
                 <HighlightGroup className="group">
                   <div
                     key={Experience.post}
