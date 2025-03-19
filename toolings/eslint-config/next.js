@@ -43,7 +43,10 @@ export const nextJsConfig = [
     rules: {
       ...pluginReactHooks.configs.recommended.rules,
       // React scope no longer necessary with new JSX transform.
+      "next/next/no-img-element": "off",
       "react/react-in-jsx-scope": "off",
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-page-custom-font': 'off',
     },
   },
 ];
