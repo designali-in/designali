@@ -5,7 +5,7 @@ import { prisma } from "@/lib/db";
 
 export async function POST(
   req: NextRequest,
-  context: { params: { id: string } } // Ensure correct typing
+  { params }: { params: { id: string } }
 ) {
   const session = await auth();
 
@@ -13,7 +13,7 @@ export async function POST(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { id } = context.params; // ✅ Correctly extracting params.id
+  const { id } = params;
 
   if (!id) {
     return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
@@ -34,64 +34,31 @@ export async function POST(
     );
 
     if (existingLike) {
-      return NextResponse.json({ error: "Already liked" }, { status: 400 });
+      // Unlike
+      await prisma.inspirationLike.delete({
+        where: { id: existingLike.id },
+      });
+    } else {
+      // Like
+      await prisma.inspirationLike.create({
+        data: {
+          userId: session.user.id,
+          inspirationId: inspiration.id,
+        },
+      });
     }
 
-    await prisma.inspirationLike.create({
-      data: {
-        userId: session.user.id,
-        inspirationId: inspiration.id,
-      },
+    // Get updated like count
+    const updatedLikeCount = await prisma.inspirationLike.count({
+      where: { inspirationId: inspiration.id },
     });
 
-    return NextResponse.json({ message: "Asset liked successfully" });
+    return NextResponse.json({
+      message: existingLike ? "Like removed" : "Liked successfully",
+      likeCount: updatedLikeCount,
+    });
   } catch (error) {
-    console.error("Error liking asset:", error);
-    return NextResponse.json({ error: "Error liking asset" }, { status: 500 });
-  }
-}
-
-export async function DELETE(
-  req: NextRequest,
-  context: { params: { id: string } } // ✅ Correct param extraction
-) {
-  const session = await auth();
-
-  if (!session?.user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const { id } = context.params; // ✅ Correctly extracting params.id
-
-  if (!id) {
-    return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
-  }
-
-  try {
-    const inspiration = await prisma.inspiration.findUnique({
-      where: { id },
-      include: { likes: true },
-    });
-
-    if (!inspiration) {
-      return NextResponse.json({ error: "Inspiration not found" }, { status: 404 });
-    }
-
-    const existingLike = inspiration.likes.find(
-      (like) => like.userId === session.user.id
-    );
-
-    if (!existingLike) {
-      return NextResponse.json({ error: "Not liked" }, { status: 400 });
-    }
-
-    await prisma.inspirationLike.delete({
-      where: { id: existingLike.id },
-    });
-
-    return NextResponse.json({ message: "Asset unliked successfully" });
-  } catch (error) {
-    console.error("Error unliking asset:", error);
-    return NextResponse.json({ error: "Error unliking asset" }, { status: 500 });
+    console.error("Error toggling like:", error);
+    return NextResponse.json({ error: "Error toggling like" }, { status: 500 });
   }
 }

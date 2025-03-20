@@ -98,6 +98,21 @@ export async function deleteAsset(id: string) {
   }
 }
 
+export async function getAssetsDownloads() {
+  try {
+    const totalDownloads = await prisma.asset.aggregate({
+      _sum: {
+        downloads: true,
+      },
+    });
+
+    return totalDownloads._sum.downloads || 0; // Return 0 if no downloads found
+  } catch (error) {
+    console.error("Failed to fetch total downloads:", error);
+    return 0;
+  }
+}
+
 export async function getAssetLikes() {
   try {
     const totalLikes = await prisma.assetLike.count(); // No `where` filter
@@ -119,6 +134,46 @@ export async function getAssetViews() {
     return totalViews._sum.views || 0; // Ensure it returns 0 if no views exist
   } catch (error) {
     console.error("Failed to fetch total views:", error);
+    return 0;
+  }
+}
+export async function getInspirationViews() {
+  try {
+    const totalViews = await prisma.inspiration.aggregate({
+      _sum: {
+        views: true,
+      },
+    });
+
+    return totalViews._sum.views || 0; // Return 0 if there are no views
+  } catch (error) {
+    console.error("Failed to fetch total views:", error);
+    return 0;
+  }
+}
+
+export async function getInspirationDownloads() {
+  try {
+    const totalDownloads = await prisma.inspiration.aggregate({
+      _sum: {
+        visits: true,
+      },
+    });
+
+    return totalDownloads._sum.visits || 0; // Return 0 if no downloads exist
+  } catch (error) {
+    console.error("Failed to fetch total downloads:", error);
+    return 0;
+  }
+}
+
+export async function getInspirationLikes() {
+  try {
+    const totalLikes = await prisma.inspirationLike.count(); // Counting total likes
+
+    return totalLikes;
+  } catch (error) {
+    console.error("Failed to fetch total likes:", error);
     return 0;
   }
 }

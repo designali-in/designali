@@ -36,7 +36,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CldImage from "@/components/common/CloudImage";
 import { OpenWebsiteButton } from "./open-website";
 import { ArrowLeft, Loader2 } from "lucide-react";
-import { InspirationLikeButton } from "./inspiration-like-btn";
+import { InspirationLikeButton, InspirationLikeCountNumber } from "./inspiration-like-btn";
 import {
   ShareButton,
   CopyButton,
@@ -177,8 +177,14 @@ export function InspirationGrid({
               const urls = inspiration.url.split(",");
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Dialog  key={inspiration.id}>
-                  <DialogTrigger>
+                <Dialog key={inspiration.id} onOpenChange={(isOpen) => {
+                  if (isOpen) {
+                    fetch(`/api/admin/inspiration/${inspiration.id}/view`, {
+                      method: "POST",
+                    }).catch((err) => console.error("Error updating views:", err));
+                  }
+                }}>
+                  <DialogTrigger key={inspiration.id}>
                     <Card
                       key={inspiration.id}
                       className={cn(
@@ -187,23 +193,7 @@ export function InspirationGrid({
                     >
                       <CardHeader className="border-b border-dotted p-0">
                         <AspectRatio ratio={16 / 9} className="overflow-hidden">
-                          <div>
-                            {urls.length > 1 ? (
-                              <div className="relative h-full w-full">
-                                {urls.slice(0, 1).map((url, index) => (
-                                  <CldImage
-                                    key={index}
-                                    src={url || "/placeholder.svg"}
-                                    alt={`${inspiration.title} - Image ${index + 1}`}
-                                    loading="lazy"
-                                    fill
-                                    className={cn(
-                                      "object-cover transition-all group-hover:scale-105"
-                                    )}
-                                  />
-                                ))}
-                              </div>
-                            ) : (
+                          <div> 
                               <CldImage
                                 src={urls[0] || "/placeholder.svg"}
                                 alt={inspiration.title}
@@ -211,14 +201,14 @@ export function InspirationGrid({
                                 fill
                                 className="h-full w-full object-cover transition-all group-hover:scale-105"
                               />
-                            )}
+                            
                           </div>
                         </AspectRatio>
                       </CardHeader>
                       <CardContent className="flex items-center justify-between p-4">
                         <CardTitle className="text-md truncate py-[2px] md:text-xl">
                           {inspiration.title}
-                        </CardTitle>
+                        </CardTitle> 
                         <div className="flex gap-4 text-xs text-primary/70">
                           <div className="flex gap-1">
                             <DIcons.Eye className="h-4 w-4" />
@@ -228,7 +218,7 @@ export function InspirationGrid({
                             <DIcons.Bookmark01
                               className={`h-4 w-4 ${isLiked ? "text-ali fill-current" : ""}`}
                             />
-                            <LikeCountNumber
+                            <InspirationLikeCountNumber
                               initialLikeCount={inspiration.likes.length}
                             />
                           </div>

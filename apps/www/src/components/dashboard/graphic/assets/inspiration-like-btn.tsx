@@ -24,13 +24,14 @@ export function InspirationLikeButton({
       const response = await fetch(
         `/api/admin/inspiration/${inspirationId}/like`,
         {
-          method: isLiked ? "DELETE" : "POST",
+          method: "POST", // Now handles both like & unlike
         }
       );
-
+  
       if (response.ok) {
+        const data = await response.json(); // Get response JSON
         setIsLiked(!isLiked);
-        setLikeCount(isLiked ? likeCount - 1 : likeCount + 1);
+        setLikeCount(data.likeCount); // ✅ Update with actual count from server
       }
     } catch (error) {
       console.error("Error liking asset:", error);
@@ -53,7 +54,7 @@ interface LikeNumberProps {
   initialLikeCount: number;
 }
 
-export function LikeCountNumber({ initialLikeCount }: LikeNumberProps) {
+export function InspirationLikeCountNumber({ initialLikeCount }: LikeNumberProps) {
   const [likeCount] = useState(initialLikeCount);
 
   return (
