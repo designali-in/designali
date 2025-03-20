@@ -1,19 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react"; 
 import { DownloadNumber } from "./download-btn";
 import { LikeCountNumber } from "./like-btn";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/src/lib/utils";
-import { DIcons, ExternalLink } from "dicons";
+import { DIcons } from "dicons";
 
 import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
+  DialogDescription, 
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -283,7 +281,7 @@ export function InspirationGrid({
                           <OpenWebsiteButton
                             inspirationId={inspiration.id}
                             websiteLink={inspiration.websitelink}
-                            initialDownloadCount={inspiration.visits}
+                            initialVisitCount={inspiration.visits}
                           />
                           <DialogClose>
                             <DIcons.Close className="w-4 h-4" />
@@ -515,7 +513,7 @@ export function InspirationGridLobby({
                       <OpenWebsiteButton
                         inspirationId={inspiration.id}
                         websiteLink={inspiration.websitelink}
-                        initialDownloadCount={inspiration.visits}
+                        initialVisitCount={inspiration.visits}
                       />
                       <DialogClose>
                         <DIcons.Close className="h-4 w-4" />

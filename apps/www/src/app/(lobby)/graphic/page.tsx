@@ -21,7 +21,7 @@ import { Gallery } from "@/src/components/lobby/images/gallery";
 import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
 import { Wand2 } from "lucide-react";
 import { InspirationGrid } from "@/src/components/dashboard/graphic/assets/inspiration-grid";
-
+import { DIcons } from "dicons";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -133,7 +133,7 @@ const BrowsePage = async () => {
                   className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
                   color={["#FF007F", "#39FF14", "#00FFFF"]}
                 >
-                  <Button size="lg">Upload New Asset</Button>
+                  <Button size="lg">Upload Your Design</Button>
                 </ShineBorder>
               </Link>
             ) : (
@@ -143,21 +143,24 @@ const BrowsePage = async () => {
                   className="border cursor-pointer  w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
                   color={["#FF007F", "#39FF14", "#00FFFF"]}
                 >
-                  <Button size="lg">Upload New Asset/Login</Button>
+                  <Button size="lg">Upload Your Design/Login</Button>
                 </ShineBorder>
               </Link>
             )}
-            <Link href={"/pricing"}>
-              <Button variant="outline" size="lg">
-                Get Unlimited Access
+            <Link
+              aria-label="Logo"
+              href="mailto:contact@designali.in"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Button variant={"outline"} size="lg">
+                <DIcons.Mail strokeWidth={1.5} className="h-5 w-5" />
+                Share Your Design
               </Button>
             </Link>
-            <p className="text-left text-xs">
-              Full access <br /> from ₹250/m
-            </p>
           </div>
         </div>
-         
+
         <div>
           <div>
             <Tabs
