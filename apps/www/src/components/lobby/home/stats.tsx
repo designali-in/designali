@@ -64,7 +64,7 @@ export function AboutStats() {
       <StatCard link="/graphic" title="Asset Saved" count={stats.assetlikes} />
       <StatCard link="/graphic" title="Asset Views" count={stats.assetviews} />
       <StatCard link="/graphic" title="Asset Downloads" count={stats.assetdownloads} />
-      <StatCard link="/graphic" title="Inspiration Visite" count={stats.inspirationvisits} />
+      <StatCard link="/graphic" title="Inspiration Visit" count={stats.inspirationvisits} />
       <StatCard link="/graphic" title="Inspiration Saved" count={stats.inspirationlikes} />
       <StatCard link="/graphic" title="Inspiration Views" count={stats.inspirationviews} />
     </div>
