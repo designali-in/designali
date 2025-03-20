@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; 
+
 import Link from "next/link";
 import { DownloadNumber } from "./download-btn";
 import { LikeCountNumber } from "./like-btn";
@@ -42,6 +43,7 @@ import {
 import { InspirationLikeButton } from "./inspiration-like-btn";
 import { OpenWebsiteButton } from "./open-website";
 import { ArrowLeft, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type Asset = {
   id: string;
@@ -83,16 +85,42 @@ export function AssetGrid({
   isLiked: boolean;
   availableTags: string[];
 }) {
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredAssets, setFilteredAssets] = useState(assets);
   const [sortBy, setSortBy] = useState("latest");
   const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
   const [selectedTag, setSelectedTag] = useState("all");
 
-  // Get unique tags from availableTags
   const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
     a.localeCompare(b)
   );
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", ""); // Remove `#`
+      if (hash && uniqueTags.includes(hash)) {
+        setSelectedTag(hash);
+      } else {
+        setSelectedTag("all");
+      }
+    };
+  
+    // Run on initial load
+    handleHashChange();
+  
+    // Listen for URL hash changes
+    window.addEventListener("hashchange", handleHashChange);
+  
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [uniqueTags]);
+  
+
+  const handleTabChange = (value: string) => {
+    setSelectedTag(value);
+    router.replace(`/graphic#${value}`, undefined);
+  };
 
   useEffect(() => {
     let sortedAssets = [...assets];
@@ -103,7 +131,6 @@ export function AssetGrid({
         (selectedTag === "all" || asset.tags.includes(selectedTag))
     );
 
-    // Then, sort the filtered assets
     switch (sortBy) {
       case "mostDownloaded":
         sortedAssets.sort((a, b) => b.downloads - a.downloads);
@@ -128,7 +155,7 @@ export function AssetGrid({
 
   return (
     <div>
-      <Tabs value={selectedTag} onValueChange={setSelectedTag}>
+      <Tabs value={selectedTag} onValueChange={handleTabChange}>
         <div className="mb-3">
           <div className="mt-3 grid md:flex justify-items-center md:justify-between gap-2">
             <Input
@@ -151,7 +178,7 @@ export function AssetGrid({
                   {uniqueTags.length > 0 ? (
                     uniqueTags.map((tag) => (
                       <TabsTrigger
-                        className="px-4 mx-1  data-[state=active]:text-white data-[state=active]:dark:text-black data-[state=active]:bg-black data-[state=active]:dark:bg-white rounded-full border"
+                        className="px-4 mx-1 data-[state=active]:text-white data-[state=active]:dark:text-black data-[state=active]:bg-black data-[state=active]:dark:bg-white rounded-full border"
                         key={tag}
                         value={tag}
                       >
@@ -187,54 +214,18 @@ export function AssetGrid({
               return (
                 <Card
                   key={asset.id}
-                  className={cn(
-                    "focused group h-full overflow-hidden rounded-sm"
-                  )}
+                  className="focused group h-full overflow-hidden rounded-sm"
                 >
                   <CardHeader className="border-b border-dotted p-0">
                     <AspectRatio className="overflow-hidden">
                       <Link href={`/graphic/assets/${asset.id}`}>
-                        {urls.length > 1 ? (
-                          <div className="relative h-full w-full">
-                            {urls.slice(0, 1).map((url, index) => (
-                              <CldImage
-                                key={index}
-                                src={url || "/placeholder.svg"}
-                                alt={`${asset.title} - Image ${index + 1}`}
-                                loading="lazy"
-                                fill
-                                className={cn(
-                                  "object-cover transition-all group-hover:scale-105",
-                                  urls.length === 2 && "w-1/2",
-                                  urls.length === 3 && index === 0
-                                    ? "w-1/2"
-                                    : "w-1/4",
-                                  urls.length === 4 && "h-1/2 w-1/2"
-                                )}
-                                style={{
-                                  top:
-                                    urls.length === 3 && index > 0
-                                      ? "50%"
-                                      : "0",
-                                  left: index % 2 === 1 ? "50%" : "0",
-                                }}
-                              />
-                            ))}
-                            {urls.length > 1 && (
-                              <div className="absolute right-2 top-2 rounded-full bg-black bg-opacity-50 px-2 py-1 text-xs text-white">
-                                +{urls.length - 1}
-                              </div>
-                            )}
-                          </div>
-                        ) : (
-                          <CldImage
-                            src={urls[0] || "/placeholder.svg"}
-                            alt={asset.title}
-                            loading="lazy"
-                            fill
-                            className="h-full w-full object-cover transition-all group-hover:scale-105"
-                          />
-                        )}
+                        <CldImage
+                          src={urls[0] || "/placeholder.svg"}
+                          alt={asset.title}
+                          loading="lazy"
+                          fill
+                          className="h-full w-full object-cover transition-all group-hover:scale-105"
+                        />
                       </Link>
                     </AspectRatio>
                   </CardHeader>
@@ -281,6 +272,7 @@ export function AssetGrid({
     </div>
   );
 }
+
 
 export function AssetGridLobby({
   assets,
