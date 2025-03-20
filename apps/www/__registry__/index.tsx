@@ -1150,6 +1150,21 @@ export const Index: Record<string, any> = {
       source: "__registry__/default/blocks/brands/apple-iphone-16-pro/page.tsx",
       meta: undefined,
     },
+    "apple": {
+      name: "apple",
+      description: "Apple - Think Different",
+      type: "registry:block",
+      registryDependencies: [],
+      files: [{
+        path: "registry/default/blocks/brands/apple/page.tsx",
+        type: "registry:page",
+        target: "app/apple/page.tsx"
+      }],
+      categories: ["brands"],
+      component: React.lazy(() => import("@/registry/default/blocks/brands/apple/page.tsx")),
+      source: "__registry__/default/blocks/brands/apple/page.tsx",
+      meta: undefined,
+    },
     "hero-01": {
       name: "hero-01",
       description: "A simple hero section with react types ",

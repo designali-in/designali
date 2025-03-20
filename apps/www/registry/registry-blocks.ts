@@ -71,6 +71,20 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["brands"],
   },
+  {
+    name: "apple",
+    type: "registry:block",
+    description: "Apple - Think Different",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/brands/apple/page.tsx",
+        type: "registry:page",
+        target: "app/apple/page.tsx",
+      },
+    ],
+    categories: ["brands"],
+  },
   // hero
   {
     name: "hero-01",

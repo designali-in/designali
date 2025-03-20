@@ -22,6 +22,7 @@ import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
 import { Wand2 } from "lucide-react";
 import { InspirationGrid } from "@/src/components/dashboard/graphic/assets/inspiration-grid";
 
+
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
   title: "Graphic",
@@ -56,11 +57,11 @@ const BrowsePage = async () => {
 
   const isLiked = session
     ? inspirations.some((asset) =>
-      asset.likes.some((likes) => likes.userId === session.user.id)
+        asset.likes.some((likes) => likes.userId === session.user.id)
       )
     : false;
 
-    const isLikedAsset = session
+  const isLikedAsset = session
     ? inspirations.some((inspiration) =>
         inspiration.likes.some((likes) => likes.userId === session.user.id)
       )
@@ -68,7 +69,7 @@ const BrowsePage = async () => {
 
   const formattedInspirations = inspirations.map((inspiration) => ({
     ...inspiration,
-    uploadedAt: inspiration.createdAt.toISOString(), 
+    uploadedAt: inspiration.createdAt.toISOString(),
     tags: inspiration.tags.map((tag) => tag.name), // Extract tag names
   }));
 
@@ -156,6 +157,7 @@ const BrowsePage = async () => {
             </p>
           </div>
         </div>
+         
         <div>
           <div>
             <Tabs
@@ -172,7 +174,7 @@ const BrowsePage = async () => {
                           {assets.length}
                         </span>
                       </TabsTrigger>
-                      <TabsTrigger value="tab-5">
+                      <TabsTrigger key={"inspiration"} value="tab-5">
                         Inspirations
                         <span className="text-ali px-1 font-semibold">
                           {inspirations.length}

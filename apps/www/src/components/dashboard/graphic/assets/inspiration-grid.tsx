@@ -75,7 +75,7 @@ export function InspirationGrid({
   const [sortBy, setSortBy] = useState("latest");
   const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
   const [selectedTag, setSelectedTag] = useState("all");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); 
 
   const isMobile = useIsMobile();
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -84,6 +84,18 @@ export function InspirationGrid({
   const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
     a.localeCompare(b)
   );
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      console.log("Navigating to:", url);
+    };
+  
+    window.addEventListener("popstate", () => handleRouteChange(window.location.pathname));
+    
+    return () => {
+      window.removeEventListener("popstate", () => handleRouteChange(window.location.pathname));
+    };
+  }, []);
 
   useEffect(() => {
     let sortedInspirations = [...inspirations];
@@ -177,10 +189,11 @@ export function InspirationGrid({
               const urls = inspiration.url.split(",");
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Dialog  key={inspiration.id}>
-                  <DialogTrigger>
+                <Dialog key={inspiration.id}>
+                  <DialogTrigger >
                     <Card
                       key={inspiration.id}
+                      
                       className={cn(
                         "focused group h-full overflow-hidden rounded-sm"
                       )}

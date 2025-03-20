@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "apple",
+  "type": "registry:block",
+  "author": "shadcn (https://ui.shadcn.com)",
+  "description": "Apple - Think Different",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/brands/apple/page.tsx",
+      "content": "\"use client\";\nconst Apple = () => {\n  return (\n    <section id=\"home\">\n       Hi\n    </section>\n  );\n};\n\nexport default Apple;\n",
+      "type": "registry:page",
+      "target": "app/apple/page.tsx"
+    }
+  ],
+  "categories": [
+    "brands"
+  ]
+}

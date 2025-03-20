@@ -83,7 +83,7 @@ export default async function AssetPage({
   });
 
   const imageUrls = asset.url.split(",");
-  
+
   const isLiked = session
     ? asset.likes.some((like) => like.userId === session.user.id)
     : false;
@@ -181,13 +181,15 @@ export default async function AssetPage({
           <div className="grid items-center gap-3 md:flex md:justify-between">
             <div className="flex flex-wrap gap-2">
               {asset.tags.map((tag) => (
-                <Badge
-                  className="px-3 py-1 text-xs"
-                  key={tag.id}
-                  variant="secondary"
-                >
-                  {tag.name}
-                </Badge>
+                <Link href={`/graphic/#${tag.name}`} key={tag.id}>
+                  <Badge
+                    className="px-3 py-1 hover:bg-primary hover:text-primary-foreground text-xs"
+                    key={tag.id}
+                    variant="secondary"
+                  >
+                    {tag.name}
+                  </Badge>
+                </Link>
               ))}
             </div>
             <p className="text-sm text-gray-500">
