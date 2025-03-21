@@ -26,6 +26,7 @@ type User = {
   email: string;
   avatarUrl: string;
   totalAssets: number;
+  totalViews: number;
   totalDownloads: number;
   totalLikes: number;
   joinedAt: string;
@@ -42,7 +43,7 @@ export default function UserList({ users }: { users: User[] }) {
 
   useEffect(() => {
     let result = users.filter((user) =>
-      user.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      user.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     switch (sortBy) {
@@ -58,7 +59,7 @@ export default function UserList({ users }: { users: User[] }) {
       default:
         result.sort(
           (a, b) =>
-            new Date(b.joinedAt).getTime() - new Date(a.joinedAt).getTime(),
+            new Date(b.joinedAt).getTime() - new Date(a.joinedAt).getTime()
         );
     }
 
@@ -95,22 +96,23 @@ export default function UserList({ users }: { users: User[] }) {
           <Card
             key={user.id}
             className={cn(
-              "focused group flex h-full w-full overflow-hidden rounded-sm",
+              "focused group flex h-full w-full overflow-hidden rounded-sm"
             )}
           >
-            <CardHeader className="w-28 border-b p-0">
+            <CardHeader className="w-28  p-0">
               <AspectRatio ratio={1} className="overflow-hidden">
                 <Link href={`/graphic/profile/${user.username}`}>
                   <Image
                     src={user.avatarUrl || "/placeholder.svg"}
                     alt={user.name}
-                    fill
-                    className="object-cover transition-all group-hover:scale-105"
+                    width={130}
+                    height={130}
+                    className="object-cover h-full w-full transition-all group-hover:scale-105"
                   />
                 </Link>
               </AspectRatio>
             </CardHeader>
-            <CardContent className="p-4">
+            <CardContent className="p-4 text-start">
               <h3 className="text-lg font-semibold">{user.name}</h3>
               <p className="text-sm text-muted-foreground">{user.bio}</p>
               <div className="mt-2 flex justify-between gap-3 text-sm text-muted-foreground">
@@ -121,6 +123,10 @@ export default function UserList({ users }: { users: User[] }) {
                 <div className="flex items-center gap-1">
                   <DIcons.Download className="h-4 w-4" />
                   <span>{user.totalDownloads}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <DIcons.Eye className="h-4 w-4" />
+                  <span>{user.totalViews}</span>
                 </div>
               </div>
             </CardContent>

@@ -6,7 +6,7 @@ import { cn } from "@/src/lib/utils";
 import { Avegra } from "@/src/lib/fonts/fonts";
 
 export const metadata: Metadata = {
-  title: "Easing Classes - Designali",
+  title: "Easing Classes",
   description:
     "A collection of easing utility classes to enhance your Tailwind CSS animations and transitions.",
 };
@@ -132,21 +132,21 @@ const easings = [
 
 export default function Page() {
   return (
-    <main className="mx-auto my-20 mt-30 max-w-7xl px-6 xl:px-0">
+    <main className="container-wrapper mt-4 rounded-t-3xl border-t">
       <ScrollProgress className="top-0" />
       <div className="">
          
         <h1
           className={cn(
             Avegra.className,
-            "text-center text-7xl tracking-tighter sm:text-9xl"
+            "text-center mt-10 text-5xl tracking-tighter sm:text-7xl"
           )}
         >
           Easings
         </h1>
       </div>
-      <div className="px-6 xl:px-0">
-        <div className="mx-auto w-full max-w-7xl">
+      <div className="">
+        <div className="p-6">
           <Easings easings={easings} />
         </div>
       </div>

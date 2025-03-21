@@ -90,36 +90,35 @@ export function AssetGrid({
   const [filteredAssets, setFilteredAssets] = useState(assets);
   const [sortBy, setSortBy] = useState("latest");
   const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
-  const [selectedTag, setSelectedTag] = useState("all");
+  const [selectedTag, setSelectedTag] = useState("All");
+  const [currentHash, setCurrentHash] = useState("");
 
   const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
     a.localeCompare(b)
   );
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace("#", ""); // Remove `#`
-      if (hash && uniqueTags.includes(hash)) {
-        setSelectedTag(hash);
-      } else {
-        setSelectedTag("all");
-      }
-    };
-  
-    // Run on initial load
-    handleHashChange();
-  
-    // Listen for URL hash changes
-    window.addEventListener("hashchange", handleHashChange);
-  
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, [uniqueTags]);
-  
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentHash(window.location.hash.replace("#", ""));
+    }
+  }, []); // Runs only on client side
+  
+  useEffect(() => {
+    if (currentHash && uniqueTags.includes(currentHash)) {
+      setSelectedTag(currentHash);
+    } else {
+      setSelectedTag("All");
+    }
+  }, [currentHash, uniqueTags]);
+  
   const handleTabChange = (value: string) => {
-    setSelectedTag(value);
-    router.replace(`/graphic#${value}`, undefined);
+    if (selectedTag !== value) {
+      setSelectedTag(value);
+      router.replace(`/graphic#${value}`, { scroll: false });
+  
+      // Update currentHash immediately
+      setCurrentHash(value);
+    }
   };
 
   useEffect(() => {
@@ -128,7 +127,7 @@ export function AssetGrid({
     sortedAssets = sortedAssets.filter(
       (asset) =>
         asset.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-        (selectedTag === "all" || asset.tags.includes(selectedTag))
+        (selectedTag === "All" || asset.tags.includes(selectedTag))
     );
 
     switch (sortBy) {
@@ -171,7 +170,7 @@ export function AssetGrid({
                 <ScrollArea className="w-full  whitespace-nowrap">
                   <TabsTrigger
                     className="rounded-full border data-[state=active]:text-white data-[state=active]:dark:text-black data-[state=active]:bg-black data-[state=active]:dark:bg-white mx-1"
-                    value="all"
+                    value="All"
                   >
                     All
                   </TabsTrigger>
@@ -654,7 +653,7 @@ export function ProfileAssetGrid({
                     <OpenWebsiteButton
                       inspirationId={inspiration.id}
                       websiteLink={inspiration.websitelink}
-                      initialDownloadCount={inspiration.visits}
+                      initialVisitCount={inspiration.visits}
                     />
                     <DialogClose>
                       <Button size={"icon"} variant="outline">

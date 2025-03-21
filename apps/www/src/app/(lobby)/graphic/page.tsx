@@ -94,6 +94,10 @@ const BrowsePage = async () => {
     bio: user.bio || "",
     avatarUrl: user.image || "",
     totalAssets: user.Asset.length,
+    totalViews: user.Asset.reduce(
+      (sum, asset) => sum + (asset.views || 0),
+      0
+    ),
     totalDownloads: user.Asset.reduce(
       (sum, asset) => sum + (asset.downloads || 0),
       0

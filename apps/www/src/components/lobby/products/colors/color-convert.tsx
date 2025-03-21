@@ -138,7 +138,7 @@ const Items = (props: ItemProps) => {
         const { label, value } = item;
 
         return (
-          <div className="flex gap-3 rounded-lg border p-6">
+          <div key={label} className="flex gap-3 rounded-lg border p-6">
             <div className="text-center" key={label}>
               <div className="text-xs text-slate-600 dark:text-slate-400">
                 {label}
