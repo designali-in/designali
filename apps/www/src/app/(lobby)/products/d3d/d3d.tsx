@@ -1,4 +1,4 @@
-import { PhotoshopGradients } from "@/components/lobby/products/tools/gradients";
+ 
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -15,7 +15,7 @@ export function D3D() {
         <ScrollArea className="whitespace-nowrap">
           <div className="space-x-2">
             <TabsTrigger value="1" className="px-6">
-              Oil Paint
+              Gradient 
             </TabsTrigger>
             <TabsTrigger value="2" className="px-6">
               Neon
@@ -27,7 +27,7 @@ export function D3D() {
       </TabsList>
       <div className="mt-6">
         <TabsContent value="1">
-         
+         <Halftone/>
         </TabsContent>
         <TabsContent value="2">
          

@@ -8,7 +8,7 @@ import { getCurrentUser } from "@/lib/session";
 export async function Halftone() {
   const user = await getCurrentUser();
   const data = await cloudinary.v2.search
-    .expression(`folder:products/graaadients/halftone/*`)
+    .expression(`folder:products/3dicons/icons/*`)
     .sort_by("created_at", "desc")
     .max_results(400)
     .execute();
@@ -25,7 +25,7 @@ export async function Halftone() {
             </Link>
             <Button variant="default" size="lg">
               <Link
-                href="https://www.jiocloud.com/l/?u=i2wPvKD253IgrxoRnKJ9gMIZmRX9LLgvub6zaCfyHEM=PrF"
+                href="https://www.jioaicloud.com/l/?u=ZqxSQhckVQRBBUzo4QqeZiLt-VD2aqfByVm3zqFEZh4=hIb"
                 target="_blank"
                 className=""
               >
