@@ -5,7 +5,7 @@ import { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { DIcons } from "dicons";
+import { Brands } from "../../../../../../../packages/icons/src/icons/brands/index";
 import {
   Tooltip,
   TooltipContent,
@@ -50,7 +50,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   // Replace the hardcoded exampleIcons array with dynamic import of all icons
-  const allDicons = Object.entries(DIcons).map(([name, component]) => ({
+  const allDicons = Object.entries(Brands).map(([name, component]) => ({
     name,
     component,
   }));

@@ -64,32 +64,32 @@ export function GeometryControls({
               key={preset.name}
               className={`cursor-pointer rounded-lg p-2 flex flex-col items-center ${
                 bevelPreset === preset.name
-                  ? "bg-primary/20 ring-1 ring-primary"
+                  ? "bg-primary/20 rounded-lg w-full h-full"
                   : "hover:bg-muted"
               }`}
               onClick={() => applyBevelPreset(preset.name)}>
               <div
-                className="w-14 h-14 rounded-md mb-1 flex items-center justify-center overflow-hidden"
+                className=" mb-1 flex items-center justify-center overflow-hidden"
                 style={
                   preset.name === "none"
                     ? {
                         background: "transparent",
-                        border: "1px solid var(--border)",
+                        border: "1px",
                         borderRadius: "4px",
                       }
                     : preset.name === "custom"
                       ? {
                           background:
                             "linear-gradient(135deg, hsl(var(--primary)/0.8), hsl(var(--primary)/0.6))",
-                          border: "1px solid hsl(var(--primary)/0.3)",
-                          boxShadow: "inset 0 0 8px rgba(255,255,255,0.3)",
+                          border: "1px",
+                          boxShadow: "inset 0 0 8px",
                           borderRadius: "10%",
                         }
                       : {
                           position: "relative",
                           background:
-                            "linear-gradient(135deg, hsl(var(--primary)/0.5), hsl(var(--primary)/0.3))",
-                          border: "1px solid hsl(var(--primary)/0.3)",
+                            " ",
+                          border: " ",
                           borderRadius: `${preset.size * 15}%`,
                           boxShadow: `
                             inset 0 0 0 ${preset.thickness}px rgba(255,255,255,0.2),
@@ -98,7 +98,7 @@ export function GeometryControls({
                         }
                 }>
                 {preset.name === "none" && (
-                  <div className="w-6 h-6 rounded-sm bg-muted-foreground/20"></div>
+                  <div className="w-6 h-6 bg-muted-foreground/20"></div>
                 )}
                 {preset.name === "light" && (
                   <div className="w-6 h-6 rounded-[2px] bg-primary/40"></div>
