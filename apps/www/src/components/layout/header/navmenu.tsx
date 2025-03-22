@@ -77,8 +77,8 @@ export function Menu() {
                           />
                           DIcons
                           <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                          New
-                        </span>
+                            New
+                          </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -89,18 +89,36 @@ export function Menu() {
                   </NavigationMenuLink>
                 </li>
                 <li className="row-span-3">
+                  <NavigationMenuLink href="/products/d3d">
+                    <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
+                      <div className="mb-2 mt-4 text-lg font-medium text-primary">
+                        <div className="flex gap-2 items-center">
+                          <DIcons.Component
+                            strokeWidth={1}
+                            className="h-4 w-4"
+                          />
+                          D3D
+                          <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
+                            New
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Transform Your Vectors in a New Dimension with SVGs having simple geometry.
+                      </p>
+                    </div>
+                  </NavigationMenuLink>
+                </li>
+                <li className="row-span-3">
                   <NavigationMenuLink href="/products/graaadients">
                     <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         <div className="flex gap-2 items-center">
-                          <DIcons.Flower2
-                            strokeWidth={1}
-                            className="h-4 w-4"
-                          />
+                          <DIcons.Flower2 strokeWidth={1} className="h-4 w-4" />
                           Graaadients
                           <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                          New
-                        </span>
+                            New
+                          </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -115,14 +133,11 @@ export function Menu() {
                     <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         <div className="flex gap-2 items-center">
-                          <DIcons.Grid3x3
-                            strokeWidth={1}
-                            className="h-4 w-4"
-                          />
+                          <DIcons.Grid3x3 strokeWidth={1} className="h-4 w-4" />
                           Patterns
                           <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                          New
-                        </span>
+                            New
+                          </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -140,8 +155,8 @@ export function Menu() {
                           <DIcons.Blocks strokeWidth={1} className="h-4 w-4" />
                           Blocks
                           <span className="ml-1 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs font-normal leading-none text-[#000000] no-underline group-hover:no-underline">
-                          New
-                        </span>
+                            New
+                          </span>
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -178,8 +193,8 @@ export function Menu() {
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Color generator - Dive Into a World of Colors – Bringing Vibrancy to Your
-                        Designs
+                        Color generator - Dive Into a World of Colors – Bringing
+                        Vibrancy to Your Designs
                       </p>
                     </div>
                   </NavigationMenuLink>
@@ -190,7 +205,10 @@ export function Menu() {
                     <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
                       <div className="mb-2 mt-4 text-lg font-medium text-primary">
                         <div className="flex gap-2 items-center">
-                          <DIcons.AnimationMoveBottom strokeWidth={1} className="h-4 w-4" />
+                          <DIcons.AnimationMoveBottom
+                            strokeWidth={1}
+                            className="h-4 w-4"
+                          />
                           Easings
                         </div>
                       </div>
@@ -204,8 +222,6 @@ export function Menu() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          
 
           <NavigationMenuItem>
             <NavigationMenuLink

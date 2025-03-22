@@ -47,7 +47,7 @@ const navigation = {
           id: "designs",
           name: "Designs",
           items: [
-            { name: "Docs", href: "/docs" },
+            { name: "D3D", href: "/products/d3d" },
             { name: "Components", href: "/docs/components/accordion" },
             { name: "Blogs", href: "/blog" },
           ],

@@ -54,18 +54,14 @@ export function AboutStats() {
   }, []);
 
   return (
-    <div className="grid p-6  grid-cols-2 md:grid-cols-4 gap-3">
-      <StatCard
-        link="/graphic"
-        title="Inspirations"
-        count={stats.inspiration}
-      />
+    <div className="grid p-6  grid-cols-2 md:grid-cols-4 gap-3"> 
       <StatCard link="/graphic" title="Assets" count={stats.assets} />
       <StatCard link="/graphic" title="Asset Saved" count={stats.assetlikes} />
-      <StatCard link="/graphic" title="Asset Views" count={stats.assetviews} />
       <StatCard link="/graphic" title="Asset Downloads" count={stats.assetdownloads} />
-      <StatCard link="/graphic" title="Inspiration Visit" count={stats.inspirationvisits} />
+      <StatCard link="/graphic" title="Asset Views" count={stats.assetviews} />
+      <StatCard link="/graphic" title="Inspirations" count={stats.inspiration} />
       <StatCard link="/graphic" title="Inspiration Saved" count={stats.inspirationlikes} />
+      <StatCard link="/graphic" title="Inspiration Visit" count={stats.inspirationvisits} />
       <StatCard link="/graphic" title="Inspiration Views" count={stats.inspirationviews} />
     </div>
   );
@@ -142,7 +138,7 @@ export function Stats() {
         <div className="relative h-full overflow-hidden rounded-xl border p-8 text-center hover:border-slate-300 dark:hover:border-slate-700">
           <p className="text-xs text-indigo-500 md:-mb-2">Experience</p>
           <h1 className="font-mono text-6xl font-bold tracking-tighter text-indigo-500 md:text-9xl">
-            <NumberCounter className="text-indigo-500" value={8} />
+            <NumberCounter className="text-indigo-500" value={10} />
           </h1>
           <p className="text-xs text-indigo-500 md:-mt-2">
             Years
