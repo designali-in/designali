@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Grid5 } from "@/components/common/gallery";
 import { Button } from "@/components/ui/button";
 
-import cloudinary from "@/lib/cloudinary";
+import cloudinary from "@/lib/cloud";
 import { getCurrentUser } from "@/lib/session";
 
 export async function Halftone() {
   const user = await getCurrentUser();
-  const data = await cloudinary.v2.search
+  const data = await cloudinary.search
     .expression(`folder:products/3dicons/icons/*`)
     .sort_by("created_at", "desc")
     .max_results(400)

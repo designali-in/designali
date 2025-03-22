@@ -1,9 +1,9 @@
- 
-
+ "use client"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
  
 import { Halftone } from "./types/1"; 
+import { Suspense } from "react";
 
 export function D3D() {
   return (
@@ -27,10 +27,10 @@ export function D3D() {
       </TabsList>
       <div className="mt-6">
         <TabsContent value="1">
-         <Halftone/>
+       Coming Soon
         </TabsContent>
         <TabsContent value="2">
-         
+        Coming Soon
         </TabsContent>
         
       </div>
