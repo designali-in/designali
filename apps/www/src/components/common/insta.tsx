@@ -23,17 +23,21 @@ export const InstagramFeed = () => {
   useEffect(() => {
     const fetchInstagramPosts = async () => {
       try {
-        const token =
-          "IGQWRNSU9JVEhpaGF4T2JWS3BobHB4NkxidFpBTHdDOVVERkZAnZAWNJN2ctS0R3NmY3V3cybGFRRnBCR255ejV5a1VhYWQycEc0U2dsWGdqZAkQxYmFyYWJjLVluaUZACSklzOVAtQ19lMDhVVk1Jcmtob1Jfc2hhSGMZD";
-        const response = await axios.get(
-          `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,permalink&access_token=${token}`
-        );
-        setPosts(response.data.data);
+        const response = await fetch("/api/insta");
+        const data = await response.json();
+        console.log("Fetched Instagram Data:", data);
+  
+        if (!Array.isArray(data)) {
+          console.error("API response is not an array:", data);
+          return;
+        }
+  
+        setPosts(data);
       } catch (error) {
         console.error("Error fetching Instagram posts:", error);
       }
     };
-
+  
     fetchInstagramPosts();
   }, []);
 
