@@ -18,6 +18,7 @@ export async function fetchImages(url:string):Promise<ImagesResults | undefined>
             }
         })
 
+        console.log("PEXELS_API_KEY:", env.PEXELS_API_KEY);
         // Check if the response status is not okay (HTTP status code >= 400)
         if(!res.ok){
             console.log('Failed to fetch Images!\n')

@@ -15,6 +15,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       { hostname: "images.pexels.com" },
+      { hostname: "assets.lummi.ai" },
+      { hostname: "www.lummi.ai" },
       { hostname: "picsum.photos" },
       { protocol: "https", hostname: "res.cloudinary.com" },
       { protocol: "https", hostname: "utfs.io" },

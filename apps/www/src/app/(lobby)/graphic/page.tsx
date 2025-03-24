@@ -22,6 +22,7 @@ import { AIImage } from "@/src/components/dashboard/graphic/ai-image/image-gen";
 import { Wand2 } from "lucide-react";
 import { InspirationGrid } from "@/src/components/dashboard/graphic/assets/inspiration-grid";
 import { DIcons } from "dicons";
+import { Lummi } from "@/src/components/lobby/products/lummi/images";
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -242,6 +243,7 @@ const BrowsePage = async () => {
                   />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-2">
+                  <Lummi/>
                   <Gallery />
                 </TabsContent>
                 <TabsContent className="min-h-screen" value="tab-3">
