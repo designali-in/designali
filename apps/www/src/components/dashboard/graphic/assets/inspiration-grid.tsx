@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react"; 
+import { useEffect, useState } from "react";
 import { DownloadNumber } from "./download-btn";
 import { LikeCountNumber } from "./like-btn";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -11,7 +11,7 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription, 
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,

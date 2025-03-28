@@ -33,7 +33,7 @@ export function DownloadButton({
       <Button className="flex items-center" onClick={handleDownload}>
         <span className="text-ali text-lg">{downloadCount}</span>
         <Download className="h-4 w-4" />
-        Open File
+        Download File
       </Button>
     </div>
   );

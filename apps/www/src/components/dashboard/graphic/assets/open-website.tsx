@@ -43,7 +43,7 @@ export function OpenWebsiteButton({ inspirationId, websiteLink, initialVisitCoun
     <div className="flex items-center gap-1">
       <Button variant={"outline"} className="flex items-center" onClick={handleVisit} disabled={isProcessing}>
         <span>{visitCount}</span>
-        Visit
+        Visit Site
         <DIcons.ChevronRight className="h-4 w-4" />
       </Button>
     </div>
