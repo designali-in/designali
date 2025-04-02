@@ -80,6 +80,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "gauge": {
+      name: "gauge",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/gauge.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/gauge.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "badge": {
       name: "badge",
       description: "",
@@ -1521,6 +1536,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/examples/mockups/iphone-16-pro-1.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "gauge-01": {
+      name: "gauge-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/gauge/gauge-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/gauge/gauge-01.tsx")),
       source: "",
       meta: undefined,
     },

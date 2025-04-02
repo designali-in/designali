@@ -116,6 +116,16 @@ export const examples: Registry["items"] = [
   },
 
   {
+    name: "gauge-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/gauge/gauge-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "button-01",
     type: "registry:example",
     files: [

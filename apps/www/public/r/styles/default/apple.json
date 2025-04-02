@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "blocks/brands/apple/page.tsx",
-      "content": "\"use client\";\nconst Apple = () => {\n  return (\n    <section id=\"home\">\n       Hi\n    </section>\n  );\n};\n\nexport default Apple;\n",
+      "content": "\"use client\";\n\nimport { Header } from \"./components/header\";\nconst Apple = () => {\n  return (\n    <section id=\"home\">\n      <Header />\n    </section>\n  );\n};\n\nexport default Apple;\n",
       "type": "registry:page",
       "target": "app/apple/page.tsx"
     }

@@ -39,7 +39,6 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Dot Pattern",
-          label: "New",
           href: "/docs/components/backgrounds/dot-pattern",
           items: [],
         },
@@ -74,8 +73,7 @@ export const docsConfig: DocsConfig = {
       title: "Mockups",
       items: [
         {
-          title: "Macbook",
-
+          title: "Macbook", 
           href: "/docs/components/mockups/macbook",
           items: [],
         },
@@ -174,6 +172,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Dropdown",
           href: "/docs/components/dropdown",
+          items: [],
+        },
+        {
+          title: "Gauge",
+          label: "New",
+          href: "/docs/components/gauge",
           items: [],
         },
         {

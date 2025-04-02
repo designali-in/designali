@@ -79,6 +79,17 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "gauge",
+    type: "registry:ui",
+    dependencies: ["@radix-ui/react-avatar"],
+    files: [
+      {
+        path: "ui/gauge.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "badge",
     type: "registry:ui",
     files: [

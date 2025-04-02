@@ -20,7 +20,7 @@ export default {
           600: "#57534e",
           800: "#292524",
           900: "#1c1917",
-          950: "#0c0a09",
+          950: "#0c0a09", 
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
