@@ -95,6 +95,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "book": {
+      name: "book",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/book.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/book.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "badge": {
       name: "badge",
       description: "",
@@ -1539,6 +1554,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "gauge-0": {
+      name: "gauge-0",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/gauge/gauge-0.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/gauge/gauge-0.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "gauge-01": {
       name: "gauge-01",
       description: "",
@@ -1551,6 +1581,96 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/examples/components/gauge/gauge-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "gauge-02": {
+      name: "gauge-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/gauge/gauge-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/gauge/gauge-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "gauge-03": {
+      name: "gauge-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/gauge/gauge-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/gauge/gauge-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "book-01": {
+      name: "book-01",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/books/book-01.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/books/book-01.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "book-02": {
+      name: "book-02",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/books/book-02.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/books/book-02.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "book-03": {
+      name: "book-03",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/books/book-03.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/books/book-03.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "book-04": {
+      name: "book-04",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/examples/components/books/book-04.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/components/books/book-04.tsx")),
       source: "",
       meta: undefined,
     },

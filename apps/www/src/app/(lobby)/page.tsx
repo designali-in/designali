@@ -11,7 +11,7 @@ import { CardsDemo } from "@/src/components/lobby/home/component-demos";
 import { Glow } from "@/src/components/ui/backgrounds/glow";
 import BrowseAssetsLobby from "@/src/components/lobby/home/asset-grid-lobby";
 import { GalleryHome } from "@/src/components/lobby/images/gallery";
-import { Separator } from "@/src/components/ui/separator"; 
+import { Separator } from "@/src/components/ui/separator";
 import BrowseInspirationLobby from "@/src/components/lobby/home/inspiration-grid-lobby"; 
 
 export default function HomePage() {
@@ -24,7 +24,7 @@ export default function HomePage() {
         <DBentoGrid />
         <Quote />
         <BrowseAssetsLobby />
-        <BrowseInspirationLobby/>
+        <BrowseInspirationLobby />
       </div>
       <div className="px-6 xl:px-0">
         <InstagramFeed />

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "book-04",
+  "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
+  "files": [
+    {
+      "path": "examples/components/books/book-04.tsx",
+      "content": "import Book from \"@/components/ui/book\";\nimport { DIcons } from \"dicons\";\n\nexport default function Gauge01() {\n  return (\n    <main className=\"flex flex-col items-center gap-6\">\n      <Book illustration={ <DIcons.Designali className=\"w-4 m-6 h-4\"/>} >\n        <div className=\"p-3 mb-2 grid gap-3\">\n        <h1 className=\"font-semibold\">Your complete platform for the Design.</h1>\n        <DIcons.Designali className=\"w-4 h-4\"/>\n        </div>\n      </Book>\n    </main>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

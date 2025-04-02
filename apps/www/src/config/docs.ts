@@ -150,6 +150,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Book",
+          label: "New",
+          href: "/docs/components/book",
+          items: [],
+        },
+        {
           title: "Breadcrumb",
           href: "/docs/components/breadcrumb",
           items: [],

@@ -125,7 +125,7 @@
   }
 }
 
-@layer utilities {
+@layer utilities { 
   .step {
     counter-increment: step;
   }

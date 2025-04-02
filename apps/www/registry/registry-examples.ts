@@ -116,11 +116,81 @@ export const examples: Registry["items"] = [
   },
 
   {
+    name: "gauge-0",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/gauge/gauge-0.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "gauge-01",
     type: "registry:example",
     files: [
       {
         path: "examples/components/gauge/gauge-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "gauge-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/gauge/gauge-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "gauge-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/gauge/gauge-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "book-01",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/books/book-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "book-02",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/books/book-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "book-03",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/books/book-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "book-04",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/components/books/book-04.tsx",
         type: "registry:example",
       },
     ],

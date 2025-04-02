@@ -1,11 +1,14 @@
 ---
-title: Slider
-description: Displays a slider or a component that looks like a slider.
+title: Gauge
+description: Displays a gauge or a component that looks like a activity.
 component: true
 ---
 
 <div className="grid gap-3 lg:grid-cols-2 xl:grid-cols-2">
+  <ComponentPreview name="gauge-0" />
   <ComponentPreview name="gauge-01" />
+  <ComponentPreview name="gauge-02" />
+  <ComponentPreview name="gauge-03" />
 </div>
 
 ### Installation
@@ -42,8 +45,16 @@ npx shadcn@latest add "https://designali.in/r/gauge"
 
 ### Props
 
-| Prop      | Type   | Description                   | Default |
-| --------- | ------ | ----------------------------- | ------- |
-| variant   | any    | Width of the dot pattern      | 16      |
-| size      | any    | Height of the dot pattern     | 16      |
-| className | string | Class name of the dot pattern | -       |
+| Prop        | Type   | Description                                         | Default                                 |
+| ----------- | ------ | --------------------------------------------------- | --------------------------------------- |
+| value       | any    | A number from 0 to 100 representing the gauge value | -                                       |
+| size        | any    | The size of the gauge in pixels or percentage       | "100%"                                  |
+| gapPercent  | any    | The gap percentage between arcs                     | 5                                       |
+| strokeWidth | any    | The thickness of the arc                            | 10                                      |
+| equal       | any    | Whether the primary and secondary arcs are equal    | false                                   |
+| showValue   | any    | Whether the percentage value is displayed           | true                                    |
+| primary     | any    | Color of the primary arc                            | Dynamic range (red, amber, blue, green) |
+| secondary   | any    | Color of the secondary arc                          | Gray hue                                |
+| transition  | any    | Animation transition settings                       | [1000, 200, 0]                          |
+| className   | string | Class name for the SVG                              | -                                       |
+| props       | any    | Additional props for the SVG element                | -                                       |

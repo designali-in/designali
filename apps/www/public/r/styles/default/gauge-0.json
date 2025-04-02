@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gauge-0",
+  "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
+  "files": [
+    {
+      "path": "examples/components/gauge/gauge-0.tsx",
+      "content": "import { Gauge } from \"@/components/ui/gauge\";\n\nexport default function Gauge01() {\n  return (\n    <main className=\"flex flex-wrap items-center gap-6\">\n      <Gauge className=\"size-24\" value={58} />\n    </main>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
