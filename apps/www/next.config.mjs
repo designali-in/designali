@@ -53,7 +53,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/r/:path([^.]*)",
+        source: "/r/styles/default/:path([^.]*)",
         destination: "/r/:path.json",
         permanent: true,
       },
