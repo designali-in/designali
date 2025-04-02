@@ -52,6 +52,11 @@ const nextConfig = {
         destination: "/docs/components/accordion",
         permanent: true,
       },
+      {
+        source: "/r/:path([^.]*)",
+        destination: "/r/:path.json",
+        permanent: true,
+      },
     ];
   },
 };
