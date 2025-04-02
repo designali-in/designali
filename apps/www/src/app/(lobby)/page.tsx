@@ -12,19 +12,43 @@ import { Glow } from "@/src/components/ui/backgrounds/glow";
 import BrowseAssetsLobby from "@/src/components/lobby/home/asset-grid-lobby";
 import { GalleryHome } from "@/src/components/lobby/images/gallery";
 import { Separator } from "@/src/components/ui/separator";
-import BrowseInspirationLobby from "@/src/components/lobby/home/inspiration-grid-lobby"; 
+import BrowseInspirationLobby from "@/src/components/lobby/home/inspiration-grid-lobby";
+import { Button } from "@/src/components/ui/button";
+import Link from "next/link";
+import ShineBorder from "@/registry/default/ui/backgrounds/shine-border";
+import { Lummi } from "@/src/components/lobby/products/lummi/images";
 
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <div className="absolute inset-0 max-md:hidden top-[400px] -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
-      <Hero /> 
+      <Hero />
       <ClientLogos />
       <div className="relative border-grid rounded-t-3xl rounded-b-3xl border container-wrapper overflow-hidden my-10">
         <DBentoGrid />
         <Quote />
         <BrowseAssetsLobby />
         <BrowseInspirationLobby />
+        <div className="my-10">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <Link href="/graphic">
+            <ShineBorder
+              borderWidth={3}
+              className="border w-full cursor-pointer  p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+              color={["#FF007F", "#39FF14", "#00FFFF"]}
+            >
+              <Button size="lg">Free Download All Graphic</Button>
+            </ShineBorder>
+          </Link> 
+          </div>
+          <Link
+            href={"https://www.instagram.com/designali.in/"}
+            className="flex justify-center"
+            target="_blank"
+          >
+            <p className="py-3 text-xs">Do you need any open file, DM me</p>
+          </Link>
+        </div>
       </div>
       <div className="px-6 xl:px-0">
         <InstagramFeed />
@@ -36,7 +60,7 @@ export default function HomePage() {
         <div className="relative bg-background border-grid rounded-t-3xl border-t container-wrapper overflow-hidden mt-10">
           <CardsDemo />
           <Separator />
-          <GalleryHome />
+          <Lummi/>
           <Separator />
           <div className="">
             <AdBanner

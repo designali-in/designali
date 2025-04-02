@@ -400,7 +400,7 @@ export function InspirationGridLobby({
   return (
     <div>
       <div className="p-3 pt-0 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {filteredInspirations.slice(0, 6).map((inspiration) => {
+        {filteredInspirations.slice(0, 9).map((inspiration) => {
           const urls = inspiration.url.split(",");
           return (
             // eslint-disable-next-line react/jsx-key

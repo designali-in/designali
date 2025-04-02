@@ -21,9 +21,9 @@ export function CardsDemo() {
         apps. Accessible. Customizable. Open Source.
       </p>
       <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-        <ComponentPreview name="dot-pattern-01" />
+        <ComponentPreview name="gauge-01" />
         <ComponentPreview name="macbook-pro-1" />
-        <ComponentPreview name="grid-pattern-01" />  
+        <ComponentPreview name="book-01" />  
       </div>
       <Link href={"/docs"} className="flex justify-center">
         <Button>View all Components</Button>

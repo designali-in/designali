@@ -326,7 +326,7 @@ export function AssetGridLobby({
   return (
     <div>
       <div className="p-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {filteredAssets.slice(0, 6).map((asset) => {
+        {filteredAssets.slice(0, 9).map((asset) => {
           const urls = asset.url.split(",");
           return (
             <Card

@@ -52,7 +52,7 @@ function FeaturesAndGallerySection() {
   return (
     <section id="features" className="">
       {isLoading ? (
-          <div className="text-center">Loading gallery...</div>
+          <div className="text-center mt-20">Loading gallery...</div>
         ) : (
           <AnimatedGallery images={images} />
         )}
