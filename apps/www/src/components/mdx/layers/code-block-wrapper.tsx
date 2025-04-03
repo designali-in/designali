@@ -27,7 +27,7 @@ export function CodeBlockWrapper({
       <div className={cn("relative grid overflow-hidden", className)} {...props}>
         <CollapsibleContent
           forceMount
-          className={cn("overflow-hidden", !isOpened && "max-h-32")}
+          className={cn("overflow-hidden", !isOpened && "max-h-64")}
         >
           <div
             className={cn(

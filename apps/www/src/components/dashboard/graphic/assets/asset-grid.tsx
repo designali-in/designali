@@ -71,8 +71,8 @@ type Inspiration = {
   tags: string[]; // Add this line to include tags
 };
 
-const INITIAL_LOAD = 21;
-const LOAD_MORE = 21;
+const INITIAL_LOAD = 60;
+const LOAD_MORE = 60;
 const INITIAL_LOAD3 = 8;
 const LOAD_MORE3 = 8;
 

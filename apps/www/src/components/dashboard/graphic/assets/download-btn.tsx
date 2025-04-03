@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import ShineBorder from "@/registry/default/ui/backgrounds/shine-border";
 
 interface DownloadButtonProps {
   assetId: string;
@@ -29,12 +30,18 @@ export function DownloadButton({
   };
 
   return (
-    <div className="flex items-center gap-1">
-      <Button className="flex items-center" onClick={handleDownload}>
-        <span className="text-ali text-lg">{downloadCount}</span>
-        <Download className="h-4 w-4" />
-        Download File
-      </Button>
+    <div className="flex items-center gap-1" onClick={handleDownload}>
+      <ShineBorder
+        borderWidth={3}
+        className="border cursor-pointer w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+        color={["#FF007F", "#39FF14", "#00FFFF"]}
+      >
+        <Button className="flex items-center">
+          <span className="text-ali text-lg">{downloadCount}</span>
+          <Download className="h-4 w-4" />
+          Download File
+        </Button>
+      </ShineBorder>
     </div>
   );
 }

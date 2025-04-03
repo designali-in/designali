@@ -25,7 +25,7 @@ export const CardStack = ({
       <div className="relative flex h-full">
         {cards.map((card) => {
           return (
-            <div key={card.id} className="flex h-[400px] w-full flex-col">
+            <div key={card.id} className="flex h-[384px] w-full flex-col">
               <Image
                 src={card.src}
                 alt={""}

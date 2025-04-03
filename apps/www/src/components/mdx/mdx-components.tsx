@@ -1,4 +1,4 @@
-// @ts-nocheck
+ 
 "use client"
 
 import * as React from "react"
@@ -212,19 +212,21 @@ const components = {
 
     return (
       <StyleWrapper styleName={__style__}>
+        <div className="relative grid overflow-hidden">
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-xl bg-stone-950 py-4 dark:bg-stone-900",
+            "mb-4 mt-6 max-h-[650px] overflow-auto rounded-xl bg-stone-950 py-4 dark:bg-stone-900",
             className
           )}
           {...props}
         />
+        </div>
         {__rawString__ && (
           <CopyButton
             value={__rawString__}
             src={__src__}
             event={__event__}
-            className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+            className={cn("absolute right-4 top-4", __withMeta__ && "top-20")}
           />
         )}
       </StyleWrapper>
@@ -338,7 +340,7 @@ export function Mdx({ code }: MdxProps) {
 
   return (
     <div className="mdx">
-      <Component components={components} />
+      <Component components={components as any} />
     </div>
   )
 }

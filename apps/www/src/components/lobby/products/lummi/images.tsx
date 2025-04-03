@@ -1,30 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react"; 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ImageZoom from "@/src/components/common/image-zoom";
 
 type ImageType = {
   url: string;
   description?: string;
 };
 
-
-export function Lummi() { 
+export function Lummi() {
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-grow"> 
-        <FeaturesAndGallerySection /> 
-      </main> 
+      <main className="flex-grow">
+        <FeaturesAndGallerySection />
+      </main>
     </div>
   );
 }
- 
+
 function FeaturesAndGallerySection() {
   const [images, setImages] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-   
 
   useEffect(() => {
     fetchImages();
@@ -52,10 +51,10 @@ function FeaturesAndGallerySection() {
   return (
     <section id="features" className="">
       {isLoading ? (
-          <div className="text-center mt-20">Loading gallery...</div>
-        ) : (
-          <AnimatedGallery images={images} />
-        )}
+        <div className="text-center mt-20">Loading gallery...</div>
+      ) : (
+        <AnimatedGallery images={images} />
+      )}
     </section>
   );
 }
@@ -69,13 +68,15 @@ function AnimatedGallery({ images }: { images: ImageType[] }) {
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
       {images.map((image, index) => (
         <div key={index} className="break-inside-avoid mb-4">
-          <Image
-            src={image.url}
-            alt={image.description || `Image ${index + 1}`}
-            width={800}
-            height={600}
-            className="w-full h-auto rounded-lg"
-          />
+          <ImageZoom>
+            <img
+              src={image.url}
+              alt={image.description || `Image ${index + 1}`}
+              width={800}
+              height={600}
+              className="w-full h-auto rounded-lg"
+            />
+          </ImageZoom>
         </div>
       ))}
     </div>

@@ -13,7 +13,7 @@ export function StyleWrapper({ styleName, children }: StyleWrapperProps) {
   const [config] = useConfig()
 
   if (!styleName || config.style === styleName) {
-    return <>{children}</>
+    return <div>{children}</div>
   }
 
   return null

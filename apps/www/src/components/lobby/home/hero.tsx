@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { renderCanvas } from "@/src/components/common/render";
 import { Plus } from "lucide-react";
+import { TypeWriter } from "@/components/common/typing";
 
 import { Button } from "@/components/ui/button";
 
@@ -32,9 +33,9 @@ const Hero = () => {
             <Link
               href="/products/dicons"
               rel="noreferrer"
-              className="hover:text-text-ali ml-1 flex items-center font-semibold"
+              className="ml-1 flex items-center font-semibold"
             >
-              <div className="absolute inset-0 flex" aria-hidden="true" />
+              <div className="absolute inset-0 hover:font-semibold hover:text-ali flex" aria-hidden="true" />
               Explore <span aria-hidden="true"></span>
             </Link>
           </div>
@@ -80,7 +81,7 @@ const Hero = () => {
 
           <p className="text-primary/60 py-4">
             I craft enchanting visuals for brands, and conjure design resources
-            to empower others. I am an expert in design like .
+            to empower others. I am an expert in design like <span className="text-blue-500 font-semibold"><TypeWriter strings={talkAbout} /></span>.
           </p>
           <div className="flex justify-center gap-2">
             <Link href={"/dashboard"}>

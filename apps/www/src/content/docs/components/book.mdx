@@ -4,7 +4,7 @@ description: Displays a 3D book or a component that looks like a book.
 component: true
 ---
 
-<div className="grid gap-3 lg:grid-cols-2 xl:grid-cols-2">
+<div className="grid gap-3">
   <ComponentPreview name="book-01" />
   <ComponentPreview name="book-02" />
   <ComponentPreview name="book-03" />
@@ -36,6 +36,56 @@ npx shadcn@latest add "https://designali.in/r/styles/default/book"
 <ComponentSource name="book" />
 
 <Step>Update the import paths to match your project setup.</Step>
+
+<Step>Update `tailwind.config.ts`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.ts" {5-14}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      backgroundImage: {
+        "gradient-button":
+          "linear-gradient(-90deg,#007cf0,#00dfd8,#ff0080,#007cf0)",
+        "book-bind-bg":
+          "linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0) 12%,hsla(0,0%,100%,.25) 29.25%,hsla(0,0%,100%,0) 50.5%,hsla(0,0%,100%,0) 75.25%,hsla(0,0%,100%,.25) 91%,hsla(0,0%,100%,0)),linear-gradient(90deg,rgba(0,0,0,.03),rgba(0,0,0,.1) 12%,transparent 30%,rgba(0,0,0,.02) 50%,rgba(0,0,0,.2) 73.5%,rgba(0,0,0,.5) 75.25%,rgba(0,0,0,.15) 85.25%,transparent)",
+        "book-pages":
+          "repeating-linear-gradient(90deg,#fff,#efefef 1px,#fff 3px,#9a9a9a 0)",
+      },
+      boxShadow: {
+        book: "0 1.8px 3.6px rgba(0,0,0,.05),0 10.8px 21.6px rgba(0,0,0,.08),inset 0 -.9px 0 rgba(0,0,0,.1),inset 0 1.8px 1.8px hsla(0,0%,100%,.1),inset 3.6px 0 3.6px rgba(0,0,0,.1)",
+      },
+    },
+  },
+};
+```
+
+<Step>Update `globals.css`</Step>
+
+```js title="globals.css" {7-18}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { 
+    --color-1: 330 100% 40%; /* Dark Neon Pink */
+    --color-2: 140 100% 55%; /* Bright Electric Green */
+    --color-3: 210 100% 30%; /* Deep Neon Blue */
+    --color-4: 60 100% 70%; /* Light Neon Yellow */
+    --color-5: 295 100% 45%; /* Dark Neon Purple */ 
+    }
+  .dark { 
+    --color-1: 330 100% 40%; /* Dark Neon Pink */
+    --color-2: 140 100% 55%; /* Bright Electric Green */
+    --color-3: 210 100% 30%; /* Deep Neon Blue */
+    --color-4: 60 100% 70%; /* Light Neon Yellow */
+    --color-5: 295 100% 45%; /* Dark Neon Purple */ 
+  }
+}
+```
 
 </Steps>
 

@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area"; 
+import { CanvasRevealEffect } from "@/src/components/ui/backgrounds/canvas-effect";
  
 import { DIcons } from "dicons";
 
@@ -29,7 +30,7 @@ export function Chatbot() {
         className="relative mx-auto w-full items-center justify-center overflow-hidden"
       >
         <div className="relative flex w-full items-center justify-center p-4">
-          <AnimatePresence>
+        <AnimatePresence>
             <div className="tracking-tightest flex select-none flex-col py-2 text-center text-3xl font-extrabold leading-none md:flex-col md:text-8xl lg:flex-row"></div>
             {hovered && (
               <motion.div
@@ -38,7 +39,16 @@ export function Chatbot() {
                 exit={{ opacity: 1 }}
                 className="absolute inset-0 h-full w-full object-cover"
               >
-                 
+                <CanvasRevealEffect
+                  animationSpeed={5}
+                  containerClassName="bg-transparent opacity-30 dark:opacity-50"
+                  colors={[
+                    [245, 5, 55],
+                    [245, 5, 55],
+                  ]}
+                  opacities={[1, 0.8, 1, 0.8, 0.5, 0.8, 1, 0.5, 1, 3]}
+                  dotSize={2}
+                /> 
               </motion.div>
             )}
           </AnimatePresence>
