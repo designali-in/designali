@@ -88,8 +88,7 @@ const Hero = () => {
             to empower others. I am an expert in design like{" "}
             <span className="text-blue-500 font-semibold">
               <TypeWriter strings={talkAbout} />
-            </span>
-            .
+            </span>.
           </p>
           <div className="flex items-center justify-center gap-2">
             <Link href="/graphic">
