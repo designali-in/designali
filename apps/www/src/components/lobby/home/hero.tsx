@@ -8,6 +8,7 @@ import { Plus } from "lucide-react";
 import { TypeWriter } from "@/components/common/typing";
 
 import { Button } from "@/components/ui/button";
+import ShineBorder from "@/registry/default/ui/backgrounds/shine-border";
 
 const Hero = () => {
   const talkAbout = [
@@ -35,14 +36,17 @@ const Hero = () => {
               rel="noreferrer"
               className="ml-1 flex items-center font-semibold"
             >
-              <div className="absolute inset-0 hover:font-semibold hover:text-ali flex" aria-hidden="true" />
+              <div
+                className="absolute inset-0 hover:font-semibold hover:text-ali flex"
+                aria-hidden="true"
+              />
               Explore <span aria-hidden="true"></span>
             </Link>
           </div>
         </div>
 
         <div className="mx-auto max-w-5xl">
-          <div className="border-text-ali relative mx-auto h-full bg-background border p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
+          <div className="border-text-ali relative mx-auto h-full bg-background border py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
             <h1 className="flex flex-col text-center text-5xl font-semibold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl">
               <Plus
                 strokeWidth={4}
@@ -81,12 +85,24 @@ const Hero = () => {
 
           <p className="text-primary/60 py-4">
             I craft enchanting visuals for brands, and conjure design resources
-            to empower others. I am an expert in design like <span className="text-blue-500 font-semibold"><TypeWriter strings={talkAbout} /></span>.
+            to empower others. I am an expert in design like{" "}
+            <span className="text-blue-500 font-semibold">
+              <TypeWriter strings={talkAbout} />
+            </span>
+            .
           </p>
-          <div className="flex justify-center gap-2">
-            <Link href={"/dashboard"}>
-              <Button>Start Project</Button>
-            </Link>
+          <div className="flex items-center justify-center gap-2">
+            <Link href="/graphic">
+              <ShineBorder
+                borderWidth={3}
+                className="border cursor-pointer h-auto w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+                color={["#FF007F", "#39FF14", "#00FFFF"]}
+              >
+                <Button className="w-full" >
+                  Start Posting
+                </Button>
+              </ShineBorder>
+            </Link> 
             <Link href={"https://cal.com/aliimam/designali"} target="_blank">
               <Button variant="outline">Book a call</Button>
             </Link>

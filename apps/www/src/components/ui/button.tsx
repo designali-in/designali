@@ -24,6 +24,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         style1: "from-primary to-primary/85 text-primary-foreground border border-2 border-stone-950/25 bg-gradient-to-t shadow-md shadow-stone-950/20 ring-1 ring-inset ring-white/20 transition-[filter] duration-200 hover:brightness-110 active:brightness-90 dark:border-white/20 dark:ring-transparent",
         style2: "from-primary to-primary/80 bg-gradient-to-b inset-shadow-black-500 border-double border border-white text-primary-foreground shadow-xl shadow-primary/50",
+        glossy3d: 
+          "from-primary to-primary/85 text-primary-foreground border border-2 border-stone-950/25 bg-gradient-to-t shadow-md shadow-stone-950/20 ring-1 ring-inset ring-white/20 transition-all duration-200 hover:brightness-110 active:brightness-90 dark:border-white/20 dark:ring-transparent relative overflow-hidden before:absolute before:inset-0 before:rounded-md before:bg-gradient-to-b before:from-white/40 before:via-transparent before:to-transparent before:opacity-90 before:-z-10 after:absolute after:inset-0 after:rounded-md after:bg-[radial-gradient(circle_at_50%_-20%,white,transparent_70%)] after:opacity-60 after:-z-10 hover:shadow-lg hover:before:opacity-100 hover:after:opacity-80 active:shadow-inner active:translate-y-0.5 active:before:opacity-70 active:after:opacity-40",
         none: "",
       },
       size: {

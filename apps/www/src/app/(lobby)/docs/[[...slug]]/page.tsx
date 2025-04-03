@@ -1,43 +1,46 @@
-import { notFound } from "next/navigation"
-import { allDocs } from "contentlayer/generated"
-import { MobileNav } from "@/src/components/mdx/mobile-nav"
-import "@/src/styles/mdx.css"
-import type { Metadata } from "next"
-import Link from "next/link"
-import { ChevronRight, ExternalLink } from "lucide-react"
-import Balancer from "react-wrap-balancer"
+import { notFound } from "next/navigation";
+import { allDocs } from "contentlayer/generated";
+import { MobileNav } from "@/src/components/mdx/mobile-nav";
+import "@/src/styles/mdx.css";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ChevronRight, ExternalLink } from "lucide-react";
+import Balancer from "react-wrap-balancer";
 
-import { getTableOfContents } from "@/lib/toc"
-import { absoluteUrl, cn } from "@/lib/utils"
-import { Mdx } from "@/components/mdx/mdx-components" 
-import { DocsPager } from "@/components/mdx/pager"
-import { DashboardTableOfContents } from "@/src/components/mdx/toc"
-import { badgeVariants } from "@/components/ui/badge"
+import { getTableOfContents } from "@/lib/toc";
+import { absoluteUrl, cn } from "@/lib/utils";
+import { Mdx } from "@/components/mdx/mdx-components";
+import { DocsPager } from "@/components/mdx/pager";
+import { DashboardTableOfContents } from "@/src/components/mdx/toc";
+import { badgeVariants } from "@/components/ui/badge";
+import { Contribute } from "@/src/components/mdx/contribute";
+import ShineBorder from "@/registry/default/ui/backgrounds/shine-border";
+import { Button } from "@/src/components/ui/button";
 
 interface DocPageProps {
   params: {
-    slug: string[]
-  }
+    slug: string[];
+  };
 }
 
 async function getDocFromParams({ params }: DocPageProps) {
-  const slug = params.slug?.join("/") || ""
-  const doc = allDocs.find((doc) => doc.slugAsParams === slug)
+  const slug = params.slug?.join("/") || "";
+  const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
   if (!doc) {
-    return null
+    return null;
   }
 
-  return doc
+  return doc;
 }
 
 export async function generateMetadata({
   params,
 }: DocPageProps): Promise<Metadata> {
-  const doc = await getDocFromParams({ params })
+  const doc = await getDocFromParams({ params });
 
   if (!doc) {
-    return {}
+    return {};
   }
 
   return {
@@ -69,7 +72,7 @@ export async function generateMetadata({
       ],
       creator: "@shadcn",
     },
-  }
+  };
 }
 
 export async function generateStaticParams(): Promise<
@@ -77,23 +80,23 @@ export async function generateStaticParams(): Promise<
 > {
   return allDocs.map((doc) => ({
     slug: doc.slugAsParams.split("/"),
-  }))
+  }));
 }
 
 export default async function DocPage({ params }: DocPageProps) {
-  const doc = await getDocFromParams({ params })
+  const doc = await getDocFromParams({ params });
 
   if (!doc) {
-    notFound()
+    notFound();
   }
 
-  const toc = await getTableOfContents(doc.body.raw)
+  const toc = await getTableOfContents(doc.body.raw);
 
   return (
     <main className="relative py-6 lg:gap-6 lg:py-8 xl:grid xl:grid-cols-[1fr_200px]">
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
-        <MobileNav/>
+          <MobileNav />
           <div className="truncate">Docs</div>
           <ChevronRight className="h-3.5 w-3.5" />
           <div className="text-foreground">{doc.title}</div>
@@ -143,10 +146,19 @@ export default async function DocPage({ params }: DocPageProps) {
         <div className="sticky top-20 -mt-6 h-[calc(100vh-3.5rem)] pt-4">
           <div className="no-scrollbar h-full overflow-auto pb-10">
             {doc.toc && <DashboardTableOfContents toc={toc} />}
-             
+            <Contribute doc={doc} />
+            <Link href="/graphic">
+              <ShineBorder
+                borderWidth={3}
+                className="border cursor-pointer h-auto w-auto p-2 bg-white/5 backdrop-blur-md dark:bg-black/5"
+                color={["#FF007F", "#39FF14", "#00FFFF"]}
+              >
+                <Button className="w-full" size="sm">Download Free</Button>
+              </ShineBorder>
+            </Link>
           </div>
         </div>
       </div>
     </main>
-  )
+  );
 }

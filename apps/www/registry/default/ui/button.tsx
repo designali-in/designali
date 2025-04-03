@@ -16,8 +16,16 @@ const buttonVariants = cva(
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        red: "bg-red-500 hover:bg-red-500/90 text-white",
+        blue: "bg-blue-500 hover:bg-blue-500/90 text-white",
+        green: "bg-green-500 hover:bg-green-500/90 text-white",
+        yellow: "bg-yellow-500 hover:bg-yellow-500/90 text-white",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        style1: "from-primary to-primary/85 text-primary-foreground border border-2 border-stone-950/25 bg-gradient-to-t shadow-md shadow-stone-950/20 ring-1 ring-inset ring-white/20 transition-[filter] duration-200 hover:brightness-110 active:brightness-90 dark:border-white/20 dark:ring-transparent",
+        style2: "from-primary to-primary/80 bg-gradient-to-b inset-shadow-black-500 border-double border border-white text-primary-foreground shadow-xl shadow-primary/50",
+        glossy3d:
+          "relative bg-gradient-to-b from-white/50 via-transparent to-black/20 text-white shadow-[0_6px_20px_rgba(0,0,0,0.25)] border border-white/20 overflow-hidden before:absolute before:inset-0 before:rounded-md before:bg-gradient-to-b before:from-white/60 before:via-white/20 before:to-transparent before:opacity-90 before:-z-10 after:absolute after:inset-0 after:rounded-md after:bg-[radial-gradient(circle_at_50%_-20%,white,transparent_70%)] after:opacity-70 after:-z-10 hover:shadow-[0_8px_25px_rgba(0,0,0,0.3)] hover:before:opacity-100 hover:after:opacity-90 active:shadow-inner active:translate-y-1 active:before:opacity-80 active:after:opacity-50 transition-all duration-150",
         none: "",
       },
       size: {
@@ -26,12 +34,18 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
       },
+      border: {
+        none: "",
+        dotted: "border border-dotted",
+        dashed: "border border-dashed", 
+      },
     },
     defaultVariants: {
+      border: "none",
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 export interface ButtonProps
@@ -50,7 +64,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  },
+  }
 );
 Button.displayName = "Button";
 
