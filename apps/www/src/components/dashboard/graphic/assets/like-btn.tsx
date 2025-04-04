@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { DIcons } from "dicons";
- 
+
 import { Button } from "@/components/ui/button";
 
 interface LikeButtonProps {
@@ -36,12 +36,12 @@ export function LikeButton({
 
   return (
     <div className="flex items-center gap-2">
+      <span>{likeCount}</span>
       <Button variant="outline" size="icon" onClick={handleLike}>
-      <DIcons.Bookmark01
+        <DIcons.Bookmark01
           className={`h-4 w-4 ${isLiked ? "text-ali fill-current" : ""}`}
         />
       </Button>
-      <span>{likeCount}</span>
     </div>
   );
 }

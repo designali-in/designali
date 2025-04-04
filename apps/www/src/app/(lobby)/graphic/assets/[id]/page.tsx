@@ -1,5 +1,3 @@
-//@ts-nocheck
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +7,7 @@ import { LikeButton } from "@/src/components/dashboard/graphic/assets/like-btn";
 import { auth } from "@/src/lib/auth";
 import { DIcons } from "dicons";
 import CldImage from "@/components/common/CloudImage";
+import { ShareButton } from "@/components/ui/share";
 
 import { prisma } from "@/lib/db";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -27,6 +26,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { RelatedAssetGrid } from "@/src/components/dashboard/graphic/assets/asset-grid";
+import { SITE_URL } from "@/src/lib/constants";
 
 export default async function AssetPage({
   params,
@@ -131,17 +131,22 @@ export default async function AssetPage({
               <p className="text-lg">{userName}</p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="flex gap-4 text-xs text-primary/70">
-                <div className="flex gap-1">
-                  <DIcons.Eye className="h-4 w-4" />
+            <div className="flex items-center gap-2">
+              <div className="flex  items-center gap-2 text-sm">
+                <div className="flex pr-2 items-center gap-2">
                   <p>{asset.views}</p>
+                  <DIcons.Eye className="h-4 w-4 text-blue-500" />
                 </div>
               </div>
               <LikeButton
                 assetId={asset.id}
                 initialLikeCount={asset.likes.length}
                 initialIsLiked={isLiked}
+              />
+              <ShareButton
+                title="Your complete platform for the Design."
+                description="I found this really interesting graphic that I wanted to share with you."
+                url={`${SITE_URL}/graphic/assets/${asset.id}`}
               />
               <div className="flex space-x-2">
                 {session && session.user && asset.userId === session.user.id ? (
@@ -202,7 +207,13 @@ export default async function AssetPage({
         <h1 className="py-10 text-center font-semibold text-md md:text-xl">
           Similar Assets
         </h1>
-        <RelatedAssetGrid assets={relatedAssets} />
+        <RelatedAssetGrid
+          assets={relatedAssets.map((asset) => ({
+            ...asset,
+            tags: asset.tags.map((tag) => tag.name), // Map tags to extract names
+            uploadedAt: asset.createdAt.toISOString(), // Assuming createdAt is a Date object
+          }))}
+        />
       </div>
     </div>
   );
