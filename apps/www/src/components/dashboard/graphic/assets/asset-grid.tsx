@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react"; 
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { DownloadNumber } from "./download-btn";
@@ -35,7 +35,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { ProfileUser } from "./about-user";
 import CldImage from "@/components/common/CloudImage";
-import { useIsMobile } from "@/src/hooks/use-mobile";
+import { useScreenSize, useIsMobile } from "@/src/hooks/use-mobile";
 import {
   CopyButton,
   ShareButton,
@@ -93,6 +93,26 @@ export function AssetGrid({
   const [selectedTag, setSelectedTag] = useState("All");
   const [currentHash, setCurrentHash] = useState("");
 
+  const { isMob } = useScreenSize();
+
+  const [gridCols, setGridCols] = useState<string>("3");
+
+  useEffect(() => {
+    setGridCols(isMob ? "1" : "3");
+  }, [isMob]);
+
+  const getGridClass = () => {
+    switch (gridCols) {
+      case "1":
+        return "grid-cols-2";
+      case "2":
+        return "grid-cols-3";
+      case "3":
+      default:
+        return "grid-cols-4";
+    }
+  };
+
   const uniqueTags = Array.from(new Set(availableTags)).sort((a, b) =>
     a.localeCompare(b)
   );
@@ -102,7 +122,7 @@ export function AssetGrid({
       setCurrentHash(window.location.hash.replace("#", ""));
     }
   }, []); // Runs only on client side
-  
+
   useEffect(() => {
     if (currentHash && uniqueTags.includes(currentHash)) {
       setSelectedTag(currentHash);
@@ -110,12 +130,12 @@ export function AssetGrid({
       setSelectedTag("All");
     }
   }, [currentHash, uniqueTags]);
-  
+
   const handleTabChange = (value: string) => {
     if (selectedTag !== value) {
       setSelectedTag(value);
       router.replace(`/graphic#${value}`, { scroll: false });
-  
+
       // Update currentHash immediately
       setCurrentHash(value);
     }
@@ -203,11 +223,18 @@ export function AssetGrid({
                 <SelectItem value="mostViewed">Most Viewed</SelectItem>
               </SelectContent>
             </Select>
+            <Tabs className="hidden md:block" defaultValue="3" value={gridCols} onValueChange={setGridCols}>
+              <TabsList> 
+                <TabsTrigger value="1">2 </TabsTrigger>
+                <TabsTrigger value="2">3 </TabsTrigger>
+                <TabsTrigger value="3">4 </TabsTrigger>
+              </TabsList>
+            </Tabs>
           </div>
         </div>
 
         <TabsContent value={selectedTag}>
-          <div className="my-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+          <div className={`grid gap-3 grid-cols-1 ${getGridClass()}`}>
             {filteredAssets.slice(0, visibleCount).map((asset) => {
               const urls = asset.url.split(",");
               return (
@@ -271,7 +298,6 @@ export function AssetGrid({
     </div>
   );
 }
-
 
 export function AssetGridLobby({
   assets,
@@ -723,15 +749,15 @@ export function ProfileAssetGrid({
             />
             <TabsList className="w-auto items-center justify-center text-center shadow-xl lg:w-auto">
               <ScrollArea className="whitespace-nowrap">
-              <div  >
-                <TabsTrigger  value="designed">Designed</TabsTrigger>
-                <TabsTrigger value="liked">
-                  <DIcons.Bookmark01 className="w-3 h-3 mr-1" /> Assets
-                </TabsTrigger>
-                <TabsTrigger value="inspiration">
-                  <DIcons.Bookmark01 className="w-3 h-3 mr-1" /> Inspirations
-                </TabsTrigger>
-                <TabsTrigger value="about">About</TabsTrigger>
+                <div>
+                  <TabsTrigger value="designed">Designed</TabsTrigger>
+                  <TabsTrigger value="liked">
+                    <DIcons.Bookmark01 className="w-3 h-3 mr-1" /> Assets
+                  </TabsTrigger>
+                  <TabsTrigger value="inspiration">
+                    <DIcons.Bookmark01 className="w-3 h-3 mr-1" /> Inspirations
+                  </TabsTrigger>
+                  <TabsTrigger value="about">About</TabsTrigger>
                 </div>
                 <ScrollBar orientation="horizontal" />
               </ScrollArea>
