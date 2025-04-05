@@ -37,6 +37,23 @@ export function Menu() {
                     </div>
                   </NavigationMenuLink>
                 </li>
+                <li className="row-span-3">
+                  <NavigationMenuLink href="/agency/works">
+                    <div className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-secondary/60 p-6  no-underline outline-none hover:bg-accent focus:shadow-md">
+                      <div className="mb-2 text-lg font-medium text-primary">
+                        Works
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Welcome to My Creative Playground! I’m Ali – Your
+                        Vision, My Design.
+                      </p>
+                    </div>
+                  </NavigationMenuLink>
+                </li>
+                <ListItem href="/agency" title="Agency">
+                  Design Without Limits. Get agency-level designs without the
+                  agency price.
+                </ListItem>
                 <ListItem href="/graphic/profile" title="Profile">
                   World's Top Designers profile list. Download the Assets from
                   users.
@@ -52,11 +69,7 @@ export function Menu() {
                 </ListItem>
                 <ListItem href="/docs/legal/terms" title="Terms">
                   Terms and Conditions – Your Guide to Our Services and Policies
-                </ListItem>
-                <ListItem href="/docs/legal/privacy" title="Privacy">
-                  Your Privacy Matters – Our Commitment to Protecting Your
-                  Information
-                </ListItem>
+                </ListItem> 
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -104,7 +117,8 @@ export function Menu() {
                         </div>
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Transform Your Vectors in a New Dimension with SVGs having simple geometry.
+                        Transform Your Vectors in a New Dimension with SVGs
+                        having simple geometry.
                       </p>
                     </div>
                   </NavigationMenuLink>
